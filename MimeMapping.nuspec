@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MimeMapping</id>
+    <version>0.1.2</version>
+    <title>MimeMapping</title>
+    <authors>zone117x</authors>
+    <owners>zone117x</owners>
+    <licenseUrl>https://github.com/zone117x/MimeMapping/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/zone117x/MimeMapping</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fast and tiny dictionary of all registered mime types.</description>
+		<summary>
+			Generated from the Apache mime.types file (http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types).
+			Works like System.Web.MimeMapping.GetMimeMapping (https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v=vs.110).aspx).
+			Contains over 900 mime types.
+		</summary>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>mime type mimemapping GetMimeMapping media-types rfc 4288</tags>
+  </metadata>
+	<files>
+		<file src="bin\Release\*.dll" target="lib\netstandard1.0" />
+		<file src="bin\Release\*.dll" target="lib\net45" />
+	</files>
+	</package>

@@ -1,0 +1,65 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Net" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension="generated.cs" #>
+using System.Collections.Generic;
+
+namespace MimeMapping
+{
+    public static partial class MimeTypes
+    {
+<#
+		const string URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
+		string response;
+		var request = WebRequest.CreateHttp(URL);
+		using (var responseStream = request.GetResponse().GetResponseStream())
+		using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+		{
+			response = streamReader.ReadToEnd();
+		}
+		var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+		var _dict = new Dictionary<string, string>();
+		foreach(var line in lines)
+		{
+			if (line[0] == '#')
+				continue;
+			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+			if (parts.Length < 2)
+				continue;
+			for(var i = 1; i < parts.Length; i++)
+			{
+				string existing;
+				if (_dict.TryGetValue(parts[i], out existing))
+				{
+#>
+		// Dupe for <#= parts[i] #>: <#= existing #> vs <#= parts[0] #> 
+<#
+				}
+				else
+				{
+					_dict[parts[i]] = parts[0];
+				}
+			}
+		}
+#>
+
+		// Generated <#= _dict.Count  #> type definitions
+		static Dictionary<string, string> _typeMap = new Dictionary<string, string> {	
+<#
+			foreach(var kp in _dict)
+			{
+#>
+			{ "<#= kp.Key #>", "<#= kp.Value #>" },
+<#
+				
+			}
+#>
+
+		};
+	}
+}
