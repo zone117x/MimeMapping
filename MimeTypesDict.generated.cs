@@ -4,10 +4,26 @@ namespace MimeMapping
 {
     public static partial class MimeTypes
     {
-		// Dupe for wmz: application/x-ms-wmz vs application/x-msmetafile 
-		// Dupe for sub: image/vnd.dvb.subtitle vs text/vnd.dvb.subtitle 
+		// Dupe for wmz: using application/x-ms-wmz vs application/x-msmetafile 
+		// Dupe for sub: using image/vnd.dvb.subtitle vs text/vnd.dvb.subtitle 
+		// Dupe for rdf: using application/rdf+xml vs application/xml 
+		// Dupe for aac: using audio/x-aac vs audio/mp4 
+		// Dupe for ra: using audio/x-pn-realaudio vs audio/x-realaudio 
+		// Dupe for f4v: using video/x-f4v vs video/mp4 
+		// Dupe for m4v: using video/x-m4v vs video/mp4 
+		// Dupe for otf: using application/x-font-otf vs font/opentype 
+		// Dupe for deb: using application/x-debian-package vs application/octet-stream 
+		// Dupe for dll: using application/x-msdownload vs application/octet-stream 
+		// Dupe for dmg: using application/x-apple-diskimage vs application/octet-stream 
+		// Dupe for exe: using application/x-msdownload vs application/octet-stream 
+		// Dupe for iso: using application/x-iso9660-image vs application/octet-stream 
+		// Dupe for msi: using application/x-msdownload vs application/octet-stream 
+		// Dupe for pdb: using application/vnd.palm vs application/x-pilot 
+		// Dupe for prc: using application/x-mobipocket-ebook vs application/x-pilot 
+		// Dupe for xsl: using application/xml vs application/xslt+xml 
+		// Dupe for vcf: using text/x-vcard vs text/vcard 
 
-		// Generated 982 type definitions
+		// Generated 1019 type definitions
 		static Dictionary<string, string> _typeMap = new Dictionary<string, string> {	
 			{ "ez", "application/andrew-inset" },
 			{ "aw", "application/applixware" },
@@ -991,6 +1007,43 @@ namespace MimeMapping
 			{ "movie", "video/x-sgi-movie" },
 			{ "smv", "video/x-smv" },
 			{ "ice", "x-conference/x-cooltalk" },
+			{ "map", "application/json" },
+			{ "topojson", "application/json" },
+			{ "jsonld", "application/ld+json" },
+			{ "geojson", "application/vnd.geo+json" },
+			{ "webmanifest", "application/manifest+json" },
+			{ "webapp", "application/x-web-app-manifest+json" },
+			{ "f4a", "audio/mp4" },
+			{ "f4b", "audio/mp4" },
+			{ "opus", "audio/ogg" },
+			{ "jng", "image/x-jng" },
+			{ "3gpp", "video/3gpp" },
+			{ "f4p", "video/mp4" },
+			{ "cur", "image/x-icon" },
+			{ "woff2", "application/font-woff2" },
+			{ "ear", "application/java-archive" },
+			{ "war", "application/java-archive" },
+			{ "img", "application/octet-stream" },
+			{ "msm", "application/octet-stream" },
+			{ "msp", "application/octet-stream" },
+			{ "safariextz", "application/octet-stream" },
+			{ "bbaw", "application/x-bb-appworld" },
+			{ "crx", "application/x-chrome-extension" },
+			{ "cco", "application/x-cocoa" },
+			{ "jardiff", "application/x-java-archive-diff" },
+			{ "run", "application/x-makeself" },
+			{ "oex", "application/x-opera-extension" },
+			{ "pl", "application/x-perl" },
+			{ "pm", "application/x-perl" },
+			{ "rpm", "application/x-redhat-package-manager" },
+			{ "sea", "application/x-sea" },
+			{ "tk", "application/x-tcl" },
+			{ "pem", "application/x-x509-ca-cert" },
+			{ "shtml", "text/html" },
+			{ "mml", "text/mathml" },
+			{ "xloc", "text/vnd.rim.location.xloc" },
+			{ "vtt", "text/vtt" },
+			{ "htc", "text/x-component" },
 
 		};
 	}

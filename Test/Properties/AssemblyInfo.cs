@@ -1,20 +1,26 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MimeMapping")]
-[assembly: AssemblyDescription("Fast and tiny dictionary of mime types generated from the Apache mime.types file.")]
+[assembly: AssemblyTitle("Test")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("zone117x")]
-[assembly: AssemblyProduct("MimeMapping")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Test")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("en")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+[assembly: ComVisible(false)]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("063ee5bf-8922-4280-8dfc-1226e9298f35")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -26,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.3.0")]
-[assembly: AssemblyFileVersion("0.1.3.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

@@ -13,7 +13,15 @@ namespace MimeMapping
 
 		public static string GetMimeMapping(string file)
 		{
-			var fileExtension = Path.GetExtension(file).Substring(1);
+            string fileExtension;
+            if (file.Contains("."))
+            {
+                fileExtension = Path.GetExtension(file).Substring(1);
+            }
+            else
+            {
+                fileExtension = file;
+            }
 			string mimeType;
 			if (_typeMap.TryGetValue(fileExtension, out mimeType))
 			{
