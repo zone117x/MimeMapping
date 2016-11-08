@@ -3,6 +3,9 @@
 Dictionary generated from the [Apache Server mime.types file](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) and 
 the [H5BP nginx mime.types file](https://github.com/h5bp/server-configs-nginx/blob/master/mime.types).
 
+The Apache entries are used over others when collisions are found since they are from the official [IANA registery](http://www.iana.org/assignments/media-types). The others tend to use what works best for browsers or de facto standards (maybe we should use those ones instead, idk).
+
+The lib is just a literal C# Dictionary<string, string> with over 1000 entries, and a helper method that can be passed a file path. 
 
 
 # Example Usage
