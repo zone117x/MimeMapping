@@ -1,7 +1,7 @@
 # MimeMapping
 
 Dictionary generated from the [Apache Server mime.types file](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) and 
-the [H5PB nginx mime.types file](https://github.com/h5bp/server-configs-nginx/blob/master/mime.types).
+the [H5BP nginx mime.types file](https://github.com/h5bp/server-configs-nginx/blob/master/mime.types).
 
 
 
