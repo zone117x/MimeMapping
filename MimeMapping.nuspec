@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>MimeMapping</id>
-		<version>0.1.3</version>
+		<version>0.1.4</version>
 		<title>MimeMapping</title>
 		<authors>zone117x</authors>
 		<owners>zone117x</owners>
@@ -21,9 +21,12 @@ https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v
 		<releaseNotes>Added nginx mime.types</releaseNotes>
 		<copyright>Copyright 2016</copyright>
 		<tags>mime type mimemapping GetMimeMapping media-types rfc 4288</tags>
+		<dependencies>
+			<dependency id="Microsoft.NETCore.Portable.Compatibility" version="1.0.1" />
+			<dependency id="NETStandard.Library" version="1.6.0" />
+		</dependencies>
 	</metadata>
 	<files>
 		<file src="bin\Release\*.dll" target="lib\netstandard1.0" />
-		<file src="bin\Release\*.dll" target="lib\net45" />
 	</files>
 </package>
