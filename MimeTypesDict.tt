@@ -5,7 +5,7 @@
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Net" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ output extension="generated.cs" #>
+<#@ output extension="cs" #>
 using System.Collections.Generic;
 
 namespace MimeMapping
@@ -13,19 +13,19 @@ namespace MimeMapping
     public static partial class MimeTypes
     {
 <#
-		const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
-		const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
+        const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
+        const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
 
-		// entries where item 0 is the mime string, and the rest are file extensions
-		List<string[]> entries = new List<string[]>();
+        // entries where item 0 is the mime string, and the rest are file extensions
+        List<string[]> entries = new List<string[]>();
 
-		// Download and parse entries from the Apache file
-		using (var responseStream = WebRequest.CreateHttp(APACHE_URL).GetResponse().GetResponseStream())
-		using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
-		{
-			var response = streamReader.ReadToEnd();
-			var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-			foreach(var line in lines)
+        // Download and parse entries from the Apache file
+        using (var responseStream = WebRequest.CreateHttp(APACHE_URL).GetResponse().GetResponseStream())
+        using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+        {
+            var response = streamReader.ReadToEnd();
+            var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach(var line in lines)
 			{
 				if (line[0] == '#')
 					continue;
@@ -68,7 +68,7 @@ namespace MimeMapping
 					if (existing != parts[0])
 					{
 #>
-		// Dupe for <#= parts[i] #>: using <#= existing #> vs <#= parts[0] #> 
+        // Dupe for <#= parts[i] #>: using <#= existing #> vs <#= parts[0] #> 
 <#
 					}
 				}
@@ -79,24 +79,46 @@ namespace MimeMapping
 			}
 		}
 
-		
-
-
 #>
 
-		// Generated <#= _dict.Count  #> type definitions
-		static Dictionary<string, string> _typeMap = new Dictionary<string, string> {	
+
+        // Generated <#= _dict.Count  #> type definitions
+
+
+
+        // List of all available extensions, used to build the dictionary
+        static readonly string[] ALL_EXTS = {
 <#
-			// Output the actual literal C# dictionary
-			foreach(var kp in _dict)
-			{
+
+		// Output the actual literal C# dictionary
+        foreach(var kp in _dict)
+        {
 #>
-			{ "<#= kp.Key #>", "<#= kp.Value #>" },
+            "<#= kp.Key #>",
+<#
+		
+		}
+
+#>
+        };
+
+        // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
+        static string LookupType(string type)
+        {
+            switch (type)
+            {
+<#
+                // Output the actual literal C# dictionary
+                foreach(var kp in _dict)
+                {
+#>
+                case "<#= kp.Key #>": return "<#= kp.Value #>";
 <#
 				
-			}
+                }
 #>
-
-		};
-	}
+                default: return null;
+            }
+        }
+    }
 }

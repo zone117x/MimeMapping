@@ -22,7 +22,7 @@ namespace Test
         [TestMethod]
         public void TestCommonTypes()
         {
-            foreach(var t in _expectedTypes)
+            foreach (var t in _expectedTypes)
             {
                 var foundType = MimeTypes.GetMimeMapping(t.Key);
                 Assert.AreEqual(t.Value, foundType, "Mime string mismatch");

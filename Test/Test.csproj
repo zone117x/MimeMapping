@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MimeMapping.csproj">
-      <Project>{32c408c9-3168-4c8c-825f-196aeefe4bc6}</Project>
+      <Project>{42893f4d-de5f-4132-a408-e90bff840342}</Project>
       <Name>MimeMapping</Name>
     </ProjectReference>
   </ItemGroup>
