@@ -12,8 +12,8 @@ https://github.com/h5bp/server-configs-nginx/blob/master/mime.types
 https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v=vs.110).aspx</Description>
     <PackageProjectUrl>https://github.com/zone117x/MimeMapping</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/zone117x/MimeMapping/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageTags>mime type mimemapping GetMimeMapping media-types rfc 4288</PackageTags>
-    <Version>0.1.5</Version>
+    <PackageTags>mimetype contenttype mime type mimemapping GetMimeMapping media-types rfc 4288</PackageTags>
+    <Version>0.1.6</Version>
     <Authors>Matthew Little</Authors>
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
