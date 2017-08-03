@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
-    <Description>Fast and tiny dictionary of all registered mime types. Contains just over 1000 mime types.
+    <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name. Contains just over 1000 mime types.
 
 Generated from the Apache server mime.types file and the H5PB nginx mime.types file. Works similar to .NET's System.Web.MimeMapping.GetMimeMapping.
 
 See:
 http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
 https://github.com/h5bp/server-configs-nginx/blob/master/mime.types
-https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v=vs.110).aspx</Description>
+https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v=vs.110).aspx
+    </Description>
     <PackageProjectUrl>https://github.com/zone117x/MimeMapping</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/zone117x/MimeMapping/blob/master/LICENSE.md</PackageLicenseUrl>
     <PackageTags>mimetype contenttype mime type mimemapping GetMimeMapping media-types rfc 4288</PackageTags>

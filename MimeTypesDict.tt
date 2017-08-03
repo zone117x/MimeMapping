@@ -5,16 +5,33 @@
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Net" #>
 <#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
 <#@ output extension="cs" #>
+using System;
 using System.Collections.Generic;
 
 namespace MimeMapping
 {
+<#
+    const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
+    const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
+#>
+	///<summary>
+	/// MIME type constants with lookup by file extension. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
+	/// Generated from the <a href="<#= APACHE_URL #>">apache</a> and <a href="<#= NGINX_URL #>">nginx</a> sources
+	///</summary>
     public static partial class MimeTypes
     {
+
 <#
-        const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
-        const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
+
+		
+		Regex rgx = new Regex("[^a-zA-Z0-9]");
+
+		string GetMimeFieldName(string mimeKey)
+		{
+			return "MimeType" + rgx.Replace(mimeKey.ToUpperInvariant(), "");
+		}
 
         // entries where item 0 is the mime string, and the rest are file extensions
         List<string[]> entries = new List<string[]>();
@@ -58,9 +75,11 @@ namespace MimeMapping
 
 		// build dictionary from entries, outputing found duplicates
 		var _dict = new Dictionary<string, string>();
-		foreach(var parts in entries)
+		var _reverseDict = new Dictionary<string, List<string>>();
+
+		foreach (var parts in entries)
 		{
-			for(var i = 1; i < parts.Length; i++)
+			for (var i = 1; i < parts.Length; i++)
 			{
 				string existing;
 				if (_dict.TryGetValue(parts[i], out existing))
@@ -75,23 +94,44 @@ namespace MimeMapping
 				else
 				{
 					_dict[parts[i]] = parts[0];
+
+					if (!_reverseDict.TryGetValue(parts[0], out var keyList))
+					{
+						keyList = new List<string>();
+						_reverseDict.Add(parts[0], keyList);
+					}
+					keyList.Add(parts[i]);
 				}
+
+
 			}
 		}
 
 #>
 
+		// Generated <#= _reverseDict.Count  #> unique mime type values
+        // Generated <#= _dict.Count  #> type key pairs
 
-        // Generated <#= _dict.Count  #> type definitions
-
-
-
-        // List of all available extensions, used to build the dictionary
-        static readonly string[] ALL_EXTS = {
 <#
 
-		// Output the actual literal C# dictionary
+		// Output constants for each type
         foreach(var kp in _dict)
+        {
+#>
+		///<summary><#= kp.Key #></summary>
+        public const string <#= GetMimeFieldName(kp.Key) #> = "<#= kp.Value #>";
+<#
+		
+		}
+
+#>
+
+        // List of all available extensions, used to build the dictionary
+        static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
+<#
+
+		// List constant field names
+        foreach (var kp in _dict)
         {
 #>
             "<#= kp.Key #>",
@@ -99,8 +139,9 @@ namespace MimeMapping
 		
 		}
 
+
 #>
-        };
+        });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         static string LookupType(string type)
@@ -109,15 +150,20 @@ namespace MimeMapping
             {
 <#
                 // Output the actual literal C# dictionary
-                foreach(var kp in _dict)
+                foreach (var kp in _reverseDict)
                 {
+					foreach (var mimeKey in kp.Value)
+					{
 #>
-                case "<#= kp.Key #>": return "<#= kp.Value #>";
-<#
-				
+				case "<#= mimeKey #>":<#
+					}
+#>
+					return <#= GetMimeFieldName(kp.Value[0]) #>;<#
                 }
 #>
-                default: return null;
+                
+				default: 
+					return null;
             }
         }
     }

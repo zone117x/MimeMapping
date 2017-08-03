@@ -7,12 +7,16 @@ namespace MimeMapping
 {
     public static partial class MimeTypes
     {
+        /// <summary>
+        /// The "octet-stream" subtype is used to indicate that a body contains arbitrary binary data.
+        /// See <a href="https://www.iana.org/assignments/media-types/application/octet-stream">application/octet-stream</a>
+        /// </summary>
         public const string UnknownMimeType = "application/octet-stream";
 
-        static Lazy<ReadOnlyDictionary<string, string>> _lazyDict = new Lazy<ReadOnlyDictionary<string, string>>(() => new ReadOnlyDictionary<string, string>(ALL_EXTS.ToDictionary(e => e, e => LookupType(e))));
+        static Lazy<ReadOnlyDictionary<string, string>> _lazyDict = new Lazy<ReadOnlyDictionary<string, string>>(() => new ReadOnlyDictionary<string, string>(ALL_EXTS.Value.ToDictionary(e => e, e => LookupType(e))));
 
         /// <summary>
-        /// Dictionary of all available types
+        /// Dictionary of all available types (lazy loaded on first call)
         /// </summary>
         public static ReadOnlyDictionary<string, string> TypeMap => _lazyDict.Value;
 
