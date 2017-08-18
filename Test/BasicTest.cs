@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +24,7 @@ namespace Test
         {
             foreach (var t in _expectedTypes)
             {
-                var foundType = MimeTypes.GetMimeMapping(t.Key);
+                var foundType = MimeUtility.GetMimeMapping(t.Key);
                 Assert.AreEqual(t.Value, foundType, "Mime string mismatch");
             }
         }
@@ -35,7 +35,7 @@ namespace Test
             foreach (var t in _expectedTypes)
             {
                 var filePath = Path.Combine(Path.GetTempPath(), "examplefile." + t.Key);
-                var foundType = MimeTypes.GetMimeMapping(t.Key);
+                var foundType = MimeUtility.GetMimeMapping(t.Key);
                 Assert.AreEqual(t.Value, foundType, "Mime string mismatch");
             }
         }
@@ -43,7 +43,7 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeDictionaryCount()
         {
-            Assert.IsTrue(MimeTypes.TypeMap.Count > 900, $"Type map only has {MimeTypes.TypeMap.Count} entries, something wrong");
+            Assert.IsTrue(MimeUtility.TypeMap.Count > 900, $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong");
         }
     }
 }

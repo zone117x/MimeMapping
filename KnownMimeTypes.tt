@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text" #>
@@ -17,10 +17,10 @@ namespace MimeMapping
     const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
 #>
 	///<summary>
-	/// MIME type constants with lookup by file extension. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
+	/// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
 	/// Generated from the <a href="<#= APACHE_URL #>">apache</a> and <a href="<#= NGINX_URL #>">nginx</a> sources
 	///</summary>
-    public static partial class MimeTypes
+    public static class KnownMimeTypes
     {
 
 <#
@@ -30,7 +30,8 @@ namespace MimeMapping
 
 		string GetMimeFieldName(string mimeKey)
 		{
-			return "MimeType" + rgx.Replace(mimeKey.ToUpperInvariant(), "");
+			var result = rgx.Replace(mimeKey[0].ToString().ToUpperInvariant() + mimeKey.Substring(1), "");
+			return char.IsDigit(result[0]) ? ("_" + result) : result;
 		}
 
         // entries where item 0 is the mime string, and the rest are file extensions
@@ -126,15 +127,30 @@ namespace MimeMapping
 
 #>
 
-        // List of all available extensions, used to build the dictionary
-        static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
 <#
 
 		// List constant field names
         foreach (var kp in _dict)
         {
 #>
-            "<#= kp.Key #>",
+        const string _ext_<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
+<#
+		
+		}
+
+
+#>
+
+
+        // List of all available extensions, used to build the dictionary
+        static internal readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
+<#
+
+		// List constant field names
+        foreach (var kp in _dict)
+        {
+#>
+            _ext_<#= kp.Key.Replace('-', '_') #>,
 <#
 		
 		}
@@ -144,7 +160,7 @@ namespace MimeMapping
         });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        static string LookupType(string type)
+        static internal string LookupType(string type)
         {
             switch (type)
             {
@@ -155,7 +171,7 @@ namespace MimeMapping
 					foreach (var mimeKey in kp.Value)
 					{
 #>
-				case "<#= mimeKey #>":<#
+				case _ext_<#= mimeKey.Replace('-', '_') #>:<#
 					}
 #>
 					return <#= GetMimeFieldName(kp.Value[0]) #>;<#
