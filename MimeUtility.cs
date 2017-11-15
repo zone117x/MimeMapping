@@ -38,7 +38,7 @@ namespace MimeMapping
             {
                 fileExtension = file;
             }
-            string mimeType = KnownMimeTypes.LookupType(fileExtension);
+            string mimeType = KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant());
             return mimeType ?? UnknownMimeType;
         }
         
