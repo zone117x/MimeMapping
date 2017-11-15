@@ -10,7 +10,9 @@ namespace Test
     public class BasicTest
     {
         Dictionary<string, string> _expectedTypes = new Dictionary<string, string> {
+            { "PNG", "image/png"},
             { "png", "image/png"},
+            { "JPG", "image/jpeg"},
             { "mp4", "video/mp4" },
             { "exe", "application/x-msdownload" },
             { "zip", "application/zip" },
