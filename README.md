@@ -13,15 +13,15 @@ The lib is just a literal C# Dictionary<string, string> with over 1000 entries, 
 # Example Usage
 ``` C#
 string myFile = "myimage.jpg";
-string mimeType = MimeMapping.MimeTypes.GetMimeMapping(myFile);
+string mimeType = MimeMapping.MimeUtility.GetMimeMapping(myFile);
 Console.WriteLine(mimeType); // output: image/jpeg
 
 string randomFile = "data.asdf";
-string mimeType = MimeMapping.MimeTypes.GetMimeMapping(randomFile);
+string mimeType = MimeMapping.MimeUtility.GetMimeMapping(randomFile);
 Console.WriteLine(mimeType); // output: application/octet-stream
 
 string rawExtension = "json";
-string mimeType = MimeMapping.MimeTypes.GetMimeMapping(rawExtension);
+string mimeType = MimeMapping.MimeUtility.GetMimeMapping(rawExtension);
 Console.WriteLine(mimeType); // output: application/json
 
 
