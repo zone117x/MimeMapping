@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -37,8 +38,39 @@ namespace Test
         {
             foreach (var t in _expectedTypes)
             {
-                var foundType = MimeUtility.GetMimeMapping(t.Key);
+                var filePath = Path.Combine(Path.GetTempPath(), "examplefile." + t.Key);
+                var foundType = MimeUtility.GetMimeMapping(filePath);
                 Assert.AreEqual(t.Value, foundType, "Mime string mismatch");
+            }
+        }
+
+        [TestMethod]
+        public void TestCommonTypesWithOnlyFileNames()
+        {
+            foreach (var t in _expectedTypes)
+            {
+                var fileName = "examplefile." + t.Key;
+                var foundType = MimeUtility.GetMimeMapping(fileName);
+                Assert.AreEqual(t.Value, foundType, "Mime string mismatch");
+            }
+        }
+
+        [TestMethod]
+        public void TestEmptyStringFileArgumentReturnsUnknownMimeType()
+        {
+            Assert.AreEqual(MimeUtility.UnknownMimeType, MimeUtility.GetMimeMapping(string.Empty));
+        }
+
+        [TestMethod]
+        public void TestNullFileArgumentThrowsException()
+        {
+            try
+            {
+                MimeUtility.GetMimeMapping(null);
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(ArgumentNullException));
             }
         }
 
