@@ -1,5 +1,6 @@
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
+<#@ assembly name="Newtonsoft.Json" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.IO" #>
@@ -7,6 +8,8 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
 <#@ output extension="cs" #>
 using System;
 using System.Collections.Generic;
@@ -16,6 +19,7 @@ namespace MimeMapping
 <#
     const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
     const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
+	const string MIMEDB_URL = "https://github.com/jshttp/mime-db/blob/master/src/custom-types.json";
 #>
 	///<summary>
 	/// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
@@ -32,6 +36,16 @@ namespace MimeMapping
 			var result = rgx.Replace(mimeKey[0].ToString().ToUpperInvariant() + mimeKey.Substring(1), "");
 			return char.IsDigit(result[0]) ? ("_" + result) : result;
 		}
+
+		List<string[]> GetMimeTypesFromJson(string url, Func<string, List<string[]>> processContents)
+        {
+			using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
+			using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+			{
+				var response = streamReader.ReadToEnd();
+				return processContents(response);
+			}
+        }
 
 		List<string[]> GetMimeTypesFromText(string url, Func<string, string[]> processLine)
         {
@@ -66,6 +80,10 @@ namespace MimeMapping
 			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
 			if (parts.Length < 2) return null;
 			return parts;
+		}));
+
+		entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (contents) => {
+			return new List<string[]>();
 		}));
 
 		// build dictionary from entries, outputing found duplicates

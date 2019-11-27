@@ -1,11 +1,12 @@
 
+
 using System;
 using System.Collections.Generic;
 
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-11-27T04:20:41Z. 
+	/// MIME type constants. Last updated on 2019-11-27T04:44:59Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
