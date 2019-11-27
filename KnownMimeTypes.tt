@@ -4,6 +4,7 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Net" #>
+<#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
 <#@ output extension="cs" #>
@@ -24,8 +25,6 @@ namespace MimeMapping
     {
 
 <#
-
-		
 		Regex rgx = new Regex("[^a-zA-Z0-9]");
 
 		string GetMimeFieldName(string mimeKey)
@@ -34,45 +33,40 @@ namespace MimeMapping
 			return char.IsDigit(result[0]) ? ("_" + result) : result;
 		}
 
-        // entries where item 0 is the mime string, and the rest are file extensions
-        List<string[]> entries = new List<string[]>();
-
-        // Download and parse entries from the Apache file
-        using (var responseStream = WebRequest.CreateHttp(APACHE_URL).GetResponse().GetResponseStream())
-        using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+		List<string[]> GetMimeTypesFromText(string url, Func<string, string[]> processLine)
         {
-            var response = streamReader.ReadToEnd();
-            var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach(var line in lines)
+			var keyPairs = new List<string[]>();
+			using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
+			using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
 			{
-				if (line[0] == '#')
-					continue;
-				var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-				if (parts.Length < 2)
-					continue;
-				entries.Add(parts);
+				var response = streamReader.ReadToEnd();
+				var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+				foreach(var line in lines)
+				{
+					var newKeyPairs = processLine(line);
+					if(newKeyPairs != null) 
+						keyPairs.Add(newKeyPairs);
+				}
 			}
-		}
+			return keyPairs;
+        }
 
-		// Download and parse entries from the H5BP nginx file
-		using (var responseStream = WebRequest.CreateHttp(NGINX_URL).GetResponse().GetResponseStream())
-		using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
-		{
-			var response = streamReader.ReadToEnd();
-			var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-			foreach(var l in lines)
-			{
-				var line = l.Trim().TrimEnd(';');
-				if (line[0] == '#' || line[0] == '}')
-					continue;
-				if (line.StartsWith("types {"))
-					continue;
-				var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-				if (parts.Length < 2)
-					continue;
-				entries.Add(parts);
-			}
-		}
+        var entries = new List<string[]>();
+
+		entries.AddRange(GetMimeTypesFromText(APACHE_URL, (line) => {
+			if (line[0] == '#') return null;
+			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+			if (parts.Length < 2) return null;
+			return parts;
+		}));
+
+		entries.AddRange(GetMimeTypesFromText(NGINX_URL, (line) => {
+			line = line.Trim().TrimEnd(';');
+			if (line[0] == '#' || line[0] == '}' || line.StartsWith("types {")) return null;
+			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+			if (parts.Length < 2) return null;
+			return parts;
+		}));
 
 		// build dictionary from entries, outputing found duplicates
 		var _dict = new Dictionary<string, string>();
@@ -101,10 +95,9 @@ namespace MimeMapping
 						keyList = new List<string>();
 						_reverseDict.Add(parts[0], keyList);
 					}
+
 					keyList.Add(parts[i]);
 				}
-
-
 			}
 		}
 
@@ -114,7 +107,6 @@ namespace MimeMapping
         // Generated <#= _dict.Count  #> type key pairs
 
 <#
-
 		// Output constants for each type
         foreach(var kp in _dict)
         {
@@ -122,9 +114,7 @@ namespace MimeMapping
 		///<summary><#= kp.Key #></summary>
         public const string <#= GetMimeFieldName(kp.Key) #> = "<#= kp.Value #>";
 <#
-		
 		}
-
 #>
 
 <#
@@ -135,17 +125,13 @@ namespace MimeMapping
 #>
         const string _ext_<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
 <#
-		
 		}
 
-
 #>
-
 
         // List of all available extensions, used to build the dictionary
         static internal readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
 <#
-
 		// List constant field names
         foreach (var kp in _dict)
         {
@@ -154,7 +140,6 @@ namespace MimeMapping
 <#
 		
 		}
-
 
 #>
         });
