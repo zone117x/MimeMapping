@@ -29,18 +29,17 @@ namespace MimeMapping
         /// <returns>The mime type string, returns "application/octet-stream" if no known type was found</returns>
         public static string GetMimeMapping(string file)
         {
-            string fileExtension;
-            if (file.Contains("."))
-            {
-                fileExtension = Path.GetExtension(file).Substring(1);
-            }
-            else
-            {
-                fileExtension = file;
-            }
-            string mimeType = KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant());
-            return mimeType ?? UnknownMimeType;
+            if (file == null)
+                throw new ArgumentNullException(nameof(file));
+
+            if (string.IsNullOrEmpty(file))
+                return UnknownMimeType;
+
+            var fileExtension = file.Contains(".") 
+                ? Path.GetExtension(file).Substring(1) 
+                : file;
+
+            return KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant()) ?? UnknownMimeType;
         }
-        
     }
 }
