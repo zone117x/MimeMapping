@@ -1,12 +1,10 @@
-
-
 using System;
 using System.Collections.Generic;
 
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-11-27T16:41:03Z. 
+	/// MIME type constants. Last updated on 2019-12-04T19:37:14Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
@@ -3305,7 +3303,7 @@ namespace MimeMapping
         const string _ext_yaml = "yaml";
 
         // List of all available extensions, used to build the dictionary
-        static internal readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
+        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
             _ext_ez,
             _ext_aw,
             _ext_atom,
@@ -4395,11 +4393,2783 @@ namespace MimeMapping
         });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        static internal string LookupType(string type)
+        internal static string LookupType(string type)
         {
             switch (type)
             {
-				case _ext_ez:					return Ez;				case _ext_aw:					return Aw;				case _ext_atom:					return Atom;				case _ext_atomcat:					return Atomcat;				case _ext_atomsvc:					return Atomsvc;				case _ext_ccxml:					return Ccxml;				case _ext_cdmia:					return Cdmia;				case _ext_cdmic:					return Cdmic;				case _ext_cdmid:					return Cdmid;				case _ext_cdmio:					return Cdmio;				case _ext_cdmiq:					return Cdmiq;				case _ext_cu:					return Cu;				case _ext_davmount:					return Davmount;				case _ext_dbk:					return Dbk;				case _ext_dssc:					return Dssc;				case _ext_xdssc:					return Xdssc;				case _ext_ecma:				case _ext_es:					return Ecma;				case _ext_emma:					return Emma;				case _ext_epub:					return Epub;				case _ext_exi:					return Exi;				case _ext_pfr:					return Pfr;				case _ext_gml:					return Gml;				case _ext_gpx:					return Gpx;				case _ext_gxf:					return Gxf;				case _ext_stk:					return Stk;				case _ext_ink:				case _ext_inkml:					return Ink;				case _ext_ipfix:					return Ipfix;				case _ext_jar:				case _ext_ear:				case _ext_war:					return Jar;				case _ext_ser:					return Ser;				case _ext_class:					return Class;				case _ext_js:					return Js;				case _ext_json:				case _ext_map:				case _ext_topojson:					return Json;				case _ext_jsonml:					return Jsonml;				case _ext_lostxml:					return Lostxml;				case _ext_hqx:					return Hqx;				case _ext_cpt:					return Cpt;				case _ext_mads:					return Mads;				case _ext_mrc:					return Mrc;				case _ext_mrcx:					return Mrcx;				case _ext_ma:				case _ext_nb:				case _ext_mb:					return Ma;				case _ext_mathml:					return Mathml;				case _ext_mbox:					return Mbox;				case _ext_mscml:					return Mscml;				case _ext_metalink:					return Metalink;				case _ext_meta4:					return Meta4;				case _ext_mets:					return Mets;				case _ext_mods:					return Mods;				case _ext_m21:				case _ext_mp21:					return M21;				case _ext_mp4s:				case _ext_m4p:					return Mp4s;				case _ext_doc:				case _ext_dot:					return Doc;				case _ext_mxf:					return Mxf;				case _ext_bin:				case _ext_dms:				case _ext_lrf:				case _ext_mar:				case _ext_so:				case _ext_dist:				case _ext_distz:				case _ext_pkg:				case _ext_bpk:				case _ext_dump:				case _ext_elc:				case _ext_deploy:				case _ext_img:				case _ext_msm:				case _ext_msp:				case _ext_safariextz:				case _ext_buffer:					return Bin;				case _ext_oda:					return Oda;				case _ext_opf:					return Opf;				case _ext_ogx:					return Ogx;				case _ext_omdoc:					return Omdoc;				case _ext_onetoc:				case _ext_onetoc2:				case _ext_onetmp:				case _ext_onepkg:					return Onetoc;				case _ext_oxps:					return Oxps;				case _ext_xer:					return Xer;				case _ext_pdf:					return Pdf;				case _ext_pgp:					return Pgp;				case _ext_asc:				case _ext_sig:					return Asc;				case _ext_prf:					return Prf;				case _ext_p10:					return P10;				case _ext_p7m:				case _ext_p7c:					return P7m;				case _ext_p7s:					return P7s;				case _ext_p8:					return P8;				case _ext_ac:					return Ac;				case _ext_cer:					return Cer;				case _ext_crl:					return Crl;				case _ext_pkipath:					return Pkipath;				case _ext_pki:					return Pki;				case _ext_pls:					return Pls;				case _ext_ai:				case _ext_eps:				case _ext_ps:					return Ai;				case _ext_cww:					return Cww;				case _ext_pskcxml:					return Pskcxml;				case _ext_rdf:					return Rdf;				case _ext_rif:					return Rif;				case _ext_rnc:					return Rnc;				case _ext_rl:					return Rl;				case _ext_rld:					return Rld;				case _ext_rs:					return Rs;				case _ext_gbr:					return Gbr;				case _ext_mft:					return Mft;				case _ext_roa:					return Roa;				case _ext_rsd:					return Rsd;				case _ext_rss:					return Rss;				case _ext_rtf:					return Rtf;				case _ext_sbml:					return Sbml;				case _ext_scq:					return Scq;				case _ext_scs:					return Scs;				case _ext_spq:					return Spq;				case _ext_spp:					return Spp;				case _ext_sdp:					return Sdp;				case _ext_setpay:					return Setpay;				case _ext_setreg:					return Setreg;				case _ext_shf:					return Shf;				case _ext_smi:				case _ext_smil:					return Smi;				case _ext_rq:					return Rq;				case _ext_srx:					return Srx;				case _ext_gram:					return Gram;				case _ext_grxml:					return Grxml;				case _ext_sru:					return Sru;				case _ext_ssdl:					return Ssdl;				case _ext_ssml:					return Ssml;				case _ext_tei:				case _ext_teicorpus:					return Tei;				case _ext_tfi:					return Tfi;				case _ext_tsd:					return Tsd;				case _ext_plb:					return Plb;				case _ext_psb:					return Psb;				case _ext_pvb:					return Pvb;				case _ext_tcap:					return Tcap;				case _ext_pwn:					return Pwn;				case _ext_aso:					return Aso;				case _ext_imp:					return Imp;				case _ext_acu:					return Acu;				case _ext_atc:				case _ext_acutc:					return Atc;				case _ext_air:					return Air;				case _ext_fcdt:					return Fcdt;				case _ext_fxp:				case _ext_fxpl:					return Fxp;				case _ext_xdp:					return Xdp;				case _ext_xfdf:					return Xfdf;				case _ext_ahead:					return Ahead;				case _ext_azf:					return Azf;				case _ext_azs:					return Azs;				case _ext_azw:					return Azw;				case _ext_acc:					return Acc;				case _ext_ami:					return Ami;				case _ext_apk:					return Apk;				case _ext_cii:					return Cii;				case _ext_fti:					return Fti;				case _ext_atx:					return Atx;				case _ext_mpkg:					return Mpkg;				case _ext_m3u8:					return M3u8;				case _ext_swi:					return Swi;				case _ext_iota:					return Iota;				case _ext_aep:					return Aep;				case _ext_mpm:					return Mpm;				case _ext_bmi:					return Bmi;				case _ext_rep:					return Rep;				case _ext_cdxml:					return Cdxml;				case _ext_mmd:					return Mmd;				case _ext_cdy:					return Cdy;				case _ext_cla:					return Cla;				case _ext_rp9:					return Rp9;				case _ext_c4g:				case _ext_c4d:				case _ext_c4f:				case _ext_c4p:				case _ext_c4u:					return C4g;				case _ext_c11amc:					return C11amc;				case _ext_c11amz:					return C11amz;				case _ext_csp:					return Csp;				case _ext_cdbcmsg:					return Cdbcmsg;				case _ext_cmc:					return Cmc;				case _ext_clkx:					return Clkx;				case _ext_clkk:					return Clkk;				case _ext_clkp:					return Clkp;				case _ext_clkt:					return Clkt;				case _ext_clkw:					return Clkw;				case _ext_wbs:					return Wbs;				case _ext_pml:					return Pml;				case _ext_ppd:					return Ppd;				case _ext_car:					return Car;				case _ext_pcurl:					return Pcurl;				case _ext_dart:					return Dart;				case _ext_rdz:					return Rdz;				case _ext_uvf:				case _ext_uvvf:				case _ext_uvd:				case _ext_uvvd:					return Uvf;				case _ext_uvt:				case _ext_uvvt:					return Uvt;				case _ext_uvx:				case _ext_uvvx:					return Uvx;				case _ext_uvz:				case _ext_uvvz:					return Uvz;				case _ext_fe_launch:					return Felaunch;				case _ext_dna:					return Dna;				case _ext_mlp:					return Mlp;				case _ext_dpg:					return Dpg;				case _ext_dfac:					return Dfac;				case _ext_kpxx:					return Kpxx;				case _ext_ait:					return Ait;				case _ext_svc:					return Svc;				case _ext_geo:					return Geo;				case _ext_mag:					return Mag;				case _ext_nml:					return Nml;				case _ext_esf:					return Esf;				case _ext_msf:					return Msf;				case _ext_qam:					return Qam;				case _ext_slt:					return Slt;				case _ext_ssf:					return Ssf;				case _ext_es3:				case _ext_et3:					return Es3;				case _ext_ez2:					return Ez2;				case _ext_ez3:					return Ez3;				case _ext_fdf:					return Fdf;				case _ext_mseed:					return Mseed;				case _ext_seed:				case _ext_dataless:					return Seed;				case _ext_gph:					return Gph;				case _ext_ftc:					return Ftc;				case _ext_fm:				case _ext_frame:				case _ext_maker:				case _ext_book:					return Fm;				case _ext_fnc:					return Fnc;				case _ext_ltf:					return Ltf;				case _ext_fsc:					return Fsc;				case _ext_oas:					return Oas;				case _ext_oa2:					return Oa2;				case _ext_oa3:					return Oa3;				case _ext_fg5:					return Fg5;				case _ext_bh2:					return Bh2;				case _ext_ddd:					return Ddd;				case _ext_xdw:					return Xdw;				case _ext_xbd:					return Xbd;				case _ext_fzs:					return Fzs;				case _ext_txd:					return Txd;				case _ext_ggb:					return Ggb;				case _ext_ggt:					return Ggt;				case _ext_gex:				case _ext_gre:					return Gex;				case _ext_gxt:					return Gxt;				case _ext_g2w:					return G2w;				case _ext_g3w:					return G3w;				case _ext_gmx:					return Gmx;				case _ext_kml:					return Kml;				case _ext_kmz:					return Kmz;				case _ext_gqf:				case _ext_gqs:					return Gqf;				case _ext_gac:					return Gac;				case _ext_ghf:					return Ghf;				case _ext_gim:					return Gim;				case _ext_grv:					return Grv;				case _ext_gtm:					return Gtm;				case _ext_tpl:					return Tpl;				case _ext_vcg:					return Vcg;				case _ext_hal:					return Hal;				case _ext_zmm:					return Zmm;				case _ext_hbci:					return Hbci;				case _ext_les:					return Les;				case _ext_hpgl:					return Hpgl;				case _ext_hpid:					return Hpid;				case _ext_hps:					return Hps;				case _ext_jlt:					return Jlt;				case _ext_pcl:					return Pcl;				case _ext_pclxl:					return Pclxl;				case _ext_sfd_hdstx:					return Sfdhdstx;				case _ext_mpy:					return Mpy;				case _ext_afp:				case _ext_listafp:				case _ext_list3820:					return Afp;				case _ext_irm:					return Irm;				case _ext_sc:					return Sc;				case _ext_icc:				case _ext_icm:					return Icc;				case _ext_igl:					return Igl;				case _ext_ivp:					return Ivp;				case _ext_ivu:					return Ivu;				case _ext_igm:					return Igm;				case _ext_xpw:				case _ext_xpx:					return Xpw;				case _ext_i2g:					return I2g;				case _ext_qbo:					return Qbo;				case _ext_qfx:					return Qfx;				case _ext_rcprofile:					return Rcprofile;				case _ext_irp:					return Irp;				case _ext_xpr:					return Xpr;				case _ext_fcs:					return Fcs;				case _ext_jam:					return Jam;				case _ext_rms:					return Rms;				case _ext_jisp:					return Jisp;				case _ext_joda:					return Joda;				case _ext_ktz:				case _ext_ktr:					return Ktz;				case _ext_karbon:					return Karbon;				case _ext_chrt:					return Chrt;				case _ext_kfo:					return Kfo;				case _ext_flw:					return Flw;				case _ext_kon:					return Kon;				case _ext_kpr:				case _ext_kpt:					return Kpr;				case _ext_ksp:					return Ksp;				case _ext_kwd:				case _ext_kwt:					return Kwd;				case _ext_htke:					return Htke;				case _ext_kia:					return Kia;				case _ext_kne:				case _ext_knp:					return Kne;				case _ext_skp:				case _ext_skd:				case _ext_skt:				case _ext_skm:					return Skp;				case _ext_sse:					return Sse;				case _ext_lasxml:					return Lasxml;				case _ext_lbd:					return Lbd;				case _ext_lbe:					return Lbe;				case _ext_123:					return _123;				case _ext_apr:					return Apr;				case _ext_pre:					return Pre;				case _ext_nsf:					return Nsf;				case _ext_org:					return Org;				case _ext_scm:					return Scm;				case _ext_lwp:					return Lwp;				case _ext_portpkg:					return Portpkg;				case _ext_mcd:					return Mcd;				case _ext_mc1:					return Mc1;				case _ext_cdkey:					return Cdkey;				case _ext_mwf:					return Mwf;				case _ext_mfm:					return Mfm;				case _ext_flo:					return Flo;				case _ext_igx:					return Igx;				case _ext_mif:					return Mif;				case _ext_daf:					return Daf;				case _ext_dis:					return Dis;				case _ext_mbk:					return Mbk;				case _ext_mqy:					return Mqy;				case _ext_msl:					return Msl;				case _ext_plc:					return Plc;				case _ext_txf:					return Txf;				case _ext_mpn:					return Mpn;				case _ext_mpc:					return Mpc;				case _ext_xul:					return Xul;				case _ext_cil:					return Cil;				case _ext_cab:					return Cab;				case _ext_xls:				case _ext_xlm:				case _ext_xla:				case _ext_xlc:				case _ext_xlt:				case _ext_xlw:					return Xls;				case _ext_xlam:					return Xlam;				case _ext_xlsb:					return Xlsb;				case _ext_xlsm:					return Xlsm;				case _ext_xltm:					return Xltm;				case _ext_eot:					return Eot;				case _ext_chm:					return Chm;				case _ext_ims:					return Ims;				case _ext_lrm:					return Lrm;				case _ext_thmx:					return Thmx;				case _ext_cat:					return Cat;				case _ext_stl:					return Stl;				case _ext_ppt:				case _ext_pps:				case _ext_pot:					return Ppt;				case _ext_ppam:					return Ppam;				case _ext_pptm:					return Pptm;				case _ext_sldm:					return Sldm;				case _ext_ppsm:					return Ppsm;				case _ext_potm:					return Potm;				case _ext_mpp:				case _ext_mpt:					return Mpp;				case _ext_docm:					return Docm;				case _ext_dotm:					return Dotm;				case _ext_wps:				case _ext_wks:				case _ext_wcm:				case _ext_wdb:					return Wps;				case _ext_wpl:					return Wpl;				case _ext_xps:					return Xps;				case _ext_mseq:					return Mseq;				case _ext_mus:					return Mus;				case _ext_msty:					return Msty;				case _ext_taglet:					return Taglet;				case _ext_nlu:					return Nlu;				case _ext_ntf:				case _ext_nitf:					return Ntf;				case _ext_nnd:					return Nnd;				case _ext_nns:					return Nns;				case _ext_nnw:					return Nnw;				case _ext_ngdat:					return Ngdat;				case _ext_n_gage:					return Ngage;				case _ext_rpst:					return Rpst;				case _ext_rpss:					return Rpss;				case _ext_edm:					return Edm;				case _ext_edx:					return Edx;				case _ext_ext:					return Ext;				case _ext_odc:					return Odc;				case _ext_otc:					return Otc;				case _ext_odb:					return Odb;				case _ext_odf:					return Odf;				case _ext_odft:					return Odft;				case _ext_odg:					return Odg;				case _ext_otg:					return Otg;				case _ext_odi:					return Odi;				case _ext_oti:					return Oti;				case _ext_odp:					return Odp;				case _ext_otp:					return Otp;				case _ext_ods:					return Ods;				case _ext_ots:					return Ots;				case _ext_odt:					return Odt;				case _ext_odm:					return Odm;				case _ext_ott:					return Ott;				case _ext_oth:					return Oth;				case _ext_xo:					return Xo;				case _ext_dd2:					return Dd2;				case _ext_oxt:					return Oxt;				case _ext_pptx:					return Pptx;				case _ext_sldx:					return Sldx;				case _ext_ppsx:					return Ppsx;				case _ext_potx:					return Potx;				case _ext_xlsx:					return Xlsx;				case _ext_xltx:					return Xltx;				case _ext_docx:					return Docx;				case _ext_dotx:					return Dotx;				case _ext_mgp:					return Mgp;				case _ext_dp:					return Dp;				case _ext_esa:					return Esa;				case _ext_pdb:				case _ext_pqa:				case _ext_oprc:					return Pdb;				case _ext_paw:					return Paw;				case _ext_str:					return Str;				case _ext_ei6:					return Ei6;				case _ext_efif:					return Efif;				case _ext_wg:					return Wg;				case _ext_plf:					return Plf;				case _ext_pbd:					return Pbd;				case _ext_box:					return Box;				case _ext_mgz:					return Mgz;				case _ext_qps:					return Qps;				case _ext_ptid:					return Ptid;				case _ext_qxd:				case _ext_qxt:				case _ext_qwd:				case _ext_qwt:				case _ext_qxl:				case _ext_qxb:					return Qxd;				case _ext_bed:					return Bed;				case _ext_mxl:					return Mxl;				case _ext_musicxml:					return Musicxml;				case _ext_cryptonote:					return Cryptonote;				case _ext_cod:					return Cod;				case _ext_rm:					return Rm;				case _ext_rmvb:					return Rmvb;				case _ext_link66:					return Link66;				case _ext_st:					return St;				case _ext_see:					return See;				case _ext_sema:					return Sema;				case _ext_semd:					return Semd;				case _ext_semf:					return Semf;				case _ext_ifm:					return Ifm;				case _ext_itp:					return Itp;				case _ext_iif:					return Iif;				case _ext_ipk:					return Ipk;				case _ext_twd:				case _ext_twds:					return Twd;				case _ext_mmf:					return Mmf;				case _ext_teacher:					return Teacher;				case _ext_sdkm:				case _ext_sdkd:					return Sdkm;				case _ext_dxp:					return Dxp;				case _ext_sfs:					return Sfs;				case _ext_sdc:					return Sdc;				case _ext_sda:					return Sda;				case _ext_sdd:					return Sdd;				case _ext_smf:					return Smf;				case _ext_sdw:				case _ext_vor:					return Sdw;				case _ext_sgl:					return Sgl;				case _ext_smzip:					return Smzip;				case _ext_sm:					return Sm;				case _ext_sxc:					return Sxc;				case _ext_stc:					return Stc;				case _ext_sxd:					return Sxd;				case _ext_std:					return Std;				case _ext_sxi:					return Sxi;				case _ext_sti:					return Sti;				case _ext_sxm:					return Sxm;				case _ext_sxw:					return Sxw;				case _ext_sxg:					return Sxg;				case _ext_stw:					return Stw;				case _ext_sus:				case _ext_susp:					return Sus;				case _ext_svd:					return Svd;				case _ext_sis:				case _ext_sisx:					return Sis;				case _ext_xsm:					return Xsm;				case _ext_bdm:					return Bdm;				case _ext_xdm:					return Xdm;				case _ext_tao:					return Tao;				case _ext_pcap:				case _ext_cap:				case _ext_dmp:					return Pcap;				case _ext_tmo:					return Tmo;				case _ext_tpt:					return Tpt;				case _ext_mxs:					return Mxs;				case _ext_tra:					return Tra;				case _ext_ufd:				case _ext_ufdl:					return Ufd;				case _ext_utz:					return Utz;				case _ext_umj:					return Umj;				case _ext_unityweb:					return Unityweb;				case _ext_uoml:					return Uoml;				case _ext_vcx:					return Vcx;				case _ext_vsd:				case _ext_vst:				case _ext_vss:				case _ext_vsw:					return Vsd;				case _ext_vis:					return Vis;				case _ext_vsf:					return Vsf;				case _ext_wbxml:					return Wbxml;				case _ext_wmlc:					return Wmlc;				case _ext_wmlsc:					return Wmlsc;				case _ext_wtb:					return Wtb;				case _ext_nbp:					return Nbp;				case _ext_wpd:					return Wpd;				case _ext_wqd:					return Wqd;				case _ext_stf:					return Stf;				case _ext_xar:					return Xar;				case _ext_xfdl:					return Xfdl;				case _ext_hvd:					return Hvd;				case _ext_hvs:					return Hvs;				case _ext_hvp:					return Hvp;				case _ext_osf:					return Osf;				case _ext_osfpvg:					return Osfpvg;				case _ext_saf:					return Saf;				case _ext_spf:					return Spf;				case _ext_cmp:					return Cmp;				case _ext_zir:				case _ext_zirz:					return Zir;				case _ext_zaz:					return Zaz;				case _ext_vxml:					return Vxml;				case _ext_wgt:					return Wgt;				case _ext_hlp:					return Hlp;				case _ext_wsdl:					return Wsdl;				case _ext_wspolicy:					return Wspolicy;				case _ext_7z:					return _7z;				case _ext_abw:					return Abw;				case _ext_ace:					return Ace;				case _ext_dmg:					return Dmg;				case _ext_aab:				case _ext_x32:				case _ext_u32:				case _ext_vox:					return Aab;				case _ext_aam:					return Aam;				case _ext_aas:					return Aas;				case _ext_bcpio:					return Bcpio;				case _ext_torrent:					return Torrent;				case _ext_blb:				case _ext_blorb:					return Blb;				case _ext_bz:					return Bz;				case _ext_bz2:				case _ext_boz:					return Bz2;				case _ext_cbr:				case _ext_cba:				case _ext_cbt:				case _ext_cbz:				case _ext_cb7:					return Cbr;				case _ext_vcd:					return Vcd;				case _ext_cfs:					return Cfs;				case _ext_chat:					return Chat;				case _ext_pgn:					return Pgn;				case _ext_nsc:					return Nsc;				case _ext_cpio:					return Cpio;				case _ext_csh:					return Csh;				case _ext_deb:				case _ext_udeb:					return Deb;				case _ext_dgc:					return Dgc;				case _ext_dir:				case _ext_dcr:				case _ext_dxr:				case _ext_cst:				case _ext_cct:				case _ext_cxt:				case _ext_w3d:				case _ext_fgd:				case _ext_swa:					return Dir;				case _ext_wad:					return Wad;				case _ext_ncx:					return Ncx;				case _ext_dtb:					return Dtb;				case _ext_res:					return Res;				case _ext_dvi:					return Dvi;				case _ext_evy:					return Evy;				case _ext_eva:					return Eva;				case _ext_bdf:					return Bdf;				case _ext_gsf:					return Gsf;				case _ext_psf:					return Psf;				case _ext_pcf:					return Pcf;				case _ext_snf:					return Snf;				case _ext_pfa:				case _ext_pfb:				case _ext_pfm:				case _ext_afm:					return Pfa;				case _ext_arc:					return Arc;				case _ext_spl:					return Spl;				case _ext_gca:					return Gca;				case _ext_ulx:					return Ulx;				case _ext_gnumeric:					return Gnumeric;				case _ext_gramps:					return Gramps;				case _ext_gtar:					return Gtar;				case _ext_hdf:					return Hdf;				case _ext_install:					return Install;				case _ext_iso:					return Iso;				case _ext_jnlp:					return Jnlp;				case _ext_latex:					return Latex;				case _ext_lzh:				case _ext_lha:					return Lzh;				case _ext_mie:					return Mie;				case _ext_prc:				case _ext_mobi:					return Prc;				case _ext_application:					return Application;				case _ext_lnk:					return Lnk;				case _ext_wmd:					return Wmd;				case _ext_wmz:					return Wmz;				case _ext_xbap:					return Xbap;				case _ext_mdb:					return Mdb;				case _ext_obd:					return Obd;				case _ext_crd:					return Crd;				case _ext_clp:					return Clp;				case _ext_exe:				case _ext_dll:				case _ext_com:				case _ext_bat:				case _ext_msi:					return Exe;				case _ext_mvb:				case _ext_m13:				case _ext_m14:					return Mvb;				case _ext_wmf:				case _ext_emf:				case _ext_emz:					return Wmf;				case _ext_mny:					return Mny;				case _ext_pub:					return Pub;				case _ext_scd:					return Scd;				case _ext_trm:					return Trm;				case _ext_wri:					return Wri;				case _ext_nc:				case _ext_cdf:					return Nc;				case _ext_nzb:					return Nzb;				case _ext_p12:				case _ext_pfx:					return P12;				case _ext_p7b:				case _ext_spc:					return P7b;				case _ext_p7r:					return P7r;				case _ext_rar:					return Rar;				case _ext_ris:					return Ris;				case _ext_sh:					return Sh;				case _ext_shar:					return Shar;				case _ext_swf:					return Swf;				case _ext_xap:					return Xap;				case _ext_sql:					return Sql;				case _ext_sit:					return Sit;				case _ext_sitx:					return Sitx;				case _ext_srt:					return Srt;				case _ext_sv4cpio:					return Sv4cpio;				case _ext_sv4crc:					return Sv4crc;				case _ext_t3:					return T3;				case _ext_gam:					return Gam;				case _ext_tar:					return Tar;				case _ext_tcl:				case _ext_tk:					return Tcl;				case _ext_tex:					return Tex;				case _ext_tfm:					return Tfm;				case _ext_texinfo:				case _ext_texi:					return Texinfo;				case _ext_obj:					return Obj;				case _ext_ustar:					return Ustar;				case _ext_src:					return Src;				case _ext_der:				case _ext_crt:				case _ext_pem:					return Der;				case _ext_fig:					return Fig;				case _ext_xlf:					return Xlf;				case _ext_xpi:					return Xpi;				case _ext_xz:					return Xz;				case _ext_z1:				case _ext_z2:				case _ext_z3:				case _ext_z4:				case _ext_z5:				case _ext_z6:				case _ext_z7:				case _ext_z8:					return Z1;				case _ext_xaml:					return Xaml;				case _ext_xdf:					return Xdf;				case _ext_xenc:					return Xenc;				case _ext_xhtml:				case _ext_xht:					return Xhtml;				case _ext_xml:				case _ext_xsl:				case _ext_xsd:					return Xml;				case _ext_dtd:					return Dtd;				case _ext_xop:					return Xop;				case _ext_xpl:					return Xpl;				case _ext_xslt:					return Xslt;				case _ext_xspf:					return Xspf;				case _ext_mxml:				case _ext_xhvml:				case _ext_xvml:				case _ext_xvm:					return Mxml;				case _ext_yang:					return Yang;				case _ext_yin:					return Yin;				case _ext_zip:					return Zip;				case _ext_adp:					return Adp;				case _ext_au:				case _ext_snd:					return Au;				case _ext_mid:				case _ext_midi:				case _ext_kar:				case _ext_rmi:					return Mid;				case _ext_m4a:				case _ext_mp4a:				case _ext_f4a:				case _ext_f4b:					return M4a;				case _ext_mpga:				case _ext_mp2:				case _ext_mp2a:				case _ext_mp3:				case _ext_m2a:				case _ext_m3a:					return Mpga;				case _ext_oga:				case _ext_ogg:				case _ext_spx:				case _ext_opus:					return Oga;				case _ext_s3m:					return S3m;				case _ext_sil:					return Sil;				case _ext_uva:				case _ext_uvva:					return Uva;				case _ext_eol:					return Eol;				case _ext_dra:					return Dra;				case _ext_dts:					return Dts;				case _ext_dtshd:					return Dtshd;				case _ext_lvp:					return Lvp;				case _ext_pya:					return Pya;				case _ext_ecelp4800:					return Ecelp4800;				case _ext_ecelp7470:					return Ecelp7470;				case _ext_ecelp9600:					return Ecelp9600;				case _ext_rip:					return Rip;				case _ext_weba:					return Weba;				case _ext_aac:					return Aac;				case _ext_aif:				case _ext_aiff:				case _ext_aifc:					return Aif;				case _ext_caf:					return Caf;				case _ext_flac:					return Flac;				case _ext_mka:					return Mka;				case _ext_m3u:					return M3u;				case _ext_wax:					return Wax;				case _ext_wma:					return Wma;				case _ext_ram:				case _ext_ra:					return Ram;				case _ext_rmp:					return Rmp;				case _ext_wav:					return Wav;				case _ext_xm:					return Xm;				case _ext_cdx:					return Cdx;				case _ext_cif:					return Cif;				case _ext_cmdf:					return Cmdf;				case _ext_cml:					return Cml;				case _ext_csml:					return Csml;				case _ext_xyz:					return Xyz;				case _ext_ttc:					return Ttc;				case _ext_otf:					return Otf;				case _ext_ttf:					return Ttf;				case _ext_woff:					return Woff;				case _ext_woff2:					return Woff2;				case _ext_bmp:					return Bmp;				case _ext_cgm:					return Cgm;				case _ext_g3:					return G3;				case _ext_gif:					return Gif;				case _ext_ief:					return Ief;				case _ext_jpeg:				case _ext_jpg:				case _ext_jpe:					return Jpeg;				case _ext_ktx:					return Ktx;				case _ext_png:					return Png;				case _ext_btif:					return Btif;				case _ext_sgi:					return Sgi;				case _ext_svg:				case _ext_svgz:					return Svg;				case _ext_tiff:				case _ext_tif:					return Tiff;				case _ext_psd:					return Psd;				case _ext_uvi:				case _ext_uvvi:				case _ext_uvg:				case _ext_uvvg:					return Uvi;				case _ext_djvu:				case _ext_djv:					return Djvu;				case _ext_sub:					return Sub;				case _ext_dwg:					return Dwg;				case _ext_dxf:					return Dxf;				case _ext_fbs:					return Fbs;				case _ext_fpx:					return Fpx;				case _ext_fst:					return Fst;				case _ext_mmr:					return Mmr;				case _ext_rlc:					return Rlc;				case _ext_mdi:					return Mdi;				case _ext_wdp:					return Wdp;				case _ext_npx:					return Npx;				case _ext_wbmp:					return Wbmp;				case _ext_xif:					return Xif;				case _ext_webp:					return Webp;				case _ext_3ds:					return _3ds;				case _ext_ras:					return Ras;				case _ext_cmx:					return Cmx;				case _ext_fh:				case _ext_fhc:				case _ext_fh4:				case _ext_fh5:				case _ext_fh7:					return Fh;				case _ext_ico:				case _ext_cur:					return Ico;				case _ext_sid:					return Sid;				case _ext_pcx:					return Pcx;				case _ext_pic:				case _ext_pct:					return Pic;				case _ext_pnm:					return Pnm;				case _ext_pbm:					return Pbm;				case _ext_pgm:					return Pgm;				case _ext_ppm:					return Ppm;				case _ext_rgb:					return Rgb;				case _ext_tga:					return Tga;				case _ext_xbm:					return Xbm;				case _ext_xpm:					return Xpm;				case _ext_xwd:					return Xwd;				case _ext_eml:				case _ext_mime:					return Eml;				case _ext_igs:				case _ext_iges:					return Igs;				case _ext_msh:				case _ext_mesh:				case _ext_silo:					return Msh;				case _ext_dae:					return Dae;				case _ext_dwf:					return Dwf;				case _ext_gdl:					return Gdl;				case _ext_gtw:					return Gtw;				case _ext_mts:					return Mts;				case _ext_vtu:					return Vtu;				case _ext_wrl:				case _ext_vrml:					return Wrl;				case _ext_x3db:				case _ext_x3dbz:					return X3db;				case _ext_x3dv:				case _ext_x3dvz:					return X3dv;				case _ext_x3d:				case _ext_x3dz:					return X3d;				case _ext_appcache:				case _ext_manifest:					return Appcache;				case _ext_ics:				case _ext_ifb:					return Ics;				case _ext_css:					return Css;				case _ext_csv:					return Csv;				case _ext_html:				case _ext_htm:				case _ext_shtml:					return Html;				case _ext_n3:					return N3;				case _ext_txt:				case _ext_text:				case _ext_conf:				case _ext_def:				case _ext_list:				case _ext_log:				case _ext_in:				case _ext_ini:					return Txt;				case _ext_dsc:					return Dsc;				case _ext_rtx:					return Rtx;				case _ext_sgml:				case _ext_sgm:					return Sgml;				case _ext_tsv:					return Tsv;				case _ext_t:				case _ext_tr:				case _ext_roff:				case _ext_man:				case _ext_me:				case _ext_ms:					return T;				case _ext_ttl:					return Ttl;				case _ext_uri:				case _ext_uris:				case _ext_urls:					return Uri;				case _ext_vcard:					return Vcard;				case _ext_curl:					return Curl;				case _ext_dcurl:					return Dcurl;				case _ext_mcurl:					return Mcurl;				case _ext_scurl:					return Scurl;				case _ext_fly:					return Fly;				case _ext_flx:					return Flx;				case _ext_gv:					return Gv;				case _ext_3dml:					return _3dml;				case _ext_spot:					return Spot;				case _ext_jad:					return Jad;				case _ext_wml:					return Wml;				case _ext_wmls:					return Wmls;				case _ext_s:				case _ext_asm:					return S;				case _ext_c:				case _ext_cc:				case _ext_cxx:				case _ext_cpp:				case _ext_h:				case _ext_hh:				case _ext_dic:					return C;				case _ext_f:				case _ext_for:				case _ext_f77:				case _ext_f90:					return F;				case _ext_java:					return Java;				case _ext_nfo:					return Nfo;				case _ext_opml:					return Opml;				case _ext_p:				case _ext_pas:					return P;				case _ext_etx:					return Etx;				case _ext_sfv:					return Sfv;				case _ext_uu:					return Uu;				case _ext_vcs:					return Vcs;				case _ext_vcf:					return Vcf;				case _ext_3gp:				case _ext_3gpp:					return _3gp;				case _ext_3g2:					return _3g2;				case _ext_h261:					return H261;				case _ext_h263:					return H263;				case _ext_h264:					return H264;				case _ext_jpgv:					return Jpgv;				case _ext_jpm:				case _ext_jpgm:					return Jpm;				case _ext_mj2:				case _ext_mjp2:					return Mj2;				case _ext_mp4:				case _ext_mp4v:				case _ext_mpg4:				case _ext_f4p:					return Mp4;				case _ext_mpeg:				case _ext_mpg:				case _ext_mpe:				case _ext_m1v:				case _ext_m2v:					return Mpeg;				case _ext_ogv:					return Ogv;				case _ext_qt:				case _ext_mov:					return Qt;				case _ext_uvh:				case _ext_uvvh:					return Uvh;				case _ext_uvm:				case _ext_uvvm:					return Uvm;				case _ext_uvp:				case _ext_uvvp:					return Uvp;				case _ext_uvs:				case _ext_uvvs:					return Uvs;				case _ext_uvv:				case _ext_uvvv:					return Uvv;				case _ext_dvb:					return Dvb;				case _ext_fvt:					return Fvt;				case _ext_mxu:				case _ext_m4u:					return Mxu;				case _ext_pyv:					return Pyv;				case _ext_uvu:				case _ext_uvvu:					return Uvu;				case _ext_viv:					return Viv;				case _ext_webm:					return Webm;				case _ext_f4v:					return F4v;				case _ext_fli:					return Fli;				case _ext_flv:					return Flv;				case _ext_m4v:					return M4v;				case _ext_mkv:				case _ext_mk3d:				case _ext_mks:					return Mkv;				case _ext_mng:					return Mng;				case _ext_asf:				case _ext_asx:					return Asf;				case _ext_vob:					return Vob;				case _ext_wm:					return Wm;				case _ext_wmv:					return Wmv;				case _ext_wmx:					return Wmx;				case _ext_wvx:					return Wvx;				case _ext_avi:					return Avi;				case _ext_movie:					return Movie;				case _ext_smv:					return Smv;				case _ext_ice:					return Ice;				case _ext_jsonld:					return Jsonld;				case _ext_geojson:					return Geojson;				case _ext_mjs:					return Mjs;				case _ext_wasm:					return Wasm;				case _ext_webmanifest:					return Webmanifest;				case _ext_webapp:					return Webapp;				case _ext_jxr:				case _ext_hdp:					return Jxr;				case _ext_jng:					return Jng;				case _ext_bbaw:					return Bbaw;				case _ext_crx:					return Crx;				case _ext_cco:					return Cco;				case _ext_jardiff:					return Jardiff;				case _ext_run:					return Run;				case _ext_oex:					return Oex;				case _ext_pl:				case _ext_pm:					return Pl;				case _ext_rpm:					return Rpm;				case _ext_sea:					return Sea;				case _ext_md:				case _ext_markdown:					return Md;				case _ext_mml:					return Mml;				case _ext_xloc:					return Xloc;				case _ext_vtt:					return Vtt;				case _ext_htc:					return Htc;				case _ext_bdoc:					return Bdoc;				case _ext_mpd:					return Mpd;				case _ext_gz:					return Gz;				case _ext_hjson:					return Hjson;				case _ext_json5:					return Json5;				case _ext_nq:					return Nq;				case _ext_nt:					return Nt;				case _ext_raml:					return Raml;				case _ext_siv:					return Siv;				case _ext_toml:					return Toml;				case _ext_pkpass:					return Pkpass;				case _ext_csl:					return Csl;				case _ext_gdoc:					return Gdoc;				case _ext_gslides:					return Gslides;				case _ext_gsheet:					return Gsheet;				case _ext_msg:					return Msg;				case _ext_wadl:					return Wadl;				case _ext_arj:					return Arj;				case _ext_php:					return Php;				case _ext_kdbx:					return Kdbx;				case _ext_luac:					return Luac;				case _ext_pac:					return Pac;				case _ext_hdd:					return Hdd;				case _ext_ova:					return Ova;				case _ext_ovf:					return Ovf;				case _ext_vbox:					return Vbox;				case _ext_vbox_extpack:					return Vboxextpack;				case _ext_vdi:					return Vdi;				case _ext_vhd:					return Vhd;				case _ext_vmdk:					return Vmdk;				case _ext_mxmf:					return Mxmf;				case _ext_apng:					return Apng;				case _ext_heic:					return Heic;				case _ext_heics:					return Heics;				case _ext_heif:					return Heif;				case _ext_heifs:					return Heifs;				case _ext_jp2:					return Jp2;				case _ext_jpx:					return Jpx;				case _ext_dds:					return Dds;				case _ext_coffee:					return Coffee;				case _ext_jade:					return Jade;				case _ext_jsx:					return Jsx;				case _ext_less:					return Less;				case _ext_mdx:					return Mdx;				case _ext_shex:					return Shex;				case _ext_slim:					return Slim;				case _ext_stylus:					return Stylus;				case _ext_hbs:					return Hbs;				case _ext_lua:					return Lua;				case _ext_mkd:					return Mkd;				case _ext_pde:					return Pde;				case _ext_sass:					return Sass;				case _ext_scss:					return Scss;				case _ext_ymp:					return Ymp;				case _ext_yaml:					return Yaml;                
+				case _ext_ez:
+					return Ez;
+
+				case _ext_aw:
+					return Aw;
+
+				case _ext_atom:
+					return Atom;
+
+				case _ext_atomcat:
+					return Atomcat;
+
+				case _ext_atomsvc:
+					return Atomsvc;
+
+				case _ext_ccxml:
+					return Ccxml;
+
+				case _ext_cdmia:
+					return Cdmia;
+
+				case _ext_cdmic:
+					return Cdmic;
+
+				case _ext_cdmid:
+					return Cdmid;
+
+				case _ext_cdmio:
+					return Cdmio;
+
+				case _ext_cdmiq:
+					return Cdmiq;
+
+				case _ext_cu:
+					return Cu;
+
+				case _ext_davmount:
+					return Davmount;
+
+				case _ext_dbk:
+					return Dbk;
+
+				case _ext_dssc:
+					return Dssc;
+
+				case _ext_xdssc:
+					return Xdssc;
+
+				case _ext_ecma:
+				case _ext_es:
+					return Ecma;
+
+				case _ext_emma:
+					return Emma;
+
+				case _ext_epub:
+					return Epub;
+
+				case _ext_exi:
+					return Exi;
+
+				case _ext_pfr:
+					return Pfr;
+
+				case _ext_gml:
+					return Gml;
+
+				case _ext_gpx:
+					return Gpx;
+
+				case _ext_gxf:
+					return Gxf;
+
+				case _ext_stk:
+					return Stk;
+
+				case _ext_ink:
+				case _ext_inkml:
+					return Ink;
+
+				case _ext_ipfix:
+					return Ipfix;
+
+				case _ext_jar:
+				case _ext_ear:
+				case _ext_war:
+					return Jar;
+
+				case _ext_ser:
+					return Ser;
+
+				case _ext_class:
+					return Class;
+
+				case _ext_js:
+					return Js;
+
+				case _ext_json:
+				case _ext_map:
+				case _ext_topojson:
+					return Json;
+
+				case _ext_jsonml:
+					return Jsonml;
+
+				case _ext_lostxml:
+					return Lostxml;
+
+				case _ext_hqx:
+					return Hqx;
+
+				case _ext_cpt:
+					return Cpt;
+
+				case _ext_mads:
+					return Mads;
+
+				case _ext_mrc:
+					return Mrc;
+
+				case _ext_mrcx:
+					return Mrcx;
+
+				case _ext_ma:
+				case _ext_nb:
+				case _ext_mb:
+					return Ma;
+
+				case _ext_mathml:
+					return Mathml;
+
+				case _ext_mbox:
+					return Mbox;
+
+				case _ext_mscml:
+					return Mscml;
+
+				case _ext_metalink:
+					return Metalink;
+
+				case _ext_meta4:
+					return Meta4;
+
+				case _ext_mets:
+					return Mets;
+
+				case _ext_mods:
+					return Mods;
+
+				case _ext_m21:
+				case _ext_mp21:
+					return M21;
+
+				case _ext_mp4s:
+				case _ext_m4p:
+					return Mp4s;
+
+				case _ext_doc:
+				case _ext_dot:
+					return Doc;
+
+				case _ext_mxf:
+					return Mxf;
+
+				case _ext_bin:
+				case _ext_dms:
+				case _ext_lrf:
+				case _ext_mar:
+				case _ext_so:
+				case _ext_dist:
+				case _ext_distz:
+				case _ext_pkg:
+				case _ext_bpk:
+				case _ext_dump:
+				case _ext_elc:
+				case _ext_deploy:
+				case _ext_img:
+				case _ext_msm:
+				case _ext_msp:
+				case _ext_safariextz:
+				case _ext_buffer:
+					return Bin;
+
+				case _ext_oda:
+					return Oda;
+
+				case _ext_opf:
+					return Opf;
+
+				case _ext_ogx:
+					return Ogx;
+
+				case _ext_omdoc:
+					return Omdoc;
+
+				case _ext_onetoc:
+				case _ext_onetoc2:
+				case _ext_onetmp:
+				case _ext_onepkg:
+					return Onetoc;
+
+				case _ext_oxps:
+					return Oxps;
+
+				case _ext_xer:
+					return Xer;
+
+				case _ext_pdf:
+					return Pdf;
+
+				case _ext_pgp:
+					return Pgp;
+
+				case _ext_asc:
+				case _ext_sig:
+					return Asc;
+
+				case _ext_prf:
+					return Prf;
+
+				case _ext_p10:
+					return P10;
+
+				case _ext_p7m:
+				case _ext_p7c:
+					return P7m;
+
+				case _ext_p7s:
+					return P7s;
+
+				case _ext_p8:
+					return P8;
+
+				case _ext_ac:
+					return Ac;
+
+				case _ext_cer:
+					return Cer;
+
+				case _ext_crl:
+					return Crl;
+
+				case _ext_pkipath:
+					return Pkipath;
+
+				case _ext_pki:
+					return Pki;
+
+				case _ext_pls:
+					return Pls;
+
+				case _ext_ai:
+				case _ext_eps:
+				case _ext_ps:
+					return Ai;
+
+				case _ext_cww:
+					return Cww;
+
+				case _ext_pskcxml:
+					return Pskcxml;
+
+				case _ext_rdf:
+					return Rdf;
+
+				case _ext_rif:
+					return Rif;
+
+				case _ext_rnc:
+					return Rnc;
+
+				case _ext_rl:
+					return Rl;
+
+				case _ext_rld:
+					return Rld;
+
+				case _ext_rs:
+					return Rs;
+
+				case _ext_gbr:
+					return Gbr;
+
+				case _ext_mft:
+					return Mft;
+
+				case _ext_roa:
+					return Roa;
+
+				case _ext_rsd:
+					return Rsd;
+
+				case _ext_rss:
+					return Rss;
+
+				case _ext_rtf:
+					return Rtf;
+
+				case _ext_sbml:
+					return Sbml;
+
+				case _ext_scq:
+					return Scq;
+
+				case _ext_scs:
+					return Scs;
+
+				case _ext_spq:
+					return Spq;
+
+				case _ext_spp:
+					return Spp;
+
+				case _ext_sdp:
+					return Sdp;
+
+				case _ext_setpay:
+					return Setpay;
+
+				case _ext_setreg:
+					return Setreg;
+
+				case _ext_shf:
+					return Shf;
+
+				case _ext_smi:
+				case _ext_smil:
+					return Smi;
+
+				case _ext_rq:
+					return Rq;
+
+				case _ext_srx:
+					return Srx;
+
+				case _ext_gram:
+					return Gram;
+
+				case _ext_grxml:
+					return Grxml;
+
+				case _ext_sru:
+					return Sru;
+
+				case _ext_ssdl:
+					return Ssdl;
+
+				case _ext_ssml:
+					return Ssml;
+
+				case _ext_tei:
+				case _ext_teicorpus:
+					return Tei;
+
+				case _ext_tfi:
+					return Tfi;
+
+				case _ext_tsd:
+					return Tsd;
+
+				case _ext_plb:
+					return Plb;
+
+				case _ext_psb:
+					return Psb;
+
+				case _ext_pvb:
+					return Pvb;
+
+				case _ext_tcap:
+					return Tcap;
+
+				case _ext_pwn:
+					return Pwn;
+
+				case _ext_aso:
+					return Aso;
+
+				case _ext_imp:
+					return Imp;
+
+				case _ext_acu:
+					return Acu;
+
+				case _ext_atc:
+				case _ext_acutc:
+					return Atc;
+
+				case _ext_air:
+					return Air;
+
+				case _ext_fcdt:
+					return Fcdt;
+
+				case _ext_fxp:
+				case _ext_fxpl:
+					return Fxp;
+
+				case _ext_xdp:
+					return Xdp;
+
+				case _ext_xfdf:
+					return Xfdf;
+
+				case _ext_ahead:
+					return Ahead;
+
+				case _ext_azf:
+					return Azf;
+
+				case _ext_azs:
+					return Azs;
+
+				case _ext_azw:
+					return Azw;
+
+				case _ext_acc:
+					return Acc;
+
+				case _ext_ami:
+					return Ami;
+
+				case _ext_apk:
+					return Apk;
+
+				case _ext_cii:
+					return Cii;
+
+				case _ext_fti:
+					return Fti;
+
+				case _ext_atx:
+					return Atx;
+
+				case _ext_mpkg:
+					return Mpkg;
+
+				case _ext_m3u8:
+					return M3u8;
+
+				case _ext_swi:
+					return Swi;
+
+				case _ext_iota:
+					return Iota;
+
+				case _ext_aep:
+					return Aep;
+
+				case _ext_mpm:
+					return Mpm;
+
+				case _ext_bmi:
+					return Bmi;
+
+				case _ext_rep:
+					return Rep;
+
+				case _ext_cdxml:
+					return Cdxml;
+
+				case _ext_mmd:
+					return Mmd;
+
+				case _ext_cdy:
+					return Cdy;
+
+				case _ext_cla:
+					return Cla;
+
+				case _ext_rp9:
+					return Rp9;
+
+				case _ext_c4g:
+				case _ext_c4d:
+				case _ext_c4f:
+				case _ext_c4p:
+				case _ext_c4u:
+					return C4g;
+
+				case _ext_c11amc:
+					return C11amc;
+
+				case _ext_c11amz:
+					return C11amz;
+
+				case _ext_csp:
+					return Csp;
+
+				case _ext_cdbcmsg:
+					return Cdbcmsg;
+
+				case _ext_cmc:
+					return Cmc;
+
+				case _ext_clkx:
+					return Clkx;
+
+				case _ext_clkk:
+					return Clkk;
+
+				case _ext_clkp:
+					return Clkp;
+
+				case _ext_clkt:
+					return Clkt;
+
+				case _ext_clkw:
+					return Clkw;
+
+				case _ext_wbs:
+					return Wbs;
+
+				case _ext_pml:
+					return Pml;
+
+				case _ext_ppd:
+					return Ppd;
+
+				case _ext_car:
+					return Car;
+
+				case _ext_pcurl:
+					return Pcurl;
+
+				case _ext_dart:
+					return Dart;
+
+				case _ext_rdz:
+					return Rdz;
+
+				case _ext_uvf:
+				case _ext_uvvf:
+				case _ext_uvd:
+				case _ext_uvvd:
+					return Uvf;
+
+				case _ext_uvt:
+				case _ext_uvvt:
+					return Uvt;
+
+				case _ext_uvx:
+				case _ext_uvvx:
+					return Uvx;
+
+				case _ext_uvz:
+				case _ext_uvvz:
+					return Uvz;
+
+				case _ext_fe_launch:
+					return Felaunch;
+
+				case _ext_dna:
+					return Dna;
+
+				case _ext_mlp:
+					return Mlp;
+
+				case _ext_dpg:
+					return Dpg;
+
+				case _ext_dfac:
+					return Dfac;
+
+				case _ext_kpxx:
+					return Kpxx;
+
+				case _ext_ait:
+					return Ait;
+
+				case _ext_svc:
+					return Svc;
+
+				case _ext_geo:
+					return Geo;
+
+				case _ext_mag:
+					return Mag;
+
+				case _ext_nml:
+					return Nml;
+
+				case _ext_esf:
+					return Esf;
+
+				case _ext_msf:
+					return Msf;
+
+				case _ext_qam:
+					return Qam;
+
+				case _ext_slt:
+					return Slt;
+
+				case _ext_ssf:
+					return Ssf;
+
+				case _ext_es3:
+				case _ext_et3:
+					return Es3;
+
+				case _ext_ez2:
+					return Ez2;
+
+				case _ext_ez3:
+					return Ez3;
+
+				case _ext_fdf:
+					return Fdf;
+
+				case _ext_mseed:
+					return Mseed;
+
+				case _ext_seed:
+				case _ext_dataless:
+					return Seed;
+
+				case _ext_gph:
+					return Gph;
+
+				case _ext_ftc:
+					return Ftc;
+
+				case _ext_fm:
+				case _ext_frame:
+				case _ext_maker:
+				case _ext_book:
+					return Fm;
+
+				case _ext_fnc:
+					return Fnc;
+
+				case _ext_ltf:
+					return Ltf;
+
+				case _ext_fsc:
+					return Fsc;
+
+				case _ext_oas:
+					return Oas;
+
+				case _ext_oa2:
+					return Oa2;
+
+				case _ext_oa3:
+					return Oa3;
+
+				case _ext_fg5:
+					return Fg5;
+
+				case _ext_bh2:
+					return Bh2;
+
+				case _ext_ddd:
+					return Ddd;
+
+				case _ext_xdw:
+					return Xdw;
+
+				case _ext_xbd:
+					return Xbd;
+
+				case _ext_fzs:
+					return Fzs;
+
+				case _ext_txd:
+					return Txd;
+
+				case _ext_ggb:
+					return Ggb;
+
+				case _ext_ggt:
+					return Ggt;
+
+				case _ext_gex:
+				case _ext_gre:
+					return Gex;
+
+				case _ext_gxt:
+					return Gxt;
+
+				case _ext_g2w:
+					return G2w;
+
+				case _ext_g3w:
+					return G3w;
+
+				case _ext_gmx:
+					return Gmx;
+
+				case _ext_kml:
+					return Kml;
+
+				case _ext_kmz:
+					return Kmz;
+
+				case _ext_gqf:
+				case _ext_gqs:
+					return Gqf;
+
+				case _ext_gac:
+					return Gac;
+
+				case _ext_ghf:
+					return Ghf;
+
+				case _ext_gim:
+					return Gim;
+
+				case _ext_grv:
+					return Grv;
+
+				case _ext_gtm:
+					return Gtm;
+
+				case _ext_tpl:
+					return Tpl;
+
+				case _ext_vcg:
+					return Vcg;
+
+				case _ext_hal:
+					return Hal;
+
+				case _ext_zmm:
+					return Zmm;
+
+				case _ext_hbci:
+					return Hbci;
+
+				case _ext_les:
+					return Les;
+
+				case _ext_hpgl:
+					return Hpgl;
+
+				case _ext_hpid:
+					return Hpid;
+
+				case _ext_hps:
+					return Hps;
+
+				case _ext_jlt:
+					return Jlt;
+
+				case _ext_pcl:
+					return Pcl;
+
+				case _ext_pclxl:
+					return Pclxl;
+
+				case _ext_sfd_hdstx:
+					return Sfdhdstx;
+
+				case _ext_mpy:
+					return Mpy;
+
+				case _ext_afp:
+				case _ext_listafp:
+				case _ext_list3820:
+					return Afp;
+
+				case _ext_irm:
+					return Irm;
+
+				case _ext_sc:
+					return Sc;
+
+				case _ext_icc:
+				case _ext_icm:
+					return Icc;
+
+				case _ext_igl:
+					return Igl;
+
+				case _ext_ivp:
+					return Ivp;
+
+				case _ext_ivu:
+					return Ivu;
+
+				case _ext_igm:
+					return Igm;
+
+				case _ext_xpw:
+				case _ext_xpx:
+					return Xpw;
+
+				case _ext_i2g:
+					return I2g;
+
+				case _ext_qbo:
+					return Qbo;
+
+				case _ext_qfx:
+					return Qfx;
+
+				case _ext_rcprofile:
+					return Rcprofile;
+
+				case _ext_irp:
+					return Irp;
+
+				case _ext_xpr:
+					return Xpr;
+
+				case _ext_fcs:
+					return Fcs;
+
+				case _ext_jam:
+					return Jam;
+
+				case _ext_rms:
+					return Rms;
+
+				case _ext_jisp:
+					return Jisp;
+
+				case _ext_joda:
+					return Joda;
+
+				case _ext_ktz:
+				case _ext_ktr:
+					return Ktz;
+
+				case _ext_karbon:
+					return Karbon;
+
+				case _ext_chrt:
+					return Chrt;
+
+				case _ext_kfo:
+					return Kfo;
+
+				case _ext_flw:
+					return Flw;
+
+				case _ext_kon:
+					return Kon;
+
+				case _ext_kpr:
+				case _ext_kpt:
+					return Kpr;
+
+				case _ext_ksp:
+					return Ksp;
+
+				case _ext_kwd:
+				case _ext_kwt:
+					return Kwd;
+
+				case _ext_htke:
+					return Htke;
+
+				case _ext_kia:
+					return Kia;
+
+				case _ext_kne:
+				case _ext_knp:
+					return Kne;
+
+				case _ext_skp:
+				case _ext_skd:
+				case _ext_skt:
+				case _ext_skm:
+					return Skp;
+
+				case _ext_sse:
+					return Sse;
+
+				case _ext_lasxml:
+					return Lasxml;
+
+				case _ext_lbd:
+					return Lbd;
+
+				case _ext_lbe:
+					return Lbe;
+
+				case _ext_123:
+					return _123;
+
+				case _ext_apr:
+					return Apr;
+
+				case _ext_pre:
+					return Pre;
+
+				case _ext_nsf:
+					return Nsf;
+
+				case _ext_org:
+					return Org;
+
+				case _ext_scm:
+					return Scm;
+
+				case _ext_lwp:
+					return Lwp;
+
+				case _ext_portpkg:
+					return Portpkg;
+
+				case _ext_mcd:
+					return Mcd;
+
+				case _ext_mc1:
+					return Mc1;
+
+				case _ext_cdkey:
+					return Cdkey;
+
+				case _ext_mwf:
+					return Mwf;
+
+				case _ext_mfm:
+					return Mfm;
+
+				case _ext_flo:
+					return Flo;
+
+				case _ext_igx:
+					return Igx;
+
+				case _ext_mif:
+					return Mif;
+
+				case _ext_daf:
+					return Daf;
+
+				case _ext_dis:
+					return Dis;
+
+				case _ext_mbk:
+					return Mbk;
+
+				case _ext_mqy:
+					return Mqy;
+
+				case _ext_msl:
+					return Msl;
+
+				case _ext_plc:
+					return Plc;
+
+				case _ext_txf:
+					return Txf;
+
+				case _ext_mpn:
+					return Mpn;
+
+				case _ext_mpc:
+					return Mpc;
+
+				case _ext_xul:
+					return Xul;
+
+				case _ext_cil:
+					return Cil;
+
+				case _ext_cab:
+					return Cab;
+
+				case _ext_xls:
+				case _ext_xlm:
+				case _ext_xla:
+				case _ext_xlc:
+				case _ext_xlt:
+				case _ext_xlw:
+					return Xls;
+
+				case _ext_xlam:
+					return Xlam;
+
+				case _ext_xlsb:
+					return Xlsb;
+
+				case _ext_xlsm:
+					return Xlsm;
+
+				case _ext_xltm:
+					return Xltm;
+
+				case _ext_eot:
+					return Eot;
+
+				case _ext_chm:
+					return Chm;
+
+				case _ext_ims:
+					return Ims;
+
+				case _ext_lrm:
+					return Lrm;
+
+				case _ext_thmx:
+					return Thmx;
+
+				case _ext_cat:
+					return Cat;
+
+				case _ext_stl:
+					return Stl;
+
+				case _ext_ppt:
+				case _ext_pps:
+				case _ext_pot:
+					return Ppt;
+
+				case _ext_ppam:
+					return Ppam;
+
+				case _ext_pptm:
+					return Pptm;
+
+				case _ext_sldm:
+					return Sldm;
+
+				case _ext_ppsm:
+					return Ppsm;
+
+				case _ext_potm:
+					return Potm;
+
+				case _ext_mpp:
+				case _ext_mpt:
+					return Mpp;
+
+				case _ext_docm:
+					return Docm;
+
+				case _ext_dotm:
+					return Dotm;
+
+				case _ext_wps:
+				case _ext_wks:
+				case _ext_wcm:
+				case _ext_wdb:
+					return Wps;
+
+				case _ext_wpl:
+					return Wpl;
+
+				case _ext_xps:
+					return Xps;
+
+				case _ext_mseq:
+					return Mseq;
+
+				case _ext_mus:
+					return Mus;
+
+				case _ext_msty:
+					return Msty;
+
+				case _ext_taglet:
+					return Taglet;
+
+				case _ext_nlu:
+					return Nlu;
+
+				case _ext_ntf:
+				case _ext_nitf:
+					return Ntf;
+
+				case _ext_nnd:
+					return Nnd;
+
+				case _ext_nns:
+					return Nns;
+
+				case _ext_nnw:
+					return Nnw;
+
+				case _ext_ngdat:
+					return Ngdat;
+
+				case _ext_n_gage:
+					return Ngage;
+
+				case _ext_rpst:
+					return Rpst;
+
+				case _ext_rpss:
+					return Rpss;
+
+				case _ext_edm:
+					return Edm;
+
+				case _ext_edx:
+					return Edx;
+
+				case _ext_ext:
+					return Ext;
+
+				case _ext_odc:
+					return Odc;
+
+				case _ext_otc:
+					return Otc;
+
+				case _ext_odb:
+					return Odb;
+
+				case _ext_odf:
+					return Odf;
+
+				case _ext_odft:
+					return Odft;
+
+				case _ext_odg:
+					return Odg;
+
+				case _ext_otg:
+					return Otg;
+
+				case _ext_odi:
+					return Odi;
+
+				case _ext_oti:
+					return Oti;
+
+				case _ext_odp:
+					return Odp;
+
+				case _ext_otp:
+					return Otp;
+
+				case _ext_ods:
+					return Ods;
+
+				case _ext_ots:
+					return Ots;
+
+				case _ext_odt:
+					return Odt;
+
+				case _ext_odm:
+					return Odm;
+
+				case _ext_ott:
+					return Ott;
+
+				case _ext_oth:
+					return Oth;
+
+				case _ext_xo:
+					return Xo;
+
+				case _ext_dd2:
+					return Dd2;
+
+				case _ext_oxt:
+					return Oxt;
+
+				case _ext_pptx:
+					return Pptx;
+
+				case _ext_sldx:
+					return Sldx;
+
+				case _ext_ppsx:
+					return Ppsx;
+
+				case _ext_potx:
+					return Potx;
+
+				case _ext_xlsx:
+					return Xlsx;
+
+				case _ext_xltx:
+					return Xltx;
+
+				case _ext_docx:
+					return Docx;
+
+				case _ext_dotx:
+					return Dotx;
+
+				case _ext_mgp:
+					return Mgp;
+
+				case _ext_dp:
+					return Dp;
+
+				case _ext_esa:
+					return Esa;
+
+				case _ext_pdb:
+				case _ext_pqa:
+				case _ext_oprc:
+					return Pdb;
+
+				case _ext_paw:
+					return Paw;
+
+				case _ext_str:
+					return Str;
+
+				case _ext_ei6:
+					return Ei6;
+
+				case _ext_efif:
+					return Efif;
+
+				case _ext_wg:
+					return Wg;
+
+				case _ext_plf:
+					return Plf;
+
+				case _ext_pbd:
+					return Pbd;
+
+				case _ext_box:
+					return Box;
+
+				case _ext_mgz:
+					return Mgz;
+
+				case _ext_qps:
+					return Qps;
+
+				case _ext_ptid:
+					return Ptid;
+
+				case _ext_qxd:
+				case _ext_qxt:
+				case _ext_qwd:
+				case _ext_qwt:
+				case _ext_qxl:
+				case _ext_qxb:
+					return Qxd;
+
+				case _ext_bed:
+					return Bed;
+
+				case _ext_mxl:
+					return Mxl;
+
+				case _ext_musicxml:
+					return Musicxml;
+
+				case _ext_cryptonote:
+					return Cryptonote;
+
+				case _ext_cod:
+					return Cod;
+
+				case _ext_rm:
+					return Rm;
+
+				case _ext_rmvb:
+					return Rmvb;
+
+				case _ext_link66:
+					return Link66;
+
+				case _ext_st:
+					return St;
+
+				case _ext_see:
+					return See;
+
+				case _ext_sema:
+					return Sema;
+
+				case _ext_semd:
+					return Semd;
+
+				case _ext_semf:
+					return Semf;
+
+				case _ext_ifm:
+					return Ifm;
+
+				case _ext_itp:
+					return Itp;
+
+				case _ext_iif:
+					return Iif;
+
+				case _ext_ipk:
+					return Ipk;
+
+				case _ext_twd:
+				case _ext_twds:
+					return Twd;
+
+				case _ext_mmf:
+					return Mmf;
+
+				case _ext_teacher:
+					return Teacher;
+
+				case _ext_sdkm:
+				case _ext_sdkd:
+					return Sdkm;
+
+				case _ext_dxp:
+					return Dxp;
+
+				case _ext_sfs:
+					return Sfs;
+
+				case _ext_sdc:
+					return Sdc;
+
+				case _ext_sda:
+					return Sda;
+
+				case _ext_sdd:
+					return Sdd;
+
+				case _ext_smf:
+					return Smf;
+
+				case _ext_sdw:
+				case _ext_vor:
+					return Sdw;
+
+				case _ext_sgl:
+					return Sgl;
+
+				case _ext_smzip:
+					return Smzip;
+
+				case _ext_sm:
+					return Sm;
+
+				case _ext_sxc:
+					return Sxc;
+
+				case _ext_stc:
+					return Stc;
+
+				case _ext_sxd:
+					return Sxd;
+
+				case _ext_std:
+					return Std;
+
+				case _ext_sxi:
+					return Sxi;
+
+				case _ext_sti:
+					return Sti;
+
+				case _ext_sxm:
+					return Sxm;
+
+				case _ext_sxw:
+					return Sxw;
+
+				case _ext_sxg:
+					return Sxg;
+
+				case _ext_stw:
+					return Stw;
+
+				case _ext_sus:
+				case _ext_susp:
+					return Sus;
+
+				case _ext_svd:
+					return Svd;
+
+				case _ext_sis:
+				case _ext_sisx:
+					return Sis;
+
+				case _ext_xsm:
+					return Xsm;
+
+				case _ext_bdm:
+					return Bdm;
+
+				case _ext_xdm:
+					return Xdm;
+
+				case _ext_tao:
+					return Tao;
+
+				case _ext_pcap:
+				case _ext_cap:
+				case _ext_dmp:
+					return Pcap;
+
+				case _ext_tmo:
+					return Tmo;
+
+				case _ext_tpt:
+					return Tpt;
+
+				case _ext_mxs:
+					return Mxs;
+
+				case _ext_tra:
+					return Tra;
+
+				case _ext_ufd:
+				case _ext_ufdl:
+					return Ufd;
+
+				case _ext_utz:
+					return Utz;
+
+				case _ext_umj:
+					return Umj;
+
+				case _ext_unityweb:
+					return Unityweb;
+
+				case _ext_uoml:
+					return Uoml;
+
+				case _ext_vcx:
+					return Vcx;
+
+				case _ext_vsd:
+				case _ext_vst:
+				case _ext_vss:
+				case _ext_vsw:
+					return Vsd;
+
+				case _ext_vis:
+					return Vis;
+
+				case _ext_vsf:
+					return Vsf;
+
+				case _ext_wbxml:
+					return Wbxml;
+
+				case _ext_wmlc:
+					return Wmlc;
+
+				case _ext_wmlsc:
+					return Wmlsc;
+
+				case _ext_wtb:
+					return Wtb;
+
+				case _ext_nbp:
+					return Nbp;
+
+				case _ext_wpd:
+					return Wpd;
+
+				case _ext_wqd:
+					return Wqd;
+
+				case _ext_stf:
+					return Stf;
+
+				case _ext_xar:
+					return Xar;
+
+				case _ext_xfdl:
+					return Xfdl;
+
+				case _ext_hvd:
+					return Hvd;
+
+				case _ext_hvs:
+					return Hvs;
+
+				case _ext_hvp:
+					return Hvp;
+
+				case _ext_osf:
+					return Osf;
+
+				case _ext_osfpvg:
+					return Osfpvg;
+
+				case _ext_saf:
+					return Saf;
+
+				case _ext_spf:
+					return Spf;
+
+				case _ext_cmp:
+					return Cmp;
+
+				case _ext_zir:
+				case _ext_zirz:
+					return Zir;
+
+				case _ext_zaz:
+					return Zaz;
+
+				case _ext_vxml:
+					return Vxml;
+
+				case _ext_wgt:
+					return Wgt;
+
+				case _ext_hlp:
+					return Hlp;
+
+				case _ext_wsdl:
+					return Wsdl;
+
+				case _ext_wspolicy:
+					return Wspolicy;
+
+				case _ext_7z:
+					return _7z;
+
+				case _ext_abw:
+					return Abw;
+
+				case _ext_ace:
+					return Ace;
+
+				case _ext_dmg:
+					return Dmg;
+
+				case _ext_aab:
+				case _ext_x32:
+				case _ext_u32:
+				case _ext_vox:
+					return Aab;
+
+				case _ext_aam:
+					return Aam;
+
+				case _ext_aas:
+					return Aas;
+
+				case _ext_bcpio:
+					return Bcpio;
+
+				case _ext_torrent:
+					return Torrent;
+
+				case _ext_blb:
+				case _ext_blorb:
+					return Blb;
+
+				case _ext_bz:
+					return Bz;
+
+				case _ext_bz2:
+				case _ext_boz:
+					return Bz2;
+
+				case _ext_cbr:
+				case _ext_cba:
+				case _ext_cbt:
+				case _ext_cbz:
+				case _ext_cb7:
+					return Cbr;
+
+				case _ext_vcd:
+					return Vcd;
+
+				case _ext_cfs:
+					return Cfs;
+
+				case _ext_chat:
+					return Chat;
+
+				case _ext_pgn:
+					return Pgn;
+
+				case _ext_nsc:
+					return Nsc;
+
+				case _ext_cpio:
+					return Cpio;
+
+				case _ext_csh:
+					return Csh;
+
+				case _ext_deb:
+				case _ext_udeb:
+					return Deb;
+
+				case _ext_dgc:
+					return Dgc;
+
+				case _ext_dir:
+				case _ext_dcr:
+				case _ext_dxr:
+				case _ext_cst:
+				case _ext_cct:
+				case _ext_cxt:
+				case _ext_w3d:
+				case _ext_fgd:
+				case _ext_swa:
+					return Dir;
+
+				case _ext_wad:
+					return Wad;
+
+				case _ext_ncx:
+					return Ncx;
+
+				case _ext_dtb:
+					return Dtb;
+
+				case _ext_res:
+					return Res;
+
+				case _ext_dvi:
+					return Dvi;
+
+				case _ext_evy:
+					return Evy;
+
+				case _ext_eva:
+					return Eva;
+
+				case _ext_bdf:
+					return Bdf;
+
+				case _ext_gsf:
+					return Gsf;
+
+				case _ext_psf:
+					return Psf;
+
+				case _ext_pcf:
+					return Pcf;
+
+				case _ext_snf:
+					return Snf;
+
+				case _ext_pfa:
+				case _ext_pfb:
+				case _ext_pfm:
+				case _ext_afm:
+					return Pfa;
+
+				case _ext_arc:
+					return Arc;
+
+				case _ext_spl:
+					return Spl;
+
+				case _ext_gca:
+					return Gca;
+
+				case _ext_ulx:
+					return Ulx;
+
+				case _ext_gnumeric:
+					return Gnumeric;
+
+				case _ext_gramps:
+					return Gramps;
+
+				case _ext_gtar:
+					return Gtar;
+
+				case _ext_hdf:
+					return Hdf;
+
+				case _ext_install:
+					return Install;
+
+				case _ext_iso:
+					return Iso;
+
+				case _ext_jnlp:
+					return Jnlp;
+
+				case _ext_latex:
+					return Latex;
+
+				case _ext_lzh:
+				case _ext_lha:
+					return Lzh;
+
+				case _ext_mie:
+					return Mie;
+
+				case _ext_prc:
+				case _ext_mobi:
+					return Prc;
+
+				case _ext_application:
+					return Application;
+
+				case _ext_lnk:
+					return Lnk;
+
+				case _ext_wmd:
+					return Wmd;
+
+				case _ext_wmz:
+					return Wmz;
+
+				case _ext_xbap:
+					return Xbap;
+
+				case _ext_mdb:
+					return Mdb;
+
+				case _ext_obd:
+					return Obd;
+
+				case _ext_crd:
+					return Crd;
+
+				case _ext_clp:
+					return Clp;
+
+				case _ext_exe:
+				case _ext_dll:
+				case _ext_com:
+				case _ext_bat:
+				case _ext_msi:
+					return Exe;
+
+				case _ext_mvb:
+				case _ext_m13:
+				case _ext_m14:
+					return Mvb;
+
+				case _ext_wmf:
+				case _ext_emf:
+				case _ext_emz:
+					return Wmf;
+
+				case _ext_mny:
+					return Mny;
+
+				case _ext_pub:
+					return Pub;
+
+				case _ext_scd:
+					return Scd;
+
+				case _ext_trm:
+					return Trm;
+
+				case _ext_wri:
+					return Wri;
+
+				case _ext_nc:
+				case _ext_cdf:
+					return Nc;
+
+				case _ext_nzb:
+					return Nzb;
+
+				case _ext_p12:
+				case _ext_pfx:
+					return P12;
+
+				case _ext_p7b:
+				case _ext_spc:
+					return P7b;
+
+				case _ext_p7r:
+					return P7r;
+
+				case _ext_rar:
+					return Rar;
+
+				case _ext_ris:
+					return Ris;
+
+				case _ext_sh:
+					return Sh;
+
+				case _ext_shar:
+					return Shar;
+
+				case _ext_swf:
+					return Swf;
+
+				case _ext_xap:
+					return Xap;
+
+				case _ext_sql:
+					return Sql;
+
+				case _ext_sit:
+					return Sit;
+
+				case _ext_sitx:
+					return Sitx;
+
+				case _ext_srt:
+					return Srt;
+
+				case _ext_sv4cpio:
+					return Sv4cpio;
+
+				case _ext_sv4crc:
+					return Sv4crc;
+
+				case _ext_t3:
+					return T3;
+
+				case _ext_gam:
+					return Gam;
+
+				case _ext_tar:
+					return Tar;
+
+				case _ext_tcl:
+				case _ext_tk:
+					return Tcl;
+
+				case _ext_tex:
+					return Tex;
+
+				case _ext_tfm:
+					return Tfm;
+
+				case _ext_texinfo:
+				case _ext_texi:
+					return Texinfo;
+
+				case _ext_obj:
+					return Obj;
+
+				case _ext_ustar:
+					return Ustar;
+
+				case _ext_src:
+					return Src;
+
+				case _ext_der:
+				case _ext_crt:
+				case _ext_pem:
+					return Der;
+
+				case _ext_fig:
+					return Fig;
+
+				case _ext_xlf:
+					return Xlf;
+
+				case _ext_xpi:
+					return Xpi;
+
+				case _ext_xz:
+					return Xz;
+
+				case _ext_z1:
+				case _ext_z2:
+				case _ext_z3:
+				case _ext_z4:
+				case _ext_z5:
+				case _ext_z6:
+				case _ext_z7:
+				case _ext_z8:
+					return Z1;
+
+				case _ext_xaml:
+					return Xaml;
+
+				case _ext_xdf:
+					return Xdf;
+
+				case _ext_xenc:
+					return Xenc;
+
+				case _ext_xhtml:
+				case _ext_xht:
+					return Xhtml;
+
+				case _ext_xml:
+				case _ext_xsl:
+				case _ext_xsd:
+					return Xml;
+
+				case _ext_dtd:
+					return Dtd;
+
+				case _ext_xop:
+					return Xop;
+
+				case _ext_xpl:
+					return Xpl;
+
+				case _ext_xslt:
+					return Xslt;
+
+				case _ext_xspf:
+					return Xspf;
+
+				case _ext_mxml:
+				case _ext_xhvml:
+				case _ext_xvml:
+				case _ext_xvm:
+					return Mxml;
+
+				case _ext_yang:
+					return Yang;
+
+				case _ext_yin:
+					return Yin;
+
+				case _ext_zip:
+					return Zip;
+
+				case _ext_adp:
+					return Adp;
+
+				case _ext_au:
+				case _ext_snd:
+					return Au;
+
+				case _ext_mid:
+				case _ext_midi:
+				case _ext_kar:
+				case _ext_rmi:
+					return Mid;
+
+				case _ext_m4a:
+				case _ext_mp4a:
+				case _ext_f4a:
+				case _ext_f4b:
+					return M4a;
+
+				case _ext_mpga:
+				case _ext_mp2:
+				case _ext_mp2a:
+				case _ext_mp3:
+				case _ext_m2a:
+				case _ext_m3a:
+					return Mpga;
+
+				case _ext_oga:
+				case _ext_ogg:
+				case _ext_spx:
+				case _ext_opus:
+					return Oga;
+
+				case _ext_s3m:
+					return S3m;
+
+				case _ext_sil:
+					return Sil;
+
+				case _ext_uva:
+				case _ext_uvva:
+					return Uva;
+
+				case _ext_eol:
+					return Eol;
+
+				case _ext_dra:
+					return Dra;
+
+				case _ext_dts:
+					return Dts;
+
+				case _ext_dtshd:
+					return Dtshd;
+
+				case _ext_lvp:
+					return Lvp;
+
+				case _ext_pya:
+					return Pya;
+
+				case _ext_ecelp4800:
+					return Ecelp4800;
+
+				case _ext_ecelp7470:
+					return Ecelp7470;
+
+				case _ext_ecelp9600:
+					return Ecelp9600;
+
+				case _ext_rip:
+					return Rip;
+
+				case _ext_weba:
+					return Weba;
+
+				case _ext_aac:
+					return Aac;
+
+				case _ext_aif:
+				case _ext_aiff:
+				case _ext_aifc:
+					return Aif;
+
+				case _ext_caf:
+					return Caf;
+
+				case _ext_flac:
+					return Flac;
+
+				case _ext_mka:
+					return Mka;
+
+				case _ext_m3u:
+					return M3u;
+
+				case _ext_wax:
+					return Wax;
+
+				case _ext_wma:
+					return Wma;
+
+				case _ext_ram:
+				case _ext_ra:
+					return Ram;
+
+				case _ext_rmp:
+					return Rmp;
+
+				case _ext_wav:
+					return Wav;
+
+				case _ext_xm:
+					return Xm;
+
+				case _ext_cdx:
+					return Cdx;
+
+				case _ext_cif:
+					return Cif;
+
+				case _ext_cmdf:
+					return Cmdf;
+
+				case _ext_cml:
+					return Cml;
+
+				case _ext_csml:
+					return Csml;
+
+				case _ext_xyz:
+					return Xyz;
+
+				case _ext_ttc:
+					return Ttc;
+
+				case _ext_otf:
+					return Otf;
+
+				case _ext_ttf:
+					return Ttf;
+
+				case _ext_woff:
+					return Woff;
+
+				case _ext_woff2:
+					return Woff2;
+
+				case _ext_bmp:
+					return Bmp;
+
+				case _ext_cgm:
+					return Cgm;
+
+				case _ext_g3:
+					return G3;
+
+				case _ext_gif:
+					return Gif;
+
+				case _ext_ief:
+					return Ief;
+
+				case _ext_jpeg:
+				case _ext_jpg:
+				case _ext_jpe:
+					return Jpeg;
+
+				case _ext_ktx:
+					return Ktx;
+
+				case _ext_png:
+					return Png;
+
+				case _ext_btif:
+					return Btif;
+
+				case _ext_sgi:
+					return Sgi;
+
+				case _ext_svg:
+				case _ext_svgz:
+					return Svg;
+
+				case _ext_tiff:
+				case _ext_tif:
+					return Tiff;
+
+				case _ext_psd:
+					return Psd;
+
+				case _ext_uvi:
+				case _ext_uvvi:
+				case _ext_uvg:
+				case _ext_uvvg:
+					return Uvi;
+
+				case _ext_djvu:
+				case _ext_djv:
+					return Djvu;
+
+				case _ext_sub:
+					return Sub;
+
+				case _ext_dwg:
+					return Dwg;
+
+				case _ext_dxf:
+					return Dxf;
+
+				case _ext_fbs:
+					return Fbs;
+
+				case _ext_fpx:
+					return Fpx;
+
+				case _ext_fst:
+					return Fst;
+
+				case _ext_mmr:
+					return Mmr;
+
+				case _ext_rlc:
+					return Rlc;
+
+				case _ext_mdi:
+					return Mdi;
+
+				case _ext_wdp:
+					return Wdp;
+
+				case _ext_npx:
+					return Npx;
+
+				case _ext_wbmp:
+					return Wbmp;
+
+				case _ext_xif:
+					return Xif;
+
+				case _ext_webp:
+					return Webp;
+
+				case _ext_3ds:
+					return _3ds;
+
+				case _ext_ras:
+					return Ras;
+
+				case _ext_cmx:
+					return Cmx;
+
+				case _ext_fh:
+				case _ext_fhc:
+				case _ext_fh4:
+				case _ext_fh5:
+				case _ext_fh7:
+					return Fh;
+
+				case _ext_ico:
+				case _ext_cur:
+					return Ico;
+
+				case _ext_sid:
+					return Sid;
+
+				case _ext_pcx:
+					return Pcx;
+
+				case _ext_pic:
+				case _ext_pct:
+					return Pic;
+
+				case _ext_pnm:
+					return Pnm;
+
+				case _ext_pbm:
+					return Pbm;
+
+				case _ext_pgm:
+					return Pgm;
+
+				case _ext_ppm:
+					return Ppm;
+
+				case _ext_rgb:
+					return Rgb;
+
+				case _ext_tga:
+					return Tga;
+
+				case _ext_xbm:
+					return Xbm;
+
+				case _ext_xpm:
+					return Xpm;
+
+				case _ext_xwd:
+					return Xwd;
+
+				case _ext_eml:
+				case _ext_mime:
+					return Eml;
+
+				case _ext_igs:
+				case _ext_iges:
+					return Igs;
+
+				case _ext_msh:
+				case _ext_mesh:
+				case _ext_silo:
+					return Msh;
+
+				case _ext_dae:
+					return Dae;
+
+				case _ext_dwf:
+					return Dwf;
+
+				case _ext_gdl:
+					return Gdl;
+
+				case _ext_gtw:
+					return Gtw;
+
+				case _ext_mts:
+					return Mts;
+
+				case _ext_vtu:
+					return Vtu;
+
+				case _ext_wrl:
+				case _ext_vrml:
+					return Wrl;
+
+				case _ext_x3db:
+				case _ext_x3dbz:
+					return X3db;
+
+				case _ext_x3dv:
+				case _ext_x3dvz:
+					return X3dv;
+
+				case _ext_x3d:
+				case _ext_x3dz:
+					return X3d;
+
+				case _ext_appcache:
+				case _ext_manifest:
+					return Appcache;
+
+				case _ext_ics:
+				case _ext_ifb:
+					return Ics;
+
+				case _ext_css:
+					return Css;
+
+				case _ext_csv:
+					return Csv;
+
+				case _ext_html:
+				case _ext_htm:
+				case _ext_shtml:
+					return Html;
+
+				case _ext_n3:
+					return N3;
+
+				case _ext_txt:
+				case _ext_text:
+				case _ext_conf:
+				case _ext_def:
+				case _ext_list:
+				case _ext_log:
+				case _ext_in:
+				case _ext_ini:
+					return Txt;
+
+				case _ext_dsc:
+					return Dsc;
+
+				case _ext_rtx:
+					return Rtx;
+
+				case _ext_sgml:
+				case _ext_sgm:
+					return Sgml;
+
+				case _ext_tsv:
+					return Tsv;
+
+				case _ext_t:
+				case _ext_tr:
+				case _ext_roff:
+				case _ext_man:
+				case _ext_me:
+				case _ext_ms:
+					return T;
+
+				case _ext_ttl:
+					return Ttl;
+
+				case _ext_uri:
+				case _ext_uris:
+				case _ext_urls:
+					return Uri;
+
+				case _ext_vcard:
+					return Vcard;
+
+				case _ext_curl:
+					return Curl;
+
+				case _ext_dcurl:
+					return Dcurl;
+
+				case _ext_mcurl:
+					return Mcurl;
+
+				case _ext_scurl:
+					return Scurl;
+
+				case _ext_fly:
+					return Fly;
+
+				case _ext_flx:
+					return Flx;
+
+				case _ext_gv:
+					return Gv;
+
+				case _ext_3dml:
+					return _3dml;
+
+				case _ext_spot:
+					return Spot;
+
+				case _ext_jad:
+					return Jad;
+
+				case _ext_wml:
+					return Wml;
+
+				case _ext_wmls:
+					return Wmls;
+
+				case _ext_s:
+				case _ext_asm:
+					return S;
+
+				case _ext_c:
+				case _ext_cc:
+				case _ext_cxx:
+				case _ext_cpp:
+				case _ext_h:
+				case _ext_hh:
+				case _ext_dic:
+					return C;
+
+				case _ext_f:
+				case _ext_for:
+				case _ext_f77:
+				case _ext_f90:
+					return F;
+
+				case _ext_java:
+					return Java;
+
+				case _ext_nfo:
+					return Nfo;
+
+				case _ext_opml:
+					return Opml;
+
+				case _ext_p:
+				case _ext_pas:
+					return P;
+
+				case _ext_etx:
+					return Etx;
+
+				case _ext_sfv:
+					return Sfv;
+
+				case _ext_uu:
+					return Uu;
+
+				case _ext_vcs:
+					return Vcs;
+
+				case _ext_vcf:
+					return Vcf;
+
+				case _ext_3gp:
+				case _ext_3gpp:
+					return _3gp;
+
+				case _ext_3g2:
+					return _3g2;
+
+				case _ext_h261:
+					return H261;
+
+				case _ext_h263:
+					return H263;
+
+				case _ext_h264:
+					return H264;
+
+				case _ext_jpgv:
+					return Jpgv;
+
+				case _ext_jpm:
+				case _ext_jpgm:
+					return Jpm;
+
+				case _ext_mj2:
+				case _ext_mjp2:
+					return Mj2;
+
+				case _ext_mp4:
+				case _ext_mp4v:
+				case _ext_mpg4:
+				case _ext_f4p:
+					return Mp4;
+
+				case _ext_mpeg:
+				case _ext_mpg:
+				case _ext_mpe:
+				case _ext_m1v:
+				case _ext_m2v:
+					return Mpeg;
+
+				case _ext_ogv:
+					return Ogv;
+
+				case _ext_qt:
+				case _ext_mov:
+					return Qt;
+
+				case _ext_uvh:
+				case _ext_uvvh:
+					return Uvh;
+
+				case _ext_uvm:
+				case _ext_uvvm:
+					return Uvm;
+
+				case _ext_uvp:
+				case _ext_uvvp:
+					return Uvp;
+
+				case _ext_uvs:
+				case _ext_uvvs:
+					return Uvs;
+
+				case _ext_uvv:
+				case _ext_uvvv:
+					return Uvv;
+
+				case _ext_dvb:
+					return Dvb;
+
+				case _ext_fvt:
+					return Fvt;
+
+				case _ext_mxu:
+				case _ext_m4u:
+					return Mxu;
+
+				case _ext_pyv:
+					return Pyv;
+
+				case _ext_uvu:
+				case _ext_uvvu:
+					return Uvu;
+
+				case _ext_viv:
+					return Viv;
+
+				case _ext_webm:
+					return Webm;
+
+				case _ext_f4v:
+					return F4v;
+
+				case _ext_fli:
+					return Fli;
+
+				case _ext_flv:
+					return Flv;
+
+				case _ext_m4v:
+					return M4v;
+
+				case _ext_mkv:
+				case _ext_mk3d:
+				case _ext_mks:
+					return Mkv;
+
+				case _ext_mng:
+					return Mng;
+
+				case _ext_asf:
+				case _ext_asx:
+					return Asf;
+
+				case _ext_vob:
+					return Vob;
+
+				case _ext_wm:
+					return Wm;
+
+				case _ext_wmv:
+					return Wmv;
+
+				case _ext_wmx:
+					return Wmx;
+
+				case _ext_wvx:
+					return Wvx;
+
+				case _ext_avi:
+					return Avi;
+
+				case _ext_movie:
+					return Movie;
+
+				case _ext_smv:
+					return Smv;
+
+				case _ext_ice:
+					return Ice;
+
+				case _ext_jsonld:
+					return Jsonld;
+
+				case _ext_geojson:
+					return Geojson;
+
+				case _ext_mjs:
+					return Mjs;
+
+				case _ext_wasm:
+					return Wasm;
+
+				case _ext_webmanifest:
+					return Webmanifest;
+
+				case _ext_webapp:
+					return Webapp;
+
+				case _ext_jxr:
+				case _ext_hdp:
+					return Jxr;
+
+				case _ext_jng:
+					return Jng;
+
+				case _ext_bbaw:
+					return Bbaw;
+
+				case _ext_crx:
+					return Crx;
+
+				case _ext_cco:
+					return Cco;
+
+				case _ext_jardiff:
+					return Jardiff;
+
+				case _ext_run:
+					return Run;
+
+				case _ext_oex:
+					return Oex;
+
+				case _ext_pl:
+				case _ext_pm:
+					return Pl;
+
+				case _ext_rpm:
+					return Rpm;
+
+				case _ext_sea:
+					return Sea;
+
+				case _ext_md:
+				case _ext_markdown:
+					return Md;
+
+				case _ext_mml:
+					return Mml;
+
+				case _ext_xloc:
+					return Xloc;
+
+				case _ext_vtt:
+					return Vtt;
+
+				case _ext_htc:
+					return Htc;
+
+				case _ext_bdoc:
+					return Bdoc;
+
+				case _ext_mpd:
+					return Mpd;
+
+				case _ext_gz:
+					return Gz;
+
+				case _ext_hjson:
+					return Hjson;
+
+				case _ext_json5:
+					return Json5;
+
+				case _ext_nq:
+					return Nq;
+
+				case _ext_nt:
+					return Nt;
+
+				case _ext_raml:
+					return Raml;
+
+				case _ext_siv:
+					return Siv;
+
+				case _ext_toml:
+					return Toml;
+
+				case _ext_pkpass:
+					return Pkpass;
+
+				case _ext_csl:
+					return Csl;
+
+				case _ext_gdoc:
+					return Gdoc;
+
+				case _ext_gslides:
+					return Gslides;
+
+				case _ext_gsheet:
+					return Gsheet;
+
+				case _ext_msg:
+					return Msg;
+
+				case _ext_wadl:
+					return Wadl;
+
+				case _ext_arj:
+					return Arj;
+
+				case _ext_php:
+					return Php;
+
+				case _ext_kdbx:
+					return Kdbx;
+
+				case _ext_luac:
+					return Luac;
+
+				case _ext_pac:
+					return Pac;
+
+				case _ext_hdd:
+					return Hdd;
+
+				case _ext_ova:
+					return Ova;
+
+				case _ext_ovf:
+					return Ovf;
+
+				case _ext_vbox:
+					return Vbox;
+
+				case _ext_vbox_extpack:
+					return Vboxextpack;
+
+				case _ext_vdi:
+					return Vdi;
+
+				case _ext_vhd:
+					return Vhd;
+
+				case _ext_vmdk:
+					return Vmdk;
+
+				case _ext_mxmf:
+					return Mxmf;
+
+				case _ext_apng:
+					return Apng;
+
+				case _ext_heic:
+					return Heic;
+
+				case _ext_heics:
+					return Heics;
+
+				case _ext_heif:
+					return Heif;
+
+				case _ext_heifs:
+					return Heifs;
+
+				case _ext_jp2:
+					return Jp2;
+
+				case _ext_jpx:
+					return Jpx;
+
+				case _ext_dds:
+					return Dds;
+
+				case _ext_coffee:
+					return Coffee;
+
+				case _ext_jade:
+					return Jade;
+
+				case _ext_jsx:
+					return Jsx;
+
+				case _ext_less:
+					return Less;
+
+				case _ext_mdx:
+					return Mdx;
+
+				case _ext_shex:
+					return Shex;
+
+				case _ext_slim:
+					return Slim;
+
+				case _ext_stylus:
+					return Stylus;
+
+				case _ext_hbs:
+					return Hbs;
+
+				case _ext_lua:
+					return Lua;
+
+				case _ext_mkd:
+					return Mkd;
+
+				case _ext_pde:
+					return Pde;
+
+				case _ext_sass:
+					return Sass;
+
+				case _ext_scss:
+					return Scss;
+
+				case _ext_ymp:
+					return Ymp;
+
+				case _ext_yaml:
+					return Yaml;
+
+                
 				default: 
 					return null;
             }

@@ -37,7 +37,7 @@ namespace MimeMapping
 			return char.IsDigit(result[0]) ? ("_" + result) : result;
 		}
 
-		string GetPageContent(string url) 
+		string GetPageContent(string url)
 		{
 			using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
 			using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
@@ -150,22 +150,20 @@ namespace MimeMapping
 #>
 
         // List of all available extensions, used to build the dictionary
-        static internal readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
+        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
 <#
 		// List constant field names
         foreach (var kp in _dict)
         {
 #>
             _ext_<#= kp.Key.Replace('-', '_') #>,
-<#
-		
+<#		
 		}
-
 #>
         });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        static internal string LookupType(string type)
+        internal static string LookupType(string type)
         {
             switch (type)
             {
@@ -176,10 +174,13 @@ namespace MimeMapping
 					foreach (var mimeKey in kp.Value)
 					{
 #>
-				case _ext_<#= mimeKey.Replace('-', '_') #>:<#
+				case _ext_<#= mimeKey.Replace('-', '_') #>:
+<#
 					}
 #>
-					return <#= GetMimeFieldName(kp.Value[0]) #>;<#
+					return <#= GetMimeFieldName(kp.Value[0]) #>;
+
+<#
                 }
 #>
                 
