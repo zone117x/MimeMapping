@@ -3,7 +3,7 @@ using System;
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-12-04T19:57:50Z. 
+	/// MIME type constants. Last updated on 2019-12-04T20:01:33Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
