@@ -78,16 +78,16 @@ namespace MimeMapping
 
 		entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
 			return from mimeTypes in resource.Children() 
-                let mimeType = ((JProperty) mimeTypes).Name 
-                from mimeTypeProperties in mimeTypes.Children() 
-                from mimeTypeProperty in mimeTypeProperties.Children() 
-                from mimeTypeValue in mimeTypeProperty.Values()
-                where (mimeTypeProperty as JProperty)?.Name == "extensions"
-                select new[]
-                {
-					mimeType,
-					mimeTypeValue.Value<string>()
-                };
+			let mimeType = ((JProperty) mimeTypes).Name 
+			from mimeTypeProperties in mimeTypes.Children() 
+			from mimeTypeProperty in mimeTypeProperties.Children() 
+			from mimeTypeValue in mimeTypeProperty.Values()
+			where (mimeTypeProperty as JProperty)?.Name == "extensions"
+			select new[]
+			{
+				mimeType,
+				mimeTypeValue.Value<string>()
+			};
 		}));
 
 		// build dictionary from entries, outputing found duplicates
