@@ -12,7 +12,6 @@
 <#@ import namespace="Newtonsoft.Json.Linq" #>
 <#@ output extension="cs" #>
 using System;
-using System.Collections.Generic;
 
 namespace MimeMapping
 {
@@ -54,22 +53,13 @@ namespace MimeMapping
             return lines.Select(processLine).Where(newKeyPairs => newKeyPairs != null).ToList();
         }
 
-		IEnumerable<string[]> GetMimeDbCustomMimeTypeJson()
-		{
-			var content = GetPageContent(MIMEDB_URL);
-			if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
-			var resource = JObject.Parse(content);
-            return from mimeTypes in resource.Children() 
-                let mimeType = ((JProperty) mimeTypes).Name 
-                from mimeTypeProperties in mimeTypes.Children() 
-                from mimeTypeProperty in mimeTypeProperties.Children() 
-                where (mimeTypeProperty as JProperty)?.Name == "extensions" 
-                select new[]
-                {
-                    mimeType, 
-                    mimeTypeProperty.Values().First().Value<string>()
-                };
-		}
+		IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        {
+            var content = GetPageContent(url);
+            if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            var resource = JObject.Parse(content);
+            return processObject(resource);
+        }
 
         var entries = new List<string[]>();
 
@@ -86,7 +76,19 @@ namespace MimeMapping
 			return parts.Length < 2 ? null : parts;
 		}));
 
-		entries.AddRange(GetMimeDbCustomMimeTypeJson());
+		entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
+			return from mimeTypes in resource.Children() 
+                let mimeType = ((JProperty) mimeTypes).Name 
+                from mimeTypeProperties in mimeTypes.Children() 
+                from mimeTypeProperty in mimeTypeProperties.Children() 
+                from mimeTypeValue in mimeTypeProperty.Values()
+                where (mimeTypeProperty as JProperty)?.Name == "extensions"
+                select new[]
+                {
+					mimeType,
+					mimeTypeValue.Value<string>()
+                };
+		}));
 
 		// build dictionary from entries, outputing found duplicates
 		var _dict = new Dictionary<string, string>();
@@ -183,7 +185,6 @@ namespace MimeMapping
 <#
                 }
 #>
-                
 				default: 
 					return null;
             }

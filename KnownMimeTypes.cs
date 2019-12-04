@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-12-04T19:37:14Z. 
+	/// MIME type constants. Last updated on 2019-12-04T19:57:50Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
@@ -40,7 +39,7 @@ namespace MimeMapping
         // Dupe for org: using application/vnd.lotus-organizer vs text/x-org 
 
 		// Generated 843 unique mime type values
-        // Generated 1086 type key pairs
+        // Generated 1095 type key pairs
 
 		///<summary>ez</summary>
         public const string Ez = "application/andrew-inset";
@@ -2114,8 +2113,12 @@ namespace MimeMapping
         public const string Buffer = "application/octet-stream";
 		///<summary>raml</summary>
         public const string Raml = "application/raml+yaml";
+		///<summary>owl</summary>
+        public const string Owl = "application/rdf+xml";
 		///<summary>siv</summary>
         public const string Siv = "application/sieve";
+		///<summary>sieve</summary>
+        public const string Sieve = "application/sieve";
 		///<summary>toml</summary>
         public const string Toml = "application/toml";
 		///<summary>pkpass</summary>
@@ -2160,6 +2163,8 @@ namespace MimeMapping
         public const string Vmdk = "application/x-virtualbox-vmdk";
 		///<summary>xsd</summary>
         public const string Xsd = "application/xml";
+		///<summary>rng</summary>
+        public const string Rng = "application/xml";
 		///<summary>mxmf</summary>
         public const string Mxmf = "audio/mobile-xmf";
 		///<summary>apng</summary>
@@ -2174,14 +2179,20 @@ namespace MimeMapping
         public const string Heifs = "image/heif-sequence";
 		///<summary>jp2</summary>
         public const string Jp2 = "image/jp2";
+		///<summary>jpg2</summary>
+        public const string Jpg2 = "image/jp2";
 		///<summary>jpx</summary>
         public const string Jpx = "image/jpx";
+		///<summary>jpf</summary>
+        public const string Jpf = "image/jpx";
 		///<summary>dds</summary>
         public const string Dds = "image/vnd.ms-dds";
 		///<summary>manifest</summary>
         public const string Manifest = "text/cache-manifest";
 		///<summary>coffee</summary>
         public const string Coffee = "text/coffeescript";
+		///<summary>litcoffee</summary>
+        public const string Litcoffee = "text/coffeescript";
 		///<summary>jade</summary>
         public const string Jade = "text/jade";
 		///<summary>jsx</summary>
@@ -2196,8 +2207,12 @@ namespace MimeMapping
         public const string Shex = "text/shex";
 		///<summary>slim</summary>
         public const string Slim = "text/slim";
+		///<summary>slm</summary>
+        public const string Slm = "text/slim";
 		///<summary>stylus</summary>
         public const string Stylus = "text/stylus";
+		///<summary>styl</summary>
+        public const string Styl = "text/stylus";
 		///<summary>hbs</summary>
         public const string Hbs = "text/x-handlebars-template";
 		///<summary>lua</summary>
@@ -2214,6 +2229,8 @@ namespace MimeMapping
         public const string Ymp = "text/x-suse-ymp";
 		///<summary>yaml</summary>
         public const string Yaml = "text/yaml";
+		///<summary>yml</summary>
+        public const string Yml = "text/yaml";
 
         const string _ext_ez = "ez";
         const string _ext_aw = "aw";
@@ -3251,7 +3268,9 @@ namespace MimeMapping
         const string _ext_nt = "nt";
         const string _ext_buffer = "buffer";
         const string _ext_raml = "raml";
+        const string _ext_owl = "owl";
         const string _ext_siv = "siv";
+        const string _ext_sieve = "sieve";
         const string _ext_toml = "toml";
         const string _ext_pkpass = "pkpass";
         const string _ext_csl = "csl";
@@ -3274,6 +3293,7 @@ namespace MimeMapping
         const string _ext_vhd = "vhd";
         const string _ext_vmdk = "vmdk";
         const string _ext_xsd = "xsd";
+        const string _ext_rng = "rng";
         const string _ext_mxmf = "mxmf";
         const string _ext_apng = "apng";
         const string _ext_heic = "heic";
@@ -3281,10 +3301,13 @@ namespace MimeMapping
         const string _ext_heif = "heif";
         const string _ext_heifs = "heifs";
         const string _ext_jp2 = "jp2";
+        const string _ext_jpg2 = "jpg2";
         const string _ext_jpx = "jpx";
+        const string _ext_jpf = "jpf";
         const string _ext_dds = "dds";
         const string _ext_manifest = "manifest";
         const string _ext_coffee = "coffee";
+        const string _ext_litcoffee = "litcoffee";
         const string _ext_jade = "jade";
         const string _ext_jsx = "jsx";
         const string _ext_less = "less";
@@ -3292,7 +3315,9 @@ namespace MimeMapping
         const string _ext_ini = "ini";
         const string _ext_shex = "shex";
         const string _ext_slim = "slim";
+        const string _ext_slm = "slm";
         const string _ext_stylus = "stylus";
+        const string _ext_styl = "styl";
         const string _ext_hbs = "hbs";
         const string _ext_lua = "lua";
         const string _ext_mkd = "mkd";
@@ -3301,6 +3326,7 @@ namespace MimeMapping
         const string _ext_scss = "scss";
         const string _ext_ymp = "ymp";
         const string _ext_yaml = "yaml";
+        const string _ext_yml = "yml";
 
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
@@ -4340,7 +4366,9 @@ namespace MimeMapping
             _ext_nt,
             _ext_buffer,
             _ext_raml,
+            _ext_owl,
             _ext_siv,
+            _ext_sieve,
             _ext_toml,
             _ext_pkpass,
             _ext_csl,
@@ -4363,6 +4391,7 @@ namespace MimeMapping
             _ext_vhd,
             _ext_vmdk,
             _ext_xsd,
+            _ext_rng,
             _ext_mxmf,
             _ext_apng,
             _ext_heic,
@@ -4370,10 +4399,13 @@ namespace MimeMapping
             _ext_heif,
             _ext_heifs,
             _ext_jp2,
+            _ext_jpg2,
             _ext_jpx,
+            _ext_jpf,
             _ext_dds,
             _ext_manifest,
             _ext_coffee,
+            _ext_litcoffee,
             _ext_jade,
             _ext_jsx,
             _ext_less,
@@ -4381,7 +4413,9 @@ namespace MimeMapping
             _ext_ini,
             _ext_shex,
             _ext_slim,
+            _ext_slm,
             _ext_stylus,
+            _ext_styl,
             _ext_hbs,
             _ext_lua,
             _ext_mkd,
@@ -4390,6 +4424,7 @@ namespace MimeMapping
             _ext_scss,
             _ext_ymp,
             _ext_yaml,
+            _ext_yml,
         });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
@@ -4660,6 +4695,7 @@ namespace MimeMapping
 					return Pskcxml;
 
 				case _ext_rdf:
+				case _ext_owl:
 					return Rdf;
 
 				case _ext_rif:
@@ -6268,6 +6304,7 @@ namespace MimeMapping
 				case _ext_xml:
 				case _ext_xsl:
 				case _ext_xsd:
+				case _ext_rng:
 					return Xml;
 
 				case _ext_dtd:
@@ -7029,6 +7066,7 @@ namespace MimeMapping
 					return Raml;
 
 				case _ext_siv:
+				case _ext_sieve:
 					return Siv;
 
 				case _ext_toml:
@@ -7113,15 +7151,18 @@ namespace MimeMapping
 					return Heifs;
 
 				case _ext_jp2:
+				case _ext_jpg2:
 					return Jp2;
 
 				case _ext_jpx:
+				case _ext_jpf:
 					return Jpx;
 
 				case _ext_dds:
 					return Dds;
 
 				case _ext_coffee:
+				case _ext_litcoffee:
 					return Coffee;
 
 				case _ext_jade:
@@ -7140,9 +7181,11 @@ namespace MimeMapping
 					return Shex;
 
 				case _ext_slim:
+				case _ext_slm:
 					return Slim;
 
 				case _ext_stylus:
+				case _ext_styl:
 					return Stylus;
 
 				case _ext_hbs:
@@ -7167,9 +7210,9 @@ namespace MimeMapping
 					return Ymp;
 
 				case _ext_yaml:
+				case _ext_yml:
 					return Yaml;
 
-                
 				default: 
 					return null;
             }

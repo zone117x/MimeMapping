@@ -46,20 +46,22 @@ namespace Test
         [TestMethod]
         public void TestMimeDbMimeTypes()
         {
-            var content = GetPageContent(MIMEDB_URL);
-            var resource = JObject.Parse(content);
-            var entries = from mimeTypes in resource.Children() 
-                let mimeType = ((JProperty) mimeTypes).Name 
-                from mimeTypeProperties in mimeTypes.Children() 
-                from mimeTypeProperty in mimeTypeProperties.Children() 
-                where (mimeTypeProperty as JProperty)?.Name == "extensions" 
-                select new[]
-                {
-                    mimeType, 
-                    mimeTypeProperty.Values().First().Value<string>()
-                };
+            var keyPairs = GetMimeTypesFromJson(MIMEDB_URL, resource =>
+            {
+                return from mimeTypes in resource.Children()
+                       let mimeType = ((JProperty) mimeTypes).Name
+                       from mimeTypeProperties in mimeTypes.Children()
+                       from mimeTypeProperty in mimeTypeProperties.Children()
+                       from mimeTypeValue in mimeTypeProperty.Values()
+                       where (mimeTypeProperty as JProperty)?.Name == "extensions"
+                       select new[]
+                       {
+                           mimeType,
+                           mimeTypeValue.Value<string>()
+                       };
+            });
 
-            Assert.IsTrue(entries.Any());
+            Assert.IsTrue(keyPairs.Any());
         }
 
         private static string GetPageContent(string url)
@@ -74,8 +76,17 @@ namespace Test
         private static IEnumerable<string[]> GetMimeTypesFromText(string url, Func<string, string[]> processLine)
         {
             var content = GetPageContent(url);
-            var lines = content.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            var lines = content.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries);
             return lines.Select(processLine).Where(newKeyPairs => newKeyPairs != null).ToList();
+        }
+
+        private static IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        {
+            var content = GetPageContent(url);
+            if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            var resource = JObject.Parse(content);
+            return processObject(resource);
         }
     }
 }
