@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard1.1;netstandard2.0;netstandard2.1</TargetFrameworks>
     <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name. Contains just over 1000 mime types.
 
 Generated from the Apache server mime.types file and the H5PB nginx mime.types file. Works similar to .NET's System.Web.MimeMapping.GetMimeMapping.

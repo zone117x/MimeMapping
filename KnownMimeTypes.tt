@@ -1,20 +1,24 @@
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
+<#@ assembly name="Newtonsoft.Json" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Net" #>
+<#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
 <#@ output extension="cs" #>
 using System;
-using System.Collections.Generic;
 
 namespace MimeMapping
 {
 <#
     const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
     const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
+	const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/master/src/custom-types.json";
 #>
 	///<summary>
 	/// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
@@ -24,8 +28,6 @@ namespace MimeMapping
     {
 
 <#
-
-		
 		Regex rgx = new Regex("[^a-zA-Z0-9]");
 
 		string GetMimeFieldName(string mimeKey)
@@ -34,45 +36,59 @@ namespace MimeMapping
 			return char.IsDigit(result[0]) ? ("_" + result) : result;
 		}
 
-        // entries where item 0 is the mime string, and the rest are file extensions
-        List<string[]> entries = new List<string[]>();
-
-        // Download and parse entries from the Apache file
-        using (var responseStream = WebRequest.CreateHttp(APACHE_URL).GetResponse().GetResponseStream())
-        using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
-        {
-            var response = streamReader.ReadToEnd();
-            var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach(var line in lines)
-			{
-				if (line[0] == '#')
-					continue;
-				var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-				if (parts.Length < 2)
-					continue;
-				entries.Add(parts);
-			}
-		}
-
-		// Download and parse entries from the H5BP nginx file
-		using (var responseStream = WebRequest.CreateHttp(NGINX_URL).GetResponse().GetResponseStream())
-		using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+		string GetPageContent(string url)
 		{
-			var response = streamReader.ReadToEnd();
-			var lines = response.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-			foreach(var l in lines)
+			using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
+			using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
 			{
-				var line = l.Trim().TrimEnd(';');
-				if (line[0] == '#' || line[0] == '}')
-					continue;
-				if (line.StartsWith("types {"))
-					continue;
-				var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-				if (parts.Length < 2)
-					continue;
-				entries.Add(parts);
+				return streamReader.ReadToEnd();				
 			}
 		}
+
+		IEnumerable<string[]> GetMimeTypesFromText(string url, Func<string, string[]> processLine)
+        {
+            var content = GetPageContent(url);
+			if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            var lines = content.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries);
+            return lines.Select(processLine).Where(newKeyPairs => newKeyPairs != null).ToList();
+        }
+
+		IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        {
+            var content = GetPageContent(url);
+            if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            var resource = JObject.Parse(content);
+            return processObject(resource);
+        }
+
+        var entries = new List<string[]>();
+
+		entries.AddRange(GetMimeTypesFromText(APACHE_URL, (line) => {
+			if (line[0] == '#') return null;
+			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+			return parts.Length < 2 ? null : parts;
+		}));
+
+		entries.AddRange(GetMimeTypesFromText(NGINX_URL, (line) => {
+			line = line.Trim().TrimEnd(';');
+			if (line[0] == '#' || line[0] == '}' || line.StartsWith("types {")) return null;
+			var parts = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+			return parts.Length < 2 ? null : parts;
+		}));
+
+		entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
+			return from mimeTypes in resource.Children() 
+			let mimeType = ((JProperty) mimeTypes).Name 
+			from mimeTypeProperties in mimeTypes.Children() 
+			from mimeTypeProperty in mimeTypeProperties.Children() 
+			from mimeTypeValue in mimeTypeProperty.Values()
+			where (mimeTypeProperty as JProperty)?.Name == "extensions"
+			select new[]
+			{
+				mimeType,
+				mimeTypeValue.Value<string>()
+			};
+		}));
 
 		// build dictionary from entries, outputing found duplicates
 		var _dict = new Dictionary<string, string>();
@@ -101,10 +117,9 @@ namespace MimeMapping
 						keyList = new List<string>();
 						_reverseDict.Add(parts[0], keyList);
 					}
+
 					keyList.Add(parts[i]);
 				}
-
-
 			}
 		}
 
@@ -114,7 +129,6 @@ namespace MimeMapping
         // Generated <#= _dict.Count  #> type key pairs
 
 <#
-
 		// Output constants for each type
         foreach(var kp in _dict)
         {
@@ -122,9 +136,7 @@ namespace MimeMapping
 		///<summary><#= kp.Key #></summary>
         public const string <#= GetMimeFieldName(kp.Key) #> = "<#= kp.Value #>";
 <#
-		
 		}
-
 #>
 
 <#
@@ -135,32 +147,25 @@ namespace MimeMapping
 #>
         const string _ext_<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
 <#
-		
 		}
-
 
 #>
 
-
         // List of all available extensions, used to build the dictionary
-        static internal readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
+        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
 <#
-
 		// List constant field names
         foreach (var kp in _dict)
         {
 #>
             _ext_<#= kp.Key.Replace('-', '_') #>,
-<#
-		
+<#		
 		}
-
-
 #>
         });
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        static internal string LookupType(string type)
+        internal static string LookupType(string type)
         {
             switch (type)
             {
@@ -171,13 +176,15 @@ namespace MimeMapping
 					foreach (var mimeKey in kp.Value)
 					{
 #>
-				case _ext_<#= mimeKey.Replace('-', '_') #>:<#
+				case _ext_<#= mimeKey.Replace('-', '_') #>:
+<#
 					}
 #>
-					return <#= GetMimeFieldName(kp.Value[0]) #>;<#
+					return <#= GetMimeFieldName(kp.Value[0]) #>;
+
+<#
                 }
 #>
-                
 				default: 
 					return null;
             }

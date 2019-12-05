@@ -15,6 +15,7 @@ namespace Test
             {"png", "image/png"},
             {"JPG", "image/jpeg"},
             {"mp4", "video/mp4"},
+            {"mpd", "application/dash+xml" },
             {"exe", "application/x-msdownload"},
             {"zip", "application/zip"},
             {"torrent", "application/x-bittorrent"},
