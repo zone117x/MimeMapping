@@ -80,5 +80,13 @@ namespace Test
         {
             Assert.IsTrue(MimeUtility.TypeMap.Count > 900, $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong");
         }
+
+        [TestMethod]
+        public void TestUrlWithoutExtensionReturnsUnknownMimeType()
+        {
+            var myFile = "https://test.com/file/random-file";
+            string mimeType = MimeUtility.GetMimeMapping(myFile);
+            Assert.AreEqual(MimeUtility.UnknownMimeType, mimeType);
+        }
     }
 }

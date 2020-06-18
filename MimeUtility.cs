@@ -36,10 +36,19 @@ namespace MimeMapping
                 return UnknownMimeType;
 
             var fileExtension = file.Contains(".") 
-                ? Path.GetExtension(file).Substring(1) 
+                ? GetExtension(file)
                 : file;
 
             return KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant()) ?? UnknownMimeType;
+        }
+
+        private static string GetExtension(string path)
+        {
+            var extension = Path.GetExtension(path);
+            if (string.IsNullOrEmpty(extension))
+                return string.Empty; 
+
+            return extension.Substring(1);
         }
     }
 }
