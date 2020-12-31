@@ -42,6 +42,13 @@ namespace MimeMapping
             return KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant()) ?? UnknownMimeType;
         }
 
+        public static string[] GetExtensions(string mimeType)
+        {
+            if (string.IsNullOrEmpty(mimeType)) throw new ArgumentNullException(mimeType);
+
+            return KnownMimeTypes.LookupMimeType(mimeType);
+        }
+
         private static string GetExtension(string path)
         {
             var extension = Path.GetExtension(path);

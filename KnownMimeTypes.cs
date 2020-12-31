@@ -3,7 +3,7 @@ using System;
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-12-04T20:01:33Z. 
+	/// MIME type constants. Last updated on 2020-12-31T11:02:33Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
@@ -38,8 +38,8 @@ namespace MimeMapping
         // Dupe for rtf: using application/rtf vs text/rtf 
         // Dupe for org: using application/vnd.lotus-organizer vs text/x-org 
 
-		// Generated 843 unique mime type values
-        // Generated 1095 type key pairs
+		// Generated 839 unique mime type values
+        // Generated 1091 type key pairs
 
 		///<summary>ez</summary>
         public const string Ez = "application/andrew-inset";
@@ -1515,6 +1515,8 @@ namespace MimeMapping
         public const string Ogg = "audio/ogg";
 		///<summary>spx</summary>
         public const string Spx = "audio/ogg";
+		///<summary>opus</summary>
+        public const string Opus = "audio/ogg";
 		///<summary>s3m</summary>
         public const string S3m = "audio/s3m";
 		///<summary>sil</summary>
@@ -2027,8 +2029,6 @@ namespace MimeMapping
         public const string F4a = "audio/mp4";
 		///<summary>f4b</summary>
         public const string F4b = "audio/mp4";
-		///<summary>opus</summary>
-        public const string Opus = "audio/ogg";
 		///<summary>jxr</summary>
         public const string Jxr = "image/jxr";
 		///<summary>hdp</summary>
@@ -2093,22 +2093,16 @@ namespace MimeMapping
         public const string Htc = "text/x-component";
 		///<summary>bdoc</summary>
         public const string Bdoc = "application/bdoc";
-		///<summary>mpd</summary>
-        public const string Mpd = "application/dash+xml";
 		///<summary>es</summary>
         public const string Es = "application/ecmascript";
-		///<summary>gz</summary>
-        public const string Gz = "application/gzip";
 		///<summary>hjson</summary>
         public const string Hjson = "application/hjson";
 		///<summary>json5</summary>
         public const string Json5 = "application/json5";
 		///<summary>m4p</summary>
         public const string M4p = "application/mp4";
-		///<summary>nq</summary>
-        public const string Nq = "application/n-quads";
-		///<summary>nt</summary>
-        public const string Nt = "application/n-triples";
+		///<summary>cjs</summary>
+        public const string Cjs = "application/node";
 		///<summary>buffer</summary>
         public const string Buffer = "application/octet-stream";
 		///<summary>raml</summary>
@@ -2121,10 +2115,10 @@ namespace MimeMapping
         public const string Sieve = "application/sieve";
 		///<summary>toml</summary>
         public const string Toml = "application/toml";
+		///<summary>ubj</summary>
+        public const string Ubj = "application/ubjson";
 		///<summary>pkpass</summary>
         public const string Pkpass = "application/vnd.apple.pkpass";
-		///<summary>csl</summary>
-        public const string Csl = "application/vnd.citationstyles.style+xml";
 		///<summary>gdoc</summary>
         public const string Gdoc = "application/vnd.google-apps.document";
 		///<summary>gslides</summary>
@@ -2133,8 +2127,6 @@ namespace MimeMapping
         public const string Gsheet = "application/vnd.google-apps.spreadsheet";
 		///<summary>msg</summary>
         public const string Msg = "application/vnd.ms-outlook";
-		///<summary>wadl</summary>
-        public const string Wadl = "application/vnd.sun.wadl+xml";
 		///<summary>arj</summary>
         public const string Arj = "application/x-arj";
 		///<summary>php</summary>
@@ -2165,10 +2157,10 @@ namespace MimeMapping
         public const string Xsd = "application/xml";
 		///<summary>rng</summary>
         public const string Rng = "application/xml";
-		///<summary>mxmf</summary>
-        public const string Mxmf = "audio/mobile-xmf";
 		///<summary>apng</summary>
         public const string Apng = "image/apng";
+		///<summary>avif</summary>
+        public const string Avif = "image/avif";
 		///<summary>heic</summary>
         public const string Heic = "image/heic";
 		///<summary>heics</summary>
@@ -2232,4990 +2224,6915 @@ namespace MimeMapping
 		///<summary>yml</summary>
         public const string Yml = "text/yaml";
 
-        const string _ext_ez = "ez";
-        const string _ext_aw = "aw";
-        const string _ext_atom = "atom";
-        const string _ext_atomcat = "atomcat";
-        const string _ext_atomsvc = "atomsvc";
-        const string _ext_ccxml = "ccxml";
-        const string _ext_cdmia = "cdmia";
-        const string _ext_cdmic = "cdmic";
-        const string _ext_cdmid = "cdmid";
-        const string _ext_cdmio = "cdmio";
-        const string _ext_cdmiq = "cdmiq";
-        const string _ext_cu = "cu";
-        const string _ext_davmount = "davmount";
-        const string _ext_dbk = "dbk";
-        const string _ext_dssc = "dssc";
-        const string _ext_xdssc = "xdssc";
-        const string _ext_ecma = "ecma";
-        const string _ext_emma = "emma";
-        const string _ext_epub = "epub";
-        const string _ext_exi = "exi";
-        const string _ext_pfr = "pfr";
-        const string _ext_gml = "gml";
-        const string _ext_gpx = "gpx";
-        const string _ext_gxf = "gxf";
-        const string _ext_stk = "stk";
-        const string _ext_ink = "ink";
-        const string _ext_inkml = "inkml";
-        const string _ext_ipfix = "ipfix";
-        const string _ext_jar = "jar";
-        const string _ext_ser = "ser";
-        const string _ext_class = "class";
-        const string _ext_js = "js";
-        const string _ext_json = "json";
-        const string _ext_jsonml = "jsonml";
-        const string _ext_lostxml = "lostxml";
-        const string _ext_hqx = "hqx";
-        const string _ext_cpt = "cpt";
-        const string _ext_mads = "mads";
-        const string _ext_mrc = "mrc";
-        const string _ext_mrcx = "mrcx";
-        const string _ext_ma = "ma";
-        const string _ext_nb = "nb";
-        const string _ext_mb = "mb";
-        const string _ext_mathml = "mathml";
-        const string _ext_mbox = "mbox";
-        const string _ext_mscml = "mscml";
-        const string _ext_metalink = "metalink";
-        const string _ext_meta4 = "meta4";
-        const string _ext_mets = "mets";
-        const string _ext_mods = "mods";
-        const string _ext_m21 = "m21";
-        const string _ext_mp21 = "mp21";
-        const string _ext_mp4s = "mp4s";
-        const string _ext_doc = "doc";
-        const string _ext_dot = "dot";
-        const string _ext_mxf = "mxf";
-        const string _ext_bin = "bin";
-        const string _ext_dms = "dms";
-        const string _ext_lrf = "lrf";
-        const string _ext_mar = "mar";
-        const string _ext_so = "so";
-        const string _ext_dist = "dist";
-        const string _ext_distz = "distz";
-        const string _ext_pkg = "pkg";
-        const string _ext_bpk = "bpk";
-        const string _ext_dump = "dump";
-        const string _ext_elc = "elc";
-        const string _ext_deploy = "deploy";
-        const string _ext_oda = "oda";
-        const string _ext_opf = "opf";
-        const string _ext_ogx = "ogx";
-        const string _ext_omdoc = "omdoc";
-        const string _ext_onetoc = "onetoc";
-        const string _ext_onetoc2 = "onetoc2";
-        const string _ext_onetmp = "onetmp";
-        const string _ext_onepkg = "onepkg";
-        const string _ext_oxps = "oxps";
-        const string _ext_xer = "xer";
-        const string _ext_pdf = "pdf";
-        const string _ext_pgp = "pgp";
-        const string _ext_asc = "asc";
-        const string _ext_sig = "sig";
-        const string _ext_prf = "prf";
-        const string _ext_p10 = "p10";
-        const string _ext_p7m = "p7m";
-        const string _ext_p7c = "p7c";
-        const string _ext_p7s = "p7s";
-        const string _ext_p8 = "p8";
-        const string _ext_ac = "ac";
-        const string _ext_cer = "cer";
-        const string _ext_crl = "crl";
-        const string _ext_pkipath = "pkipath";
-        const string _ext_pki = "pki";
-        const string _ext_pls = "pls";
-        const string _ext_ai = "ai";
-        const string _ext_eps = "eps";
-        const string _ext_ps = "ps";
-        const string _ext_cww = "cww";
-        const string _ext_pskcxml = "pskcxml";
-        const string _ext_rdf = "rdf";
-        const string _ext_rif = "rif";
-        const string _ext_rnc = "rnc";
-        const string _ext_rl = "rl";
-        const string _ext_rld = "rld";
-        const string _ext_rs = "rs";
-        const string _ext_gbr = "gbr";
-        const string _ext_mft = "mft";
-        const string _ext_roa = "roa";
-        const string _ext_rsd = "rsd";
-        const string _ext_rss = "rss";
-        const string _ext_rtf = "rtf";
-        const string _ext_sbml = "sbml";
-        const string _ext_scq = "scq";
-        const string _ext_scs = "scs";
-        const string _ext_spq = "spq";
-        const string _ext_spp = "spp";
-        const string _ext_sdp = "sdp";
-        const string _ext_setpay = "setpay";
-        const string _ext_setreg = "setreg";
-        const string _ext_shf = "shf";
-        const string _ext_smi = "smi";
-        const string _ext_smil = "smil";
-        const string _ext_rq = "rq";
-        const string _ext_srx = "srx";
-        const string _ext_gram = "gram";
-        const string _ext_grxml = "grxml";
-        const string _ext_sru = "sru";
-        const string _ext_ssdl = "ssdl";
-        const string _ext_ssml = "ssml";
-        const string _ext_tei = "tei";
-        const string _ext_teicorpus = "teicorpus";
-        const string _ext_tfi = "tfi";
-        const string _ext_tsd = "tsd";
-        const string _ext_plb = "plb";
-        const string _ext_psb = "psb";
-        const string _ext_pvb = "pvb";
-        const string _ext_tcap = "tcap";
-        const string _ext_pwn = "pwn";
-        const string _ext_aso = "aso";
-        const string _ext_imp = "imp";
-        const string _ext_acu = "acu";
-        const string _ext_atc = "atc";
-        const string _ext_acutc = "acutc";
-        const string _ext_air = "air";
-        const string _ext_fcdt = "fcdt";
-        const string _ext_fxp = "fxp";
-        const string _ext_fxpl = "fxpl";
-        const string _ext_xdp = "xdp";
-        const string _ext_xfdf = "xfdf";
-        const string _ext_ahead = "ahead";
-        const string _ext_azf = "azf";
-        const string _ext_azs = "azs";
-        const string _ext_azw = "azw";
-        const string _ext_acc = "acc";
-        const string _ext_ami = "ami";
-        const string _ext_apk = "apk";
-        const string _ext_cii = "cii";
-        const string _ext_fti = "fti";
-        const string _ext_atx = "atx";
-        const string _ext_mpkg = "mpkg";
-        const string _ext_m3u8 = "m3u8";
-        const string _ext_swi = "swi";
-        const string _ext_iota = "iota";
-        const string _ext_aep = "aep";
-        const string _ext_mpm = "mpm";
-        const string _ext_bmi = "bmi";
-        const string _ext_rep = "rep";
-        const string _ext_cdxml = "cdxml";
-        const string _ext_mmd = "mmd";
-        const string _ext_cdy = "cdy";
-        const string _ext_cla = "cla";
-        const string _ext_rp9 = "rp9";
-        const string _ext_c4g = "c4g";
-        const string _ext_c4d = "c4d";
-        const string _ext_c4f = "c4f";
-        const string _ext_c4p = "c4p";
-        const string _ext_c4u = "c4u";
-        const string _ext_c11amc = "c11amc";
-        const string _ext_c11amz = "c11amz";
-        const string _ext_csp = "csp";
-        const string _ext_cdbcmsg = "cdbcmsg";
-        const string _ext_cmc = "cmc";
-        const string _ext_clkx = "clkx";
-        const string _ext_clkk = "clkk";
-        const string _ext_clkp = "clkp";
-        const string _ext_clkt = "clkt";
-        const string _ext_clkw = "clkw";
-        const string _ext_wbs = "wbs";
-        const string _ext_pml = "pml";
-        const string _ext_ppd = "ppd";
-        const string _ext_car = "car";
-        const string _ext_pcurl = "pcurl";
-        const string _ext_dart = "dart";
-        const string _ext_rdz = "rdz";
-        const string _ext_uvf = "uvf";
-        const string _ext_uvvf = "uvvf";
-        const string _ext_uvd = "uvd";
-        const string _ext_uvvd = "uvvd";
-        const string _ext_uvt = "uvt";
-        const string _ext_uvvt = "uvvt";
-        const string _ext_uvx = "uvx";
-        const string _ext_uvvx = "uvvx";
-        const string _ext_uvz = "uvz";
-        const string _ext_uvvz = "uvvz";
-        const string _ext_fe_launch = "fe_launch";
-        const string _ext_dna = "dna";
-        const string _ext_mlp = "mlp";
-        const string _ext_dpg = "dpg";
-        const string _ext_dfac = "dfac";
-        const string _ext_kpxx = "kpxx";
-        const string _ext_ait = "ait";
-        const string _ext_svc = "svc";
-        const string _ext_geo = "geo";
-        const string _ext_mag = "mag";
-        const string _ext_nml = "nml";
-        const string _ext_esf = "esf";
-        const string _ext_msf = "msf";
-        const string _ext_qam = "qam";
-        const string _ext_slt = "slt";
-        const string _ext_ssf = "ssf";
-        const string _ext_es3 = "es3";
-        const string _ext_et3 = "et3";
-        const string _ext_ez2 = "ez2";
-        const string _ext_ez3 = "ez3";
-        const string _ext_fdf = "fdf";
-        const string _ext_mseed = "mseed";
-        const string _ext_seed = "seed";
-        const string _ext_dataless = "dataless";
-        const string _ext_gph = "gph";
-        const string _ext_ftc = "ftc";
-        const string _ext_fm = "fm";
-        const string _ext_frame = "frame";
-        const string _ext_maker = "maker";
-        const string _ext_book = "book";
-        const string _ext_fnc = "fnc";
-        const string _ext_ltf = "ltf";
-        const string _ext_fsc = "fsc";
-        const string _ext_oas = "oas";
-        const string _ext_oa2 = "oa2";
-        const string _ext_oa3 = "oa3";
-        const string _ext_fg5 = "fg5";
-        const string _ext_bh2 = "bh2";
-        const string _ext_ddd = "ddd";
-        const string _ext_xdw = "xdw";
-        const string _ext_xbd = "xbd";
-        const string _ext_fzs = "fzs";
-        const string _ext_txd = "txd";
-        const string _ext_ggb = "ggb";
-        const string _ext_ggt = "ggt";
-        const string _ext_gex = "gex";
-        const string _ext_gre = "gre";
-        const string _ext_gxt = "gxt";
-        const string _ext_g2w = "g2w";
-        const string _ext_g3w = "g3w";
-        const string _ext_gmx = "gmx";
-        const string _ext_kml = "kml";
-        const string _ext_kmz = "kmz";
-        const string _ext_gqf = "gqf";
-        const string _ext_gqs = "gqs";
-        const string _ext_gac = "gac";
-        const string _ext_ghf = "ghf";
-        const string _ext_gim = "gim";
-        const string _ext_grv = "grv";
-        const string _ext_gtm = "gtm";
-        const string _ext_tpl = "tpl";
-        const string _ext_vcg = "vcg";
-        const string _ext_hal = "hal";
-        const string _ext_zmm = "zmm";
-        const string _ext_hbci = "hbci";
-        const string _ext_les = "les";
-        const string _ext_hpgl = "hpgl";
-        const string _ext_hpid = "hpid";
-        const string _ext_hps = "hps";
-        const string _ext_jlt = "jlt";
-        const string _ext_pcl = "pcl";
-        const string _ext_pclxl = "pclxl";
-        const string _ext_sfd_hdstx = "sfd-hdstx";
-        const string _ext_mpy = "mpy";
-        const string _ext_afp = "afp";
-        const string _ext_listafp = "listafp";
-        const string _ext_list3820 = "list3820";
-        const string _ext_irm = "irm";
-        const string _ext_sc = "sc";
-        const string _ext_icc = "icc";
-        const string _ext_icm = "icm";
-        const string _ext_igl = "igl";
-        const string _ext_ivp = "ivp";
-        const string _ext_ivu = "ivu";
-        const string _ext_igm = "igm";
-        const string _ext_xpw = "xpw";
-        const string _ext_xpx = "xpx";
-        const string _ext_i2g = "i2g";
-        const string _ext_qbo = "qbo";
-        const string _ext_qfx = "qfx";
-        const string _ext_rcprofile = "rcprofile";
-        const string _ext_irp = "irp";
-        const string _ext_xpr = "xpr";
-        const string _ext_fcs = "fcs";
-        const string _ext_jam = "jam";
-        const string _ext_rms = "rms";
-        const string _ext_jisp = "jisp";
-        const string _ext_joda = "joda";
-        const string _ext_ktz = "ktz";
-        const string _ext_ktr = "ktr";
-        const string _ext_karbon = "karbon";
-        const string _ext_chrt = "chrt";
-        const string _ext_kfo = "kfo";
-        const string _ext_flw = "flw";
-        const string _ext_kon = "kon";
-        const string _ext_kpr = "kpr";
-        const string _ext_kpt = "kpt";
-        const string _ext_ksp = "ksp";
-        const string _ext_kwd = "kwd";
-        const string _ext_kwt = "kwt";
-        const string _ext_htke = "htke";
-        const string _ext_kia = "kia";
-        const string _ext_kne = "kne";
-        const string _ext_knp = "knp";
-        const string _ext_skp = "skp";
-        const string _ext_skd = "skd";
-        const string _ext_skt = "skt";
-        const string _ext_skm = "skm";
-        const string _ext_sse = "sse";
-        const string _ext_lasxml = "lasxml";
-        const string _ext_lbd = "lbd";
-        const string _ext_lbe = "lbe";
-        const string _ext_123 = "123";
-        const string _ext_apr = "apr";
-        const string _ext_pre = "pre";
-        const string _ext_nsf = "nsf";
-        const string _ext_org = "org";
-        const string _ext_scm = "scm";
-        const string _ext_lwp = "lwp";
-        const string _ext_portpkg = "portpkg";
-        const string _ext_mcd = "mcd";
-        const string _ext_mc1 = "mc1";
-        const string _ext_cdkey = "cdkey";
-        const string _ext_mwf = "mwf";
-        const string _ext_mfm = "mfm";
-        const string _ext_flo = "flo";
-        const string _ext_igx = "igx";
-        const string _ext_mif = "mif";
-        const string _ext_daf = "daf";
-        const string _ext_dis = "dis";
-        const string _ext_mbk = "mbk";
-        const string _ext_mqy = "mqy";
-        const string _ext_msl = "msl";
-        const string _ext_plc = "plc";
-        const string _ext_txf = "txf";
-        const string _ext_mpn = "mpn";
-        const string _ext_mpc = "mpc";
-        const string _ext_xul = "xul";
-        const string _ext_cil = "cil";
-        const string _ext_cab = "cab";
-        const string _ext_xls = "xls";
-        const string _ext_xlm = "xlm";
-        const string _ext_xla = "xla";
-        const string _ext_xlc = "xlc";
-        const string _ext_xlt = "xlt";
-        const string _ext_xlw = "xlw";
-        const string _ext_xlam = "xlam";
-        const string _ext_xlsb = "xlsb";
-        const string _ext_xlsm = "xlsm";
-        const string _ext_xltm = "xltm";
-        const string _ext_eot = "eot";
-        const string _ext_chm = "chm";
-        const string _ext_ims = "ims";
-        const string _ext_lrm = "lrm";
-        const string _ext_thmx = "thmx";
-        const string _ext_cat = "cat";
-        const string _ext_stl = "stl";
-        const string _ext_ppt = "ppt";
-        const string _ext_pps = "pps";
-        const string _ext_pot = "pot";
-        const string _ext_ppam = "ppam";
-        const string _ext_pptm = "pptm";
-        const string _ext_sldm = "sldm";
-        const string _ext_ppsm = "ppsm";
-        const string _ext_potm = "potm";
-        const string _ext_mpp = "mpp";
-        const string _ext_mpt = "mpt";
-        const string _ext_docm = "docm";
-        const string _ext_dotm = "dotm";
-        const string _ext_wps = "wps";
-        const string _ext_wks = "wks";
-        const string _ext_wcm = "wcm";
-        const string _ext_wdb = "wdb";
-        const string _ext_wpl = "wpl";
-        const string _ext_xps = "xps";
-        const string _ext_mseq = "mseq";
-        const string _ext_mus = "mus";
-        const string _ext_msty = "msty";
-        const string _ext_taglet = "taglet";
-        const string _ext_nlu = "nlu";
-        const string _ext_ntf = "ntf";
-        const string _ext_nitf = "nitf";
-        const string _ext_nnd = "nnd";
-        const string _ext_nns = "nns";
-        const string _ext_nnw = "nnw";
-        const string _ext_ngdat = "ngdat";
-        const string _ext_n_gage = "n-gage";
-        const string _ext_rpst = "rpst";
-        const string _ext_rpss = "rpss";
-        const string _ext_edm = "edm";
-        const string _ext_edx = "edx";
-        const string _ext_ext = "ext";
-        const string _ext_odc = "odc";
-        const string _ext_otc = "otc";
-        const string _ext_odb = "odb";
-        const string _ext_odf = "odf";
-        const string _ext_odft = "odft";
-        const string _ext_odg = "odg";
-        const string _ext_otg = "otg";
-        const string _ext_odi = "odi";
-        const string _ext_oti = "oti";
-        const string _ext_odp = "odp";
-        const string _ext_otp = "otp";
-        const string _ext_ods = "ods";
-        const string _ext_ots = "ots";
-        const string _ext_odt = "odt";
-        const string _ext_odm = "odm";
-        const string _ext_ott = "ott";
-        const string _ext_oth = "oth";
-        const string _ext_xo = "xo";
-        const string _ext_dd2 = "dd2";
-        const string _ext_oxt = "oxt";
-        const string _ext_pptx = "pptx";
-        const string _ext_sldx = "sldx";
-        const string _ext_ppsx = "ppsx";
-        const string _ext_potx = "potx";
-        const string _ext_xlsx = "xlsx";
-        const string _ext_xltx = "xltx";
-        const string _ext_docx = "docx";
-        const string _ext_dotx = "dotx";
-        const string _ext_mgp = "mgp";
-        const string _ext_dp = "dp";
-        const string _ext_esa = "esa";
-        const string _ext_pdb = "pdb";
-        const string _ext_pqa = "pqa";
-        const string _ext_oprc = "oprc";
-        const string _ext_paw = "paw";
-        const string _ext_str = "str";
-        const string _ext_ei6 = "ei6";
-        const string _ext_efif = "efif";
-        const string _ext_wg = "wg";
-        const string _ext_plf = "plf";
-        const string _ext_pbd = "pbd";
-        const string _ext_box = "box";
-        const string _ext_mgz = "mgz";
-        const string _ext_qps = "qps";
-        const string _ext_ptid = "ptid";
-        const string _ext_qxd = "qxd";
-        const string _ext_qxt = "qxt";
-        const string _ext_qwd = "qwd";
-        const string _ext_qwt = "qwt";
-        const string _ext_qxl = "qxl";
-        const string _ext_qxb = "qxb";
-        const string _ext_bed = "bed";
-        const string _ext_mxl = "mxl";
-        const string _ext_musicxml = "musicxml";
-        const string _ext_cryptonote = "cryptonote";
-        const string _ext_cod = "cod";
-        const string _ext_rm = "rm";
-        const string _ext_rmvb = "rmvb";
-        const string _ext_link66 = "link66";
-        const string _ext_st = "st";
-        const string _ext_see = "see";
-        const string _ext_sema = "sema";
-        const string _ext_semd = "semd";
-        const string _ext_semf = "semf";
-        const string _ext_ifm = "ifm";
-        const string _ext_itp = "itp";
-        const string _ext_iif = "iif";
-        const string _ext_ipk = "ipk";
-        const string _ext_twd = "twd";
-        const string _ext_twds = "twds";
-        const string _ext_mmf = "mmf";
-        const string _ext_teacher = "teacher";
-        const string _ext_sdkm = "sdkm";
-        const string _ext_sdkd = "sdkd";
-        const string _ext_dxp = "dxp";
-        const string _ext_sfs = "sfs";
-        const string _ext_sdc = "sdc";
-        const string _ext_sda = "sda";
-        const string _ext_sdd = "sdd";
-        const string _ext_smf = "smf";
-        const string _ext_sdw = "sdw";
-        const string _ext_vor = "vor";
-        const string _ext_sgl = "sgl";
-        const string _ext_smzip = "smzip";
-        const string _ext_sm = "sm";
-        const string _ext_sxc = "sxc";
-        const string _ext_stc = "stc";
-        const string _ext_sxd = "sxd";
-        const string _ext_std = "std";
-        const string _ext_sxi = "sxi";
-        const string _ext_sti = "sti";
-        const string _ext_sxm = "sxm";
-        const string _ext_sxw = "sxw";
-        const string _ext_sxg = "sxg";
-        const string _ext_stw = "stw";
-        const string _ext_sus = "sus";
-        const string _ext_susp = "susp";
-        const string _ext_svd = "svd";
-        const string _ext_sis = "sis";
-        const string _ext_sisx = "sisx";
-        const string _ext_xsm = "xsm";
-        const string _ext_bdm = "bdm";
-        const string _ext_xdm = "xdm";
-        const string _ext_tao = "tao";
-        const string _ext_pcap = "pcap";
-        const string _ext_cap = "cap";
-        const string _ext_dmp = "dmp";
-        const string _ext_tmo = "tmo";
-        const string _ext_tpt = "tpt";
-        const string _ext_mxs = "mxs";
-        const string _ext_tra = "tra";
-        const string _ext_ufd = "ufd";
-        const string _ext_ufdl = "ufdl";
-        const string _ext_utz = "utz";
-        const string _ext_umj = "umj";
-        const string _ext_unityweb = "unityweb";
-        const string _ext_uoml = "uoml";
-        const string _ext_vcx = "vcx";
-        const string _ext_vsd = "vsd";
-        const string _ext_vst = "vst";
-        const string _ext_vss = "vss";
-        const string _ext_vsw = "vsw";
-        const string _ext_vis = "vis";
-        const string _ext_vsf = "vsf";
-        const string _ext_wbxml = "wbxml";
-        const string _ext_wmlc = "wmlc";
-        const string _ext_wmlsc = "wmlsc";
-        const string _ext_wtb = "wtb";
-        const string _ext_nbp = "nbp";
-        const string _ext_wpd = "wpd";
-        const string _ext_wqd = "wqd";
-        const string _ext_stf = "stf";
-        const string _ext_xar = "xar";
-        const string _ext_xfdl = "xfdl";
-        const string _ext_hvd = "hvd";
-        const string _ext_hvs = "hvs";
-        const string _ext_hvp = "hvp";
-        const string _ext_osf = "osf";
-        const string _ext_osfpvg = "osfpvg";
-        const string _ext_saf = "saf";
-        const string _ext_spf = "spf";
-        const string _ext_cmp = "cmp";
-        const string _ext_zir = "zir";
-        const string _ext_zirz = "zirz";
-        const string _ext_zaz = "zaz";
-        const string _ext_vxml = "vxml";
-        const string _ext_wgt = "wgt";
-        const string _ext_hlp = "hlp";
-        const string _ext_wsdl = "wsdl";
-        const string _ext_wspolicy = "wspolicy";
-        const string _ext_7z = "7z";
-        const string _ext_abw = "abw";
-        const string _ext_ace = "ace";
-        const string _ext_dmg = "dmg";
-        const string _ext_aab = "aab";
-        const string _ext_x32 = "x32";
-        const string _ext_u32 = "u32";
-        const string _ext_vox = "vox";
-        const string _ext_aam = "aam";
-        const string _ext_aas = "aas";
-        const string _ext_bcpio = "bcpio";
-        const string _ext_torrent = "torrent";
-        const string _ext_blb = "blb";
-        const string _ext_blorb = "blorb";
-        const string _ext_bz = "bz";
-        const string _ext_bz2 = "bz2";
-        const string _ext_boz = "boz";
-        const string _ext_cbr = "cbr";
-        const string _ext_cba = "cba";
-        const string _ext_cbt = "cbt";
-        const string _ext_cbz = "cbz";
-        const string _ext_cb7 = "cb7";
-        const string _ext_vcd = "vcd";
-        const string _ext_cfs = "cfs";
-        const string _ext_chat = "chat";
-        const string _ext_pgn = "pgn";
-        const string _ext_nsc = "nsc";
-        const string _ext_cpio = "cpio";
-        const string _ext_csh = "csh";
-        const string _ext_deb = "deb";
-        const string _ext_udeb = "udeb";
-        const string _ext_dgc = "dgc";
-        const string _ext_dir = "dir";
-        const string _ext_dcr = "dcr";
-        const string _ext_dxr = "dxr";
-        const string _ext_cst = "cst";
-        const string _ext_cct = "cct";
-        const string _ext_cxt = "cxt";
-        const string _ext_w3d = "w3d";
-        const string _ext_fgd = "fgd";
-        const string _ext_swa = "swa";
-        const string _ext_wad = "wad";
-        const string _ext_ncx = "ncx";
-        const string _ext_dtb = "dtb";
-        const string _ext_res = "res";
-        const string _ext_dvi = "dvi";
-        const string _ext_evy = "evy";
-        const string _ext_eva = "eva";
-        const string _ext_bdf = "bdf";
-        const string _ext_gsf = "gsf";
-        const string _ext_psf = "psf";
-        const string _ext_pcf = "pcf";
-        const string _ext_snf = "snf";
-        const string _ext_pfa = "pfa";
-        const string _ext_pfb = "pfb";
-        const string _ext_pfm = "pfm";
-        const string _ext_afm = "afm";
-        const string _ext_arc = "arc";
-        const string _ext_spl = "spl";
-        const string _ext_gca = "gca";
-        const string _ext_ulx = "ulx";
-        const string _ext_gnumeric = "gnumeric";
-        const string _ext_gramps = "gramps";
-        const string _ext_gtar = "gtar";
-        const string _ext_hdf = "hdf";
-        const string _ext_install = "install";
-        const string _ext_iso = "iso";
-        const string _ext_jnlp = "jnlp";
-        const string _ext_latex = "latex";
-        const string _ext_lzh = "lzh";
-        const string _ext_lha = "lha";
-        const string _ext_mie = "mie";
-        const string _ext_prc = "prc";
-        const string _ext_mobi = "mobi";
-        const string _ext_application = "application";
-        const string _ext_lnk = "lnk";
-        const string _ext_wmd = "wmd";
-        const string _ext_wmz = "wmz";
-        const string _ext_xbap = "xbap";
-        const string _ext_mdb = "mdb";
-        const string _ext_obd = "obd";
-        const string _ext_crd = "crd";
-        const string _ext_clp = "clp";
-        const string _ext_exe = "exe";
-        const string _ext_dll = "dll";
-        const string _ext_com = "com";
-        const string _ext_bat = "bat";
-        const string _ext_msi = "msi";
-        const string _ext_mvb = "mvb";
-        const string _ext_m13 = "m13";
-        const string _ext_m14 = "m14";
-        const string _ext_wmf = "wmf";
-        const string _ext_emf = "emf";
-        const string _ext_emz = "emz";
-        const string _ext_mny = "mny";
-        const string _ext_pub = "pub";
-        const string _ext_scd = "scd";
-        const string _ext_trm = "trm";
-        const string _ext_wri = "wri";
-        const string _ext_nc = "nc";
-        const string _ext_cdf = "cdf";
-        const string _ext_nzb = "nzb";
-        const string _ext_p12 = "p12";
-        const string _ext_pfx = "pfx";
-        const string _ext_p7b = "p7b";
-        const string _ext_spc = "spc";
-        const string _ext_p7r = "p7r";
-        const string _ext_rar = "rar";
-        const string _ext_ris = "ris";
-        const string _ext_sh = "sh";
-        const string _ext_shar = "shar";
-        const string _ext_swf = "swf";
-        const string _ext_xap = "xap";
-        const string _ext_sql = "sql";
-        const string _ext_sit = "sit";
-        const string _ext_sitx = "sitx";
-        const string _ext_srt = "srt";
-        const string _ext_sv4cpio = "sv4cpio";
-        const string _ext_sv4crc = "sv4crc";
-        const string _ext_t3 = "t3";
-        const string _ext_gam = "gam";
-        const string _ext_tar = "tar";
-        const string _ext_tcl = "tcl";
-        const string _ext_tex = "tex";
-        const string _ext_tfm = "tfm";
-        const string _ext_texinfo = "texinfo";
-        const string _ext_texi = "texi";
-        const string _ext_obj = "obj";
-        const string _ext_ustar = "ustar";
-        const string _ext_src = "src";
-        const string _ext_der = "der";
-        const string _ext_crt = "crt";
-        const string _ext_fig = "fig";
-        const string _ext_xlf = "xlf";
-        const string _ext_xpi = "xpi";
-        const string _ext_xz = "xz";
-        const string _ext_z1 = "z1";
-        const string _ext_z2 = "z2";
-        const string _ext_z3 = "z3";
-        const string _ext_z4 = "z4";
-        const string _ext_z5 = "z5";
-        const string _ext_z6 = "z6";
-        const string _ext_z7 = "z7";
-        const string _ext_z8 = "z8";
-        const string _ext_xaml = "xaml";
-        const string _ext_xdf = "xdf";
-        const string _ext_xenc = "xenc";
-        const string _ext_xhtml = "xhtml";
-        const string _ext_xht = "xht";
-        const string _ext_xml = "xml";
-        const string _ext_xsl = "xsl";
-        const string _ext_dtd = "dtd";
-        const string _ext_xop = "xop";
-        const string _ext_xpl = "xpl";
-        const string _ext_xslt = "xslt";
-        const string _ext_xspf = "xspf";
-        const string _ext_mxml = "mxml";
-        const string _ext_xhvml = "xhvml";
-        const string _ext_xvml = "xvml";
-        const string _ext_xvm = "xvm";
-        const string _ext_yang = "yang";
-        const string _ext_yin = "yin";
-        const string _ext_zip = "zip";
-        const string _ext_adp = "adp";
-        const string _ext_au = "au";
-        const string _ext_snd = "snd";
-        const string _ext_mid = "mid";
-        const string _ext_midi = "midi";
-        const string _ext_kar = "kar";
-        const string _ext_rmi = "rmi";
-        const string _ext_m4a = "m4a";
-        const string _ext_mp4a = "mp4a";
-        const string _ext_mpga = "mpga";
-        const string _ext_mp2 = "mp2";
-        const string _ext_mp2a = "mp2a";
-        const string _ext_mp3 = "mp3";
-        const string _ext_m2a = "m2a";
-        const string _ext_m3a = "m3a";
-        const string _ext_oga = "oga";
-        const string _ext_ogg = "ogg";
-        const string _ext_spx = "spx";
-        const string _ext_s3m = "s3m";
-        const string _ext_sil = "sil";
-        const string _ext_uva = "uva";
-        const string _ext_uvva = "uvva";
-        const string _ext_eol = "eol";
-        const string _ext_dra = "dra";
-        const string _ext_dts = "dts";
-        const string _ext_dtshd = "dtshd";
-        const string _ext_lvp = "lvp";
-        const string _ext_pya = "pya";
-        const string _ext_ecelp4800 = "ecelp4800";
-        const string _ext_ecelp7470 = "ecelp7470";
-        const string _ext_ecelp9600 = "ecelp9600";
-        const string _ext_rip = "rip";
-        const string _ext_weba = "weba";
-        const string _ext_aac = "aac";
-        const string _ext_aif = "aif";
-        const string _ext_aiff = "aiff";
-        const string _ext_aifc = "aifc";
-        const string _ext_caf = "caf";
-        const string _ext_flac = "flac";
-        const string _ext_mka = "mka";
-        const string _ext_m3u = "m3u";
-        const string _ext_wax = "wax";
-        const string _ext_wma = "wma";
-        const string _ext_ram = "ram";
-        const string _ext_ra = "ra";
-        const string _ext_rmp = "rmp";
-        const string _ext_wav = "wav";
-        const string _ext_xm = "xm";
-        const string _ext_cdx = "cdx";
-        const string _ext_cif = "cif";
-        const string _ext_cmdf = "cmdf";
-        const string _ext_cml = "cml";
-        const string _ext_csml = "csml";
-        const string _ext_xyz = "xyz";
-        const string _ext_ttc = "ttc";
-        const string _ext_otf = "otf";
-        const string _ext_ttf = "ttf";
-        const string _ext_woff = "woff";
-        const string _ext_woff2 = "woff2";
-        const string _ext_bmp = "bmp";
-        const string _ext_cgm = "cgm";
-        const string _ext_g3 = "g3";
-        const string _ext_gif = "gif";
-        const string _ext_ief = "ief";
-        const string _ext_jpeg = "jpeg";
-        const string _ext_jpg = "jpg";
-        const string _ext_jpe = "jpe";
-        const string _ext_ktx = "ktx";
-        const string _ext_png = "png";
-        const string _ext_btif = "btif";
-        const string _ext_sgi = "sgi";
-        const string _ext_svg = "svg";
-        const string _ext_svgz = "svgz";
-        const string _ext_tiff = "tiff";
-        const string _ext_tif = "tif";
-        const string _ext_psd = "psd";
-        const string _ext_uvi = "uvi";
-        const string _ext_uvvi = "uvvi";
-        const string _ext_uvg = "uvg";
-        const string _ext_uvvg = "uvvg";
-        const string _ext_djvu = "djvu";
-        const string _ext_djv = "djv";
-        const string _ext_sub = "sub";
-        const string _ext_dwg = "dwg";
-        const string _ext_dxf = "dxf";
-        const string _ext_fbs = "fbs";
-        const string _ext_fpx = "fpx";
-        const string _ext_fst = "fst";
-        const string _ext_mmr = "mmr";
-        const string _ext_rlc = "rlc";
-        const string _ext_mdi = "mdi";
-        const string _ext_wdp = "wdp";
-        const string _ext_npx = "npx";
-        const string _ext_wbmp = "wbmp";
-        const string _ext_xif = "xif";
-        const string _ext_webp = "webp";
-        const string _ext_3ds = "3ds";
-        const string _ext_ras = "ras";
-        const string _ext_cmx = "cmx";
-        const string _ext_fh = "fh";
-        const string _ext_fhc = "fhc";
-        const string _ext_fh4 = "fh4";
-        const string _ext_fh5 = "fh5";
-        const string _ext_fh7 = "fh7";
-        const string _ext_ico = "ico";
-        const string _ext_sid = "sid";
-        const string _ext_pcx = "pcx";
-        const string _ext_pic = "pic";
-        const string _ext_pct = "pct";
-        const string _ext_pnm = "pnm";
-        const string _ext_pbm = "pbm";
-        const string _ext_pgm = "pgm";
-        const string _ext_ppm = "ppm";
-        const string _ext_rgb = "rgb";
-        const string _ext_tga = "tga";
-        const string _ext_xbm = "xbm";
-        const string _ext_xpm = "xpm";
-        const string _ext_xwd = "xwd";
-        const string _ext_eml = "eml";
-        const string _ext_mime = "mime";
-        const string _ext_igs = "igs";
-        const string _ext_iges = "iges";
-        const string _ext_msh = "msh";
-        const string _ext_mesh = "mesh";
-        const string _ext_silo = "silo";
-        const string _ext_dae = "dae";
-        const string _ext_dwf = "dwf";
-        const string _ext_gdl = "gdl";
-        const string _ext_gtw = "gtw";
-        const string _ext_mts = "mts";
-        const string _ext_vtu = "vtu";
-        const string _ext_wrl = "wrl";
-        const string _ext_vrml = "vrml";
-        const string _ext_x3db = "x3db";
-        const string _ext_x3dbz = "x3dbz";
-        const string _ext_x3dv = "x3dv";
-        const string _ext_x3dvz = "x3dvz";
-        const string _ext_x3d = "x3d";
-        const string _ext_x3dz = "x3dz";
-        const string _ext_appcache = "appcache";
-        const string _ext_ics = "ics";
-        const string _ext_ifb = "ifb";
-        const string _ext_css = "css";
-        const string _ext_csv = "csv";
-        const string _ext_html = "html";
-        const string _ext_htm = "htm";
-        const string _ext_n3 = "n3";
-        const string _ext_txt = "txt";
-        const string _ext_text = "text";
-        const string _ext_conf = "conf";
-        const string _ext_def = "def";
-        const string _ext_list = "list";
-        const string _ext_log = "log";
-        const string _ext_in = "in";
-        const string _ext_dsc = "dsc";
-        const string _ext_rtx = "rtx";
-        const string _ext_sgml = "sgml";
-        const string _ext_sgm = "sgm";
-        const string _ext_tsv = "tsv";
-        const string _ext_t = "t";
-        const string _ext_tr = "tr";
-        const string _ext_roff = "roff";
-        const string _ext_man = "man";
-        const string _ext_me = "me";
-        const string _ext_ms = "ms";
-        const string _ext_ttl = "ttl";
-        const string _ext_uri = "uri";
-        const string _ext_uris = "uris";
-        const string _ext_urls = "urls";
-        const string _ext_vcard = "vcard";
-        const string _ext_curl = "curl";
-        const string _ext_dcurl = "dcurl";
-        const string _ext_mcurl = "mcurl";
-        const string _ext_scurl = "scurl";
-        const string _ext_fly = "fly";
-        const string _ext_flx = "flx";
-        const string _ext_gv = "gv";
-        const string _ext_3dml = "3dml";
-        const string _ext_spot = "spot";
-        const string _ext_jad = "jad";
-        const string _ext_wml = "wml";
-        const string _ext_wmls = "wmls";
-        const string _ext_s = "s";
-        const string _ext_asm = "asm";
-        const string _ext_c = "c";
-        const string _ext_cc = "cc";
-        const string _ext_cxx = "cxx";
-        const string _ext_cpp = "cpp";
-        const string _ext_h = "h";
-        const string _ext_hh = "hh";
-        const string _ext_dic = "dic";
-        const string _ext_f = "f";
-        const string _ext_for = "for";
-        const string _ext_f77 = "f77";
-        const string _ext_f90 = "f90";
-        const string _ext_java = "java";
-        const string _ext_nfo = "nfo";
-        const string _ext_opml = "opml";
-        const string _ext_p = "p";
-        const string _ext_pas = "pas";
-        const string _ext_etx = "etx";
-        const string _ext_sfv = "sfv";
-        const string _ext_uu = "uu";
-        const string _ext_vcs = "vcs";
-        const string _ext_vcf = "vcf";
-        const string _ext_3gp = "3gp";
-        const string _ext_3g2 = "3g2";
-        const string _ext_h261 = "h261";
-        const string _ext_h263 = "h263";
-        const string _ext_h264 = "h264";
-        const string _ext_jpgv = "jpgv";
-        const string _ext_jpm = "jpm";
-        const string _ext_jpgm = "jpgm";
-        const string _ext_mj2 = "mj2";
-        const string _ext_mjp2 = "mjp2";
-        const string _ext_mp4 = "mp4";
-        const string _ext_mp4v = "mp4v";
-        const string _ext_mpg4 = "mpg4";
-        const string _ext_mpeg = "mpeg";
-        const string _ext_mpg = "mpg";
-        const string _ext_mpe = "mpe";
-        const string _ext_m1v = "m1v";
-        const string _ext_m2v = "m2v";
-        const string _ext_ogv = "ogv";
-        const string _ext_qt = "qt";
-        const string _ext_mov = "mov";
-        const string _ext_uvh = "uvh";
-        const string _ext_uvvh = "uvvh";
-        const string _ext_uvm = "uvm";
-        const string _ext_uvvm = "uvvm";
-        const string _ext_uvp = "uvp";
-        const string _ext_uvvp = "uvvp";
-        const string _ext_uvs = "uvs";
-        const string _ext_uvvs = "uvvs";
-        const string _ext_uvv = "uvv";
-        const string _ext_uvvv = "uvvv";
-        const string _ext_dvb = "dvb";
-        const string _ext_fvt = "fvt";
-        const string _ext_mxu = "mxu";
-        const string _ext_m4u = "m4u";
-        const string _ext_pyv = "pyv";
-        const string _ext_uvu = "uvu";
-        const string _ext_uvvu = "uvvu";
-        const string _ext_viv = "viv";
-        const string _ext_webm = "webm";
-        const string _ext_f4v = "f4v";
-        const string _ext_fli = "fli";
-        const string _ext_flv = "flv";
-        const string _ext_m4v = "m4v";
-        const string _ext_mkv = "mkv";
-        const string _ext_mk3d = "mk3d";
-        const string _ext_mks = "mks";
-        const string _ext_mng = "mng";
-        const string _ext_asf = "asf";
-        const string _ext_asx = "asx";
-        const string _ext_vob = "vob";
-        const string _ext_wm = "wm";
-        const string _ext_wmv = "wmv";
-        const string _ext_wmx = "wmx";
-        const string _ext_wvx = "wvx";
-        const string _ext_avi = "avi";
-        const string _ext_movie = "movie";
-        const string _ext_smv = "smv";
-        const string _ext_ice = "ice";
-        const string _ext_map = "map";
-        const string _ext_topojson = "topojson";
-        const string _ext_jsonld = "jsonld";
-        const string _ext_geojson = "geojson";
-        const string _ext_mjs = "mjs";
-        const string _ext_wasm = "wasm";
-        const string _ext_webmanifest = "webmanifest";
-        const string _ext_webapp = "webapp";
-        const string _ext_f4a = "f4a";
-        const string _ext_f4b = "f4b";
-        const string _ext_opus = "opus";
-        const string _ext_jxr = "jxr";
-        const string _ext_hdp = "hdp";
-        const string _ext_jng = "jng";
-        const string _ext_3gpp = "3gpp";
-        const string _ext_f4p = "f4p";
-        const string _ext_cur = "cur";
-        const string _ext_ear = "ear";
-        const string _ext_war = "war";
-        const string _ext_img = "img";
-        const string _ext_msm = "msm";
-        const string _ext_msp = "msp";
-        const string _ext_safariextz = "safariextz";
-        const string _ext_bbaw = "bbaw";
-        const string _ext_crx = "crx";
-        const string _ext_cco = "cco";
-        const string _ext_jardiff = "jardiff";
-        const string _ext_run = "run";
-        const string _ext_oex = "oex";
-        const string _ext_pl = "pl";
-        const string _ext_pm = "pm";
-        const string _ext_rpm = "rpm";
-        const string _ext_sea = "sea";
-        const string _ext_tk = "tk";
-        const string _ext_pem = "pem";
-        const string _ext_shtml = "shtml";
-        const string _ext_md = "md";
-        const string _ext_markdown = "markdown";
-        const string _ext_mml = "mml";
-        const string _ext_xloc = "xloc";
-        const string _ext_vtt = "vtt";
-        const string _ext_htc = "htc";
-        const string _ext_bdoc = "bdoc";
-        const string _ext_mpd = "mpd";
-        const string _ext_es = "es";
-        const string _ext_gz = "gz";
-        const string _ext_hjson = "hjson";
-        const string _ext_json5 = "json5";
-        const string _ext_m4p = "m4p";
-        const string _ext_nq = "nq";
-        const string _ext_nt = "nt";
-        const string _ext_buffer = "buffer";
-        const string _ext_raml = "raml";
-        const string _ext_owl = "owl";
-        const string _ext_siv = "siv";
-        const string _ext_sieve = "sieve";
-        const string _ext_toml = "toml";
-        const string _ext_pkpass = "pkpass";
-        const string _ext_csl = "csl";
-        const string _ext_gdoc = "gdoc";
-        const string _ext_gslides = "gslides";
-        const string _ext_gsheet = "gsheet";
-        const string _ext_msg = "msg";
-        const string _ext_wadl = "wadl";
-        const string _ext_arj = "arj";
-        const string _ext_php = "php";
-        const string _ext_kdbx = "kdbx";
-        const string _ext_luac = "luac";
-        const string _ext_pac = "pac";
-        const string _ext_hdd = "hdd";
-        const string _ext_ova = "ova";
-        const string _ext_ovf = "ovf";
-        const string _ext_vbox = "vbox";
-        const string _ext_vbox_extpack = "vbox-extpack";
-        const string _ext_vdi = "vdi";
-        const string _ext_vhd = "vhd";
-        const string _ext_vmdk = "vmdk";
-        const string _ext_xsd = "xsd";
-        const string _ext_rng = "rng";
-        const string _ext_mxmf = "mxmf";
-        const string _ext_apng = "apng";
-        const string _ext_heic = "heic";
-        const string _ext_heics = "heics";
-        const string _ext_heif = "heif";
-        const string _ext_heifs = "heifs";
-        const string _ext_jp2 = "jp2";
-        const string _ext_jpg2 = "jpg2";
-        const string _ext_jpx = "jpx";
-        const string _ext_jpf = "jpf";
-        const string _ext_dds = "dds";
-        const string _ext_manifest = "manifest";
-        const string _ext_coffee = "coffee";
-        const string _ext_litcoffee = "litcoffee";
-        const string _ext_jade = "jade";
-        const string _ext_jsx = "jsx";
-        const string _ext_less = "less";
-        const string _ext_mdx = "mdx";
-        const string _ext_ini = "ini";
-        const string _ext_shex = "shex";
-        const string _ext_slim = "slim";
-        const string _ext_slm = "slm";
-        const string _ext_stylus = "stylus";
-        const string _ext_styl = "styl";
-        const string _ext_hbs = "hbs";
-        const string _ext_lua = "lua";
-        const string _ext_mkd = "mkd";
-        const string _ext_pde = "pde";
-        const string _ext_sass = "sass";
-        const string _ext_scss = "scss";
-        const string _ext_ymp = "ymp";
-        const string _ext_yaml = "yaml";
-        const string _ext_yml = "yml";
+		public static class Extensions
+		{
+			public const string _ez = "ez";
+			public const string _aw = "aw";
+			public const string _atom = "atom";
+			public const string _atomcat = "atomcat";
+			public const string _atomsvc = "atomsvc";
+			public const string _ccxml = "ccxml";
+			public const string _cdmia = "cdmia";
+			public const string _cdmic = "cdmic";
+			public const string _cdmid = "cdmid";
+			public const string _cdmio = "cdmio";
+			public const string _cdmiq = "cdmiq";
+			public const string _cu = "cu";
+			public const string _davmount = "davmount";
+			public const string _dbk = "dbk";
+			public const string _dssc = "dssc";
+			public const string _xdssc = "xdssc";
+			public const string _ecma = "ecma";
+			public const string _emma = "emma";
+			public const string _epub = "epub";
+			public const string _exi = "exi";
+			public const string _pfr = "pfr";
+			public const string _gml = "gml";
+			public const string _gpx = "gpx";
+			public const string _gxf = "gxf";
+			public const string _stk = "stk";
+			public const string _ink = "ink";
+			public const string _inkml = "inkml";
+			public const string _ipfix = "ipfix";
+			public const string _jar = "jar";
+			public const string _ser = "ser";
+			public const string _class = "class";
+			public const string _js = "js";
+			public const string _json = "json";
+			public const string _jsonml = "jsonml";
+			public const string _lostxml = "lostxml";
+			public const string _hqx = "hqx";
+			public const string _cpt = "cpt";
+			public const string _mads = "mads";
+			public const string _mrc = "mrc";
+			public const string _mrcx = "mrcx";
+			public const string _ma = "ma";
+			public const string _nb = "nb";
+			public const string _mb = "mb";
+			public const string _mathml = "mathml";
+			public const string _mbox = "mbox";
+			public const string _mscml = "mscml";
+			public const string _metalink = "metalink";
+			public const string _meta4 = "meta4";
+			public const string _mets = "mets";
+			public const string _mods = "mods";
+			public const string _m21 = "m21";
+			public const string _mp21 = "mp21";
+			public const string _mp4s = "mp4s";
+			public const string _doc = "doc";
+			public const string _dot = "dot";
+			public const string _mxf = "mxf";
+			public const string _bin = "bin";
+			public const string _dms = "dms";
+			public const string _lrf = "lrf";
+			public const string _mar = "mar";
+			public const string _so = "so";
+			public const string _dist = "dist";
+			public const string _distz = "distz";
+			public const string _pkg = "pkg";
+			public const string _bpk = "bpk";
+			public const string _dump = "dump";
+			public const string _elc = "elc";
+			public const string _deploy = "deploy";
+			public const string _oda = "oda";
+			public const string _opf = "opf";
+			public const string _ogx = "ogx";
+			public const string _omdoc = "omdoc";
+			public const string _onetoc = "onetoc";
+			public const string _onetoc2 = "onetoc2";
+			public const string _onetmp = "onetmp";
+			public const string _onepkg = "onepkg";
+			public const string _oxps = "oxps";
+			public const string _xer = "xer";
+			public const string _pdf = "pdf";
+			public const string _pgp = "pgp";
+			public const string _asc = "asc";
+			public const string _sig = "sig";
+			public const string _prf = "prf";
+			public const string _p10 = "p10";
+			public const string _p7m = "p7m";
+			public const string _p7c = "p7c";
+			public const string _p7s = "p7s";
+			public const string _p8 = "p8";
+			public const string _ac = "ac";
+			public const string _cer = "cer";
+			public const string _crl = "crl";
+			public const string _pkipath = "pkipath";
+			public const string _pki = "pki";
+			public const string _pls = "pls";
+			public const string _ai = "ai";
+			public const string _eps = "eps";
+			public const string _ps = "ps";
+			public const string _cww = "cww";
+			public const string _pskcxml = "pskcxml";
+			public const string _rdf = "rdf";
+			public const string _rif = "rif";
+			public const string _rnc = "rnc";
+			public const string _rl = "rl";
+			public const string _rld = "rld";
+			public const string _rs = "rs";
+			public const string _gbr = "gbr";
+			public const string _mft = "mft";
+			public const string _roa = "roa";
+			public const string _rsd = "rsd";
+			public const string _rss = "rss";
+			public const string _rtf = "rtf";
+			public const string _sbml = "sbml";
+			public const string _scq = "scq";
+			public const string _scs = "scs";
+			public const string _spq = "spq";
+			public const string _spp = "spp";
+			public const string _sdp = "sdp";
+			public const string _setpay = "setpay";
+			public const string _setreg = "setreg";
+			public const string _shf = "shf";
+			public const string _smi = "smi";
+			public const string _smil = "smil";
+			public const string _rq = "rq";
+			public const string _srx = "srx";
+			public const string _gram = "gram";
+			public const string _grxml = "grxml";
+			public const string _sru = "sru";
+			public const string _ssdl = "ssdl";
+			public const string _ssml = "ssml";
+			public const string _tei = "tei";
+			public const string _teicorpus = "teicorpus";
+			public const string _tfi = "tfi";
+			public const string _tsd = "tsd";
+			public const string _plb = "plb";
+			public const string _psb = "psb";
+			public const string _pvb = "pvb";
+			public const string _tcap = "tcap";
+			public const string _pwn = "pwn";
+			public const string _aso = "aso";
+			public const string _imp = "imp";
+			public const string _acu = "acu";
+			public const string _atc = "atc";
+			public const string _acutc = "acutc";
+			public const string _air = "air";
+			public const string _fcdt = "fcdt";
+			public const string _fxp = "fxp";
+			public const string _fxpl = "fxpl";
+			public const string _xdp = "xdp";
+			public const string _xfdf = "xfdf";
+			public const string _ahead = "ahead";
+			public const string _azf = "azf";
+			public const string _azs = "azs";
+			public const string _azw = "azw";
+			public const string _acc = "acc";
+			public const string _ami = "ami";
+			public const string _apk = "apk";
+			public const string _cii = "cii";
+			public const string _fti = "fti";
+			public const string _atx = "atx";
+			public const string _mpkg = "mpkg";
+			public const string _m3u8 = "m3u8";
+			public const string _swi = "swi";
+			public const string _iota = "iota";
+			public const string _aep = "aep";
+			public const string _mpm = "mpm";
+			public const string _bmi = "bmi";
+			public const string _rep = "rep";
+			public const string _cdxml = "cdxml";
+			public const string _mmd = "mmd";
+			public const string _cdy = "cdy";
+			public const string _cla = "cla";
+			public const string _rp9 = "rp9";
+			public const string _c4g = "c4g";
+			public const string _c4d = "c4d";
+			public const string _c4f = "c4f";
+			public const string _c4p = "c4p";
+			public const string _c4u = "c4u";
+			public const string _c11amc = "c11amc";
+			public const string _c11amz = "c11amz";
+			public const string _csp = "csp";
+			public const string _cdbcmsg = "cdbcmsg";
+			public const string _cmc = "cmc";
+			public const string _clkx = "clkx";
+			public const string _clkk = "clkk";
+			public const string _clkp = "clkp";
+			public const string _clkt = "clkt";
+			public const string _clkw = "clkw";
+			public const string _wbs = "wbs";
+			public const string _pml = "pml";
+			public const string _ppd = "ppd";
+			public const string _car = "car";
+			public const string _pcurl = "pcurl";
+			public const string _dart = "dart";
+			public const string _rdz = "rdz";
+			public const string _uvf = "uvf";
+			public const string _uvvf = "uvvf";
+			public const string _uvd = "uvd";
+			public const string _uvvd = "uvvd";
+			public const string _uvt = "uvt";
+			public const string _uvvt = "uvvt";
+			public const string _uvx = "uvx";
+			public const string _uvvx = "uvvx";
+			public const string _uvz = "uvz";
+			public const string _uvvz = "uvvz";
+			public const string _fe_launch = "fe_launch";
+			public const string _dna = "dna";
+			public const string _mlp = "mlp";
+			public const string _dpg = "dpg";
+			public const string _dfac = "dfac";
+			public const string _kpxx = "kpxx";
+			public const string _ait = "ait";
+			public const string _svc = "svc";
+			public const string _geo = "geo";
+			public const string _mag = "mag";
+			public const string _nml = "nml";
+			public const string _esf = "esf";
+			public const string _msf = "msf";
+			public const string _qam = "qam";
+			public const string _slt = "slt";
+			public const string _ssf = "ssf";
+			public const string _es3 = "es3";
+			public const string _et3 = "et3";
+			public const string _ez2 = "ez2";
+			public const string _ez3 = "ez3";
+			public const string _fdf = "fdf";
+			public const string _mseed = "mseed";
+			public const string _seed = "seed";
+			public const string _dataless = "dataless";
+			public const string _gph = "gph";
+			public const string _ftc = "ftc";
+			public const string _fm = "fm";
+			public const string _frame = "frame";
+			public const string _maker = "maker";
+			public const string _book = "book";
+			public const string _fnc = "fnc";
+			public const string _ltf = "ltf";
+			public const string _fsc = "fsc";
+			public const string _oas = "oas";
+			public const string _oa2 = "oa2";
+			public const string _oa3 = "oa3";
+			public const string _fg5 = "fg5";
+			public const string _bh2 = "bh2";
+			public const string _ddd = "ddd";
+			public const string _xdw = "xdw";
+			public const string _xbd = "xbd";
+			public const string _fzs = "fzs";
+			public const string _txd = "txd";
+			public const string _ggb = "ggb";
+			public const string _ggt = "ggt";
+			public const string _gex = "gex";
+			public const string _gre = "gre";
+			public const string _gxt = "gxt";
+			public const string _g2w = "g2w";
+			public const string _g3w = "g3w";
+			public const string _gmx = "gmx";
+			public const string _kml = "kml";
+			public const string _kmz = "kmz";
+			public const string _gqf = "gqf";
+			public const string _gqs = "gqs";
+			public const string _gac = "gac";
+			public const string _ghf = "ghf";
+			public const string _gim = "gim";
+			public const string _grv = "grv";
+			public const string _gtm = "gtm";
+			public const string _tpl = "tpl";
+			public const string _vcg = "vcg";
+			public const string _hal = "hal";
+			public const string _zmm = "zmm";
+			public const string _hbci = "hbci";
+			public const string _les = "les";
+			public const string _hpgl = "hpgl";
+			public const string _hpid = "hpid";
+			public const string _hps = "hps";
+			public const string _jlt = "jlt";
+			public const string _pcl = "pcl";
+			public const string _pclxl = "pclxl";
+			public const string _sfd_hdstx = "sfd-hdstx";
+			public const string _mpy = "mpy";
+			public const string _afp = "afp";
+			public const string _listafp = "listafp";
+			public const string _list3820 = "list3820";
+			public const string _irm = "irm";
+			public const string _sc = "sc";
+			public const string _icc = "icc";
+			public const string _icm = "icm";
+			public const string _igl = "igl";
+			public const string _ivp = "ivp";
+			public const string _ivu = "ivu";
+			public const string _igm = "igm";
+			public const string _xpw = "xpw";
+			public const string _xpx = "xpx";
+			public const string _i2g = "i2g";
+			public const string _qbo = "qbo";
+			public const string _qfx = "qfx";
+			public const string _rcprofile = "rcprofile";
+			public const string _irp = "irp";
+			public const string _xpr = "xpr";
+			public const string _fcs = "fcs";
+			public const string _jam = "jam";
+			public const string _rms = "rms";
+			public const string _jisp = "jisp";
+			public const string _joda = "joda";
+			public const string _ktz = "ktz";
+			public const string _ktr = "ktr";
+			public const string _karbon = "karbon";
+			public const string _chrt = "chrt";
+			public const string _kfo = "kfo";
+			public const string _flw = "flw";
+			public const string _kon = "kon";
+			public const string _kpr = "kpr";
+			public const string _kpt = "kpt";
+			public const string _ksp = "ksp";
+			public const string _kwd = "kwd";
+			public const string _kwt = "kwt";
+			public const string _htke = "htke";
+			public const string _kia = "kia";
+			public const string _kne = "kne";
+			public const string _knp = "knp";
+			public const string _skp = "skp";
+			public const string _skd = "skd";
+			public const string _skt = "skt";
+			public const string _skm = "skm";
+			public const string _sse = "sse";
+			public const string _lasxml = "lasxml";
+			public const string _lbd = "lbd";
+			public const string _lbe = "lbe";
+			public const string _123 = "123";
+			public const string _apr = "apr";
+			public const string _pre = "pre";
+			public const string _nsf = "nsf";
+			public const string _org = "org";
+			public const string _scm = "scm";
+			public const string _lwp = "lwp";
+			public const string _portpkg = "portpkg";
+			public const string _mcd = "mcd";
+			public const string _mc1 = "mc1";
+			public const string _cdkey = "cdkey";
+			public const string _mwf = "mwf";
+			public const string _mfm = "mfm";
+			public const string _flo = "flo";
+			public const string _igx = "igx";
+			public const string _mif = "mif";
+			public const string _daf = "daf";
+			public const string _dis = "dis";
+			public const string _mbk = "mbk";
+			public const string _mqy = "mqy";
+			public const string _msl = "msl";
+			public const string _plc = "plc";
+			public const string _txf = "txf";
+			public const string _mpn = "mpn";
+			public const string _mpc = "mpc";
+			public const string _xul = "xul";
+			public const string _cil = "cil";
+			public const string _cab = "cab";
+			public const string _xls = "xls";
+			public const string _xlm = "xlm";
+			public const string _xla = "xla";
+			public const string _xlc = "xlc";
+			public const string _xlt = "xlt";
+			public const string _xlw = "xlw";
+			public const string _xlam = "xlam";
+			public const string _xlsb = "xlsb";
+			public const string _xlsm = "xlsm";
+			public const string _xltm = "xltm";
+			public const string _eot = "eot";
+			public const string _chm = "chm";
+			public const string _ims = "ims";
+			public const string _lrm = "lrm";
+			public const string _thmx = "thmx";
+			public const string _cat = "cat";
+			public const string _stl = "stl";
+			public const string _ppt = "ppt";
+			public const string _pps = "pps";
+			public const string _pot = "pot";
+			public const string _ppam = "ppam";
+			public const string _pptm = "pptm";
+			public const string _sldm = "sldm";
+			public const string _ppsm = "ppsm";
+			public const string _potm = "potm";
+			public const string _mpp = "mpp";
+			public const string _mpt = "mpt";
+			public const string _docm = "docm";
+			public const string _dotm = "dotm";
+			public const string _wps = "wps";
+			public const string _wks = "wks";
+			public const string _wcm = "wcm";
+			public const string _wdb = "wdb";
+			public const string _wpl = "wpl";
+			public const string _xps = "xps";
+			public const string _mseq = "mseq";
+			public const string _mus = "mus";
+			public const string _msty = "msty";
+			public const string _taglet = "taglet";
+			public const string _nlu = "nlu";
+			public const string _ntf = "ntf";
+			public const string _nitf = "nitf";
+			public const string _nnd = "nnd";
+			public const string _nns = "nns";
+			public const string _nnw = "nnw";
+			public const string _ngdat = "ngdat";
+			public const string _n_gage = "n-gage";
+			public const string _rpst = "rpst";
+			public const string _rpss = "rpss";
+			public const string _edm = "edm";
+			public const string _edx = "edx";
+			public const string _ext = "ext";
+			public const string _odc = "odc";
+			public const string _otc = "otc";
+			public const string _odb = "odb";
+			public const string _odf = "odf";
+			public const string _odft = "odft";
+			public const string _odg = "odg";
+			public const string _otg = "otg";
+			public const string _odi = "odi";
+			public const string _oti = "oti";
+			public const string _odp = "odp";
+			public const string _otp = "otp";
+			public const string _ods = "ods";
+			public const string _ots = "ots";
+			public const string _odt = "odt";
+			public const string _odm = "odm";
+			public const string _ott = "ott";
+			public const string _oth = "oth";
+			public const string _xo = "xo";
+			public const string _dd2 = "dd2";
+			public const string _oxt = "oxt";
+			public const string _pptx = "pptx";
+			public const string _sldx = "sldx";
+			public const string _ppsx = "ppsx";
+			public const string _potx = "potx";
+			public const string _xlsx = "xlsx";
+			public const string _xltx = "xltx";
+			public const string _docx = "docx";
+			public const string _dotx = "dotx";
+			public const string _mgp = "mgp";
+			public const string _dp = "dp";
+			public const string _esa = "esa";
+			public const string _pdb = "pdb";
+			public const string _pqa = "pqa";
+			public const string _oprc = "oprc";
+			public const string _paw = "paw";
+			public const string _str = "str";
+			public const string _ei6 = "ei6";
+			public const string _efif = "efif";
+			public const string _wg = "wg";
+			public const string _plf = "plf";
+			public const string _pbd = "pbd";
+			public const string _box = "box";
+			public const string _mgz = "mgz";
+			public const string _qps = "qps";
+			public const string _ptid = "ptid";
+			public const string _qxd = "qxd";
+			public const string _qxt = "qxt";
+			public const string _qwd = "qwd";
+			public const string _qwt = "qwt";
+			public const string _qxl = "qxl";
+			public const string _qxb = "qxb";
+			public const string _bed = "bed";
+			public const string _mxl = "mxl";
+			public const string _musicxml = "musicxml";
+			public const string _cryptonote = "cryptonote";
+			public const string _cod = "cod";
+			public const string _rm = "rm";
+			public const string _rmvb = "rmvb";
+			public const string _link66 = "link66";
+			public const string _st = "st";
+			public const string _see = "see";
+			public const string _sema = "sema";
+			public const string _semd = "semd";
+			public const string _semf = "semf";
+			public const string _ifm = "ifm";
+			public const string _itp = "itp";
+			public const string _iif = "iif";
+			public const string _ipk = "ipk";
+			public const string _twd = "twd";
+			public const string _twds = "twds";
+			public const string _mmf = "mmf";
+			public const string _teacher = "teacher";
+			public const string _sdkm = "sdkm";
+			public const string _sdkd = "sdkd";
+			public const string _dxp = "dxp";
+			public const string _sfs = "sfs";
+			public const string _sdc = "sdc";
+			public const string _sda = "sda";
+			public const string _sdd = "sdd";
+			public const string _smf = "smf";
+			public const string _sdw = "sdw";
+			public const string _vor = "vor";
+			public const string _sgl = "sgl";
+			public const string _smzip = "smzip";
+			public const string _sm = "sm";
+			public const string _sxc = "sxc";
+			public const string _stc = "stc";
+			public const string _sxd = "sxd";
+			public const string _std = "std";
+			public const string _sxi = "sxi";
+			public const string _sti = "sti";
+			public const string _sxm = "sxm";
+			public const string _sxw = "sxw";
+			public const string _sxg = "sxg";
+			public const string _stw = "stw";
+			public const string _sus = "sus";
+			public const string _susp = "susp";
+			public const string _svd = "svd";
+			public const string _sis = "sis";
+			public const string _sisx = "sisx";
+			public const string _xsm = "xsm";
+			public const string _bdm = "bdm";
+			public const string _xdm = "xdm";
+			public const string _tao = "tao";
+			public const string _pcap = "pcap";
+			public const string _cap = "cap";
+			public const string _dmp = "dmp";
+			public const string _tmo = "tmo";
+			public const string _tpt = "tpt";
+			public const string _mxs = "mxs";
+			public const string _tra = "tra";
+			public const string _ufd = "ufd";
+			public const string _ufdl = "ufdl";
+			public const string _utz = "utz";
+			public const string _umj = "umj";
+			public const string _unityweb = "unityweb";
+			public const string _uoml = "uoml";
+			public const string _vcx = "vcx";
+			public const string _vsd = "vsd";
+			public const string _vst = "vst";
+			public const string _vss = "vss";
+			public const string _vsw = "vsw";
+			public const string _vis = "vis";
+			public const string _vsf = "vsf";
+			public const string _wbxml = "wbxml";
+			public const string _wmlc = "wmlc";
+			public const string _wmlsc = "wmlsc";
+			public const string _wtb = "wtb";
+			public const string _nbp = "nbp";
+			public const string _wpd = "wpd";
+			public const string _wqd = "wqd";
+			public const string _stf = "stf";
+			public const string _xar = "xar";
+			public const string _xfdl = "xfdl";
+			public const string _hvd = "hvd";
+			public const string _hvs = "hvs";
+			public const string _hvp = "hvp";
+			public const string _osf = "osf";
+			public const string _osfpvg = "osfpvg";
+			public const string _saf = "saf";
+			public const string _spf = "spf";
+			public const string _cmp = "cmp";
+			public const string _zir = "zir";
+			public const string _zirz = "zirz";
+			public const string _zaz = "zaz";
+			public const string _vxml = "vxml";
+			public const string _wgt = "wgt";
+			public const string _hlp = "hlp";
+			public const string _wsdl = "wsdl";
+			public const string _wspolicy = "wspolicy";
+			public const string _7z = "7z";
+			public const string _abw = "abw";
+			public const string _ace = "ace";
+			public const string _dmg = "dmg";
+			public const string _aab = "aab";
+			public const string _x32 = "x32";
+			public const string _u32 = "u32";
+			public const string _vox = "vox";
+			public const string _aam = "aam";
+			public const string _aas = "aas";
+			public const string _bcpio = "bcpio";
+			public const string _torrent = "torrent";
+			public const string _blb = "blb";
+			public const string _blorb = "blorb";
+			public const string _bz = "bz";
+			public const string _bz2 = "bz2";
+			public const string _boz = "boz";
+			public const string _cbr = "cbr";
+			public const string _cba = "cba";
+			public const string _cbt = "cbt";
+			public const string _cbz = "cbz";
+			public const string _cb7 = "cb7";
+			public const string _vcd = "vcd";
+			public const string _cfs = "cfs";
+			public const string _chat = "chat";
+			public const string _pgn = "pgn";
+			public const string _nsc = "nsc";
+			public const string _cpio = "cpio";
+			public const string _csh = "csh";
+			public const string _deb = "deb";
+			public const string _udeb = "udeb";
+			public const string _dgc = "dgc";
+			public const string _dir = "dir";
+			public const string _dcr = "dcr";
+			public const string _dxr = "dxr";
+			public const string _cst = "cst";
+			public const string _cct = "cct";
+			public const string _cxt = "cxt";
+			public const string _w3d = "w3d";
+			public const string _fgd = "fgd";
+			public const string _swa = "swa";
+			public const string _wad = "wad";
+			public const string _ncx = "ncx";
+			public const string _dtb = "dtb";
+			public const string _res = "res";
+			public const string _dvi = "dvi";
+			public const string _evy = "evy";
+			public const string _eva = "eva";
+			public const string _bdf = "bdf";
+			public const string _gsf = "gsf";
+			public const string _psf = "psf";
+			public const string _pcf = "pcf";
+			public const string _snf = "snf";
+			public const string _pfa = "pfa";
+			public const string _pfb = "pfb";
+			public const string _pfm = "pfm";
+			public const string _afm = "afm";
+			public const string _arc = "arc";
+			public const string _spl = "spl";
+			public const string _gca = "gca";
+			public const string _ulx = "ulx";
+			public const string _gnumeric = "gnumeric";
+			public const string _gramps = "gramps";
+			public const string _gtar = "gtar";
+			public const string _hdf = "hdf";
+			public const string _install = "install";
+			public const string _iso = "iso";
+			public const string _jnlp = "jnlp";
+			public const string _latex = "latex";
+			public const string _lzh = "lzh";
+			public const string _lha = "lha";
+			public const string _mie = "mie";
+			public const string _prc = "prc";
+			public const string _mobi = "mobi";
+			public const string _application = "application";
+			public const string _lnk = "lnk";
+			public const string _wmd = "wmd";
+			public const string _wmz = "wmz";
+			public const string _xbap = "xbap";
+			public const string _mdb = "mdb";
+			public const string _obd = "obd";
+			public const string _crd = "crd";
+			public const string _clp = "clp";
+			public const string _exe = "exe";
+			public const string _dll = "dll";
+			public const string _com = "com";
+			public const string _bat = "bat";
+			public const string _msi = "msi";
+			public const string _mvb = "mvb";
+			public const string _m13 = "m13";
+			public const string _m14 = "m14";
+			public const string _wmf = "wmf";
+			public const string _emf = "emf";
+			public const string _emz = "emz";
+			public const string _mny = "mny";
+			public const string _pub = "pub";
+			public const string _scd = "scd";
+			public const string _trm = "trm";
+			public const string _wri = "wri";
+			public const string _nc = "nc";
+			public const string _cdf = "cdf";
+			public const string _nzb = "nzb";
+			public const string _p12 = "p12";
+			public const string _pfx = "pfx";
+			public const string _p7b = "p7b";
+			public const string _spc = "spc";
+			public const string _p7r = "p7r";
+			public const string _rar = "rar";
+			public const string _ris = "ris";
+			public const string _sh = "sh";
+			public const string _shar = "shar";
+			public const string _swf = "swf";
+			public const string _xap = "xap";
+			public const string _sql = "sql";
+			public const string _sit = "sit";
+			public const string _sitx = "sitx";
+			public const string _srt = "srt";
+			public const string _sv4cpio = "sv4cpio";
+			public const string _sv4crc = "sv4crc";
+			public const string _t3 = "t3";
+			public const string _gam = "gam";
+			public const string _tar = "tar";
+			public const string _tcl = "tcl";
+			public const string _tex = "tex";
+			public const string _tfm = "tfm";
+			public const string _texinfo = "texinfo";
+			public const string _texi = "texi";
+			public const string _obj = "obj";
+			public const string _ustar = "ustar";
+			public const string _src = "src";
+			public const string _der = "der";
+			public const string _crt = "crt";
+			public const string _fig = "fig";
+			public const string _xlf = "xlf";
+			public const string _xpi = "xpi";
+			public const string _xz = "xz";
+			public const string _z1 = "z1";
+			public const string _z2 = "z2";
+			public const string _z3 = "z3";
+			public const string _z4 = "z4";
+			public const string _z5 = "z5";
+			public const string _z6 = "z6";
+			public const string _z7 = "z7";
+			public const string _z8 = "z8";
+			public const string _xaml = "xaml";
+			public const string _xdf = "xdf";
+			public const string _xenc = "xenc";
+			public const string _xhtml = "xhtml";
+			public const string _xht = "xht";
+			public const string _xml = "xml";
+			public const string _xsl = "xsl";
+			public const string _dtd = "dtd";
+			public const string _xop = "xop";
+			public const string _xpl = "xpl";
+			public const string _xslt = "xslt";
+			public const string _xspf = "xspf";
+			public const string _mxml = "mxml";
+			public const string _xhvml = "xhvml";
+			public const string _xvml = "xvml";
+			public const string _xvm = "xvm";
+			public const string _yang = "yang";
+			public const string _yin = "yin";
+			public const string _zip = "zip";
+			public const string _adp = "adp";
+			public const string _au = "au";
+			public const string _snd = "snd";
+			public const string _mid = "mid";
+			public const string _midi = "midi";
+			public const string _kar = "kar";
+			public const string _rmi = "rmi";
+			public const string _m4a = "m4a";
+			public const string _mp4a = "mp4a";
+			public const string _mpga = "mpga";
+			public const string _mp2 = "mp2";
+			public const string _mp2a = "mp2a";
+			public const string _mp3 = "mp3";
+			public const string _m2a = "m2a";
+			public const string _m3a = "m3a";
+			public const string _oga = "oga";
+			public const string _ogg = "ogg";
+			public const string _spx = "spx";
+			public const string _opus = "opus";
+			public const string _s3m = "s3m";
+			public const string _sil = "sil";
+			public const string _uva = "uva";
+			public const string _uvva = "uvva";
+			public const string _eol = "eol";
+			public const string _dra = "dra";
+			public const string _dts = "dts";
+			public const string _dtshd = "dtshd";
+			public const string _lvp = "lvp";
+			public const string _pya = "pya";
+			public const string _ecelp4800 = "ecelp4800";
+			public const string _ecelp7470 = "ecelp7470";
+			public const string _ecelp9600 = "ecelp9600";
+			public const string _rip = "rip";
+			public const string _weba = "weba";
+			public const string _aac = "aac";
+			public const string _aif = "aif";
+			public const string _aiff = "aiff";
+			public const string _aifc = "aifc";
+			public const string _caf = "caf";
+			public const string _flac = "flac";
+			public const string _mka = "mka";
+			public const string _m3u = "m3u";
+			public const string _wax = "wax";
+			public const string _wma = "wma";
+			public const string _ram = "ram";
+			public const string _ra = "ra";
+			public const string _rmp = "rmp";
+			public const string _wav = "wav";
+			public const string _xm = "xm";
+			public const string _cdx = "cdx";
+			public const string _cif = "cif";
+			public const string _cmdf = "cmdf";
+			public const string _cml = "cml";
+			public const string _csml = "csml";
+			public const string _xyz = "xyz";
+			public const string _ttc = "ttc";
+			public const string _otf = "otf";
+			public const string _ttf = "ttf";
+			public const string _woff = "woff";
+			public const string _woff2 = "woff2";
+			public const string _bmp = "bmp";
+			public const string _cgm = "cgm";
+			public const string _g3 = "g3";
+			public const string _gif = "gif";
+			public const string _ief = "ief";
+			public const string _jpeg = "jpeg";
+			public const string _jpg = "jpg";
+			public const string _jpe = "jpe";
+			public const string _ktx = "ktx";
+			public const string _png = "png";
+			public const string _btif = "btif";
+			public const string _sgi = "sgi";
+			public const string _svg = "svg";
+			public const string _svgz = "svgz";
+			public const string _tiff = "tiff";
+			public const string _tif = "tif";
+			public const string _psd = "psd";
+			public const string _uvi = "uvi";
+			public const string _uvvi = "uvvi";
+			public const string _uvg = "uvg";
+			public const string _uvvg = "uvvg";
+			public const string _djvu = "djvu";
+			public const string _djv = "djv";
+			public const string _sub = "sub";
+			public const string _dwg = "dwg";
+			public const string _dxf = "dxf";
+			public const string _fbs = "fbs";
+			public const string _fpx = "fpx";
+			public const string _fst = "fst";
+			public const string _mmr = "mmr";
+			public const string _rlc = "rlc";
+			public const string _mdi = "mdi";
+			public const string _wdp = "wdp";
+			public const string _npx = "npx";
+			public const string _wbmp = "wbmp";
+			public const string _xif = "xif";
+			public const string _webp = "webp";
+			public const string _3ds = "3ds";
+			public const string _ras = "ras";
+			public const string _cmx = "cmx";
+			public const string _fh = "fh";
+			public const string _fhc = "fhc";
+			public const string _fh4 = "fh4";
+			public const string _fh5 = "fh5";
+			public const string _fh7 = "fh7";
+			public const string _ico = "ico";
+			public const string _sid = "sid";
+			public const string _pcx = "pcx";
+			public const string _pic = "pic";
+			public const string _pct = "pct";
+			public const string _pnm = "pnm";
+			public const string _pbm = "pbm";
+			public const string _pgm = "pgm";
+			public const string _ppm = "ppm";
+			public const string _rgb = "rgb";
+			public const string _tga = "tga";
+			public const string _xbm = "xbm";
+			public const string _xpm = "xpm";
+			public const string _xwd = "xwd";
+			public const string _eml = "eml";
+			public const string _mime = "mime";
+			public const string _igs = "igs";
+			public const string _iges = "iges";
+			public const string _msh = "msh";
+			public const string _mesh = "mesh";
+			public const string _silo = "silo";
+			public const string _dae = "dae";
+			public const string _dwf = "dwf";
+			public const string _gdl = "gdl";
+			public const string _gtw = "gtw";
+			public const string _mts = "mts";
+			public const string _vtu = "vtu";
+			public const string _wrl = "wrl";
+			public const string _vrml = "vrml";
+			public const string _x3db = "x3db";
+			public const string _x3dbz = "x3dbz";
+			public const string _x3dv = "x3dv";
+			public const string _x3dvz = "x3dvz";
+			public const string _x3d = "x3d";
+			public const string _x3dz = "x3dz";
+			public const string _appcache = "appcache";
+			public const string _ics = "ics";
+			public const string _ifb = "ifb";
+			public const string _css = "css";
+			public const string _csv = "csv";
+			public const string _html = "html";
+			public const string _htm = "htm";
+			public const string _n3 = "n3";
+			public const string _txt = "txt";
+			public const string _text = "text";
+			public const string _conf = "conf";
+			public const string _def = "def";
+			public const string _list = "list";
+			public const string _log = "log";
+			public const string _in = "in";
+			public const string _dsc = "dsc";
+			public const string _rtx = "rtx";
+			public const string _sgml = "sgml";
+			public const string _sgm = "sgm";
+			public const string _tsv = "tsv";
+			public const string _t = "t";
+			public const string _tr = "tr";
+			public const string _roff = "roff";
+			public const string _man = "man";
+			public const string _me = "me";
+			public const string _ms = "ms";
+			public const string _ttl = "ttl";
+			public const string _uri = "uri";
+			public const string _uris = "uris";
+			public const string _urls = "urls";
+			public const string _vcard = "vcard";
+			public const string _curl = "curl";
+			public const string _dcurl = "dcurl";
+			public const string _mcurl = "mcurl";
+			public const string _scurl = "scurl";
+			public const string _fly = "fly";
+			public const string _flx = "flx";
+			public const string _gv = "gv";
+			public const string _3dml = "3dml";
+			public const string _spot = "spot";
+			public const string _jad = "jad";
+			public const string _wml = "wml";
+			public const string _wmls = "wmls";
+			public const string _s = "s";
+			public const string _asm = "asm";
+			public const string _c = "c";
+			public const string _cc = "cc";
+			public const string _cxx = "cxx";
+			public const string _cpp = "cpp";
+			public const string _h = "h";
+			public const string _hh = "hh";
+			public const string _dic = "dic";
+			public const string _f = "f";
+			public const string _for = "for";
+			public const string _f77 = "f77";
+			public const string _f90 = "f90";
+			public const string _java = "java";
+			public const string _nfo = "nfo";
+			public const string _opml = "opml";
+			public const string _p = "p";
+			public const string _pas = "pas";
+			public const string _etx = "etx";
+			public const string _sfv = "sfv";
+			public const string _uu = "uu";
+			public const string _vcs = "vcs";
+			public const string _vcf = "vcf";
+			public const string _3gp = "3gp";
+			public const string _3g2 = "3g2";
+			public const string _h261 = "h261";
+			public const string _h263 = "h263";
+			public const string _h264 = "h264";
+			public const string _jpgv = "jpgv";
+			public const string _jpm = "jpm";
+			public const string _jpgm = "jpgm";
+			public const string _mj2 = "mj2";
+			public const string _mjp2 = "mjp2";
+			public const string _mp4 = "mp4";
+			public const string _mp4v = "mp4v";
+			public const string _mpg4 = "mpg4";
+			public const string _mpeg = "mpeg";
+			public const string _mpg = "mpg";
+			public const string _mpe = "mpe";
+			public const string _m1v = "m1v";
+			public const string _m2v = "m2v";
+			public const string _ogv = "ogv";
+			public const string _qt = "qt";
+			public const string _mov = "mov";
+			public const string _uvh = "uvh";
+			public const string _uvvh = "uvvh";
+			public const string _uvm = "uvm";
+			public const string _uvvm = "uvvm";
+			public const string _uvp = "uvp";
+			public const string _uvvp = "uvvp";
+			public const string _uvs = "uvs";
+			public const string _uvvs = "uvvs";
+			public const string _uvv = "uvv";
+			public const string _uvvv = "uvvv";
+			public const string _dvb = "dvb";
+			public const string _fvt = "fvt";
+			public const string _mxu = "mxu";
+			public const string _m4u = "m4u";
+			public const string _pyv = "pyv";
+			public const string _uvu = "uvu";
+			public const string _uvvu = "uvvu";
+			public const string _viv = "viv";
+			public const string _webm = "webm";
+			public const string _f4v = "f4v";
+			public const string _fli = "fli";
+			public const string _flv = "flv";
+			public const string _m4v = "m4v";
+			public const string _mkv = "mkv";
+			public const string _mk3d = "mk3d";
+			public const string _mks = "mks";
+			public const string _mng = "mng";
+			public const string _asf = "asf";
+			public const string _asx = "asx";
+			public const string _vob = "vob";
+			public const string _wm = "wm";
+			public const string _wmv = "wmv";
+			public const string _wmx = "wmx";
+			public const string _wvx = "wvx";
+			public const string _avi = "avi";
+			public const string _movie = "movie";
+			public const string _smv = "smv";
+			public const string _ice = "ice";
+			public const string _map = "map";
+			public const string _topojson = "topojson";
+			public const string _jsonld = "jsonld";
+			public const string _geojson = "geojson";
+			public const string _mjs = "mjs";
+			public const string _wasm = "wasm";
+			public const string _webmanifest = "webmanifest";
+			public const string _webapp = "webapp";
+			public const string _f4a = "f4a";
+			public const string _f4b = "f4b";
+			public const string _jxr = "jxr";
+			public const string _hdp = "hdp";
+			public const string _jng = "jng";
+			public const string _3gpp = "3gpp";
+			public const string _f4p = "f4p";
+			public const string _cur = "cur";
+			public const string _ear = "ear";
+			public const string _war = "war";
+			public const string _img = "img";
+			public const string _msm = "msm";
+			public const string _msp = "msp";
+			public const string _safariextz = "safariextz";
+			public const string _bbaw = "bbaw";
+			public const string _crx = "crx";
+			public const string _cco = "cco";
+			public const string _jardiff = "jardiff";
+			public const string _run = "run";
+			public const string _oex = "oex";
+			public const string _pl = "pl";
+			public const string _pm = "pm";
+			public const string _rpm = "rpm";
+			public const string _sea = "sea";
+			public const string _tk = "tk";
+			public const string _pem = "pem";
+			public const string _shtml = "shtml";
+			public const string _md = "md";
+			public const string _markdown = "markdown";
+			public const string _mml = "mml";
+			public const string _xloc = "xloc";
+			public const string _vtt = "vtt";
+			public const string _htc = "htc";
+			public const string _bdoc = "bdoc";
+			public const string _es = "es";
+			public const string _hjson = "hjson";
+			public const string _json5 = "json5";
+			public const string _m4p = "m4p";
+			public const string _cjs = "cjs";
+			public const string _buffer = "buffer";
+			public const string _raml = "raml";
+			public const string _owl = "owl";
+			public const string _siv = "siv";
+			public const string _sieve = "sieve";
+			public const string _toml = "toml";
+			public const string _ubj = "ubj";
+			public const string _pkpass = "pkpass";
+			public const string _gdoc = "gdoc";
+			public const string _gslides = "gslides";
+			public const string _gsheet = "gsheet";
+			public const string _msg = "msg";
+			public const string _arj = "arj";
+			public const string _php = "php";
+			public const string _kdbx = "kdbx";
+			public const string _luac = "luac";
+			public const string _pac = "pac";
+			public const string _hdd = "hdd";
+			public const string _ova = "ova";
+			public const string _ovf = "ovf";
+			public const string _vbox = "vbox";
+			public const string _vbox_extpack = "vbox-extpack";
+			public const string _vdi = "vdi";
+			public const string _vhd = "vhd";
+			public const string _vmdk = "vmdk";
+			public const string _xsd = "xsd";
+			public const string _rng = "rng";
+			public const string _apng = "apng";
+			public const string _avif = "avif";
+			public const string _heic = "heic";
+			public const string _heics = "heics";
+			public const string _heif = "heif";
+			public const string _heifs = "heifs";
+			public const string _jp2 = "jp2";
+			public const string _jpg2 = "jpg2";
+			public const string _jpx = "jpx";
+			public const string _jpf = "jpf";
+			public const string _dds = "dds";
+			public const string _manifest = "manifest";
+			public const string _coffee = "coffee";
+			public const string _litcoffee = "litcoffee";
+			public const string _jade = "jade";
+			public const string _jsx = "jsx";
+			public const string _less = "less";
+			public const string _mdx = "mdx";
+			public const string _ini = "ini";
+			public const string _shex = "shex";
+			public const string _slim = "slim";
+			public const string _slm = "slm";
+			public const string _stylus = "stylus";
+			public const string _styl = "styl";
+			public const string _hbs = "hbs";
+			public const string _lua = "lua";
+			public const string _mkd = "mkd";
+			public const string _pde = "pde";
+			public const string _sass = "sass";
+			public const string _scss = "scss";
+			public const string _ymp = "ymp";
+			public const string _yaml = "yaml";
+			public const string _yml = "yml";
+
+		}
 
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
-            _ext_ez,
-            _ext_aw,
-            _ext_atom,
-            _ext_atomcat,
-            _ext_atomsvc,
-            _ext_ccxml,
-            _ext_cdmia,
-            _ext_cdmic,
-            _ext_cdmid,
-            _ext_cdmio,
-            _ext_cdmiq,
-            _ext_cu,
-            _ext_davmount,
-            _ext_dbk,
-            _ext_dssc,
-            _ext_xdssc,
-            _ext_ecma,
-            _ext_emma,
-            _ext_epub,
-            _ext_exi,
-            _ext_pfr,
-            _ext_gml,
-            _ext_gpx,
-            _ext_gxf,
-            _ext_stk,
-            _ext_ink,
-            _ext_inkml,
-            _ext_ipfix,
-            _ext_jar,
-            _ext_ser,
-            _ext_class,
-            _ext_js,
-            _ext_json,
-            _ext_jsonml,
-            _ext_lostxml,
-            _ext_hqx,
-            _ext_cpt,
-            _ext_mads,
-            _ext_mrc,
-            _ext_mrcx,
-            _ext_ma,
-            _ext_nb,
-            _ext_mb,
-            _ext_mathml,
-            _ext_mbox,
-            _ext_mscml,
-            _ext_metalink,
-            _ext_meta4,
-            _ext_mets,
-            _ext_mods,
-            _ext_m21,
-            _ext_mp21,
-            _ext_mp4s,
-            _ext_doc,
-            _ext_dot,
-            _ext_mxf,
-            _ext_bin,
-            _ext_dms,
-            _ext_lrf,
-            _ext_mar,
-            _ext_so,
-            _ext_dist,
-            _ext_distz,
-            _ext_pkg,
-            _ext_bpk,
-            _ext_dump,
-            _ext_elc,
-            _ext_deploy,
-            _ext_oda,
-            _ext_opf,
-            _ext_ogx,
-            _ext_omdoc,
-            _ext_onetoc,
-            _ext_onetoc2,
-            _ext_onetmp,
-            _ext_onepkg,
-            _ext_oxps,
-            _ext_xer,
-            _ext_pdf,
-            _ext_pgp,
-            _ext_asc,
-            _ext_sig,
-            _ext_prf,
-            _ext_p10,
-            _ext_p7m,
-            _ext_p7c,
-            _ext_p7s,
-            _ext_p8,
-            _ext_ac,
-            _ext_cer,
-            _ext_crl,
-            _ext_pkipath,
-            _ext_pki,
-            _ext_pls,
-            _ext_ai,
-            _ext_eps,
-            _ext_ps,
-            _ext_cww,
-            _ext_pskcxml,
-            _ext_rdf,
-            _ext_rif,
-            _ext_rnc,
-            _ext_rl,
-            _ext_rld,
-            _ext_rs,
-            _ext_gbr,
-            _ext_mft,
-            _ext_roa,
-            _ext_rsd,
-            _ext_rss,
-            _ext_rtf,
-            _ext_sbml,
-            _ext_scq,
-            _ext_scs,
-            _ext_spq,
-            _ext_spp,
-            _ext_sdp,
-            _ext_setpay,
-            _ext_setreg,
-            _ext_shf,
-            _ext_smi,
-            _ext_smil,
-            _ext_rq,
-            _ext_srx,
-            _ext_gram,
-            _ext_grxml,
-            _ext_sru,
-            _ext_ssdl,
-            _ext_ssml,
-            _ext_tei,
-            _ext_teicorpus,
-            _ext_tfi,
-            _ext_tsd,
-            _ext_plb,
-            _ext_psb,
-            _ext_pvb,
-            _ext_tcap,
-            _ext_pwn,
-            _ext_aso,
-            _ext_imp,
-            _ext_acu,
-            _ext_atc,
-            _ext_acutc,
-            _ext_air,
-            _ext_fcdt,
-            _ext_fxp,
-            _ext_fxpl,
-            _ext_xdp,
-            _ext_xfdf,
-            _ext_ahead,
-            _ext_azf,
-            _ext_azs,
-            _ext_azw,
-            _ext_acc,
-            _ext_ami,
-            _ext_apk,
-            _ext_cii,
-            _ext_fti,
-            _ext_atx,
-            _ext_mpkg,
-            _ext_m3u8,
-            _ext_swi,
-            _ext_iota,
-            _ext_aep,
-            _ext_mpm,
-            _ext_bmi,
-            _ext_rep,
-            _ext_cdxml,
-            _ext_mmd,
-            _ext_cdy,
-            _ext_cla,
-            _ext_rp9,
-            _ext_c4g,
-            _ext_c4d,
-            _ext_c4f,
-            _ext_c4p,
-            _ext_c4u,
-            _ext_c11amc,
-            _ext_c11amz,
-            _ext_csp,
-            _ext_cdbcmsg,
-            _ext_cmc,
-            _ext_clkx,
-            _ext_clkk,
-            _ext_clkp,
-            _ext_clkt,
-            _ext_clkw,
-            _ext_wbs,
-            _ext_pml,
-            _ext_ppd,
-            _ext_car,
-            _ext_pcurl,
-            _ext_dart,
-            _ext_rdz,
-            _ext_uvf,
-            _ext_uvvf,
-            _ext_uvd,
-            _ext_uvvd,
-            _ext_uvt,
-            _ext_uvvt,
-            _ext_uvx,
-            _ext_uvvx,
-            _ext_uvz,
-            _ext_uvvz,
-            _ext_fe_launch,
-            _ext_dna,
-            _ext_mlp,
-            _ext_dpg,
-            _ext_dfac,
-            _ext_kpxx,
-            _ext_ait,
-            _ext_svc,
-            _ext_geo,
-            _ext_mag,
-            _ext_nml,
-            _ext_esf,
-            _ext_msf,
-            _ext_qam,
-            _ext_slt,
-            _ext_ssf,
-            _ext_es3,
-            _ext_et3,
-            _ext_ez2,
-            _ext_ez3,
-            _ext_fdf,
-            _ext_mseed,
-            _ext_seed,
-            _ext_dataless,
-            _ext_gph,
-            _ext_ftc,
-            _ext_fm,
-            _ext_frame,
-            _ext_maker,
-            _ext_book,
-            _ext_fnc,
-            _ext_ltf,
-            _ext_fsc,
-            _ext_oas,
-            _ext_oa2,
-            _ext_oa3,
-            _ext_fg5,
-            _ext_bh2,
-            _ext_ddd,
-            _ext_xdw,
-            _ext_xbd,
-            _ext_fzs,
-            _ext_txd,
-            _ext_ggb,
-            _ext_ggt,
-            _ext_gex,
-            _ext_gre,
-            _ext_gxt,
-            _ext_g2w,
-            _ext_g3w,
-            _ext_gmx,
-            _ext_kml,
-            _ext_kmz,
-            _ext_gqf,
-            _ext_gqs,
-            _ext_gac,
-            _ext_ghf,
-            _ext_gim,
-            _ext_grv,
-            _ext_gtm,
-            _ext_tpl,
-            _ext_vcg,
-            _ext_hal,
-            _ext_zmm,
-            _ext_hbci,
-            _ext_les,
-            _ext_hpgl,
-            _ext_hpid,
-            _ext_hps,
-            _ext_jlt,
-            _ext_pcl,
-            _ext_pclxl,
-            _ext_sfd_hdstx,
-            _ext_mpy,
-            _ext_afp,
-            _ext_listafp,
-            _ext_list3820,
-            _ext_irm,
-            _ext_sc,
-            _ext_icc,
-            _ext_icm,
-            _ext_igl,
-            _ext_ivp,
-            _ext_ivu,
-            _ext_igm,
-            _ext_xpw,
-            _ext_xpx,
-            _ext_i2g,
-            _ext_qbo,
-            _ext_qfx,
-            _ext_rcprofile,
-            _ext_irp,
-            _ext_xpr,
-            _ext_fcs,
-            _ext_jam,
-            _ext_rms,
-            _ext_jisp,
-            _ext_joda,
-            _ext_ktz,
-            _ext_ktr,
-            _ext_karbon,
-            _ext_chrt,
-            _ext_kfo,
-            _ext_flw,
-            _ext_kon,
-            _ext_kpr,
-            _ext_kpt,
-            _ext_ksp,
-            _ext_kwd,
-            _ext_kwt,
-            _ext_htke,
-            _ext_kia,
-            _ext_kne,
-            _ext_knp,
-            _ext_skp,
-            _ext_skd,
-            _ext_skt,
-            _ext_skm,
-            _ext_sse,
-            _ext_lasxml,
-            _ext_lbd,
-            _ext_lbe,
-            _ext_123,
-            _ext_apr,
-            _ext_pre,
-            _ext_nsf,
-            _ext_org,
-            _ext_scm,
-            _ext_lwp,
-            _ext_portpkg,
-            _ext_mcd,
-            _ext_mc1,
-            _ext_cdkey,
-            _ext_mwf,
-            _ext_mfm,
-            _ext_flo,
-            _ext_igx,
-            _ext_mif,
-            _ext_daf,
-            _ext_dis,
-            _ext_mbk,
-            _ext_mqy,
-            _ext_msl,
-            _ext_plc,
-            _ext_txf,
-            _ext_mpn,
-            _ext_mpc,
-            _ext_xul,
-            _ext_cil,
-            _ext_cab,
-            _ext_xls,
-            _ext_xlm,
-            _ext_xla,
-            _ext_xlc,
-            _ext_xlt,
-            _ext_xlw,
-            _ext_xlam,
-            _ext_xlsb,
-            _ext_xlsm,
-            _ext_xltm,
-            _ext_eot,
-            _ext_chm,
-            _ext_ims,
-            _ext_lrm,
-            _ext_thmx,
-            _ext_cat,
-            _ext_stl,
-            _ext_ppt,
-            _ext_pps,
-            _ext_pot,
-            _ext_ppam,
-            _ext_pptm,
-            _ext_sldm,
-            _ext_ppsm,
-            _ext_potm,
-            _ext_mpp,
-            _ext_mpt,
-            _ext_docm,
-            _ext_dotm,
-            _ext_wps,
-            _ext_wks,
-            _ext_wcm,
-            _ext_wdb,
-            _ext_wpl,
-            _ext_xps,
-            _ext_mseq,
-            _ext_mus,
-            _ext_msty,
-            _ext_taglet,
-            _ext_nlu,
-            _ext_ntf,
-            _ext_nitf,
-            _ext_nnd,
-            _ext_nns,
-            _ext_nnw,
-            _ext_ngdat,
-            _ext_n_gage,
-            _ext_rpst,
-            _ext_rpss,
-            _ext_edm,
-            _ext_edx,
-            _ext_ext,
-            _ext_odc,
-            _ext_otc,
-            _ext_odb,
-            _ext_odf,
-            _ext_odft,
-            _ext_odg,
-            _ext_otg,
-            _ext_odi,
-            _ext_oti,
-            _ext_odp,
-            _ext_otp,
-            _ext_ods,
-            _ext_ots,
-            _ext_odt,
-            _ext_odm,
-            _ext_ott,
-            _ext_oth,
-            _ext_xo,
-            _ext_dd2,
-            _ext_oxt,
-            _ext_pptx,
-            _ext_sldx,
-            _ext_ppsx,
-            _ext_potx,
-            _ext_xlsx,
-            _ext_xltx,
-            _ext_docx,
-            _ext_dotx,
-            _ext_mgp,
-            _ext_dp,
-            _ext_esa,
-            _ext_pdb,
-            _ext_pqa,
-            _ext_oprc,
-            _ext_paw,
-            _ext_str,
-            _ext_ei6,
-            _ext_efif,
-            _ext_wg,
-            _ext_plf,
-            _ext_pbd,
-            _ext_box,
-            _ext_mgz,
-            _ext_qps,
-            _ext_ptid,
-            _ext_qxd,
-            _ext_qxt,
-            _ext_qwd,
-            _ext_qwt,
-            _ext_qxl,
-            _ext_qxb,
-            _ext_bed,
-            _ext_mxl,
-            _ext_musicxml,
-            _ext_cryptonote,
-            _ext_cod,
-            _ext_rm,
-            _ext_rmvb,
-            _ext_link66,
-            _ext_st,
-            _ext_see,
-            _ext_sema,
-            _ext_semd,
-            _ext_semf,
-            _ext_ifm,
-            _ext_itp,
-            _ext_iif,
-            _ext_ipk,
-            _ext_twd,
-            _ext_twds,
-            _ext_mmf,
-            _ext_teacher,
-            _ext_sdkm,
-            _ext_sdkd,
-            _ext_dxp,
-            _ext_sfs,
-            _ext_sdc,
-            _ext_sda,
-            _ext_sdd,
-            _ext_smf,
-            _ext_sdw,
-            _ext_vor,
-            _ext_sgl,
-            _ext_smzip,
-            _ext_sm,
-            _ext_sxc,
-            _ext_stc,
-            _ext_sxd,
-            _ext_std,
-            _ext_sxi,
-            _ext_sti,
-            _ext_sxm,
-            _ext_sxw,
-            _ext_sxg,
-            _ext_stw,
-            _ext_sus,
-            _ext_susp,
-            _ext_svd,
-            _ext_sis,
-            _ext_sisx,
-            _ext_xsm,
-            _ext_bdm,
-            _ext_xdm,
-            _ext_tao,
-            _ext_pcap,
-            _ext_cap,
-            _ext_dmp,
-            _ext_tmo,
-            _ext_tpt,
-            _ext_mxs,
-            _ext_tra,
-            _ext_ufd,
-            _ext_ufdl,
-            _ext_utz,
-            _ext_umj,
-            _ext_unityweb,
-            _ext_uoml,
-            _ext_vcx,
-            _ext_vsd,
-            _ext_vst,
-            _ext_vss,
-            _ext_vsw,
-            _ext_vis,
-            _ext_vsf,
-            _ext_wbxml,
-            _ext_wmlc,
-            _ext_wmlsc,
-            _ext_wtb,
-            _ext_nbp,
-            _ext_wpd,
-            _ext_wqd,
-            _ext_stf,
-            _ext_xar,
-            _ext_xfdl,
-            _ext_hvd,
-            _ext_hvs,
-            _ext_hvp,
-            _ext_osf,
-            _ext_osfpvg,
-            _ext_saf,
-            _ext_spf,
-            _ext_cmp,
-            _ext_zir,
-            _ext_zirz,
-            _ext_zaz,
-            _ext_vxml,
-            _ext_wgt,
-            _ext_hlp,
-            _ext_wsdl,
-            _ext_wspolicy,
-            _ext_7z,
-            _ext_abw,
-            _ext_ace,
-            _ext_dmg,
-            _ext_aab,
-            _ext_x32,
-            _ext_u32,
-            _ext_vox,
-            _ext_aam,
-            _ext_aas,
-            _ext_bcpio,
-            _ext_torrent,
-            _ext_blb,
-            _ext_blorb,
-            _ext_bz,
-            _ext_bz2,
-            _ext_boz,
-            _ext_cbr,
-            _ext_cba,
-            _ext_cbt,
-            _ext_cbz,
-            _ext_cb7,
-            _ext_vcd,
-            _ext_cfs,
-            _ext_chat,
-            _ext_pgn,
-            _ext_nsc,
-            _ext_cpio,
-            _ext_csh,
-            _ext_deb,
-            _ext_udeb,
-            _ext_dgc,
-            _ext_dir,
-            _ext_dcr,
-            _ext_dxr,
-            _ext_cst,
-            _ext_cct,
-            _ext_cxt,
-            _ext_w3d,
-            _ext_fgd,
-            _ext_swa,
-            _ext_wad,
-            _ext_ncx,
-            _ext_dtb,
-            _ext_res,
-            _ext_dvi,
-            _ext_evy,
-            _ext_eva,
-            _ext_bdf,
-            _ext_gsf,
-            _ext_psf,
-            _ext_pcf,
-            _ext_snf,
-            _ext_pfa,
-            _ext_pfb,
-            _ext_pfm,
-            _ext_afm,
-            _ext_arc,
-            _ext_spl,
-            _ext_gca,
-            _ext_ulx,
-            _ext_gnumeric,
-            _ext_gramps,
-            _ext_gtar,
-            _ext_hdf,
-            _ext_install,
-            _ext_iso,
-            _ext_jnlp,
-            _ext_latex,
-            _ext_lzh,
-            _ext_lha,
-            _ext_mie,
-            _ext_prc,
-            _ext_mobi,
-            _ext_application,
-            _ext_lnk,
-            _ext_wmd,
-            _ext_wmz,
-            _ext_xbap,
-            _ext_mdb,
-            _ext_obd,
-            _ext_crd,
-            _ext_clp,
-            _ext_exe,
-            _ext_dll,
-            _ext_com,
-            _ext_bat,
-            _ext_msi,
-            _ext_mvb,
-            _ext_m13,
-            _ext_m14,
-            _ext_wmf,
-            _ext_emf,
-            _ext_emz,
-            _ext_mny,
-            _ext_pub,
-            _ext_scd,
-            _ext_trm,
-            _ext_wri,
-            _ext_nc,
-            _ext_cdf,
-            _ext_nzb,
-            _ext_p12,
-            _ext_pfx,
-            _ext_p7b,
-            _ext_spc,
-            _ext_p7r,
-            _ext_rar,
-            _ext_ris,
-            _ext_sh,
-            _ext_shar,
-            _ext_swf,
-            _ext_xap,
-            _ext_sql,
-            _ext_sit,
-            _ext_sitx,
-            _ext_srt,
-            _ext_sv4cpio,
-            _ext_sv4crc,
-            _ext_t3,
-            _ext_gam,
-            _ext_tar,
-            _ext_tcl,
-            _ext_tex,
-            _ext_tfm,
-            _ext_texinfo,
-            _ext_texi,
-            _ext_obj,
-            _ext_ustar,
-            _ext_src,
-            _ext_der,
-            _ext_crt,
-            _ext_fig,
-            _ext_xlf,
-            _ext_xpi,
-            _ext_xz,
-            _ext_z1,
-            _ext_z2,
-            _ext_z3,
-            _ext_z4,
-            _ext_z5,
-            _ext_z6,
-            _ext_z7,
-            _ext_z8,
-            _ext_xaml,
-            _ext_xdf,
-            _ext_xenc,
-            _ext_xhtml,
-            _ext_xht,
-            _ext_xml,
-            _ext_xsl,
-            _ext_dtd,
-            _ext_xop,
-            _ext_xpl,
-            _ext_xslt,
-            _ext_xspf,
-            _ext_mxml,
-            _ext_xhvml,
-            _ext_xvml,
-            _ext_xvm,
-            _ext_yang,
-            _ext_yin,
-            _ext_zip,
-            _ext_adp,
-            _ext_au,
-            _ext_snd,
-            _ext_mid,
-            _ext_midi,
-            _ext_kar,
-            _ext_rmi,
-            _ext_m4a,
-            _ext_mp4a,
-            _ext_mpga,
-            _ext_mp2,
-            _ext_mp2a,
-            _ext_mp3,
-            _ext_m2a,
-            _ext_m3a,
-            _ext_oga,
-            _ext_ogg,
-            _ext_spx,
-            _ext_s3m,
-            _ext_sil,
-            _ext_uva,
-            _ext_uvva,
-            _ext_eol,
-            _ext_dra,
-            _ext_dts,
-            _ext_dtshd,
-            _ext_lvp,
-            _ext_pya,
-            _ext_ecelp4800,
-            _ext_ecelp7470,
-            _ext_ecelp9600,
-            _ext_rip,
-            _ext_weba,
-            _ext_aac,
-            _ext_aif,
-            _ext_aiff,
-            _ext_aifc,
-            _ext_caf,
-            _ext_flac,
-            _ext_mka,
-            _ext_m3u,
-            _ext_wax,
-            _ext_wma,
-            _ext_ram,
-            _ext_ra,
-            _ext_rmp,
-            _ext_wav,
-            _ext_xm,
-            _ext_cdx,
-            _ext_cif,
-            _ext_cmdf,
-            _ext_cml,
-            _ext_csml,
-            _ext_xyz,
-            _ext_ttc,
-            _ext_otf,
-            _ext_ttf,
-            _ext_woff,
-            _ext_woff2,
-            _ext_bmp,
-            _ext_cgm,
-            _ext_g3,
-            _ext_gif,
-            _ext_ief,
-            _ext_jpeg,
-            _ext_jpg,
-            _ext_jpe,
-            _ext_ktx,
-            _ext_png,
-            _ext_btif,
-            _ext_sgi,
-            _ext_svg,
-            _ext_svgz,
-            _ext_tiff,
-            _ext_tif,
-            _ext_psd,
-            _ext_uvi,
-            _ext_uvvi,
-            _ext_uvg,
-            _ext_uvvg,
-            _ext_djvu,
-            _ext_djv,
-            _ext_sub,
-            _ext_dwg,
-            _ext_dxf,
-            _ext_fbs,
-            _ext_fpx,
-            _ext_fst,
-            _ext_mmr,
-            _ext_rlc,
-            _ext_mdi,
-            _ext_wdp,
-            _ext_npx,
-            _ext_wbmp,
-            _ext_xif,
-            _ext_webp,
-            _ext_3ds,
-            _ext_ras,
-            _ext_cmx,
-            _ext_fh,
-            _ext_fhc,
-            _ext_fh4,
-            _ext_fh5,
-            _ext_fh7,
-            _ext_ico,
-            _ext_sid,
-            _ext_pcx,
-            _ext_pic,
-            _ext_pct,
-            _ext_pnm,
-            _ext_pbm,
-            _ext_pgm,
-            _ext_ppm,
-            _ext_rgb,
-            _ext_tga,
-            _ext_xbm,
-            _ext_xpm,
-            _ext_xwd,
-            _ext_eml,
-            _ext_mime,
-            _ext_igs,
-            _ext_iges,
-            _ext_msh,
-            _ext_mesh,
-            _ext_silo,
-            _ext_dae,
-            _ext_dwf,
-            _ext_gdl,
-            _ext_gtw,
-            _ext_mts,
-            _ext_vtu,
-            _ext_wrl,
-            _ext_vrml,
-            _ext_x3db,
-            _ext_x3dbz,
-            _ext_x3dv,
-            _ext_x3dvz,
-            _ext_x3d,
-            _ext_x3dz,
-            _ext_appcache,
-            _ext_ics,
-            _ext_ifb,
-            _ext_css,
-            _ext_csv,
-            _ext_html,
-            _ext_htm,
-            _ext_n3,
-            _ext_txt,
-            _ext_text,
-            _ext_conf,
-            _ext_def,
-            _ext_list,
-            _ext_log,
-            _ext_in,
-            _ext_dsc,
-            _ext_rtx,
-            _ext_sgml,
-            _ext_sgm,
-            _ext_tsv,
-            _ext_t,
-            _ext_tr,
-            _ext_roff,
-            _ext_man,
-            _ext_me,
-            _ext_ms,
-            _ext_ttl,
-            _ext_uri,
-            _ext_uris,
-            _ext_urls,
-            _ext_vcard,
-            _ext_curl,
-            _ext_dcurl,
-            _ext_mcurl,
-            _ext_scurl,
-            _ext_fly,
-            _ext_flx,
-            _ext_gv,
-            _ext_3dml,
-            _ext_spot,
-            _ext_jad,
-            _ext_wml,
-            _ext_wmls,
-            _ext_s,
-            _ext_asm,
-            _ext_c,
-            _ext_cc,
-            _ext_cxx,
-            _ext_cpp,
-            _ext_h,
-            _ext_hh,
-            _ext_dic,
-            _ext_f,
-            _ext_for,
-            _ext_f77,
-            _ext_f90,
-            _ext_java,
-            _ext_nfo,
-            _ext_opml,
-            _ext_p,
-            _ext_pas,
-            _ext_etx,
-            _ext_sfv,
-            _ext_uu,
-            _ext_vcs,
-            _ext_vcf,
-            _ext_3gp,
-            _ext_3g2,
-            _ext_h261,
-            _ext_h263,
-            _ext_h264,
-            _ext_jpgv,
-            _ext_jpm,
-            _ext_jpgm,
-            _ext_mj2,
-            _ext_mjp2,
-            _ext_mp4,
-            _ext_mp4v,
-            _ext_mpg4,
-            _ext_mpeg,
-            _ext_mpg,
-            _ext_mpe,
-            _ext_m1v,
-            _ext_m2v,
-            _ext_ogv,
-            _ext_qt,
-            _ext_mov,
-            _ext_uvh,
-            _ext_uvvh,
-            _ext_uvm,
-            _ext_uvvm,
-            _ext_uvp,
-            _ext_uvvp,
-            _ext_uvs,
-            _ext_uvvs,
-            _ext_uvv,
-            _ext_uvvv,
-            _ext_dvb,
-            _ext_fvt,
-            _ext_mxu,
-            _ext_m4u,
-            _ext_pyv,
-            _ext_uvu,
-            _ext_uvvu,
-            _ext_viv,
-            _ext_webm,
-            _ext_f4v,
-            _ext_fli,
-            _ext_flv,
-            _ext_m4v,
-            _ext_mkv,
-            _ext_mk3d,
-            _ext_mks,
-            _ext_mng,
-            _ext_asf,
-            _ext_asx,
-            _ext_vob,
-            _ext_wm,
-            _ext_wmv,
-            _ext_wmx,
-            _ext_wvx,
-            _ext_avi,
-            _ext_movie,
-            _ext_smv,
-            _ext_ice,
-            _ext_map,
-            _ext_topojson,
-            _ext_jsonld,
-            _ext_geojson,
-            _ext_mjs,
-            _ext_wasm,
-            _ext_webmanifest,
-            _ext_webapp,
-            _ext_f4a,
-            _ext_f4b,
-            _ext_opus,
-            _ext_jxr,
-            _ext_hdp,
-            _ext_jng,
-            _ext_3gpp,
-            _ext_f4p,
-            _ext_cur,
-            _ext_ear,
-            _ext_war,
-            _ext_img,
-            _ext_msm,
-            _ext_msp,
-            _ext_safariextz,
-            _ext_bbaw,
-            _ext_crx,
-            _ext_cco,
-            _ext_jardiff,
-            _ext_run,
-            _ext_oex,
-            _ext_pl,
-            _ext_pm,
-            _ext_rpm,
-            _ext_sea,
-            _ext_tk,
-            _ext_pem,
-            _ext_shtml,
-            _ext_md,
-            _ext_markdown,
-            _ext_mml,
-            _ext_xloc,
-            _ext_vtt,
-            _ext_htc,
-            _ext_bdoc,
-            _ext_mpd,
-            _ext_es,
-            _ext_gz,
-            _ext_hjson,
-            _ext_json5,
-            _ext_m4p,
-            _ext_nq,
-            _ext_nt,
-            _ext_buffer,
-            _ext_raml,
-            _ext_owl,
-            _ext_siv,
-            _ext_sieve,
-            _ext_toml,
-            _ext_pkpass,
-            _ext_csl,
-            _ext_gdoc,
-            _ext_gslides,
-            _ext_gsheet,
-            _ext_msg,
-            _ext_wadl,
-            _ext_arj,
-            _ext_php,
-            _ext_kdbx,
-            _ext_luac,
-            _ext_pac,
-            _ext_hdd,
-            _ext_ova,
-            _ext_ovf,
-            _ext_vbox,
-            _ext_vbox_extpack,
-            _ext_vdi,
-            _ext_vhd,
-            _ext_vmdk,
-            _ext_xsd,
-            _ext_rng,
-            _ext_mxmf,
-            _ext_apng,
-            _ext_heic,
-            _ext_heics,
-            _ext_heif,
-            _ext_heifs,
-            _ext_jp2,
-            _ext_jpg2,
-            _ext_jpx,
-            _ext_jpf,
-            _ext_dds,
-            _ext_manifest,
-            _ext_coffee,
-            _ext_litcoffee,
-            _ext_jade,
-            _ext_jsx,
-            _ext_less,
-            _ext_mdx,
-            _ext_ini,
-            _ext_shex,
-            _ext_slim,
-            _ext_slm,
-            _ext_stylus,
-            _ext_styl,
-            _ext_hbs,
-            _ext_lua,
-            _ext_mkd,
-            _ext_pde,
-            _ext_sass,
-            _ext_scss,
-            _ext_ymp,
-            _ext_yaml,
-            _ext_yml,
+            Extensions._ez,
+            Extensions._aw,
+            Extensions._atom,
+            Extensions._atomcat,
+            Extensions._atomsvc,
+            Extensions._ccxml,
+            Extensions._cdmia,
+            Extensions._cdmic,
+            Extensions._cdmid,
+            Extensions._cdmio,
+            Extensions._cdmiq,
+            Extensions._cu,
+            Extensions._davmount,
+            Extensions._dbk,
+            Extensions._dssc,
+            Extensions._xdssc,
+            Extensions._ecma,
+            Extensions._emma,
+            Extensions._epub,
+            Extensions._exi,
+            Extensions._pfr,
+            Extensions._gml,
+            Extensions._gpx,
+            Extensions._gxf,
+            Extensions._stk,
+            Extensions._ink,
+            Extensions._inkml,
+            Extensions._ipfix,
+            Extensions._jar,
+            Extensions._ser,
+            Extensions._class,
+            Extensions._js,
+            Extensions._json,
+            Extensions._jsonml,
+            Extensions._lostxml,
+            Extensions._hqx,
+            Extensions._cpt,
+            Extensions._mads,
+            Extensions._mrc,
+            Extensions._mrcx,
+            Extensions._ma,
+            Extensions._nb,
+            Extensions._mb,
+            Extensions._mathml,
+            Extensions._mbox,
+            Extensions._mscml,
+            Extensions._metalink,
+            Extensions._meta4,
+            Extensions._mets,
+            Extensions._mods,
+            Extensions._m21,
+            Extensions._mp21,
+            Extensions._mp4s,
+            Extensions._doc,
+            Extensions._dot,
+            Extensions._mxf,
+            Extensions._bin,
+            Extensions._dms,
+            Extensions._lrf,
+            Extensions._mar,
+            Extensions._so,
+            Extensions._dist,
+            Extensions._distz,
+            Extensions._pkg,
+            Extensions._bpk,
+            Extensions._dump,
+            Extensions._elc,
+            Extensions._deploy,
+            Extensions._oda,
+            Extensions._opf,
+            Extensions._ogx,
+            Extensions._omdoc,
+            Extensions._onetoc,
+            Extensions._onetoc2,
+            Extensions._onetmp,
+            Extensions._onepkg,
+            Extensions._oxps,
+            Extensions._xer,
+            Extensions._pdf,
+            Extensions._pgp,
+            Extensions._asc,
+            Extensions._sig,
+            Extensions._prf,
+            Extensions._p10,
+            Extensions._p7m,
+            Extensions._p7c,
+            Extensions._p7s,
+            Extensions._p8,
+            Extensions._ac,
+            Extensions._cer,
+            Extensions._crl,
+            Extensions._pkipath,
+            Extensions._pki,
+            Extensions._pls,
+            Extensions._ai,
+            Extensions._eps,
+            Extensions._ps,
+            Extensions._cww,
+            Extensions._pskcxml,
+            Extensions._rdf,
+            Extensions._rif,
+            Extensions._rnc,
+            Extensions._rl,
+            Extensions._rld,
+            Extensions._rs,
+            Extensions._gbr,
+            Extensions._mft,
+            Extensions._roa,
+            Extensions._rsd,
+            Extensions._rss,
+            Extensions._rtf,
+            Extensions._sbml,
+            Extensions._scq,
+            Extensions._scs,
+            Extensions._spq,
+            Extensions._spp,
+            Extensions._sdp,
+            Extensions._setpay,
+            Extensions._setreg,
+            Extensions._shf,
+            Extensions._smi,
+            Extensions._smil,
+            Extensions._rq,
+            Extensions._srx,
+            Extensions._gram,
+            Extensions._grxml,
+            Extensions._sru,
+            Extensions._ssdl,
+            Extensions._ssml,
+            Extensions._tei,
+            Extensions._teicorpus,
+            Extensions._tfi,
+            Extensions._tsd,
+            Extensions._plb,
+            Extensions._psb,
+            Extensions._pvb,
+            Extensions._tcap,
+            Extensions._pwn,
+            Extensions._aso,
+            Extensions._imp,
+            Extensions._acu,
+            Extensions._atc,
+            Extensions._acutc,
+            Extensions._air,
+            Extensions._fcdt,
+            Extensions._fxp,
+            Extensions._fxpl,
+            Extensions._xdp,
+            Extensions._xfdf,
+            Extensions._ahead,
+            Extensions._azf,
+            Extensions._azs,
+            Extensions._azw,
+            Extensions._acc,
+            Extensions._ami,
+            Extensions._apk,
+            Extensions._cii,
+            Extensions._fti,
+            Extensions._atx,
+            Extensions._mpkg,
+            Extensions._m3u8,
+            Extensions._swi,
+            Extensions._iota,
+            Extensions._aep,
+            Extensions._mpm,
+            Extensions._bmi,
+            Extensions._rep,
+            Extensions._cdxml,
+            Extensions._mmd,
+            Extensions._cdy,
+            Extensions._cla,
+            Extensions._rp9,
+            Extensions._c4g,
+            Extensions._c4d,
+            Extensions._c4f,
+            Extensions._c4p,
+            Extensions._c4u,
+            Extensions._c11amc,
+            Extensions._c11amz,
+            Extensions._csp,
+            Extensions._cdbcmsg,
+            Extensions._cmc,
+            Extensions._clkx,
+            Extensions._clkk,
+            Extensions._clkp,
+            Extensions._clkt,
+            Extensions._clkw,
+            Extensions._wbs,
+            Extensions._pml,
+            Extensions._ppd,
+            Extensions._car,
+            Extensions._pcurl,
+            Extensions._dart,
+            Extensions._rdz,
+            Extensions._uvf,
+            Extensions._uvvf,
+            Extensions._uvd,
+            Extensions._uvvd,
+            Extensions._uvt,
+            Extensions._uvvt,
+            Extensions._uvx,
+            Extensions._uvvx,
+            Extensions._uvz,
+            Extensions._uvvz,
+            Extensions._fe_launch,
+            Extensions._dna,
+            Extensions._mlp,
+            Extensions._dpg,
+            Extensions._dfac,
+            Extensions._kpxx,
+            Extensions._ait,
+            Extensions._svc,
+            Extensions._geo,
+            Extensions._mag,
+            Extensions._nml,
+            Extensions._esf,
+            Extensions._msf,
+            Extensions._qam,
+            Extensions._slt,
+            Extensions._ssf,
+            Extensions._es3,
+            Extensions._et3,
+            Extensions._ez2,
+            Extensions._ez3,
+            Extensions._fdf,
+            Extensions._mseed,
+            Extensions._seed,
+            Extensions._dataless,
+            Extensions._gph,
+            Extensions._ftc,
+            Extensions._fm,
+            Extensions._frame,
+            Extensions._maker,
+            Extensions._book,
+            Extensions._fnc,
+            Extensions._ltf,
+            Extensions._fsc,
+            Extensions._oas,
+            Extensions._oa2,
+            Extensions._oa3,
+            Extensions._fg5,
+            Extensions._bh2,
+            Extensions._ddd,
+            Extensions._xdw,
+            Extensions._xbd,
+            Extensions._fzs,
+            Extensions._txd,
+            Extensions._ggb,
+            Extensions._ggt,
+            Extensions._gex,
+            Extensions._gre,
+            Extensions._gxt,
+            Extensions._g2w,
+            Extensions._g3w,
+            Extensions._gmx,
+            Extensions._kml,
+            Extensions._kmz,
+            Extensions._gqf,
+            Extensions._gqs,
+            Extensions._gac,
+            Extensions._ghf,
+            Extensions._gim,
+            Extensions._grv,
+            Extensions._gtm,
+            Extensions._tpl,
+            Extensions._vcg,
+            Extensions._hal,
+            Extensions._zmm,
+            Extensions._hbci,
+            Extensions._les,
+            Extensions._hpgl,
+            Extensions._hpid,
+            Extensions._hps,
+            Extensions._jlt,
+            Extensions._pcl,
+            Extensions._pclxl,
+            Extensions._sfd_hdstx,
+            Extensions._mpy,
+            Extensions._afp,
+            Extensions._listafp,
+            Extensions._list3820,
+            Extensions._irm,
+            Extensions._sc,
+            Extensions._icc,
+            Extensions._icm,
+            Extensions._igl,
+            Extensions._ivp,
+            Extensions._ivu,
+            Extensions._igm,
+            Extensions._xpw,
+            Extensions._xpx,
+            Extensions._i2g,
+            Extensions._qbo,
+            Extensions._qfx,
+            Extensions._rcprofile,
+            Extensions._irp,
+            Extensions._xpr,
+            Extensions._fcs,
+            Extensions._jam,
+            Extensions._rms,
+            Extensions._jisp,
+            Extensions._joda,
+            Extensions._ktz,
+            Extensions._ktr,
+            Extensions._karbon,
+            Extensions._chrt,
+            Extensions._kfo,
+            Extensions._flw,
+            Extensions._kon,
+            Extensions._kpr,
+            Extensions._kpt,
+            Extensions._ksp,
+            Extensions._kwd,
+            Extensions._kwt,
+            Extensions._htke,
+            Extensions._kia,
+            Extensions._kne,
+            Extensions._knp,
+            Extensions._skp,
+            Extensions._skd,
+            Extensions._skt,
+            Extensions._skm,
+            Extensions._sse,
+            Extensions._lasxml,
+            Extensions._lbd,
+            Extensions._lbe,
+            Extensions._123,
+            Extensions._apr,
+            Extensions._pre,
+            Extensions._nsf,
+            Extensions._org,
+            Extensions._scm,
+            Extensions._lwp,
+            Extensions._portpkg,
+            Extensions._mcd,
+            Extensions._mc1,
+            Extensions._cdkey,
+            Extensions._mwf,
+            Extensions._mfm,
+            Extensions._flo,
+            Extensions._igx,
+            Extensions._mif,
+            Extensions._daf,
+            Extensions._dis,
+            Extensions._mbk,
+            Extensions._mqy,
+            Extensions._msl,
+            Extensions._plc,
+            Extensions._txf,
+            Extensions._mpn,
+            Extensions._mpc,
+            Extensions._xul,
+            Extensions._cil,
+            Extensions._cab,
+            Extensions._xls,
+            Extensions._xlm,
+            Extensions._xla,
+            Extensions._xlc,
+            Extensions._xlt,
+            Extensions._xlw,
+            Extensions._xlam,
+            Extensions._xlsb,
+            Extensions._xlsm,
+            Extensions._xltm,
+            Extensions._eot,
+            Extensions._chm,
+            Extensions._ims,
+            Extensions._lrm,
+            Extensions._thmx,
+            Extensions._cat,
+            Extensions._stl,
+            Extensions._ppt,
+            Extensions._pps,
+            Extensions._pot,
+            Extensions._ppam,
+            Extensions._pptm,
+            Extensions._sldm,
+            Extensions._ppsm,
+            Extensions._potm,
+            Extensions._mpp,
+            Extensions._mpt,
+            Extensions._docm,
+            Extensions._dotm,
+            Extensions._wps,
+            Extensions._wks,
+            Extensions._wcm,
+            Extensions._wdb,
+            Extensions._wpl,
+            Extensions._xps,
+            Extensions._mseq,
+            Extensions._mus,
+            Extensions._msty,
+            Extensions._taglet,
+            Extensions._nlu,
+            Extensions._ntf,
+            Extensions._nitf,
+            Extensions._nnd,
+            Extensions._nns,
+            Extensions._nnw,
+            Extensions._ngdat,
+            Extensions._n_gage,
+            Extensions._rpst,
+            Extensions._rpss,
+            Extensions._edm,
+            Extensions._edx,
+            Extensions._ext,
+            Extensions._odc,
+            Extensions._otc,
+            Extensions._odb,
+            Extensions._odf,
+            Extensions._odft,
+            Extensions._odg,
+            Extensions._otg,
+            Extensions._odi,
+            Extensions._oti,
+            Extensions._odp,
+            Extensions._otp,
+            Extensions._ods,
+            Extensions._ots,
+            Extensions._odt,
+            Extensions._odm,
+            Extensions._ott,
+            Extensions._oth,
+            Extensions._xo,
+            Extensions._dd2,
+            Extensions._oxt,
+            Extensions._pptx,
+            Extensions._sldx,
+            Extensions._ppsx,
+            Extensions._potx,
+            Extensions._xlsx,
+            Extensions._xltx,
+            Extensions._docx,
+            Extensions._dotx,
+            Extensions._mgp,
+            Extensions._dp,
+            Extensions._esa,
+            Extensions._pdb,
+            Extensions._pqa,
+            Extensions._oprc,
+            Extensions._paw,
+            Extensions._str,
+            Extensions._ei6,
+            Extensions._efif,
+            Extensions._wg,
+            Extensions._plf,
+            Extensions._pbd,
+            Extensions._box,
+            Extensions._mgz,
+            Extensions._qps,
+            Extensions._ptid,
+            Extensions._qxd,
+            Extensions._qxt,
+            Extensions._qwd,
+            Extensions._qwt,
+            Extensions._qxl,
+            Extensions._qxb,
+            Extensions._bed,
+            Extensions._mxl,
+            Extensions._musicxml,
+            Extensions._cryptonote,
+            Extensions._cod,
+            Extensions._rm,
+            Extensions._rmvb,
+            Extensions._link66,
+            Extensions._st,
+            Extensions._see,
+            Extensions._sema,
+            Extensions._semd,
+            Extensions._semf,
+            Extensions._ifm,
+            Extensions._itp,
+            Extensions._iif,
+            Extensions._ipk,
+            Extensions._twd,
+            Extensions._twds,
+            Extensions._mmf,
+            Extensions._teacher,
+            Extensions._sdkm,
+            Extensions._sdkd,
+            Extensions._dxp,
+            Extensions._sfs,
+            Extensions._sdc,
+            Extensions._sda,
+            Extensions._sdd,
+            Extensions._smf,
+            Extensions._sdw,
+            Extensions._vor,
+            Extensions._sgl,
+            Extensions._smzip,
+            Extensions._sm,
+            Extensions._sxc,
+            Extensions._stc,
+            Extensions._sxd,
+            Extensions._std,
+            Extensions._sxi,
+            Extensions._sti,
+            Extensions._sxm,
+            Extensions._sxw,
+            Extensions._sxg,
+            Extensions._stw,
+            Extensions._sus,
+            Extensions._susp,
+            Extensions._svd,
+            Extensions._sis,
+            Extensions._sisx,
+            Extensions._xsm,
+            Extensions._bdm,
+            Extensions._xdm,
+            Extensions._tao,
+            Extensions._pcap,
+            Extensions._cap,
+            Extensions._dmp,
+            Extensions._tmo,
+            Extensions._tpt,
+            Extensions._mxs,
+            Extensions._tra,
+            Extensions._ufd,
+            Extensions._ufdl,
+            Extensions._utz,
+            Extensions._umj,
+            Extensions._unityweb,
+            Extensions._uoml,
+            Extensions._vcx,
+            Extensions._vsd,
+            Extensions._vst,
+            Extensions._vss,
+            Extensions._vsw,
+            Extensions._vis,
+            Extensions._vsf,
+            Extensions._wbxml,
+            Extensions._wmlc,
+            Extensions._wmlsc,
+            Extensions._wtb,
+            Extensions._nbp,
+            Extensions._wpd,
+            Extensions._wqd,
+            Extensions._stf,
+            Extensions._xar,
+            Extensions._xfdl,
+            Extensions._hvd,
+            Extensions._hvs,
+            Extensions._hvp,
+            Extensions._osf,
+            Extensions._osfpvg,
+            Extensions._saf,
+            Extensions._spf,
+            Extensions._cmp,
+            Extensions._zir,
+            Extensions._zirz,
+            Extensions._zaz,
+            Extensions._vxml,
+            Extensions._wgt,
+            Extensions._hlp,
+            Extensions._wsdl,
+            Extensions._wspolicy,
+            Extensions._7z,
+            Extensions._abw,
+            Extensions._ace,
+            Extensions._dmg,
+            Extensions._aab,
+            Extensions._x32,
+            Extensions._u32,
+            Extensions._vox,
+            Extensions._aam,
+            Extensions._aas,
+            Extensions._bcpio,
+            Extensions._torrent,
+            Extensions._blb,
+            Extensions._blorb,
+            Extensions._bz,
+            Extensions._bz2,
+            Extensions._boz,
+            Extensions._cbr,
+            Extensions._cba,
+            Extensions._cbt,
+            Extensions._cbz,
+            Extensions._cb7,
+            Extensions._vcd,
+            Extensions._cfs,
+            Extensions._chat,
+            Extensions._pgn,
+            Extensions._nsc,
+            Extensions._cpio,
+            Extensions._csh,
+            Extensions._deb,
+            Extensions._udeb,
+            Extensions._dgc,
+            Extensions._dir,
+            Extensions._dcr,
+            Extensions._dxr,
+            Extensions._cst,
+            Extensions._cct,
+            Extensions._cxt,
+            Extensions._w3d,
+            Extensions._fgd,
+            Extensions._swa,
+            Extensions._wad,
+            Extensions._ncx,
+            Extensions._dtb,
+            Extensions._res,
+            Extensions._dvi,
+            Extensions._evy,
+            Extensions._eva,
+            Extensions._bdf,
+            Extensions._gsf,
+            Extensions._psf,
+            Extensions._pcf,
+            Extensions._snf,
+            Extensions._pfa,
+            Extensions._pfb,
+            Extensions._pfm,
+            Extensions._afm,
+            Extensions._arc,
+            Extensions._spl,
+            Extensions._gca,
+            Extensions._ulx,
+            Extensions._gnumeric,
+            Extensions._gramps,
+            Extensions._gtar,
+            Extensions._hdf,
+            Extensions._install,
+            Extensions._iso,
+            Extensions._jnlp,
+            Extensions._latex,
+            Extensions._lzh,
+            Extensions._lha,
+            Extensions._mie,
+            Extensions._prc,
+            Extensions._mobi,
+            Extensions._application,
+            Extensions._lnk,
+            Extensions._wmd,
+            Extensions._wmz,
+            Extensions._xbap,
+            Extensions._mdb,
+            Extensions._obd,
+            Extensions._crd,
+            Extensions._clp,
+            Extensions._exe,
+            Extensions._dll,
+            Extensions._com,
+            Extensions._bat,
+            Extensions._msi,
+            Extensions._mvb,
+            Extensions._m13,
+            Extensions._m14,
+            Extensions._wmf,
+            Extensions._emf,
+            Extensions._emz,
+            Extensions._mny,
+            Extensions._pub,
+            Extensions._scd,
+            Extensions._trm,
+            Extensions._wri,
+            Extensions._nc,
+            Extensions._cdf,
+            Extensions._nzb,
+            Extensions._p12,
+            Extensions._pfx,
+            Extensions._p7b,
+            Extensions._spc,
+            Extensions._p7r,
+            Extensions._rar,
+            Extensions._ris,
+            Extensions._sh,
+            Extensions._shar,
+            Extensions._swf,
+            Extensions._xap,
+            Extensions._sql,
+            Extensions._sit,
+            Extensions._sitx,
+            Extensions._srt,
+            Extensions._sv4cpio,
+            Extensions._sv4crc,
+            Extensions._t3,
+            Extensions._gam,
+            Extensions._tar,
+            Extensions._tcl,
+            Extensions._tex,
+            Extensions._tfm,
+            Extensions._texinfo,
+            Extensions._texi,
+            Extensions._obj,
+            Extensions._ustar,
+            Extensions._src,
+            Extensions._der,
+            Extensions._crt,
+            Extensions._fig,
+            Extensions._xlf,
+            Extensions._xpi,
+            Extensions._xz,
+            Extensions._z1,
+            Extensions._z2,
+            Extensions._z3,
+            Extensions._z4,
+            Extensions._z5,
+            Extensions._z6,
+            Extensions._z7,
+            Extensions._z8,
+            Extensions._xaml,
+            Extensions._xdf,
+            Extensions._xenc,
+            Extensions._xhtml,
+            Extensions._xht,
+            Extensions._xml,
+            Extensions._xsl,
+            Extensions._dtd,
+            Extensions._xop,
+            Extensions._xpl,
+            Extensions._xslt,
+            Extensions._xspf,
+            Extensions._mxml,
+            Extensions._xhvml,
+            Extensions._xvml,
+            Extensions._xvm,
+            Extensions._yang,
+            Extensions._yin,
+            Extensions._zip,
+            Extensions._adp,
+            Extensions._au,
+            Extensions._snd,
+            Extensions._mid,
+            Extensions._midi,
+            Extensions._kar,
+            Extensions._rmi,
+            Extensions._m4a,
+            Extensions._mp4a,
+            Extensions._mpga,
+            Extensions._mp2,
+            Extensions._mp2a,
+            Extensions._mp3,
+            Extensions._m2a,
+            Extensions._m3a,
+            Extensions._oga,
+            Extensions._ogg,
+            Extensions._spx,
+            Extensions._opus,
+            Extensions._s3m,
+            Extensions._sil,
+            Extensions._uva,
+            Extensions._uvva,
+            Extensions._eol,
+            Extensions._dra,
+            Extensions._dts,
+            Extensions._dtshd,
+            Extensions._lvp,
+            Extensions._pya,
+            Extensions._ecelp4800,
+            Extensions._ecelp7470,
+            Extensions._ecelp9600,
+            Extensions._rip,
+            Extensions._weba,
+            Extensions._aac,
+            Extensions._aif,
+            Extensions._aiff,
+            Extensions._aifc,
+            Extensions._caf,
+            Extensions._flac,
+            Extensions._mka,
+            Extensions._m3u,
+            Extensions._wax,
+            Extensions._wma,
+            Extensions._ram,
+            Extensions._ra,
+            Extensions._rmp,
+            Extensions._wav,
+            Extensions._xm,
+            Extensions._cdx,
+            Extensions._cif,
+            Extensions._cmdf,
+            Extensions._cml,
+            Extensions._csml,
+            Extensions._xyz,
+            Extensions._ttc,
+            Extensions._otf,
+            Extensions._ttf,
+            Extensions._woff,
+            Extensions._woff2,
+            Extensions._bmp,
+            Extensions._cgm,
+            Extensions._g3,
+            Extensions._gif,
+            Extensions._ief,
+            Extensions._jpeg,
+            Extensions._jpg,
+            Extensions._jpe,
+            Extensions._ktx,
+            Extensions._png,
+            Extensions._btif,
+            Extensions._sgi,
+            Extensions._svg,
+            Extensions._svgz,
+            Extensions._tiff,
+            Extensions._tif,
+            Extensions._psd,
+            Extensions._uvi,
+            Extensions._uvvi,
+            Extensions._uvg,
+            Extensions._uvvg,
+            Extensions._djvu,
+            Extensions._djv,
+            Extensions._sub,
+            Extensions._dwg,
+            Extensions._dxf,
+            Extensions._fbs,
+            Extensions._fpx,
+            Extensions._fst,
+            Extensions._mmr,
+            Extensions._rlc,
+            Extensions._mdi,
+            Extensions._wdp,
+            Extensions._npx,
+            Extensions._wbmp,
+            Extensions._xif,
+            Extensions._webp,
+            Extensions._3ds,
+            Extensions._ras,
+            Extensions._cmx,
+            Extensions._fh,
+            Extensions._fhc,
+            Extensions._fh4,
+            Extensions._fh5,
+            Extensions._fh7,
+            Extensions._ico,
+            Extensions._sid,
+            Extensions._pcx,
+            Extensions._pic,
+            Extensions._pct,
+            Extensions._pnm,
+            Extensions._pbm,
+            Extensions._pgm,
+            Extensions._ppm,
+            Extensions._rgb,
+            Extensions._tga,
+            Extensions._xbm,
+            Extensions._xpm,
+            Extensions._xwd,
+            Extensions._eml,
+            Extensions._mime,
+            Extensions._igs,
+            Extensions._iges,
+            Extensions._msh,
+            Extensions._mesh,
+            Extensions._silo,
+            Extensions._dae,
+            Extensions._dwf,
+            Extensions._gdl,
+            Extensions._gtw,
+            Extensions._mts,
+            Extensions._vtu,
+            Extensions._wrl,
+            Extensions._vrml,
+            Extensions._x3db,
+            Extensions._x3dbz,
+            Extensions._x3dv,
+            Extensions._x3dvz,
+            Extensions._x3d,
+            Extensions._x3dz,
+            Extensions._appcache,
+            Extensions._ics,
+            Extensions._ifb,
+            Extensions._css,
+            Extensions._csv,
+            Extensions._html,
+            Extensions._htm,
+            Extensions._n3,
+            Extensions._txt,
+            Extensions._text,
+            Extensions._conf,
+            Extensions._def,
+            Extensions._list,
+            Extensions._log,
+            Extensions._in,
+            Extensions._dsc,
+            Extensions._rtx,
+            Extensions._sgml,
+            Extensions._sgm,
+            Extensions._tsv,
+            Extensions._t,
+            Extensions._tr,
+            Extensions._roff,
+            Extensions._man,
+            Extensions._me,
+            Extensions._ms,
+            Extensions._ttl,
+            Extensions._uri,
+            Extensions._uris,
+            Extensions._urls,
+            Extensions._vcard,
+            Extensions._curl,
+            Extensions._dcurl,
+            Extensions._mcurl,
+            Extensions._scurl,
+            Extensions._fly,
+            Extensions._flx,
+            Extensions._gv,
+            Extensions._3dml,
+            Extensions._spot,
+            Extensions._jad,
+            Extensions._wml,
+            Extensions._wmls,
+            Extensions._s,
+            Extensions._asm,
+            Extensions._c,
+            Extensions._cc,
+            Extensions._cxx,
+            Extensions._cpp,
+            Extensions._h,
+            Extensions._hh,
+            Extensions._dic,
+            Extensions._f,
+            Extensions._for,
+            Extensions._f77,
+            Extensions._f90,
+            Extensions._java,
+            Extensions._nfo,
+            Extensions._opml,
+            Extensions._p,
+            Extensions._pas,
+            Extensions._etx,
+            Extensions._sfv,
+            Extensions._uu,
+            Extensions._vcs,
+            Extensions._vcf,
+            Extensions._3gp,
+            Extensions._3g2,
+            Extensions._h261,
+            Extensions._h263,
+            Extensions._h264,
+            Extensions._jpgv,
+            Extensions._jpm,
+            Extensions._jpgm,
+            Extensions._mj2,
+            Extensions._mjp2,
+            Extensions._mp4,
+            Extensions._mp4v,
+            Extensions._mpg4,
+            Extensions._mpeg,
+            Extensions._mpg,
+            Extensions._mpe,
+            Extensions._m1v,
+            Extensions._m2v,
+            Extensions._ogv,
+            Extensions._qt,
+            Extensions._mov,
+            Extensions._uvh,
+            Extensions._uvvh,
+            Extensions._uvm,
+            Extensions._uvvm,
+            Extensions._uvp,
+            Extensions._uvvp,
+            Extensions._uvs,
+            Extensions._uvvs,
+            Extensions._uvv,
+            Extensions._uvvv,
+            Extensions._dvb,
+            Extensions._fvt,
+            Extensions._mxu,
+            Extensions._m4u,
+            Extensions._pyv,
+            Extensions._uvu,
+            Extensions._uvvu,
+            Extensions._viv,
+            Extensions._webm,
+            Extensions._f4v,
+            Extensions._fli,
+            Extensions._flv,
+            Extensions._m4v,
+            Extensions._mkv,
+            Extensions._mk3d,
+            Extensions._mks,
+            Extensions._mng,
+            Extensions._asf,
+            Extensions._asx,
+            Extensions._vob,
+            Extensions._wm,
+            Extensions._wmv,
+            Extensions._wmx,
+            Extensions._wvx,
+            Extensions._avi,
+            Extensions._movie,
+            Extensions._smv,
+            Extensions._ice,
+            Extensions._map,
+            Extensions._topojson,
+            Extensions._jsonld,
+            Extensions._geojson,
+            Extensions._mjs,
+            Extensions._wasm,
+            Extensions._webmanifest,
+            Extensions._webapp,
+            Extensions._f4a,
+            Extensions._f4b,
+            Extensions._jxr,
+            Extensions._hdp,
+            Extensions._jng,
+            Extensions._3gpp,
+            Extensions._f4p,
+            Extensions._cur,
+            Extensions._ear,
+            Extensions._war,
+            Extensions._img,
+            Extensions._msm,
+            Extensions._msp,
+            Extensions._safariextz,
+            Extensions._bbaw,
+            Extensions._crx,
+            Extensions._cco,
+            Extensions._jardiff,
+            Extensions._run,
+            Extensions._oex,
+            Extensions._pl,
+            Extensions._pm,
+            Extensions._rpm,
+            Extensions._sea,
+            Extensions._tk,
+            Extensions._pem,
+            Extensions._shtml,
+            Extensions._md,
+            Extensions._markdown,
+            Extensions._mml,
+            Extensions._xloc,
+            Extensions._vtt,
+            Extensions._htc,
+            Extensions._bdoc,
+            Extensions._es,
+            Extensions._hjson,
+            Extensions._json5,
+            Extensions._m4p,
+            Extensions._cjs,
+            Extensions._buffer,
+            Extensions._raml,
+            Extensions._owl,
+            Extensions._siv,
+            Extensions._sieve,
+            Extensions._toml,
+            Extensions._ubj,
+            Extensions._pkpass,
+            Extensions._gdoc,
+            Extensions._gslides,
+            Extensions._gsheet,
+            Extensions._msg,
+            Extensions._arj,
+            Extensions._php,
+            Extensions._kdbx,
+            Extensions._luac,
+            Extensions._pac,
+            Extensions._hdd,
+            Extensions._ova,
+            Extensions._ovf,
+            Extensions._vbox,
+            Extensions._vbox_extpack,
+            Extensions._vdi,
+            Extensions._vhd,
+            Extensions._vmdk,
+            Extensions._xsd,
+            Extensions._rng,
+            Extensions._apng,
+            Extensions._avif,
+            Extensions._heic,
+            Extensions._heics,
+            Extensions._heif,
+            Extensions._heifs,
+            Extensions._jp2,
+            Extensions._jpg2,
+            Extensions._jpx,
+            Extensions._jpf,
+            Extensions._dds,
+            Extensions._manifest,
+            Extensions._coffee,
+            Extensions._litcoffee,
+            Extensions._jade,
+            Extensions._jsx,
+            Extensions._less,
+            Extensions._mdx,
+            Extensions._ini,
+            Extensions._shex,
+            Extensions._slim,
+            Extensions._slm,
+            Extensions._stylus,
+            Extensions._styl,
+            Extensions._hbs,
+            Extensions._lua,
+            Extensions._mkd,
+            Extensions._pde,
+            Extensions._sass,
+            Extensions._scss,
+            Extensions._ymp,
+            Extensions._yaml,
+            Extensions._yml,
         });
+
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string LookupType(string type)
         {
             switch (type)
             {
-				case _ext_ez:
+			case Extensions._ez:
 					return Ez;
 
-				case _ext_aw:
+			case Extensions._aw:
 					return Aw;
 
-				case _ext_atom:
+			case Extensions._atom:
 					return Atom;
 
-				case _ext_atomcat:
+			case Extensions._atomcat:
 					return Atomcat;
 
-				case _ext_atomsvc:
+			case Extensions._atomsvc:
 					return Atomsvc;
 
-				case _ext_ccxml:
+			case Extensions._ccxml:
 					return Ccxml;
 
-				case _ext_cdmia:
+			case Extensions._cdmia:
 					return Cdmia;
 
-				case _ext_cdmic:
+			case Extensions._cdmic:
 					return Cdmic;
 
-				case _ext_cdmid:
+			case Extensions._cdmid:
 					return Cdmid;
 
-				case _ext_cdmio:
+			case Extensions._cdmio:
 					return Cdmio;
 
-				case _ext_cdmiq:
+			case Extensions._cdmiq:
 					return Cdmiq;
 
-				case _ext_cu:
+			case Extensions._cu:
 					return Cu;
 
-				case _ext_davmount:
+			case Extensions._davmount:
 					return Davmount;
 
-				case _ext_dbk:
+			case Extensions._dbk:
 					return Dbk;
 
-				case _ext_dssc:
+			case Extensions._dssc:
 					return Dssc;
 
-				case _ext_xdssc:
+			case Extensions._xdssc:
 					return Xdssc;
 
-				case _ext_ecma:
-				case _ext_es:
+			case Extensions._ecma:
+			case Extensions._es:
 					return Ecma;
 
-				case _ext_emma:
+			case Extensions._emma:
 					return Emma;
 
-				case _ext_epub:
+			case Extensions._epub:
 					return Epub;
 
-				case _ext_exi:
+			case Extensions._exi:
 					return Exi;
 
-				case _ext_pfr:
+			case Extensions._pfr:
 					return Pfr;
 
-				case _ext_gml:
+			case Extensions._gml:
 					return Gml;
 
-				case _ext_gpx:
+			case Extensions._gpx:
 					return Gpx;
 
-				case _ext_gxf:
+			case Extensions._gxf:
 					return Gxf;
 
-				case _ext_stk:
+			case Extensions._stk:
 					return Stk;
 
-				case _ext_ink:
-				case _ext_inkml:
+			case Extensions._ink:
+			case Extensions._inkml:
 					return Ink;
 
-				case _ext_ipfix:
+			case Extensions._ipfix:
 					return Ipfix;
 
-				case _ext_jar:
-				case _ext_ear:
-				case _ext_war:
+			case Extensions._jar:
+			case Extensions._ear:
+			case Extensions._war:
 					return Jar;
 
-				case _ext_ser:
+			case Extensions._ser:
 					return Ser;
 
-				case _ext_class:
+			case Extensions._class:
 					return Class;
 
-				case _ext_js:
+			case Extensions._js:
 					return Js;
 
-				case _ext_json:
-				case _ext_map:
-				case _ext_topojson:
+			case Extensions._json:
+			case Extensions._map:
+			case Extensions._topojson:
 					return Json;
 
-				case _ext_jsonml:
+			case Extensions._jsonml:
 					return Jsonml;
 
-				case _ext_lostxml:
+			case Extensions._lostxml:
 					return Lostxml;
 
-				case _ext_hqx:
+			case Extensions._hqx:
 					return Hqx;
 
-				case _ext_cpt:
+			case Extensions._cpt:
 					return Cpt;
 
-				case _ext_mads:
+			case Extensions._mads:
 					return Mads;
 
-				case _ext_mrc:
+			case Extensions._mrc:
 					return Mrc;
 
-				case _ext_mrcx:
+			case Extensions._mrcx:
 					return Mrcx;
 
-				case _ext_ma:
-				case _ext_nb:
-				case _ext_mb:
+			case Extensions._ma:
+			case Extensions._nb:
+			case Extensions._mb:
 					return Ma;
 
-				case _ext_mathml:
+			case Extensions._mathml:
 					return Mathml;
 
-				case _ext_mbox:
+			case Extensions._mbox:
 					return Mbox;
 
-				case _ext_mscml:
+			case Extensions._mscml:
 					return Mscml;
 
-				case _ext_metalink:
+			case Extensions._metalink:
 					return Metalink;
 
-				case _ext_meta4:
+			case Extensions._meta4:
 					return Meta4;
 
-				case _ext_mets:
+			case Extensions._mets:
 					return Mets;
 
-				case _ext_mods:
+			case Extensions._mods:
 					return Mods;
 
-				case _ext_m21:
-				case _ext_mp21:
+			case Extensions._m21:
+			case Extensions._mp21:
 					return M21;
 
-				case _ext_mp4s:
-				case _ext_m4p:
+			case Extensions._mp4s:
+			case Extensions._m4p:
 					return Mp4s;
 
-				case _ext_doc:
-				case _ext_dot:
+			case Extensions._doc:
+			case Extensions._dot:
 					return Doc;
 
-				case _ext_mxf:
+			case Extensions._mxf:
 					return Mxf;
 
-				case _ext_bin:
-				case _ext_dms:
-				case _ext_lrf:
-				case _ext_mar:
-				case _ext_so:
-				case _ext_dist:
-				case _ext_distz:
-				case _ext_pkg:
-				case _ext_bpk:
-				case _ext_dump:
-				case _ext_elc:
-				case _ext_deploy:
-				case _ext_img:
-				case _ext_msm:
-				case _ext_msp:
-				case _ext_safariextz:
-				case _ext_buffer:
+			case Extensions._bin:
+			case Extensions._dms:
+			case Extensions._lrf:
+			case Extensions._mar:
+			case Extensions._so:
+			case Extensions._dist:
+			case Extensions._distz:
+			case Extensions._pkg:
+			case Extensions._bpk:
+			case Extensions._dump:
+			case Extensions._elc:
+			case Extensions._deploy:
+			case Extensions._img:
+			case Extensions._msm:
+			case Extensions._msp:
+			case Extensions._safariextz:
+			case Extensions._buffer:
 					return Bin;
 
-				case _ext_oda:
+			case Extensions._oda:
 					return Oda;
 
-				case _ext_opf:
+			case Extensions._opf:
 					return Opf;
 
-				case _ext_ogx:
+			case Extensions._ogx:
 					return Ogx;
 
-				case _ext_omdoc:
+			case Extensions._omdoc:
 					return Omdoc;
 
-				case _ext_onetoc:
-				case _ext_onetoc2:
-				case _ext_onetmp:
-				case _ext_onepkg:
+			case Extensions._onetoc:
+			case Extensions._onetoc2:
+			case Extensions._onetmp:
+			case Extensions._onepkg:
 					return Onetoc;
 
-				case _ext_oxps:
+			case Extensions._oxps:
 					return Oxps;
 
-				case _ext_xer:
+			case Extensions._xer:
 					return Xer;
 
-				case _ext_pdf:
+			case Extensions._pdf:
 					return Pdf;
 
-				case _ext_pgp:
+			case Extensions._pgp:
 					return Pgp;
 
-				case _ext_asc:
-				case _ext_sig:
+			case Extensions._asc:
+			case Extensions._sig:
 					return Asc;
 
-				case _ext_prf:
+			case Extensions._prf:
 					return Prf;
 
-				case _ext_p10:
+			case Extensions._p10:
 					return P10;
 
-				case _ext_p7m:
-				case _ext_p7c:
+			case Extensions._p7m:
+			case Extensions._p7c:
 					return P7m;
 
-				case _ext_p7s:
+			case Extensions._p7s:
 					return P7s;
 
-				case _ext_p8:
+			case Extensions._p8:
 					return P8;
 
-				case _ext_ac:
+			case Extensions._ac:
 					return Ac;
 
-				case _ext_cer:
+			case Extensions._cer:
 					return Cer;
 
-				case _ext_crl:
+			case Extensions._crl:
 					return Crl;
 
-				case _ext_pkipath:
+			case Extensions._pkipath:
 					return Pkipath;
 
-				case _ext_pki:
+			case Extensions._pki:
 					return Pki;
 
-				case _ext_pls:
+			case Extensions._pls:
 					return Pls;
 
-				case _ext_ai:
-				case _ext_eps:
-				case _ext_ps:
+			case Extensions._ai:
+			case Extensions._eps:
+			case Extensions._ps:
 					return Ai;
 
-				case _ext_cww:
+			case Extensions._cww:
 					return Cww;
 
-				case _ext_pskcxml:
+			case Extensions._pskcxml:
 					return Pskcxml;
 
-				case _ext_rdf:
-				case _ext_owl:
+			case Extensions._rdf:
+			case Extensions._owl:
 					return Rdf;
 
-				case _ext_rif:
+			case Extensions._rif:
 					return Rif;
 
-				case _ext_rnc:
+			case Extensions._rnc:
 					return Rnc;
 
-				case _ext_rl:
+			case Extensions._rl:
 					return Rl;
 
-				case _ext_rld:
+			case Extensions._rld:
 					return Rld;
 
-				case _ext_rs:
+			case Extensions._rs:
 					return Rs;
 
-				case _ext_gbr:
+			case Extensions._gbr:
 					return Gbr;
 
-				case _ext_mft:
+			case Extensions._mft:
 					return Mft;
 
-				case _ext_roa:
+			case Extensions._roa:
 					return Roa;
 
-				case _ext_rsd:
+			case Extensions._rsd:
 					return Rsd;
 
-				case _ext_rss:
+			case Extensions._rss:
 					return Rss;
 
-				case _ext_rtf:
+			case Extensions._rtf:
 					return Rtf;
 
-				case _ext_sbml:
+			case Extensions._sbml:
 					return Sbml;
 
-				case _ext_scq:
+			case Extensions._scq:
 					return Scq;
 
-				case _ext_scs:
+			case Extensions._scs:
 					return Scs;
 
-				case _ext_spq:
+			case Extensions._spq:
 					return Spq;
 
-				case _ext_spp:
+			case Extensions._spp:
 					return Spp;
 
-				case _ext_sdp:
+			case Extensions._sdp:
 					return Sdp;
 
-				case _ext_setpay:
+			case Extensions._setpay:
 					return Setpay;
 
-				case _ext_setreg:
+			case Extensions._setreg:
 					return Setreg;
 
-				case _ext_shf:
+			case Extensions._shf:
 					return Shf;
 
-				case _ext_smi:
-				case _ext_smil:
+			case Extensions._smi:
+			case Extensions._smil:
 					return Smi;
 
-				case _ext_rq:
+			case Extensions._rq:
 					return Rq;
 
-				case _ext_srx:
+			case Extensions._srx:
 					return Srx;
 
-				case _ext_gram:
+			case Extensions._gram:
 					return Gram;
 
-				case _ext_grxml:
+			case Extensions._grxml:
 					return Grxml;
 
-				case _ext_sru:
+			case Extensions._sru:
 					return Sru;
 
-				case _ext_ssdl:
+			case Extensions._ssdl:
 					return Ssdl;
 
-				case _ext_ssml:
+			case Extensions._ssml:
 					return Ssml;
 
-				case _ext_tei:
-				case _ext_teicorpus:
+			case Extensions._tei:
+			case Extensions._teicorpus:
 					return Tei;
 
-				case _ext_tfi:
+			case Extensions._tfi:
 					return Tfi;
 
-				case _ext_tsd:
+			case Extensions._tsd:
 					return Tsd;
 
-				case _ext_plb:
+			case Extensions._plb:
 					return Plb;
 
-				case _ext_psb:
+			case Extensions._psb:
 					return Psb;
 
-				case _ext_pvb:
+			case Extensions._pvb:
 					return Pvb;
 
-				case _ext_tcap:
+			case Extensions._tcap:
 					return Tcap;
 
-				case _ext_pwn:
+			case Extensions._pwn:
 					return Pwn;
 
-				case _ext_aso:
+			case Extensions._aso:
 					return Aso;
 
-				case _ext_imp:
+			case Extensions._imp:
 					return Imp;
 
-				case _ext_acu:
+			case Extensions._acu:
 					return Acu;
 
-				case _ext_atc:
-				case _ext_acutc:
+			case Extensions._atc:
+			case Extensions._acutc:
 					return Atc;
 
-				case _ext_air:
+			case Extensions._air:
 					return Air;
 
-				case _ext_fcdt:
+			case Extensions._fcdt:
 					return Fcdt;
 
-				case _ext_fxp:
-				case _ext_fxpl:
+			case Extensions._fxp:
+			case Extensions._fxpl:
 					return Fxp;
 
-				case _ext_xdp:
+			case Extensions._xdp:
 					return Xdp;
 
-				case _ext_xfdf:
+			case Extensions._xfdf:
 					return Xfdf;
 
-				case _ext_ahead:
+			case Extensions._ahead:
 					return Ahead;
 
-				case _ext_azf:
+			case Extensions._azf:
 					return Azf;
 
-				case _ext_azs:
+			case Extensions._azs:
 					return Azs;
 
-				case _ext_azw:
+			case Extensions._azw:
 					return Azw;
 
-				case _ext_acc:
+			case Extensions._acc:
 					return Acc;
 
-				case _ext_ami:
+			case Extensions._ami:
 					return Ami;
 
-				case _ext_apk:
+			case Extensions._apk:
 					return Apk;
 
-				case _ext_cii:
+			case Extensions._cii:
 					return Cii;
 
-				case _ext_fti:
+			case Extensions._fti:
 					return Fti;
 
-				case _ext_atx:
+			case Extensions._atx:
 					return Atx;
 
-				case _ext_mpkg:
+			case Extensions._mpkg:
 					return Mpkg;
 
-				case _ext_m3u8:
+			case Extensions._m3u8:
 					return M3u8;
 
-				case _ext_swi:
+			case Extensions._swi:
 					return Swi;
 
-				case _ext_iota:
+			case Extensions._iota:
 					return Iota;
 
-				case _ext_aep:
+			case Extensions._aep:
 					return Aep;
 
-				case _ext_mpm:
+			case Extensions._mpm:
 					return Mpm;
 
-				case _ext_bmi:
+			case Extensions._bmi:
 					return Bmi;
 
-				case _ext_rep:
+			case Extensions._rep:
 					return Rep;
 
-				case _ext_cdxml:
+			case Extensions._cdxml:
 					return Cdxml;
 
-				case _ext_mmd:
+			case Extensions._mmd:
 					return Mmd;
 
-				case _ext_cdy:
+			case Extensions._cdy:
 					return Cdy;
 
-				case _ext_cla:
+			case Extensions._cla:
 					return Cla;
 
-				case _ext_rp9:
+			case Extensions._rp9:
 					return Rp9;
 
-				case _ext_c4g:
-				case _ext_c4d:
-				case _ext_c4f:
-				case _ext_c4p:
-				case _ext_c4u:
+			case Extensions._c4g:
+			case Extensions._c4d:
+			case Extensions._c4f:
+			case Extensions._c4p:
+			case Extensions._c4u:
 					return C4g;
 
-				case _ext_c11amc:
+			case Extensions._c11amc:
 					return C11amc;
 
-				case _ext_c11amz:
+			case Extensions._c11amz:
 					return C11amz;
 
-				case _ext_csp:
+			case Extensions._csp:
 					return Csp;
 
-				case _ext_cdbcmsg:
+			case Extensions._cdbcmsg:
 					return Cdbcmsg;
 
-				case _ext_cmc:
+			case Extensions._cmc:
 					return Cmc;
 
-				case _ext_clkx:
+			case Extensions._clkx:
 					return Clkx;
 
-				case _ext_clkk:
+			case Extensions._clkk:
 					return Clkk;
 
-				case _ext_clkp:
+			case Extensions._clkp:
 					return Clkp;
 
-				case _ext_clkt:
+			case Extensions._clkt:
 					return Clkt;
 
-				case _ext_clkw:
+			case Extensions._clkw:
 					return Clkw;
 
-				case _ext_wbs:
+			case Extensions._wbs:
 					return Wbs;
 
-				case _ext_pml:
+			case Extensions._pml:
 					return Pml;
 
-				case _ext_ppd:
+			case Extensions._ppd:
 					return Ppd;
 
-				case _ext_car:
+			case Extensions._car:
 					return Car;
 
-				case _ext_pcurl:
+			case Extensions._pcurl:
 					return Pcurl;
 
-				case _ext_dart:
+			case Extensions._dart:
 					return Dart;
 
-				case _ext_rdz:
+			case Extensions._rdz:
 					return Rdz;
 
-				case _ext_uvf:
-				case _ext_uvvf:
-				case _ext_uvd:
-				case _ext_uvvd:
+			case Extensions._uvf:
+			case Extensions._uvvf:
+			case Extensions._uvd:
+			case Extensions._uvvd:
 					return Uvf;
 
-				case _ext_uvt:
-				case _ext_uvvt:
+			case Extensions._uvt:
+			case Extensions._uvvt:
 					return Uvt;
 
-				case _ext_uvx:
-				case _ext_uvvx:
+			case Extensions._uvx:
+			case Extensions._uvvx:
 					return Uvx;
 
-				case _ext_uvz:
-				case _ext_uvvz:
+			case Extensions._uvz:
+			case Extensions._uvvz:
 					return Uvz;
 
-				case _ext_fe_launch:
+			case Extensions._fe_launch:
 					return Felaunch;
 
-				case _ext_dna:
+			case Extensions._dna:
 					return Dna;
 
-				case _ext_mlp:
+			case Extensions._mlp:
 					return Mlp;
 
-				case _ext_dpg:
+			case Extensions._dpg:
 					return Dpg;
 
-				case _ext_dfac:
+			case Extensions._dfac:
 					return Dfac;
 
-				case _ext_kpxx:
+			case Extensions._kpxx:
 					return Kpxx;
 
-				case _ext_ait:
+			case Extensions._ait:
 					return Ait;
 
-				case _ext_svc:
+			case Extensions._svc:
 					return Svc;
 
-				case _ext_geo:
+			case Extensions._geo:
 					return Geo;
 
-				case _ext_mag:
+			case Extensions._mag:
 					return Mag;
 
-				case _ext_nml:
+			case Extensions._nml:
 					return Nml;
 
-				case _ext_esf:
+			case Extensions._esf:
 					return Esf;
 
-				case _ext_msf:
+			case Extensions._msf:
 					return Msf;
 
-				case _ext_qam:
+			case Extensions._qam:
 					return Qam;
 
-				case _ext_slt:
+			case Extensions._slt:
 					return Slt;
 
-				case _ext_ssf:
+			case Extensions._ssf:
 					return Ssf;
 
-				case _ext_es3:
-				case _ext_et3:
+			case Extensions._es3:
+			case Extensions._et3:
 					return Es3;
 
-				case _ext_ez2:
+			case Extensions._ez2:
 					return Ez2;
 
-				case _ext_ez3:
+			case Extensions._ez3:
 					return Ez3;
 
-				case _ext_fdf:
+			case Extensions._fdf:
 					return Fdf;
 
-				case _ext_mseed:
+			case Extensions._mseed:
 					return Mseed;
 
-				case _ext_seed:
-				case _ext_dataless:
+			case Extensions._seed:
+			case Extensions._dataless:
 					return Seed;
 
-				case _ext_gph:
+			case Extensions._gph:
 					return Gph;
 
-				case _ext_ftc:
+			case Extensions._ftc:
 					return Ftc;
 
-				case _ext_fm:
-				case _ext_frame:
-				case _ext_maker:
-				case _ext_book:
+			case Extensions._fm:
+			case Extensions._frame:
+			case Extensions._maker:
+			case Extensions._book:
 					return Fm;
 
-				case _ext_fnc:
+			case Extensions._fnc:
 					return Fnc;
 
-				case _ext_ltf:
+			case Extensions._ltf:
 					return Ltf;
 
-				case _ext_fsc:
+			case Extensions._fsc:
 					return Fsc;
 
-				case _ext_oas:
+			case Extensions._oas:
 					return Oas;
 
-				case _ext_oa2:
+			case Extensions._oa2:
 					return Oa2;
 
-				case _ext_oa3:
+			case Extensions._oa3:
 					return Oa3;
 
-				case _ext_fg5:
+			case Extensions._fg5:
 					return Fg5;
 
-				case _ext_bh2:
+			case Extensions._bh2:
 					return Bh2;
 
-				case _ext_ddd:
+			case Extensions._ddd:
 					return Ddd;
 
-				case _ext_xdw:
+			case Extensions._xdw:
 					return Xdw;
 
-				case _ext_xbd:
+			case Extensions._xbd:
 					return Xbd;
 
-				case _ext_fzs:
+			case Extensions._fzs:
 					return Fzs;
 
-				case _ext_txd:
+			case Extensions._txd:
 					return Txd;
 
-				case _ext_ggb:
+			case Extensions._ggb:
 					return Ggb;
 
-				case _ext_ggt:
+			case Extensions._ggt:
 					return Ggt;
 
-				case _ext_gex:
-				case _ext_gre:
+			case Extensions._gex:
+			case Extensions._gre:
 					return Gex;
 
-				case _ext_gxt:
+			case Extensions._gxt:
 					return Gxt;
 
-				case _ext_g2w:
+			case Extensions._g2w:
 					return G2w;
 
-				case _ext_g3w:
+			case Extensions._g3w:
 					return G3w;
 
-				case _ext_gmx:
+			case Extensions._gmx:
 					return Gmx;
 
-				case _ext_kml:
+			case Extensions._kml:
 					return Kml;
 
-				case _ext_kmz:
+			case Extensions._kmz:
 					return Kmz;
 
-				case _ext_gqf:
-				case _ext_gqs:
+			case Extensions._gqf:
+			case Extensions._gqs:
 					return Gqf;
 
-				case _ext_gac:
+			case Extensions._gac:
 					return Gac;
 
-				case _ext_ghf:
+			case Extensions._ghf:
 					return Ghf;
 
-				case _ext_gim:
+			case Extensions._gim:
 					return Gim;
 
-				case _ext_grv:
+			case Extensions._grv:
 					return Grv;
 
-				case _ext_gtm:
+			case Extensions._gtm:
 					return Gtm;
 
-				case _ext_tpl:
+			case Extensions._tpl:
 					return Tpl;
 
-				case _ext_vcg:
+			case Extensions._vcg:
 					return Vcg;
 
-				case _ext_hal:
+			case Extensions._hal:
 					return Hal;
 
-				case _ext_zmm:
+			case Extensions._zmm:
 					return Zmm;
 
-				case _ext_hbci:
+			case Extensions._hbci:
 					return Hbci;
 
-				case _ext_les:
+			case Extensions._les:
 					return Les;
 
-				case _ext_hpgl:
+			case Extensions._hpgl:
 					return Hpgl;
 
-				case _ext_hpid:
+			case Extensions._hpid:
 					return Hpid;
 
-				case _ext_hps:
+			case Extensions._hps:
 					return Hps;
 
-				case _ext_jlt:
+			case Extensions._jlt:
 					return Jlt;
 
-				case _ext_pcl:
+			case Extensions._pcl:
 					return Pcl;
 
-				case _ext_pclxl:
+			case Extensions._pclxl:
 					return Pclxl;
 
-				case _ext_sfd_hdstx:
+			case Extensions._sfd_hdstx:
 					return Sfdhdstx;
 
-				case _ext_mpy:
+			case Extensions._mpy:
 					return Mpy;
 
-				case _ext_afp:
-				case _ext_listafp:
-				case _ext_list3820:
+			case Extensions._afp:
+			case Extensions._listafp:
+			case Extensions._list3820:
 					return Afp;
 
-				case _ext_irm:
+			case Extensions._irm:
 					return Irm;
 
-				case _ext_sc:
+			case Extensions._sc:
 					return Sc;
 
-				case _ext_icc:
-				case _ext_icm:
+			case Extensions._icc:
+			case Extensions._icm:
 					return Icc;
 
-				case _ext_igl:
+			case Extensions._igl:
 					return Igl;
 
-				case _ext_ivp:
+			case Extensions._ivp:
 					return Ivp;
 
-				case _ext_ivu:
+			case Extensions._ivu:
 					return Ivu;
 
-				case _ext_igm:
+			case Extensions._igm:
 					return Igm;
 
-				case _ext_xpw:
-				case _ext_xpx:
+			case Extensions._xpw:
+			case Extensions._xpx:
 					return Xpw;
 
-				case _ext_i2g:
+			case Extensions._i2g:
 					return I2g;
 
-				case _ext_qbo:
+			case Extensions._qbo:
 					return Qbo;
 
-				case _ext_qfx:
+			case Extensions._qfx:
 					return Qfx;
 
-				case _ext_rcprofile:
+			case Extensions._rcprofile:
 					return Rcprofile;
 
-				case _ext_irp:
+			case Extensions._irp:
 					return Irp;
 
-				case _ext_xpr:
+			case Extensions._xpr:
 					return Xpr;
 
-				case _ext_fcs:
+			case Extensions._fcs:
 					return Fcs;
 
-				case _ext_jam:
+			case Extensions._jam:
 					return Jam;
 
-				case _ext_rms:
+			case Extensions._rms:
 					return Rms;
 
-				case _ext_jisp:
+			case Extensions._jisp:
 					return Jisp;
 
-				case _ext_joda:
+			case Extensions._joda:
 					return Joda;
 
-				case _ext_ktz:
-				case _ext_ktr:
+			case Extensions._ktz:
+			case Extensions._ktr:
 					return Ktz;
 
-				case _ext_karbon:
+			case Extensions._karbon:
 					return Karbon;
 
-				case _ext_chrt:
+			case Extensions._chrt:
 					return Chrt;
 
-				case _ext_kfo:
+			case Extensions._kfo:
 					return Kfo;
 
-				case _ext_flw:
+			case Extensions._flw:
 					return Flw;
 
-				case _ext_kon:
+			case Extensions._kon:
 					return Kon;
 
-				case _ext_kpr:
-				case _ext_kpt:
+			case Extensions._kpr:
+			case Extensions._kpt:
 					return Kpr;
 
-				case _ext_ksp:
+			case Extensions._ksp:
 					return Ksp;
 
-				case _ext_kwd:
-				case _ext_kwt:
+			case Extensions._kwd:
+			case Extensions._kwt:
 					return Kwd;
 
-				case _ext_htke:
+			case Extensions._htke:
 					return Htke;
 
-				case _ext_kia:
+			case Extensions._kia:
 					return Kia;
 
-				case _ext_kne:
-				case _ext_knp:
+			case Extensions._kne:
+			case Extensions._knp:
 					return Kne;
 
-				case _ext_skp:
-				case _ext_skd:
-				case _ext_skt:
-				case _ext_skm:
+			case Extensions._skp:
+			case Extensions._skd:
+			case Extensions._skt:
+			case Extensions._skm:
 					return Skp;
 
-				case _ext_sse:
+			case Extensions._sse:
 					return Sse;
 
-				case _ext_lasxml:
+			case Extensions._lasxml:
 					return Lasxml;
 
-				case _ext_lbd:
+			case Extensions._lbd:
 					return Lbd;
 
-				case _ext_lbe:
+			case Extensions._lbe:
 					return Lbe;
 
-				case _ext_123:
+			case Extensions._123:
 					return _123;
 
-				case _ext_apr:
+			case Extensions._apr:
 					return Apr;
 
-				case _ext_pre:
+			case Extensions._pre:
 					return Pre;
 
-				case _ext_nsf:
+			case Extensions._nsf:
 					return Nsf;
 
-				case _ext_org:
+			case Extensions._org:
 					return Org;
 
-				case _ext_scm:
+			case Extensions._scm:
 					return Scm;
 
-				case _ext_lwp:
+			case Extensions._lwp:
 					return Lwp;
 
-				case _ext_portpkg:
+			case Extensions._portpkg:
 					return Portpkg;
 
-				case _ext_mcd:
+			case Extensions._mcd:
 					return Mcd;
 
-				case _ext_mc1:
+			case Extensions._mc1:
 					return Mc1;
 
-				case _ext_cdkey:
+			case Extensions._cdkey:
 					return Cdkey;
 
-				case _ext_mwf:
+			case Extensions._mwf:
 					return Mwf;
 
-				case _ext_mfm:
+			case Extensions._mfm:
 					return Mfm;
 
-				case _ext_flo:
+			case Extensions._flo:
 					return Flo;
 
-				case _ext_igx:
+			case Extensions._igx:
 					return Igx;
 
-				case _ext_mif:
+			case Extensions._mif:
 					return Mif;
 
-				case _ext_daf:
+			case Extensions._daf:
 					return Daf;
 
-				case _ext_dis:
+			case Extensions._dis:
 					return Dis;
 
-				case _ext_mbk:
+			case Extensions._mbk:
 					return Mbk;
 
-				case _ext_mqy:
+			case Extensions._mqy:
 					return Mqy;
 
-				case _ext_msl:
+			case Extensions._msl:
 					return Msl;
 
-				case _ext_plc:
+			case Extensions._plc:
 					return Plc;
 
-				case _ext_txf:
+			case Extensions._txf:
 					return Txf;
 
-				case _ext_mpn:
+			case Extensions._mpn:
 					return Mpn;
 
-				case _ext_mpc:
+			case Extensions._mpc:
 					return Mpc;
 
-				case _ext_xul:
+			case Extensions._xul:
 					return Xul;
 
-				case _ext_cil:
+			case Extensions._cil:
 					return Cil;
 
-				case _ext_cab:
+			case Extensions._cab:
 					return Cab;
 
-				case _ext_xls:
-				case _ext_xlm:
-				case _ext_xla:
-				case _ext_xlc:
-				case _ext_xlt:
-				case _ext_xlw:
+			case Extensions._xls:
+			case Extensions._xlm:
+			case Extensions._xla:
+			case Extensions._xlc:
+			case Extensions._xlt:
+			case Extensions._xlw:
 					return Xls;
 
-				case _ext_xlam:
+			case Extensions._xlam:
 					return Xlam;
 
-				case _ext_xlsb:
+			case Extensions._xlsb:
 					return Xlsb;
 
-				case _ext_xlsm:
+			case Extensions._xlsm:
 					return Xlsm;
 
-				case _ext_xltm:
+			case Extensions._xltm:
 					return Xltm;
 
-				case _ext_eot:
+			case Extensions._eot:
 					return Eot;
 
-				case _ext_chm:
+			case Extensions._chm:
 					return Chm;
 
-				case _ext_ims:
+			case Extensions._ims:
 					return Ims;
 
-				case _ext_lrm:
+			case Extensions._lrm:
 					return Lrm;
 
-				case _ext_thmx:
+			case Extensions._thmx:
 					return Thmx;
 
-				case _ext_cat:
+			case Extensions._cat:
 					return Cat;
 
-				case _ext_stl:
+			case Extensions._stl:
 					return Stl;
 
-				case _ext_ppt:
-				case _ext_pps:
-				case _ext_pot:
+			case Extensions._ppt:
+			case Extensions._pps:
+			case Extensions._pot:
 					return Ppt;
 
-				case _ext_ppam:
+			case Extensions._ppam:
 					return Ppam;
 
-				case _ext_pptm:
+			case Extensions._pptm:
 					return Pptm;
 
-				case _ext_sldm:
+			case Extensions._sldm:
 					return Sldm;
 
-				case _ext_ppsm:
+			case Extensions._ppsm:
 					return Ppsm;
 
-				case _ext_potm:
+			case Extensions._potm:
 					return Potm;
 
-				case _ext_mpp:
-				case _ext_mpt:
+			case Extensions._mpp:
+			case Extensions._mpt:
 					return Mpp;
 
-				case _ext_docm:
+			case Extensions._docm:
 					return Docm;
 
-				case _ext_dotm:
+			case Extensions._dotm:
 					return Dotm;
 
-				case _ext_wps:
-				case _ext_wks:
-				case _ext_wcm:
-				case _ext_wdb:
+			case Extensions._wps:
+			case Extensions._wks:
+			case Extensions._wcm:
+			case Extensions._wdb:
 					return Wps;
 
-				case _ext_wpl:
+			case Extensions._wpl:
 					return Wpl;
 
-				case _ext_xps:
+			case Extensions._xps:
 					return Xps;
 
-				case _ext_mseq:
+			case Extensions._mseq:
 					return Mseq;
 
-				case _ext_mus:
+			case Extensions._mus:
 					return Mus;
 
-				case _ext_msty:
+			case Extensions._msty:
 					return Msty;
 
-				case _ext_taglet:
+			case Extensions._taglet:
 					return Taglet;
 
-				case _ext_nlu:
+			case Extensions._nlu:
 					return Nlu;
 
-				case _ext_ntf:
-				case _ext_nitf:
+			case Extensions._ntf:
+			case Extensions._nitf:
 					return Ntf;
 
-				case _ext_nnd:
+			case Extensions._nnd:
 					return Nnd;
 
-				case _ext_nns:
+			case Extensions._nns:
 					return Nns;
 
-				case _ext_nnw:
+			case Extensions._nnw:
 					return Nnw;
 
-				case _ext_ngdat:
+			case Extensions._ngdat:
 					return Ngdat;
 
-				case _ext_n_gage:
+			case Extensions._n_gage:
 					return Ngage;
 
-				case _ext_rpst:
+			case Extensions._rpst:
 					return Rpst;
 
-				case _ext_rpss:
+			case Extensions._rpss:
 					return Rpss;
 
-				case _ext_edm:
+			case Extensions._edm:
 					return Edm;
 
-				case _ext_edx:
+			case Extensions._edx:
 					return Edx;
 
-				case _ext_ext:
+			case Extensions._ext:
 					return Ext;
 
-				case _ext_odc:
+			case Extensions._odc:
 					return Odc;
 
-				case _ext_otc:
+			case Extensions._otc:
 					return Otc;
 
-				case _ext_odb:
+			case Extensions._odb:
 					return Odb;
 
-				case _ext_odf:
+			case Extensions._odf:
 					return Odf;
 
-				case _ext_odft:
+			case Extensions._odft:
 					return Odft;
 
-				case _ext_odg:
+			case Extensions._odg:
 					return Odg;
 
-				case _ext_otg:
+			case Extensions._otg:
 					return Otg;
 
-				case _ext_odi:
+			case Extensions._odi:
 					return Odi;
 
-				case _ext_oti:
+			case Extensions._oti:
 					return Oti;
 
-				case _ext_odp:
+			case Extensions._odp:
 					return Odp;
 
-				case _ext_otp:
+			case Extensions._otp:
 					return Otp;
 
-				case _ext_ods:
+			case Extensions._ods:
 					return Ods;
 
-				case _ext_ots:
+			case Extensions._ots:
 					return Ots;
 
-				case _ext_odt:
+			case Extensions._odt:
 					return Odt;
 
-				case _ext_odm:
+			case Extensions._odm:
 					return Odm;
 
-				case _ext_ott:
+			case Extensions._ott:
 					return Ott;
 
-				case _ext_oth:
+			case Extensions._oth:
 					return Oth;
 
-				case _ext_xo:
+			case Extensions._xo:
 					return Xo;
 
-				case _ext_dd2:
+			case Extensions._dd2:
 					return Dd2;
 
-				case _ext_oxt:
+			case Extensions._oxt:
 					return Oxt;
 
-				case _ext_pptx:
+			case Extensions._pptx:
 					return Pptx;
 
-				case _ext_sldx:
+			case Extensions._sldx:
 					return Sldx;
 
-				case _ext_ppsx:
+			case Extensions._ppsx:
 					return Ppsx;
 
-				case _ext_potx:
+			case Extensions._potx:
 					return Potx;
 
-				case _ext_xlsx:
+			case Extensions._xlsx:
 					return Xlsx;
 
-				case _ext_xltx:
+			case Extensions._xltx:
 					return Xltx;
 
-				case _ext_docx:
+			case Extensions._docx:
 					return Docx;
 
-				case _ext_dotx:
+			case Extensions._dotx:
 					return Dotx;
 
-				case _ext_mgp:
+			case Extensions._mgp:
 					return Mgp;
 
-				case _ext_dp:
+			case Extensions._dp:
 					return Dp;
 
-				case _ext_esa:
+			case Extensions._esa:
 					return Esa;
 
-				case _ext_pdb:
-				case _ext_pqa:
-				case _ext_oprc:
+			case Extensions._pdb:
+			case Extensions._pqa:
+			case Extensions._oprc:
 					return Pdb;
 
-				case _ext_paw:
+			case Extensions._paw:
 					return Paw;
 
-				case _ext_str:
+			case Extensions._str:
 					return Str;
 
-				case _ext_ei6:
+			case Extensions._ei6:
 					return Ei6;
 
-				case _ext_efif:
+			case Extensions._efif:
 					return Efif;
 
-				case _ext_wg:
+			case Extensions._wg:
 					return Wg;
 
-				case _ext_plf:
+			case Extensions._plf:
 					return Plf;
 
-				case _ext_pbd:
+			case Extensions._pbd:
 					return Pbd;
 
-				case _ext_box:
+			case Extensions._box:
 					return Box;
 
-				case _ext_mgz:
+			case Extensions._mgz:
 					return Mgz;
 
-				case _ext_qps:
+			case Extensions._qps:
 					return Qps;
 
-				case _ext_ptid:
+			case Extensions._ptid:
 					return Ptid;
 
-				case _ext_qxd:
-				case _ext_qxt:
-				case _ext_qwd:
-				case _ext_qwt:
-				case _ext_qxl:
-				case _ext_qxb:
+			case Extensions._qxd:
+			case Extensions._qxt:
+			case Extensions._qwd:
+			case Extensions._qwt:
+			case Extensions._qxl:
+			case Extensions._qxb:
 					return Qxd;
 
-				case _ext_bed:
+			case Extensions._bed:
 					return Bed;
 
-				case _ext_mxl:
+			case Extensions._mxl:
 					return Mxl;
 
-				case _ext_musicxml:
+			case Extensions._musicxml:
 					return Musicxml;
 
-				case _ext_cryptonote:
+			case Extensions._cryptonote:
 					return Cryptonote;
 
-				case _ext_cod:
+			case Extensions._cod:
 					return Cod;
 
-				case _ext_rm:
+			case Extensions._rm:
 					return Rm;
 
-				case _ext_rmvb:
+			case Extensions._rmvb:
 					return Rmvb;
 
-				case _ext_link66:
+			case Extensions._link66:
 					return Link66;
 
-				case _ext_st:
+			case Extensions._st:
 					return St;
 
-				case _ext_see:
+			case Extensions._see:
 					return See;
 
-				case _ext_sema:
+			case Extensions._sema:
 					return Sema;
 
-				case _ext_semd:
+			case Extensions._semd:
 					return Semd;
 
-				case _ext_semf:
+			case Extensions._semf:
 					return Semf;
 
-				case _ext_ifm:
+			case Extensions._ifm:
 					return Ifm;
 
-				case _ext_itp:
+			case Extensions._itp:
 					return Itp;
 
-				case _ext_iif:
+			case Extensions._iif:
 					return Iif;
 
-				case _ext_ipk:
+			case Extensions._ipk:
 					return Ipk;
 
-				case _ext_twd:
-				case _ext_twds:
+			case Extensions._twd:
+			case Extensions._twds:
 					return Twd;
 
-				case _ext_mmf:
+			case Extensions._mmf:
 					return Mmf;
 
-				case _ext_teacher:
+			case Extensions._teacher:
 					return Teacher;
 
-				case _ext_sdkm:
-				case _ext_sdkd:
+			case Extensions._sdkm:
+			case Extensions._sdkd:
 					return Sdkm;
 
-				case _ext_dxp:
+			case Extensions._dxp:
 					return Dxp;
 
-				case _ext_sfs:
+			case Extensions._sfs:
 					return Sfs;
 
-				case _ext_sdc:
+			case Extensions._sdc:
 					return Sdc;
 
-				case _ext_sda:
+			case Extensions._sda:
 					return Sda;
 
-				case _ext_sdd:
+			case Extensions._sdd:
 					return Sdd;
 
-				case _ext_smf:
+			case Extensions._smf:
 					return Smf;
 
-				case _ext_sdw:
-				case _ext_vor:
+			case Extensions._sdw:
+			case Extensions._vor:
 					return Sdw;
 
-				case _ext_sgl:
+			case Extensions._sgl:
 					return Sgl;
 
-				case _ext_smzip:
+			case Extensions._smzip:
 					return Smzip;
 
-				case _ext_sm:
+			case Extensions._sm:
 					return Sm;
 
-				case _ext_sxc:
+			case Extensions._sxc:
 					return Sxc;
 
-				case _ext_stc:
+			case Extensions._stc:
 					return Stc;
 
-				case _ext_sxd:
+			case Extensions._sxd:
 					return Sxd;
 
-				case _ext_std:
+			case Extensions._std:
 					return Std;
 
-				case _ext_sxi:
+			case Extensions._sxi:
 					return Sxi;
 
-				case _ext_sti:
+			case Extensions._sti:
 					return Sti;
 
-				case _ext_sxm:
+			case Extensions._sxm:
 					return Sxm;
 
-				case _ext_sxw:
+			case Extensions._sxw:
 					return Sxw;
 
-				case _ext_sxg:
+			case Extensions._sxg:
 					return Sxg;
 
-				case _ext_stw:
+			case Extensions._stw:
 					return Stw;
 
-				case _ext_sus:
-				case _ext_susp:
+			case Extensions._sus:
+			case Extensions._susp:
 					return Sus;
 
-				case _ext_svd:
+			case Extensions._svd:
 					return Svd;
 
-				case _ext_sis:
-				case _ext_sisx:
+			case Extensions._sis:
+			case Extensions._sisx:
 					return Sis;
 
-				case _ext_xsm:
+			case Extensions._xsm:
 					return Xsm;
 
-				case _ext_bdm:
+			case Extensions._bdm:
 					return Bdm;
 
-				case _ext_xdm:
+			case Extensions._xdm:
 					return Xdm;
 
-				case _ext_tao:
+			case Extensions._tao:
 					return Tao;
 
-				case _ext_pcap:
-				case _ext_cap:
-				case _ext_dmp:
+			case Extensions._pcap:
+			case Extensions._cap:
+			case Extensions._dmp:
 					return Pcap;
 
-				case _ext_tmo:
+			case Extensions._tmo:
 					return Tmo;
 
-				case _ext_tpt:
+			case Extensions._tpt:
 					return Tpt;
 
-				case _ext_mxs:
+			case Extensions._mxs:
 					return Mxs;
 
-				case _ext_tra:
+			case Extensions._tra:
 					return Tra;
 
-				case _ext_ufd:
-				case _ext_ufdl:
+			case Extensions._ufd:
+			case Extensions._ufdl:
 					return Ufd;
 
-				case _ext_utz:
+			case Extensions._utz:
 					return Utz;
 
-				case _ext_umj:
+			case Extensions._umj:
 					return Umj;
 
-				case _ext_unityweb:
+			case Extensions._unityweb:
 					return Unityweb;
 
-				case _ext_uoml:
+			case Extensions._uoml:
 					return Uoml;
 
-				case _ext_vcx:
+			case Extensions._vcx:
 					return Vcx;
 
-				case _ext_vsd:
-				case _ext_vst:
-				case _ext_vss:
-				case _ext_vsw:
+			case Extensions._vsd:
+			case Extensions._vst:
+			case Extensions._vss:
+			case Extensions._vsw:
 					return Vsd;
 
-				case _ext_vis:
+			case Extensions._vis:
 					return Vis;
 
-				case _ext_vsf:
+			case Extensions._vsf:
 					return Vsf;
 
-				case _ext_wbxml:
+			case Extensions._wbxml:
 					return Wbxml;
 
-				case _ext_wmlc:
+			case Extensions._wmlc:
 					return Wmlc;
 
-				case _ext_wmlsc:
+			case Extensions._wmlsc:
 					return Wmlsc;
 
-				case _ext_wtb:
+			case Extensions._wtb:
 					return Wtb;
 
-				case _ext_nbp:
+			case Extensions._nbp:
 					return Nbp;
 
-				case _ext_wpd:
+			case Extensions._wpd:
 					return Wpd;
 
-				case _ext_wqd:
+			case Extensions._wqd:
 					return Wqd;
 
-				case _ext_stf:
+			case Extensions._stf:
 					return Stf;
 
-				case _ext_xar:
+			case Extensions._xar:
 					return Xar;
 
-				case _ext_xfdl:
+			case Extensions._xfdl:
 					return Xfdl;
 
-				case _ext_hvd:
+			case Extensions._hvd:
 					return Hvd;
 
-				case _ext_hvs:
+			case Extensions._hvs:
 					return Hvs;
 
-				case _ext_hvp:
+			case Extensions._hvp:
 					return Hvp;
 
-				case _ext_osf:
+			case Extensions._osf:
 					return Osf;
 
-				case _ext_osfpvg:
+			case Extensions._osfpvg:
 					return Osfpvg;
 
-				case _ext_saf:
+			case Extensions._saf:
 					return Saf;
 
-				case _ext_spf:
+			case Extensions._spf:
 					return Spf;
 
-				case _ext_cmp:
+			case Extensions._cmp:
 					return Cmp;
 
-				case _ext_zir:
-				case _ext_zirz:
+			case Extensions._zir:
+			case Extensions._zirz:
 					return Zir;
 
-				case _ext_zaz:
+			case Extensions._zaz:
 					return Zaz;
 
-				case _ext_vxml:
+			case Extensions._vxml:
 					return Vxml;
 
-				case _ext_wgt:
+			case Extensions._wgt:
 					return Wgt;
 
-				case _ext_hlp:
+			case Extensions._hlp:
 					return Hlp;
 
-				case _ext_wsdl:
+			case Extensions._wsdl:
 					return Wsdl;
 
-				case _ext_wspolicy:
+			case Extensions._wspolicy:
 					return Wspolicy;
 
-				case _ext_7z:
+			case Extensions._7z:
 					return _7z;
 
-				case _ext_abw:
+			case Extensions._abw:
 					return Abw;
 
-				case _ext_ace:
+			case Extensions._ace:
 					return Ace;
 
-				case _ext_dmg:
+			case Extensions._dmg:
 					return Dmg;
 
-				case _ext_aab:
-				case _ext_x32:
-				case _ext_u32:
-				case _ext_vox:
+			case Extensions._aab:
+			case Extensions._x32:
+			case Extensions._u32:
+			case Extensions._vox:
 					return Aab;
 
-				case _ext_aam:
+			case Extensions._aam:
 					return Aam;
 
-				case _ext_aas:
+			case Extensions._aas:
 					return Aas;
 
-				case _ext_bcpio:
+			case Extensions._bcpio:
 					return Bcpio;
 
-				case _ext_torrent:
+			case Extensions._torrent:
 					return Torrent;
 
-				case _ext_blb:
-				case _ext_blorb:
+			case Extensions._blb:
+			case Extensions._blorb:
 					return Blb;
 
-				case _ext_bz:
+			case Extensions._bz:
 					return Bz;
 
-				case _ext_bz2:
-				case _ext_boz:
+			case Extensions._bz2:
+			case Extensions._boz:
 					return Bz2;
 
-				case _ext_cbr:
-				case _ext_cba:
-				case _ext_cbt:
-				case _ext_cbz:
-				case _ext_cb7:
+			case Extensions._cbr:
+			case Extensions._cba:
+			case Extensions._cbt:
+			case Extensions._cbz:
+			case Extensions._cb7:
 					return Cbr;
 
-				case _ext_vcd:
+			case Extensions._vcd:
 					return Vcd;
 
-				case _ext_cfs:
+			case Extensions._cfs:
 					return Cfs;
 
-				case _ext_chat:
+			case Extensions._chat:
 					return Chat;
 
-				case _ext_pgn:
+			case Extensions._pgn:
 					return Pgn;
 
-				case _ext_nsc:
+			case Extensions._nsc:
 					return Nsc;
 
-				case _ext_cpio:
+			case Extensions._cpio:
 					return Cpio;
 
-				case _ext_csh:
+			case Extensions._csh:
 					return Csh;
 
-				case _ext_deb:
-				case _ext_udeb:
+			case Extensions._deb:
+			case Extensions._udeb:
 					return Deb;
 
-				case _ext_dgc:
+			case Extensions._dgc:
 					return Dgc;
 
-				case _ext_dir:
-				case _ext_dcr:
-				case _ext_dxr:
-				case _ext_cst:
-				case _ext_cct:
-				case _ext_cxt:
-				case _ext_w3d:
-				case _ext_fgd:
-				case _ext_swa:
+			case Extensions._dir:
+			case Extensions._dcr:
+			case Extensions._dxr:
+			case Extensions._cst:
+			case Extensions._cct:
+			case Extensions._cxt:
+			case Extensions._w3d:
+			case Extensions._fgd:
+			case Extensions._swa:
 					return Dir;
 
-				case _ext_wad:
+			case Extensions._wad:
 					return Wad;
 
-				case _ext_ncx:
+			case Extensions._ncx:
 					return Ncx;
 
-				case _ext_dtb:
+			case Extensions._dtb:
 					return Dtb;
 
-				case _ext_res:
+			case Extensions._res:
 					return Res;
 
-				case _ext_dvi:
+			case Extensions._dvi:
 					return Dvi;
 
-				case _ext_evy:
+			case Extensions._evy:
 					return Evy;
 
-				case _ext_eva:
+			case Extensions._eva:
 					return Eva;
 
-				case _ext_bdf:
+			case Extensions._bdf:
 					return Bdf;
 
-				case _ext_gsf:
+			case Extensions._gsf:
 					return Gsf;
 
-				case _ext_psf:
+			case Extensions._psf:
 					return Psf;
 
-				case _ext_pcf:
+			case Extensions._pcf:
 					return Pcf;
 
-				case _ext_snf:
+			case Extensions._snf:
 					return Snf;
 
-				case _ext_pfa:
-				case _ext_pfb:
-				case _ext_pfm:
-				case _ext_afm:
+			case Extensions._pfa:
+			case Extensions._pfb:
+			case Extensions._pfm:
+			case Extensions._afm:
 					return Pfa;
 
-				case _ext_arc:
+			case Extensions._arc:
 					return Arc;
 
-				case _ext_spl:
+			case Extensions._spl:
 					return Spl;
 
-				case _ext_gca:
+			case Extensions._gca:
 					return Gca;
 
-				case _ext_ulx:
+			case Extensions._ulx:
 					return Ulx;
 
-				case _ext_gnumeric:
+			case Extensions._gnumeric:
 					return Gnumeric;
 
-				case _ext_gramps:
+			case Extensions._gramps:
 					return Gramps;
 
-				case _ext_gtar:
+			case Extensions._gtar:
 					return Gtar;
 
-				case _ext_hdf:
+			case Extensions._hdf:
 					return Hdf;
 
-				case _ext_install:
+			case Extensions._install:
 					return Install;
 
-				case _ext_iso:
+			case Extensions._iso:
 					return Iso;
 
-				case _ext_jnlp:
+			case Extensions._jnlp:
 					return Jnlp;
 
-				case _ext_latex:
+			case Extensions._latex:
 					return Latex;
 
-				case _ext_lzh:
-				case _ext_lha:
+			case Extensions._lzh:
+			case Extensions._lha:
 					return Lzh;
 
-				case _ext_mie:
+			case Extensions._mie:
 					return Mie;
 
-				case _ext_prc:
-				case _ext_mobi:
+			case Extensions._prc:
+			case Extensions._mobi:
 					return Prc;
 
-				case _ext_application:
+			case Extensions._application:
 					return Application;
 
-				case _ext_lnk:
+			case Extensions._lnk:
 					return Lnk;
 
-				case _ext_wmd:
+			case Extensions._wmd:
 					return Wmd;
 
-				case _ext_wmz:
+			case Extensions._wmz:
 					return Wmz;
 
-				case _ext_xbap:
+			case Extensions._xbap:
 					return Xbap;
 
-				case _ext_mdb:
+			case Extensions._mdb:
 					return Mdb;
 
-				case _ext_obd:
+			case Extensions._obd:
 					return Obd;
 
-				case _ext_crd:
+			case Extensions._crd:
 					return Crd;
 
-				case _ext_clp:
+			case Extensions._clp:
 					return Clp;
 
-				case _ext_exe:
-				case _ext_dll:
-				case _ext_com:
-				case _ext_bat:
-				case _ext_msi:
+			case Extensions._exe:
+			case Extensions._dll:
+			case Extensions._com:
+			case Extensions._bat:
+			case Extensions._msi:
 					return Exe;
 
-				case _ext_mvb:
-				case _ext_m13:
-				case _ext_m14:
+			case Extensions._mvb:
+			case Extensions._m13:
+			case Extensions._m14:
 					return Mvb;
 
-				case _ext_wmf:
-				case _ext_emf:
-				case _ext_emz:
+			case Extensions._wmf:
+			case Extensions._emf:
+			case Extensions._emz:
 					return Wmf;
 
-				case _ext_mny:
+			case Extensions._mny:
 					return Mny;
 
-				case _ext_pub:
+			case Extensions._pub:
 					return Pub;
 
-				case _ext_scd:
+			case Extensions._scd:
 					return Scd;
 
-				case _ext_trm:
+			case Extensions._trm:
 					return Trm;
 
-				case _ext_wri:
+			case Extensions._wri:
 					return Wri;
 
-				case _ext_nc:
-				case _ext_cdf:
+			case Extensions._nc:
+			case Extensions._cdf:
 					return Nc;
 
-				case _ext_nzb:
+			case Extensions._nzb:
 					return Nzb;
 
-				case _ext_p12:
-				case _ext_pfx:
+			case Extensions._p12:
+			case Extensions._pfx:
 					return P12;
 
-				case _ext_p7b:
-				case _ext_spc:
+			case Extensions._p7b:
+			case Extensions._spc:
 					return P7b;
 
-				case _ext_p7r:
+			case Extensions._p7r:
 					return P7r;
 
-				case _ext_rar:
+			case Extensions._rar:
 					return Rar;
 
-				case _ext_ris:
+			case Extensions._ris:
 					return Ris;
 
-				case _ext_sh:
+			case Extensions._sh:
 					return Sh;
 
-				case _ext_shar:
+			case Extensions._shar:
 					return Shar;
 
-				case _ext_swf:
+			case Extensions._swf:
 					return Swf;
 
-				case _ext_xap:
+			case Extensions._xap:
 					return Xap;
 
-				case _ext_sql:
+			case Extensions._sql:
 					return Sql;
 
-				case _ext_sit:
+			case Extensions._sit:
 					return Sit;
 
-				case _ext_sitx:
+			case Extensions._sitx:
 					return Sitx;
 
-				case _ext_srt:
+			case Extensions._srt:
 					return Srt;
 
-				case _ext_sv4cpio:
+			case Extensions._sv4cpio:
 					return Sv4cpio;
 
-				case _ext_sv4crc:
+			case Extensions._sv4crc:
 					return Sv4crc;
 
-				case _ext_t3:
+			case Extensions._t3:
 					return T3;
 
-				case _ext_gam:
+			case Extensions._gam:
 					return Gam;
 
-				case _ext_tar:
+			case Extensions._tar:
 					return Tar;
 
-				case _ext_tcl:
-				case _ext_tk:
+			case Extensions._tcl:
+			case Extensions._tk:
 					return Tcl;
 
-				case _ext_tex:
+			case Extensions._tex:
 					return Tex;
 
-				case _ext_tfm:
+			case Extensions._tfm:
 					return Tfm;
 
-				case _ext_texinfo:
-				case _ext_texi:
+			case Extensions._texinfo:
+			case Extensions._texi:
 					return Texinfo;
 
-				case _ext_obj:
+			case Extensions._obj:
 					return Obj;
 
-				case _ext_ustar:
+			case Extensions._ustar:
 					return Ustar;
 
-				case _ext_src:
+			case Extensions._src:
 					return Src;
 
-				case _ext_der:
-				case _ext_crt:
-				case _ext_pem:
+			case Extensions._der:
+			case Extensions._crt:
+			case Extensions._pem:
 					return Der;
 
-				case _ext_fig:
+			case Extensions._fig:
 					return Fig;
 
-				case _ext_xlf:
+			case Extensions._xlf:
 					return Xlf;
 
-				case _ext_xpi:
+			case Extensions._xpi:
 					return Xpi;
 
-				case _ext_xz:
+			case Extensions._xz:
 					return Xz;
 
-				case _ext_z1:
-				case _ext_z2:
-				case _ext_z3:
-				case _ext_z4:
-				case _ext_z5:
-				case _ext_z6:
-				case _ext_z7:
-				case _ext_z8:
+			case Extensions._z1:
+			case Extensions._z2:
+			case Extensions._z3:
+			case Extensions._z4:
+			case Extensions._z5:
+			case Extensions._z6:
+			case Extensions._z7:
+			case Extensions._z8:
 					return Z1;
 
-				case _ext_xaml:
+			case Extensions._xaml:
 					return Xaml;
 
-				case _ext_xdf:
+			case Extensions._xdf:
 					return Xdf;
 
-				case _ext_xenc:
+			case Extensions._xenc:
 					return Xenc;
 
-				case _ext_xhtml:
-				case _ext_xht:
+			case Extensions._xhtml:
+			case Extensions._xht:
 					return Xhtml;
 
-				case _ext_xml:
-				case _ext_xsl:
-				case _ext_xsd:
-				case _ext_rng:
+			case Extensions._xml:
+			case Extensions._xsl:
+			case Extensions._xsd:
+			case Extensions._rng:
 					return Xml;
 
-				case _ext_dtd:
+			case Extensions._dtd:
 					return Dtd;
 
-				case _ext_xop:
+			case Extensions._xop:
 					return Xop;
 
-				case _ext_xpl:
+			case Extensions._xpl:
 					return Xpl;
 
-				case _ext_xslt:
+			case Extensions._xslt:
 					return Xslt;
 
-				case _ext_xspf:
+			case Extensions._xspf:
 					return Xspf;
 
-				case _ext_mxml:
-				case _ext_xhvml:
-				case _ext_xvml:
-				case _ext_xvm:
+			case Extensions._mxml:
+			case Extensions._xhvml:
+			case Extensions._xvml:
+			case Extensions._xvm:
 					return Mxml;
 
-				case _ext_yang:
+			case Extensions._yang:
 					return Yang;
 
-				case _ext_yin:
+			case Extensions._yin:
 					return Yin;
 
-				case _ext_zip:
+			case Extensions._zip:
 					return Zip;
 
-				case _ext_adp:
+			case Extensions._adp:
 					return Adp;
 
-				case _ext_au:
-				case _ext_snd:
+			case Extensions._au:
+			case Extensions._snd:
 					return Au;
 
-				case _ext_mid:
-				case _ext_midi:
-				case _ext_kar:
-				case _ext_rmi:
+			case Extensions._mid:
+			case Extensions._midi:
+			case Extensions._kar:
+			case Extensions._rmi:
 					return Mid;
 
-				case _ext_m4a:
-				case _ext_mp4a:
-				case _ext_f4a:
-				case _ext_f4b:
+			case Extensions._m4a:
+			case Extensions._mp4a:
+			case Extensions._f4a:
+			case Extensions._f4b:
 					return M4a;
 
-				case _ext_mpga:
-				case _ext_mp2:
-				case _ext_mp2a:
-				case _ext_mp3:
-				case _ext_m2a:
-				case _ext_m3a:
+			case Extensions._mpga:
+			case Extensions._mp2:
+			case Extensions._mp2a:
+			case Extensions._mp3:
+			case Extensions._m2a:
+			case Extensions._m3a:
 					return Mpga;
 
-				case _ext_oga:
-				case _ext_ogg:
-				case _ext_spx:
-				case _ext_opus:
+			case Extensions._oga:
+			case Extensions._ogg:
+			case Extensions._spx:
+			case Extensions._opus:
 					return Oga;
 
-				case _ext_s3m:
+			case Extensions._s3m:
 					return S3m;
 
-				case _ext_sil:
+			case Extensions._sil:
 					return Sil;
 
-				case _ext_uva:
-				case _ext_uvva:
+			case Extensions._uva:
+			case Extensions._uvva:
 					return Uva;
 
-				case _ext_eol:
+			case Extensions._eol:
 					return Eol;
 
-				case _ext_dra:
+			case Extensions._dra:
 					return Dra;
 
-				case _ext_dts:
+			case Extensions._dts:
 					return Dts;
 
-				case _ext_dtshd:
+			case Extensions._dtshd:
 					return Dtshd;
 
-				case _ext_lvp:
+			case Extensions._lvp:
 					return Lvp;
 
-				case _ext_pya:
+			case Extensions._pya:
 					return Pya;
 
-				case _ext_ecelp4800:
+			case Extensions._ecelp4800:
 					return Ecelp4800;
 
-				case _ext_ecelp7470:
+			case Extensions._ecelp7470:
 					return Ecelp7470;
 
-				case _ext_ecelp9600:
+			case Extensions._ecelp9600:
 					return Ecelp9600;
 
-				case _ext_rip:
+			case Extensions._rip:
 					return Rip;
 
-				case _ext_weba:
+			case Extensions._weba:
 					return Weba;
 
-				case _ext_aac:
+			case Extensions._aac:
 					return Aac;
 
-				case _ext_aif:
-				case _ext_aiff:
-				case _ext_aifc:
+			case Extensions._aif:
+			case Extensions._aiff:
+			case Extensions._aifc:
 					return Aif;
 
-				case _ext_caf:
+			case Extensions._caf:
 					return Caf;
 
-				case _ext_flac:
+			case Extensions._flac:
 					return Flac;
 
-				case _ext_mka:
+			case Extensions._mka:
 					return Mka;
 
-				case _ext_m3u:
+			case Extensions._m3u:
 					return M3u;
 
-				case _ext_wax:
+			case Extensions._wax:
 					return Wax;
 
-				case _ext_wma:
+			case Extensions._wma:
 					return Wma;
 
-				case _ext_ram:
-				case _ext_ra:
+			case Extensions._ram:
+			case Extensions._ra:
 					return Ram;
 
-				case _ext_rmp:
+			case Extensions._rmp:
 					return Rmp;
 
-				case _ext_wav:
+			case Extensions._wav:
 					return Wav;
 
-				case _ext_xm:
+			case Extensions._xm:
 					return Xm;
 
-				case _ext_cdx:
+			case Extensions._cdx:
 					return Cdx;
 
-				case _ext_cif:
+			case Extensions._cif:
 					return Cif;
 
-				case _ext_cmdf:
+			case Extensions._cmdf:
 					return Cmdf;
 
-				case _ext_cml:
+			case Extensions._cml:
 					return Cml;
 
-				case _ext_csml:
+			case Extensions._csml:
 					return Csml;
 
-				case _ext_xyz:
+			case Extensions._xyz:
 					return Xyz;
 
-				case _ext_ttc:
+			case Extensions._ttc:
 					return Ttc;
 
-				case _ext_otf:
+			case Extensions._otf:
 					return Otf;
 
-				case _ext_ttf:
+			case Extensions._ttf:
 					return Ttf;
 
-				case _ext_woff:
+			case Extensions._woff:
 					return Woff;
 
-				case _ext_woff2:
+			case Extensions._woff2:
 					return Woff2;
 
-				case _ext_bmp:
+			case Extensions._bmp:
 					return Bmp;
 
-				case _ext_cgm:
+			case Extensions._cgm:
 					return Cgm;
 
-				case _ext_g3:
+			case Extensions._g3:
 					return G3;
 
-				case _ext_gif:
+			case Extensions._gif:
 					return Gif;
 
-				case _ext_ief:
+			case Extensions._ief:
 					return Ief;
 
-				case _ext_jpeg:
-				case _ext_jpg:
-				case _ext_jpe:
+			case Extensions._jpeg:
+			case Extensions._jpg:
+			case Extensions._jpe:
 					return Jpeg;
 
-				case _ext_ktx:
+			case Extensions._ktx:
 					return Ktx;
 
-				case _ext_png:
+			case Extensions._png:
 					return Png;
 
-				case _ext_btif:
+			case Extensions._btif:
 					return Btif;
 
-				case _ext_sgi:
+			case Extensions._sgi:
 					return Sgi;
 
-				case _ext_svg:
-				case _ext_svgz:
+			case Extensions._svg:
+			case Extensions._svgz:
 					return Svg;
 
-				case _ext_tiff:
-				case _ext_tif:
+			case Extensions._tiff:
+			case Extensions._tif:
 					return Tiff;
 
-				case _ext_psd:
+			case Extensions._psd:
 					return Psd;
 
-				case _ext_uvi:
-				case _ext_uvvi:
-				case _ext_uvg:
-				case _ext_uvvg:
+			case Extensions._uvi:
+			case Extensions._uvvi:
+			case Extensions._uvg:
+			case Extensions._uvvg:
 					return Uvi;
 
-				case _ext_djvu:
-				case _ext_djv:
+			case Extensions._djvu:
+			case Extensions._djv:
 					return Djvu;
 
-				case _ext_sub:
+			case Extensions._sub:
 					return Sub;
 
-				case _ext_dwg:
+			case Extensions._dwg:
 					return Dwg;
 
-				case _ext_dxf:
+			case Extensions._dxf:
 					return Dxf;
 
-				case _ext_fbs:
+			case Extensions._fbs:
 					return Fbs;
 
-				case _ext_fpx:
+			case Extensions._fpx:
 					return Fpx;
 
-				case _ext_fst:
+			case Extensions._fst:
 					return Fst;
 
-				case _ext_mmr:
+			case Extensions._mmr:
 					return Mmr;
 
-				case _ext_rlc:
+			case Extensions._rlc:
 					return Rlc;
 
-				case _ext_mdi:
+			case Extensions._mdi:
 					return Mdi;
 
-				case _ext_wdp:
+			case Extensions._wdp:
 					return Wdp;
 
-				case _ext_npx:
+			case Extensions._npx:
 					return Npx;
 
-				case _ext_wbmp:
+			case Extensions._wbmp:
 					return Wbmp;
 
-				case _ext_xif:
+			case Extensions._xif:
 					return Xif;
 
-				case _ext_webp:
+			case Extensions._webp:
 					return Webp;
 
-				case _ext_3ds:
+			case Extensions._3ds:
 					return _3ds;
 
-				case _ext_ras:
+			case Extensions._ras:
 					return Ras;
 
-				case _ext_cmx:
+			case Extensions._cmx:
 					return Cmx;
 
-				case _ext_fh:
-				case _ext_fhc:
-				case _ext_fh4:
-				case _ext_fh5:
-				case _ext_fh7:
+			case Extensions._fh:
+			case Extensions._fhc:
+			case Extensions._fh4:
+			case Extensions._fh5:
+			case Extensions._fh7:
 					return Fh;
 
-				case _ext_ico:
-				case _ext_cur:
+			case Extensions._ico:
+			case Extensions._cur:
 					return Ico;
 
-				case _ext_sid:
+			case Extensions._sid:
 					return Sid;
 
-				case _ext_pcx:
+			case Extensions._pcx:
 					return Pcx;
 
-				case _ext_pic:
-				case _ext_pct:
+			case Extensions._pic:
+			case Extensions._pct:
 					return Pic;
 
-				case _ext_pnm:
+			case Extensions._pnm:
 					return Pnm;
 
-				case _ext_pbm:
+			case Extensions._pbm:
 					return Pbm;
 
-				case _ext_pgm:
+			case Extensions._pgm:
 					return Pgm;
 
-				case _ext_ppm:
+			case Extensions._ppm:
 					return Ppm;
 
-				case _ext_rgb:
+			case Extensions._rgb:
 					return Rgb;
 
-				case _ext_tga:
+			case Extensions._tga:
 					return Tga;
 
-				case _ext_xbm:
+			case Extensions._xbm:
 					return Xbm;
 
-				case _ext_xpm:
+			case Extensions._xpm:
 					return Xpm;
 
-				case _ext_xwd:
+			case Extensions._xwd:
 					return Xwd;
 
-				case _ext_eml:
-				case _ext_mime:
+			case Extensions._eml:
+			case Extensions._mime:
 					return Eml;
 
-				case _ext_igs:
-				case _ext_iges:
+			case Extensions._igs:
+			case Extensions._iges:
 					return Igs;
 
-				case _ext_msh:
-				case _ext_mesh:
-				case _ext_silo:
+			case Extensions._msh:
+			case Extensions._mesh:
+			case Extensions._silo:
 					return Msh;
 
-				case _ext_dae:
+			case Extensions._dae:
 					return Dae;
 
-				case _ext_dwf:
+			case Extensions._dwf:
 					return Dwf;
 
-				case _ext_gdl:
+			case Extensions._gdl:
 					return Gdl;
 
-				case _ext_gtw:
+			case Extensions._gtw:
 					return Gtw;
 
-				case _ext_mts:
+			case Extensions._mts:
 					return Mts;
 
-				case _ext_vtu:
+			case Extensions._vtu:
 					return Vtu;
 
-				case _ext_wrl:
-				case _ext_vrml:
+			case Extensions._wrl:
+			case Extensions._vrml:
 					return Wrl;
 
-				case _ext_x3db:
-				case _ext_x3dbz:
+			case Extensions._x3db:
+			case Extensions._x3dbz:
 					return X3db;
 
-				case _ext_x3dv:
-				case _ext_x3dvz:
+			case Extensions._x3dv:
+			case Extensions._x3dvz:
 					return X3dv;
 
-				case _ext_x3d:
-				case _ext_x3dz:
+			case Extensions._x3d:
+			case Extensions._x3dz:
 					return X3d;
 
-				case _ext_appcache:
-				case _ext_manifest:
+			case Extensions._appcache:
+			case Extensions._manifest:
 					return Appcache;
 
-				case _ext_ics:
-				case _ext_ifb:
+			case Extensions._ics:
+			case Extensions._ifb:
 					return Ics;
 
-				case _ext_css:
+			case Extensions._css:
 					return Css;
 
-				case _ext_csv:
+			case Extensions._csv:
 					return Csv;
 
-				case _ext_html:
-				case _ext_htm:
-				case _ext_shtml:
+			case Extensions._html:
+			case Extensions._htm:
+			case Extensions._shtml:
 					return Html;
 
-				case _ext_n3:
+			case Extensions._n3:
 					return N3;
 
-				case _ext_txt:
-				case _ext_text:
-				case _ext_conf:
-				case _ext_def:
-				case _ext_list:
-				case _ext_log:
-				case _ext_in:
-				case _ext_ini:
+			case Extensions._txt:
+			case Extensions._text:
+			case Extensions._conf:
+			case Extensions._def:
+			case Extensions._list:
+			case Extensions._log:
+			case Extensions._in:
+			case Extensions._ini:
 					return Txt;
 
-				case _ext_dsc:
+			case Extensions._dsc:
 					return Dsc;
 
-				case _ext_rtx:
+			case Extensions._rtx:
 					return Rtx;
 
-				case _ext_sgml:
-				case _ext_sgm:
+			case Extensions._sgml:
+			case Extensions._sgm:
 					return Sgml;
 
-				case _ext_tsv:
+			case Extensions._tsv:
 					return Tsv;
 
-				case _ext_t:
-				case _ext_tr:
-				case _ext_roff:
-				case _ext_man:
-				case _ext_me:
-				case _ext_ms:
+			case Extensions._t:
+			case Extensions._tr:
+			case Extensions._roff:
+			case Extensions._man:
+			case Extensions._me:
+			case Extensions._ms:
 					return T;
 
-				case _ext_ttl:
+			case Extensions._ttl:
 					return Ttl;
 
-				case _ext_uri:
-				case _ext_uris:
-				case _ext_urls:
+			case Extensions._uri:
+			case Extensions._uris:
+			case Extensions._urls:
 					return Uri;
 
-				case _ext_vcard:
+			case Extensions._vcard:
 					return Vcard;
 
-				case _ext_curl:
+			case Extensions._curl:
 					return Curl;
 
-				case _ext_dcurl:
+			case Extensions._dcurl:
 					return Dcurl;
 
-				case _ext_mcurl:
+			case Extensions._mcurl:
 					return Mcurl;
 
-				case _ext_scurl:
+			case Extensions._scurl:
 					return Scurl;
 
-				case _ext_fly:
+			case Extensions._fly:
 					return Fly;
 
-				case _ext_flx:
+			case Extensions._flx:
 					return Flx;
 
-				case _ext_gv:
+			case Extensions._gv:
 					return Gv;
 
-				case _ext_3dml:
+			case Extensions._3dml:
 					return _3dml;
 
-				case _ext_spot:
+			case Extensions._spot:
 					return Spot;
 
-				case _ext_jad:
+			case Extensions._jad:
 					return Jad;
 
-				case _ext_wml:
+			case Extensions._wml:
 					return Wml;
 
-				case _ext_wmls:
+			case Extensions._wmls:
 					return Wmls;
 
-				case _ext_s:
-				case _ext_asm:
+			case Extensions._s:
+			case Extensions._asm:
 					return S;
 
-				case _ext_c:
-				case _ext_cc:
-				case _ext_cxx:
-				case _ext_cpp:
-				case _ext_h:
-				case _ext_hh:
-				case _ext_dic:
+			case Extensions._c:
+			case Extensions._cc:
+			case Extensions._cxx:
+			case Extensions._cpp:
+			case Extensions._h:
+			case Extensions._hh:
+			case Extensions._dic:
 					return C;
 
-				case _ext_f:
-				case _ext_for:
-				case _ext_f77:
-				case _ext_f90:
+			case Extensions._f:
+			case Extensions._for:
+			case Extensions._f77:
+			case Extensions._f90:
 					return F;
 
-				case _ext_java:
+			case Extensions._java:
 					return Java;
 
-				case _ext_nfo:
+			case Extensions._nfo:
 					return Nfo;
 
-				case _ext_opml:
+			case Extensions._opml:
 					return Opml;
 
-				case _ext_p:
-				case _ext_pas:
+			case Extensions._p:
+			case Extensions._pas:
 					return P;
 
-				case _ext_etx:
+			case Extensions._etx:
 					return Etx;
 
-				case _ext_sfv:
+			case Extensions._sfv:
 					return Sfv;
 
-				case _ext_uu:
+			case Extensions._uu:
 					return Uu;
 
-				case _ext_vcs:
+			case Extensions._vcs:
 					return Vcs;
 
-				case _ext_vcf:
+			case Extensions._vcf:
 					return Vcf;
 
-				case _ext_3gp:
-				case _ext_3gpp:
+			case Extensions._3gp:
+			case Extensions._3gpp:
 					return _3gp;
 
-				case _ext_3g2:
+			case Extensions._3g2:
 					return _3g2;
 
-				case _ext_h261:
+			case Extensions._h261:
 					return H261;
 
-				case _ext_h263:
+			case Extensions._h263:
 					return H263;
 
-				case _ext_h264:
+			case Extensions._h264:
 					return H264;
 
-				case _ext_jpgv:
+			case Extensions._jpgv:
 					return Jpgv;
 
-				case _ext_jpm:
-				case _ext_jpgm:
+			case Extensions._jpm:
+			case Extensions._jpgm:
 					return Jpm;
 
-				case _ext_mj2:
-				case _ext_mjp2:
+			case Extensions._mj2:
+			case Extensions._mjp2:
 					return Mj2;
 
-				case _ext_mp4:
-				case _ext_mp4v:
-				case _ext_mpg4:
-				case _ext_f4p:
+			case Extensions._mp4:
+			case Extensions._mp4v:
+			case Extensions._mpg4:
+			case Extensions._f4p:
 					return Mp4;
 
-				case _ext_mpeg:
-				case _ext_mpg:
-				case _ext_mpe:
-				case _ext_m1v:
-				case _ext_m2v:
+			case Extensions._mpeg:
+			case Extensions._mpg:
+			case Extensions._mpe:
+			case Extensions._m1v:
+			case Extensions._m2v:
 					return Mpeg;
 
-				case _ext_ogv:
+			case Extensions._ogv:
 					return Ogv;
 
-				case _ext_qt:
-				case _ext_mov:
+			case Extensions._qt:
+			case Extensions._mov:
 					return Qt;
 
-				case _ext_uvh:
-				case _ext_uvvh:
+			case Extensions._uvh:
+			case Extensions._uvvh:
 					return Uvh;
 
-				case _ext_uvm:
-				case _ext_uvvm:
+			case Extensions._uvm:
+			case Extensions._uvvm:
 					return Uvm;
 
-				case _ext_uvp:
-				case _ext_uvvp:
+			case Extensions._uvp:
+			case Extensions._uvvp:
 					return Uvp;
 
-				case _ext_uvs:
-				case _ext_uvvs:
+			case Extensions._uvs:
+			case Extensions._uvvs:
 					return Uvs;
 
-				case _ext_uvv:
-				case _ext_uvvv:
+			case Extensions._uvv:
+			case Extensions._uvvv:
 					return Uvv;
 
-				case _ext_dvb:
+			case Extensions._dvb:
 					return Dvb;
 
-				case _ext_fvt:
+			case Extensions._fvt:
 					return Fvt;
 
-				case _ext_mxu:
-				case _ext_m4u:
+			case Extensions._mxu:
+			case Extensions._m4u:
 					return Mxu;
 
-				case _ext_pyv:
+			case Extensions._pyv:
 					return Pyv;
 
-				case _ext_uvu:
-				case _ext_uvvu:
+			case Extensions._uvu:
+			case Extensions._uvvu:
 					return Uvu;
 
-				case _ext_viv:
+			case Extensions._viv:
 					return Viv;
 
-				case _ext_webm:
+			case Extensions._webm:
 					return Webm;
 
-				case _ext_f4v:
+			case Extensions._f4v:
 					return F4v;
 
-				case _ext_fli:
+			case Extensions._fli:
 					return Fli;
 
-				case _ext_flv:
+			case Extensions._flv:
 					return Flv;
 
-				case _ext_m4v:
+			case Extensions._m4v:
 					return M4v;
 
-				case _ext_mkv:
-				case _ext_mk3d:
-				case _ext_mks:
+			case Extensions._mkv:
+			case Extensions._mk3d:
+			case Extensions._mks:
 					return Mkv;
 
-				case _ext_mng:
+			case Extensions._mng:
 					return Mng;
 
-				case _ext_asf:
-				case _ext_asx:
+			case Extensions._asf:
+			case Extensions._asx:
 					return Asf;
 
-				case _ext_vob:
+			case Extensions._vob:
 					return Vob;
 
-				case _ext_wm:
+			case Extensions._wm:
 					return Wm;
 
-				case _ext_wmv:
+			case Extensions._wmv:
 					return Wmv;
 
-				case _ext_wmx:
+			case Extensions._wmx:
 					return Wmx;
 
-				case _ext_wvx:
+			case Extensions._wvx:
 					return Wvx;
 
-				case _ext_avi:
+			case Extensions._avi:
 					return Avi;
 
-				case _ext_movie:
+			case Extensions._movie:
 					return Movie;
 
-				case _ext_smv:
+			case Extensions._smv:
 					return Smv;
 
-				case _ext_ice:
+			case Extensions._ice:
 					return Ice;
 
-				case _ext_jsonld:
+			case Extensions._jsonld:
 					return Jsonld;
 
-				case _ext_geojson:
+			case Extensions._geojson:
 					return Geojson;
 
-				case _ext_mjs:
+			case Extensions._mjs:
 					return Mjs;
 
-				case _ext_wasm:
+			case Extensions._wasm:
 					return Wasm;
 
-				case _ext_webmanifest:
+			case Extensions._webmanifest:
 					return Webmanifest;
 
-				case _ext_webapp:
+			case Extensions._webapp:
 					return Webapp;
 
-				case _ext_jxr:
-				case _ext_hdp:
+			case Extensions._jxr:
+			case Extensions._hdp:
 					return Jxr;
 
-				case _ext_jng:
+			case Extensions._jng:
 					return Jng;
 
-				case _ext_bbaw:
+			case Extensions._bbaw:
 					return Bbaw;
 
-				case _ext_crx:
+			case Extensions._crx:
 					return Crx;
 
-				case _ext_cco:
+			case Extensions._cco:
 					return Cco;
 
-				case _ext_jardiff:
+			case Extensions._jardiff:
 					return Jardiff;
 
-				case _ext_run:
+			case Extensions._run:
 					return Run;
 
-				case _ext_oex:
+			case Extensions._oex:
 					return Oex;
 
-				case _ext_pl:
-				case _ext_pm:
+			case Extensions._pl:
+			case Extensions._pm:
 					return Pl;
 
-				case _ext_rpm:
+			case Extensions._rpm:
 					return Rpm;
 
-				case _ext_sea:
+			case Extensions._sea:
 					return Sea;
 
-				case _ext_md:
-				case _ext_markdown:
+			case Extensions._md:
+			case Extensions._markdown:
 					return Md;
 
-				case _ext_mml:
+			case Extensions._mml:
 					return Mml;
 
-				case _ext_xloc:
+			case Extensions._xloc:
 					return Xloc;
 
-				case _ext_vtt:
+			case Extensions._vtt:
 					return Vtt;
 
-				case _ext_htc:
+			case Extensions._htc:
 					return Htc;
 
-				case _ext_bdoc:
+			case Extensions._bdoc:
 					return Bdoc;
 
-				case _ext_mpd:
-					return Mpd;
-
-				case _ext_gz:
-					return Gz;
-
-				case _ext_hjson:
+			case Extensions._hjson:
 					return Hjson;
 
-				case _ext_json5:
+			case Extensions._json5:
 					return Json5;
 
-				case _ext_nq:
-					return Nq;
+			case Extensions._cjs:
+					return Cjs;
 
-				case _ext_nt:
-					return Nt;
-
-				case _ext_raml:
+			case Extensions._raml:
 					return Raml;
 
-				case _ext_siv:
-				case _ext_sieve:
+			case Extensions._siv:
+			case Extensions._sieve:
 					return Siv;
 
-				case _ext_toml:
+			case Extensions._toml:
 					return Toml;
 
-				case _ext_pkpass:
+			case Extensions._ubj:
+					return Ubj;
+
+			case Extensions._pkpass:
 					return Pkpass;
 
-				case _ext_csl:
-					return Csl;
-
-				case _ext_gdoc:
+			case Extensions._gdoc:
 					return Gdoc;
 
-				case _ext_gslides:
+			case Extensions._gslides:
 					return Gslides;
 
-				case _ext_gsheet:
+			case Extensions._gsheet:
 					return Gsheet;
 
-				case _ext_msg:
+			case Extensions._msg:
 					return Msg;
 
-				case _ext_wadl:
-					return Wadl;
-
-				case _ext_arj:
+			case Extensions._arj:
 					return Arj;
 
-				case _ext_php:
+			case Extensions._php:
 					return Php;
 
-				case _ext_kdbx:
+			case Extensions._kdbx:
 					return Kdbx;
 
-				case _ext_luac:
+			case Extensions._luac:
 					return Luac;
 
-				case _ext_pac:
+			case Extensions._pac:
 					return Pac;
 
-				case _ext_hdd:
+			case Extensions._hdd:
 					return Hdd;
 
-				case _ext_ova:
+			case Extensions._ova:
 					return Ova;
 
-				case _ext_ovf:
+			case Extensions._ovf:
 					return Ovf;
 
-				case _ext_vbox:
+			case Extensions._vbox:
 					return Vbox;
 
-				case _ext_vbox_extpack:
+			case Extensions._vbox_extpack:
 					return Vboxextpack;
 
-				case _ext_vdi:
+			case Extensions._vdi:
 					return Vdi;
 
-				case _ext_vhd:
+			case Extensions._vhd:
 					return Vhd;
 
-				case _ext_vmdk:
+			case Extensions._vmdk:
 					return Vmdk;
 
-				case _ext_mxmf:
-					return Mxmf;
-
-				case _ext_apng:
+			case Extensions._apng:
 					return Apng;
 
-				case _ext_heic:
+			case Extensions._avif:
+					return Avif;
+
+			case Extensions._heic:
 					return Heic;
 
-				case _ext_heics:
+			case Extensions._heics:
 					return Heics;
 
-				case _ext_heif:
+			case Extensions._heif:
 					return Heif;
 
-				case _ext_heifs:
+			case Extensions._heifs:
 					return Heifs;
 
-				case _ext_jp2:
-				case _ext_jpg2:
+			case Extensions._jp2:
+			case Extensions._jpg2:
 					return Jp2;
 
-				case _ext_jpx:
-				case _ext_jpf:
+			case Extensions._jpx:
+			case Extensions._jpf:
 					return Jpx;
 
-				case _ext_dds:
+			case Extensions._dds:
 					return Dds;
 
-				case _ext_coffee:
-				case _ext_litcoffee:
+			case Extensions._coffee:
+			case Extensions._litcoffee:
 					return Coffee;
 
-				case _ext_jade:
+			case Extensions._jade:
 					return Jade;
 
-				case _ext_jsx:
+			case Extensions._jsx:
 					return Jsx;
 
-				case _ext_less:
+			case Extensions._less:
 					return Less;
 
-				case _ext_mdx:
+			case Extensions._mdx:
 					return Mdx;
 
-				case _ext_shex:
+			case Extensions._shex:
 					return Shex;
 
-				case _ext_slim:
-				case _ext_slm:
+			case Extensions._slim:
+			case Extensions._slm:
 					return Slim;
 
-				case _ext_stylus:
-				case _ext_styl:
+			case Extensions._stylus:
+			case Extensions._styl:
 					return Stylus;
 
-				case _ext_hbs:
+			case Extensions._hbs:
 					return Hbs;
 
-				case _ext_lua:
+			case Extensions._lua:
 					return Lua;
 
-				case _ext_mkd:
+			case Extensions._mkd:
 					return Mkd;
 
-				case _ext_pde:
+			case Extensions._pde:
 					return Pde;
 
-				case _ext_sass:
+			case Extensions._sass:
 					return Sass;
 
-				case _ext_scss:
+			case Extensions._scss:
 					return Scss;
 
-				case _ext_ymp:
+			case Extensions._ymp:
 					return Ymp;
 
-				case _ext_yaml:
-				case _ext_yml:
+			case Extensions._yaml:
+			case Extensions._yml:
 					return Yaml;
 
 				default: 
 					return null;
             }
         }
+
+        // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
+        internal static string[] LookupMimeType(string mimeType)
+        {
+            switch (mimeType)
+            {
+				case Ez:
+					return new[] {Extensions._ez};
+				case Aw:
+					return new[] {Extensions._aw};
+				case Atom:
+					return new[] {Extensions._atom};
+				case Atomcat:
+					return new[] {Extensions._atomcat};
+				case Atomsvc:
+					return new[] {Extensions._atomsvc};
+				case Ccxml:
+					return new[] {Extensions._ccxml};
+				case Cdmia:
+					return new[] {Extensions._cdmia};
+				case Cdmic:
+					return new[] {Extensions._cdmic};
+				case Cdmid:
+					return new[] {Extensions._cdmid};
+				case Cdmio:
+					return new[] {Extensions._cdmio};
+				case Cdmiq:
+					return new[] {Extensions._cdmiq};
+				case Cu:
+					return new[] {Extensions._cu};
+				case Davmount:
+					return new[] {Extensions._davmount};
+				case Dbk:
+					return new[] {Extensions._dbk};
+				case Dssc:
+					return new[] {Extensions._dssc};
+				case Xdssc:
+					return new[] {Extensions._xdssc};
+				case Ecma:
+				//case Es:
+					return new[] {Extensions._ecma, Extensions._es};
+				case Emma:
+					return new[] {Extensions._emma};
+				case Epub:
+					return new[] {Extensions._epub};
+				case Exi:
+					return new[] {Extensions._exi};
+				case Pfr:
+					return new[] {Extensions._pfr};
+				case Gml:
+					return new[] {Extensions._gml};
+				case Gpx:
+					return new[] {Extensions._gpx};
+				case Gxf:
+					return new[] {Extensions._gxf};
+				case Stk:
+					return new[] {Extensions._stk};
+				case Ink:
+				//case Inkml:
+					return new[] {Extensions._ink, Extensions._inkml};
+				case Ipfix:
+					return new[] {Extensions._ipfix};
+				case Jar:
+				//case Ear:
+				//case War:
+					return new[] {Extensions._jar, Extensions._ear, Extensions._war};
+				case Ser:
+					return new[] {Extensions._ser};
+				case Class:
+					return new[] {Extensions._class};
+				case Js:
+					return new[] {Extensions._js};
+				case Json:
+				//case Map:
+				//case Topojson:
+					return new[] {Extensions._json, Extensions._map, Extensions._topojson};
+				case Jsonml:
+					return new[] {Extensions._jsonml};
+				case Lostxml:
+					return new[] {Extensions._lostxml};
+				case Hqx:
+					return new[] {Extensions._hqx};
+				case Cpt:
+					return new[] {Extensions._cpt};
+				case Mads:
+					return new[] {Extensions._mads};
+				case Mrc:
+					return new[] {Extensions._mrc};
+				case Mrcx:
+					return new[] {Extensions._mrcx};
+				case Ma:
+				//case Nb:
+				//case Mb:
+					return new[] {Extensions._ma, Extensions._nb, Extensions._mb};
+				case Mathml:
+					return new[] {Extensions._mathml};
+				case Mbox:
+					return new[] {Extensions._mbox};
+				case Mscml:
+					return new[] {Extensions._mscml};
+				case Metalink:
+					return new[] {Extensions._metalink};
+				case Meta4:
+					return new[] {Extensions._meta4};
+				case Mets:
+					return new[] {Extensions._mets};
+				case Mods:
+					return new[] {Extensions._mods};
+				case M21:
+				//case Mp21:
+					return new[] {Extensions._m21, Extensions._mp21};
+				case Mp4s:
+				//case M4p:
+					return new[] {Extensions._mp4s, Extensions._m4p};
+				case Doc:
+				//case Dot:
+					return new[] {Extensions._doc, Extensions._dot};
+				case Mxf:
+					return new[] {Extensions._mxf};
+				case Bin:
+				//case Dms:
+				//case Lrf:
+				//case Mar:
+				//case So:
+				//case Dist:
+				//case Distz:
+				//case Pkg:
+				//case Bpk:
+				//case Dump:
+				//case Elc:
+				//case Deploy:
+				//case Img:
+				//case Msm:
+				//case Msp:
+				//case Safariextz:
+				//case Buffer:
+					return new[] {Extensions._bin, Extensions._dms, Extensions._lrf, Extensions._mar, Extensions._so, Extensions._dist, Extensions._distz, Extensions._pkg, Extensions._bpk, Extensions._dump, Extensions._elc, Extensions._deploy, Extensions._img, Extensions._msm, Extensions._msp, Extensions._safariextz, Extensions._buffer};
+				case Oda:
+					return new[] {Extensions._oda};
+				case Opf:
+					return new[] {Extensions._opf};
+				case Ogx:
+					return new[] {Extensions._ogx};
+				case Omdoc:
+					return new[] {Extensions._omdoc};
+				case Onetoc:
+				//case Onetoc2:
+				//case Onetmp:
+				//case Onepkg:
+					return new[] {Extensions._onetoc, Extensions._onetoc2, Extensions._onetmp, Extensions._onepkg};
+				case Oxps:
+					return new[] {Extensions._oxps};
+				case Xer:
+					return new[] {Extensions._xer};
+				case Pdf:
+					return new[] {Extensions._pdf};
+				case Pgp:
+					return new[] {Extensions._pgp};
+				case Asc:
+				//case Sig:
+					return new[] {Extensions._asc, Extensions._sig};
+				case Prf:
+					return new[] {Extensions._prf};
+				case P10:
+					return new[] {Extensions._p10};
+				case P7m:
+				//case P7c:
+					return new[] {Extensions._p7m, Extensions._p7c};
+				case P7s:
+					return new[] {Extensions._p7s};
+				case P8:
+					return new[] {Extensions._p8};
+				case Ac:
+					return new[] {Extensions._ac};
+				case Cer:
+					return new[] {Extensions._cer};
+				case Crl:
+					return new[] {Extensions._crl};
+				case Pkipath:
+					return new[] {Extensions._pkipath};
+				case Pki:
+					return new[] {Extensions._pki};
+				case Pls:
+					return new[] {Extensions._pls};
+				case Ai:
+				//case Eps:
+				//case Ps:
+					return new[] {Extensions._ai, Extensions._eps, Extensions._ps};
+				case Cww:
+					return new[] {Extensions._cww};
+				case Pskcxml:
+					return new[] {Extensions._pskcxml};
+				case Rdf:
+				//case Owl:
+					return new[] {Extensions._rdf, Extensions._owl};
+				case Rif:
+					return new[] {Extensions._rif};
+				case Rnc:
+					return new[] {Extensions._rnc};
+				case Rl:
+					return new[] {Extensions._rl};
+				case Rld:
+					return new[] {Extensions._rld};
+				case Rs:
+					return new[] {Extensions._rs};
+				case Gbr:
+					return new[] {Extensions._gbr};
+				case Mft:
+					return new[] {Extensions._mft};
+				case Roa:
+					return new[] {Extensions._roa};
+				case Rsd:
+					return new[] {Extensions._rsd};
+				case Rss:
+					return new[] {Extensions._rss};
+				case Rtf:
+					return new[] {Extensions._rtf};
+				case Sbml:
+					return new[] {Extensions._sbml};
+				case Scq:
+					return new[] {Extensions._scq};
+				case Scs:
+					return new[] {Extensions._scs};
+				case Spq:
+					return new[] {Extensions._spq};
+				case Spp:
+					return new[] {Extensions._spp};
+				case Sdp:
+					return new[] {Extensions._sdp};
+				case Setpay:
+					return new[] {Extensions._setpay};
+				case Setreg:
+					return new[] {Extensions._setreg};
+				case Shf:
+					return new[] {Extensions._shf};
+				case Smi:
+				//case Smil:
+					return new[] {Extensions._smi, Extensions._smil};
+				case Rq:
+					return new[] {Extensions._rq};
+				case Srx:
+					return new[] {Extensions._srx};
+				case Gram:
+					return new[] {Extensions._gram};
+				case Grxml:
+					return new[] {Extensions._grxml};
+				case Sru:
+					return new[] {Extensions._sru};
+				case Ssdl:
+					return new[] {Extensions._ssdl};
+				case Ssml:
+					return new[] {Extensions._ssml};
+				case Tei:
+				//case Teicorpus:
+					return new[] {Extensions._tei, Extensions._teicorpus};
+				case Tfi:
+					return new[] {Extensions._tfi};
+				case Tsd:
+					return new[] {Extensions._tsd};
+				case Plb:
+					return new[] {Extensions._plb};
+				case Psb:
+					return new[] {Extensions._psb};
+				case Pvb:
+					return new[] {Extensions._pvb};
+				case Tcap:
+					return new[] {Extensions._tcap};
+				case Pwn:
+					return new[] {Extensions._pwn};
+				case Aso:
+					return new[] {Extensions._aso};
+				case Imp:
+					return new[] {Extensions._imp};
+				case Acu:
+					return new[] {Extensions._acu};
+				case Atc:
+				//case Acutc:
+					return new[] {Extensions._atc, Extensions._acutc};
+				case Air:
+					return new[] {Extensions._air};
+				case Fcdt:
+					return new[] {Extensions._fcdt};
+				case Fxp:
+				//case Fxpl:
+					return new[] {Extensions._fxp, Extensions._fxpl};
+				case Xdp:
+					return new[] {Extensions._xdp};
+				case Xfdf:
+					return new[] {Extensions._xfdf};
+				case Ahead:
+					return new[] {Extensions._ahead};
+				case Azf:
+					return new[] {Extensions._azf};
+				case Azs:
+					return new[] {Extensions._azs};
+				case Azw:
+					return new[] {Extensions._azw};
+				case Acc:
+					return new[] {Extensions._acc};
+				case Ami:
+					return new[] {Extensions._ami};
+				case Apk:
+					return new[] {Extensions._apk};
+				case Cii:
+					return new[] {Extensions._cii};
+				case Fti:
+					return new[] {Extensions._fti};
+				case Atx:
+					return new[] {Extensions._atx};
+				case Mpkg:
+					return new[] {Extensions._mpkg};
+				case M3u8:
+					return new[] {Extensions._m3u8};
+				case Swi:
+					return new[] {Extensions._swi};
+				case Iota:
+					return new[] {Extensions._iota};
+				case Aep:
+					return new[] {Extensions._aep};
+				case Mpm:
+					return new[] {Extensions._mpm};
+				case Bmi:
+					return new[] {Extensions._bmi};
+				case Rep:
+					return new[] {Extensions._rep};
+				case Cdxml:
+					return new[] {Extensions._cdxml};
+				case Mmd:
+					return new[] {Extensions._mmd};
+				case Cdy:
+					return new[] {Extensions._cdy};
+				case Cla:
+					return new[] {Extensions._cla};
+				case Rp9:
+					return new[] {Extensions._rp9};
+				case C4g:
+				//case C4d:
+				//case C4f:
+				//case C4p:
+				//case C4u:
+					return new[] {Extensions._c4g, Extensions._c4d, Extensions._c4f, Extensions._c4p, Extensions._c4u};
+				case C11amc:
+					return new[] {Extensions._c11amc};
+				case C11amz:
+					return new[] {Extensions._c11amz};
+				case Csp:
+					return new[] {Extensions._csp};
+				case Cdbcmsg:
+					return new[] {Extensions._cdbcmsg};
+				case Cmc:
+					return new[] {Extensions._cmc};
+				case Clkx:
+					return new[] {Extensions._clkx};
+				case Clkk:
+					return new[] {Extensions._clkk};
+				case Clkp:
+					return new[] {Extensions._clkp};
+				case Clkt:
+					return new[] {Extensions._clkt};
+				case Clkw:
+					return new[] {Extensions._clkw};
+				case Wbs:
+					return new[] {Extensions._wbs};
+				case Pml:
+					return new[] {Extensions._pml};
+				case Ppd:
+					return new[] {Extensions._ppd};
+				case Car:
+					return new[] {Extensions._car};
+				case Pcurl:
+					return new[] {Extensions._pcurl};
+				case Dart:
+					return new[] {Extensions._dart};
+				case Rdz:
+					return new[] {Extensions._rdz};
+				case Uvf:
+				//case Uvvf:
+				//case Uvd:
+				//case Uvvd:
+					return new[] {Extensions._uvf, Extensions._uvvf, Extensions._uvd, Extensions._uvvd};
+				case Uvt:
+				//case Uvvt:
+					return new[] {Extensions._uvt, Extensions._uvvt};
+				case Uvx:
+				//case Uvvx:
+					return new[] {Extensions._uvx, Extensions._uvvx};
+				case Uvz:
+				//case Uvvz:
+					return new[] {Extensions._uvz, Extensions._uvvz};
+				case Felaunch:
+					return new[] {Extensions._fe_launch};
+				case Dna:
+					return new[] {Extensions._dna};
+				case Mlp:
+					return new[] {Extensions._mlp};
+				case Dpg:
+					return new[] {Extensions._dpg};
+				case Dfac:
+					return new[] {Extensions._dfac};
+				case Kpxx:
+					return new[] {Extensions._kpxx};
+				case Ait:
+					return new[] {Extensions._ait};
+				case Svc:
+					return new[] {Extensions._svc};
+				case Geo:
+					return new[] {Extensions._geo};
+				case Mag:
+					return new[] {Extensions._mag};
+				case Nml:
+					return new[] {Extensions._nml};
+				case Esf:
+					return new[] {Extensions._esf};
+				case Msf:
+					return new[] {Extensions._msf};
+				case Qam:
+					return new[] {Extensions._qam};
+				case Slt:
+					return new[] {Extensions._slt};
+				case Ssf:
+					return new[] {Extensions._ssf};
+				case Es3:
+				//case Et3:
+					return new[] {Extensions._es3, Extensions._et3};
+				case Ez2:
+					return new[] {Extensions._ez2};
+				case Ez3:
+					return new[] {Extensions._ez3};
+				case Fdf:
+					return new[] {Extensions._fdf};
+				case Mseed:
+					return new[] {Extensions._mseed};
+				case Seed:
+				//case Dataless:
+					return new[] {Extensions._seed, Extensions._dataless};
+				case Gph:
+					return new[] {Extensions._gph};
+				case Ftc:
+					return new[] {Extensions._ftc};
+				case Fm:
+				//case Frame:
+				//case Maker:
+				//case Book:
+					return new[] {Extensions._fm, Extensions._frame, Extensions._maker, Extensions._book};
+				case Fnc:
+					return new[] {Extensions._fnc};
+				case Ltf:
+					return new[] {Extensions._ltf};
+				case Fsc:
+					return new[] {Extensions._fsc};
+				case Oas:
+					return new[] {Extensions._oas};
+				case Oa2:
+					return new[] {Extensions._oa2};
+				case Oa3:
+					return new[] {Extensions._oa3};
+				case Fg5:
+					return new[] {Extensions._fg5};
+				case Bh2:
+					return new[] {Extensions._bh2};
+				case Ddd:
+					return new[] {Extensions._ddd};
+				case Xdw:
+					return new[] {Extensions._xdw};
+				case Xbd:
+					return new[] {Extensions._xbd};
+				case Fzs:
+					return new[] {Extensions._fzs};
+				case Txd:
+					return new[] {Extensions._txd};
+				case Ggb:
+					return new[] {Extensions._ggb};
+				case Ggt:
+					return new[] {Extensions._ggt};
+				case Gex:
+				//case Gre:
+					return new[] {Extensions._gex, Extensions._gre};
+				case Gxt:
+					return new[] {Extensions._gxt};
+				case G2w:
+					return new[] {Extensions._g2w};
+				case G3w:
+					return new[] {Extensions._g3w};
+				case Gmx:
+					return new[] {Extensions._gmx};
+				case Kml:
+					return new[] {Extensions._kml};
+				case Kmz:
+					return new[] {Extensions._kmz};
+				case Gqf:
+				//case Gqs:
+					return new[] {Extensions._gqf, Extensions._gqs};
+				case Gac:
+					return new[] {Extensions._gac};
+				case Ghf:
+					return new[] {Extensions._ghf};
+				case Gim:
+					return new[] {Extensions._gim};
+				case Grv:
+					return new[] {Extensions._grv};
+				case Gtm:
+					return new[] {Extensions._gtm};
+				case Tpl:
+					return new[] {Extensions._tpl};
+				case Vcg:
+					return new[] {Extensions._vcg};
+				case Hal:
+					return new[] {Extensions._hal};
+				case Zmm:
+					return new[] {Extensions._zmm};
+				case Hbci:
+					return new[] {Extensions._hbci};
+				case Les:
+					return new[] {Extensions._les};
+				case Hpgl:
+					return new[] {Extensions._hpgl};
+				case Hpid:
+					return new[] {Extensions._hpid};
+				case Hps:
+					return new[] {Extensions._hps};
+				case Jlt:
+					return new[] {Extensions._jlt};
+				case Pcl:
+					return new[] {Extensions._pcl};
+				case Pclxl:
+					return new[] {Extensions._pclxl};
+				case Sfdhdstx:
+					return new[] {Extensions._sfd_hdstx};
+				case Mpy:
+					return new[] {Extensions._mpy};
+				case Afp:
+				//case Listafp:
+				//case List3820:
+					return new[] {Extensions._afp, Extensions._listafp, Extensions._list3820};
+				case Irm:
+					return new[] {Extensions._irm};
+				case Sc:
+					return new[] {Extensions._sc};
+				case Icc:
+				//case Icm:
+					return new[] {Extensions._icc, Extensions._icm};
+				case Igl:
+					return new[] {Extensions._igl};
+				case Ivp:
+					return new[] {Extensions._ivp};
+				case Ivu:
+					return new[] {Extensions._ivu};
+				case Igm:
+					return new[] {Extensions._igm};
+				case Xpw:
+				//case Xpx:
+					return new[] {Extensions._xpw, Extensions._xpx};
+				case I2g:
+					return new[] {Extensions._i2g};
+				case Qbo:
+					return new[] {Extensions._qbo};
+				case Qfx:
+					return new[] {Extensions._qfx};
+				case Rcprofile:
+					return new[] {Extensions._rcprofile};
+				case Irp:
+					return new[] {Extensions._irp};
+				case Xpr:
+					return new[] {Extensions._xpr};
+				case Fcs:
+					return new[] {Extensions._fcs};
+				case Jam:
+					return new[] {Extensions._jam};
+				case Rms:
+					return new[] {Extensions._rms};
+				case Jisp:
+					return new[] {Extensions._jisp};
+				case Joda:
+					return new[] {Extensions._joda};
+				case Ktz:
+				//case Ktr:
+					return new[] {Extensions._ktz, Extensions._ktr};
+				case Karbon:
+					return new[] {Extensions._karbon};
+				case Chrt:
+					return new[] {Extensions._chrt};
+				case Kfo:
+					return new[] {Extensions._kfo};
+				case Flw:
+					return new[] {Extensions._flw};
+				case Kon:
+					return new[] {Extensions._kon};
+				case Kpr:
+				//case Kpt:
+					return new[] {Extensions._kpr, Extensions._kpt};
+				case Ksp:
+					return new[] {Extensions._ksp};
+				case Kwd:
+				//case Kwt:
+					return new[] {Extensions._kwd, Extensions._kwt};
+				case Htke:
+					return new[] {Extensions._htke};
+				case Kia:
+					return new[] {Extensions._kia};
+				case Kne:
+				//case Knp:
+					return new[] {Extensions._kne, Extensions._knp};
+				case Skp:
+				//case Skd:
+				//case Skt:
+				//case Skm:
+					return new[] {Extensions._skp, Extensions._skd, Extensions._skt, Extensions._skm};
+				case Sse:
+					return new[] {Extensions._sse};
+				case Lasxml:
+					return new[] {Extensions._lasxml};
+				case Lbd:
+					return new[] {Extensions._lbd};
+				case Lbe:
+					return new[] {Extensions._lbe};
+				case _123:
+					return new[] {Extensions._123};
+				case Apr:
+					return new[] {Extensions._apr};
+				case Pre:
+					return new[] {Extensions._pre};
+				case Nsf:
+					return new[] {Extensions._nsf};
+				case Org:
+					return new[] {Extensions._org};
+				case Scm:
+					return new[] {Extensions._scm};
+				case Lwp:
+					return new[] {Extensions._lwp};
+				case Portpkg:
+					return new[] {Extensions._portpkg};
+				case Mcd:
+					return new[] {Extensions._mcd};
+				case Mc1:
+					return new[] {Extensions._mc1};
+				case Cdkey:
+					return new[] {Extensions._cdkey};
+				case Mwf:
+					return new[] {Extensions._mwf};
+				case Mfm:
+					return new[] {Extensions._mfm};
+				case Flo:
+					return new[] {Extensions._flo};
+				case Igx:
+					return new[] {Extensions._igx};
+				case Mif:
+					return new[] {Extensions._mif};
+				case Daf:
+					return new[] {Extensions._daf};
+				case Dis:
+					return new[] {Extensions._dis};
+				case Mbk:
+					return new[] {Extensions._mbk};
+				case Mqy:
+					return new[] {Extensions._mqy};
+				case Msl:
+					return new[] {Extensions._msl};
+				case Plc:
+					return new[] {Extensions._plc};
+				case Txf:
+					return new[] {Extensions._txf};
+				case Mpn:
+					return new[] {Extensions._mpn};
+				case Mpc:
+					return new[] {Extensions._mpc};
+				case Xul:
+					return new[] {Extensions._xul};
+				case Cil:
+					return new[] {Extensions._cil};
+				case Cab:
+					return new[] {Extensions._cab};
+				case Xls:
+				//case Xlm:
+				//case Xla:
+				//case Xlc:
+				//case Xlt:
+				//case Xlw:
+					return new[] {Extensions._xls, Extensions._xlm, Extensions._xla, Extensions._xlc, Extensions._xlt, Extensions._xlw};
+				case Xlam:
+					return new[] {Extensions._xlam};
+				case Xlsb:
+					return new[] {Extensions._xlsb};
+				case Xlsm:
+					return new[] {Extensions._xlsm};
+				case Xltm:
+					return new[] {Extensions._xltm};
+				case Eot:
+					return new[] {Extensions._eot};
+				case Chm:
+					return new[] {Extensions._chm};
+				case Ims:
+					return new[] {Extensions._ims};
+				case Lrm:
+					return new[] {Extensions._lrm};
+				case Thmx:
+					return new[] {Extensions._thmx};
+				case Cat:
+					return new[] {Extensions._cat};
+				case Stl:
+					return new[] {Extensions._stl};
+				case Ppt:
+				//case Pps:
+				//case Pot:
+					return new[] {Extensions._ppt, Extensions._pps, Extensions._pot};
+				case Ppam:
+					return new[] {Extensions._ppam};
+				case Pptm:
+					return new[] {Extensions._pptm};
+				case Sldm:
+					return new[] {Extensions._sldm};
+				case Ppsm:
+					return new[] {Extensions._ppsm};
+				case Potm:
+					return new[] {Extensions._potm};
+				case Mpp:
+				//case Mpt:
+					return new[] {Extensions._mpp, Extensions._mpt};
+				case Docm:
+					return new[] {Extensions._docm};
+				case Dotm:
+					return new[] {Extensions._dotm};
+				case Wps:
+				//case Wks:
+				//case Wcm:
+				//case Wdb:
+					return new[] {Extensions._wps, Extensions._wks, Extensions._wcm, Extensions._wdb};
+				case Wpl:
+					return new[] {Extensions._wpl};
+				case Xps:
+					return new[] {Extensions._xps};
+				case Mseq:
+					return new[] {Extensions._mseq};
+				case Mus:
+					return new[] {Extensions._mus};
+				case Msty:
+					return new[] {Extensions._msty};
+				case Taglet:
+					return new[] {Extensions._taglet};
+				case Nlu:
+					return new[] {Extensions._nlu};
+				case Ntf:
+				//case Nitf:
+					return new[] {Extensions._ntf, Extensions._nitf};
+				case Nnd:
+					return new[] {Extensions._nnd};
+				case Nns:
+					return new[] {Extensions._nns};
+				case Nnw:
+					return new[] {Extensions._nnw};
+				case Ngdat:
+					return new[] {Extensions._ngdat};
+				case Ngage:
+					return new[] {Extensions._n_gage};
+				case Rpst:
+					return new[] {Extensions._rpst};
+				case Rpss:
+					return new[] {Extensions._rpss};
+				case Edm:
+					return new[] {Extensions._edm};
+				case Edx:
+					return new[] {Extensions._edx};
+				case Ext:
+					return new[] {Extensions._ext};
+				case Odc:
+					return new[] {Extensions._odc};
+				case Otc:
+					return new[] {Extensions._otc};
+				case Odb:
+					return new[] {Extensions._odb};
+				case Odf:
+					return new[] {Extensions._odf};
+				case Odft:
+					return new[] {Extensions._odft};
+				case Odg:
+					return new[] {Extensions._odg};
+				case Otg:
+					return new[] {Extensions._otg};
+				case Odi:
+					return new[] {Extensions._odi};
+				case Oti:
+					return new[] {Extensions._oti};
+				case Odp:
+					return new[] {Extensions._odp};
+				case Otp:
+					return new[] {Extensions._otp};
+				case Ods:
+					return new[] {Extensions._ods};
+				case Ots:
+					return new[] {Extensions._ots};
+				case Odt:
+					return new[] {Extensions._odt};
+				case Odm:
+					return new[] {Extensions._odm};
+				case Ott:
+					return new[] {Extensions._ott};
+				case Oth:
+					return new[] {Extensions._oth};
+				case Xo:
+					return new[] {Extensions._xo};
+				case Dd2:
+					return new[] {Extensions._dd2};
+				case Oxt:
+					return new[] {Extensions._oxt};
+				case Pptx:
+					return new[] {Extensions._pptx};
+				case Sldx:
+					return new[] {Extensions._sldx};
+				case Ppsx:
+					return new[] {Extensions._ppsx};
+				case Potx:
+					return new[] {Extensions._potx};
+				case Xlsx:
+					return new[] {Extensions._xlsx};
+				case Xltx:
+					return new[] {Extensions._xltx};
+				case Docx:
+					return new[] {Extensions._docx};
+				case Dotx:
+					return new[] {Extensions._dotx};
+				case Mgp:
+					return new[] {Extensions._mgp};
+				case Dp:
+					return new[] {Extensions._dp};
+				case Esa:
+					return new[] {Extensions._esa};
+				case Pdb:
+				//case Pqa:
+				//case Oprc:
+					return new[] {Extensions._pdb, Extensions._pqa, Extensions._oprc};
+				case Paw:
+					return new[] {Extensions._paw};
+				case Str:
+					return new[] {Extensions._str};
+				case Ei6:
+					return new[] {Extensions._ei6};
+				case Efif:
+					return new[] {Extensions._efif};
+				case Wg:
+					return new[] {Extensions._wg};
+				case Plf:
+					return new[] {Extensions._plf};
+				case Pbd:
+					return new[] {Extensions._pbd};
+				case Box:
+					return new[] {Extensions._box};
+				case Mgz:
+					return new[] {Extensions._mgz};
+				case Qps:
+					return new[] {Extensions._qps};
+				case Ptid:
+					return new[] {Extensions._ptid};
+				case Qxd:
+				//case Qxt:
+				//case Qwd:
+				//case Qwt:
+				//case Qxl:
+				//case Qxb:
+					return new[] {Extensions._qxd, Extensions._qxt, Extensions._qwd, Extensions._qwt, Extensions._qxl, Extensions._qxb};
+				case Bed:
+					return new[] {Extensions._bed};
+				case Mxl:
+					return new[] {Extensions._mxl};
+				case Musicxml:
+					return new[] {Extensions._musicxml};
+				case Cryptonote:
+					return new[] {Extensions._cryptonote};
+				case Cod:
+					return new[] {Extensions._cod};
+				case Rm:
+					return new[] {Extensions._rm};
+				case Rmvb:
+					return new[] {Extensions._rmvb};
+				case Link66:
+					return new[] {Extensions._link66};
+				case St:
+					return new[] {Extensions._st};
+				case See:
+					return new[] {Extensions._see};
+				case Sema:
+					return new[] {Extensions._sema};
+				case Semd:
+					return new[] {Extensions._semd};
+				case Semf:
+					return new[] {Extensions._semf};
+				case Ifm:
+					return new[] {Extensions._ifm};
+				case Itp:
+					return new[] {Extensions._itp};
+				case Iif:
+					return new[] {Extensions._iif};
+				case Ipk:
+					return new[] {Extensions._ipk};
+				case Twd:
+				//case Twds:
+					return new[] {Extensions._twd, Extensions._twds};
+				case Mmf:
+					return new[] {Extensions._mmf};
+				case Teacher:
+					return new[] {Extensions._teacher};
+				case Sdkm:
+				//case Sdkd:
+					return new[] {Extensions._sdkm, Extensions._sdkd};
+				case Dxp:
+					return new[] {Extensions._dxp};
+				case Sfs:
+					return new[] {Extensions._sfs};
+				case Sdc:
+					return new[] {Extensions._sdc};
+				case Sda:
+					return new[] {Extensions._sda};
+				case Sdd:
+					return new[] {Extensions._sdd};
+				case Smf:
+					return new[] {Extensions._smf};
+				case Sdw:
+				//case Vor:
+					return new[] {Extensions._sdw, Extensions._vor};
+				case Sgl:
+					return new[] {Extensions._sgl};
+				case Smzip:
+					return new[] {Extensions._smzip};
+				case Sm:
+					return new[] {Extensions._sm};
+				case Sxc:
+					return new[] {Extensions._sxc};
+				case Stc:
+					return new[] {Extensions._stc};
+				case Sxd:
+					return new[] {Extensions._sxd};
+				case Std:
+					return new[] {Extensions._std};
+				case Sxi:
+					return new[] {Extensions._sxi};
+				case Sti:
+					return new[] {Extensions._sti};
+				case Sxm:
+					return new[] {Extensions._sxm};
+				case Sxw:
+					return new[] {Extensions._sxw};
+				case Sxg:
+					return new[] {Extensions._sxg};
+				case Stw:
+					return new[] {Extensions._stw};
+				case Sus:
+				//case Susp:
+					return new[] {Extensions._sus, Extensions._susp};
+				case Svd:
+					return new[] {Extensions._svd};
+				case Sis:
+				//case Sisx:
+					return new[] {Extensions._sis, Extensions._sisx};
+				case Xsm:
+					return new[] {Extensions._xsm};
+				case Bdm:
+					return new[] {Extensions._bdm};
+				case Xdm:
+					return new[] {Extensions._xdm};
+				case Tao:
+					return new[] {Extensions._tao};
+				case Pcap:
+				//case Cap:
+				//case Dmp:
+					return new[] {Extensions._pcap, Extensions._cap, Extensions._dmp};
+				case Tmo:
+					return new[] {Extensions._tmo};
+				case Tpt:
+					return new[] {Extensions._tpt};
+				case Mxs:
+					return new[] {Extensions._mxs};
+				case Tra:
+					return new[] {Extensions._tra};
+				case Ufd:
+				//case Ufdl:
+					return new[] {Extensions._ufd, Extensions._ufdl};
+				case Utz:
+					return new[] {Extensions._utz};
+				case Umj:
+					return new[] {Extensions._umj};
+				case Unityweb:
+					return new[] {Extensions._unityweb};
+				case Uoml:
+					return new[] {Extensions._uoml};
+				case Vcx:
+					return new[] {Extensions._vcx};
+				case Vsd:
+				//case Vst:
+				//case Vss:
+				//case Vsw:
+					return new[] {Extensions._vsd, Extensions._vst, Extensions._vss, Extensions._vsw};
+				case Vis:
+					return new[] {Extensions._vis};
+				case Vsf:
+					return new[] {Extensions._vsf};
+				case Wbxml:
+					return new[] {Extensions._wbxml};
+				case Wmlc:
+					return new[] {Extensions._wmlc};
+				case Wmlsc:
+					return new[] {Extensions._wmlsc};
+				case Wtb:
+					return new[] {Extensions._wtb};
+				case Nbp:
+					return new[] {Extensions._nbp};
+				case Wpd:
+					return new[] {Extensions._wpd};
+				case Wqd:
+					return new[] {Extensions._wqd};
+				case Stf:
+					return new[] {Extensions._stf};
+				case Xar:
+					return new[] {Extensions._xar};
+				case Xfdl:
+					return new[] {Extensions._xfdl};
+				case Hvd:
+					return new[] {Extensions._hvd};
+				case Hvs:
+					return new[] {Extensions._hvs};
+				case Hvp:
+					return new[] {Extensions._hvp};
+				case Osf:
+					return new[] {Extensions._osf};
+				case Osfpvg:
+					return new[] {Extensions._osfpvg};
+				case Saf:
+					return new[] {Extensions._saf};
+				case Spf:
+					return new[] {Extensions._spf};
+				case Cmp:
+					return new[] {Extensions._cmp};
+				case Zir:
+				//case Zirz:
+					return new[] {Extensions._zir, Extensions._zirz};
+				case Zaz:
+					return new[] {Extensions._zaz};
+				case Vxml:
+					return new[] {Extensions._vxml};
+				case Wgt:
+					return new[] {Extensions._wgt};
+				case Hlp:
+					return new[] {Extensions._hlp};
+				case Wsdl:
+					return new[] {Extensions._wsdl};
+				case Wspolicy:
+					return new[] {Extensions._wspolicy};
+				case _7z:
+					return new[] {Extensions._7z};
+				case Abw:
+					return new[] {Extensions._abw};
+				case Ace:
+					return new[] {Extensions._ace};
+				case Dmg:
+					return new[] {Extensions._dmg};
+				case Aab:
+				//case X32:
+				//case U32:
+				//case Vox:
+					return new[] {Extensions._aab, Extensions._x32, Extensions._u32, Extensions._vox};
+				case Aam:
+					return new[] {Extensions._aam};
+				case Aas:
+					return new[] {Extensions._aas};
+				case Bcpio:
+					return new[] {Extensions._bcpio};
+				case Torrent:
+					return new[] {Extensions._torrent};
+				case Blb:
+				//case Blorb:
+					return new[] {Extensions._blb, Extensions._blorb};
+				case Bz:
+					return new[] {Extensions._bz};
+				case Bz2:
+				//case Boz:
+					return new[] {Extensions._bz2, Extensions._boz};
+				case Cbr:
+				//case Cba:
+				//case Cbt:
+				//case Cbz:
+				//case Cb7:
+					return new[] {Extensions._cbr, Extensions._cba, Extensions._cbt, Extensions._cbz, Extensions._cb7};
+				case Vcd:
+					return new[] {Extensions._vcd};
+				case Cfs:
+					return new[] {Extensions._cfs};
+				case Chat:
+					return new[] {Extensions._chat};
+				case Pgn:
+					return new[] {Extensions._pgn};
+				case Nsc:
+					return new[] {Extensions._nsc};
+				case Cpio:
+					return new[] {Extensions._cpio};
+				case Csh:
+					return new[] {Extensions._csh};
+				case Deb:
+				//case Udeb:
+					return new[] {Extensions._deb, Extensions._udeb};
+				case Dgc:
+					return new[] {Extensions._dgc};
+				case Dir:
+				//case Dcr:
+				//case Dxr:
+				//case Cst:
+				//case Cct:
+				//case Cxt:
+				//case W3d:
+				//case Fgd:
+				//case Swa:
+					return new[] {Extensions._dir, Extensions._dcr, Extensions._dxr, Extensions._cst, Extensions._cct, Extensions._cxt, Extensions._w3d, Extensions._fgd, Extensions._swa};
+				case Wad:
+					return new[] {Extensions._wad};
+				case Ncx:
+					return new[] {Extensions._ncx};
+				case Dtb:
+					return new[] {Extensions._dtb};
+				case Res:
+					return new[] {Extensions._res};
+				case Dvi:
+					return new[] {Extensions._dvi};
+				case Evy:
+					return new[] {Extensions._evy};
+				case Eva:
+					return new[] {Extensions._eva};
+				case Bdf:
+					return new[] {Extensions._bdf};
+				case Gsf:
+					return new[] {Extensions._gsf};
+				case Psf:
+					return new[] {Extensions._psf};
+				case Pcf:
+					return new[] {Extensions._pcf};
+				case Snf:
+					return new[] {Extensions._snf};
+				case Pfa:
+				//case Pfb:
+				//case Pfm:
+				//case Afm:
+					return new[] {Extensions._pfa, Extensions._pfb, Extensions._pfm, Extensions._afm};
+				case Arc:
+					return new[] {Extensions._arc};
+				case Spl:
+					return new[] {Extensions._spl};
+				case Gca:
+					return new[] {Extensions._gca};
+				case Ulx:
+					return new[] {Extensions._ulx};
+				case Gnumeric:
+					return new[] {Extensions._gnumeric};
+				case Gramps:
+					return new[] {Extensions._gramps};
+				case Gtar:
+					return new[] {Extensions._gtar};
+				case Hdf:
+					return new[] {Extensions._hdf};
+				case Install:
+					return new[] {Extensions._install};
+				case Iso:
+					return new[] {Extensions._iso};
+				case Jnlp:
+					return new[] {Extensions._jnlp};
+				case Latex:
+					return new[] {Extensions._latex};
+				case Lzh:
+				//case Lha:
+					return new[] {Extensions._lzh, Extensions._lha};
+				case Mie:
+					return new[] {Extensions._mie};
+				case Prc:
+				//case Mobi:
+					return new[] {Extensions._prc, Extensions._mobi};
+				case Application:
+					return new[] {Extensions._application};
+				case Lnk:
+					return new[] {Extensions._lnk};
+				case Wmd:
+					return new[] {Extensions._wmd};
+				case Wmz:
+					return new[] {Extensions._wmz};
+				case Xbap:
+					return new[] {Extensions._xbap};
+				case Mdb:
+					return new[] {Extensions._mdb};
+				case Obd:
+					return new[] {Extensions._obd};
+				case Crd:
+					return new[] {Extensions._crd};
+				case Clp:
+					return new[] {Extensions._clp};
+				case Exe:
+				//case Dll:
+				//case Com:
+				//case Bat:
+				//case Msi:
+					return new[] {Extensions._exe, Extensions._dll, Extensions._com, Extensions._bat, Extensions._msi};
+				case Mvb:
+				//case M13:
+				//case M14:
+					return new[] {Extensions._mvb, Extensions._m13, Extensions._m14};
+				case Wmf:
+				//case Emf:
+				//case Emz:
+					return new[] {Extensions._wmf, Extensions._emf, Extensions._emz};
+				case Mny:
+					return new[] {Extensions._mny};
+				case Pub:
+					return new[] {Extensions._pub};
+				case Scd:
+					return new[] {Extensions._scd};
+				case Trm:
+					return new[] {Extensions._trm};
+				case Wri:
+					return new[] {Extensions._wri};
+				case Nc:
+				//case Cdf:
+					return new[] {Extensions._nc, Extensions._cdf};
+				case Nzb:
+					return new[] {Extensions._nzb};
+				case P12:
+				//case Pfx:
+					return new[] {Extensions._p12, Extensions._pfx};
+				case P7b:
+				//case Spc:
+					return new[] {Extensions._p7b, Extensions._spc};
+				case P7r:
+					return new[] {Extensions._p7r};
+				case Rar:
+					return new[] {Extensions._rar};
+				case Ris:
+					return new[] {Extensions._ris};
+				case Sh:
+					return new[] {Extensions._sh};
+				case Shar:
+					return new[] {Extensions._shar};
+				case Swf:
+					return new[] {Extensions._swf};
+				case Xap:
+					return new[] {Extensions._xap};
+				case Sql:
+					return new[] {Extensions._sql};
+				case Sit:
+					return new[] {Extensions._sit};
+				case Sitx:
+					return new[] {Extensions._sitx};
+				case Srt:
+					return new[] {Extensions._srt};
+				case Sv4cpio:
+					return new[] {Extensions._sv4cpio};
+				case Sv4crc:
+					return new[] {Extensions._sv4crc};
+				case T3:
+					return new[] {Extensions._t3};
+				case Gam:
+					return new[] {Extensions._gam};
+				case Tar:
+					return new[] {Extensions._tar};
+				case Tcl:
+				//case Tk:
+					return new[] {Extensions._tcl, Extensions._tk};
+				case Tex:
+					return new[] {Extensions._tex};
+				case Tfm:
+					return new[] {Extensions._tfm};
+				case Texinfo:
+				//case Texi:
+					return new[] {Extensions._texinfo, Extensions._texi};
+				case Obj:
+					return new[] {Extensions._obj};
+				case Ustar:
+					return new[] {Extensions._ustar};
+				case Src:
+					return new[] {Extensions._src};
+				case Der:
+				//case Crt:
+				//case Pem:
+					return new[] {Extensions._der, Extensions._crt, Extensions._pem};
+				case Fig:
+					return new[] {Extensions._fig};
+				case Xlf:
+					return new[] {Extensions._xlf};
+				case Xpi:
+					return new[] {Extensions._xpi};
+				case Xz:
+					return new[] {Extensions._xz};
+				case Z1:
+				//case Z2:
+				//case Z3:
+				//case Z4:
+				//case Z5:
+				//case Z6:
+				//case Z7:
+				//case Z8:
+					return new[] {Extensions._z1, Extensions._z2, Extensions._z3, Extensions._z4, Extensions._z5, Extensions._z6, Extensions._z7, Extensions._z8};
+				case Xaml:
+					return new[] {Extensions._xaml};
+				case Xdf:
+					return new[] {Extensions._xdf};
+				case Xenc:
+					return new[] {Extensions._xenc};
+				case Xhtml:
+				//case Xht:
+					return new[] {Extensions._xhtml, Extensions._xht};
+				case Xml:
+				//case Xsl:
+				//case Xsd:
+				//case Rng:
+					return new[] {Extensions._xml, Extensions._xsl, Extensions._xsd, Extensions._rng};
+				case Dtd:
+					return new[] {Extensions._dtd};
+				case Xop:
+					return new[] {Extensions._xop};
+				case Xpl:
+					return new[] {Extensions._xpl};
+				case Xslt:
+					return new[] {Extensions._xslt};
+				case Xspf:
+					return new[] {Extensions._xspf};
+				case Mxml:
+				//case Xhvml:
+				//case Xvml:
+				//case Xvm:
+					return new[] {Extensions._mxml, Extensions._xhvml, Extensions._xvml, Extensions._xvm};
+				case Yang:
+					return new[] {Extensions._yang};
+				case Yin:
+					return new[] {Extensions._yin};
+				case Zip:
+					return new[] {Extensions._zip};
+				case Adp:
+					return new[] {Extensions._adp};
+				case Au:
+				//case Snd:
+					return new[] {Extensions._au, Extensions._snd};
+				case Mid:
+				//case Midi:
+				//case Kar:
+				//case Rmi:
+					return new[] {Extensions._mid, Extensions._midi, Extensions._kar, Extensions._rmi};
+				case M4a:
+				//case Mp4a:
+				//case F4a:
+				//case F4b:
+					return new[] {Extensions._m4a, Extensions._mp4a, Extensions._f4a, Extensions._f4b};
+				case Mpga:
+				//case Mp2:
+				//case Mp2a:
+				//case Mp3:
+				//case M2a:
+				//case M3a:
+					return new[] {Extensions._mpga, Extensions._mp2, Extensions._mp2a, Extensions._mp3, Extensions._m2a, Extensions._m3a};
+				case Oga:
+				//case Ogg:
+				//case Spx:
+				//case Opus:
+					return new[] {Extensions._oga, Extensions._ogg, Extensions._spx, Extensions._opus};
+				case S3m:
+					return new[] {Extensions._s3m};
+				case Sil:
+					return new[] {Extensions._sil};
+				case Uva:
+				//case Uvva:
+					return new[] {Extensions._uva, Extensions._uvva};
+				case Eol:
+					return new[] {Extensions._eol};
+				case Dra:
+					return new[] {Extensions._dra};
+				case Dts:
+					return new[] {Extensions._dts};
+				case Dtshd:
+					return new[] {Extensions._dtshd};
+				case Lvp:
+					return new[] {Extensions._lvp};
+				case Pya:
+					return new[] {Extensions._pya};
+				case Ecelp4800:
+					return new[] {Extensions._ecelp4800};
+				case Ecelp7470:
+					return new[] {Extensions._ecelp7470};
+				case Ecelp9600:
+					return new[] {Extensions._ecelp9600};
+				case Rip:
+					return new[] {Extensions._rip};
+				case Weba:
+					return new[] {Extensions._weba};
+				case Aac:
+					return new[] {Extensions._aac};
+				case Aif:
+				//case Aiff:
+				//case Aifc:
+					return new[] {Extensions._aif, Extensions._aiff, Extensions._aifc};
+				case Caf:
+					return new[] {Extensions._caf};
+				case Flac:
+					return new[] {Extensions._flac};
+				case Mka:
+					return new[] {Extensions._mka};
+				case M3u:
+					return new[] {Extensions._m3u};
+				case Wax:
+					return new[] {Extensions._wax};
+				case Wma:
+					return new[] {Extensions._wma};
+				case Ram:
+				//case Ra:
+					return new[] {Extensions._ram, Extensions._ra};
+				case Rmp:
+					return new[] {Extensions._rmp};
+				case Wav:
+					return new[] {Extensions._wav};
+				case Xm:
+					return new[] {Extensions._xm};
+				case Cdx:
+					return new[] {Extensions._cdx};
+				case Cif:
+					return new[] {Extensions._cif};
+				case Cmdf:
+					return new[] {Extensions._cmdf};
+				case Cml:
+					return new[] {Extensions._cml};
+				case Csml:
+					return new[] {Extensions._csml};
+				case Xyz:
+					return new[] {Extensions._xyz};
+				case Ttc:
+					return new[] {Extensions._ttc};
+				case Otf:
+					return new[] {Extensions._otf};
+				case Ttf:
+					return new[] {Extensions._ttf};
+				case Woff:
+					return new[] {Extensions._woff};
+				case Woff2:
+					return new[] {Extensions._woff2};
+				case Bmp:
+					return new[] {Extensions._bmp};
+				case Cgm:
+					return new[] {Extensions._cgm};
+				case G3:
+					return new[] {Extensions._g3};
+				case Gif:
+					return new[] {Extensions._gif};
+				case Ief:
+					return new[] {Extensions._ief};
+				case Jpeg:
+				//case Jpg:
+				//case Jpe:
+					return new[] {Extensions._jpeg, Extensions._jpg, Extensions._jpe};
+				case Ktx:
+					return new[] {Extensions._ktx};
+				case Png:
+					return new[] {Extensions._png};
+				case Btif:
+					return new[] {Extensions._btif};
+				case Sgi:
+					return new[] {Extensions._sgi};
+				case Svg:
+				//case Svgz:
+					return new[] {Extensions._svg, Extensions._svgz};
+				case Tiff:
+				//case Tif:
+					return new[] {Extensions._tiff, Extensions._tif};
+				case Psd:
+					return new[] {Extensions._psd};
+				case Uvi:
+				//case Uvvi:
+				//case Uvg:
+				//case Uvvg:
+					return new[] {Extensions._uvi, Extensions._uvvi, Extensions._uvg, Extensions._uvvg};
+				case Djvu:
+				//case Djv:
+					return new[] {Extensions._djvu, Extensions._djv};
+				case Sub:
+					return new[] {Extensions._sub};
+				case Dwg:
+					return new[] {Extensions._dwg};
+				case Dxf:
+					return new[] {Extensions._dxf};
+				case Fbs:
+					return new[] {Extensions._fbs};
+				case Fpx:
+					return new[] {Extensions._fpx};
+				case Fst:
+					return new[] {Extensions._fst};
+				case Mmr:
+					return new[] {Extensions._mmr};
+				case Rlc:
+					return new[] {Extensions._rlc};
+				case Mdi:
+					return new[] {Extensions._mdi};
+				case Wdp:
+					return new[] {Extensions._wdp};
+				case Npx:
+					return new[] {Extensions._npx};
+				case Wbmp:
+					return new[] {Extensions._wbmp};
+				case Xif:
+					return new[] {Extensions._xif};
+				case Webp:
+					return new[] {Extensions._webp};
+				case _3ds:
+					return new[] {Extensions._3ds};
+				case Ras:
+					return new[] {Extensions._ras};
+				case Cmx:
+					return new[] {Extensions._cmx};
+				case Fh:
+				//case Fhc:
+				//case Fh4:
+				//case Fh5:
+				//case Fh7:
+					return new[] {Extensions._fh, Extensions._fhc, Extensions._fh4, Extensions._fh5, Extensions._fh7};
+				case Ico:
+				//case Cur:
+					return new[] {Extensions._ico, Extensions._cur};
+				case Sid:
+					return new[] {Extensions._sid};
+				case Pcx:
+					return new[] {Extensions._pcx};
+				case Pic:
+				//case Pct:
+					return new[] {Extensions._pic, Extensions._pct};
+				case Pnm:
+					return new[] {Extensions._pnm};
+				case Pbm:
+					return new[] {Extensions._pbm};
+				case Pgm:
+					return new[] {Extensions._pgm};
+				case Ppm:
+					return new[] {Extensions._ppm};
+				case Rgb:
+					return new[] {Extensions._rgb};
+				case Tga:
+					return new[] {Extensions._tga};
+				case Xbm:
+					return new[] {Extensions._xbm};
+				case Xpm:
+					return new[] {Extensions._xpm};
+				case Xwd:
+					return new[] {Extensions._xwd};
+				case Eml:
+				//case Mime:
+					return new[] {Extensions._eml, Extensions._mime};
+				case Igs:
+				//case Iges:
+					return new[] {Extensions._igs, Extensions._iges};
+				case Msh:
+				//case Mesh:
+				//case Silo:
+					return new[] {Extensions._msh, Extensions._mesh, Extensions._silo};
+				case Dae:
+					return new[] {Extensions._dae};
+				case Dwf:
+					return new[] {Extensions._dwf};
+				case Gdl:
+					return new[] {Extensions._gdl};
+				case Gtw:
+					return new[] {Extensions._gtw};
+				case Mts:
+					return new[] {Extensions._mts};
+				case Vtu:
+					return new[] {Extensions._vtu};
+				case Wrl:
+				//case Vrml:
+					return new[] {Extensions._wrl, Extensions._vrml};
+				case X3db:
+				//case X3dbz:
+					return new[] {Extensions._x3db, Extensions._x3dbz};
+				case X3dv:
+				//case X3dvz:
+					return new[] {Extensions._x3dv, Extensions._x3dvz};
+				case X3d:
+				//case X3dz:
+					return new[] {Extensions._x3d, Extensions._x3dz};
+				case Appcache:
+				//case Manifest:
+					return new[] {Extensions._appcache, Extensions._manifest};
+				case Ics:
+				//case Ifb:
+					return new[] {Extensions._ics, Extensions._ifb};
+				case Css:
+					return new[] {Extensions._css};
+				case Csv:
+					return new[] {Extensions._csv};
+				case Html:
+				//case Htm:
+				//case Shtml:
+					return new[] {Extensions._html, Extensions._htm, Extensions._shtml};
+				case N3:
+					return new[] {Extensions._n3};
+				case Txt:
+				//case Text:
+				//case Conf:
+				//case Def:
+				//case List:
+				//case Log:
+				//case In:
+				//case Ini:
+					return new[] {Extensions._txt, Extensions._text, Extensions._conf, Extensions._def, Extensions._list, Extensions._log, Extensions._in, Extensions._ini};
+				case Dsc:
+					return new[] {Extensions._dsc};
+				case Rtx:
+					return new[] {Extensions._rtx};
+				case Sgml:
+				//case Sgm:
+					return new[] {Extensions._sgml, Extensions._sgm};
+				case Tsv:
+					return new[] {Extensions._tsv};
+				case T:
+				//case Tr:
+				//case Roff:
+				//case Man:
+				//case Me:
+				//case Ms:
+					return new[] {Extensions._t, Extensions._tr, Extensions._roff, Extensions._man, Extensions._me, Extensions._ms};
+				case Ttl:
+					return new[] {Extensions._ttl};
+				case Uri:
+				//case Uris:
+				//case Urls:
+					return new[] {Extensions._uri, Extensions._uris, Extensions._urls};
+				case Vcard:
+					return new[] {Extensions._vcard};
+				case Curl:
+					return new[] {Extensions._curl};
+				case Dcurl:
+					return new[] {Extensions._dcurl};
+				case Mcurl:
+					return new[] {Extensions._mcurl};
+				case Scurl:
+					return new[] {Extensions._scurl};
+				case Fly:
+					return new[] {Extensions._fly};
+				case Flx:
+					return new[] {Extensions._flx};
+				case Gv:
+					return new[] {Extensions._gv};
+				case _3dml:
+					return new[] {Extensions._3dml};
+				case Spot:
+					return new[] {Extensions._spot};
+				case Jad:
+					return new[] {Extensions._jad};
+				case Wml:
+					return new[] {Extensions._wml};
+				case Wmls:
+					return new[] {Extensions._wmls};
+				case S:
+				//case Asm:
+					return new[] {Extensions._s, Extensions._asm};
+				case C:
+				//case Cc:
+				//case Cxx:
+				//case Cpp:
+				//case H:
+				//case Hh:
+				//case Dic:
+					return new[] {Extensions._c, Extensions._cc, Extensions._cxx, Extensions._cpp, Extensions._h, Extensions._hh, Extensions._dic};
+				case F:
+				//case For:
+				//case F77:
+				//case F90:
+					return new[] {Extensions._f, Extensions._for, Extensions._f77, Extensions._f90};
+				case Java:
+					return new[] {Extensions._java};
+				case Nfo:
+					return new[] {Extensions._nfo};
+				case Opml:
+					return new[] {Extensions._opml};
+				case P:
+				//case Pas:
+					return new[] {Extensions._p, Extensions._pas};
+				case Etx:
+					return new[] {Extensions._etx};
+				case Sfv:
+					return new[] {Extensions._sfv};
+				case Uu:
+					return new[] {Extensions._uu};
+				case Vcs:
+					return new[] {Extensions._vcs};
+				case Vcf:
+					return new[] {Extensions._vcf};
+				case _3gp:
+				//case _3gpp:
+					return new[] {Extensions._3gp, Extensions._3gpp};
+				case _3g2:
+					return new[] {Extensions._3g2};
+				case H261:
+					return new[] {Extensions._h261};
+				case H263:
+					return new[] {Extensions._h263};
+				case H264:
+					return new[] {Extensions._h264};
+				case Jpgv:
+					return new[] {Extensions._jpgv};
+				case Jpm:
+				//case Jpgm:
+					return new[] {Extensions._jpm, Extensions._jpgm};
+				case Mj2:
+				//case Mjp2:
+					return new[] {Extensions._mj2, Extensions._mjp2};
+				case Mp4:
+				//case Mp4v:
+				//case Mpg4:
+				//case F4p:
+					return new[] {Extensions._mp4, Extensions._mp4v, Extensions._mpg4, Extensions._f4p};
+				case Mpeg:
+				//case Mpg:
+				//case Mpe:
+				//case M1v:
+				//case M2v:
+					return new[] {Extensions._mpeg, Extensions._mpg, Extensions._mpe, Extensions._m1v, Extensions._m2v};
+				case Ogv:
+					return new[] {Extensions._ogv};
+				case Qt:
+				//case Mov:
+					return new[] {Extensions._qt, Extensions._mov};
+				case Uvh:
+				//case Uvvh:
+					return new[] {Extensions._uvh, Extensions._uvvh};
+				case Uvm:
+				//case Uvvm:
+					return new[] {Extensions._uvm, Extensions._uvvm};
+				case Uvp:
+				//case Uvvp:
+					return new[] {Extensions._uvp, Extensions._uvvp};
+				case Uvs:
+				//case Uvvs:
+					return new[] {Extensions._uvs, Extensions._uvvs};
+				case Uvv:
+				//case Uvvv:
+					return new[] {Extensions._uvv, Extensions._uvvv};
+				case Dvb:
+					return new[] {Extensions._dvb};
+				case Fvt:
+					return new[] {Extensions._fvt};
+				case Mxu:
+				//case M4u:
+					return new[] {Extensions._mxu, Extensions._m4u};
+				case Pyv:
+					return new[] {Extensions._pyv};
+				case Uvu:
+				//case Uvvu:
+					return new[] {Extensions._uvu, Extensions._uvvu};
+				case Viv:
+					return new[] {Extensions._viv};
+				case Webm:
+					return new[] {Extensions._webm};
+				case F4v:
+					return new[] {Extensions._f4v};
+				case Fli:
+					return new[] {Extensions._fli};
+				case Flv:
+					return new[] {Extensions._flv};
+				case M4v:
+					return new[] {Extensions._m4v};
+				case Mkv:
+				//case Mk3d:
+				//case Mks:
+					return new[] {Extensions._mkv, Extensions._mk3d, Extensions._mks};
+				case Mng:
+					return new[] {Extensions._mng};
+				case Asf:
+				//case Asx:
+					return new[] {Extensions._asf, Extensions._asx};
+				case Vob:
+					return new[] {Extensions._vob};
+				case Wm:
+					return new[] {Extensions._wm};
+				case Wmv:
+					return new[] {Extensions._wmv};
+				case Wmx:
+					return new[] {Extensions._wmx};
+				case Wvx:
+					return new[] {Extensions._wvx};
+				case Avi:
+					return new[] {Extensions._avi};
+				case Movie:
+					return new[] {Extensions._movie};
+				case Smv:
+					return new[] {Extensions._smv};
+				case Ice:
+					return new[] {Extensions._ice};
+				case Jsonld:
+					return new[] {Extensions._jsonld};
+				case Geojson:
+					return new[] {Extensions._geojson};
+				case Mjs:
+					return new[] {Extensions._mjs};
+				case Wasm:
+					return new[] {Extensions._wasm};
+				case Webmanifest:
+					return new[] {Extensions._webmanifest};
+				case Webapp:
+					return new[] {Extensions._webapp};
+				case Jxr:
+				//case Hdp:
+					return new[] {Extensions._jxr, Extensions._hdp};
+				case Jng:
+					return new[] {Extensions._jng};
+				case Bbaw:
+					return new[] {Extensions._bbaw};
+				case Crx:
+					return new[] {Extensions._crx};
+				case Cco:
+					return new[] {Extensions._cco};
+				case Jardiff:
+					return new[] {Extensions._jardiff};
+				case Run:
+					return new[] {Extensions._run};
+				case Oex:
+					return new[] {Extensions._oex};
+				case Pl:
+				//case Pm:
+					return new[] {Extensions._pl, Extensions._pm};
+				case Rpm:
+					return new[] {Extensions._rpm};
+				case Sea:
+					return new[] {Extensions._sea};
+				case Md:
+				//case Markdown:
+					return new[] {Extensions._md, Extensions._markdown};
+				case Mml:
+					return new[] {Extensions._mml};
+				case Xloc:
+					return new[] {Extensions._xloc};
+				case Vtt:
+					return new[] {Extensions._vtt};
+				case Htc:
+					return new[] {Extensions._htc};
+				case Bdoc:
+					return new[] {Extensions._bdoc};
+				case Hjson:
+					return new[] {Extensions._hjson};
+				case Json5:
+					return new[] {Extensions._json5};
+				case Cjs:
+					return new[] {Extensions._cjs};
+				case Raml:
+					return new[] {Extensions._raml};
+				case Siv:
+				//case Sieve:
+					return new[] {Extensions._siv, Extensions._sieve};
+				case Toml:
+					return new[] {Extensions._toml};
+				case Ubj:
+					return new[] {Extensions._ubj};
+				case Pkpass:
+					return new[] {Extensions._pkpass};
+				case Gdoc:
+					return new[] {Extensions._gdoc};
+				case Gslides:
+					return new[] {Extensions._gslides};
+				case Gsheet:
+					return new[] {Extensions._gsheet};
+				case Msg:
+					return new[] {Extensions._msg};
+				case Arj:
+					return new[] {Extensions._arj};
+				case Php:
+					return new[] {Extensions._php};
+				case Kdbx:
+					return new[] {Extensions._kdbx};
+				case Luac:
+					return new[] {Extensions._luac};
+				case Pac:
+					return new[] {Extensions._pac};
+				case Hdd:
+					return new[] {Extensions._hdd};
+				case Ova:
+					return new[] {Extensions._ova};
+				case Ovf:
+					return new[] {Extensions._ovf};
+				case Vbox:
+					return new[] {Extensions._vbox};
+				case Vboxextpack:
+					return new[] {Extensions._vbox_extpack};
+				case Vdi:
+					return new[] {Extensions._vdi};
+				case Vhd:
+					return new[] {Extensions._vhd};
+				case Vmdk:
+					return new[] {Extensions._vmdk};
+				case Apng:
+					return new[] {Extensions._apng};
+				case Avif:
+					return new[] {Extensions._avif};
+				case Heic:
+					return new[] {Extensions._heic};
+				case Heics:
+					return new[] {Extensions._heics};
+				case Heif:
+					return new[] {Extensions._heif};
+				case Heifs:
+					return new[] {Extensions._heifs};
+				case Jp2:
+				//case Jpg2:
+					return new[] {Extensions._jp2, Extensions._jpg2};
+				case Jpx:
+				//case Jpf:
+					return new[] {Extensions._jpx, Extensions._jpf};
+				case Dds:
+					return new[] {Extensions._dds};
+				case Coffee:
+				//case Litcoffee:
+					return new[] {Extensions._coffee, Extensions._litcoffee};
+				case Jade:
+					return new[] {Extensions._jade};
+				case Jsx:
+					return new[] {Extensions._jsx};
+				case Less:
+					return new[] {Extensions._less};
+				case Mdx:
+					return new[] {Extensions._mdx};
+				case Shex:
+					return new[] {Extensions._shex};
+				case Slim:
+				//case Slm:
+					return new[] {Extensions._slim, Extensions._slm};
+				case Stylus:
+				//case Styl:
+					return new[] {Extensions._stylus, Extensions._styl};
+				case Hbs:
+					return new[] {Extensions._hbs};
+				case Lua:
+					return new[] {Extensions._lua};
+				case Mkd:
+					return new[] {Extensions._mkd};
+				case Pde:
+					return new[] {Extensions._pde};
+				case Sass:
+					return new[] {Extensions._sass};
+				case Scss:
+					return new[] {Extensions._scss};
+				case Ymp:
+					return new[] {Extensions._ymp};
+				case Yaml:
+				//case Yml:
+					return new[] {Extensions._yaml, Extensions._yml};
+				default: 
+					return null;
+            }
+		}
     }
 }

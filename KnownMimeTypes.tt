@@ -139,17 +139,19 @@ namespace MimeMapping
 		}
 #>
 
-<#
-
+		public static class Extensions
+		{
+<#	
 		// List constant field names
         foreach (var kp in _dict)
         {
 #>
-        const string _ext_<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
+			public const string _<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
 <#
 		}
 
 #>
+		}
 
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
@@ -158,11 +160,12 @@ namespace MimeMapping
         foreach (var kp in _dict)
         {
 #>
-            _ext_<#= kp.Key.Replace('-', '_') #>,
+            Extensions._<#= kp.Key.Replace('-', '_') #>,
 <#		
 		}
 #>
         });
+
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string LookupType(string type)
@@ -174,9 +177,9 @@ namespace MimeMapping
                 foreach (var kp in _reverseDict)
                 {
 					foreach (var mimeKey in kp.Value)
-					{
+					{					
 #>
-				case _ext_<#= mimeKey.Replace('-', '_') #>:
+			case Extensions._<#= mimeKey.Replace('-', '_') #>:
 <#
 					}
 #>
@@ -189,5 +192,31 @@ namespace MimeMapping
 					return null;
             }
         }
+
+        // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
+        internal static string[] LookupMimeType(string mimeType)
+        {
+            switch (mimeType)
+            {
+<#
+                // Output the actual literal C# dictionary
+                foreach (var kp in _reverseDict)
+                {
+					var first = true;
+					foreach (var mimeKey in kp.Value)
+					{
+#>
+				<#= first ? "" : "//" #>case <#= GetMimeFieldName(mimeKey) #>:
+<#
+						first = false;
+					}
+#>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"Extensions._{x.Replace('-', '_')}")) #>};
+<#
+				}
+#>
+				default: 
+					return null;
+            }
+		}
     }
 }

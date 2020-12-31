@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeMapping;
 
@@ -87,6 +88,17 @@ namespace Test
             var myFile = "https://test.com/file/random-file";
             string mimeType = MimeUtility.GetMimeMapping(myFile);
             Assert.AreEqual(MimeUtility.UnknownMimeType, mimeType);
+        }
+
+        [TestMethod]
+        public void TestMimeTypeLookupToGetExtensions()
+        {
+            var expected = new[] { KnownMimeTypes.Extensions._json, KnownMimeTypes.Extensions._map, KnownMimeTypes.Extensions._topojson };
+            var actual = MimeUtility.GetExtensions(KnownMimeTypes.Json);
+            Assert.IsTrue(actual.All(x => expected.Contains(x)));
+
+            var @null = MimeUtility.GetExtensions("invalid");
+            Assert.IsNull(@null);
         }
     }
 }
