@@ -42,6 +42,8 @@ namespace MimeMapping
             return KnownMimeTypes.LookupType(fileExtension.ToLowerInvariant()) ?? UnknownMimeType;
         }
 
+        /// <param name="mimeType">The mime type string, e.g. "application/json"</param>
+        /// <returns>One or more extensions matching the mime type or null if no match</returns>
         public static string[] GetExtensions(string mimeType)
         {
             if (string.IsNullOrEmpty(mimeType)) throw new ArgumentNullException(mimeType);

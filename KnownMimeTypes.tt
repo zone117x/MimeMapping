@@ -139,14 +139,16 @@ namespace MimeMapping
 		}
 #>
 
-		public static class Extensions
+		///<summary>File extensions</summary>
+		public static class FileExtensions
 		{
 <#	
 		// List constant field names
         foreach (var kp in _dict)
         {
 #>
-			public const string _<#= kp.Key.Replace('-', '_') #> = "<#= kp.Key #>";
+			///<summary><#= kp.Key #></summary>
+			public const string <#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #> = "<#= kp.Key #>";
 <#
 		}
 
@@ -160,7 +162,7 @@ namespace MimeMapping
         foreach (var kp in _dict)
         {
 #>
-            Extensions._<#= kp.Key.Replace('-', '_') #>,
+            FileExtensions.<#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #>,
 <#		
 		}
 #>
@@ -179,7 +181,7 @@ namespace MimeMapping
 					foreach (var mimeKey in kp.Value)
 					{					
 #>
-			case Extensions._<#= mimeKey.Replace('-', '_') #>:
+				case FileExtensions.<#= !Char.IsLetter(mimeKey[0]) ? "_" : string.Empty #><#= char.ToUpper(mimeKey[0]) + mimeKey.Substring(1).Replace('-', '_') #>:
 <#
 					}
 #>
@@ -210,7 +212,7 @@ namespace MimeMapping
 <#
 						first = false;
 					}
-#>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"Extensions._{x.Replace('-', '_')}")) #>};
+#>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
 <#
 				}
 #>
