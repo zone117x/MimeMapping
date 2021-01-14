@@ -3,7 +3,7 @@ using System;
 namespace MimeMapping
 {
 	///<summary>
-	/// MIME type constants. Last updated on 2019-12-04T20:01:33Z. 
+	/// MIME type constants. Last updated on 2021-01-13T14:41:41Z. 
 	/// Generated from the <a href="http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">apache</a> and <a href="https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types">nginx</a> sources
 	///</summary>
     public static class KnownMimeTypes
@@ -38,8 +38,8 @@ namespace MimeMapping
         // Dupe for rtf: using application/rtf vs text/rtf 
         // Dupe for org: using application/vnd.lotus-organizer vs text/x-org 
 
-		// Generated 843 unique mime type values
-        // Generated 1095 type key pairs
+		// Generated 840 unique mime type values
+        // Generated 1092 type key pairs
 
 		///<summary>ez</summary>
         public const string Ez = "application/andrew-inset";
@@ -1515,6 +1515,8 @@ namespace MimeMapping
         public const string Ogg = "audio/ogg";
 		///<summary>spx</summary>
         public const string Spx = "audio/ogg";
+		///<summary>opus</summary>
+        public const string Opus = "audio/ogg";
 		///<summary>s3m</summary>
         public const string S3m = "audio/s3m";
 		///<summary>sil</summary>
@@ -2027,8 +2029,12 @@ namespace MimeMapping
         public const string F4a = "audio/mp4";
 		///<summary>f4b</summary>
         public const string F4b = "audio/mp4";
-		///<summary>opus</summary>
-        public const string Opus = "audio/ogg";
+		///<summary>apng</summary>
+        public const string Apng = "image/apng";
+		///<summary>avif</summary>
+        public const string Avif = "image/avif";
+		///<summary>avifs</summary>
+        public const string Avifs = "image/avif-sequence";
 		///<summary>jxr</summary>
         public const string Jxr = "image/jxr";
 		///<summary>hdp</summary>
@@ -2093,22 +2099,16 @@ namespace MimeMapping
         public const string Htc = "text/x-component";
 		///<summary>bdoc</summary>
         public const string Bdoc = "application/bdoc";
-		///<summary>mpd</summary>
-        public const string Mpd = "application/dash+xml";
 		///<summary>es</summary>
         public const string Es = "application/ecmascript";
-		///<summary>gz</summary>
-        public const string Gz = "application/gzip";
 		///<summary>hjson</summary>
         public const string Hjson = "application/hjson";
 		///<summary>json5</summary>
         public const string Json5 = "application/json5";
 		///<summary>m4p</summary>
         public const string M4p = "application/mp4";
-		///<summary>nq</summary>
-        public const string Nq = "application/n-quads";
-		///<summary>nt</summary>
-        public const string Nt = "application/n-triples";
+		///<summary>cjs</summary>
+        public const string Cjs = "application/node";
 		///<summary>buffer</summary>
         public const string Buffer = "application/octet-stream";
 		///<summary>raml</summary>
@@ -2121,10 +2121,10 @@ namespace MimeMapping
         public const string Sieve = "application/sieve";
 		///<summary>toml</summary>
         public const string Toml = "application/toml";
+		///<summary>ubj</summary>
+        public const string Ubj = "application/ubjson";
 		///<summary>pkpass</summary>
         public const string Pkpass = "application/vnd.apple.pkpass";
-		///<summary>csl</summary>
-        public const string Csl = "application/vnd.citationstyles.style+xml";
 		///<summary>gdoc</summary>
         public const string Gdoc = "application/vnd.google-apps.document";
 		///<summary>gslides</summary>
@@ -2133,8 +2133,6 @@ namespace MimeMapping
         public const string Gsheet = "application/vnd.google-apps.spreadsheet";
 		///<summary>msg</summary>
         public const string Msg = "application/vnd.ms-outlook";
-		///<summary>wadl</summary>
-        public const string Wadl = "application/vnd.sun.wadl+xml";
 		///<summary>arj</summary>
         public const string Arj = "application/x-arj";
 		///<summary>php</summary>
@@ -2165,10 +2163,6 @@ namespace MimeMapping
         public const string Xsd = "application/xml";
 		///<summary>rng</summary>
         public const string Rng = "application/xml";
-		///<summary>mxmf</summary>
-        public const string Mxmf = "audio/mobile-xmf";
-		///<summary>apng</summary>
-        public const string Apng = "image/apng";
 		///<summary>heic</summary>
         public const string Heic = "image/heic";
 		///<summary>heics</summary>
@@ -2232,4990 +2226,9106 @@ namespace MimeMapping
 		///<summary>yml</summary>
         public const string Yml = "text/yaml";
 
-        const string _ext_ez = "ez";
-        const string _ext_aw = "aw";
-        const string _ext_atom = "atom";
-        const string _ext_atomcat = "atomcat";
-        const string _ext_atomsvc = "atomsvc";
-        const string _ext_ccxml = "ccxml";
-        const string _ext_cdmia = "cdmia";
-        const string _ext_cdmic = "cdmic";
-        const string _ext_cdmid = "cdmid";
-        const string _ext_cdmio = "cdmio";
-        const string _ext_cdmiq = "cdmiq";
-        const string _ext_cu = "cu";
-        const string _ext_davmount = "davmount";
-        const string _ext_dbk = "dbk";
-        const string _ext_dssc = "dssc";
-        const string _ext_xdssc = "xdssc";
-        const string _ext_ecma = "ecma";
-        const string _ext_emma = "emma";
-        const string _ext_epub = "epub";
-        const string _ext_exi = "exi";
-        const string _ext_pfr = "pfr";
-        const string _ext_gml = "gml";
-        const string _ext_gpx = "gpx";
-        const string _ext_gxf = "gxf";
-        const string _ext_stk = "stk";
-        const string _ext_ink = "ink";
-        const string _ext_inkml = "inkml";
-        const string _ext_ipfix = "ipfix";
-        const string _ext_jar = "jar";
-        const string _ext_ser = "ser";
-        const string _ext_class = "class";
-        const string _ext_js = "js";
-        const string _ext_json = "json";
-        const string _ext_jsonml = "jsonml";
-        const string _ext_lostxml = "lostxml";
-        const string _ext_hqx = "hqx";
-        const string _ext_cpt = "cpt";
-        const string _ext_mads = "mads";
-        const string _ext_mrc = "mrc";
-        const string _ext_mrcx = "mrcx";
-        const string _ext_ma = "ma";
-        const string _ext_nb = "nb";
-        const string _ext_mb = "mb";
-        const string _ext_mathml = "mathml";
-        const string _ext_mbox = "mbox";
-        const string _ext_mscml = "mscml";
-        const string _ext_metalink = "metalink";
-        const string _ext_meta4 = "meta4";
-        const string _ext_mets = "mets";
-        const string _ext_mods = "mods";
-        const string _ext_m21 = "m21";
-        const string _ext_mp21 = "mp21";
-        const string _ext_mp4s = "mp4s";
-        const string _ext_doc = "doc";
-        const string _ext_dot = "dot";
-        const string _ext_mxf = "mxf";
-        const string _ext_bin = "bin";
-        const string _ext_dms = "dms";
-        const string _ext_lrf = "lrf";
-        const string _ext_mar = "mar";
-        const string _ext_so = "so";
-        const string _ext_dist = "dist";
-        const string _ext_distz = "distz";
-        const string _ext_pkg = "pkg";
-        const string _ext_bpk = "bpk";
-        const string _ext_dump = "dump";
-        const string _ext_elc = "elc";
-        const string _ext_deploy = "deploy";
-        const string _ext_oda = "oda";
-        const string _ext_opf = "opf";
-        const string _ext_ogx = "ogx";
-        const string _ext_omdoc = "omdoc";
-        const string _ext_onetoc = "onetoc";
-        const string _ext_onetoc2 = "onetoc2";
-        const string _ext_onetmp = "onetmp";
-        const string _ext_onepkg = "onepkg";
-        const string _ext_oxps = "oxps";
-        const string _ext_xer = "xer";
-        const string _ext_pdf = "pdf";
-        const string _ext_pgp = "pgp";
-        const string _ext_asc = "asc";
-        const string _ext_sig = "sig";
-        const string _ext_prf = "prf";
-        const string _ext_p10 = "p10";
-        const string _ext_p7m = "p7m";
-        const string _ext_p7c = "p7c";
-        const string _ext_p7s = "p7s";
-        const string _ext_p8 = "p8";
-        const string _ext_ac = "ac";
-        const string _ext_cer = "cer";
-        const string _ext_crl = "crl";
-        const string _ext_pkipath = "pkipath";
-        const string _ext_pki = "pki";
-        const string _ext_pls = "pls";
-        const string _ext_ai = "ai";
-        const string _ext_eps = "eps";
-        const string _ext_ps = "ps";
-        const string _ext_cww = "cww";
-        const string _ext_pskcxml = "pskcxml";
-        const string _ext_rdf = "rdf";
-        const string _ext_rif = "rif";
-        const string _ext_rnc = "rnc";
-        const string _ext_rl = "rl";
-        const string _ext_rld = "rld";
-        const string _ext_rs = "rs";
-        const string _ext_gbr = "gbr";
-        const string _ext_mft = "mft";
-        const string _ext_roa = "roa";
-        const string _ext_rsd = "rsd";
-        const string _ext_rss = "rss";
-        const string _ext_rtf = "rtf";
-        const string _ext_sbml = "sbml";
-        const string _ext_scq = "scq";
-        const string _ext_scs = "scs";
-        const string _ext_spq = "spq";
-        const string _ext_spp = "spp";
-        const string _ext_sdp = "sdp";
-        const string _ext_setpay = "setpay";
-        const string _ext_setreg = "setreg";
-        const string _ext_shf = "shf";
-        const string _ext_smi = "smi";
-        const string _ext_smil = "smil";
-        const string _ext_rq = "rq";
-        const string _ext_srx = "srx";
-        const string _ext_gram = "gram";
-        const string _ext_grxml = "grxml";
-        const string _ext_sru = "sru";
-        const string _ext_ssdl = "ssdl";
-        const string _ext_ssml = "ssml";
-        const string _ext_tei = "tei";
-        const string _ext_teicorpus = "teicorpus";
-        const string _ext_tfi = "tfi";
-        const string _ext_tsd = "tsd";
-        const string _ext_plb = "plb";
-        const string _ext_psb = "psb";
-        const string _ext_pvb = "pvb";
-        const string _ext_tcap = "tcap";
-        const string _ext_pwn = "pwn";
-        const string _ext_aso = "aso";
-        const string _ext_imp = "imp";
-        const string _ext_acu = "acu";
-        const string _ext_atc = "atc";
-        const string _ext_acutc = "acutc";
-        const string _ext_air = "air";
-        const string _ext_fcdt = "fcdt";
-        const string _ext_fxp = "fxp";
-        const string _ext_fxpl = "fxpl";
-        const string _ext_xdp = "xdp";
-        const string _ext_xfdf = "xfdf";
-        const string _ext_ahead = "ahead";
-        const string _ext_azf = "azf";
-        const string _ext_azs = "azs";
-        const string _ext_azw = "azw";
-        const string _ext_acc = "acc";
-        const string _ext_ami = "ami";
-        const string _ext_apk = "apk";
-        const string _ext_cii = "cii";
-        const string _ext_fti = "fti";
-        const string _ext_atx = "atx";
-        const string _ext_mpkg = "mpkg";
-        const string _ext_m3u8 = "m3u8";
-        const string _ext_swi = "swi";
-        const string _ext_iota = "iota";
-        const string _ext_aep = "aep";
-        const string _ext_mpm = "mpm";
-        const string _ext_bmi = "bmi";
-        const string _ext_rep = "rep";
-        const string _ext_cdxml = "cdxml";
-        const string _ext_mmd = "mmd";
-        const string _ext_cdy = "cdy";
-        const string _ext_cla = "cla";
-        const string _ext_rp9 = "rp9";
-        const string _ext_c4g = "c4g";
-        const string _ext_c4d = "c4d";
-        const string _ext_c4f = "c4f";
-        const string _ext_c4p = "c4p";
-        const string _ext_c4u = "c4u";
-        const string _ext_c11amc = "c11amc";
-        const string _ext_c11amz = "c11amz";
-        const string _ext_csp = "csp";
-        const string _ext_cdbcmsg = "cdbcmsg";
-        const string _ext_cmc = "cmc";
-        const string _ext_clkx = "clkx";
-        const string _ext_clkk = "clkk";
-        const string _ext_clkp = "clkp";
-        const string _ext_clkt = "clkt";
-        const string _ext_clkw = "clkw";
-        const string _ext_wbs = "wbs";
-        const string _ext_pml = "pml";
-        const string _ext_ppd = "ppd";
-        const string _ext_car = "car";
-        const string _ext_pcurl = "pcurl";
-        const string _ext_dart = "dart";
-        const string _ext_rdz = "rdz";
-        const string _ext_uvf = "uvf";
-        const string _ext_uvvf = "uvvf";
-        const string _ext_uvd = "uvd";
-        const string _ext_uvvd = "uvvd";
-        const string _ext_uvt = "uvt";
-        const string _ext_uvvt = "uvvt";
-        const string _ext_uvx = "uvx";
-        const string _ext_uvvx = "uvvx";
-        const string _ext_uvz = "uvz";
-        const string _ext_uvvz = "uvvz";
-        const string _ext_fe_launch = "fe_launch";
-        const string _ext_dna = "dna";
-        const string _ext_mlp = "mlp";
-        const string _ext_dpg = "dpg";
-        const string _ext_dfac = "dfac";
-        const string _ext_kpxx = "kpxx";
-        const string _ext_ait = "ait";
-        const string _ext_svc = "svc";
-        const string _ext_geo = "geo";
-        const string _ext_mag = "mag";
-        const string _ext_nml = "nml";
-        const string _ext_esf = "esf";
-        const string _ext_msf = "msf";
-        const string _ext_qam = "qam";
-        const string _ext_slt = "slt";
-        const string _ext_ssf = "ssf";
-        const string _ext_es3 = "es3";
-        const string _ext_et3 = "et3";
-        const string _ext_ez2 = "ez2";
-        const string _ext_ez3 = "ez3";
-        const string _ext_fdf = "fdf";
-        const string _ext_mseed = "mseed";
-        const string _ext_seed = "seed";
-        const string _ext_dataless = "dataless";
-        const string _ext_gph = "gph";
-        const string _ext_ftc = "ftc";
-        const string _ext_fm = "fm";
-        const string _ext_frame = "frame";
-        const string _ext_maker = "maker";
-        const string _ext_book = "book";
-        const string _ext_fnc = "fnc";
-        const string _ext_ltf = "ltf";
-        const string _ext_fsc = "fsc";
-        const string _ext_oas = "oas";
-        const string _ext_oa2 = "oa2";
-        const string _ext_oa3 = "oa3";
-        const string _ext_fg5 = "fg5";
-        const string _ext_bh2 = "bh2";
-        const string _ext_ddd = "ddd";
-        const string _ext_xdw = "xdw";
-        const string _ext_xbd = "xbd";
-        const string _ext_fzs = "fzs";
-        const string _ext_txd = "txd";
-        const string _ext_ggb = "ggb";
-        const string _ext_ggt = "ggt";
-        const string _ext_gex = "gex";
-        const string _ext_gre = "gre";
-        const string _ext_gxt = "gxt";
-        const string _ext_g2w = "g2w";
-        const string _ext_g3w = "g3w";
-        const string _ext_gmx = "gmx";
-        const string _ext_kml = "kml";
-        const string _ext_kmz = "kmz";
-        const string _ext_gqf = "gqf";
-        const string _ext_gqs = "gqs";
-        const string _ext_gac = "gac";
-        const string _ext_ghf = "ghf";
-        const string _ext_gim = "gim";
-        const string _ext_grv = "grv";
-        const string _ext_gtm = "gtm";
-        const string _ext_tpl = "tpl";
-        const string _ext_vcg = "vcg";
-        const string _ext_hal = "hal";
-        const string _ext_zmm = "zmm";
-        const string _ext_hbci = "hbci";
-        const string _ext_les = "les";
-        const string _ext_hpgl = "hpgl";
-        const string _ext_hpid = "hpid";
-        const string _ext_hps = "hps";
-        const string _ext_jlt = "jlt";
-        const string _ext_pcl = "pcl";
-        const string _ext_pclxl = "pclxl";
-        const string _ext_sfd_hdstx = "sfd-hdstx";
-        const string _ext_mpy = "mpy";
-        const string _ext_afp = "afp";
-        const string _ext_listafp = "listafp";
-        const string _ext_list3820 = "list3820";
-        const string _ext_irm = "irm";
-        const string _ext_sc = "sc";
-        const string _ext_icc = "icc";
-        const string _ext_icm = "icm";
-        const string _ext_igl = "igl";
-        const string _ext_ivp = "ivp";
-        const string _ext_ivu = "ivu";
-        const string _ext_igm = "igm";
-        const string _ext_xpw = "xpw";
-        const string _ext_xpx = "xpx";
-        const string _ext_i2g = "i2g";
-        const string _ext_qbo = "qbo";
-        const string _ext_qfx = "qfx";
-        const string _ext_rcprofile = "rcprofile";
-        const string _ext_irp = "irp";
-        const string _ext_xpr = "xpr";
-        const string _ext_fcs = "fcs";
-        const string _ext_jam = "jam";
-        const string _ext_rms = "rms";
-        const string _ext_jisp = "jisp";
-        const string _ext_joda = "joda";
-        const string _ext_ktz = "ktz";
-        const string _ext_ktr = "ktr";
-        const string _ext_karbon = "karbon";
-        const string _ext_chrt = "chrt";
-        const string _ext_kfo = "kfo";
-        const string _ext_flw = "flw";
-        const string _ext_kon = "kon";
-        const string _ext_kpr = "kpr";
-        const string _ext_kpt = "kpt";
-        const string _ext_ksp = "ksp";
-        const string _ext_kwd = "kwd";
-        const string _ext_kwt = "kwt";
-        const string _ext_htke = "htke";
-        const string _ext_kia = "kia";
-        const string _ext_kne = "kne";
-        const string _ext_knp = "knp";
-        const string _ext_skp = "skp";
-        const string _ext_skd = "skd";
-        const string _ext_skt = "skt";
-        const string _ext_skm = "skm";
-        const string _ext_sse = "sse";
-        const string _ext_lasxml = "lasxml";
-        const string _ext_lbd = "lbd";
-        const string _ext_lbe = "lbe";
-        const string _ext_123 = "123";
-        const string _ext_apr = "apr";
-        const string _ext_pre = "pre";
-        const string _ext_nsf = "nsf";
-        const string _ext_org = "org";
-        const string _ext_scm = "scm";
-        const string _ext_lwp = "lwp";
-        const string _ext_portpkg = "portpkg";
-        const string _ext_mcd = "mcd";
-        const string _ext_mc1 = "mc1";
-        const string _ext_cdkey = "cdkey";
-        const string _ext_mwf = "mwf";
-        const string _ext_mfm = "mfm";
-        const string _ext_flo = "flo";
-        const string _ext_igx = "igx";
-        const string _ext_mif = "mif";
-        const string _ext_daf = "daf";
-        const string _ext_dis = "dis";
-        const string _ext_mbk = "mbk";
-        const string _ext_mqy = "mqy";
-        const string _ext_msl = "msl";
-        const string _ext_plc = "plc";
-        const string _ext_txf = "txf";
-        const string _ext_mpn = "mpn";
-        const string _ext_mpc = "mpc";
-        const string _ext_xul = "xul";
-        const string _ext_cil = "cil";
-        const string _ext_cab = "cab";
-        const string _ext_xls = "xls";
-        const string _ext_xlm = "xlm";
-        const string _ext_xla = "xla";
-        const string _ext_xlc = "xlc";
-        const string _ext_xlt = "xlt";
-        const string _ext_xlw = "xlw";
-        const string _ext_xlam = "xlam";
-        const string _ext_xlsb = "xlsb";
-        const string _ext_xlsm = "xlsm";
-        const string _ext_xltm = "xltm";
-        const string _ext_eot = "eot";
-        const string _ext_chm = "chm";
-        const string _ext_ims = "ims";
-        const string _ext_lrm = "lrm";
-        const string _ext_thmx = "thmx";
-        const string _ext_cat = "cat";
-        const string _ext_stl = "stl";
-        const string _ext_ppt = "ppt";
-        const string _ext_pps = "pps";
-        const string _ext_pot = "pot";
-        const string _ext_ppam = "ppam";
-        const string _ext_pptm = "pptm";
-        const string _ext_sldm = "sldm";
-        const string _ext_ppsm = "ppsm";
-        const string _ext_potm = "potm";
-        const string _ext_mpp = "mpp";
-        const string _ext_mpt = "mpt";
-        const string _ext_docm = "docm";
-        const string _ext_dotm = "dotm";
-        const string _ext_wps = "wps";
-        const string _ext_wks = "wks";
-        const string _ext_wcm = "wcm";
-        const string _ext_wdb = "wdb";
-        const string _ext_wpl = "wpl";
-        const string _ext_xps = "xps";
-        const string _ext_mseq = "mseq";
-        const string _ext_mus = "mus";
-        const string _ext_msty = "msty";
-        const string _ext_taglet = "taglet";
-        const string _ext_nlu = "nlu";
-        const string _ext_ntf = "ntf";
-        const string _ext_nitf = "nitf";
-        const string _ext_nnd = "nnd";
-        const string _ext_nns = "nns";
-        const string _ext_nnw = "nnw";
-        const string _ext_ngdat = "ngdat";
-        const string _ext_n_gage = "n-gage";
-        const string _ext_rpst = "rpst";
-        const string _ext_rpss = "rpss";
-        const string _ext_edm = "edm";
-        const string _ext_edx = "edx";
-        const string _ext_ext = "ext";
-        const string _ext_odc = "odc";
-        const string _ext_otc = "otc";
-        const string _ext_odb = "odb";
-        const string _ext_odf = "odf";
-        const string _ext_odft = "odft";
-        const string _ext_odg = "odg";
-        const string _ext_otg = "otg";
-        const string _ext_odi = "odi";
-        const string _ext_oti = "oti";
-        const string _ext_odp = "odp";
-        const string _ext_otp = "otp";
-        const string _ext_ods = "ods";
-        const string _ext_ots = "ots";
-        const string _ext_odt = "odt";
-        const string _ext_odm = "odm";
-        const string _ext_ott = "ott";
-        const string _ext_oth = "oth";
-        const string _ext_xo = "xo";
-        const string _ext_dd2 = "dd2";
-        const string _ext_oxt = "oxt";
-        const string _ext_pptx = "pptx";
-        const string _ext_sldx = "sldx";
-        const string _ext_ppsx = "ppsx";
-        const string _ext_potx = "potx";
-        const string _ext_xlsx = "xlsx";
-        const string _ext_xltx = "xltx";
-        const string _ext_docx = "docx";
-        const string _ext_dotx = "dotx";
-        const string _ext_mgp = "mgp";
-        const string _ext_dp = "dp";
-        const string _ext_esa = "esa";
-        const string _ext_pdb = "pdb";
-        const string _ext_pqa = "pqa";
-        const string _ext_oprc = "oprc";
-        const string _ext_paw = "paw";
-        const string _ext_str = "str";
-        const string _ext_ei6 = "ei6";
-        const string _ext_efif = "efif";
-        const string _ext_wg = "wg";
-        const string _ext_plf = "plf";
-        const string _ext_pbd = "pbd";
-        const string _ext_box = "box";
-        const string _ext_mgz = "mgz";
-        const string _ext_qps = "qps";
-        const string _ext_ptid = "ptid";
-        const string _ext_qxd = "qxd";
-        const string _ext_qxt = "qxt";
-        const string _ext_qwd = "qwd";
-        const string _ext_qwt = "qwt";
-        const string _ext_qxl = "qxl";
-        const string _ext_qxb = "qxb";
-        const string _ext_bed = "bed";
-        const string _ext_mxl = "mxl";
-        const string _ext_musicxml = "musicxml";
-        const string _ext_cryptonote = "cryptonote";
-        const string _ext_cod = "cod";
-        const string _ext_rm = "rm";
-        const string _ext_rmvb = "rmvb";
-        const string _ext_link66 = "link66";
-        const string _ext_st = "st";
-        const string _ext_see = "see";
-        const string _ext_sema = "sema";
-        const string _ext_semd = "semd";
-        const string _ext_semf = "semf";
-        const string _ext_ifm = "ifm";
-        const string _ext_itp = "itp";
-        const string _ext_iif = "iif";
-        const string _ext_ipk = "ipk";
-        const string _ext_twd = "twd";
-        const string _ext_twds = "twds";
-        const string _ext_mmf = "mmf";
-        const string _ext_teacher = "teacher";
-        const string _ext_sdkm = "sdkm";
-        const string _ext_sdkd = "sdkd";
-        const string _ext_dxp = "dxp";
-        const string _ext_sfs = "sfs";
-        const string _ext_sdc = "sdc";
-        const string _ext_sda = "sda";
-        const string _ext_sdd = "sdd";
-        const string _ext_smf = "smf";
-        const string _ext_sdw = "sdw";
-        const string _ext_vor = "vor";
-        const string _ext_sgl = "sgl";
-        const string _ext_smzip = "smzip";
-        const string _ext_sm = "sm";
-        const string _ext_sxc = "sxc";
-        const string _ext_stc = "stc";
-        const string _ext_sxd = "sxd";
-        const string _ext_std = "std";
-        const string _ext_sxi = "sxi";
-        const string _ext_sti = "sti";
-        const string _ext_sxm = "sxm";
-        const string _ext_sxw = "sxw";
-        const string _ext_sxg = "sxg";
-        const string _ext_stw = "stw";
-        const string _ext_sus = "sus";
-        const string _ext_susp = "susp";
-        const string _ext_svd = "svd";
-        const string _ext_sis = "sis";
-        const string _ext_sisx = "sisx";
-        const string _ext_xsm = "xsm";
-        const string _ext_bdm = "bdm";
-        const string _ext_xdm = "xdm";
-        const string _ext_tao = "tao";
-        const string _ext_pcap = "pcap";
-        const string _ext_cap = "cap";
-        const string _ext_dmp = "dmp";
-        const string _ext_tmo = "tmo";
-        const string _ext_tpt = "tpt";
-        const string _ext_mxs = "mxs";
-        const string _ext_tra = "tra";
-        const string _ext_ufd = "ufd";
-        const string _ext_ufdl = "ufdl";
-        const string _ext_utz = "utz";
-        const string _ext_umj = "umj";
-        const string _ext_unityweb = "unityweb";
-        const string _ext_uoml = "uoml";
-        const string _ext_vcx = "vcx";
-        const string _ext_vsd = "vsd";
-        const string _ext_vst = "vst";
-        const string _ext_vss = "vss";
-        const string _ext_vsw = "vsw";
-        const string _ext_vis = "vis";
-        const string _ext_vsf = "vsf";
-        const string _ext_wbxml = "wbxml";
-        const string _ext_wmlc = "wmlc";
-        const string _ext_wmlsc = "wmlsc";
-        const string _ext_wtb = "wtb";
-        const string _ext_nbp = "nbp";
-        const string _ext_wpd = "wpd";
-        const string _ext_wqd = "wqd";
-        const string _ext_stf = "stf";
-        const string _ext_xar = "xar";
-        const string _ext_xfdl = "xfdl";
-        const string _ext_hvd = "hvd";
-        const string _ext_hvs = "hvs";
-        const string _ext_hvp = "hvp";
-        const string _ext_osf = "osf";
-        const string _ext_osfpvg = "osfpvg";
-        const string _ext_saf = "saf";
-        const string _ext_spf = "spf";
-        const string _ext_cmp = "cmp";
-        const string _ext_zir = "zir";
-        const string _ext_zirz = "zirz";
-        const string _ext_zaz = "zaz";
-        const string _ext_vxml = "vxml";
-        const string _ext_wgt = "wgt";
-        const string _ext_hlp = "hlp";
-        const string _ext_wsdl = "wsdl";
-        const string _ext_wspolicy = "wspolicy";
-        const string _ext_7z = "7z";
-        const string _ext_abw = "abw";
-        const string _ext_ace = "ace";
-        const string _ext_dmg = "dmg";
-        const string _ext_aab = "aab";
-        const string _ext_x32 = "x32";
-        const string _ext_u32 = "u32";
-        const string _ext_vox = "vox";
-        const string _ext_aam = "aam";
-        const string _ext_aas = "aas";
-        const string _ext_bcpio = "bcpio";
-        const string _ext_torrent = "torrent";
-        const string _ext_blb = "blb";
-        const string _ext_blorb = "blorb";
-        const string _ext_bz = "bz";
-        const string _ext_bz2 = "bz2";
-        const string _ext_boz = "boz";
-        const string _ext_cbr = "cbr";
-        const string _ext_cba = "cba";
-        const string _ext_cbt = "cbt";
-        const string _ext_cbz = "cbz";
-        const string _ext_cb7 = "cb7";
-        const string _ext_vcd = "vcd";
-        const string _ext_cfs = "cfs";
-        const string _ext_chat = "chat";
-        const string _ext_pgn = "pgn";
-        const string _ext_nsc = "nsc";
-        const string _ext_cpio = "cpio";
-        const string _ext_csh = "csh";
-        const string _ext_deb = "deb";
-        const string _ext_udeb = "udeb";
-        const string _ext_dgc = "dgc";
-        const string _ext_dir = "dir";
-        const string _ext_dcr = "dcr";
-        const string _ext_dxr = "dxr";
-        const string _ext_cst = "cst";
-        const string _ext_cct = "cct";
-        const string _ext_cxt = "cxt";
-        const string _ext_w3d = "w3d";
-        const string _ext_fgd = "fgd";
-        const string _ext_swa = "swa";
-        const string _ext_wad = "wad";
-        const string _ext_ncx = "ncx";
-        const string _ext_dtb = "dtb";
-        const string _ext_res = "res";
-        const string _ext_dvi = "dvi";
-        const string _ext_evy = "evy";
-        const string _ext_eva = "eva";
-        const string _ext_bdf = "bdf";
-        const string _ext_gsf = "gsf";
-        const string _ext_psf = "psf";
-        const string _ext_pcf = "pcf";
-        const string _ext_snf = "snf";
-        const string _ext_pfa = "pfa";
-        const string _ext_pfb = "pfb";
-        const string _ext_pfm = "pfm";
-        const string _ext_afm = "afm";
-        const string _ext_arc = "arc";
-        const string _ext_spl = "spl";
-        const string _ext_gca = "gca";
-        const string _ext_ulx = "ulx";
-        const string _ext_gnumeric = "gnumeric";
-        const string _ext_gramps = "gramps";
-        const string _ext_gtar = "gtar";
-        const string _ext_hdf = "hdf";
-        const string _ext_install = "install";
-        const string _ext_iso = "iso";
-        const string _ext_jnlp = "jnlp";
-        const string _ext_latex = "latex";
-        const string _ext_lzh = "lzh";
-        const string _ext_lha = "lha";
-        const string _ext_mie = "mie";
-        const string _ext_prc = "prc";
-        const string _ext_mobi = "mobi";
-        const string _ext_application = "application";
-        const string _ext_lnk = "lnk";
-        const string _ext_wmd = "wmd";
-        const string _ext_wmz = "wmz";
-        const string _ext_xbap = "xbap";
-        const string _ext_mdb = "mdb";
-        const string _ext_obd = "obd";
-        const string _ext_crd = "crd";
-        const string _ext_clp = "clp";
-        const string _ext_exe = "exe";
-        const string _ext_dll = "dll";
-        const string _ext_com = "com";
-        const string _ext_bat = "bat";
-        const string _ext_msi = "msi";
-        const string _ext_mvb = "mvb";
-        const string _ext_m13 = "m13";
-        const string _ext_m14 = "m14";
-        const string _ext_wmf = "wmf";
-        const string _ext_emf = "emf";
-        const string _ext_emz = "emz";
-        const string _ext_mny = "mny";
-        const string _ext_pub = "pub";
-        const string _ext_scd = "scd";
-        const string _ext_trm = "trm";
-        const string _ext_wri = "wri";
-        const string _ext_nc = "nc";
-        const string _ext_cdf = "cdf";
-        const string _ext_nzb = "nzb";
-        const string _ext_p12 = "p12";
-        const string _ext_pfx = "pfx";
-        const string _ext_p7b = "p7b";
-        const string _ext_spc = "spc";
-        const string _ext_p7r = "p7r";
-        const string _ext_rar = "rar";
-        const string _ext_ris = "ris";
-        const string _ext_sh = "sh";
-        const string _ext_shar = "shar";
-        const string _ext_swf = "swf";
-        const string _ext_xap = "xap";
-        const string _ext_sql = "sql";
-        const string _ext_sit = "sit";
-        const string _ext_sitx = "sitx";
-        const string _ext_srt = "srt";
-        const string _ext_sv4cpio = "sv4cpio";
-        const string _ext_sv4crc = "sv4crc";
-        const string _ext_t3 = "t3";
-        const string _ext_gam = "gam";
-        const string _ext_tar = "tar";
-        const string _ext_tcl = "tcl";
-        const string _ext_tex = "tex";
-        const string _ext_tfm = "tfm";
-        const string _ext_texinfo = "texinfo";
-        const string _ext_texi = "texi";
-        const string _ext_obj = "obj";
-        const string _ext_ustar = "ustar";
-        const string _ext_src = "src";
-        const string _ext_der = "der";
-        const string _ext_crt = "crt";
-        const string _ext_fig = "fig";
-        const string _ext_xlf = "xlf";
-        const string _ext_xpi = "xpi";
-        const string _ext_xz = "xz";
-        const string _ext_z1 = "z1";
-        const string _ext_z2 = "z2";
-        const string _ext_z3 = "z3";
-        const string _ext_z4 = "z4";
-        const string _ext_z5 = "z5";
-        const string _ext_z6 = "z6";
-        const string _ext_z7 = "z7";
-        const string _ext_z8 = "z8";
-        const string _ext_xaml = "xaml";
-        const string _ext_xdf = "xdf";
-        const string _ext_xenc = "xenc";
-        const string _ext_xhtml = "xhtml";
-        const string _ext_xht = "xht";
-        const string _ext_xml = "xml";
-        const string _ext_xsl = "xsl";
-        const string _ext_dtd = "dtd";
-        const string _ext_xop = "xop";
-        const string _ext_xpl = "xpl";
-        const string _ext_xslt = "xslt";
-        const string _ext_xspf = "xspf";
-        const string _ext_mxml = "mxml";
-        const string _ext_xhvml = "xhvml";
-        const string _ext_xvml = "xvml";
-        const string _ext_xvm = "xvm";
-        const string _ext_yang = "yang";
-        const string _ext_yin = "yin";
-        const string _ext_zip = "zip";
-        const string _ext_adp = "adp";
-        const string _ext_au = "au";
-        const string _ext_snd = "snd";
-        const string _ext_mid = "mid";
-        const string _ext_midi = "midi";
-        const string _ext_kar = "kar";
-        const string _ext_rmi = "rmi";
-        const string _ext_m4a = "m4a";
-        const string _ext_mp4a = "mp4a";
-        const string _ext_mpga = "mpga";
-        const string _ext_mp2 = "mp2";
-        const string _ext_mp2a = "mp2a";
-        const string _ext_mp3 = "mp3";
-        const string _ext_m2a = "m2a";
-        const string _ext_m3a = "m3a";
-        const string _ext_oga = "oga";
-        const string _ext_ogg = "ogg";
-        const string _ext_spx = "spx";
-        const string _ext_s3m = "s3m";
-        const string _ext_sil = "sil";
-        const string _ext_uva = "uva";
-        const string _ext_uvva = "uvva";
-        const string _ext_eol = "eol";
-        const string _ext_dra = "dra";
-        const string _ext_dts = "dts";
-        const string _ext_dtshd = "dtshd";
-        const string _ext_lvp = "lvp";
-        const string _ext_pya = "pya";
-        const string _ext_ecelp4800 = "ecelp4800";
-        const string _ext_ecelp7470 = "ecelp7470";
-        const string _ext_ecelp9600 = "ecelp9600";
-        const string _ext_rip = "rip";
-        const string _ext_weba = "weba";
-        const string _ext_aac = "aac";
-        const string _ext_aif = "aif";
-        const string _ext_aiff = "aiff";
-        const string _ext_aifc = "aifc";
-        const string _ext_caf = "caf";
-        const string _ext_flac = "flac";
-        const string _ext_mka = "mka";
-        const string _ext_m3u = "m3u";
-        const string _ext_wax = "wax";
-        const string _ext_wma = "wma";
-        const string _ext_ram = "ram";
-        const string _ext_ra = "ra";
-        const string _ext_rmp = "rmp";
-        const string _ext_wav = "wav";
-        const string _ext_xm = "xm";
-        const string _ext_cdx = "cdx";
-        const string _ext_cif = "cif";
-        const string _ext_cmdf = "cmdf";
-        const string _ext_cml = "cml";
-        const string _ext_csml = "csml";
-        const string _ext_xyz = "xyz";
-        const string _ext_ttc = "ttc";
-        const string _ext_otf = "otf";
-        const string _ext_ttf = "ttf";
-        const string _ext_woff = "woff";
-        const string _ext_woff2 = "woff2";
-        const string _ext_bmp = "bmp";
-        const string _ext_cgm = "cgm";
-        const string _ext_g3 = "g3";
-        const string _ext_gif = "gif";
-        const string _ext_ief = "ief";
-        const string _ext_jpeg = "jpeg";
-        const string _ext_jpg = "jpg";
-        const string _ext_jpe = "jpe";
-        const string _ext_ktx = "ktx";
-        const string _ext_png = "png";
-        const string _ext_btif = "btif";
-        const string _ext_sgi = "sgi";
-        const string _ext_svg = "svg";
-        const string _ext_svgz = "svgz";
-        const string _ext_tiff = "tiff";
-        const string _ext_tif = "tif";
-        const string _ext_psd = "psd";
-        const string _ext_uvi = "uvi";
-        const string _ext_uvvi = "uvvi";
-        const string _ext_uvg = "uvg";
-        const string _ext_uvvg = "uvvg";
-        const string _ext_djvu = "djvu";
-        const string _ext_djv = "djv";
-        const string _ext_sub = "sub";
-        const string _ext_dwg = "dwg";
-        const string _ext_dxf = "dxf";
-        const string _ext_fbs = "fbs";
-        const string _ext_fpx = "fpx";
-        const string _ext_fst = "fst";
-        const string _ext_mmr = "mmr";
-        const string _ext_rlc = "rlc";
-        const string _ext_mdi = "mdi";
-        const string _ext_wdp = "wdp";
-        const string _ext_npx = "npx";
-        const string _ext_wbmp = "wbmp";
-        const string _ext_xif = "xif";
-        const string _ext_webp = "webp";
-        const string _ext_3ds = "3ds";
-        const string _ext_ras = "ras";
-        const string _ext_cmx = "cmx";
-        const string _ext_fh = "fh";
-        const string _ext_fhc = "fhc";
-        const string _ext_fh4 = "fh4";
-        const string _ext_fh5 = "fh5";
-        const string _ext_fh7 = "fh7";
-        const string _ext_ico = "ico";
-        const string _ext_sid = "sid";
-        const string _ext_pcx = "pcx";
-        const string _ext_pic = "pic";
-        const string _ext_pct = "pct";
-        const string _ext_pnm = "pnm";
-        const string _ext_pbm = "pbm";
-        const string _ext_pgm = "pgm";
-        const string _ext_ppm = "ppm";
-        const string _ext_rgb = "rgb";
-        const string _ext_tga = "tga";
-        const string _ext_xbm = "xbm";
-        const string _ext_xpm = "xpm";
-        const string _ext_xwd = "xwd";
-        const string _ext_eml = "eml";
-        const string _ext_mime = "mime";
-        const string _ext_igs = "igs";
-        const string _ext_iges = "iges";
-        const string _ext_msh = "msh";
-        const string _ext_mesh = "mesh";
-        const string _ext_silo = "silo";
-        const string _ext_dae = "dae";
-        const string _ext_dwf = "dwf";
-        const string _ext_gdl = "gdl";
-        const string _ext_gtw = "gtw";
-        const string _ext_mts = "mts";
-        const string _ext_vtu = "vtu";
-        const string _ext_wrl = "wrl";
-        const string _ext_vrml = "vrml";
-        const string _ext_x3db = "x3db";
-        const string _ext_x3dbz = "x3dbz";
-        const string _ext_x3dv = "x3dv";
-        const string _ext_x3dvz = "x3dvz";
-        const string _ext_x3d = "x3d";
-        const string _ext_x3dz = "x3dz";
-        const string _ext_appcache = "appcache";
-        const string _ext_ics = "ics";
-        const string _ext_ifb = "ifb";
-        const string _ext_css = "css";
-        const string _ext_csv = "csv";
-        const string _ext_html = "html";
-        const string _ext_htm = "htm";
-        const string _ext_n3 = "n3";
-        const string _ext_txt = "txt";
-        const string _ext_text = "text";
-        const string _ext_conf = "conf";
-        const string _ext_def = "def";
-        const string _ext_list = "list";
-        const string _ext_log = "log";
-        const string _ext_in = "in";
-        const string _ext_dsc = "dsc";
-        const string _ext_rtx = "rtx";
-        const string _ext_sgml = "sgml";
-        const string _ext_sgm = "sgm";
-        const string _ext_tsv = "tsv";
-        const string _ext_t = "t";
-        const string _ext_tr = "tr";
-        const string _ext_roff = "roff";
-        const string _ext_man = "man";
-        const string _ext_me = "me";
-        const string _ext_ms = "ms";
-        const string _ext_ttl = "ttl";
-        const string _ext_uri = "uri";
-        const string _ext_uris = "uris";
-        const string _ext_urls = "urls";
-        const string _ext_vcard = "vcard";
-        const string _ext_curl = "curl";
-        const string _ext_dcurl = "dcurl";
-        const string _ext_mcurl = "mcurl";
-        const string _ext_scurl = "scurl";
-        const string _ext_fly = "fly";
-        const string _ext_flx = "flx";
-        const string _ext_gv = "gv";
-        const string _ext_3dml = "3dml";
-        const string _ext_spot = "spot";
-        const string _ext_jad = "jad";
-        const string _ext_wml = "wml";
-        const string _ext_wmls = "wmls";
-        const string _ext_s = "s";
-        const string _ext_asm = "asm";
-        const string _ext_c = "c";
-        const string _ext_cc = "cc";
-        const string _ext_cxx = "cxx";
-        const string _ext_cpp = "cpp";
-        const string _ext_h = "h";
-        const string _ext_hh = "hh";
-        const string _ext_dic = "dic";
-        const string _ext_f = "f";
-        const string _ext_for = "for";
-        const string _ext_f77 = "f77";
-        const string _ext_f90 = "f90";
-        const string _ext_java = "java";
-        const string _ext_nfo = "nfo";
-        const string _ext_opml = "opml";
-        const string _ext_p = "p";
-        const string _ext_pas = "pas";
-        const string _ext_etx = "etx";
-        const string _ext_sfv = "sfv";
-        const string _ext_uu = "uu";
-        const string _ext_vcs = "vcs";
-        const string _ext_vcf = "vcf";
-        const string _ext_3gp = "3gp";
-        const string _ext_3g2 = "3g2";
-        const string _ext_h261 = "h261";
-        const string _ext_h263 = "h263";
-        const string _ext_h264 = "h264";
-        const string _ext_jpgv = "jpgv";
-        const string _ext_jpm = "jpm";
-        const string _ext_jpgm = "jpgm";
-        const string _ext_mj2 = "mj2";
-        const string _ext_mjp2 = "mjp2";
-        const string _ext_mp4 = "mp4";
-        const string _ext_mp4v = "mp4v";
-        const string _ext_mpg4 = "mpg4";
-        const string _ext_mpeg = "mpeg";
-        const string _ext_mpg = "mpg";
-        const string _ext_mpe = "mpe";
-        const string _ext_m1v = "m1v";
-        const string _ext_m2v = "m2v";
-        const string _ext_ogv = "ogv";
-        const string _ext_qt = "qt";
-        const string _ext_mov = "mov";
-        const string _ext_uvh = "uvh";
-        const string _ext_uvvh = "uvvh";
-        const string _ext_uvm = "uvm";
-        const string _ext_uvvm = "uvvm";
-        const string _ext_uvp = "uvp";
-        const string _ext_uvvp = "uvvp";
-        const string _ext_uvs = "uvs";
-        const string _ext_uvvs = "uvvs";
-        const string _ext_uvv = "uvv";
-        const string _ext_uvvv = "uvvv";
-        const string _ext_dvb = "dvb";
-        const string _ext_fvt = "fvt";
-        const string _ext_mxu = "mxu";
-        const string _ext_m4u = "m4u";
-        const string _ext_pyv = "pyv";
-        const string _ext_uvu = "uvu";
-        const string _ext_uvvu = "uvvu";
-        const string _ext_viv = "viv";
-        const string _ext_webm = "webm";
-        const string _ext_f4v = "f4v";
-        const string _ext_fli = "fli";
-        const string _ext_flv = "flv";
-        const string _ext_m4v = "m4v";
-        const string _ext_mkv = "mkv";
-        const string _ext_mk3d = "mk3d";
-        const string _ext_mks = "mks";
-        const string _ext_mng = "mng";
-        const string _ext_asf = "asf";
-        const string _ext_asx = "asx";
-        const string _ext_vob = "vob";
-        const string _ext_wm = "wm";
-        const string _ext_wmv = "wmv";
-        const string _ext_wmx = "wmx";
-        const string _ext_wvx = "wvx";
-        const string _ext_avi = "avi";
-        const string _ext_movie = "movie";
-        const string _ext_smv = "smv";
-        const string _ext_ice = "ice";
-        const string _ext_map = "map";
-        const string _ext_topojson = "topojson";
-        const string _ext_jsonld = "jsonld";
-        const string _ext_geojson = "geojson";
-        const string _ext_mjs = "mjs";
-        const string _ext_wasm = "wasm";
-        const string _ext_webmanifest = "webmanifest";
-        const string _ext_webapp = "webapp";
-        const string _ext_f4a = "f4a";
-        const string _ext_f4b = "f4b";
-        const string _ext_opus = "opus";
-        const string _ext_jxr = "jxr";
-        const string _ext_hdp = "hdp";
-        const string _ext_jng = "jng";
-        const string _ext_3gpp = "3gpp";
-        const string _ext_f4p = "f4p";
-        const string _ext_cur = "cur";
-        const string _ext_ear = "ear";
-        const string _ext_war = "war";
-        const string _ext_img = "img";
-        const string _ext_msm = "msm";
-        const string _ext_msp = "msp";
-        const string _ext_safariextz = "safariextz";
-        const string _ext_bbaw = "bbaw";
-        const string _ext_crx = "crx";
-        const string _ext_cco = "cco";
-        const string _ext_jardiff = "jardiff";
-        const string _ext_run = "run";
-        const string _ext_oex = "oex";
-        const string _ext_pl = "pl";
-        const string _ext_pm = "pm";
-        const string _ext_rpm = "rpm";
-        const string _ext_sea = "sea";
-        const string _ext_tk = "tk";
-        const string _ext_pem = "pem";
-        const string _ext_shtml = "shtml";
-        const string _ext_md = "md";
-        const string _ext_markdown = "markdown";
-        const string _ext_mml = "mml";
-        const string _ext_xloc = "xloc";
-        const string _ext_vtt = "vtt";
-        const string _ext_htc = "htc";
-        const string _ext_bdoc = "bdoc";
-        const string _ext_mpd = "mpd";
-        const string _ext_es = "es";
-        const string _ext_gz = "gz";
-        const string _ext_hjson = "hjson";
-        const string _ext_json5 = "json5";
-        const string _ext_m4p = "m4p";
-        const string _ext_nq = "nq";
-        const string _ext_nt = "nt";
-        const string _ext_buffer = "buffer";
-        const string _ext_raml = "raml";
-        const string _ext_owl = "owl";
-        const string _ext_siv = "siv";
-        const string _ext_sieve = "sieve";
-        const string _ext_toml = "toml";
-        const string _ext_pkpass = "pkpass";
-        const string _ext_csl = "csl";
-        const string _ext_gdoc = "gdoc";
-        const string _ext_gslides = "gslides";
-        const string _ext_gsheet = "gsheet";
-        const string _ext_msg = "msg";
-        const string _ext_wadl = "wadl";
-        const string _ext_arj = "arj";
-        const string _ext_php = "php";
-        const string _ext_kdbx = "kdbx";
-        const string _ext_luac = "luac";
-        const string _ext_pac = "pac";
-        const string _ext_hdd = "hdd";
-        const string _ext_ova = "ova";
-        const string _ext_ovf = "ovf";
-        const string _ext_vbox = "vbox";
-        const string _ext_vbox_extpack = "vbox-extpack";
-        const string _ext_vdi = "vdi";
-        const string _ext_vhd = "vhd";
-        const string _ext_vmdk = "vmdk";
-        const string _ext_xsd = "xsd";
-        const string _ext_rng = "rng";
-        const string _ext_mxmf = "mxmf";
-        const string _ext_apng = "apng";
-        const string _ext_heic = "heic";
-        const string _ext_heics = "heics";
-        const string _ext_heif = "heif";
-        const string _ext_heifs = "heifs";
-        const string _ext_jp2 = "jp2";
-        const string _ext_jpg2 = "jpg2";
-        const string _ext_jpx = "jpx";
-        const string _ext_jpf = "jpf";
-        const string _ext_dds = "dds";
-        const string _ext_manifest = "manifest";
-        const string _ext_coffee = "coffee";
-        const string _ext_litcoffee = "litcoffee";
-        const string _ext_jade = "jade";
-        const string _ext_jsx = "jsx";
-        const string _ext_less = "less";
-        const string _ext_mdx = "mdx";
-        const string _ext_ini = "ini";
-        const string _ext_shex = "shex";
-        const string _ext_slim = "slim";
-        const string _ext_slm = "slm";
-        const string _ext_stylus = "stylus";
-        const string _ext_styl = "styl";
-        const string _ext_hbs = "hbs";
-        const string _ext_lua = "lua";
-        const string _ext_mkd = "mkd";
-        const string _ext_pde = "pde";
-        const string _ext_sass = "sass";
-        const string _ext_scss = "scss";
-        const string _ext_ymp = "ymp";
-        const string _ext_yaml = "yaml";
-        const string _ext_yml = "yml";
+		///<summary>File extensions</summary>
+		public static class FileExtensions
+		{
+
+			///<summary>ez</summary>
+			public const string Ez = "ez";
+
+			///<summary>aw</summary>
+			public const string Aw = "aw";
+
+			///<summary>atom</summary>
+			public const string Atom = "atom";
+
+			///<summary>atomcat</summary>
+			public const string Atomcat = "atomcat";
+
+			///<summary>atomsvc</summary>
+			public const string Atomsvc = "atomsvc";
+
+			///<summary>ccxml</summary>
+			public const string Ccxml = "ccxml";
+
+			///<summary>cdmia</summary>
+			public const string Cdmia = "cdmia";
+
+			///<summary>cdmic</summary>
+			public const string Cdmic = "cdmic";
+
+			///<summary>cdmid</summary>
+			public const string Cdmid = "cdmid";
+
+			///<summary>cdmio</summary>
+			public const string Cdmio = "cdmio";
+
+			///<summary>cdmiq</summary>
+			public const string Cdmiq = "cdmiq";
+
+			///<summary>cu</summary>
+			public const string Cu = "cu";
+
+			///<summary>davmount</summary>
+			public const string Davmount = "davmount";
+
+			///<summary>dbk</summary>
+			public const string Dbk = "dbk";
+
+			///<summary>dssc</summary>
+			public const string Dssc = "dssc";
+
+			///<summary>xdssc</summary>
+			public const string Xdssc = "xdssc";
+
+			///<summary>ecma</summary>
+			public const string Ecma = "ecma";
+
+			///<summary>emma</summary>
+			public const string Emma = "emma";
+
+			///<summary>epub</summary>
+			public const string Epub = "epub";
+
+			///<summary>exi</summary>
+			public const string Exi = "exi";
+
+			///<summary>pfr</summary>
+			public const string Pfr = "pfr";
+
+			///<summary>gml</summary>
+			public const string Gml = "gml";
+
+			///<summary>gpx</summary>
+			public const string Gpx = "gpx";
+
+			///<summary>gxf</summary>
+			public const string Gxf = "gxf";
+
+			///<summary>stk</summary>
+			public const string Stk = "stk";
+
+			///<summary>ink</summary>
+			public const string Ink = "ink";
+
+			///<summary>inkml</summary>
+			public const string Inkml = "inkml";
+
+			///<summary>ipfix</summary>
+			public const string Ipfix = "ipfix";
+
+			///<summary>jar</summary>
+			public const string Jar = "jar";
+
+			///<summary>ser</summary>
+			public const string Ser = "ser";
+
+			///<summary>class</summary>
+			public const string Class = "class";
+
+			///<summary>js</summary>
+			public const string Js = "js";
+
+			///<summary>json</summary>
+			public const string Json = "json";
+
+			///<summary>jsonml</summary>
+			public const string Jsonml = "jsonml";
+
+			///<summary>lostxml</summary>
+			public const string Lostxml = "lostxml";
+
+			///<summary>hqx</summary>
+			public const string Hqx = "hqx";
+
+			///<summary>cpt</summary>
+			public const string Cpt = "cpt";
+
+			///<summary>mads</summary>
+			public const string Mads = "mads";
+
+			///<summary>mrc</summary>
+			public const string Mrc = "mrc";
+
+			///<summary>mrcx</summary>
+			public const string Mrcx = "mrcx";
+
+			///<summary>ma</summary>
+			public const string Ma = "ma";
+
+			///<summary>nb</summary>
+			public const string Nb = "nb";
+
+			///<summary>mb</summary>
+			public const string Mb = "mb";
+
+			///<summary>mathml</summary>
+			public const string Mathml = "mathml";
+
+			///<summary>mbox</summary>
+			public const string Mbox = "mbox";
+
+			///<summary>mscml</summary>
+			public const string Mscml = "mscml";
+
+			///<summary>metalink</summary>
+			public const string Metalink = "metalink";
+
+			///<summary>meta4</summary>
+			public const string Meta4 = "meta4";
+
+			///<summary>mets</summary>
+			public const string Mets = "mets";
+
+			///<summary>mods</summary>
+			public const string Mods = "mods";
+
+			///<summary>m21</summary>
+			public const string M21 = "m21";
+
+			///<summary>mp21</summary>
+			public const string Mp21 = "mp21";
+
+			///<summary>mp4s</summary>
+			public const string Mp4s = "mp4s";
+
+			///<summary>doc</summary>
+			public const string Doc = "doc";
+
+			///<summary>dot</summary>
+			public const string Dot = "dot";
+
+			///<summary>mxf</summary>
+			public const string Mxf = "mxf";
+
+			///<summary>bin</summary>
+			public const string Bin = "bin";
+
+			///<summary>dms</summary>
+			public const string Dms = "dms";
+
+			///<summary>lrf</summary>
+			public const string Lrf = "lrf";
+
+			///<summary>mar</summary>
+			public const string Mar = "mar";
+
+			///<summary>so</summary>
+			public const string So = "so";
+
+			///<summary>dist</summary>
+			public const string Dist = "dist";
+
+			///<summary>distz</summary>
+			public const string Distz = "distz";
+
+			///<summary>pkg</summary>
+			public const string Pkg = "pkg";
+
+			///<summary>bpk</summary>
+			public const string Bpk = "bpk";
+
+			///<summary>dump</summary>
+			public const string Dump = "dump";
+
+			///<summary>elc</summary>
+			public const string Elc = "elc";
+
+			///<summary>deploy</summary>
+			public const string Deploy = "deploy";
+
+			///<summary>oda</summary>
+			public const string Oda = "oda";
+
+			///<summary>opf</summary>
+			public const string Opf = "opf";
+
+			///<summary>ogx</summary>
+			public const string Ogx = "ogx";
+
+			///<summary>omdoc</summary>
+			public const string Omdoc = "omdoc";
+
+			///<summary>onetoc</summary>
+			public const string Onetoc = "onetoc";
+
+			///<summary>onetoc2</summary>
+			public const string Onetoc2 = "onetoc2";
+
+			///<summary>onetmp</summary>
+			public const string Onetmp = "onetmp";
+
+			///<summary>onepkg</summary>
+			public const string Onepkg = "onepkg";
+
+			///<summary>oxps</summary>
+			public const string Oxps = "oxps";
+
+			///<summary>xer</summary>
+			public const string Xer = "xer";
+
+			///<summary>pdf</summary>
+			public const string Pdf = "pdf";
+
+			///<summary>pgp</summary>
+			public const string Pgp = "pgp";
+
+			///<summary>asc</summary>
+			public const string Asc = "asc";
+
+			///<summary>sig</summary>
+			public const string Sig = "sig";
+
+			///<summary>prf</summary>
+			public const string Prf = "prf";
+
+			///<summary>p10</summary>
+			public const string P10 = "p10";
+
+			///<summary>p7m</summary>
+			public const string P7m = "p7m";
+
+			///<summary>p7c</summary>
+			public const string P7c = "p7c";
+
+			///<summary>p7s</summary>
+			public const string P7s = "p7s";
+
+			///<summary>p8</summary>
+			public const string P8 = "p8";
+
+			///<summary>ac</summary>
+			public const string Ac = "ac";
+
+			///<summary>cer</summary>
+			public const string Cer = "cer";
+
+			///<summary>crl</summary>
+			public const string Crl = "crl";
+
+			///<summary>pkipath</summary>
+			public const string Pkipath = "pkipath";
+
+			///<summary>pki</summary>
+			public const string Pki = "pki";
+
+			///<summary>pls</summary>
+			public const string Pls = "pls";
+
+			///<summary>ai</summary>
+			public const string Ai = "ai";
+
+			///<summary>eps</summary>
+			public const string Eps = "eps";
+
+			///<summary>ps</summary>
+			public const string Ps = "ps";
+
+			///<summary>cww</summary>
+			public const string Cww = "cww";
+
+			///<summary>pskcxml</summary>
+			public const string Pskcxml = "pskcxml";
+
+			///<summary>rdf</summary>
+			public const string Rdf = "rdf";
+
+			///<summary>rif</summary>
+			public const string Rif = "rif";
+
+			///<summary>rnc</summary>
+			public const string Rnc = "rnc";
+
+			///<summary>rl</summary>
+			public const string Rl = "rl";
+
+			///<summary>rld</summary>
+			public const string Rld = "rld";
+
+			///<summary>rs</summary>
+			public const string Rs = "rs";
+
+			///<summary>gbr</summary>
+			public const string Gbr = "gbr";
+
+			///<summary>mft</summary>
+			public const string Mft = "mft";
+
+			///<summary>roa</summary>
+			public const string Roa = "roa";
+
+			///<summary>rsd</summary>
+			public const string Rsd = "rsd";
+
+			///<summary>rss</summary>
+			public const string Rss = "rss";
+
+			///<summary>rtf</summary>
+			public const string Rtf = "rtf";
+
+			///<summary>sbml</summary>
+			public const string Sbml = "sbml";
+
+			///<summary>scq</summary>
+			public const string Scq = "scq";
+
+			///<summary>scs</summary>
+			public const string Scs = "scs";
+
+			///<summary>spq</summary>
+			public const string Spq = "spq";
+
+			///<summary>spp</summary>
+			public const string Spp = "spp";
+
+			///<summary>sdp</summary>
+			public const string Sdp = "sdp";
+
+			///<summary>setpay</summary>
+			public const string Setpay = "setpay";
+
+			///<summary>setreg</summary>
+			public const string Setreg = "setreg";
+
+			///<summary>shf</summary>
+			public const string Shf = "shf";
+
+			///<summary>smi</summary>
+			public const string Smi = "smi";
+
+			///<summary>smil</summary>
+			public const string Smil = "smil";
+
+			///<summary>rq</summary>
+			public const string Rq = "rq";
+
+			///<summary>srx</summary>
+			public const string Srx = "srx";
+
+			///<summary>gram</summary>
+			public const string Gram = "gram";
+
+			///<summary>grxml</summary>
+			public const string Grxml = "grxml";
+
+			///<summary>sru</summary>
+			public const string Sru = "sru";
+
+			///<summary>ssdl</summary>
+			public const string Ssdl = "ssdl";
+
+			///<summary>ssml</summary>
+			public const string Ssml = "ssml";
+
+			///<summary>tei</summary>
+			public const string Tei = "tei";
+
+			///<summary>teicorpus</summary>
+			public const string Teicorpus = "teicorpus";
+
+			///<summary>tfi</summary>
+			public const string Tfi = "tfi";
+
+			///<summary>tsd</summary>
+			public const string Tsd = "tsd";
+
+			///<summary>plb</summary>
+			public const string Plb = "plb";
+
+			///<summary>psb</summary>
+			public const string Psb = "psb";
+
+			///<summary>pvb</summary>
+			public const string Pvb = "pvb";
+
+			///<summary>tcap</summary>
+			public const string Tcap = "tcap";
+
+			///<summary>pwn</summary>
+			public const string Pwn = "pwn";
+
+			///<summary>aso</summary>
+			public const string Aso = "aso";
+
+			///<summary>imp</summary>
+			public const string Imp = "imp";
+
+			///<summary>acu</summary>
+			public const string Acu = "acu";
+
+			///<summary>atc</summary>
+			public const string Atc = "atc";
+
+			///<summary>acutc</summary>
+			public const string Acutc = "acutc";
+
+			///<summary>air</summary>
+			public const string Air = "air";
+
+			///<summary>fcdt</summary>
+			public const string Fcdt = "fcdt";
+
+			///<summary>fxp</summary>
+			public const string Fxp = "fxp";
+
+			///<summary>fxpl</summary>
+			public const string Fxpl = "fxpl";
+
+			///<summary>xdp</summary>
+			public const string Xdp = "xdp";
+
+			///<summary>xfdf</summary>
+			public const string Xfdf = "xfdf";
+
+			///<summary>ahead</summary>
+			public const string Ahead = "ahead";
+
+			///<summary>azf</summary>
+			public const string Azf = "azf";
+
+			///<summary>azs</summary>
+			public const string Azs = "azs";
+
+			///<summary>azw</summary>
+			public const string Azw = "azw";
+
+			///<summary>acc</summary>
+			public const string Acc = "acc";
+
+			///<summary>ami</summary>
+			public const string Ami = "ami";
+
+			///<summary>apk</summary>
+			public const string Apk = "apk";
+
+			///<summary>cii</summary>
+			public const string Cii = "cii";
+
+			///<summary>fti</summary>
+			public const string Fti = "fti";
+
+			///<summary>atx</summary>
+			public const string Atx = "atx";
+
+			///<summary>mpkg</summary>
+			public const string Mpkg = "mpkg";
+
+			///<summary>m3u8</summary>
+			public const string M3u8 = "m3u8";
+
+			///<summary>swi</summary>
+			public const string Swi = "swi";
+
+			///<summary>iota</summary>
+			public const string Iota = "iota";
+
+			///<summary>aep</summary>
+			public const string Aep = "aep";
+
+			///<summary>mpm</summary>
+			public const string Mpm = "mpm";
+
+			///<summary>bmi</summary>
+			public const string Bmi = "bmi";
+
+			///<summary>rep</summary>
+			public const string Rep = "rep";
+
+			///<summary>cdxml</summary>
+			public const string Cdxml = "cdxml";
+
+			///<summary>mmd</summary>
+			public const string Mmd = "mmd";
+
+			///<summary>cdy</summary>
+			public const string Cdy = "cdy";
+
+			///<summary>cla</summary>
+			public const string Cla = "cla";
+
+			///<summary>rp9</summary>
+			public const string Rp9 = "rp9";
+
+			///<summary>c4g</summary>
+			public const string C4g = "c4g";
+
+			///<summary>c4d</summary>
+			public const string C4d = "c4d";
+
+			///<summary>c4f</summary>
+			public const string C4f = "c4f";
+
+			///<summary>c4p</summary>
+			public const string C4p = "c4p";
+
+			///<summary>c4u</summary>
+			public const string C4u = "c4u";
+
+			///<summary>c11amc</summary>
+			public const string C11amc = "c11amc";
+
+			///<summary>c11amz</summary>
+			public const string C11amz = "c11amz";
+
+			///<summary>csp</summary>
+			public const string Csp = "csp";
+
+			///<summary>cdbcmsg</summary>
+			public const string Cdbcmsg = "cdbcmsg";
+
+			///<summary>cmc</summary>
+			public const string Cmc = "cmc";
+
+			///<summary>clkx</summary>
+			public const string Clkx = "clkx";
+
+			///<summary>clkk</summary>
+			public const string Clkk = "clkk";
+
+			///<summary>clkp</summary>
+			public const string Clkp = "clkp";
+
+			///<summary>clkt</summary>
+			public const string Clkt = "clkt";
+
+			///<summary>clkw</summary>
+			public const string Clkw = "clkw";
+
+			///<summary>wbs</summary>
+			public const string Wbs = "wbs";
+
+			///<summary>pml</summary>
+			public const string Pml = "pml";
+
+			///<summary>ppd</summary>
+			public const string Ppd = "ppd";
+
+			///<summary>car</summary>
+			public const string Car = "car";
+
+			///<summary>pcurl</summary>
+			public const string Pcurl = "pcurl";
+
+			///<summary>dart</summary>
+			public const string Dart = "dart";
+
+			///<summary>rdz</summary>
+			public const string Rdz = "rdz";
+
+			///<summary>uvf</summary>
+			public const string Uvf = "uvf";
+
+			///<summary>uvvf</summary>
+			public const string Uvvf = "uvvf";
+
+			///<summary>uvd</summary>
+			public const string Uvd = "uvd";
+
+			///<summary>uvvd</summary>
+			public const string Uvvd = "uvvd";
+
+			///<summary>uvt</summary>
+			public const string Uvt = "uvt";
+
+			///<summary>uvvt</summary>
+			public const string Uvvt = "uvvt";
+
+			///<summary>uvx</summary>
+			public const string Uvx = "uvx";
+
+			///<summary>uvvx</summary>
+			public const string Uvvx = "uvvx";
+
+			///<summary>uvz</summary>
+			public const string Uvz = "uvz";
+
+			///<summary>uvvz</summary>
+			public const string Uvvz = "uvvz";
+
+			///<summary>fe_launch</summary>
+			public const string Fe_launch = "fe_launch";
+
+			///<summary>dna</summary>
+			public const string Dna = "dna";
+
+			///<summary>mlp</summary>
+			public const string Mlp = "mlp";
+
+			///<summary>dpg</summary>
+			public const string Dpg = "dpg";
+
+			///<summary>dfac</summary>
+			public const string Dfac = "dfac";
+
+			///<summary>kpxx</summary>
+			public const string Kpxx = "kpxx";
+
+			///<summary>ait</summary>
+			public const string Ait = "ait";
+
+			///<summary>svc</summary>
+			public const string Svc = "svc";
+
+			///<summary>geo</summary>
+			public const string Geo = "geo";
+
+			///<summary>mag</summary>
+			public const string Mag = "mag";
+
+			///<summary>nml</summary>
+			public const string Nml = "nml";
+
+			///<summary>esf</summary>
+			public const string Esf = "esf";
+
+			///<summary>msf</summary>
+			public const string Msf = "msf";
+
+			///<summary>qam</summary>
+			public const string Qam = "qam";
+
+			///<summary>slt</summary>
+			public const string Slt = "slt";
+
+			///<summary>ssf</summary>
+			public const string Ssf = "ssf";
+
+			///<summary>es3</summary>
+			public const string Es3 = "es3";
+
+			///<summary>et3</summary>
+			public const string Et3 = "et3";
+
+			///<summary>ez2</summary>
+			public const string Ez2 = "ez2";
+
+			///<summary>ez3</summary>
+			public const string Ez3 = "ez3";
+
+			///<summary>fdf</summary>
+			public const string Fdf = "fdf";
+
+			///<summary>mseed</summary>
+			public const string Mseed = "mseed";
+
+			///<summary>seed</summary>
+			public const string Seed = "seed";
+
+			///<summary>dataless</summary>
+			public const string Dataless = "dataless";
+
+			///<summary>gph</summary>
+			public const string Gph = "gph";
+
+			///<summary>ftc</summary>
+			public const string Ftc = "ftc";
+
+			///<summary>fm</summary>
+			public const string Fm = "fm";
+
+			///<summary>frame</summary>
+			public const string Frame = "frame";
+
+			///<summary>maker</summary>
+			public const string Maker = "maker";
+
+			///<summary>book</summary>
+			public const string Book = "book";
+
+			///<summary>fnc</summary>
+			public const string Fnc = "fnc";
+
+			///<summary>ltf</summary>
+			public const string Ltf = "ltf";
+
+			///<summary>fsc</summary>
+			public const string Fsc = "fsc";
+
+			///<summary>oas</summary>
+			public const string Oas = "oas";
+
+			///<summary>oa2</summary>
+			public const string Oa2 = "oa2";
+
+			///<summary>oa3</summary>
+			public const string Oa3 = "oa3";
+
+			///<summary>fg5</summary>
+			public const string Fg5 = "fg5";
+
+			///<summary>bh2</summary>
+			public const string Bh2 = "bh2";
+
+			///<summary>ddd</summary>
+			public const string Ddd = "ddd";
+
+			///<summary>xdw</summary>
+			public const string Xdw = "xdw";
+
+			///<summary>xbd</summary>
+			public const string Xbd = "xbd";
+
+			///<summary>fzs</summary>
+			public const string Fzs = "fzs";
+
+			///<summary>txd</summary>
+			public const string Txd = "txd";
+
+			///<summary>ggb</summary>
+			public const string Ggb = "ggb";
+
+			///<summary>ggt</summary>
+			public const string Ggt = "ggt";
+
+			///<summary>gex</summary>
+			public const string Gex = "gex";
+
+			///<summary>gre</summary>
+			public const string Gre = "gre";
+
+			///<summary>gxt</summary>
+			public const string Gxt = "gxt";
+
+			///<summary>g2w</summary>
+			public const string G2w = "g2w";
+
+			///<summary>g3w</summary>
+			public const string G3w = "g3w";
+
+			///<summary>gmx</summary>
+			public const string Gmx = "gmx";
+
+			///<summary>kml</summary>
+			public const string Kml = "kml";
+
+			///<summary>kmz</summary>
+			public const string Kmz = "kmz";
+
+			///<summary>gqf</summary>
+			public const string Gqf = "gqf";
+
+			///<summary>gqs</summary>
+			public const string Gqs = "gqs";
+
+			///<summary>gac</summary>
+			public const string Gac = "gac";
+
+			///<summary>ghf</summary>
+			public const string Ghf = "ghf";
+
+			///<summary>gim</summary>
+			public const string Gim = "gim";
+
+			///<summary>grv</summary>
+			public const string Grv = "grv";
+
+			///<summary>gtm</summary>
+			public const string Gtm = "gtm";
+
+			///<summary>tpl</summary>
+			public const string Tpl = "tpl";
+
+			///<summary>vcg</summary>
+			public const string Vcg = "vcg";
+
+			///<summary>hal</summary>
+			public const string Hal = "hal";
+
+			///<summary>zmm</summary>
+			public const string Zmm = "zmm";
+
+			///<summary>hbci</summary>
+			public const string Hbci = "hbci";
+
+			///<summary>les</summary>
+			public const string Les = "les";
+
+			///<summary>hpgl</summary>
+			public const string Hpgl = "hpgl";
+
+			///<summary>hpid</summary>
+			public const string Hpid = "hpid";
+
+			///<summary>hps</summary>
+			public const string Hps = "hps";
+
+			///<summary>jlt</summary>
+			public const string Jlt = "jlt";
+
+			///<summary>pcl</summary>
+			public const string Pcl = "pcl";
+
+			///<summary>pclxl</summary>
+			public const string Pclxl = "pclxl";
+
+			///<summary>sfd-hdstx</summary>
+			public const string Sfd_hdstx = "sfd-hdstx";
+
+			///<summary>mpy</summary>
+			public const string Mpy = "mpy";
+
+			///<summary>afp</summary>
+			public const string Afp = "afp";
+
+			///<summary>listafp</summary>
+			public const string Listafp = "listafp";
+
+			///<summary>list3820</summary>
+			public const string List3820 = "list3820";
+
+			///<summary>irm</summary>
+			public const string Irm = "irm";
+
+			///<summary>sc</summary>
+			public const string Sc = "sc";
+
+			///<summary>icc</summary>
+			public const string Icc = "icc";
+
+			///<summary>icm</summary>
+			public const string Icm = "icm";
+
+			///<summary>igl</summary>
+			public const string Igl = "igl";
+
+			///<summary>ivp</summary>
+			public const string Ivp = "ivp";
+
+			///<summary>ivu</summary>
+			public const string Ivu = "ivu";
+
+			///<summary>igm</summary>
+			public const string Igm = "igm";
+
+			///<summary>xpw</summary>
+			public const string Xpw = "xpw";
+
+			///<summary>xpx</summary>
+			public const string Xpx = "xpx";
+
+			///<summary>i2g</summary>
+			public const string I2g = "i2g";
+
+			///<summary>qbo</summary>
+			public const string Qbo = "qbo";
+
+			///<summary>qfx</summary>
+			public const string Qfx = "qfx";
+
+			///<summary>rcprofile</summary>
+			public const string Rcprofile = "rcprofile";
+
+			///<summary>irp</summary>
+			public const string Irp = "irp";
+
+			///<summary>xpr</summary>
+			public const string Xpr = "xpr";
+
+			///<summary>fcs</summary>
+			public const string Fcs = "fcs";
+
+			///<summary>jam</summary>
+			public const string Jam = "jam";
+
+			///<summary>rms</summary>
+			public const string Rms = "rms";
+
+			///<summary>jisp</summary>
+			public const string Jisp = "jisp";
+
+			///<summary>joda</summary>
+			public const string Joda = "joda";
+
+			///<summary>ktz</summary>
+			public const string Ktz = "ktz";
+
+			///<summary>ktr</summary>
+			public const string Ktr = "ktr";
+
+			///<summary>karbon</summary>
+			public const string Karbon = "karbon";
+
+			///<summary>chrt</summary>
+			public const string Chrt = "chrt";
+
+			///<summary>kfo</summary>
+			public const string Kfo = "kfo";
+
+			///<summary>flw</summary>
+			public const string Flw = "flw";
+
+			///<summary>kon</summary>
+			public const string Kon = "kon";
+
+			///<summary>kpr</summary>
+			public const string Kpr = "kpr";
+
+			///<summary>kpt</summary>
+			public const string Kpt = "kpt";
+
+			///<summary>ksp</summary>
+			public const string Ksp = "ksp";
+
+			///<summary>kwd</summary>
+			public const string Kwd = "kwd";
+
+			///<summary>kwt</summary>
+			public const string Kwt = "kwt";
+
+			///<summary>htke</summary>
+			public const string Htke = "htke";
+
+			///<summary>kia</summary>
+			public const string Kia = "kia";
+
+			///<summary>kne</summary>
+			public const string Kne = "kne";
+
+			///<summary>knp</summary>
+			public const string Knp = "knp";
+
+			///<summary>skp</summary>
+			public const string Skp = "skp";
+
+			///<summary>skd</summary>
+			public const string Skd = "skd";
+
+			///<summary>skt</summary>
+			public const string Skt = "skt";
+
+			///<summary>skm</summary>
+			public const string Skm = "skm";
+
+			///<summary>sse</summary>
+			public const string Sse = "sse";
+
+			///<summary>lasxml</summary>
+			public const string Lasxml = "lasxml";
+
+			///<summary>lbd</summary>
+			public const string Lbd = "lbd";
+
+			///<summary>lbe</summary>
+			public const string Lbe = "lbe";
+
+			///<summary>123</summary>
+			public const string _123 = "123";
+
+			///<summary>apr</summary>
+			public const string Apr = "apr";
+
+			///<summary>pre</summary>
+			public const string Pre = "pre";
+
+			///<summary>nsf</summary>
+			public const string Nsf = "nsf";
+
+			///<summary>org</summary>
+			public const string Org = "org";
+
+			///<summary>scm</summary>
+			public const string Scm = "scm";
+
+			///<summary>lwp</summary>
+			public const string Lwp = "lwp";
+
+			///<summary>portpkg</summary>
+			public const string Portpkg = "portpkg";
+
+			///<summary>mcd</summary>
+			public const string Mcd = "mcd";
+
+			///<summary>mc1</summary>
+			public const string Mc1 = "mc1";
+
+			///<summary>cdkey</summary>
+			public const string Cdkey = "cdkey";
+
+			///<summary>mwf</summary>
+			public const string Mwf = "mwf";
+
+			///<summary>mfm</summary>
+			public const string Mfm = "mfm";
+
+			///<summary>flo</summary>
+			public const string Flo = "flo";
+
+			///<summary>igx</summary>
+			public const string Igx = "igx";
+
+			///<summary>mif</summary>
+			public const string Mif = "mif";
+
+			///<summary>daf</summary>
+			public const string Daf = "daf";
+
+			///<summary>dis</summary>
+			public const string Dis = "dis";
+
+			///<summary>mbk</summary>
+			public const string Mbk = "mbk";
+
+			///<summary>mqy</summary>
+			public const string Mqy = "mqy";
+
+			///<summary>msl</summary>
+			public const string Msl = "msl";
+
+			///<summary>plc</summary>
+			public const string Plc = "plc";
+
+			///<summary>txf</summary>
+			public const string Txf = "txf";
+
+			///<summary>mpn</summary>
+			public const string Mpn = "mpn";
+
+			///<summary>mpc</summary>
+			public const string Mpc = "mpc";
+
+			///<summary>xul</summary>
+			public const string Xul = "xul";
+
+			///<summary>cil</summary>
+			public const string Cil = "cil";
+
+			///<summary>cab</summary>
+			public const string Cab = "cab";
+
+			///<summary>xls</summary>
+			public const string Xls = "xls";
+
+			///<summary>xlm</summary>
+			public const string Xlm = "xlm";
+
+			///<summary>xla</summary>
+			public const string Xla = "xla";
+
+			///<summary>xlc</summary>
+			public const string Xlc = "xlc";
+
+			///<summary>xlt</summary>
+			public const string Xlt = "xlt";
+
+			///<summary>xlw</summary>
+			public const string Xlw = "xlw";
+
+			///<summary>xlam</summary>
+			public const string Xlam = "xlam";
+
+			///<summary>xlsb</summary>
+			public const string Xlsb = "xlsb";
+
+			///<summary>xlsm</summary>
+			public const string Xlsm = "xlsm";
+
+			///<summary>xltm</summary>
+			public const string Xltm = "xltm";
+
+			///<summary>eot</summary>
+			public const string Eot = "eot";
+
+			///<summary>chm</summary>
+			public const string Chm = "chm";
+
+			///<summary>ims</summary>
+			public const string Ims = "ims";
+
+			///<summary>lrm</summary>
+			public const string Lrm = "lrm";
+
+			///<summary>thmx</summary>
+			public const string Thmx = "thmx";
+
+			///<summary>cat</summary>
+			public const string Cat = "cat";
+
+			///<summary>stl</summary>
+			public const string Stl = "stl";
+
+			///<summary>ppt</summary>
+			public const string Ppt = "ppt";
+
+			///<summary>pps</summary>
+			public const string Pps = "pps";
+
+			///<summary>pot</summary>
+			public const string Pot = "pot";
+
+			///<summary>ppam</summary>
+			public const string Ppam = "ppam";
+
+			///<summary>pptm</summary>
+			public const string Pptm = "pptm";
+
+			///<summary>sldm</summary>
+			public const string Sldm = "sldm";
+
+			///<summary>ppsm</summary>
+			public const string Ppsm = "ppsm";
+
+			///<summary>potm</summary>
+			public const string Potm = "potm";
+
+			///<summary>mpp</summary>
+			public const string Mpp = "mpp";
+
+			///<summary>mpt</summary>
+			public const string Mpt = "mpt";
+
+			///<summary>docm</summary>
+			public const string Docm = "docm";
+
+			///<summary>dotm</summary>
+			public const string Dotm = "dotm";
+
+			///<summary>wps</summary>
+			public const string Wps = "wps";
+
+			///<summary>wks</summary>
+			public const string Wks = "wks";
+
+			///<summary>wcm</summary>
+			public const string Wcm = "wcm";
+
+			///<summary>wdb</summary>
+			public const string Wdb = "wdb";
+
+			///<summary>wpl</summary>
+			public const string Wpl = "wpl";
+
+			///<summary>xps</summary>
+			public const string Xps = "xps";
+
+			///<summary>mseq</summary>
+			public const string Mseq = "mseq";
+
+			///<summary>mus</summary>
+			public const string Mus = "mus";
+
+			///<summary>msty</summary>
+			public const string Msty = "msty";
+
+			///<summary>taglet</summary>
+			public const string Taglet = "taglet";
+
+			///<summary>nlu</summary>
+			public const string Nlu = "nlu";
+
+			///<summary>ntf</summary>
+			public const string Ntf = "ntf";
+
+			///<summary>nitf</summary>
+			public const string Nitf = "nitf";
+
+			///<summary>nnd</summary>
+			public const string Nnd = "nnd";
+
+			///<summary>nns</summary>
+			public const string Nns = "nns";
+
+			///<summary>nnw</summary>
+			public const string Nnw = "nnw";
+
+			///<summary>ngdat</summary>
+			public const string Ngdat = "ngdat";
+
+			///<summary>n-gage</summary>
+			public const string N_gage = "n-gage";
+
+			///<summary>rpst</summary>
+			public const string Rpst = "rpst";
+
+			///<summary>rpss</summary>
+			public const string Rpss = "rpss";
+
+			///<summary>edm</summary>
+			public const string Edm = "edm";
+
+			///<summary>edx</summary>
+			public const string Edx = "edx";
+
+			///<summary>ext</summary>
+			public const string Ext = "ext";
+
+			///<summary>odc</summary>
+			public const string Odc = "odc";
+
+			///<summary>otc</summary>
+			public const string Otc = "otc";
+
+			///<summary>odb</summary>
+			public const string Odb = "odb";
+
+			///<summary>odf</summary>
+			public const string Odf = "odf";
+
+			///<summary>odft</summary>
+			public const string Odft = "odft";
+
+			///<summary>odg</summary>
+			public const string Odg = "odg";
+
+			///<summary>otg</summary>
+			public const string Otg = "otg";
+
+			///<summary>odi</summary>
+			public const string Odi = "odi";
+
+			///<summary>oti</summary>
+			public const string Oti = "oti";
+
+			///<summary>odp</summary>
+			public const string Odp = "odp";
+
+			///<summary>otp</summary>
+			public const string Otp = "otp";
+
+			///<summary>ods</summary>
+			public const string Ods = "ods";
+
+			///<summary>ots</summary>
+			public const string Ots = "ots";
+
+			///<summary>odt</summary>
+			public const string Odt = "odt";
+
+			///<summary>odm</summary>
+			public const string Odm = "odm";
+
+			///<summary>ott</summary>
+			public const string Ott = "ott";
+
+			///<summary>oth</summary>
+			public const string Oth = "oth";
+
+			///<summary>xo</summary>
+			public const string Xo = "xo";
+
+			///<summary>dd2</summary>
+			public const string Dd2 = "dd2";
+
+			///<summary>oxt</summary>
+			public const string Oxt = "oxt";
+
+			///<summary>pptx</summary>
+			public const string Pptx = "pptx";
+
+			///<summary>sldx</summary>
+			public const string Sldx = "sldx";
+
+			///<summary>ppsx</summary>
+			public const string Ppsx = "ppsx";
+
+			///<summary>potx</summary>
+			public const string Potx = "potx";
+
+			///<summary>xlsx</summary>
+			public const string Xlsx = "xlsx";
+
+			///<summary>xltx</summary>
+			public const string Xltx = "xltx";
+
+			///<summary>docx</summary>
+			public const string Docx = "docx";
+
+			///<summary>dotx</summary>
+			public const string Dotx = "dotx";
+
+			///<summary>mgp</summary>
+			public const string Mgp = "mgp";
+
+			///<summary>dp</summary>
+			public const string Dp = "dp";
+
+			///<summary>esa</summary>
+			public const string Esa = "esa";
+
+			///<summary>pdb</summary>
+			public const string Pdb = "pdb";
+
+			///<summary>pqa</summary>
+			public const string Pqa = "pqa";
+
+			///<summary>oprc</summary>
+			public const string Oprc = "oprc";
+
+			///<summary>paw</summary>
+			public const string Paw = "paw";
+
+			///<summary>str</summary>
+			public const string Str = "str";
+
+			///<summary>ei6</summary>
+			public const string Ei6 = "ei6";
+
+			///<summary>efif</summary>
+			public const string Efif = "efif";
+
+			///<summary>wg</summary>
+			public const string Wg = "wg";
+
+			///<summary>plf</summary>
+			public const string Plf = "plf";
+
+			///<summary>pbd</summary>
+			public const string Pbd = "pbd";
+
+			///<summary>box</summary>
+			public const string Box = "box";
+
+			///<summary>mgz</summary>
+			public const string Mgz = "mgz";
+
+			///<summary>qps</summary>
+			public const string Qps = "qps";
+
+			///<summary>ptid</summary>
+			public const string Ptid = "ptid";
+
+			///<summary>qxd</summary>
+			public const string Qxd = "qxd";
+
+			///<summary>qxt</summary>
+			public const string Qxt = "qxt";
+
+			///<summary>qwd</summary>
+			public const string Qwd = "qwd";
+
+			///<summary>qwt</summary>
+			public const string Qwt = "qwt";
+
+			///<summary>qxl</summary>
+			public const string Qxl = "qxl";
+
+			///<summary>qxb</summary>
+			public const string Qxb = "qxb";
+
+			///<summary>bed</summary>
+			public const string Bed = "bed";
+
+			///<summary>mxl</summary>
+			public const string Mxl = "mxl";
+
+			///<summary>musicxml</summary>
+			public const string Musicxml = "musicxml";
+
+			///<summary>cryptonote</summary>
+			public const string Cryptonote = "cryptonote";
+
+			///<summary>cod</summary>
+			public const string Cod = "cod";
+
+			///<summary>rm</summary>
+			public const string Rm = "rm";
+
+			///<summary>rmvb</summary>
+			public const string Rmvb = "rmvb";
+
+			///<summary>link66</summary>
+			public const string Link66 = "link66";
+
+			///<summary>st</summary>
+			public const string St = "st";
+
+			///<summary>see</summary>
+			public const string See = "see";
+
+			///<summary>sema</summary>
+			public const string Sema = "sema";
+
+			///<summary>semd</summary>
+			public const string Semd = "semd";
+
+			///<summary>semf</summary>
+			public const string Semf = "semf";
+
+			///<summary>ifm</summary>
+			public const string Ifm = "ifm";
+
+			///<summary>itp</summary>
+			public const string Itp = "itp";
+
+			///<summary>iif</summary>
+			public const string Iif = "iif";
+
+			///<summary>ipk</summary>
+			public const string Ipk = "ipk";
+
+			///<summary>twd</summary>
+			public const string Twd = "twd";
+
+			///<summary>twds</summary>
+			public const string Twds = "twds";
+
+			///<summary>mmf</summary>
+			public const string Mmf = "mmf";
+
+			///<summary>teacher</summary>
+			public const string Teacher = "teacher";
+
+			///<summary>sdkm</summary>
+			public const string Sdkm = "sdkm";
+
+			///<summary>sdkd</summary>
+			public const string Sdkd = "sdkd";
+
+			///<summary>dxp</summary>
+			public const string Dxp = "dxp";
+
+			///<summary>sfs</summary>
+			public const string Sfs = "sfs";
+
+			///<summary>sdc</summary>
+			public const string Sdc = "sdc";
+
+			///<summary>sda</summary>
+			public const string Sda = "sda";
+
+			///<summary>sdd</summary>
+			public const string Sdd = "sdd";
+
+			///<summary>smf</summary>
+			public const string Smf = "smf";
+
+			///<summary>sdw</summary>
+			public const string Sdw = "sdw";
+
+			///<summary>vor</summary>
+			public const string Vor = "vor";
+
+			///<summary>sgl</summary>
+			public const string Sgl = "sgl";
+
+			///<summary>smzip</summary>
+			public const string Smzip = "smzip";
+
+			///<summary>sm</summary>
+			public const string Sm = "sm";
+
+			///<summary>sxc</summary>
+			public const string Sxc = "sxc";
+
+			///<summary>stc</summary>
+			public const string Stc = "stc";
+
+			///<summary>sxd</summary>
+			public const string Sxd = "sxd";
+
+			///<summary>std</summary>
+			public const string Std = "std";
+
+			///<summary>sxi</summary>
+			public const string Sxi = "sxi";
+
+			///<summary>sti</summary>
+			public const string Sti = "sti";
+
+			///<summary>sxm</summary>
+			public const string Sxm = "sxm";
+
+			///<summary>sxw</summary>
+			public const string Sxw = "sxw";
+
+			///<summary>sxg</summary>
+			public const string Sxg = "sxg";
+
+			///<summary>stw</summary>
+			public const string Stw = "stw";
+
+			///<summary>sus</summary>
+			public const string Sus = "sus";
+
+			///<summary>susp</summary>
+			public const string Susp = "susp";
+
+			///<summary>svd</summary>
+			public const string Svd = "svd";
+
+			///<summary>sis</summary>
+			public const string Sis = "sis";
+
+			///<summary>sisx</summary>
+			public const string Sisx = "sisx";
+
+			///<summary>xsm</summary>
+			public const string Xsm = "xsm";
+
+			///<summary>bdm</summary>
+			public const string Bdm = "bdm";
+
+			///<summary>xdm</summary>
+			public const string Xdm = "xdm";
+
+			///<summary>tao</summary>
+			public const string Tao = "tao";
+
+			///<summary>pcap</summary>
+			public const string Pcap = "pcap";
+
+			///<summary>cap</summary>
+			public const string Cap = "cap";
+
+			///<summary>dmp</summary>
+			public const string Dmp = "dmp";
+
+			///<summary>tmo</summary>
+			public const string Tmo = "tmo";
+
+			///<summary>tpt</summary>
+			public const string Tpt = "tpt";
+
+			///<summary>mxs</summary>
+			public const string Mxs = "mxs";
+
+			///<summary>tra</summary>
+			public const string Tra = "tra";
+
+			///<summary>ufd</summary>
+			public const string Ufd = "ufd";
+
+			///<summary>ufdl</summary>
+			public const string Ufdl = "ufdl";
+
+			///<summary>utz</summary>
+			public const string Utz = "utz";
+
+			///<summary>umj</summary>
+			public const string Umj = "umj";
+
+			///<summary>unityweb</summary>
+			public const string Unityweb = "unityweb";
+
+			///<summary>uoml</summary>
+			public const string Uoml = "uoml";
+
+			///<summary>vcx</summary>
+			public const string Vcx = "vcx";
+
+			///<summary>vsd</summary>
+			public const string Vsd = "vsd";
+
+			///<summary>vst</summary>
+			public const string Vst = "vst";
+
+			///<summary>vss</summary>
+			public const string Vss = "vss";
+
+			///<summary>vsw</summary>
+			public const string Vsw = "vsw";
+
+			///<summary>vis</summary>
+			public const string Vis = "vis";
+
+			///<summary>vsf</summary>
+			public const string Vsf = "vsf";
+
+			///<summary>wbxml</summary>
+			public const string Wbxml = "wbxml";
+
+			///<summary>wmlc</summary>
+			public const string Wmlc = "wmlc";
+
+			///<summary>wmlsc</summary>
+			public const string Wmlsc = "wmlsc";
+
+			///<summary>wtb</summary>
+			public const string Wtb = "wtb";
+
+			///<summary>nbp</summary>
+			public const string Nbp = "nbp";
+
+			///<summary>wpd</summary>
+			public const string Wpd = "wpd";
+
+			///<summary>wqd</summary>
+			public const string Wqd = "wqd";
+
+			///<summary>stf</summary>
+			public const string Stf = "stf";
+
+			///<summary>xar</summary>
+			public const string Xar = "xar";
+
+			///<summary>xfdl</summary>
+			public const string Xfdl = "xfdl";
+
+			///<summary>hvd</summary>
+			public const string Hvd = "hvd";
+
+			///<summary>hvs</summary>
+			public const string Hvs = "hvs";
+
+			///<summary>hvp</summary>
+			public const string Hvp = "hvp";
+
+			///<summary>osf</summary>
+			public const string Osf = "osf";
+
+			///<summary>osfpvg</summary>
+			public const string Osfpvg = "osfpvg";
+
+			///<summary>saf</summary>
+			public const string Saf = "saf";
+
+			///<summary>spf</summary>
+			public const string Spf = "spf";
+
+			///<summary>cmp</summary>
+			public const string Cmp = "cmp";
+
+			///<summary>zir</summary>
+			public const string Zir = "zir";
+
+			///<summary>zirz</summary>
+			public const string Zirz = "zirz";
+
+			///<summary>zaz</summary>
+			public const string Zaz = "zaz";
+
+			///<summary>vxml</summary>
+			public const string Vxml = "vxml";
+
+			///<summary>wgt</summary>
+			public const string Wgt = "wgt";
+
+			///<summary>hlp</summary>
+			public const string Hlp = "hlp";
+
+			///<summary>wsdl</summary>
+			public const string Wsdl = "wsdl";
+
+			///<summary>wspolicy</summary>
+			public const string Wspolicy = "wspolicy";
+
+			///<summary>7z</summary>
+			public const string _7z = "7z";
+
+			///<summary>abw</summary>
+			public const string Abw = "abw";
+
+			///<summary>ace</summary>
+			public const string Ace = "ace";
+
+			///<summary>dmg</summary>
+			public const string Dmg = "dmg";
+
+			///<summary>aab</summary>
+			public const string Aab = "aab";
+
+			///<summary>x32</summary>
+			public const string X32 = "x32";
+
+			///<summary>u32</summary>
+			public const string U32 = "u32";
+
+			///<summary>vox</summary>
+			public const string Vox = "vox";
+
+			///<summary>aam</summary>
+			public const string Aam = "aam";
+
+			///<summary>aas</summary>
+			public const string Aas = "aas";
+
+			///<summary>bcpio</summary>
+			public const string Bcpio = "bcpio";
+
+			///<summary>torrent</summary>
+			public const string Torrent = "torrent";
+
+			///<summary>blb</summary>
+			public const string Blb = "blb";
+
+			///<summary>blorb</summary>
+			public const string Blorb = "blorb";
+
+			///<summary>bz</summary>
+			public const string Bz = "bz";
+
+			///<summary>bz2</summary>
+			public const string Bz2 = "bz2";
+
+			///<summary>boz</summary>
+			public const string Boz = "boz";
+
+			///<summary>cbr</summary>
+			public const string Cbr = "cbr";
+
+			///<summary>cba</summary>
+			public const string Cba = "cba";
+
+			///<summary>cbt</summary>
+			public const string Cbt = "cbt";
+
+			///<summary>cbz</summary>
+			public const string Cbz = "cbz";
+
+			///<summary>cb7</summary>
+			public const string Cb7 = "cb7";
+
+			///<summary>vcd</summary>
+			public const string Vcd = "vcd";
+
+			///<summary>cfs</summary>
+			public const string Cfs = "cfs";
+
+			///<summary>chat</summary>
+			public const string Chat = "chat";
+
+			///<summary>pgn</summary>
+			public const string Pgn = "pgn";
+
+			///<summary>nsc</summary>
+			public const string Nsc = "nsc";
+
+			///<summary>cpio</summary>
+			public const string Cpio = "cpio";
+
+			///<summary>csh</summary>
+			public const string Csh = "csh";
+
+			///<summary>deb</summary>
+			public const string Deb = "deb";
+
+			///<summary>udeb</summary>
+			public const string Udeb = "udeb";
+
+			///<summary>dgc</summary>
+			public const string Dgc = "dgc";
+
+			///<summary>dir</summary>
+			public const string Dir = "dir";
+
+			///<summary>dcr</summary>
+			public const string Dcr = "dcr";
+
+			///<summary>dxr</summary>
+			public const string Dxr = "dxr";
+
+			///<summary>cst</summary>
+			public const string Cst = "cst";
+
+			///<summary>cct</summary>
+			public const string Cct = "cct";
+
+			///<summary>cxt</summary>
+			public const string Cxt = "cxt";
+
+			///<summary>w3d</summary>
+			public const string W3d = "w3d";
+
+			///<summary>fgd</summary>
+			public const string Fgd = "fgd";
+
+			///<summary>swa</summary>
+			public const string Swa = "swa";
+
+			///<summary>wad</summary>
+			public const string Wad = "wad";
+
+			///<summary>ncx</summary>
+			public const string Ncx = "ncx";
+
+			///<summary>dtb</summary>
+			public const string Dtb = "dtb";
+
+			///<summary>res</summary>
+			public const string Res = "res";
+
+			///<summary>dvi</summary>
+			public const string Dvi = "dvi";
+
+			///<summary>evy</summary>
+			public const string Evy = "evy";
+
+			///<summary>eva</summary>
+			public const string Eva = "eva";
+
+			///<summary>bdf</summary>
+			public const string Bdf = "bdf";
+
+			///<summary>gsf</summary>
+			public const string Gsf = "gsf";
+
+			///<summary>psf</summary>
+			public const string Psf = "psf";
+
+			///<summary>pcf</summary>
+			public const string Pcf = "pcf";
+
+			///<summary>snf</summary>
+			public const string Snf = "snf";
+
+			///<summary>pfa</summary>
+			public const string Pfa = "pfa";
+
+			///<summary>pfb</summary>
+			public const string Pfb = "pfb";
+
+			///<summary>pfm</summary>
+			public const string Pfm = "pfm";
+
+			///<summary>afm</summary>
+			public const string Afm = "afm";
+
+			///<summary>arc</summary>
+			public const string Arc = "arc";
+
+			///<summary>spl</summary>
+			public const string Spl = "spl";
+
+			///<summary>gca</summary>
+			public const string Gca = "gca";
+
+			///<summary>ulx</summary>
+			public const string Ulx = "ulx";
+
+			///<summary>gnumeric</summary>
+			public const string Gnumeric = "gnumeric";
+
+			///<summary>gramps</summary>
+			public const string Gramps = "gramps";
+
+			///<summary>gtar</summary>
+			public const string Gtar = "gtar";
+
+			///<summary>hdf</summary>
+			public const string Hdf = "hdf";
+
+			///<summary>install</summary>
+			public const string Install = "install";
+
+			///<summary>iso</summary>
+			public const string Iso = "iso";
+
+			///<summary>jnlp</summary>
+			public const string Jnlp = "jnlp";
+
+			///<summary>latex</summary>
+			public const string Latex = "latex";
+
+			///<summary>lzh</summary>
+			public const string Lzh = "lzh";
+
+			///<summary>lha</summary>
+			public const string Lha = "lha";
+
+			///<summary>mie</summary>
+			public const string Mie = "mie";
+
+			///<summary>prc</summary>
+			public const string Prc = "prc";
+
+			///<summary>mobi</summary>
+			public const string Mobi = "mobi";
+
+			///<summary>application</summary>
+			public const string Application = "application";
+
+			///<summary>lnk</summary>
+			public const string Lnk = "lnk";
+
+			///<summary>wmd</summary>
+			public const string Wmd = "wmd";
+
+			///<summary>wmz</summary>
+			public const string Wmz = "wmz";
+
+			///<summary>xbap</summary>
+			public const string Xbap = "xbap";
+
+			///<summary>mdb</summary>
+			public const string Mdb = "mdb";
+
+			///<summary>obd</summary>
+			public const string Obd = "obd";
+
+			///<summary>crd</summary>
+			public const string Crd = "crd";
+
+			///<summary>clp</summary>
+			public const string Clp = "clp";
+
+			///<summary>exe</summary>
+			public const string Exe = "exe";
+
+			///<summary>dll</summary>
+			public const string Dll = "dll";
+
+			///<summary>com</summary>
+			public const string Com = "com";
+
+			///<summary>bat</summary>
+			public const string Bat = "bat";
+
+			///<summary>msi</summary>
+			public const string Msi = "msi";
+
+			///<summary>mvb</summary>
+			public const string Mvb = "mvb";
+
+			///<summary>m13</summary>
+			public const string M13 = "m13";
+
+			///<summary>m14</summary>
+			public const string M14 = "m14";
+
+			///<summary>wmf</summary>
+			public const string Wmf = "wmf";
+
+			///<summary>emf</summary>
+			public const string Emf = "emf";
+
+			///<summary>emz</summary>
+			public const string Emz = "emz";
+
+			///<summary>mny</summary>
+			public const string Mny = "mny";
+
+			///<summary>pub</summary>
+			public const string Pub = "pub";
+
+			///<summary>scd</summary>
+			public const string Scd = "scd";
+
+			///<summary>trm</summary>
+			public const string Trm = "trm";
+
+			///<summary>wri</summary>
+			public const string Wri = "wri";
+
+			///<summary>nc</summary>
+			public const string Nc = "nc";
+
+			///<summary>cdf</summary>
+			public const string Cdf = "cdf";
+
+			///<summary>nzb</summary>
+			public const string Nzb = "nzb";
+
+			///<summary>p12</summary>
+			public const string P12 = "p12";
+
+			///<summary>pfx</summary>
+			public const string Pfx = "pfx";
+
+			///<summary>p7b</summary>
+			public const string P7b = "p7b";
+
+			///<summary>spc</summary>
+			public const string Spc = "spc";
+
+			///<summary>p7r</summary>
+			public const string P7r = "p7r";
+
+			///<summary>rar</summary>
+			public const string Rar = "rar";
+
+			///<summary>ris</summary>
+			public const string Ris = "ris";
+
+			///<summary>sh</summary>
+			public const string Sh = "sh";
+
+			///<summary>shar</summary>
+			public const string Shar = "shar";
+
+			///<summary>swf</summary>
+			public const string Swf = "swf";
+
+			///<summary>xap</summary>
+			public const string Xap = "xap";
+
+			///<summary>sql</summary>
+			public const string Sql = "sql";
+
+			///<summary>sit</summary>
+			public const string Sit = "sit";
+
+			///<summary>sitx</summary>
+			public const string Sitx = "sitx";
+
+			///<summary>srt</summary>
+			public const string Srt = "srt";
+
+			///<summary>sv4cpio</summary>
+			public const string Sv4cpio = "sv4cpio";
+
+			///<summary>sv4crc</summary>
+			public const string Sv4crc = "sv4crc";
+
+			///<summary>t3</summary>
+			public const string T3 = "t3";
+
+			///<summary>gam</summary>
+			public const string Gam = "gam";
+
+			///<summary>tar</summary>
+			public const string Tar = "tar";
+
+			///<summary>tcl</summary>
+			public const string Tcl = "tcl";
+
+			///<summary>tex</summary>
+			public const string Tex = "tex";
+
+			///<summary>tfm</summary>
+			public const string Tfm = "tfm";
+
+			///<summary>texinfo</summary>
+			public const string Texinfo = "texinfo";
+
+			///<summary>texi</summary>
+			public const string Texi = "texi";
+
+			///<summary>obj</summary>
+			public const string Obj = "obj";
+
+			///<summary>ustar</summary>
+			public const string Ustar = "ustar";
+
+			///<summary>src</summary>
+			public const string Src = "src";
+
+			///<summary>der</summary>
+			public const string Der = "der";
+
+			///<summary>crt</summary>
+			public const string Crt = "crt";
+
+			///<summary>fig</summary>
+			public const string Fig = "fig";
+
+			///<summary>xlf</summary>
+			public const string Xlf = "xlf";
+
+			///<summary>xpi</summary>
+			public const string Xpi = "xpi";
+
+			///<summary>xz</summary>
+			public const string Xz = "xz";
+
+			///<summary>z1</summary>
+			public const string Z1 = "z1";
+
+			///<summary>z2</summary>
+			public const string Z2 = "z2";
+
+			///<summary>z3</summary>
+			public const string Z3 = "z3";
+
+			///<summary>z4</summary>
+			public const string Z4 = "z4";
+
+			///<summary>z5</summary>
+			public const string Z5 = "z5";
+
+			///<summary>z6</summary>
+			public const string Z6 = "z6";
+
+			///<summary>z7</summary>
+			public const string Z7 = "z7";
+
+			///<summary>z8</summary>
+			public const string Z8 = "z8";
+
+			///<summary>xaml</summary>
+			public const string Xaml = "xaml";
+
+			///<summary>xdf</summary>
+			public const string Xdf = "xdf";
+
+			///<summary>xenc</summary>
+			public const string Xenc = "xenc";
+
+			///<summary>xhtml</summary>
+			public const string Xhtml = "xhtml";
+
+			///<summary>xht</summary>
+			public const string Xht = "xht";
+
+			///<summary>xml</summary>
+			public const string Xml = "xml";
+
+			///<summary>xsl</summary>
+			public const string Xsl = "xsl";
+
+			///<summary>dtd</summary>
+			public const string Dtd = "dtd";
+
+			///<summary>xop</summary>
+			public const string Xop = "xop";
+
+			///<summary>xpl</summary>
+			public const string Xpl = "xpl";
+
+			///<summary>xslt</summary>
+			public const string Xslt = "xslt";
+
+			///<summary>xspf</summary>
+			public const string Xspf = "xspf";
+
+			///<summary>mxml</summary>
+			public const string Mxml = "mxml";
+
+			///<summary>xhvml</summary>
+			public const string Xhvml = "xhvml";
+
+			///<summary>xvml</summary>
+			public const string Xvml = "xvml";
+
+			///<summary>xvm</summary>
+			public const string Xvm = "xvm";
+
+			///<summary>yang</summary>
+			public const string Yang = "yang";
+
+			///<summary>yin</summary>
+			public const string Yin = "yin";
+
+			///<summary>zip</summary>
+			public const string Zip = "zip";
+
+			///<summary>adp</summary>
+			public const string Adp = "adp";
+
+			///<summary>au</summary>
+			public const string Au = "au";
+
+			///<summary>snd</summary>
+			public const string Snd = "snd";
+
+			///<summary>mid</summary>
+			public const string Mid = "mid";
+
+			///<summary>midi</summary>
+			public const string Midi = "midi";
+
+			///<summary>kar</summary>
+			public const string Kar = "kar";
+
+			///<summary>rmi</summary>
+			public const string Rmi = "rmi";
+
+			///<summary>m4a</summary>
+			public const string M4a = "m4a";
+
+			///<summary>mp4a</summary>
+			public const string Mp4a = "mp4a";
+
+			///<summary>mpga</summary>
+			public const string Mpga = "mpga";
+
+			///<summary>mp2</summary>
+			public const string Mp2 = "mp2";
+
+			///<summary>mp2a</summary>
+			public const string Mp2a = "mp2a";
+
+			///<summary>mp3</summary>
+			public const string Mp3 = "mp3";
+
+			///<summary>m2a</summary>
+			public const string M2a = "m2a";
+
+			///<summary>m3a</summary>
+			public const string M3a = "m3a";
+
+			///<summary>oga</summary>
+			public const string Oga = "oga";
+
+			///<summary>ogg</summary>
+			public const string Ogg = "ogg";
+
+			///<summary>spx</summary>
+			public const string Spx = "spx";
+
+			///<summary>opus</summary>
+			public const string Opus = "opus";
+
+			///<summary>s3m</summary>
+			public const string S3m = "s3m";
+
+			///<summary>sil</summary>
+			public const string Sil = "sil";
+
+			///<summary>uva</summary>
+			public const string Uva = "uva";
+
+			///<summary>uvva</summary>
+			public const string Uvva = "uvva";
+
+			///<summary>eol</summary>
+			public const string Eol = "eol";
+
+			///<summary>dra</summary>
+			public const string Dra = "dra";
+
+			///<summary>dts</summary>
+			public const string Dts = "dts";
+
+			///<summary>dtshd</summary>
+			public const string Dtshd = "dtshd";
+
+			///<summary>lvp</summary>
+			public const string Lvp = "lvp";
+
+			///<summary>pya</summary>
+			public const string Pya = "pya";
+
+			///<summary>ecelp4800</summary>
+			public const string Ecelp4800 = "ecelp4800";
+
+			///<summary>ecelp7470</summary>
+			public const string Ecelp7470 = "ecelp7470";
+
+			///<summary>ecelp9600</summary>
+			public const string Ecelp9600 = "ecelp9600";
+
+			///<summary>rip</summary>
+			public const string Rip = "rip";
+
+			///<summary>weba</summary>
+			public const string Weba = "weba";
+
+			///<summary>aac</summary>
+			public const string Aac = "aac";
+
+			///<summary>aif</summary>
+			public const string Aif = "aif";
+
+			///<summary>aiff</summary>
+			public const string Aiff = "aiff";
+
+			///<summary>aifc</summary>
+			public const string Aifc = "aifc";
+
+			///<summary>caf</summary>
+			public const string Caf = "caf";
+
+			///<summary>flac</summary>
+			public const string Flac = "flac";
+
+			///<summary>mka</summary>
+			public const string Mka = "mka";
+
+			///<summary>m3u</summary>
+			public const string M3u = "m3u";
+
+			///<summary>wax</summary>
+			public const string Wax = "wax";
+
+			///<summary>wma</summary>
+			public const string Wma = "wma";
+
+			///<summary>ram</summary>
+			public const string Ram = "ram";
+
+			///<summary>ra</summary>
+			public const string Ra = "ra";
+
+			///<summary>rmp</summary>
+			public const string Rmp = "rmp";
+
+			///<summary>wav</summary>
+			public const string Wav = "wav";
+
+			///<summary>xm</summary>
+			public const string Xm = "xm";
+
+			///<summary>cdx</summary>
+			public const string Cdx = "cdx";
+
+			///<summary>cif</summary>
+			public const string Cif = "cif";
+
+			///<summary>cmdf</summary>
+			public const string Cmdf = "cmdf";
+
+			///<summary>cml</summary>
+			public const string Cml = "cml";
+
+			///<summary>csml</summary>
+			public const string Csml = "csml";
+
+			///<summary>xyz</summary>
+			public const string Xyz = "xyz";
+
+			///<summary>ttc</summary>
+			public const string Ttc = "ttc";
+
+			///<summary>otf</summary>
+			public const string Otf = "otf";
+
+			///<summary>ttf</summary>
+			public const string Ttf = "ttf";
+
+			///<summary>woff</summary>
+			public const string Woff = "woff";
+
+			///<summary>woff2</summary>
+			public const string Woff2 = "woff2";
+
+			///<summary>bmp</summary>
+			public const string Bmp = "bmp";
+
+			///<summary>cgm</summary>
+			public const string Cgm = "cgm";
+
+			///<summary>g3</summary>
+			public const string G3 = "g3";
+
+			///<summary>gif</summary>
+			public const string Gif = "gif";
+
+			///<summary>ief</summary>
+			public const string Ief = "ief";
+
+			///<summary>jpeg</summary>
+			public const string Jpeg = "jpeg";
+
+			///<summary>jpg</summary>
+			public const string Jpg = "jpg";
+
+			///<summary>jpe</summary>
+			public const string Jpe = "jpe";
+
+			///<summary>ktx</summary>
+			public const string Ktx = "ktx";
+
+			///<summary>png</summary>
+			public const string Png = "png";
+
+			///<summary>btif</summary>
+			public const string Btif = "btif";
+
+			///<summary>sgi</summary>
+			public const string Sgi = "sgi";
+
+			///<summary>svg</summary>
+			public const string Svg = "svg";
+
+			///<summary>svgz</summary>
+			public const string Svgz = "svgz";
+
+			///<summary>tiff</summary>
+			public const string Tiff = "tiff";
+
+			///<summary>tif</summary>
+			public const string Tif = "tif";
+
+			///<summary>psd</summary>
+			public const string Psd = "psd";
+
+			///<summary>uvi</summary>
+			public const string Uvi = "uvi";
+
+			///<summary>uvvi</summary>
+			public const string Uvvi = "uvvi";
+
+			///<summary>uvg</summary>
+			public const string Uvg = "uvg";
+
+			///<summary>uvvg</summary>
+			public const string Uvvg = "uvvg";
+
+			///<summary>djvu</summary>
+			public const string Djvu = "djvu";
+
+			///<summary>djv</summary>
+			public const string Djv = "djv";
+
+			///<summary>sub</summary>
+			public const string Sub = "sub";
+
+			///<summary>dwg</summary>
+			public const string Dwg = "dwg";
+
+			///<summary>dxf</summary>
+			public const string Dxf = "dxf";
+
+			///<summary>fbs</summary>
+			public const string Fbs = "fbs";
+
+			///<summary>fpx</summary>
+			public const string Fpx = "fpx";
+
+			///<summary>fst</summary>
+			public const string Fst = "fst";
+
+			///<summary>mmr</summary>
+			public const string Mmr = "mmr";
+
+			///<summary>rlc</summary>
+			public const string Rlc = "rlc";
+
+			///<summary>mdi</summary>
+			public const string Mdi = "mdi";
+
+			///<summary>wdp</summary>
+			public const string Wdp = "wdp";
+
+			///<summary>npx</summary>
+			public const string Npx = "npx";
+
+			///<summary>wbmp</summary>
+			public const string Wbmp = "wbmp";
+
+			///<summary>xif</summary>
+			public const string Xif = "xif";
+
+			///<summary>webp</summary>
+			public const string Webp = "webp";
+
+			///<summary>3ds</summary>
+			public const string _3ds = "3ds";
+
+			///<summary>ras</summary>
+			public const string Ras = "ras";
+
+			///<summary>cmx</summary>
+			public const string Cmx = "cmx";
+
+			///<summary>fh</summary>
+			public const string Fh = "fh";
+
+			///<summary>fhc</summary>
+			public const string Fhc = "fhc";
+
+			///<summary>fh4</summary>
+			public const string Fh4 = "fh4";
+
+			///<summary>fh5</summary>
+			public const string Fh5 = "fh5";
+
+			///<summary>fh7</summary>
+			public const string Fh7 = "fh7";
+
+			///<summary>ico</summary>
+			public const string Ico = "ico";
+
+			///<summary>sid</summary>
+			public const string Sid = "sid";
+
+			///<summary>pcx</summary>
+			public const string Pcx = "pcx";
+
+			///<summary>pic</summary>
+			public const string Pic = "pic";
+
+			///<summary>pct</summary>
+			public const string Pct = "pct";
+
+			///<summary>pnm</summary>
+			public const string Pnm = "pnm";
+
+			///<summary>pbm</summary>
+			public const string Pbm = "pbm";
+
+			///<summary>pgm</summary>
+			public const string Pgm = "pgm";
+
+			///<summary>ppm</summary>
+			public const string Ppm = "ppm";
+
+			///<summary>rgb</summary>
+			public const string Rgb = "rgb";
+
+			///<summary>tga</summary>
+			public const string Tga = "tga";
+
+			///<summary>xbm</summary>
+			public const string Xbm = "xbm";
+
+			///<summary>xpm</summary>
+			public const string Xpm = "xpm";
+
+			///<summary>xwd</summary>
+			public const string Xwd = "xwd";
+
+			///<summary>eml</summary>
+			public const string Eml = "eml";
+
+			///<summary>mime</summary>
+			public const string Mime = "mime";
+
+			///<summary>igs</summary>
+			public const string Igs = "igs";
+
+			///<summary>iges</summary>
+			public const string Iges = "iges";
+
+			///<summary>msh</summary>
+			public const string Msh = "msh";
+
+			///<summary>mesh</summary>
+			public const string Mesh = "mesh";
+
+			///<summary>silo</summary>
+			public const string Silo = "silo";
+
+			///<summary>dae</summary>
+			public const string Dae = "dae";
+
+			///<summary>dwf</summary>
+			public const string Dwf = "dwf";
+
+			///<summary>gdl</summary>
+			public const string Gdl = "gdl";
+
+			///<summary>gtw</summary>
+			public const string Gtw = "gtw";
+
+			///<summary>mts</summary>
+			public const string Mts = "mts";
+
+			///<summary>vtu</summary>
+			public const string Vtu = "vtu";
+
+			///<summary>wrl</summary>
+			public const string Wrl = "wrl";
+
+			///<summary>vrml</summary>
+			public const string Vrml = "vrml";
+
+			///<summary>x3db</summary>
+			public const string X3db = "x3db";
+
+			///<summary>x3dbz</summary>
+			public const string X3dbz = "x3dbz";
+
+			///<summary>x3dv</summary>
+			public const string X3dv = "x3dv";
+
+			///<summary>x3dvz</summary>
+			public const string X3dvz = "x3dvz";
+
+			///<summary>x3d</summary>
+			public const string X3d = "x3d";
+
+			///<summary>x3dz</summary>
+			public const string X3dz = "x3dz";
+
+			///<summary>appcache</summary>
+			public const string Appcache = "appcache";
+
+			///<summary>ics</summary>
+			public const string Ics = "ics";
+
+			///<summary>ifb</summary>
+			public const string Ifb = "ifb";
+
+			///<summary>css</summary>
+			public const string Css = "css";
+
+			///<summary>csv</summary>
+			public const string Csv = "csv";
+
+			///<summary>html</summary>
+			public const string Html = "html";
+
+			///<summary>htm</summary>
+			public const string Htm = "htm";
+
+			///<summary>n3</summary>
+			public const string N3 = "n3";
+
+			///<summary>txt</summary>
+			public const string Txt = "txt";
+
+			///<summary>text</summary>
+			public const string Text = "text";
+
+			///<summary>conf</summary>
+			public const string Conf = "conf";
+
+			///<summary>def</summary>
+			public const string Def = "def";
+
+			///<summary>list</summary>
+			public const string List = "list";
+
+			///<summary>log</summary>
+			public const string Log = "log";
+
+			///<summary>in</summary>
+			public const string In = "in";
+
+			///<summary>dsc</summary>
+			public const string Dsc = "dsc";
+
+			///<summary>rtx</summary>
+			public const string Rtx = "rtx";
+
+			///<summary>sgml</summary>
+			public const string Sgml = "sgml";
+
+			///<summary>sgm</summary>
+			public const string Sgm = "sgm";
+
+			///<summary>tsv</summary>
+			public const string Tsv = "tsv";
+
+			///<summary>t</summary>
+			public const string T = "t";
+
+			///<summary>tr</summary>
+			public const string Tr = "tr";
+
+			///<summary>roff</summary>
+			public const string Roff = "roff";
+
+			///<summary>man</summary>
+			public const string Man = "man";
+
+			///<summary>me</summary>
+			public const string Me = "me";
+
+			///<summary>ms</summary>
+			public const string Ms = "ms";
+
+			///<summary>ttl</summary>
+			public const string Ttl = "ttl";
+
+			///<summary>uri</summary>
+			public const string Uri = "uri";
+
+			///<summary>uris</summary>
+			public const string Uris = "uris";
+
+			///<summary>urls</summary>
+			public const string Urls = "urls";
+
+			///<summary>vcard</summary>
+			public const string Vcard = "vcard";
+
+			///<summary>curl</summary>
+			public const string Curl = "curl";
+
+			///<summary>dcurl</summary>
+			public const string Dcurl = "dcurl";
+
+			///<summary>mcurl</summary>
+			public const string Mcurl = "mcurl";
+
+			///<summary>scurl</summary>
+			public const string Scurl = "scurl";
+
+			///<summary>fly</summary>
+			public const string Fly = "fly";
+
+			///<summary>flx</summary>
+			public const string Flx = "flx";
+
+			///<summary>gv</summary>
+			public const string Gv = "gv";
+
+			///<summary>3dml</summary>
+			public const string _3dml = "3dml";
+
+			///<summary>spot</summary>
+			public const string Spot = "spot";
+
+			///<summary>jad</summary>
+			public const string Jad = "jad";
+
+			///<summary>wml</summary>
+			public const string Wml = "wml";
+
+			///<summary>wmls</summary>
+			public const string Wmls = "wmls";
+
+			///<summary>s</summary>
+			public const string S = "s";
+
+			///<summary>asm</summary>
+			public const string Asm = "asm";
+
+			///<summary>c</summary>
+			public const string C = "c";
+
+			///<summary>cc</summary>
+			public const string Cc = "cc";
+
+			///<summary>cxx</summary>
+			public const string Cxx = "cxx";
+
+			///<summary>cpp</summary>
+			public const string Cpp = "cpp";
+
+			///<summary>h</summary>
+			public const string H = "h";
+
+			///<summary>hh</summary>
+			public const string Hh = "hh";
+
+			///<summary>dic</summary>
+			public const string Dic = "dic";
+
+			///<summary>f</summary>
+			public const string F = "f";
+
+			///<summary>for</summary>
+			public const string For = "for";
+
+			///<summary>f77</summary>
+			public const string F77 = "f77";
+
+			///<summary>f90</summary>
+			public const string F90 = "f90";
+
+			///<summary>java</summary>
+			public const string Java = "java";
+
+			///<summary>nfo</summary>
+			public const string Nfo = "nfo";
+
+			///<summary>opml</summary>
+			public const string Opml = "opml";
+
+			///<summary>p</summary>
+			public const string P = "p";
+
+			///<summary>pas</summary>
+			public const string Pas = "pas";
+
+			///<summary>etx</summary>
+			public const string Etx = "etx";
+
+			///<summary>sfv</summary>
+			public const string Sfv = "sfv";
+
+			///<summary>uu</summary>
+			public const string Uu = "uu";
+
+			///<summary>vcs</summary>
+			public const string Vcs = "vcs";
+
+			///<summary>vcf</summary>
+			public const string Vcf = "vcf";
+
+			///<summary>3gp</summary>
+			public const string _3gp = "3gp";
+
+			///<summary>3g2</summary>
+			public const string _3g2 = "3g2";
+
+			///<summary>h261</summary>
+			public const string H261 = "h261";
+
+			///<summary>h263</summary>
+			public const string H263 = "h263";
+
+			///<summary>h264</summary>
+			public const string H264 = "h264";
+
+			///<summary>jpgv</summary>
+			public const string Jpgv = "jpgv";
+
+			///<summary>jpm</summary>
+			public const string Jpm = "jpm";
+
+			///<summary>jpgm</summary>
+			public const string Jpgm = "jpgm";
+
+			///<summary>mj2</summary>
+			public const string Mj2 = "mj2";
+
+			///<summary>mjp2</summary>
+			public const string Mjp2 = "mjp2";
+
+			///<summary>mp4</summary>
+			public const string Mp4 = "mp4";
+
+			///<summary>mp4v</summary>
+			public const string Mp4v = "mp4v";
+
+			///<summary>mpg4</summary>
+			public const string Mpg4 = "mpg4";
+
+			///<summary>mpeg</summary>
+			public const string Mpeg = "mpeg";
+
+			///<summary>mpg</summary>
+			public const string Mpg = "mpg";
+
+			///<summary>mpe</summary>
+			public const string Mpe = "mpe";
+
+			///<summary>m1v</summary>
+			public const string M1v = "m1v";
+
+			///<summary>m2v</summary>
+			public const string M2v = "m2v";
+
+			///<summary>ogv</summary>
+			public const string Ogv = "ogv";
+
+			///<summary>qt</summary>
+			public const string Qt = "qt";
+
+			///<summary>mov</summary>
+			public const string Mov = "mov";
+
+			///<summary>uvh</summary>
+			public const string Uvh = "uvh";
+
+			///<summary>uvvh</summary>
+			public const string Uvvh = "uvvh";
+
+			///<summary>uvm</summary>
+			public const string Uvm = "uvm";
+
+			///<summary>uvvm</summary>
+			public const string Uvvm = "uvvm";
+
+			///<summary>uvp</summary>
+			public const string Uvp = "uvp";
+
+			///<summary>uvvp</summary>
+			public const string Uvvp = "uvvp";
+
+			///<summary>uvs</summary>
+			public const string Uvs = "uvs";
+
+			///<summary>uvvs</summary>
+			public const string Uvvs = "uvvs";
+
+			///<summary>uvv</summary>
+			public const string Uvv = "uvv";
+
+			///<summary>uvvv</summary>
+			public const string Uvvv = "uvvv";
+
+			///<summary>dvb</summary>
+			public const string Dvb = "dvb";
+
+			///<summary>fvt</summary>
+			public const string Fvt = "fvt";
+
+			///<summary>mxu</summary>
+			public const string Mxu = "mxu";
+
+			///<summary>m4u</summary>
+			public const string M4u = "m4u";
+
+			///<summary>pyv</summary>
+			public const string Pyv = "pyv";
+
+			///<summary>uvu</summary>
+			public const string Uvu = "uvu";
+
+			///<summary>uvvu</summary>
+			public const string Uvvu = "uvvu";
+
+			///<summary>viv</summary>
+			public const string Viv = "viv";
+
+			///<summary>webm</summary>
+			public const string Webm = "webm";
+
+			///<summary>f4v</summary>
+			public const string F4v = "f4v";
+
+			///<summary>fli</summary>
+			public const string Fli = "fli";
+
+			///<summary>flv</summary>
+			public const string Flv = "flv";
+
+			///<summary>m4v</summary>
+			public const string M4v = "m4v";
+
+			///<summary>mkv</summary>
+			public const string Mkv = "mkv";
+
+			///<summary>mk3d</summary>
+			public const string Mk3d = "mk3d";
+
+			///<summary>mks</summary>
+			public const string Mks = "mks";
+
+			///<summary>mng</summary>
+			public const string Mng = "mng";
+
+			///<summary>asf</summary>
+			public const string Asf = "asf";
+
+			///<summary>asx</summary>
+			public const string Asx = "asx";
+
+			///<summary>vob</summary>
+			public const string Vob = "vob";
+
+			///<summary>wm</summary>
+			public const string Wm = "wm";
+
+			///<summary>wmv</summary>
+			public const string Wmv = "wmv";
+
+			///<summary>wmx</summary>
+			public const string Wmx = "wmx";
+
+			///<summary>wvx</summary>
+			public const string Wvx = "wvx";
+
+			///<summary>avi</summary>
+			public const string Avi = "avi";
+
+			///<summary>movie</summary>
+			public const string Movie = "movie";
+
+			///<summary>smv</summary>
+			public const string Smv = "smv";
+
+			///<summary>ice</summary>
+			public const string Ice = "ice";
+
+			///<summary>map</summary>
+			public const string Map = "map";
+
+			///<summary>topojson</summary>
+			public const string Topojson = "topojson";
+
+			///<summary>jsonld</summary>
+			public const string Jsonld = "jsonld";
+
+			///<summary>geojson</summary>
+			public const string Geojson = "geojson";
+
+			///<summary>mjs</summary>
+			public const string Mjs = "mjs";
+
+			///<summary>wasm</summary>
+			public const string Wasm = "wasm";
+
+			///<summary>webmanifest</summary>
+			public const string Webmanifest = "webmanifest";
+
+			///<summary>webapp</summary>
+			public const string Webapp = "webapp";
+
+			///<summary>f4a</summary>
+			public const string F4a = "f4a";
+
+			///<summary>f4b</summary>
+			public const string F4b = "f4b";
+
+			///<summary>apng</summary>
+			public const string Apng = "apng";
+
+			///<summary>avif</summary>
+			public const string Avif = "avif";
+
+			///<summary>avifs</summary>
+			public const string Avifs = "avifs";
+
+			///<summary>jxr</summary>
+			public const string Jxr = "jxr";
+
+			///<summary>hdp</summary>
+			public const string Hdp = "hdp";
+
+			///<summary>jng</summary>
+			public const string Jng = "jng";
+
+			///<summary>3gpp</summary>
+			public const string _3gpp = "3gpp";
+
+			///<summary>f4p</summary>
+			public const string F4p = "f4p";
+
+			///<summary>cur</summary>
+			public const string Cur = "cur";
+
+			///<summary>ear</summary>
+			public const string Ear = "ear";
+
+			///<summary>war</summary>
+			public const string War = "war";
+
+			///<summary>img</summary>
+			public const string Img = "img";
+
+			///<summary>msm</summary>
+			public const string Msm = "msm";
+
+			///<summary>msp</summary>
+			public const string Msp = "msp";
+
+			///<summary>safariextz</summary>
+			public const string Safariextz = "safariextz";
+
+			///<summary>bbaw</summary>
+			public const string Bbaw = "bbaw";
+
+			///<summary>crx</summary>
+			public const string Crx = "crx";
+
+			///<summary>cco</summary>
+			public const string Cco = "cco";
+
+			///<summary>jardiff</summary>
+			public const string Jardiff = "jardiff";
+
+			///<summary>run</summary>
+			public const string Run = "run";
+
+			///<summary>oex</summary>
+			public const string Oex = "oex";
+
+			///<summary>pl</summary>
+			public const string Pl = "pl";
+
+			///<summary>pm</summary>
+			public const string Pm = "pm";
+
+			///<summary>rpm</summary>
+			public const string Rpm = "rpm";
+
+			///<summary>sea</summary>
+			public const string Sea = "sea";
+
+			///<summary>tk</summary>
+			public const string Tk = "tk";
+
+			///<summary>pem</summary>
+			public const string Pem = "pem";
+
+			///<summary>shtml</summary>
+			public const string Shtml = "shtml";
+
+			///<summary>md</summary>
+			public const string Md = "md";
+
+			///<summary>markdown</summary>
+			public const string Markdown = "markdown";
+
+			///<summary>mml</summary>
+			public const string Mml = "mml";
+
+			///<summary>xloc</summary>
+			public const string Xloc = "xloc";
+
+			///<summary>vtt</summary>
+			public const string Vtt = "vtt";
+
+			///<summary>htc</summary>
+			public const string Htc = "htc";
+
+			///<summary>bdoc</summary>
+			public const string Bdoc = "bdoc";
+
+			///<summary>es</summary>
+			public const string Es = "es";
+
+			///<summary>hjson</summary>
+			public const string Hjson = "hjson";
+
+			///<summary>json5</summary>
+			public const string Json5 = "json5";
+
+			///<summary>m4p</summary>
+			public const string M4p = "m4p";
+
+			///<summary>cjs</summary>
+			public const string Cjs = "cjs";
+
+			///<summary>buffer</summary>
+			public const string Buffer = "buffer";
+
+			///<summary>raml</summary>
+			public const string Raml = "raml";
+
+			///<summary>owl</summary>
+			public const string Owl = "owl";
+
+			///<summary>siv</summary>
+			public const string Siv = "siv";
+
+			///<summary>sieve</summary>
+			public const string Sieve = "sieve";
+
+			///<summary>toml</summary>
+			public const string Toml = "toml";
+
+			///<summary>ubj</summary>
+			public const string Ubj = "ubj";
+
+			///<summary>pkpass</summary>
+			public const string Pkpass = "pkpass";
+
+			///<summary>gdoc</summary>
+			public const string Gdoc = "gdoc";
+
+			///<summary>gslides</summary>
+			public const string Gslides = "gslides";
+
+			///<summary>gsheet</summary>
+			public const string Gsheet = "gsheet";
+
+			///<summary>msg</summary>
+			public const string Msg = "msg";
+
+			///<summary>arj</summary>
+			public const string Arj = "arj";
+
+			///<summary>php</summary>
+			public const string Php = "php";
+
+			///<summary>kdbx</summary>
+			public const string Kdbx = "kdbx";
+
+			///<summary>luac</summary>
+			public const string Luac = "luac";
+
+			///<summary>pac</summary>
+			public const string Pac = "pac";
+
+			///<summary>hdd</summary>
+			public const string Hdd = "hdd";
+
+			///<summary>ova</summary>
+			public const string Ova = "ova";
+
+			///<summary>ovf</summary>
+			public const string Ovf = "ovf";
+
+			///<summary>vbox</summary>
+			public const string Vbox = "vbox";
+
+			///<summary>vbox-extpack</summary>
+			public const string Vbox_extpack = "vbox-extpack";
+
+			///<summary>vdi</summary>
+			public const string Vdi = "vdi";
+
+			///<summary>vhd</summary>
+			public const string Vhd = "vhd";
+
+			///<summary>vmdk</summary>
+			public const string Vmdk = "vmdk";
+
+			///<summary>xsd</summary>
+			public const string Xsd = "xsd";
+
+			///<summary>rng</summary>
+			public const string Rng = "rng";
+
+			///<summary>heic</summary>
+			public const string Heic = "heic";
+
+			///<summary>heics</summary>
+			public const string Heics = "heics";
+
+			///<summary>heif</summary>
+			public const string Heif = "heif";
+
+			///<summary>heifs</summary>
+			public const string Heifs = "heifs";
+
+			///<summary>jp2</summary>
+			public const string Jp2 = "jp2";
+
+			///<summary>jpg2</summary>
+			public const string Jpg2 = "jpg2";
+
+			///<summary>jpx</summary>
+			public const string Jpx = "jpx";
+
+			///<summary>jpf</summary>
+			public const string Jpf = "jpf";
+
+			///<summary>dds</summary>
+			public const string Dds = "dds";
+
+			///<summary>manifest</summary>
+			public const string Manifest = "manifest";
+
+			///<summary>coffee</summary>
+			public const string Coffee = "coffee";
+
+			///<summary>litcoffee</summary>
+			public const string Litcoffee = "litcoffee";
+
+			///<summary>jade</summary>
+			public const string Jade = "jade";
+
+			///<summary>jsx</summary>
+			public const string Jsx = "jsx";
+
+			///<summary>less</summary>
+			public const string Less = "less";
+
+			///<summary>mdx</summary>
+			public const string Mdx = "mdx";
+
+			///<summary>ini</summary>
+			public const string Ini = "ini";
+
+			///<summary>shex</summary>
+			public const string Shex = "shex";
+
+			///<summary>slim</summary>
+			public const string Slim = "slim";
+
+			///<summary>slm</summary>
+			public const string Slm = "slm";
+
+			///<summary>stylus</summary>
+			public const string Stylus = "stylus";
+
+			///<summary>styl</summary>
+			public const string Styl = "styl";
+
+			///<summary>hbs</summary>
+			public const string Hbs = "hbs";
+
+			///<summary>lua</summary>
+			public const string Lua = "lua";
+
+			///<summary>mkd</summary>
+			public const string Mkd = "mkd";
+
+			///<summary>pde</summary>
+			public const string Pde = "pde";
+
+			///<summary>sass</summary>
+			public const string Sass = "sass";
+
+			///<summary>scss</summary>
+			public const string Scss = "scss";
+
+			///<summary>ymp</summary>
+			public const string Ymp = "ymp";
+
+			///<summary>yaml</summary>
+			public const string Yaml = "yaml";
+
+			///<summary>yml</summary>
+			public const string Yml = "yml";
+		}
 
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
-            _ext_ez,
-            _ext_aw,
-            _ext_atom,
-            _ext_atomcat,
-            _ext_atomsvc,
-            _ext_ccxml,
-            _ext_cdmia,
-            _ext_cdmic,
-            _ext_cdmid,
-            _ext_cdmio,
-            _ext_cdmiq,
-            _ext_cu,
-            _ext_davmount,
-            _ext_dbk,
-            _ext_dssc,
-            _ext_xdssc,
-            _ext_ecma,
-            _ext_emma,
-            _ext_epub,
-            _ext_exi,
-            _ext_pfr,
-            _ext_gml,
-            _ext_gpx,
-            _ext_gxf,
-            _ext_stk,
-            _ext_ink,
-            _ext_inkml,
-            _ext_ipfix,
-            _ext_jar,
-            _ext_ser,
-            _ext_class,
-            _ext_js,
-            _ext_json,
-            _ext_jsonml,
-            _ext_lostxml,
-            _ext_hqx,
-            _ext_cpt,
-            _ext_mads,
-            _ext_mrc,
-            _ext_mrcx,
-            _ext_ma,
-            _ext_nb,
-            _ext_mb,
-            _ext_mathml,
-            _ext_mbox,
-            _ext_mscml,
-            _ext_metalink,
-            _ext_meta4,
-            _ext_mets,
-            _ext_mods,
-            _ext_m21,
-            _ext_mp21,
-            _ext_mp4s,
-            _ext_doc,
-            _ext_dot,
-            _ext_mxf,
-            _ext_bin,
-            _ext_dms,
-            _ext_lrf,
-            _ext_mar,
-            _ext_so,
-            _ext_dist,
-            _ext_distz,
-            _ext_pkg,
-            _ext_bpk,
-            _ext_dump,
-            _ext_elc,
-            _ext_deploy,
-            _ext_oda,
-            _ext_opf,
-            _ext_ogx,
-            _ext_omdoc,
-            _ext_onetoc,
-            _ext_onetoc2,
-            _ext_onetmp,
-            _ext_onepkg,
-            _ext_oxps,
-            _ext_xer,
-            _ext_pdf,
-            _ext_pgp,
-            _ext_asc,
-            _ext_sig,
-            _ext_prf,
-            _ext_p10,
-            _ext_p7m,
-            _ext_p7c,
-            _ext_p7s,
-            _ext_p8,
-            _ext_ac,
-            _ext_cer,
-            _ext_crl,
-            _ext_pkipath,
-            _ext_pki,
-            _ext_pls,
-            _ext_ai,
-            _ext_eps,
-            _ext_ps,
-            _ext_cww,
-            _ext_pskcxml,
-            _ext_rdf,
-            _ext_rif,
-            _ext_rnc,
-            _ext_rl,
-            _ext_rld,
-            _ext_rs,
-            _ext_gbr,
-            _ext_mft,
-            _ext_roa,
-            _ext_rsd,
-            _ext_rss,
-            _ext_rtf,
-            _ext_sbml,
-            _ext_scq,
-            _ext_scs,
-            _ext_spq,
-            _ext_spp,
-            _ext_sdp,
-            _ext_setpay,
-            _ext_setreg,
-            _ext_shf,
-            _ext_smi,
-            _ext_smil,
-            _ext_rq,
-            _ext_srx,
-            _ext_gram,
-            _ext_grxml,
-            _ext_sru,
-            _ext_ssdl,
-            _ext_ssml,
-            _ext_tei,
-            _ext_teicorpus,
-            _ext_tfi,
-            _ext_tsd,
-            _ext_plb,
-            _ext_psb,
-            _ext_pvb,
-            _ext_tcap,
-            _ext_pwn,
-            _ext_aso,
-            _ext_imp,
-            _ext_acu,
-            _ext_atc,
-            _ext_acutc,
-            _ext_air,
-            _ext_fcdt,
-            _ext_fxp,
-            _ext_fxpl,
-            _ext_xdp,
-            _ext_xfdf,
-            _ext_ahead,
-            _ext_azf,
-            _ext_azs,
-            _ext_azw,
-            _ext_acc,
-            _ext_ami,
-            _ext_apk,
-            _ext_cii,
-            _ext_fti,
-            _ext_atx,
-            _ext_mpkg,
-            _ext_m3u8,
-            _ext_swi,
-            _ext_iota,
-            _ext_aep,
-            _ext_mpm,
-            _ext_bmi,
-            _ext_rep,
-            _ext_cdxml,
-            _ext_mmd,
-            _ext_cdy,
-            _ext_cla,
-            _ext_rp9,
-            _ext_c4g,
-            _ext_c4d,
-            _ext_c4f,
-            _ext_c4p,
-            _ext_c4u,
-            _ext_c11amc,
-            _ext_c11amz,
-            _ext_csp,
-            _ext_cdbcmsg,
-            _ext_cmc,
-            _ext_clkx,
-            _ext_clkk,
-            _ext_clkp,
-            _ext_clkt,
-            _ext_clkw,
-            _ext_wbs,
-            _ext_pml,
-            _ext_ppd,
-            _ext_car,
-            _ext_pcurl,
-            _ext_dart,
-            _ext_rdz,
-            _ext_uvf,
-            _ext_uvvf,
-            _ext_uvd,
-            _ext_uvvd,
-            _ext_uvt,
-            _ext_uvvt,
-            _ext_uvx,
-            _ext_uvvx,
-            _ext_uvz,
-            _ext_uvvz,
-            _ext_fe_launch,
-            _ext_dna,
-            _ext_mlp,
-            _ext_dpg,
-            _ext_dfac,
-            _ext_kpxx,
-            _ext_ait,
-            _ext_svc,
-            _ext_geo,
-            _ext_mag,
-            _ext_nml,
-            _ext_esf,
-            _ext_msf,
-            _ext_qam,
-            _ext_slt,
-            _ext_ssf,
-            _ext_es3,
-            _ext_et3,
-            _ext_ez2,
-            _ext_ez3,
-            _ext_fdf,
-            _ext_mseed,
-            _ext_seed,
-            _ext_dataless,
-            _ext_gph,
-            _ext_ftc,
-            _ext_fm,
-            _ext_frame,
-            _ext_maker,
-            _ext_book,
-            _ext_fnc,
-            _ext_ltf,
-            _ext_fsc,
-            _ext_oas,
-            _ext_oa2,
-            _ext_oa3,
-            _ext_fg5,
-            _ext_bh2,
-            _ext_ddd,
-            _ext_xdw,
-            _ext_xbd,
-            _ext_fzs,
-            _ext_txd,
-            _ext_ggb,
-            _ext_ggt,
-            _ext_gex,
-            _ext_gre,
-            _ext_gxt,
-            _ext_g2w,
-            _ext_g3w,
-            _ext_gmx,
-            _ext_kml,
-            _ext_kmz,
-            _ext_gqf,
-            _ext_gqs,
-            _ext_gac,
-            _ext_ghf,
-            _ext_gim,
-            _ext_grv,
-            _ext_gtm,
-            _ext_tpl,
-            _ext_vcg,
-            _ext_hal,
-            _ext_zmm,
-            _ext_hbci,
-            _ext_les,
-            _ext_hpgl,
-            _ext_hpid,
-            _ext_hps,
-            _ext_jlt,
-            _ext_pcl,
-            _ext_pclxl,
-            _ext_sfd_hdstx,
-            _ext_mpy,
-            _ext_afp,
-            _ext_listafp,
-            _ext_list3820,
-            _ext_irm,
-            _ext_sc,
-            _ext_icc,
-            _ext_icm,
-            _ext_igl,
-            _ext_ivp,
-            _ext_ivu,
-            _ext_igm,
-            _ext_xpw,
-            _ext_xpx,
-            _ext_i2g,
-            _ext_qbo,
-            _ext_qfx,
-            _ext_rcprofile,
-            _ext_irp,
-            _ext_xpr,
-            _ext_fcs,
-            _ext_jam,
-            _ext_rms,
-            _ext_jisp,
-            _ext_joda,
-            _ext_ktz,
-            _ext_ktr,
-            _ext_karbon,
-            _ext_chrt,
-            _ext_kfo,
-            _ext_flw,
-            _ext_kon,
-            _ext_kpr,
-            _ext_kpt,
-            _ext_ksp,
-            _ext_kwd,
-            _ext_kwt,
-            _ext_htke,
-            _ext_kia,
-            _ext_kne,
-            _ext_knp,
-            _ext_skp,
-            _ext_skd,
-            _ext_skt,
-            _ext_skm,
-            _ext_sse,
-            _ext_lasxml,
-            _ext_lbd,
-            _ext_lbe,
-            _ext_123,
-            _ext_apr,
-            _ext_pre,
-            _ext_nsf,
-            _ext_org,
-            _ext_scm,
-            _ext_lwp,
-            _ext_portpkg,
-            _ext_mcd,
-            _ext_mc1,
-            _ext_cdkey,
-            _ext_mwf,
-            _ext_mfm,
-            _ext_flo,
-            _ext_igx,
-            _ext_mif,
-            _ext_daf,
-            _ext_dis,
-            _ext_mbk,
-            _ext_mqy,
-            _ext_msl,
-            _ext_plc,
-            _ext_txf,
-            _ext_mpn,
-            _ext_mpc,
-            _ext_xul,
-            _ext_cil,
-            _ext_cab,
-            _ext_xls,
-            _ext_xlm,
-            _ext_xla,
-            _ext_xlc,
-            _ext_xlt,
-            _ext_xlw,
-            _ext_xlam,
-            _ext_xlsb,
-            _ext_xlsm,
-            _ext_xltm,
-            _ext_eot,
-            _ext_chm,
-            _ext_ims,
-            _ext_lrm,
-            _ext_thmx,
-            _ext_cat,
-            _ext_stl,
-            _ext_ppt,
-            _ext_pps,
-            _ext_pot,
-            _ext_ppam,
-            _ext_pptm,
-            _ext_sldm,
-            _ext_ppsm,
-            _ext_potm,
-            _ext_mpp,
-            _ext_mpt,
-            _ext_docm,
-            _ext_dotm,
-            _ext_wps,
-            _ext_wks,
-            _ext_wcm,
-            _ext_wdb,
-            _ext_wpl,
-            _ext_xps,
-            _ext_mseq,
-            _ext_mus,
-            _ext_msty,
-            _ext_taglet,
-            _ext_nlu,
-            _ext_ntf,
-            _ext_nitf,
-            _ext_nnd,
-            _ext_nns,
-            _ext_nnw,
-            _ext_ngdat,
-            _ext_n_gage,
-            _ext_rpst,
-            _ext_rpss,
-            _ext_edm,
-            _ext_edx,
-            _ext_ext,
-            _ext_odc,
-            _ext_otc,
-            _ext_odb,
-            _ext_odf,
-            _ext_odft,
-            _ext_odg,
-            _ext_otg,
-            _ext_odi,
-            _ext_oti,
-            _ext_odp,
-            _ext_otp,
-            _ext_ods,
-            _ext_ots,
-            _ext_odt,
-            _ext_odm,
-            _ext_ott,
-            _ext_oth,
-            _ext_xo,
-            _ext_dd2,
-            _ext_oxt,
-            _ext_pptx,
-            _ext_sldx,
-            _ext_ppsx,
-            _ext_potx,
-            _ext_xlsx,
-            _ext_xltx,
-            _ext_docx,
-            _ext_dotx,
-            _ext_mgp,
-            _ext_dp,
-            _ext_esa,
-            _ext_pdb,
-            _ext_pqa,
-            _ext_oprc,
-            _ext_paw,
-            _ext_str,
-            _ext_ei6,
-            _ext_efif,
-            _ext_wg,
-            _ext_plf,
-            _ext_pbd,
-            _ext_box,
-            _ext_mgz,
-            _ext_qps,
-            _ext_ptid,
-            _ext_qxd,
-            _ext_qxt,
-            _ext_qwd,
-            _ext_qwt,
-            _ext_qxl,
-            _ext_qxb,
-            _ext_bed,
-            _ext_mxl,
-            _ext_musicxml,
-            _ext_cryptonote,
-            _ext_cod,
-            _ext_rm,
-            _ext_rmvb,
-            _ext_link66,
-            _ext_st,
-            _ext_see,
-            _ext_sema,
-            _ext_semd,
-            _ext_semf,
-            _ext_ifm,
-            _ext_itp,
-            _ext_iif,
-            _ext_ipk,
-            _ext_twd,
-            _ext_twds,
-            _ext_mmf,
-            _ext_teacher,
-            _ext_sdkm,
-            _ext_sdkd,
-            _ext_dxp,
-            _ext_sfs,
-            _ext_sdc,
-            _ext_sda,
-            _ext_sdd,
-            _ext_smf,
-            _ext_sdw,
-            _ext_vor,
-            _ext_sgl,
-            _ext_smzip,
-            _ext_sm,
-            _ext_sxc,
-            _ext_stc,
-            _ext_sxd,
-            _ext_std,
-            _ext_sxi,
-            _ext_sti,
-            _ext_sxm,
-            _ext_sxw,
-            _ext_sxg,
-            _ext_stw,
-            _ext_sus,
-            _ext_susp,
-            _ext_svd,
-            _ext_sis,
-            _ext_sisx,
-            _ext_xsm,
-            _ext_bdm,
-            _ext_xdm,
-            _ext_tao,
-            _ext_pcap,
-            _ext_cap,
-            _ext_dmp,
-            _ext_tmo,
-            _ext_tpt,
-            _ext_mxs,
-            _ext_tra,
-            _ext_ufd,
-            _ext_ufdl,
-            _ext_utz,
-            _ext_umj,
-            _ext_unityweb,
-            _ext_uoml,
-            _ext_vcx,
-            _ext_vsd,
-            _ext_vst,
-            _ext_vss,
-            _ext_vsw,
-            _ext_vis,
-            _ext_vsf,
-            _ext_wbxml,
-            _ext_wmlc,
-            _ext_wmlsc,
-            _ext_wtb,
-            _ext_nbp,
-            _ext_wpd,
-            _ext_wqd,
-            _ext_stf,
-            _ext_xar,
-            _ext_xfdl,
-            _ext_hvd,
-            _ext_hvs,
-            _ext_hvp,
-            _ext_osf,
-            _ext_osfpvg,
-            _ext_saf,
-            _ext_spf,
-            _ext_cmp,
-            _ext_zir,
-            _ext_zirz,
-            _ext_zaz,
-            _ext_vxml,
-            _ext_wgt,
-            _ext_hlp,
-            _ext_wsdl,
-            _ext_wspolicy,
-            _ext_7z,
-            _ext_abw,
-            _ext_ace,
-            _ext_dmg,
-            _ext_aab,
-            _ext_x32,
-            _ext_u32,
-            _ext_vox,
-            _ext_aam,
-            _ext_aas,
-            _ext_bcpio,
-            _ext_torrent,
-            _ext_blb,
-            _ext_blorb,
-            _ext_bz,
-            _ext_bz2,
-            _ext_boz,
-            _ext_cbr,
-            _ext_cba,
-            _ext_cbt,
-            _ext_cbz,
-            _ext_cb7,
-            _ext_vcd,
-            _ext_cfs,
-            _ext_chat,
-            _ext_pgn,
-            _ext_nsc,
-            _ext_cpio,
-            _ext_csh,
-            _ext_deb,
-            _ext_udeb,
-            _ext_dgc,
-            _ext_dir,
-            _ext_dcr,
-            _ext_dxr,
-            _ext_cst,
-            _ext_cct,
-            _ext_cxt,
-            _ext_w3d,
-            _ext_fgd,
-            _ext_swa,
-            _ext_wad,
-            _ext_ncx,
-            _ext_dtb,
-            _ext_res,
-            _ext_dvi,
-            _ext_evy,
-            _ext_eva,
-            _ext_bdf,
-            _ext_gsf,
-            _ext_psf,
-            _ext_pcf,
-            _ext_snf,
-            _ext_pfa,
-            _ext_pfb,
-            _ext_pfm,
-            _ext_afm,
-            _ext_arc,
-            _ext_spl,
-            _ext_gca,
-            _ext_ulx,
-            _ext_gnumeric,
-            _ext_gramps,
-            _ext_gtar,
-            _ext_hdf,
-            _ext_install,
-            _ext_iso,
-            _ext_jnlp,
-            _ext_latex,
-            _ext_lzh,
-            _ext_lha,
-            _ext_mie,
-            _ext_prc,
-            _ext_mobi,
-            _ext_application,
-            _ext_lnk,
-            _ext_wmd,
-            _ext_wmz,
-            _ext_xbap,
-            _ext_mdb,
-            _ext_obd,
-            _ext_crd,
-            _ext_clp,
-            _ext_exe,
-            _ext_dll,
-            _ext_com,
-            _ext_bat,
-            _ext_msi,
-            _ext_mvb,
-            _ext_m13,
-            _ext_m14,
-            _ext_wmf,
-            _ext_emf,
-            _ext_emz,
-            _ext_mny,
-            _ext_pub,
-            _ext_scd,
-            _ext_trm,
-            _ext_wri,
-            _ext_nc,
-            _ext_cdf,
-            _ext_nzb,
-            _ext_p12,
-            _ext_pfx,
-            _ext_p7b,
-            _ext_spc,
-            _ext_p7r,
-            _ext_rar,
-            _ext_ris,
-            _ext_sh,
-            _ext_shar,
-            _ext_swf,
-            _ext_xap,
-            _ext_sql,
-            _ext_sit,
-            _ext_sitx,
-            _ext_srt,
-            _ext_sv4cpio,
-            _ext_sv4crc,
-            _ext_t3,
-            _ext_gam,
-            _ext_tar,
-            _ext_tcl,
-            _ext_tex,
-            _ext_tfm,
-            _ext_texinfo,
-            _ext_texi,
-            _ext_obj,
-            _ext_ustar,
-            _ext_src,
-            _ext_der,
-            _ext_crt,
-            _ext_fig,
-            _ext_xlf,
-            _ext_xpi,
-            _ext_xz,
-            _ext_z1,
-            _ext_z2,
-            _ext_z3,
-            _ext_z4,
-            _ext_z5,
-            _ext_z6,
-            _ext_z7,
-            _ext_z8,
-            _ext_xaml,
-            _ext_xdf,
-            _ext_xenc,
-            _ext_xhtml,
-            _ext_xht,
-            _ext_xml,
-            _ext_xsl,
-            _ext_dtd,
-            _ext_xop,
-            _ext_xpl,
-            _ext_xslt,
-            _ext_xspf,
-            _ext_mxml,
-            _ext_xhvml,
-            _ext_xvml,
-            _ext_xvm,
-            _ext_yang,
-            _ext_yin,
-            _ext_zip,
-            _ext_adp,
-            _ext_au,
-            _ext_snd,
-            _ext_mid,
-            _ext_midi,
-            _ext_kar,
-            _ext_rmi,
-            _ext_m4a,
-            _ext_mp4a,
-            _ext_mpga,
-            _ext_mp2,
-            _ext_mp2a,
-            _ext_mp3,
-            _ext_m2a,
-            _ext_m3a,
-            _ext_oga,
-            _ext_ogg,
-            _ext_spx,
-            _ext_s3m,
-            _ext_sil,
-            _ext_uva,
-            _ext_uvva,
-            _ext_eol,
-            _ext_dra,
-            _ext_dts,
-            _ext_dtshd,
-            _ext_lvp,
-            _ext_pya,
-            _ext_ecelp4800,
-            _ext_ecelp7470,
-            _ext_ecelp9600,
-            _ext_rip,
-            _ext_weba,
-            _ext_aac,
-            _ext_aif,
-            _ext_aiff,
-            _ext_aifc,
-            _ext_caf,
-            _ext_flac,
-            _ext_mka,
-            _ext_m3u,
-            _ext_wax,
-            _ext_wma,
-            _ext_ram,
-            _ext_ra,
-            _ext_rmp,
-            _ext_wav,
-            _ext_xm,
-            _ext_cdx,
-            _ext_cif,
-            _ext_cmdf,
-            _ext_cml,
-            _ext_csml,
-            _ext_xyz,
-            _ext_ttc,
-            _ext_otf,
-            _ext_ttf,
-            _ext_woff,
-            _ext_woff2,
-            _ext_bmp,
-            _ext_cgm,
-            _ext_g3,
-            _ext_gif,
-            _ext_ief,
-            _ext_jpeg,
-            _ext_jpg,
-            _ext_jpe,
-            _ext_ktx,
-            _ext_png,
-            _ext_btif,
-            _ext_sgi,
-            _ext_svg,
-            _ext_svgz,
-            _ext_tiff,
-            _ext_tif,
-            _ext_psd,
-            _ext_uvi,
-            _ext_uvvi,
-            _ext_uvg,
-            _ext_uvvg,
-            _ext_djvu,
-            _ext_djv,
-            _ext_sub,
-            _ext_dwg,
-            _ext_dxf,
-            _ext_fbs,
-            _ext_fpx,
-            _ext_fst,
-            _ext_mmr,
-            _ext_rlc,
-            _ext_mdi,
-            _ext_wdp,
-            _ext_npx,
-            _ext_wbmp,
-            _ext_xif,
-            _ext_webp,
-            _ext_3ds,
-            _ext_ras,
-            _ext_cmx,
-            _ext_fh,
-            _ext_fhc,
-            _ext_fh4,
-            _ext_fh5,
-            _ext_fh7,
-            _ext_ico,
-            _ext_sid,
-            _ext_pcx,
-            _ext_pic,
-            _ext_pct,
-            _ext_pnm,
-            _ext_pbm,
-            _ext_pgm,
-            _ext_ppm,
-            _ext_rgb,
-            _ext_tga,
-            _ext_xbm,
-            _ext_xpm,
-            _ext_xwd,
-            _ext_eml,
-            _ext_mime,
-            _ext_igs,
-            _ext_iges,
-            _ext_msh,
-            _ext_mesh,
-            _ext_silo,
-            _ext_dae,
-            _ext_dwf,
-            _ext_gdl,
-            _ext_gtw,
-            _ext_mts,
-            _ext_vtu,
-            _ext_wrl,
-            _ext_vrml,
-            _ext_x3db,
-            _ext_x3dbz,
-            _ext_x3dv,
-            _ext_x3dvz,
-            _ext_x3d,
-            _ext_x3dz,
-            _ext_appcache,
-            _ext_ics,
-            _ext_ifb,
-            _ext_css,
-            _ext_csv,
-            _ext_html,
-            _ext_htm,
-            _ext_n3,
-            _ext_txt,
-            _ext_text,
-            _ext_conf,
-            _ext_def,
-            _ext_list,
-            _ext_log,
-            _ext_in,
-            _ext_dsc,
-            _ext_rtx,
-            _ext_sgml,
-            _ext_sgm,
-            _ext_tsv,
-            _ext_t,
-            _ext_tr,
-            _ext_roff,
-            _ext_man,
-            _ext_me,
-            _ext_ms,
-            _ext_ttl,
-            _ext_uri,
-            _ext_uris,
-            _ext_urls,
-            _ext_vcard,
-            _ext_curl,
-            _ext_dcurl,
-            _ext_mcurl,
-            _ext_scurl,
-            _ext_fly,
-            _ext_flx,
-            _ext_gv,
-            _ext_3dml,
-            _ext_spot,
-            _ext_jad,
-            _ext_wml,
-            _ext_wmls,
-            _ext_s,
-            _ext_asm,
-            _ext_c,
-            _ext_cc,
-            _ext_cxx,
-            _ext_cpp,
-            _ext_h,
-            _ext_hh,
-            _ext_dic,
-            _ext_f,
-            _ext_for,
-            _ext_f77,
-            _ext_f90,
-            _ext_java,
-            _ext_nfo,
-            _ext_opml,
-            _ext_p,
-            _ext_pas,
-            _ext_etx,
-            _ext_sfv,
-            _ext_uu,
-            _ext_vcs,
-            _ext_vcf,
-            _ext_3gp,
-            _ext_3g2,
-            _ext_h261,
-            _ext_h263,
-            _ext_h264,
-            _ext_jpgv,
-            _ext_jpm,
-            _ext_jpgm,
-            _ext_mj2,
-            _ext_mjp2,
-            _ext_mp4,
-            _ext_mp4v,
-            _ext_mpg4,
-            _ext_mpeg,
-            _ext_mpg,
-            _ext_mpe,
-            _ext_m1v,
-            _ext_m2v,
-            _ext_ogv,
-            _ext_qt,
-            _ext_mov,
-            _ext_uvh,
-            _ext_uvvh,
-            _ext_uvm,
-            _ext_uvvm,
-            _ext_uvp,
-            _ext_uvvp,
-            _ext_uvs,
-            _ext_uvvs,
-            _ext_uvv,
-            _ext_uvvv,
-            _ext_dvb,
-            _ext_fvt,
-            _ext_mxu,
-            _ext_m4u,
-            _ext_pyv,
-            _ext_uvu,
-            _ext_uvvu,
-            _ext_viv,
-            _ext_webm,
-            _ext_f4v,
-            _ext_fli,
-            _ext_flv,
-            _ext_m4v,
-            _ext_mkv,
-            _ext_mk3d,
-            _ext_mks,
-            _ext_mng,
-            _ext_asf,
-            _ext_asx,
-            _ext_vob,
-            _ext_wm,
-            _ext_wmv,
-            _ext_wmx,
-            _ext_wvx,
-            _ext_avi,
-            _ext_movie,
-            _ext_smv,
-            _ext_ice,
-            _ext_map,
-            _ext_topojson,
-            _ext_jsonld,
-            _ext_geojson,
-            _ext_mjs,
-            _ext_wasm,
-            _ext_webmanifest,
-            _ext_webapp,
-            _ext_f4a,
-            _ext_f4b,
-            _ext_opus,
-            _ext_jxr,
-            _ext_hdp,
-            _ext_jng,
-            _ext_3gpp,
-            _ext_f4p,
-            _ext_cur,
-            _ext_ear,
-            _ext_war,
-            _ext_img,
-            _ext_msm,
-            _ext_msp,
-            _ext_safariextz,
-            _ext_bbaw,
-            _ext_crx,
-            _ext_cco,
-            _ext_jardiff,
-            _ext_run,
-            _ext_oex,
-            _ext_pl,
-            _ext_pm,
-            _ext_rpm,
-            _ext_sea,
-            _ext_tk,
-            _ext_pem,
-            _ext_shtml,
-            _ext_md,
-            _ext_markdown,
-            _ext_mml,
-            _ext_xloc,
-            _ext_vtt,
-            _ext_htc,
-            _ext_bdoc,
-            _ext_mpd,
-            _ext_es,
-            _ext_gz,
-            _ext_hjson,
-            _ext_json5,
-            _ext_m4p,
-            _ext_nq,
-            _ext_nt,
-            _ext_buffer,
-            _ext_raml,
-            _ext_owl,
-            _ext_siv,
-            _ext_sieve,
-            _ext_toml,
-            _ext_pkpass,
-            _ext_csl,
-            _ext_gdoc,
-            _ext_gslides,
-            _ext_gsheet,
-            _ext_msg,
-            _ext_wadl,
-            _ext_arj,
-            _ext_php,
-            _ext_kdbx,
-            _ext_luac,
-            _ext_pac,
-            _ext_hdd,
-            _ext_ova,
-            _ext_ovf,
-            _ext_vbox,
-            _ext_vbox_extpack,
-            _ext_vdi,
-            _ext_vhd,
-            _ext_vmdk,
-            _ext_xsd,
-            _ext_rng,
-            _ext_mxmf,
-            _ext_apng,
-            _ext_heic,
-            _ext_heics,
-            _ext_heif,
-            _ext_heifs,
-            _ext_jp2,
-            _ext_jpg2,
-            _ext_jpx,
-            _ext_jpf,
-            _ext_dds,
-            _ext_manifest,
-            _ext_coffee,
-            _ext_litcoffee,
-            _ext_jade,
-            _ext_jsx,
-            _ext_less,
-            _ext_mdx,
-            _ext_ini,
-            _ext_shex,
-            _ext_slim,
-            _ext_slm,
-            _ext_stylus,
-            _ext_styl,
-            _ext_hbs,
-            _ext_lua,
-            _ext_mkd,
-            _ext_pde,
-            _ext_sass,
-            _ext_scss,
-            _ext_ymp,
-            _ext_yaml,
-            _ext_yml,
+            FileExtensions.Ez,
+            FileExtensions.Aw,
+            FileExtensions.Atom,
+            FileExtensions.Atomcat,
+            FileExtensions.Atomsvc,
+            FileExtensions.Ccxml,
+            FileExtensions.Cdmia,
+            FileExtensions.Cdmic,
+            FileExtensions.Cdmid,
+            FileExtensions.Cdmio,
+            FileExtensions.Cdmiq,
+            FileExtensions.Cu,
+            FileExtensions.Davmount,
+            FileExtensions.Dbk,
+            FileExtensions.Dssc,
+            FileExtensions.Xdssc,
+            FileExtensions.Ecma,
+            FileExtensions.Emma,
+            FileExtensions.Epub,
+            FileExtensions.Exi,
+            FileExtensions.Pfr,
+            FileExtensions.Gml,
+            FileExtensions.Gpx,
+            FileExtensions.Gxf,
+            FileExtensions.Stk,
+            FileExtensions.Ink,
+            FileExtensions.Inkml,
+            FileExtensions.Ipfix,
+            FileExtensions.Jar,
+            FileExtensions.Ser,
+            FileExtensions.Class,
+            FileExtensions.Js,
+            FileExtensions.Json,
+            FileExtensions.Jsonml,
+            FileExtensions.Lostxml,
+            FileExtensions.Hqx,
+            FileExtensions.Cpt,
+            FileExtensions.Mads,
+            FileExtensions.Mrc,
+            FileExtensions.Mrcx,
+            FileExtensions.Ma,
+            FileExtensions.Nb,
+            FileExtensions.Mb,
+            FileExtensions.Mathml,
+            FileExtensions.Mbox,
+            FileExtensions.Mscml,
+            FileExtensions.Metalink,
+            FileExtensions.Meta4,
+            FileExtensions.Mets,
+            FileExtensions.Mods,
+            FileExtensions.M21,
+            FileExtensions.Mp21,
+            FileExtensions.Mp4s,
+            FileExtensions.Doc,
+            FileExtensions.Dot,
+            FileExtensions.Mxf,
+            FileExtensions.Bin,
+            FileExtensions.Dms,
+            FileExtensions.Lrf,
+            FileExtensions.Mar,
+            FileExtensions.So,
+            FileExtensions.Dist,
+            FileExtensions.Distz,
+            FileExtensions.Pkg,
+            FileExtensions.Bpk,
+            FileExtensions.Dump,
+            FileExtensions.Elc,
+            FileExtensions.Deploy,
+            FileExtensions.Oda,
+            FileExtensions.Opf,
+            FileExtensions.Ogx,
+            FileExtensions.Omdoc,
+            FileExtensions.Onetoc,
+            FileExtensions.Onetoc2,
+            FileExtensions.Onetmp,
+            FileExtensions.Onepkg,
+            FileExtensions.Oxps,
+            FileExtensions.Xer,
+            FileExtensions.Pdf,
+            FileExtensions.Pgp,
+            FileExtensions.Asc,
+            FileExtensions.Sig,
+            FileExtensions.Prf,
+            FileExtensions.P10,
+            FileExtensions.P7m,
+            FileExtensions.P7c,
+            FileExtensions.P7s,
+            FileExtensions.P8,
+            FileExtensions.Ac,
+            FileExtensions.Cer,
+            FileExtensions.Crl,
+            FileExtensions.Pkipath,
+            FileExtensions.Pki,
+            FileExtensions.Pls,
+            FileExtensions.Ai,
+            FileExtensions.Eps,
+            FileExtensions.Ps,
+            FileExtensions.Cww,
+            FileExtensions.Pskcxml,
+            FileExtensions.Rdf,
+            FileExtensions.Rif,
+            FileExtensions.Rnc,
+            FileExtensions.Rl,
+            FileExtensions.Rld,
+            FileExtensions.Rs,
+            FileExtensions.Gbr,
+            FileExtensions.Mft,
+            FileExtensions.Roa,
+            FileExtensions.Rsd,
+            FileExtensions.Rss,
+            FileExtensions.Rtf,
+            FileExtensions.Sbml,
+            FileExtensions.Scq,
+            FileExtensions.Scs,
+            FileExtensions.Spq,
+            FileExtensions.Spp,
+            FileExtensions.Sdp,
+            FileExtensions.Setpay,
+            FileExtensions.Setreg,
+            FileExtensions.Shf,
+            FileExtensions.Smi,
+            FileExtensions.Smil,
+            FileExtensions.Rq,
+            FileExtensions.Srx,
+            FileExtensions.Gram,
+            FileExtensions.Grxml,
+            FileExtensions.Sru,
+            FileExtensions.Ssdl,
+            FileExtensions.Ssml,
+            FileExtensions.Tei,
+            FileExtensions.Teicorpus,
+            FileExtensions.Tfi,
+            FileExtensions.Tsd,
+            FileExtensions.Plb,
+            FileExtensions.Psb,
+            FileExtensions.Pvb,
+            FileExtensions.Tcap,
+            FileExtensions.Pwn,
+            FileExtensions.Aso,
+            FileExtensions.Imp,
+            FileExtensions.Acu,
+            FileExtensions.Atc,
+            FileExtensions.Acutc,
+            FileExtensions.Air,
+            FileExtensions.Fcdt,
+            FileExtensions.Fxp,
+            FileExtensions.Fxpl,
+            FileExtensions.Xdp,
+            FileExtensions.Xfdf,
+            FileExtensions.Ahead,
+            FileExtensions.Azf,
+            FileExtensions.Azs,
+            FileExtensions.Azw,
+            FileExtensions.Acc,
+            FileExtensions.Ami,
+            FileExtensions.Apk,
+            FileExtensions.Cii,
+            FileExtensions.Fti,
+            FileExtensions.Atx,
+            FileExtensions.Mpkg,
+            FileExtensions.M3u8,
+            FileExtensions.Swi,
+            FileExtensions.Iota,
+            FileExtensions.Aep,
+            FileExtensions.Mpm,
+            FileExtensions.Bmi,
+            FileExtensions.Rep,
+            FileExtensions.Cdxml,
+            FileExtensions.Mmd,
+            FileExtensions.Cdy,
+            FileExtensions.Cla,
+            FileExtensions.Rp9,
+            FileExtensions.C4g,
+            FileExtensions.C4d,
+            FileExtensions.C4f,
+            FileExtensions.C4p,
+            FileExtensions.C4u,
+            FileExtensions.C11amc,
+            FileExtensions.C11amz,
+            FileExtensions.Csp,
+            FileExtensions.Cdbcmsg,
+            FileExtensions.Cmc,
+            FileExtensions.Clkx,
+            FileExtensions.Clkk,
+            FileExtensions.Clkp,
+            FileExtensions.Clkt,
+            FileExtensions.Clkw,
+            FileExtensions.Wbs,
+            FileExtensions.Pml,
+            FileExtensions.Ppd,
+            FileExtensions.Car,
+            FileExtensions.Pcurl,
+            FileExtensions.Dart,
+            FileExtensions.Rdz,
+            FileExtensions.Uvf,
+            FileExtensions.Uvvf,
+            FileExtensions.Uvd,
+            FileExtensions.Uvvd,
+            FileExtensions.Uvt,
+            FileExtensions.Uvvt,
+            FileExtensions.Uvx,
+            FileExtensions.Uvvx,
+            FileExtensions.Uvz,
+            FileExtensions.Uvvz,
+            FileExtensions.Fe_launch,
+            FileExtensions.Dna,
+            FileExtensions.Mlp,
+            FileExtensions.Dpg,
+            FileExtensions.Dfac,
+            FileExtensions.Kpxx,
+            FileExtensions.Ait,
+            FileExtensions.Svc,
+            FileExtensions.Geo,
+            FileExtensions.Mag,
+            FileExtensions.Nml,
+            FileExtensions.Esf,
+            FileExtensions.Msf,
+            FileExtensions.Qam,
+            FileExtensions.Slt,
+            FileExtensions.Ssf,
+            FileExtensions.Es3,
+            FileExtensions.Et3,
+            FileExtensions.Ez2,
+            FileExtensions.Ez3,
+            FileExtensions.Fdf,
+            FileExtensions.Mseed,
+            FileExtensions.Seed,
+            FileExtensions.Dataless,
+            FileExtensions.Gph,
+            FileExtensions.Ftc,
+            FileExtensions.Fm,
+            FileExtensions.Frame,
+            FileExtensions.Maker,
+            FileExtensions.Book,
+            FileExtensions.Fnc,
+            FileExtensions.Ltf,
+            FileExtensions.Fsc,
+            FileExtensions.Oas,
+            FileExtensions.Oa2,
+            FileExtensions.Oa3,
+            FileExtensions.Fg5,
+            FileExtensions.Bh2,
+            FileExtensions.Ddd,
+            FileExtensions.Xdw,
+            FileExtensions.Xbd,
+            FileExtensions.Fzs,
+            FileExtensions.Txd,
+            FileExtensions.Ggb,
+            FileExtensions.Ggt,
+            FileExtensions.Gex,
+            FileExtensions.Gre,
+            FileExtensions.Gxt,
+            FileExtensions.G2w,
+            FileExtensions.G3w,
+            FileExtensions.Gmx,
+            FileExtensions.Kml,
+            FileExtensions.Kmz,
+            FileExtensions.Gqf,
+            FileExtensions.Gqs,
+            FileExtensions.Gac,
+            FileExtensions.Ghf,
+            FileExtensions.Gim,
+            FileExtensions.Grv,
+            FileExtensions.Gtm,
+            FileExtensions.Tpl,
+            FileExtensions.Vcg,
+            FileExtensions.Hal,
+            FileExtensions.Zmm,
+            FileExtensions.Hbci,
+            FileExtensions.Les,
+            FileExtensions.Hpgl,
+            FileExtensions.Hpid,
+            FileExtensions.Hps,
+            FileExtensions.Jlt,
+            FileExtensions.Pcl,
+            FileExtensions.Pclxl,
+            FileExtensions.Sfd_hdstx,
+            FileExtensions.Mpy,
+            FileExtensions.Afp,
+            FileExtensions.Listafp,
+            FileExtensions.List3820,
+            FileExtensions.Irm,
+            FileExtensions.Sc,
+            FileExtensions.Icc,
+            FileExtensions.Icm,
+            FileExtensions.Igl,
+            FileExtensions.Ivp,
+            FileExtensions.Ivu,
+            FileExtensions.Igm,
+            FileExtensions.Xpw,
+            FileExtensions.Xpx,
+            FileExtensions.I2g,
+            FileExtensions.Qbo,
+            FileExtensions.Qfx,
+            FileExtensions.Rcprofile,
+            FileExtensions.Irp,
+            FileExtensions.Xpr,
+            FileExtensions.Fcs,
+            FileExtensions.Jam,
+            FileExtensions.Rms,
+            FileExtensions.Jisp,
+            FileExtensions.Joda,
+            FileExtensions.Ktz,
+            FileExtensions.Ktr,
+            FileExtensions.Karbon,
+            FileExtensions.Chrt,
+            FileExtensions.Kfo,
+            FileExtensions.Flw,
+            FileExtensions.Kon,
+            FileExtensions.Kpr,
+            FileExtensions.Kpt,
+            FileExtensions.Ksp,
+            FileExtensions.Kwd,
+            FileExtensions.Kwt,
+            FileExtensions.Htke,
+            FileExtensions.Kia,
+            FileExtensions.Kne,
+            FileExtensions.Knp,
+            FileExtensions.Skp,
+            FileExtensions.Skd,
+            FileExtensions.Skt,
+            FileExtensions.Skm,
+            FileExtensions.Sse,
+            FileExtensions.Lasxml,
+            FileExtensions.Lbd,
+            FileExtensions.Lbe,
+            FileExtensions._123,
+            FileExtensions.Apr,
+            FileExtensions.Pre,
+            FileExtensions.Nsf,
+            FileExtensions.Org,
+            FileExtensions.Scm,
+            FileExtensions.Lwp,
+            FileExtensions.Portpkg,
+            FileExtensions.Mcd,
+            FileExtensions.Mc1,
+            FileExtensions.Cdkey,
+            FileExtensions.Mwf,
+            FileExtensions.Mfm,
+            FileExtensions.Flo,
+            FileExtensions.Igx,
+            FileExtensions.Mif,
+            FileExtensions.Daf,
+            FileExtensions.Dis,
+            FileExtensions.Mbk,
+            FileExtensions.Mqy,
+            FileExtensions.Msl,
+            FileExtensions.Plc,
+            FileExtensions.Txf,
+            FileExtensions.Mpn,
+            FileExtensions.Mpc,
+            FileExtensions.Xul,
+            FileExtensions.Cil,
+            FileExtensions.Cab,
+            FileExtensions.Xls,
+            FileExtensions.Xlm,
+            FileExtensions.Xla,
+            FileExtensions.Xlc,
+            FileExtensions.Xlt,
+            FileExtensions.Xlw,
+            FileExtensions.Xlam,
+            FileExtensions.Xlsb,
+            FileExtensions.Xlsm,
+            FileExtensions.Xltm,
+            FileExtensions.Eot,
+            FileExtensions.Chm,
+            FileExtensions.Ims,
+            FileExtensions.Lrm,
+            FileExtensions.Thmx,
+            FileExtensions.Cat,
+            FileExtensions.Stl,
+            FileExtensions.Ppt,
+            FileExtensions.Pps,
+            FileExtensions.Pot,
+            FileExtensions.Ppam,
+            FileExtensions.Pptm,
+            FileExtensions.Sldm,
+            FileExtensions.Ppsm,
+            FileExtensions.Potm,
+            FileExtensions.Mpp,
+            FileExtensions.Mpt,
+            FileExtensions.Docm,
+            FileExtensions.Dotm,
+            FileExtensions.Wps,
+            FileExtensions.Wks,
+            FileExtensions.Wcm,
+            FileExtensions.Wdb,
+            FileExtensions.Wpl,
+            FileExtensions.Xps,
+            FileExtensions.Mseq,
+            FileExtensions.Mus,
+            FileExtensions.Msty,
+            FileExtensions.Taglet,
+            FileExtensions.Nlu,
+            FileExtensions.Ntf,
+            FileExtensions.Nitf,
+            FileExtensions.Nnd,
+            FileExtensions.Nns,
+            FileExtensions.Nnw,
+            FileExtensions.Ngdat,
+            FileExtensions.N_gage,
+            FileExtensions.Rpst,
+            FileExtensions.Rpss,
+            FileExtensions.Edm,
+            FileExtensions.Edx,
+            FileExtensions.Ext,
+            FileExtensions.Odc,
+            FileExtensions.Otc,
+            FileExtensions.Odb,
+            FileExtensions.Odf,
+            FileExtensions.Odft,
+            FileExtensions.Odg,
+            FileExtensions.Otg,
+            FileExtensions.Odi,
+            FileExtensions.Oti,
+            FileExtensions.Odp,
+            FileExtensions.Otp,
+            FileExtensions.Ods,
+            FileExtensions.Ots,
+            FileExtensions.Odt,
+            FileExtensions.Odm,
+            FileExtensions.Ott,
+            FileExtensions.Oth,
+            FileExtensions.Xo,
+            FileExtensions.Dd2,
+            FileExtensions.Oxt,
+            FileExtensions.Pptx,
+            FileExtensions.Sldx,
+            FileExtensions.Ppsx,
+            FileExtensions.Potx,
+            FileExtensions.Xlsx,
+            FileExtensions.Xltx,
+            FileExtensions.Docx,
+            FileExtensions.Dotx,
+            FileExtensions.Mgp,
+            FileExtensions.Dp,
+            FileExtensions.Esa,
+            FileExtensions.Pdb,
+            FileExtensions.Pqa,
+            FileExtensions.Oprc,
+            FileExtensions.Paw,
+            FileExtensions.Str,
+            FileExtensions.Ei6,
+            FileExtensions.Efif,
+            FileExtensions.Wg,
+            FileExtensions.Plf,
+            FileExtensions.Pbd,
+            FileExtensions.Box,
+            FileExtensions.Mgz,
+            FileExtensions.Qps,
+            FileExtensions.Ptid,
+            FileExtensions.Qxd,
+            FileExtensions.Qxt,
+            FileExtensions.Qwd,
+            FileExtensions.Qwt,
+            FileExtensions.Qxl,
+            FileExtensions.Qxb,
+            FileExtensions.Bed,
+            FileExtensions.Mxl,
+            FileExtensions.Musicxml,
+            FileExtensions.Cryptonote,
+            FileExtensions.Cod,
+            FileExtensions.Rm,
+            FileExtensions.Rmvb,
+            FileExtensions.Link66,
+            FileExtensions.St,
+            FileExtensions.See,
+            FileExtensions.Sema,
+            FileExtensions.Semd,
+            FileExtensions.Semf,
+            FileExtensions.Ifm,
+            FileExtensions.Itp,
+            FileExtensions.Iif,
+            FileExtensions.Ipk,
+            FileExtensions.Twd,
+            FileExtensions.Twds,
+            FileExtensions.Mmf,
+            FileExtensions.Teacher,
+            FileExtensions.Sdkm,
+            FileExtensions.Sdkd,
+            FileExtensions.Dxp,
+            FileExtensions.Sfs,
+            FileExtensions.Sdc,
+            FileExtensions.Sda,
+            FileExtensions.Sdd,
+            FileExtensions.Smf,
+            FileExtensions.Sdw,
+            FileExtensions.Vor,
+            FileExtensions.Sgl,
+            FileExtensions.Smzip,
+            FileExtensions.Sm,
+            FileExtensions.Sxc,
+            FileExtensions.Stc,
+            FileExtensions.Sxd,
+            FileExtensions.Std,
+            FileExtensions.Sxi,
+            FileExtensions.Sti,
+            FileExtensions.Sxm,
+            FileExtensions.Sxw,
+            FileExtensions.Sxg,
+            FileExtensions.Stw,
+            FileExtensions.Sus,
+            FileExtensions.Susp,
+            FileExtensions.Svd,
+            FileExtensions.Sis,
+            FileExtensions.Sisx,
+            FileExtensions.Xsm,
+            FileExtensions.Bdm,
+            FileExtensions.Xdm,
+            FileExtensions.Tao,
+            FileExtensions.Pcap,
+            FileExtensions.Cap,
+            FileExtensions.Dmp,
+            FileExtensions.Tmo,
+            FileExtensions.Tpt,
+            FileExtensions.Mxs,
+            FileExtensions.Tra,
+            FileExtensions.Ufd,
+            FileExtensions.Ufdl,
+            FileExtensions.Utz,
+            FileExtensions.Umj,
+            FileExtensions.Unityweb,
+            FileExtensions.Uoml,
+            FileExtensions.Vcx,
+            FileExtensions.Vsd,
+            FileExtensions.Vst,
+            FileExtensions.Vss,
+            FileExtensions.Vsw,
+            FileExtensions.Vis,
+            FileExtensions.Vsf,
+            FileExtensions.Wbxml,
+            FileExtensions.Wmlc,
+            FileExtensions.Wmlsc,
+            FileExtensions.Wtb,
+            FileExtensions.Nbp,
+            FileExtensions.Wpd,
+            FileExtensions.Wqd,
+            FileExtensions.Stf,
+            FileExtensions.Xar,
+            FileExtensions.Xfdl,
+            FileExtensions.Hvd,
+            FileExtensions.Hvs,
+            FileExtensions.Hvp,
+            FileExtensions.Osf,
+            FileExtensions.Osfpvg,
+            FileExtensions.Saf,
+            FileExtensions.Spf,
+            FileExtensions.Cmp,
+            FileExtensions.Zir,
+            FileExtensions.Zirz,
+            FileExtensions.Zaz,
+            FileExtensions.Vxml,
+            FileExtensions.Wgt,
+            FileExtensions.Hlp,
+            FileExtensions.Wsdl,
+            FileExtensions.Wspolicy,
+            FileExtensions._7z,
+            FileExtensions.Abw,
+            FileExtensions.Ace,
+            FileExtensions.Dmg,
+            FileExtensions.Aab,
+            FileExtensions.X32,
+            FileExtensions.U32,
+            FileExtensions.Vox,
+            FileExtensions.Aam,
+            FileExtensions.Aas,
+            FileExtensions.Bcpio,
+            FileExtensions.Torrent,
+            FileExtensions.Blb,
+            FileExtensions.Blorb,
+            FileExtensions.Bz,
+            FileExtensions.Bz2,
+            FileExtensions.Boz,
+            FileExtensions.Cbr,
+            FileExtensions.Cba,
+            FileExtensions.Cbt,
+            FileExtensions.Cbz,
+            FileExtensions.Cb7,
+            FileExtensions.Vcd,
+            FileExtensions.Cfs,
+            FileExtensions.Chat,
+            FileExtensions.Pgn,
+            FileExtensions.Nsc,
+            FileExtensions.Cpio,
+            FileExtensions.Csh,
+            FileExtensions.Deb,
+            FileExtensions.Udeb,
+            FileExtensions.Dgc,
+            FileExtensions.Dir,
+            FileExtensions.Dcr,
+            FileExtensions.Dxr,
+            FileExtensions.Cst,
+            FileExtensions.Cct,
+            FileExtensions.Cxt,
+            FileExtensions.W3d,
+            FileExtensions.Fgd,
+            FileExtensions.Swa,
+            FileExtensions.Wad,
+            FileExtensions.Ncx,
+            FileExtensions.Dtb,
+            FileExtensions.Res,
+            FileExtensions.Dvi,
+            FileExtensions.Evy,
+            FileExtensions.Eva,
+            FileExtensions.Bdf,
+            FileExtensions.Gsf,
+            FileExtensions.Psf,
+            FileExtensions.Pcf,
+            FileExtensions.Snf,
+            FileExtensions.Pfa,
+            FileExtensions.Pfb,
+            FileExtensions.Pfm,
+            FileExtensions.Afm,
+            FileExtensions.Arc,
+            FileExtensions.Spl,
+            FileExtensions.Gca,
+            FileExtensions.Ulx,
+            FileExtensions.Gnumeric,
+            FileExtensions.Gramps,
+            FileExtensions.Gtar,
+            FileExtensions.Hdf,
+            FileExtensions.Install,
+            FileExtensions.Iso,
+            FileExtensions.Jnlp,
+            FileExtensions.Latex,
+            FileExtensions.Lzh,
+            FileExtensions.Lha,
+            FileExtensions.Mie,
+            FileExtensions.Prc,
+            FileExtensions.Mobi,
+            FileExtensions.Application,
+            FileExtensions.Lnk,
+            FileExtensions.Wmd,
+            FileExtensions.Wmz,
+            FileExtensions.Xbap,
+            FileExtensions.Mdb,
+            FileExtensions.Obd,
+            FileExtensions.Crd,
+            FileExtensions.Clp,
+            FileExtensions.Exe,
+            FileExtensions.Dll,
+            FileExtensions.Com,
+            FileExtensions.Bat,
+            FileExtensions.Msi,
+            FileExtensions.Mvb,
+            FileExtensions.M13,
+            FileExtensions.M14,
+            FileExtensions.Wmf,
+            FileExtensions.Emf,
+            FileExtensions.Emz,
+            FileExtensions.Mny,
+            FileExtensions.Pub,
+            FileExtensions.Scd,
+            FileExtensions.Trm,
+            FileExtensions.Wri,
+            FileExtensions.Nc,
+            FileExtensions.Cdf,
+            FileExtensions.Nzb,
+            FileExtensions.P12,
+            FileExtensions.Pfx,
+            FileExtensions.P7b,
+            FileExtensions.Spc,
+            FileExtensions.P7r,
+            FileExtensions.Rar,
+            FileExtensions.Ris,
+            FileExtensions.Sh,
+            FileExtensions.Shar,
+            FileExtensions.Swf,
+            FileExtensions.Xap,
+            FileExtensions.Sql,
+            FileExtensions.Sit,
+            FileExtensions.Sitx,
+            FileExtensions.Srt,
+            FileExtensions.Sv4cpio,
+            FileExtensions.Sv4crc,
+            FileExtensions.T3,
+            FileExtensions.Gam,
+            FileExtensions.Tar,
+            FileExtensions.Tcl,
+            FileExtensions.Tex,
+            FileExtensions.Tfm,
+            FileExtensions.Texinfo,
+            FileExtensions.Texi,
+            FileExtensions.Obj,
+            FileExtensions.Ustar,
+            FileExtensions.Src,
+            FileExtensions.Der,
+            FileExtensions.Crt,
+            FileExtensions.Fig,
+            FileExtensions.Xlf,
+            FileExtensions.Xpi,
+            FileExtensions.Xz,
+            FileExtensions.Z1,
+            FileExtensions.Z2,
+            FileExtensions.Z3,
+            FileExtensions.Z4,
+            FileExtensions.Z5,
+            FileExtensions.Z6,
+            FileExtensions.Z7,
+            FileExtensions.Z8,
+            FileExtensions.Xaml,
+            FileExtensions.Xdf,
+            FileExtensions.Xenc,
+            FileExtensions.Xhtml,
+            FileExtensions.Xht,
+            FileExtensions.Xml,
+            FileExtensions.Xsl,
+            FileExtensions.Dtd,
+            FileExtensions.Xop,
+            FileExtensions.Xpl,
+            FileExtensions.Xslt,
+            FileExtensions.Xspf,
+            FileExtensions.Mxml,
+            FileExtensions.Xhvml,
+            FileExtensions.Xvml,
+            FileExtensions.Xvm,
+            FileExtensions.Yang,
+            FileExtensions.Yin,
+            FileExtensions.Zip,
+            FileExtensions.Adp,
+            FileExtensions.Au,
+            FileExtensions.Snd,
+            FileExtensions.Mid,
+            FileExtensions.Midi,
+            FileExtensions.Kar,
+            FileExtensions.Rmi,
+            FileExtensions.M4a,
+            FileExtensions.Mp4a,
+            FileExtensions.Mpga,
+            FileExtensions.Mp2,
+            FileExtensions.Mp2a,
+            FileExtensions.Mp3,
+            FileExtensions.M2a,
+            FileExtensions.M3a,
+            FileExtensions.Oga,
+            FileExtensions.Ogg,
+            FileExtensions.Spx,
+            FileExtensions.Opus,
+            FileExtensions.S3m,
+            FileExtensions.Sil,
+            FileExtensions.Uva,
+            FileExtensions.Uvva,
+            FileExtensions.Eol,
+            FileExtensions.Dra,
+            FileExtensions.Dts,
+            FileExtensions.Dtshd,
+            FileExtensions.Lvp,
+            FileExtensions.Pya,
+            FileExtensions.Ecelp4800,
+            FileExtensions.Ecelp7470,
+            FileExtensions.Ecelp9600,
+            FileExtensions.Rip,
+            FileExtensions.Weba,
+            FileExtensions.Aac,
+            FileExtensions.Aif,
+            FileExtensions.Aiff,
+            FileExtensions.Aifc,
+            FileExtensions.Caf,
+            FileExtensions.Flac,
+            FileExtensions.Mka,
+            FileExtensions.M3u,
+            FileExtensions.Wax,
+            FileExtensions.Wma,
+            FileExtensions.Ram,
+            FileExtensions.Ra,
+            FileExtensions.Rmp,
+            FileExtensions.Wav,
+            FileExtensions.Xm,
+            FileExtensions.Cdx,
+            FileExtensions.Cif,
+            FileExtensions.Cmdf,
+            FileExtensions.Cml,
+            FileExtensions.Csml,
+            FileExtensions.Xyz,
+            FileExtensions.Ttc,
+            FileExtensions.Otf,
+            FileExtensions.Ttf,
+            FileExtensions.Woff,
+            FileExtensions.Woff2,
+            FileExtensions.Bmp,
+            FileExtensions.Cgm,
+            FileExtensions.G3,
+            FileExtensions.Gif,
+            FileExtensions.Ief,
+            FileExtensions.Jpeg,
+            FileExtensions.Jpg,
+            FileExtensions.Jpe,
+            FileExtensions.Ktx,
+            FileExtensions.Png,
+            FileExtensions.Btif,
+            FileExtensions.Sgi,
+            FileExtensions.Svg,
+            FileExtensions.Svgz,
+            FileExtensions.Tiff,
+            FileExtensions.Tif,
+            FileExtensions.Psd,
+            FileExtensions.Uvi,
+            FileExtensions.Uvvi,
+            FileExtensions.Uvg,
+            FileExtensions.Uvvg,
+            FileExtensions.Djvu,
+            FileExtensions.Djv,
+            FileExtensions.Sub,
+            FileExtensions.Dwg,
+            FileExtensions.Dxf,
+            FileExtensions.Fbs,
+            FileExtensions.Fpx,
+            FileExtensions.Fst,
+            FileExtensions.Mmr,
+            FileExtensions.Rlc,
+            FileExtensions.Mdi,
+            FileExtensions.Wdp,
+            FileExtensions.Npx,
+            FileExtensions.Wbmp,
+            FileExtensions.Xif,
+            FileExtensions.Webp,
+            FileExtensions._3ds,
+            FileExtensions.Ras,
+            FileExtensions.Cmx,
+            FileExtensions.Fh,
+            FileExtensions.Fhc,
+            FileExtensions.Fh4,
+            FileExtensions.Fh5,
+            FileExtensions.Fh7,
+            FileExtensions.Ico,
+            FileExtensions.Sid,
+            FileExtensions.Pcx,
+            FileExtensions.Pic,
+            FileExtensions.Pct,
+            FileExtensions.Pnm,
+            FileExtensions.Pbm,
+            FileExtensions.Pgm,
+            FileExtensions.Ppm,
+            FileExtensions.Rgb,
+            FileExtensions.Tga,
+            FileExtensions.Xbm,
+            FileExtensions.Xpm,
+            FileExtensions.Xwd,
+            FileExtensions.Eml,
+            FileExtensions.Mime,
+            FileExtensions.Igs,
+            FileExtensions.Iges,
+            FileExtensions.Msh,
+            FileExtensions.Mesh,
+            FileExtensions.Silo,
+            FileExtensions.Dae,
+            FileExtensions.Dwf,
+            FileExtensions.Gdl,
+            FileExtensions.Gtw,
+            FileExtensions.Mts,
+            FileExtensions.Vtu,
+            FileExtensions.Wrl,
+            FileExtensions.Vrml,
+            FileExtensions.X3db,
+            FileExtensions.X3dbz,
+            FileExtensions.X3dv,
+            FileExtensions.X3dvz,
+            FileExtensions.X3d,
+            FileExtensions.X3dz,
+            FileExtensions.Appcache,
+            FileExtensions.Ics,
+            FileExtensions.Ifb,
+            FileExtensions.Css,
+            FileExtensions.Csv,
+            FileExtensions.Html,
+            FileExtensions.Htm,
+            FileExtensions.N3,
+            FileExtensions.Txt,
+            FileExtensions.Text,
+            FileExtensions.Conf,
+            FileExtensions.Def,
+            FileExtensions.List,
+            FileExtensions.Log,
+            FileExtensions.In,
+            FileExtensions.Dsc,
+            FileExtensions.Rtx,
+            FileExtensions.Sgml,
+            FileExtensions.Sgm,
+            FileExtensions.Tsv,
+            FileExtensions.T,
+            FileExtensions.Tr,
+            FileExtensions.Roff,
+            FileExtensions.Man,
+            FileExtensions.Me,
+            FileExtensions.Ms,
+            FileExtensions.Ttl,
+            FileExtensions.Uri,
+            FileExtensions.Uris,
+            FileExtensions.Urls,
+            FileExtensions.Vcard,
+            FileExtensions.Curl,
+            FileExtensions.Dcurl,
+            FileExtensions.Mcurl,
+            FileExtensions.Scurl,
+            FileExtensions.Fly,
+            FileExtensions.Flx,
+            FileExtensions.Gv,
+            FileExtensions._3dml,
+            FileExtensions.Spot,
+            FileExtensions.Jad,
+            FileExtensions.Wml,
+            FileExtensions.Wmls,
+            FileExtensions.S,
+            FileExtensions.Asm,
+            FileExtensions.C,
+            FileExtensions.Cc,
+            FileExtensions.Cxx,
+            FileExtensions.Cpp,
+            FileExtensions.H,
+            FileExtensions.Hh,
+            FileExtensions.Dic,
+            FileExtensions.F,
+            FileExtensions.For,
+            FileExtensions.F77,
+            FileExtensions.F90,
+            FileExtensions.Java,
+            FileExtensions.Nfo,
+            FileExtensions.Opml,
+            FileExtensions.P,
+            FileExtensions.Pas,
+            FileExtensions.Etx,
+            FileExtensions.Sfv,
+            FileExtensions.Uu,
+            FileExtensions.Vcs,
+            FileExtensions.Vcf,
+            FileExtensions._3gp,
+            FileExtensions._3g2,
+            FileExtensions.H261,
+            FileExtensions.H263,
+            FileExtensions.H264,
+            FileExtensions.Jpgv,
+            FileExtensions.Jpm,
+            FileExtensions.Jpgm,
+            FileExtensions.Mj2,
+            FileExtensions.Mjp2,
+            FileExtensions.Mp4,
+            FileExtensions.Mp4v,
+            FileExtensions.Mpg4,
+            FileExtensions.Mpeg,
+            FileExtensions.Mpg,
+            FileExtensions.Mpe,
+            FileExtensions.M1v,
+            FileExtensions.M2v,
+            FileExtensions.Ogv,
+            FileExtensions.Qt,
+            FileExtensions.Mov,
+            FileExtensions.Uvh,
+            FileExtensions.Uvvh,
+            FileExtensions.Uvm,
+            FileExtensions.Uvvm,
+            FileExtensions.Uvp,
+            FileExtensions.Uvvp,
+            FileExtensions.Uvs,
+            FileExtensions.Uvvs,
+            FileExtensions.Uvv,
+            FileExtensions.Uvvv,
+            FileExtensions.Dvb,
+            FileExtensions.Fvt,
+            FileExtensions.Mxu,
+            FileExtensions.M4u,
+            FileExtensions.Pyv,
+            FileExtensions.Uvu,
+            FileExtensions.Uvvu,
+            FileExtensions.Viv,
+            FileExtensions.Webm,
+            FileExtensions.F4v,
+            FileExtensions.Fli,
+            FileExtensions.Flv,
+            FileExtensions.M4v,
+            FileExtensions.Mkv,
+            FileExtensions.Mk3d,
+            FileExtensions.Mks,
+            FileExtensions.Mng,
+            FileExtensions.Asf,
+            FileExtensions.Asx,
+            FileExtensions.Vob,
+            FileExtensions.Wm,
+            FileExtensions.Wmv,
+            FileExtensions.Wmx,
+            FileExtensions.Wvx,
+            FileExtensions.Avi,
+            FileExtensions.Movie,
+            FileExtensions.Smv,
+            FileExtensions.Ice,
+            FileExtensions.Map,
+            FileExtensions.Topojson,
+            FileExtensions.Jsonld,
+            FileExtensions.Geojson,
+            FileExtensions.Mjs,
+            FileExtensions.Wasm,
+            FileExtensions.Webmanifest,
+            FileExtensions.Webapp,
+            FileExtensions.F4a,
+            FileExtensions.F4b,
+            FileExtensions.Apng,
+            FileExtensions.Avif,
+            FileExtensions.Avifs,
+            FileExtensions.Jxr,
+            FileExtensions.Hdp,
+            FileExtensions.Jng,
+            FileExtensions._3gpp,
+            FileExtensions.F4p,
+            FileExtensions.Cur,
+            FileExtensions.Ear,
+            FileExtensions.War,
+            FileExtensions.Img,
+            FileExtensions.Msm,
+            FileExtensions.Msp,
+            FileExtensions.Safariextz,
+            FileExtensions.Bbaw,
+            FileExtensions.Crx,
+            FileExtensions.Cco,
+            FileExtensions.Jardiff,
+            FileExtensions.Run,
+            FileExtensions.Oex,
+            FileExtensions.Pl,
+            FileExtensions.Pm,
+            FileExtensions.Rpm,
+            FileExtensions.Sea,
+            FileExtensions.Tk,
+            FileExtensions.Pem,
+            FileExtensions.Shtml,
+            FileExtensions.Md,
+            FileExtensions.Markdown,
+            FileExtensions.Mml,
+            FileExtensions.Xloc,
+            FileExtensions.Vtt,
+            FileExtensions.Htc,
+            FileExtensions.Bdoc,
+            FileExtensions.Es,
+            FileExtensions.Hjson,
+            FileExtensions.Json5,
+            FileExtensions.M4p,
+            FileExtensions.Cjs,
+            FileExtensions.Buffer,
+            FileExtensions.Raml,
+            FileExtensions.Owl,
+            FileExtensions.Siv,
+            FileExtensions.Sieve,
+            FileExtensions.Toml,
+            FileExtensions.Ubj,
+            FileExtensions.Pkpass,
+            FileExtensions.Gdoc,
+            FileExtensions.Gslides,
+            FileExtensions.Gsheet,
+            FileExtensions.Msg,
+            FileExtensions.Arj,
+            FileExtensions.Php,
+            FileExtensions.Kdbx,
+            FileExtensions.Luac,
+            FileExtensions.Pac,
+            FileExtensions.Hdd,
+            FileExtensions.Ova,
+            FileExtensions.Ovf,
+            FileExtensions.Vbox,
+            FileExtensions.Vbox_extpack,
+            FileExtensions.Vdi,
+            FileExtensions.Vhd,
+            FileExtensions.Vmdk,
+            FileExtensions.Xsd,
+            FileExtensions.Rng,
+            FileExtensions.Heic,
+            FileExtensions.Heics,
+            FileExtensions.Heif,
+            FileExtensions.Heifs,
+            FileExtensions.Jp2,
+            FileExtensions.Jpg2,
+            FileExtensions.Jpx,
+            FileExtensions.Jpf,
+            FileExtensions.Dds,
+            FileExtensions.Manifest,
+            FileExtensions.Coffee,
+            FileExtensions.Litcoffee,
+            FileExtensions.Jade,
+            FileExtensions.Jsx,
+            FileExtensions.Less,
+            FileExtensions.Mdx,
+            FileExtensions.Ini,
+            FileExtensions.Shex,
+            FileExtensions.Slim,
+            FileExtensions.Slm,
+            FileExtensions.Stylus,
+            FileExtensions.Styl,
+            FileExtensions.Hbs,
+            FileExtensions.Lua,
+            FileExtensions.Mkd,
+            FileExtensions.Pde,
+            FileExtensions.Sass,
+            FileExtensions.Scss,
+            FileExtensions.Ymp,
+            FileExtensions.Yaml,
+            FileExtensions.Yml,
         });
+
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string LookupType(string type)
         {
             switch (type)
             {
-				case _ext_ez:
+				case FileExtensions.Ez:
 					return Ez;
 
-				case _ext_aw:
+				case FileExtensions.Aw:
 					return Aw;
 
-				case _ext_atom:
+				case FileExtensions.Atom:
 					return Atom;
 
-				case _ext_atomcat:
+				case FileExtensions.Atomcat:
 					return Atomcat;
 
-				case _ext_atomsvc:
+				case FileExtensions.Atomsvc:
 					return Atomsvc;
 
-				case _ext_ccxml:
+				case FileExtensions.Ccxml:
 					return Ccxml;
 
-				case _ext_cdmia:
+				case FileExtensions.Cdmia:
 					return Cdmia;
 
-				case _ext_cdmic:
+				case FileExtensions.Cdmic:
 					return Cdmic;
 
-				case _ext_cdmid:
+				case FileExtensions.Cdmid:
 					return Cdmid;
 
-				case _ext_cdmio:
+				case FileExtensions.Cdmio:
 					return Cdmio;
 
-				case _ext_cdmiq:
+				case FileExtensions.Cdmiq:
 					return Cdmiq;
 
-				case _ext_cu:
+				case FileExtensions.Cu:
 					return Cu;
 
-				case _ext_davmount:
+				case FileExtensions.Davmount:
 					return Davmount;
 
-				case _ext_dbk:
+				case FileExtensions.Dbk:
 					return Dbk;
 
-				case _ext_dssc:
+				case FileExtensions.Dssc:
 					return Dssc;
 
-				case _ext_xdssc:
+				case FileExtensions.Xdssc:
 					return Xdssc;
 
-				case _ext_ecma:
-				case _ext_es:
+				case FileExtensions.Ecma:
+				case FileExtensions.Es:
 					return Ecma;
 
-				case _ext_emma:
+				case FileExtensions.Emma:
 					return Emma;
 
-				case _ext_epub:
+				case FileExtensions.Epub:
 					return Epub;
 
-				case _ext_exi:
+				case FileExtensions.Exi:
 					return Exi;
 
-				case _ext_pfr:
+				case FileExtensions.Pfr:
 					return Pfr;
 
-				case _ext_gml:
+				case FileExtensions.Gml:
 					return Gml;
 
-				case _ext_gpx:
+				case FileExtensions.Gpx:
 					return Gpx;
 
-				case _ext_gxf:
+				case FileExtensions.Gxf:
 					return Gxf;
 
-				case _ext_stk:
+				case FileExtensions.Stk:
 					return Stk;
 
-				case _ext_ink:
-				case _ext_inkml:
+				case FileExtensions.Ink:
+				case FileExtensions.Inkml:
 					return Ink;
 
-				case _ext_ipfix:
+				case FileExtensions.Ipfix:
 					return Ipfix;
 
-				case _ext_jar:
-				case _ext_ear:
-				case _ext_war:
+				case FileExtensions.Jar:
+				case FileExtensions.Ear:
+				case FileExtensions.War:
 					return Jar;
 
-				case _ext_ser:
+				case FileExtensions.Ser:
 					return Ser;
 
-				case _ext_class:
+				case FileExtensions.Class:
 					return Class;
 
-				case _ext_js:
+				case FileExtensions.Js:
 					return Js;
 
-				case _ext_json:
-				case _ext_map:
-				case _ext_topojson:
+				case FileExtensions.Json:
+				case FileExtensions.Map:
+				case FileExtensions.Topojson:
 					return Json;
 
-				case _ext_jsonml:
+				case FileExtensions.Jsonml:
 					return Jsonml;
 
-				case _ext_lostxml:
+				case FileExtensions.Lostxml:
 					return Lostxml;
 
-				case _ext_hqx:
+				case FileExtensions.Hqx:
 					return Hqx;
 
-				case _ext_cpt:
+				case FileExtensions.Cpt:
 					return Cpt;
 
-				case _ext_mads:
+				case FileExtensions.Mads:
 					return Mads;
 
-				case _ext_mrc:
+				case FileExtensions.Mrc:
 					return Mrc;
 
-				case _ext_mrcx:
+				case FileExtensions.Mrcx:
 					return Mrcx;
 
-				case _ext_ma:
-				case _ext_nb:
-				case _ext_mb:
+				case FileExtensions.Ma:
+				case FileExtensions.Nb:
+				case FileExtensions.Mb:
 					return Ma;
 
-				case _ext_mathml:
+				case FileExtensions.Mathml:
 					return Mathml;
 
-				case _ext_mbox:
+				case FileExtensions.Mbox:
 					return Mbox;
 
-				case _ext_mscml:
+				case FileExtensions.Mscml:
 					return Mscml;
 
-				case _ext_metalink:
+				case FileExtensions.Metalink:
 					return Metalink;
 
-				case _ext_meta4:
+				case FileExtensions.Meta4:
 					return Meta4;
 
-				case _ext_mets:
+				case FileExtensions.Mets:
 					return Mets;
 
-				case _ext_mods:
+				case FileExtensions.Mods:
 					return Mods;
 
-				case _ext_m21:
-				case _ext_mp21:
+				case FileExtensions.M21:
+				case FileExtensions.Mp21:
 					return M21;
 
-				case _ext_mp4s:
-				case _ext_m4p:
+				case FileExtensions.Mp4s:
+				case FileExtensions.M4p:
 					return Mp4s;
 
-				case _ext_doc:
-				case _ext_dot:
+				case FileExtensions.Doc:
+				case FileExtensions.Dot:
 					return Doc;
 
-				case _ext_mxf:
+				case FileExtensions.Mxf:
 					return Mxf;
 
-				case _ext_bin:
-				case _ext_dms:
-				case _ext_lrf:
-				case _ext_mar:
-				case _ext_so:
-				case _ext_dist:
-				case _ext_distz:
-				case _ext_pkg:
-				case _ext_bpk:
-				case _ext_dump:
-				case _ext_elc:
-				case _ext_deploy:
-				case _ext_img:
-				case _ext_msm:
-				case _ext_msp:
-				case _ext_safariextz:
-				case _ext_buffer:
+				case FileExtensions.Bin:
+				case FileExtensions.Dms:
+				case FileExtensions.Lrf:
+				case FileExtensions.Mar:
+				case FileExtensions.So:
+				case FileExtensions.Dist:
+				case FileExtensions.Distz:
+				case FileExtensions.Pkg:
+				case FileExtensions.Bpk:
+				case FileExtensions.Dump:
+				case FileExtensions.Elc:
+				case FileExtensions.Deploy:
+				case FileExtensions.Img:
+				case FileExtensions.Msm:
+				case FileExtensions.Msp:
+				case FileExtensions.Safariextz:
+				case FileExtensions.Buffer:
 					return Bin;
 
-				case _ext_oda:
+				case FileExtensions.Oda:
 					return Oda;
 
-				case _ext_opf:
+				case FileExtensions.Opf:
 					return Opf;
 
-				case _ext_ogx:
+				case FileExtensions.Ogx:
 					return Ogx;
 
-				case _ext_omdoc:
+				case FileExtensions.Omdoc:
 					return Omdoc;
 
-				case _ext_onetoc:
-				case _ext_onetoc2:
-				case _ext_onetmp:
-				case _ext_onepkg:
+				case FileExtensions.Onetoc:
+				case FileExtensions.Onetoc2:
+				case FileExtensions.Onetmp:
+				case FileExtensions.Onepkg:
 					return Onetoc;
 
-				case _ext_oxps:
+				case FileExtensions.Oxps:
 					return Oxps;
 
-				case _ext_xer:
+				case FileExtensions.Xer:
 					return Xer;
 
-				case _ext_pdf:
+				case FileExtensions.Pdf:
 					return Pdf;
 
-				case _ext_pgp:
+				case FileExtensions.Pgp:
 					return Pgp;
 
-				case _ext_asc:
-				case _ext_sig:
+				case FileExtensions.Asc:
+				case FileExtensions.Sig:
 					return Asc;
 
-				case _ext_prf:
+				case FileExtensions.Prf:
 					return Prf;
 
-				case _ext_p10:
+				case FileExtensions.P10:
 					return P10;
 
-				case _ext_p7m:
-				case _ext_p7c:
+				case FileExtensions.P7m:
+				case FileExtensions.P7c:
 					return P7m;
 
-				case _ext_p7s:
+				case FileExtensions.P7s:
 					return P7s;
 
-				case _ext_p8:
+				case FileExtensions.P8:
 					return P8;
 
-				case _ext_ac:
+				case FileExtensions.Ac:
 					return Ac;
 
-				case _ext_cer:
+				case FileExtensions.Cer:
 					return Cer;
 
-				case _ext_crl:
+				case FileExtensions.Crl:
 					return Crl;
 
-				case _ext_pkipath:
+				case FileExtensions.Pkipath:
 					return Pkipath;
 
-				case _ext_pki:
+				case FileExtensions.Pki:
 					return Pki;
 
-				case _ext_pls:
+				case FileExtensions.Pls:
 					return Pls;
 
-				case _ext_ai:
-				case _ext_eps:
-				case _ext_ps:
+				case FileExtensions.Ai:
+				case FileExtensions.Eps:
+				case FileExtensions.Ps:
 					return Ai;
 
-				case _ext_cww:
+				case FileExtensions.Cww:
 					return Cww;
 
-				case _ext_pskcxml:
+				case FileExtensions.Pskcxml:
 					return Pskcxml;
 
-				case _ext_rdf:
-				case _ext_owl:
+				case FileExtensions.Rdf:
+				case FileExtensions.Owl:
 					return Rdf;
 
-				case _ext_rif:
+				case FileExtensions.Rif:
 					return Rif;
 
-				case _ext_rnc:
+				case FileExtensions.Rnc:
 					return Rnc;
 
-				case _ext_rl:
+				case FileExtensions.Rl:
 					return Rl;
 
-				case _ext_rld:
+				case FileExtensions.Rld:
 					return Rld;
 
-				case _ext_rs:
+				case FileExtensions.Rs:
 					return Rs;
 
-				case _ext_gbr:
+				case FileExtensions.Gbr:
 					return Gbr;
 
-				case _ext_mft:
+				case FileExtensions.Mft:
 					return Mft;
 
-				case _ext_roa:
+				case FileExtensions.Roa:
 					return Roa;
 
-				case _ext_rsd:
+				case FileExtensions.Rsd:
 					return Rsd;
 
-				case _ext_rss:
+				case FileExtensions.Rss:
 					return Rss;
 
-				case _ext_rtf:
+				case FileExtensions.Rtf:
 					return Rtf;
 
-				case _ext_sbml:
+				case FileExtensions.Sbml:
 					return Sbml;
 
-				case _ext_scq:
+				case FileExtensions.Scq:
 					return Scq;
 
-				case _ext_scs:
+				case FileExtensions.Scs:
 					return Scs;
 
-				case _ext_spq:
+				case FileExtensions.Spq:
 					return Spq;
 
-				case _ext_spp:
+				case FileExtensions.Spp:
 					return Spp;
 
-				case _ext_sdp:
+				case FileExtensions.Sdp:
 					return Sdp;
 
-				case _ext_setpay:
+				case FileExtensions.Setpay:
 					return Setpay;
 
-				case _ext_setreg:
+				case FileExtensions.Setreg:
 					return Setreg;
 
-				case _ext_shf:
+				case FileExtensions.Shf:
 					return Shf;
 
-				case _ext_smi:
-				case _ext_smil:
+				case FileExtensions.Smi:
+				case FileExtensions.Smil:
 					return Smi;
 
-				case _ext_rq:
+				case FileExtensions.Rq:
 					return Rq;
 
-				case _ext_srx:
+				case FileExtensions.Srx:
 					return Srx;
 
-				case _ext_gram:
+				case FileExtensions.Gram:
 					return Gram;
 
-				case _ext_grxml:
+				case FileExtensions.Grxml:
 					return Grxml;
 
-				case _ext_sru:
+				case FileExtensions.Sru:
 					return Sru;
 
-				case _ext_ssdl:
+				case FileExtensions.Ssdl:
 					return Ssdl;
 
-				case _ext_ssml:
+				case FileExtensions.Ssml:
 					return Ssml;
 
-				case _ext_tei:
-				case _ext_teicorpus:
+				case FileExtensions.Tei:
+				case FileExtensions.Teicorpus:
 					return Tei;
 
-				case _ext_tfi:
+				case FileExtensions.Tfi:
 					return Tfi;
 
-				case _ext_tsd:
+				case FileExtensions.Tsd:
 					return Tsd;
 
-				case _ext_plb:
+				case FileExtensions.Plb:
 					return Plb;
 
-				case _ext_psb:
+				case FileExtensions.Psb:
 					return Psb;
 
-				case _ext_pvb:
+				case FileExtensions.Pvb:
 					return Pvb;
 
-				case _ext_tcap:
+				case FileExtensions.Tcap:
 					return Tcap;
 
-				case _ext_pwn:
+				case FileExtensions.Pwn:
 					return Pwn;
 
-				case _ext_aso:
+				case FileExtensions.Aso:
 					return Aso;
 
-				case _ext_imp:
+				case FileExtensions.Imp:
 					return Imp;
 
-				case _ext_acu:
+				case FileExtensions.Acu:
 					return Acu;
 
-				case _ext_atc:
-				case _ext_acutc:
+				case FileExtensions.Atc:
+				case FileExtensions.Acutc:
 					return Atc;
 
-				case _ext_air:
+				case FileExtensions.Air:
 					return Air;
 
-				case _ext_fcdt:
+				case FileExtensions.Fcdt:
 					return Fcdt;
 
-				case _ext_fxp:
-				case _ext_fxpl:
+				case FileExtensions.Fxp:
+				case FileExtensions.Fxpl:
 					return Fxp;
 
-				case _ext_xdp:
+				case FileExtensions.Xdp:
 					return Xdp;
 
-				case _ext_xfdf:
+				case FileExtensions.Xfdf:
 					return Xfdf;
 
-				case _ext_ahead:
+				case FileExtensions.Ahead:
 					return Ahead;
 
-				case _ext_azf:
+				case FileExtensions.Azf:
 					return Azf;
 
-				case _ext_azs:
+				case FileExtensions.Azs:
 					return Azs;
 
-				case _ext_azw:
+				case FileExtensions.Azw:
 					return Azw;
 
-				case _ext_acc:
+				case FileExtensions.Acc:
 					return Acc;
 
-				case _ext_ami:
+				case FileExtensions.Ami:
 					return Ami;
 
-				case _ext_apk:
+				case FileExtensions.Apk:
 					return Apk;
 
-				case _ext_cii:
+				case FileExtensions.Cii:
 					return Cii;
 
-				case _ext_fti:
+				case FileExtensions.Fti:
 					return Fti;
 
-				case _ext_atx:
+				case FileExtensions.Atx:
 					return Atx;
 
-				case _ext_mpkg:
+				case FileExtensions.Mpkg:
 					return Mpkg;
 
-				case _ext_m3u8:
+				case FileExtensions.M3u8:
 					return M3u8;
 
-				case _ext_swi:
+				case FileExtensions.Swi:
 					return Swi;
 
-				case _ext_iota:
+				case FileExtensions.Iota:
 					return Iota;
 
-				case _ext_aep:
+				case FileExtensions.Aep:
 					return Aep;
 
-				case _ext_mpm:
+				case FileExtensions.Mpm:
 					return Mpm;
 
-				case _ext_bmi:
+				case FileExtensions.Bmi:
 					return Bmi;
 
-				case _ext_rep:
+				case FileExtensions.Rep:
 					return Rep;
 
-				case _ext_cdxml:
+				case FileExtensions.Cdxml:
 					return Cdxml;
 
-				case _ext_mmd:
+				case FileExtensions.Mmd:
 					return Mmd;
 
-				case _ext_cdy:
+				case FileExtensions.Cdy:
 					return Cdy;
 
-				case _ext_cla:
+				case FileExtensions.Cla:
 					return Cla;
 
-				case _ext_rp9:
+				case FileExtensions.Rp9:
 					return Rp9;
 
-				case _ext_c4g:
-				case _ext_c4d:
-				case _ext_c4f:
-				case _ext_c4p:
-				case _ext_c4u:
+				case FileExtensions.C4g:
+				case FileExtensions.C4d:
+				case FileExtensions.C4f:
+				case FileExtensions.C4p:
+				case FileExtensions.C4u:
 					return C4g;
 
-				case _ext_c11amc:
+				case FileExtensions.C11amc:
 					return C11amc;
 
-				case _ext_c11amz:
+				case FileExtensions.C11amz:
 					return C11amz;
 
-				case _ext_csp:
+				case FileExtensions.Csp:
 					return Csp;
 
-				case _ext_cdbcmsg:
+				case FileExtensions.Cdbcmsg:
 					return Cdbcmsg;
 
-				case _ext_cmc:
+				case FileExtensions.Cmc:
 					return Cmc;
 
-				case _ext_clkx:
+				case FileExtensions.Clkx:
 					return Clkx;
 
-				case _ext_clkk:
+				case FileExtensions.Clkk:
 					return Clkk;
 
-				case _ext_clkp:
+				case FileExtensions.Clkp:
 					return Clkp;
 
-				case _ext_clkt:
+				case FileExtensions.Clkt:
 					return Clkt;
 
-				case _ext_clkw:
+				case FileExtensions.Clkw:
 					return Clkw;
 
-				case _ext_wbs:
+				case FileExtensions.Wbs:
 					return Wbs;
 
-				case _ext_pml:
+				case FileExtensions.Pml:
 					return Pml;
 
-				case _ext_ppd:
+				case FileExtensions.Ppd:
 					return Ppd;
 
-				case _ext_car:
+				case FileExtensions.Car:
 					return Car;
 
-				case _ext_pcurl:
+				case FileExtensions.Pcurl:
 					return Pcurl;
 
-				case _ext_dart:
+				case FileExtensions.Dart:
 					return Dart;
 
-				case _ext_rdz:
+				case FileExtensions.Rdz:
 					return Rdz;
 
-				case _ext_uvf:
-				case _ext_uvvf:
-				case _ext_uvd:
-				case _ext_uvvd:
+				case FileExtensions.Uvf:
+				case FileExtensions.Uvvf:
+				case FileExtensions.Uvd:
+				case FileExtensions.Uvvd:
 					return Uvf;
 
-				case _ext_uvt:
-				case _ext_uvvt:
+				case FileExtensions.Uvt:
+				case FileExtensions.Uvvt:
 					return Uvt;
 
-				case _ext_uvx:
-				case _ext_uvvx:
+				case FileExtensions.Uvx:
+				case FileExtensions.Uvvx:
 					return Uvx;
 
-				case _ext_uvz:
-				case _ext_uvvz:
+				case FileExtensions.Uvz:
+				case FileExtensions.Uvvz:
 					return Uvz;
 
-				case _ext_fe_launch:
+				case FileExtensions.Fe_launch:
 					return Felaunch;
 
-				case _ext_dna:
+				case FileExtensions.Dna:
 					return Dna;
 
-				case _ext_mlp:
+				case FileExtensions.Mlp:
 					return Mlp;
 
-				case _ext_dpg:
+				case FileExtensions.Dpg:
 					return Dpg;
 
-				case _ext_dfac:
+				case FileExtensions.Dfac:
 					return Dfac;
 
-				case _ext_kpxx:
+				case FileExtensions.Kpxx:
 					return Kpxx;
 
-				case _ext_ait:
+				case FileExtensions.Ait:
 					return Ait;
 
-				case _ext_svc:
+				case FileExtensions.Svc:
 					return Svc;
 
-				case _ext_geo:
+				case FileExtensions.Geo:
 					return Geo;
 
-				case _ext_mag:
+				case FileExtensions.Mag:
 					return Mag;
 
-				case _ext_nml:
+				case FileExtensions.Nml:
 					return Nml;
 
-				case _ext_esf:
+				case FileExtensions.Esf:
 					return Esf;
 
-				case _ext_msf:
+				case FileExtensions.Msf:
 					return Msf;
 
-				case _ext_qam:
+				case FileExtensions.Qam:
 					return Qam;
 
-				case _ext_slt:
+				case FileExtensions.Slt:
 					return Slt;
 
-				case _ext_ssf:
+				case FileExtensions.Ssf:
 					return Ssf;
 
-				case _ext_es3:
-				case _ext_et3:
+				case FileExtensions.Es3:
+				case FileExtensions.Et3:
 					return Es3;
 
-				case _ext_ez2:
+				case FileExtensions.Ez2:
 					return Ez2;
 
-				case _ext_ez3:
+				case FileExtensions.Ez3:
 					return Ez3;
 
-				case _ext_fdf:
+				case FileExtensions.Fdf:
 					return Fdf;
 
-				case _ext_mseed:
+				case FileExtensions.Mseed:
 					return Mseed;
 
-				case _ext_seed:
-				case _ext_dataless:
+				case FileExtensions.Seed:
+				case FileExtensions.Dataless:
 					return Seed;
 
-				case _ext_gph:
+				case FileExtensions.Gph:
 					return Gph;
 
-				case _ext_ftc:
+				case FileExtensions.Ftc:
 					return Ftc;
 
-				case _ext_fm:
-				case _ext_frame:
-				case _ext_maker:
-				case _ext_book:
+				case FileExtensions.Fm:
+				case FileExtensions.Frame:
+				case FileExtensions.Maker:
+				case FileExtensions.Book:
 					return Fm;
 
-				case _ext_fnc:
+				case FileExtensions.Fnc:
 					return Fnc;
 
-				case _ext_ltf:
+				case FileExtensions.Ltf:
 					return Ltf;
 
-				case _ext_fsc:
+				case FileExtensions.Fsc:
 					return Fsc;
 
-				case _ext_oas:
+				case FileExtensions.Oas:
 					return Oas;
 
-				case _ext_oa2:
+				case FileExtensions.Oa2:
 					return Oa2;
 
-				case _ext_oa3:
+				case FileExtensions.Oa3:
 					return Oa3;
 
-				case _ext_fg5:
+				case FileExtensions.Fg5:
 					return Fg5;
 
-				case _ext_bh2:
+				case FileExtensions.Bh2:
 					return Bh2;
 
-				case _ext_ddd:
+				case FileExtensions.Ddd:
 					return Ddd;
 
-				case _ext_xdw:
+				case FileExtensions.Xdw:
 					return Xdw;
 
-				case _ext_xbd:
+				case FileExtensions.Xbd:
 					return Xbd;
 
-				case _ext_fzs:
+				case FileExtensions.Fzs:
 					return Fzs;
 
-				case _ext_txd:
+				case FileExtensions.Txd:
 					return Txd;
 
-				case _ext_ggb:
+				case FileExtensions.Ggb:
 					return Ggb;
 
-				case _ext_ggt:
+				case FileExtensions.Ggt:
 					return Ggt;
 
-				case _ext_gex:
-				case _ext_gre:
+				case FileExtensions.Gex:
+				case FileExtensions.Gre:
 					return Gex;
 
-				case _ext_gxt:
+				case FileExtensions.Gxt:
 					return Gxt;
 
-				case _ext_g2w:
+				case FileExtensions.G2w:
 					return G2w;
 
-				case _ext_g3w:
+				case FileExtensions.G3w:
 					return G3w;
 
-				case _ext_gmx:
+				case FileExtensions.Gmx:
 					return Gmx;
 
-				case _ext_kml:
+				case FileExtensions.Kml:
 					return Kml;
 
-				case _ext_kmz:
+				case FileExtensions.Kmz:
 					return Kmz;
 
-				case _ext_gqf:
-				case _ext_gqs:
+				case FileExtensions.Gqf:
+				case FileExtensions.Gqs:
 					return Gqf;
 
-				case _ext_gac:
+				case FileExtensions.Gac:
 					return Gac;
 
-				case _ext_ghf:
+				case FileExtensions.Ghf:
 					return Ghf;
 
-				case _ext_gim:
+				case FileExtensions.Gim:
 					return Gim;
 
-				case _ext_grv:
+				case FileExtensions.Grv:
 					return Grv;
 
-				case _ext_gtm:
+				case FileExtensions.Gtm:
 					return Gtm;
 
-				case _ext_tpl:
+				case FileExtensions.Tpl:
 					return Tpl;
 
-				case _ext_vcg:
+				case FileExtensions.Vcg:
 					return Vcg;
 
-				case _ext_hal:
+				case FileExtensions.Hal:
 					return Hal;
 
-				case _ext_zmm:
+				case FileExtensions.Zmm:
 					return Zmm;
 
-				case _ext_hbci:
+				case FileExtensions.Hbci:
 					return Hbci;
 
-				case _ext_les:
+				case FileExtensions.Les:
 					return Les;
 
-				case _ext_hpgl:
+				case FileExtensions.Hpgl:
 					return Hpgl;
 
-				case _ext_hpid:
+				case FileExtensions.Hpid:
 					return Hpid;
 
-				case _ext_hps:
+				case FileExtensions.Hps:
 					return Hps;
 
-				case _ext_jlt:
+				case FileExtensions.Jlt:
 					return Jlt;
 
-				case _ext_pcl:
+				case FileExtensions.Pcl:
 					return Pcl;
 
-				case _ext_pclxl:
+				case FileExtensions.Pclxl:
 					return Pclxl;
 
-				case _ext_sfd_hdstx:
+				case FileExtensions.Sfd_hdstx:
 					return Sfdhdstx;
 
-				case _ext_mpy:
+				case FileExtensions.Mpy:
 					return Mpy;
 
-				case _ext_afp:
-				case _ext_listafp:
-				case _ext_list3820:
+				case FileExtensions.Afp:
+				case FileExtensions.Listafp:
+				case FileExtensions.List3820:
 					return Afp;
 
-				case _ext_irm:
+				case FileExtensions.Irm:
 					return Irm;
 
-				case _ext_sc:
+				case FileExtensions.Sc:
 					return Sc;
 
-				case _ext_icc:
-				case _ext_icm:
+				case FileExtensions.Icc:
+				case FileExtensions.Icm:
 					return Icc;
 
-				case _ext_igl:
+				case FileExtensions.Igl:
 					return Igl;
 
-				case _ext_ivp:
+				case FileExtensions.Ivp:
 					return Ivp;
 
-				case _ext_ivu:
+				case FileExtensions.Ivu:
 					return Ivu;
 
-				case _ext_igm:
+				case FileExtensions.Igm:
 					return Igm;
 
-				case _ext_xpw:
-				case _ext_xpx:
+				case FileExtensions.Xpw:
+				case FileExtensions.Xpx:
 					return Xpw;
 
-				case _ext_i2g:
+				case FileExtensions.I2g:
 					return I2g;
 
-				case _ext_qbo:
+				case FileExtensions.Qbo:
 					return Qbo;
 
-				case _ext_qfx:
+				case FileExtensions.Qfx:
 					return Qfx;
 
-				case _ext_rcprofile:
+				case FileExtensions.Rcprofile:
 					return Rcprofile;
 
-				case _ext_irp:
+				case FileExtensions.Irp:
 					return Irp;
 
-				case _ext_xpr:
+				case FileExtensions.Xpr:
 					return Xpr;
 
-				case _ext_fcs:
+				case FileExtensions.Fcs:
 					return Fcs;
 
-				case _ext_jam:
+				case FileExtensions.Jam:
 					return Jam;
 
-				case _ext_rms:
+				case FileExtensions.Rms:
 					return Rms;
 
-				case _ext_jisp:
+				case FileExtensions.Jisp:
 					return Jisp;
 
-				case _ext_joda:
+				case FileExtensions.Joda:
 					return Joda;
 
-				case _ext_ktz:
-				case _ext_ktr:
+				case FileExtensions.Ktz:
+				case FileExtensions.Ktr:
 					return Ktz;
 
-				case _ext_karbon:
+				case FileExtensions.Karbon:
 					return Karbon;
 
-				case _ext_chrt:
+				case FileExtensions.Chrt:
 					return Chrt;
 
-				case _ext_kfo:
+				case FileExtensions.Kfo:
 					return Kfo;
 
-				case _ext_flw:
+				case FileExtensions.Flw:
 					return Flw;
 
-				case _ext_kon:
+				case FileExtensions.Kon:
 					return Kon;
 
-				case _ext_kpr:
-				case _ext_kpt:
+				case FileExtensions.Kpr:
+				case FileExtensions.Kpt:
 					return Kpr;
 
-				case _ext_ksp:
+				case FileExtensions.Ksp:
 					return Ksp;
 
-				case _ext_kwd:
-				case _ext_kwt:
+				case FileExtensions.Kwd:
+				case FileExtensions.Kwt:
 					return Kwd;
 
-				case _ext_htke:
+				case FileExtensions.Htke:
 					return Htke;
 
-				case _ext_kia:
+				case FileExtensions.Kia:
 					return Kia;
 
-				case _ext_kne:
-				case _ext_knp:
+				case FileExtensions.Kne:
+				case FileExtensions.Knp:
 					return Kne;
 
-				case _ext_skp:
-				case _ext_skd:
-				case _ext_skt:
-				case _ext_skm:
+				case FileExtensions.Skp:
+				case FileExtensions.Skd:
+				case FileExtensions.Skt:
+				case FileExtensions.Skm:
 					return Skp;
 
-				case _ext_sse:
+				case FileExtensions.Sse:
 					return Sse;
 
-				case _ext_lasxml:
+				case FileExtensions.Lasxml:
 					return Lasxml;
 
-				case _ext_lbd:
+				case FileExtensions.Lbd:
 					return Lbd;
 
-				case _ext_lbe:
+				case FileExtensions.Lbe:
 					return Lbe;
 
-				case _ext_123:
+				case FileExtensions._123:
 					return _123;
 
-				case _ext_apr:
+				case FileExtensions.Apr:
 					return Apr;
 
-				case _ext_pre:
+				case FileExtensions.Pre:
 					return Pre;
 
-				case _ext_nsf:
+				case FileExtensions.Nsf:
 					return Nsf;
 
-				case _ext_org:
+				case FileExtensions.Org:
 					return Org;
 
-				case _ext_scm:
+				case FileExtensions.Scm:
 					return Scm;
 
-				case _ext_lwp:
+				case FileExtensions.Lwp:
 					return Lwp;
 
-				case _ext_portpkg:
+				case FileExtensions.Portpkg:
 					return Portpkg;
 
-				case _ext_mcd:
+				case FileExtensions.Mcd:
 					return Mcd;
 
-				case _ext_mc1:
+				case FileExtensions.Mc1:
 					return Mc1;
 
-				case _ext_cdkey:
+				case FileExtensions.Cdkey:
 					return Cdkey;
 
-				case _ext_mwf:
+				case FileExtensions.Mwf:
 					return Mwf;
 
-				case _ext_mfm:
+				case FileExtensions.Mfm:
 					return Mfm;
 
-				case _ext_flo:
+				case FileExtensions.Flo:
 					return Flo;
 
-				case _ext_igx:
+				case FileExtensions.Igx:
 					return Igx;
 
-				case _ext_mif:
+				case FileExtensions.Mif:
 					return Mif;
 
-				case _ext_daf:
+				case FileExtensions.Daf:
 					return Daf;
 
-				case _ext_dis:
+				case FileExtensions.Dis:
 					return Dis;
 
-				case _ext_mbk:
+				case FileExtensions.Mbk:
 					return Mbk;
 
-				case _ext_mqy:
+				case FileExtensions.Mqy:
 					return Mqy;
 
-				case _ext_msl:
+				case FileExtensions.Msl:
 					return Msl;
 
-				case _ext_plc:
+				case FileExtensions.Plc:
 					return Plc;
 
-				case _ext_txf:
+				case FileExtensions.Txf:
 					return Txf;
 
-				case _ext_mpn:
+				case FileExtensions.Mpn:
 					return Mpn;
 
-				case _ext_mpc:
+				case FileExtensions.Mpc:
 					return Mpc;
 
-				case _ext_xul:
+				case FileExtensions.Xul:
 					return Xul;
 
-				case _ext_cil:
+				case FileExtensions.Cil:
 					return Cil;
 
-				case _ext_cab:
+				case FileExtensions.Cab:
 					return Cab;
 
-				case _ext_xls:
-				case _ext_xlm:
-				case _ext_xla:
-				case _ext_xlc:
-				case _ext_xlt:
-				case _ext_xlw:
+				case FileExtensions.Xls:
+				case FileExtensions.Xlm:
+				case FileExtensions.Xla:
+				case FileExtensions.Xlc:
+				case FileExtensions.Xlt:
+				case FileExtensions.Xlw:
 					return Xls;
 
-				case _ext_xlam:
+				case FileExtensions.Xlam:
 					return Xlam;
 
-				case _ext_xlsb:
+				case FileExtensions.Xlsb:
 					return Xlsb;
 
-				case _ext_xlsm:
+				case FileExtensions.Xlsm:
 					return Xlsm;
 
-				case _ext_xltm:
+				case FileExtensions.Xltm:
 					return Xltm;
 
-				case _ext_eot:
+				case FileExtensions.Eot:
 					return Eot;
 
-				case _ext_chm:
+				case FileExtensions.Chm:
 					return Chm;
 
-				case _ext_ims:
+				case FileExtensions.Ims:
 					return Ims;
 
-				case _ext_lrm:
+				case FileExtensions.Lrm:
 					return Lrm;
 
-				case _ext_thmx:
+				case FileExtensions.Thmx:
 					return Thmx;
 
-				case _ext_cat:
+				case FileExtensions.Cat:
 					return Cat;
 
-				case _ext_stl:
+				case FileExtensions.Stl:
 					return Stl;
 
-				case _ext_ppt:
-				case _ext_pps:
-				case _ext_pot:
+				case FileExtensions.Ppt:
+				case FileExtensions.Pps:
+				case FileExtensions.Pot:
 					return Ppt;
 
-				case _ext_ppam:
+				case FileExtensions.Ppam:
 					return Ppam;
 
-				case _ext_pptm:
+				case FileExtensions.Pptm:
 					return Pptm;
 
-				case _ext_sldm:
+				case FileExtensions.Sldm:
 					return Sldm;
 
-				case _ext_ppsm:
+				case FileExtensions.Ppsm:
 					return Ppsm;
 
-				case _ext_potm:
+				case FileExtensions.Potm:
 					return Potm;
 
-				case _ext_mpp:
-				case _ext_mpt:
+				case FileExtensions.Mpp:
+				case FileExtensions.Mpt:
 					return Mpp;
 
-				case _ext_docm:
+				case FileExtensions.Docm:
 					return Docm;
 
-				case _ext_dotm:
+				case FileExtensions.Dotm:
 					return Dotm;
 
-				case _ext_wps:
-				case _ext_wks:
-				case _ext_wcm:
-				case _ext_wdb:
+				case FileExtensions.Wps:
+				case FileExtensions.Wks:
+				case FileExtensions.Wcm:
+				case FileExtensions.Wdb:
 					return Wps;
 
-				case _ext_wpl:
+				case FileExtensions.Wpl:
 					return Wpl;
 
-				case _ext_xps:
+				case FileExtensions.Xps:
 					return Xps;
 
-				case _ext_mseq:
+				case FileExtensions.Mseq:
 					return Mseq;
 
-				case _ext_mus:
+				case FileExtensions.Mus:
 					return Mus;
 
-				case _ext_msty:
+				case FileExtensions.Msty:
 					return Msty;
 
-				case _ext_taglet:
+				case FileExtensions.Taglet:
 					return Taglet;
 
-				case _ext_nlu:
+				case FileExtensions.Nlu:
 					return Nlu;
 
-				case _ext_ntf:
-				case _ext_nitf:
+				case FileExtensions.Ntf:
+				case FileExtensions.Nitf:
 					return Ntf;
 
-				case _ext_nnd:
+				case FileExtensions.Nnd:
 					return Nnd;
 
-				case _ext_nns:
+				case FileExtensions.Nns:
 					return Nns;
 
-				case _ext_nnw:
+				case FileExtensions.Nnw:
 					return Nnw;
 
-				case _ext_ngdat:
+				case FileExtensions.Ngdat:
 					return Ngdat;
 
-				case _ext_n_gage:
+				case FileExtensions.N_gage:
 					return Ngage;
 
-				case _ext_rpst:
+				case FileExtensions.Rpst:
 					return Rpst;
 
-				case _ext_rpss:
+				case FileExtensions.Rpss:
 					return Rpss;
 
-				case _ext_edm:
+				case FileExtensions.Edm:
 					return Edm;
 
-				case _ext_edx:
+				case FileExtensions.Edx:
 					return Edx;
 
-				case _ext_ext:
+				case FileExtensions.Ext:
 					return Ext;
 
-				case _ext_odc:
+				case FileExtensions.Odc:
 					return Odc;
 
-				case _ext_otc:
+				case FileExtensions.Otc:
 					return Otc;
 
-				case _ext_odb:
+				case FileExtensions.Odb:
 					return Odb;
 
-				case _ext_odf:
+				case FileExtensions.Odf:
 					return Odf;
 
-				case _ext_odft:
+				case FileExtensions.Odft:
 					return Odft;
 
-				case _ext_odg:
+				case FileExtensions.Odg:
 					return Odg;
 
-				case _ext_otg:
+				case FileExtensions.Otg:
 					return Otg;
 
-				case _ext_odi:
+				case FileExtensions.Odi:
 					return Odi;
 
-				case _ext_oti:
+				case FileExtensions.Oti:
 					return Oti;
 
-				case _ext_odp:
+				case FileExtensions.Odp:
 					return Odp;
 
-				case _ext_otp:
+				case FileExtensions.Otp:
 					return Otp;
 
-				case _ext_ods:
+				case FileExtensions.Ods:
 					return Ods;
 
-				case _ext_ots:
+				case FileExtensions.Ots:
 					return Ots;
 
-				case _ext_odt:
+				case FileExtensions.Odt:
 					return Odt;
 
-				case _ext_odm:
+				case FileExtensions.Odm:
 					return Odm;
 
-				case _ext_ott:
+				case FileExtensions.Ott:
 					return Ott;
 
-				case _ext_oth:
+				case FileExtensions.Oth:
 					return Oth;
 
-				case _ext_xo:
+				case FileExtensions.Xo:
 					return Xo;
 
-				case _ext_dd2:
+				case FileExtensions.Dd2:
 					return Dd2;
 
-				case _ext_oxt:
+				case FileExtensions.Oxt:
 					return Oxt;
 
-				case _ext_pptx:
+				case FileExtensions.Pptx:
 					return Pptx;
 
-				case _ext_sldx:
+				case FileExtensions.Sldx:
 					return Sldx;
 
-				case _ext_ppsx:
+				case FileExtensions.Ppsx:
 					return Ppsx;
 
-				case _ext_potx:
+				case FileExtensions.Potx:
 					return Potx;
 
-				case _ext_xlsx:
+				case FileExtensions.Xlsx:
 					return Xlsx;
 
-				case _ext_xltx:
+				case FileExtensions.Xltx:
 					return Xltx;
 
-				case _ext_docx:
+				case FileExtensions.Docx:
 					return Docx;
 
-				case _ext_dotx:
+				case FileExtensions.Dotx:
 					return Dotx;
 
-				case _ext_mgp:
+				case FileExtensions.Mgp:
 					return Mgp;
 
-				case _ext_dp:
+				case FileExtensions.Dp:
 					return Dp;
 
-				case _ext_esa:
+				case FileExtensions.Esa:
 					return Esa;
 
-				case _ext_pdb:
-				case _ext_pqa:
-				case _ext_oprc:
+				case FileExtensions.Pdb:
+				case FileExtensions.Pqa:
+				case FileExtensions.Oprc:
 					return Pdb;
 
-				case _ext_paw:
+				case FileExtensions.Paw:
 					return Paw;
 
-				case _ext_str:
+				case FileExtensions.Str:
 					return Str;
 
-				case _ext_ei6:
+				case FileExtensions.Ei6:
 					return Ei6;
 
-				case _ext_efif:
+				case FileExtensions.Efif:
 					return Efif;
 
-				case _ext_wg:
+				case FileExtensions.Wg:
 					return Wg;
 
-				case _ext_plf:
+				case FileExtensions.Plf:
 					return Plf;
 
-				case _ext_pbd:
+				case FileExtensions.Pbd:
 					return Pbd;
 
-				case _ext_box:
+				case FileExtensions.Box:
 					return Box;
 
-				case _ext_mgz:
+				case FileExtensions.Mgz:
 					return Mgz;
 
-				case _ext_qps:
+				case FileExtensions.Qps:
 					return Qps;
 
-				case _ext_ptid:
+				case FileExtensions.Ptid:
 					return Ptid;
 
-				case _ext_qxd:
-				case _ext_qxt:
-				case _ext_qwd:
-				case _ext_qwt:
-				case _ext_qxl:
-				case _ext_qxb:
+				case FileExtensions.Qxd:
+				case FileExtensions.Qxt:
+				case FileExtensions.Qwd:
+				case FileExtensions.Qwt:
+				case FileExtensions.Qxl:
+				case FileExtensions.Qxb:
 					return Qxd;
 
-				case _ext_bed:
+				case FileExtensions.Bed:
 					return Bed;
 
-				case _ext_mxl:
+				case FileExtensions.Mxl:
 					return Mxl;
 
-				case _ext_musicxml:
+				case FileExtensions.Musicxml:
 					return Musicxml;
 
-				case _ext_cryptonote:
+				case FileExtensions.Cryptonote:
 					return Cryptonote;
 
-				case _ext_cod:
+				case FileExtensions.Cod:
 					return Cod;
 
-				case _ext_rm:
+				case FileExtensions.Rm:
 					return Rm;
 
-				case _ext_rmvb:
+				case FileExtensions.Rmvb:
 					return Rmvb;
 
-				case _ext_link66:
+				case FileExtensions.Link66:
 					return Link66;
 
-				case _ext_st:
+				case FileExtensions.St:
 					return St;
 
-				case _ext_see:
+				case FileExtensions.See:
 					return See;
 
-				case _ext_sema:
+				case FileExtensions.Sema:
 					return Sema;
 
-				case _ext_semd:
+				case FileExtensions.Semd:
 					return Semd;
 
-				case _ext_semf:
+				case FileExtensions.Semf:
 					return Semf;
 
-				case _ext_ifm:
+				case FileExtensions.Ifm:
 					return Ifm;
 
-				case _ext_itp:
+				case FileExtensions.Itp:
 					return Itp;
 
-				case _ext_iif:
+				case FileExtensions.Iif:
 					return Iif;
 
-				case _ext_ipk:
+				case FileExtensions.Ipk:
 					return Ipk;
 
-				case _ext_twd:
-				case _ext_twds:
+				case FileExtensions.Twd:
+				case FileExtensions.Twds:
 					return Twd;
 
-				case _ext_mmf:
+				case FileExtensions.Mmf:
 					return Mmf;
 
-				case _ext_teacher:
+				case FileExtensions.Teacher:
 					return Teacher;
 
-				case _ext_sdkm:
-				case _ext_sdkd:
+				case FileExtensions.Sdkm:
+				case FileExtensions.Sdkd:
 					return Sdkm;
 
-				case _ext_dxp:
+				case FileExtensions.Dxp:
 					return Dxp;
 
-				case _ext_sfs:
+				case FileExtensions.Sfs:
 					return Sfs;
 
-				case _ext_sdc:
+				case FileExtensions.Sdc:
 					return Sdc;
 
-				case _ext_sda:
+				case FileExtensions.Sda:
 					return Sda;
 
-				case _ext_sdd:
+				case FileExtensions.Sdd:
 					return Sdd;
 
-				case _ext_smf:
+				case FileExtensions.Smf:
 					return Smf;
 
-				case _ext_sdw:
-				case _ext_vor:
+				case FileExtensions.Sdw:
+				case FileExtensions.Vor:
 					return Sdw;
 
-				case _ext_sgl:
+				case FileExtensions.Sgl:
 					return Sgl;
 
-				case _ext_smzip:
+				case FileExtensions.Smzip:
 					return Smzip;
 
-				case _ext_sm:
+				case FileExtensions.Sm:
 					return Sm;
 
-				case _ext_sxc:
+				case FileExtensions.Sxc:
 					return Sxc;
 
-				case _ext_stc:
+				case FileExtensions.Stc:
 					return Stc;
 
-				case _ext_sxd:
+				case FileExtensions.Sxd:
 					return Sxd;
 
-				case _ext_std:
+				case FileExtensions.Std:
 					return Std;
 
-				case _ext_sxi:
+				case FileExtensions.Sxi:
 					return Sxi;
 
-				case _ext_sti:
+				case FileExtensions.Sti:
 					return Sti;
 
-				case _ext_sxm:
+				case FileExtensions.Sxm:
 					return Sxm;
 
-				case _ext_sxw:
+				case FileExtensions.Sxw:
 					return Sxw;
 
-				case _ext_sxg:
+				case FileExtensions.Sxg:
 					return Sxg;
 
-				case _ext_stw:
+				case FileExtensions.Stw:
 					return Stw;
 
-				case _ext_sus:
-				case _ext_susp:
+				case FileExtensions.Sus:
+				case FileExtensions.Susp:
 					return Sus;
 
-				case _ext_svd:
+				case FileExtensions.Svd:
 					return Svd;
 
-				case _ext_sis:
-				case _ext_sisx:
+				case FileExtensions.Sis:
+				case FileExtensions.Sisx:
 					return Sis;
 
-				case _ext_xsm:
+				case FileExtensions.Xsm:
 					return Xsm;
 
-				case _ext_bdm:
+				case FileExtensions.Bdm:
 					return Bdm;
 
-				case _ext_xdm:
+				case FileExtensions.Xdm:
 					return Xdm;
 
-				case _ext_tao:
+				case FileExtensions.Tao:
 					return Tao;
 
-				case _ext_pcap:
-				case _ext_cap:
-				case _ext_dmp:
+				case FileExtensions.Pcap:
+				case FileExtensions.Cap:
+				case FileExtensions.Dmp:
 					return Pcap;
 
-				case _ext_tmo:
+				case FileExtensions.Tmo:
 					return Tmo;
 
-				case _ext_tpt:
+				case FileExtensions.Tpt:
 					return Tpt;
 
-				case _ext_mxs:
+				case FileExtensions.Mxs:
 					return Mxs;
 
-				case _ext_tra:
+				case FileExtensions.Tra:
 					return Tra;
 
-				case _ext_ufd:
-				case _ext_ufdl:
+				case FileExtensions.Ufd:
+				case FileExtensions.Ufdl:
 					return Ufd;
 
-				case _ext_utz:
+				case FileExtensions.Utz:
 					return Utz;
 
-				case _ext_umj:
+				case FileExtensions.Umj:
 					return Umj;
 
-				case _ext_unityweb:
+				case FileExtensions.Unityweb:
 					return Unityweb;
 
-				case _ext_uoml:
+				case FileExtensions.Uoml:
 					return Uoml;
 
-				case _ext_vcx:
+				case FileExtensions.Vcx:
 					return Vcx;
 
-				case _ext_vsd:
-				case _ext_vst:
-				case _ext_vss:
-				case _ext_vsw:
+				case FileExtensions.Vsd:
+				case FileExtensions.Vst:
+				case FileExtensions.Vss:
+				case FileExtensions.Vsw:
 					return Vsd;
 
-				case _ext_vis:
+				case FileExtensions.Vis:
 					return Vis;
 
-				case _ext_vsf:
+				case FileExtensions.Vsf:
 					return Vsf;
 
-				case _ext_wbxml:
+				case FileExtensions.Wbxml:
 					return Wbxml;
 
-				case _ext_wmlc:
+				case FileExtensions.Wmlc:
 					return Wmlc;
 
-				case _ext_wmlsc:
+				case FileExtensions.Wmlsc:
 					return Wmlsc;
 
-				case _ext_wtb:
+				case FileExtensions.Wtb:
 					return Wtb;
 
-				case _ext_nbp:
+				case FileExtensions.Nbp:
 					return Nbp;
 
-				case _ext_wpd:
+				case FileExtensions.Wpd:
 					return Wpd;
 
-				case _ext_wqd:
+				case FileExtensions.Wqd:
 					return Wqd;
 
-				case _ext_stf:
+				case FileExtensions.Stf:
 					return Stf;
 
-				case _ext_xar:
+				case FileExtensions.Xar:
 					return Xar;
 
-				case _ext_xfdl:
+				case FileExtensions.Xfdl:
 					return Xfdl;
 
-				case _ext_hvd:
+				case FileExtensions.Hvd:
 					return Hvd;
 
-				case _ext_hvs:
+				case FileExtensions.Hvs:
 					return Hvs;
 
-				case _ext_hvp:
+				case FileExtensions.Hvp:
 					return Hvp;
 
-				case _ext_osf:
+				case FileExtensions.Osf:
 					return Osf;
 
-				case _ext_osfpvg:
+				case FileExtensions.Osfpvg:
 					return Osfpvg;
 
-				case _ext_saf:
+				case FileExtensions.Saf:
 					return Saf;
 
-				case _ext_spf:
+				case FileExtensions.Spf:
 					return Spf;
 
-				case _ext_cmp:
+				case FileExtensions.Cmp:
 					return Cmp;
 
-				case _ext_zir:
-				case _ext_zirz:
+				case FileExtensions.Zir:
+				case FileExtensions.Zirz:
 					return Zir;
 
-				case _ext_zaz:
+				case FileExtensions.Zaz:
 					return Zaz;
 
-				case _ext_vxml:
+				case FileExtensions.Vxml:
 					return Vxml;
 
-				case _ext_wgt:
+				case FileExtensions.Wgt:
 					return Wgt;
 
-				case _ext_hlp:
+				case FileExtensions.Hlp:
 					return Hlp;
 
-				case _ext_wsdl:
+				case FileExtensions.Wsdl:
 					return Wsdl;
 
-				case _ext_wspolicy:
+				case FileExtensions.Wspolicy:
 					return Wspolicy;
 
-				case _ext_7z:
+				case FileExtensions._7z:
 					return _7z;
 
-				case _ext_abw:
+				case FileExtensions.Abw:
 					return Abw;
 
-				case _ext_ace:
+				case FileExtensions.Ace:
 					return Ace;
 
-				case _ext_dmg:
+				case FileExtensions.Dmg:
 					return Dmg;
 
-				case _ext_aab:
-				case _ext_x32:
-				case _ext_u32:
-				case _ext_vox:
+				case FileExtensions.Aab:
+				case FileExtensions.X32:
+				case FileExtensions.U32:
+				case FileExtensions.Vox:
 					return Aab;
 
-				case _ext_aam:
+				case FileExtensions.Aam:
 					return Aam;
 
-				case _ext_aas:
+				case FileExtensions.Aas:
 					return Aas;
 
-				case _ext_bcpio:
+				case FileExtensions.Bcpio:
 					return Bcpio;
 
-				case _ext_torrent:
+				case FileExtensions.Torrent:
 					return Torrent;
 
-				case _ext_blb:
-				case _ext_blorb:
+				case FileExtensions.Blb:
+				case FileExtensions.Blorb:
 					return Blb;
 
-				case _ext_bz:
+				case FileExtensions.Bz:
 					return Bz;
 
-				case _ext_bz2:
-				case _ext_boz:
+				case FileExtensions.Bz2:
+				case FileExtensions.Boz:
 					return Bz2;
 
-				case _ext_cbr:
-				case _ext_cba:
-				case _ext_cbt:
-				case _ext_cbz:
-				case _ext_cb7:
+				case FileExtensions.Cbr:
+				case FileExtensions.Cba:
+				case FileExtensions.Cbt:
+				case FileExtensions.Cbz:
+				case FileExtensions.Cb7:
 					return Cbr;
 
-				case _ext_vcd:
+				case FileExtensions.Vcd:
 					return Vcd;
 
-				case _ext_cfs:
+				case FileExtensions.Cfs:
 					return Cfs;
 
-				case _ext_chat:
+				case FileExtensions.Chat:
 					return Chat;
 
-				case _ext_pgn:
+				case FileExtensions.Pgn:
 					return Pgn;
 
-				case _ext_nsc:
+				case FileExtensions.Nsc:
 					return Nsc;
 
-				case _ext_cpio:
+				case FileExtensions.Cpio:
 					return Cpio;
 
-				case _ext_csh:
+				case FileExtensions.Csh:
 					return Csh;
 
-				case _ext_deb:
-				case _ext_udeb:
+				case FileExtensions.Deb:
+				case FileExtensions.Udeb:
 					return Deb;
 
-				case _ext_dgc:
+				case FileExtensions.Dgc:
 					return Dgc;
 
-				case _ext_dir:
-				case _ext_dcr:
-				case _ext_dxr:
-				case _ext_cst:
-				case _ext_cct:
-				case _ext_cxt:
-				case _ext_w3d:
-				case _ext_fgd:
-				case _ext_swa:
+				case FileExtensions.Dir:
+				case FileExtensions.Dcr:
+				case FileExtensions.Dxr:
+				case FileExtensions.Cst:
+				case FileExtensions.Cct:
+				case FileExtensions.Cxt:
+				case FileExtensions.W3d:
+				case FileExtensions.Fgd:
+				case FileExtensions.Swa:
 					return Dir;
 
-				case _ext_wad:
+				case FileExtensions.Wad:
 					return Wad;
 
-				case _ext_ncx:
+				case FileExtensions.Ncx:
 					return Ncx;
 
-				case _ext_dtb:
+				case FileExtensions.Dtb:
 					return Dtb;
 
-				case _ext_res:
+				case FileExtensions.Res:
 					return Res;
 
-				case _ext_dvi:
+				case FileExtensions.Dvi:
 					return Dvi;
 
-				case _ext_evy:
+				case FileExtensions.Evy:
 					return Evy;
 
-				case _ext_eva:
+				case FileExtensions.Eva:
 					return Eva;
 
-				case _ext_bdf:
+				case FileExtensions.Bdf:
 					return Bdf;
 
-				case _ext_gsf:
+				case FileExtensions.Gsf:
 					return Gsf;
 
-				case _ext_psf:
+				case FileExtensions.Psf:
 					return Psf;
 
-				case _ext_pcf:
+				case FileExtensions.Pcf:
 					return Pcf;
 
-				case _ext_snf:
+				case FileExtensions.Snf:
 					return Snf;
 
-				case _ext_pfa:
-				case _ext_pfb:
-				case _ext_pfm:
-				case _ext_afm:
+				case FileExtensions.Pfa:
+				case FileExtensions.Pfb:
+				case FileExtensions.Pfm:
+				case FileExtensions.Afm:
 					return Pfa;
 
-				case _ext_arc:
+				case FileExtensions.Arc:
 					return Arc;
 
-				case _ext_spl:
+				case FileExtensions.Spl:
 					return Spl;
 
-				case _ext_gca:
+				case FileExtensions.Gca:
 					return Gca;
 
-				case _ext_ulx:
+				case FileExtensions.Ulx:
 					return Ulx;
 
-				case _ext_gnumeric:
+				case FileExtensions.Gnumeric:
 					return Gnumeric;
 
-				case _ext_gramps:
+				case FileExtensions.Gramps:
 					return Gramps;
 
-				case _ext_gtar:
+				case FileExtensions.Gtar:
 					return Gtar;
 
-				case _ext_hdf:
+				case FileExtensions.Hdf:
 					return Hdf;
 
-				case _ext_install:
+				case FileExtensions.Install:
 					return Install;
 
-				case _ext_iso:
+				case FileExtensions.Iso:
 					return Iso;
 
-				case _ext_jnlp:
+				case FileExtensions.Jnlp:
 					return Jnlp;
 
-				case _ext_latex:
+				case FileExtensions.Latex:
 					return Latex;
 
-				case _ext_lzh:
-				case _ext_lha:
+				case FileExtensions.Lzh:
+				case FileExtensions.Lha:
 					return Lzh;
 
-				case _ext_mie:
+				case FileExtensions.Mie:
 					return Mie;
 
-				case _ext_prc:
-				case _ext_mobi:
+				case FileExtensions.Prc:
+				case FileExtensions.Mobi:
 					return Prc;
 
-				case _ext_application:
+				case FileExtensions.Application:
 					return Application;
 
-				case _ext_lnk:
+				case FileExtensions.Lnk:
 					return Lnk;
 
-				case _ext_wmd:
+				case FileExtensions.Wmd:
 					return Wmd;
 
-				case _ext_wmz:
+				case FileExtensions.Wmz:
 					return Wmz;
 
-				case _ext_xbap:
+				case FileExtensions.Xbap:
 					return Xbap;
 
-				case _ext_mdb:
+				case FileExtensions.Mdb:
 					return Mdb;
 
-				case _ext_obd:
+				case FileExtensions.Obd:
 					return Obd;
 
-				case _ext_crd:
+				case FileExtensions.Crd:
 					return Crd;
 
-				case _ext_clp:
+				case FileExtensions.Clp:
 					return Clp;
 
-				case _ext_exe:
-				case _ext_dll:
-				case _ext_com:
-				case _ext_bat:
-				case _ext_msi:
+				case FileExtensions.Exe:
+				case FileExtensions.Dll:
+				case FileExtensions.Com:
+				case FileExtensions.Bat:
+				case FileExtensions.Msi:
 					return Exe;
 
-				case _ext_mvb:
-				case _ext_m13:
-				case _ext_m14:
+				case FileExtensions.Mvb:
+				case FileExtensions.M13:
+				case FileExtensions.M14:
 					return Mvb;
 
-				case _ext_wmf:
-				case _ext_emf:
-				case _ext_emz:
+				case FileExtensions.Wmf:
+				case FileExtensions.Emf:
+				case FileExtensions.Emz:
 					return Wmf;
 
-				case _ext_mny:
+				case FileExtensions.Mny:
 					return Mny;
 
-				case _ext_pub:
+				case FileExtensions.Pub:
 					return Pub;
 
-				case _ext_scd:
+				case FileExtensions.Scd:
 					return Scd;
 
-				case _ext_trm:
+				case FileExtensions.Trm:
 					return Trm;
 
-				case _ext_wri:
+				case FileExtensions.Wri:
 					return Wri;
 
-				case _ext_nc:
-				case _ext_cdf:
+				case FileExtensions.Nc:
+				case FileExtensions.Cdf:
 					return Nc;
 
-				case _ext_nzb:
+				case FileExtensions.Nzb:
 					return Nzb;
 
-				case _ext_p12:
-				case _ext_pfx:
+				case FileExtensions.P12:
+				case FileExtensions.Pfx:
 					return P12;
 
-				case _ext_p7b:
-				case _ext_spc:
+				case FileExtensions.P7b:
+				case FileExtensions.Spc:
 					return P7b;
 
-				case _ext_p7r:
+				case FileExtensions.P7r:
 					return P7r;
 
-				case _ext_rar:
+				case FileExtensions.Rar:
 					return Rar;
 
-				case _ext_ris:
+				case FileExtensions.Ris:
 					return Ris;
 
-				case _ext_sh:
+				case FileExtensions.Sh:
 					return Sh;
 
-				case _ext_shar:
+				case FileExtensions.Shar:
 					return Shar;
 
-				case _ext_swf:
+				case FileExtensions.Swf:
 					return Swf;
 
-				case _ext_xap:
+				case FileExtensions.Xap:
 					return Xap;
 
-				case _ext_sql:
+				case FileExtensions.Sql:
 					return Sql;
 
-				case _ext_sit:
+				case FileExtensions.Sit:
 					return Sit;
 
-				case _ext_sitx:
+				case FileExtensions.Sitx:
 					return Sitx;
 
-				case _ext_srt:
+				case FileExtensions.Srt:
 					return Srt;
 
-				case _ext_sv4cpio:
+				case FileExtensions.Sv4cpio:
 					return Sv4cpio;
 
-				case _ext_sv4crc:
+				case FileExtensions.Sv4crc:
 					return Sv4crc;
 
-				case _ext_t3:
+				case FileExtensions.T3:
 					return T3;
 
-				case _ext_gam:
+				case FileExtensions.Gam:
 					return Gam;
 
-				case _ext_tar:
+				case FileExtensions.Tar:
 					return Tar;
 
-				case _ext_tcl:
-				case _ext_tk:
+				case FileExtensions.Tcl:
+				case FileExtensions.Tk:
 					return Tcl;
 
-				case _ext_tex:
+				case FileExtensions.Tex:
 					return Tex;
 
-				case _ext_tfm:
+				case FileExtensions.Tfm:
 					return Tfm;
 
-				case _ext_texinfo:
-				case _ext_texi:
+				case FileExtensions.Texinfo:
+				case FileExtensions.Texi:
 					return Texinfo;
 
-				case _ext_obj:
+				case FileExtensions.Obj:
 					return Obj;
 
-				case _ext_ustar:
+				case FileExtensions.Ustar:
 					return Ustar;
 
-				case _ext_src:
+				case FileExtensions.Src:
 					return Src;
 
-				case _ext_der:
-				case _ext_crt:
-				case _ext_pem:
+				case FileExtensions.Der:
+				case FileExtensions.Crt:
+				case FileExtensions.Pem:
 					return Der;
 
-				case _ext_fig:
+				case FileExtensions.Fig:
 					return Fig;
 
-				case _ext_xlf:
+				case FileExtensions.Xlf:
 					return Xlf;
 
-				case _ext_xpi:
+				case FileExtensions.Xpi:
 					return Xpi;
 
-				case _ext_xz:
+				case FileExtensions.Xz:
 					return Xz;
 
-				case _ext_z1:
-				case _ext_z2:
-				case _ext_z3:
-				case _ext_z4:
-				case _ext_z5:
-				case _ext_z6:
-				case _ext_z7:
-				case _ext_z8:
+				case FileExtensions.Z1:
+				case FileExtensions.Z2:
+				case FileExtensions.Z3:
+				case FileExtensions.Z4:
+				case FileExtensions.Z5:
+				case FileExtensions.Z6:
+				case FileExtensions.Z7:
+				case FileExtensions.Z8:
 					return Z1;
 
-				case _ext_xaml:
+				case FileExtensions.Xaml:
 					return Xaml;
 
-				case _ext_xdf:
+				case FileExtensions.Xdf:
 					return Xdf;
 
-				case _ext_xenc:
+				case FileExtensions.Xenc:
 					return Xenc;
 
-				case _ext_xhtml:
-				case _ext_xht:
+				case FileExtensions.Xhtml:
+				case FileExtensions.Xht:
 					return Xhtml;
 
-				case _ext_xml:
-				case _ext_xsl:
-				case _ext_xsd:
-				case _ext_rng:
+				case FileExtensions.Xml:
+				case FileExtensions.Xsl:
+				case FileExtensions.Xsd:
+				case FileExtensions.Rng:
 					return Xml;
 
-				case _ext_dtd:
+				case FileExtensions.Dtd:
 					return Dtd;
 
-				case _ext_xop:
+				case FileExtensions.Xop:
 					return Xop;
 
-				case _ext_xpl:
+				case FileExtensions.Xpl:
 					return Xpl;
 
-				case _ext_xslt:
+				case FileExtensions.Xslt:
 					return Xslt;
 
-				case _ext_xspf:
+				case FileExtensions.Xspf:
 					return Xspf;
 
-				case _ext_mxml:
-				case _ext_xhvml:
-				case _ext_xvml:
-				case _ext_xvm:
+				case FileExtensions.Mxml:
+				case FileExtensions.Xhvml:
+				case FileExtensions.Xvml:
+				case FileExtensions.Xvm:
 					return Mxml;
 
-				case _ext_yang:
+				case FileExtensions.Yang:
 					return Yang;
 
-				case _ext_yin:
+				case FileExtensions.Yin:
 					return Yin;
 
-				case _ext_zip:
+				case FileExtensions.Zip:
 					return Zip;
 
-				case _ext_adp:
+				case FileExtensions.Adp:
 					return Adp;
 
-				case _ext_au:
-				case _ext_snd:
+				case FileExtensions.Au:
+				case FileExtensions.Snd:
 					return Au;
 
-				case _ext_mid:
-				case _ext_midi:
-				case _ext_kar:
-				case _ext_rmi:
+				case FileExtensions.Mid:
+				case FileExtensions.Midi:
+				case FileExtensions.Kar:
+				case FileExtensions.Rmi:
 					return Mid;
 
-				case _ext_m4a:
-				case _ext_mp4a:
-				case _ext_f4a:
-				case _ext_f4b:
+				case FileExtensions.M4a:
+				case FileExtensions.Mp4a:
+				case FileExtensions.F4a:
+				case FileExtensions.F4b:
 					return M4a;
 
-				case _ext_mpga:
-				case _ext_mp2:
-				case _ext_mp2a:
-				case _ext_mp3:
-				case _ext_m2a:
-				case _ext_m3a:
+				case FileExtensions.Mpga:
+				case FileExtensions.Mp2:
+				case FileExtensions.Mp2a:
+				case FileExtensions.Mp3:
+				case FileExtensions.M2a:
+				case FileExtensions.M3a:
 					return Mpga;
 
-				case _ext_oga:
-				case _ext_ogg:
-				case _ext_spx:
-				case _ext_opus:
+				case FileExtensions.Oga:
+				case FileExtensions.Ogg:
+				case FileExtensions.Spx:
+				case FileExtensions.Opus:
 					return Oga;
 
-				case _ext_s3m:
+				case FileExtensions.S3m:
 					return S3m;
 
-				case _ext_sil:
+				case FileExtensions.Sil:
 					return Sil;
 
-				case _ext_uva:
-				case _ext_uvva:
+				case FileExtensions.Uva:
+				case FileExtensions.Uvva:
 					return Uva;
 
-				case _ext_eol:
+				case FileExtensions.Eol:
 					return Eol;
 
-				case _ext_dra:
+				case FileExtensions.Dra:
 					return Dra;
 
-				case _ext_dts:
+				case FileExtensions.Dts:
 					return Dts;
 
-				case _ext_dtshd:
+				case FileExtensions.Dtshd:
 					return Dtshd;
 
-				case _ext_lvp:
+				case FileExtensions.Lvp:
 					return Lvp;
 
-				case _ext_pya:
+				case FileExtensions.Pya:
 					return Pya;
 
-				case _ext_ecelp4800:
+				case FileExtensions.Ecelp4800:
 					return Ecelp4800;
 
-				case _ext_ecelp7470:
+				case FileExtensions.Ecelp7470:
 					return Ecelp7470;
 
-				case _ext_ecelp9600:
+				case FileExtensions.Ecelp9600:
 					return Ecelp9600;
 
-				case _ext_rip:
+				case FileExtensions.Rip:
 					return Rip;
 
-				case _ext_weba:
+				case FileExtensions.Weba:
 					return Weba;
 
-				case _ext_aac:
+				case FileExtensions.Aac:
 					return Aac;
 
-				case _ext_aif:
-				case _ext_aiff:
-				case _ext_aifc:
+				case FileExtensions.Aif:
+				case FileExtensions.Aiff:
+				case FileExtensions.Aifc:
 					return Aif;
 
-				case _ext_caf:
+				case FileExtensions.Caf:
 					return Caf;
 
-				case _ext_flac:
+				case FileExtensions.Flac:
 					return Flac;
 
-				case _ext_mka:
+				case FileExtensions.Mka:
 					return Mka;
 
-				case _ext_m3u:
+				case FileExtensions.M3u:
 					return M3u;
 
-				case _ext_wax:
+				case FileExtensions.Wax:
 					return Wax;
 
-				case _ext_wma:
+				case FileExtensions.Wma:
 					return Wma;
 
-				case _ext_ram:
-				case _ext_ra:
+				case FileExtensions.Ram:
+				case FileExtensions.Ra:
 					return Ram;
 
-				case _ext_rmp:
+				case FileExtensions.Rmp:
 					return Rmp;
 
-				case _ext_wav:
+				case FileExtensions.Wav:
 					return Wav;
 
-				case _ext_xm:
+				case FileExtensions.Xm:
 					return Xm;
 
-				case _ext_cdx:
+				case FileExtensions.Cdx:
 					return Cdx;
 
-				case _ext_cif:
+				case FileExtensions.Cif:
 					return Cif;
 
-				case _ext_cmdf:
+				case FileExtensions.Cmdf:
 					return Cmdf;
 
-				case _ext_cml:
+				case FileExtensions.Cml:
 					return Cml;
 
-				case _ext_csml:
+				case FileExtensions.Csml:
 					return Csml;
 
-				case _ext_xyz:
+				case FileExtensions.Xyz:
 					return Xyz;
 
-				case _ext_ttc:
+				case FileExtensions.Ttc:
 					return Ttc;
 
-				case _ext_otf:
+				case FileExtensions.Otf:
 					return Otf;
 
-				case _ext_ttf:
+				case FileExtensions.Ttf:
 					return Ttf;
 
-				case _ext_woff:
+				case FileExtensions.Woff:
 					return Woff;
 
-				case _ext_woff2:
+				case FileExtensions.Woff2:
 					return Woff2;
 
-				case _ext_bmp:
+				case FileExtensions.Bmp:
 					return Bmp;
 
-				case _ext_cgm:
+				case FileExtensions.Cgm:
 					return Cgm;
 
-				case _ext_g3:
+				case FileExtensions.G3:
 					return G3;
 
-				case _ext_gif:
+				case FileExtensions.Gif:
 					return Gif;
 
-				case _ext_ief:
+				case FileExtensions.Ief:
 					return Ief;
 
-				case _ext_jpeg:
-				case _ext_jpg:
-				case _ext_jpe:
+				case FileExtensions.Jpeg:
+				case FileExtensions.Jpg:
+				case FileExtensions.Jpe:
 					return Jpeg;
 
-				case _ext_ktx:
+				case FileExtensions.Ktx:
 					return Ktx;
 
-				case _ext_png:
+				case FileExtensions.Png:
 					return Png;
 
-				case _ext_btif:
+				case FileExtensions.Btif:
 					return Btif;
 
-				case _ext_sgi:
+				case FileExtensions.Sgi:
 					return Sgi;
 
-				case _ext_svg:
-				case _ext_svgz:
+				case FileExtensions.Svg:
+				case FileExtensions.Svgz:
 					return Svg;
 
-				case _ext_tiff:
-				case _ext_tif:
+				case FileExtensions.Tiff:
+				case FileExtensions.Tif:
 					return Tiff;
 
-				case _ext_psd:
+				case FileExtensions.Psd:
 					return Psd;
 
-				case _ext_uvi:
-				case _ext_uvvi:
-				case _ext_uvg:
-				case _ext_uvvg:
+				case FileExtensions.Uvi:
+				case FileExtensions.Uvvi:
+				case FileExtensions.Uvg:
+				case FileExtensions.Uvvg:
 					return Uvi;
 
-				case _ext_djvu:
-				case _ext_djv:
+				case FileExtensions.Djvu:
+				case FileExtensions.Djv:
 					return Djvu;
 
-				case _ext_sub:
+				case FileExtensions.Sub:
 					return Sub;
 
-				case _ext_dwg:
+				case FileExtensions.Dwg:
 					return Dwg;
 
-				case _ext_dxf:
+				case FileExtensions.Dxf:
 					return Dxf;
 
-				case _ext_fbs:
+				case FileExtensions.Fbs:
 					return Fbs;
 
-				case _ext_fpx:
+				case FileExtensions.Fpx:
 					return Fpx;
 
-				case _ext_fst:
+				case FileExtensions.Fst:
 					return Fst;
 
-				case _ext_mmr:
+				case FileExtensions.Mmr:
 					return Mmr;
 
-				case _ext_rlc:
+				case FileExtensions.Rlc:
 					return Rlc;
 
-				case _ext_mdi:
+				case FileExtensions.Mdi:
 					return Mdi;
 
-				case _ext_wdp:
+				case FileExtensions.Wdp:
 					return Wdp;
 
-				case _ext_npx:
+				case FileExtensions.Npx:
 					return Npx;
 
-				case _ext_wbmp:
+				case FileExtensions.Wbmp:
 					return Wbmp;
 
-				case _ext_xif:
+				case FileExtensions.Xif:
 					return Xif;
 
-				case _ext_webp:
+				case FileExtensions.Webp:
 					return Webp;
 
-				case _ext_3ds:
+				case FileExtensions._3ds:
 					return _3ds;
 
-				case _ext_ras:
+				case FileExtensions.Ras:
 					return Ras;
 
-				case _ext_cmx:
+				case FileExtensions.Cmx:
 					return Cmx;
 
-				case _ext_fh:
-				case _ext_fhc:
-				case _ext_fh4:
-				case _ext_fh5:
-				case _ext_fh7:
+				case FileExtensions.Fh:
+				case FileExtensions.Fhc:
+				case FileExtensions.Fh4:
+				case FileExtensions.Fh5:
+				case FileExtensions.Fh7:
 					return Fh;
 
-				case _ext_ico:
-				case _ext_cur:
+				case FileExtensions.Ico:
+				case FileExtensions.Cur:
 					return Ico;
 
-				case _ext_sid:
+				case FileExtensions.Sid:
 					return Sid;
 
-				case _ext_pcx:
+				case FileExtensions.Pcx:
 					return Pcx;
 
-				case _ext_pic:
-				case _ext_pct:
+				case FileExtensions.Pic:
+				case FileExtensions.Pct:
 					return Pic;
 
-				case _ext_pnm:
+				case FileExtensions.Pnm:
 					return Pnm;
 
-				case _ext_pbm:
+				case FileExtensions.Pbm:
 					return Pbm;
 
-				case _ext_pgm:
+				case FileExtensions.Pgm:
 					return Pgm;
 
-				case _ext_ppm:
+				case FileExtensions.Ppm:
 					return Ppm;
 
-				case _ext_rgb:
+				case FileExtensions.Rgb:
 					return Rgb;
 
-				case _ext_tga:
+				case FileExtensions.Tga:
 					return Tga;
 
-				case _ext_xbm:
+				case FileExtensions.Xbm:
 					return Xbm;
 
-				case _ext_xpm:
+				case FileExtensions.Xpm:
 					return Xpm;
 
-				case _ext_xwd:
+				case FileExtensions.Xwd:
 					return Xwd;
 
-				case _ext_eml:
-				case _ext_mime:
+				case FileExtensions.Eml:
+				case FileExtensions.Mime:
 					return Eml;
 
-				case _ext_igs:
-				case _ext_iges:
+				case FileExtensions.Igs:
+				case FileExtensions.Iges:
 					return Igs;
 
-				case _ext_msh:
-				case _ext_mesh:
-				case _ext_silo:
+				case FileExtensions.Msh:
+				case FileExtensions.Mesh:
+				case FileExtensions.Silo:
 					return Msh;
 
-				case _ext_dae:
+				case FileExtensions.Dae:
 					return Dae;
 
-				case _ext_dwf:
+				case FileExtensions.Dwf:
 					return Dwf;
 
-				case _ext_gdl:
+				case FileExtensions.Gdl:
 					return Gdl;
 
-				case _ext_gtw:
+				case FileExtensions.Gtw:
 					return Gtw;
 
-				case _ext_mts:
+				case FileExtensions.Mts:
 					return Mts;
 
-				case _ext_vtu:
+				case FileExtensions.Vtu:
 					return Vtu;
 
-				case _ext_wrl:
-				case _ext_vrml:
+				case FileExtensions.Wrl:
+				case FileExtensions.Vrml:
 					return Wrl;
 
-				case _ext_x3db:
-				case _ext_x3dbz:
+				case FileExtensions.X3db:
+				case FileExtensions.X3dbz:
 					return X3db;
 
-				case _ext_x3dv:
-				case _ext_x3dvz:
+				case FileExtensions.X3dv:
+				case FileExtensions.X3dvz:
 					return X3dv;
 
-				case _ext_x3d:
-				case _ext_x3dz:
+				case FileExtensions.X3d:
+				case FileExtensions.X3dz:
 					return X3d;
 
-				case _ext_appcache:
-				case _ext_manifest:
+				case FileExtensions.Appcache:
+				case FileExtensions.Manifest:
 					return Appcache;
 
-				case _ext_ics:
-				case _ext_ifb:
+				case FileExtensions.Ics:
+				case FileExtensions.Ifb:
 					return Ics;
 
-				case _ext_css:
+				case FileExtensions.Css:
 					return Css;
 
-				case _ext_csv:
+				case FileExtensions.Csv:
 					return Csv;
 
-				case _ext_html:
-				case _ext_htm:
-				case _ext_shtml:
+				case FileExtensions.Html:
+				case FileExtensions.Htm:
+				case FileExtensions.Shtml:
 					return Html;
 
-				case _ext_n3:
+				case FileExtensions.N3:
 					return N3;
 
-				case _ext_txt:
-				case _ext_text:
-				case _ext_conf:
-				case _ext_def:
-				case _ext_list:
-				case _ext_log:
-				case _ext_in:
-				case _ext_ini:
+				case FileExtensions.Txt:
+				case FileExtensions.Text:
+				case FileExtensions.Conf:
+				case FileExtensions.Def:
+				case FileExtensions.List:
+				case FileExtensions.Log:
+				case FileExtensions.In:
+				case FileExtensions.Ini:
 					return Txt;
 
-				case _ext_dsc:
+				case FileExtensions.Dsc:
 					return Dsc;
 
-				case _ext_rtx:
+				case FileExtensions.Rtx:
 					return Rtx;
 
-				case _ext_sgml:
-				case _ext_sgm:
+				case FileExtensions.Sgml:
+				case FileExtensions.Sgm:
 					return Sgml;
 
-				case _ext_tsv:
+				case FileExtensions.Tsv:
 					return Tsv;
 
-				case _ext_t:
-				case _ext_tr:
-				case _ext_roff:
-				case _ext_man:
-				case _ext_me:
-				case _ext_ms:
+				case FileExtensions.T:
+				case FileExtensions.Tr:
+				case FileExtensions.Roff:
+				case FileExtensions.Man:
+				case FileExtensions.Me:
+				case FileExtensions.Ms:
 					return T;
 
-				case _ext_ttl:
+				case FileExtensions.Ttl:
 					return Ttl;
 
-				case _ext_uri:
-				case _ext_uris:
-				case _ext_urls:
+				case FileExtensions.Uri:
+				case FileExtensions.Uris:
+				case FileExtensions.Urls:
 					return Uri;
 
-				case _ext_vcard:
+				case FileExtensions.Vcard:
 					return Vcard;
 
-				case _ext_curl:
+				case FileExtensions.Curl:
 					return Curl;
 
-				case _ext_dcurl:
+				case FileExtensions.Dcurl:
 					return Dcurl;
 
-				case _ext_mcurl:
+				case FileExtensions.Mcurl:
 					return Mcurl;
 
-				case _ext_scurl:
+				case FileExtensions.Scurl:
 					return Scurl;
 
-				case _ext_fly:
+				case FileExtensions.Fly:
 					return Fly;
 
-				case _ext_flx:
+				case FileExtensions.Flx:
 					return Flx;
 
-				case _ext_gv:
+				case FileExtensions.Gv:
 					return Gv;
 
-				case _ext_3dml:
+				case FileExtensions._3dml:
 					return _3dml;
 
-				case _ext_spot:
+				case FileExtensions.Spot:
 					return Spot;
 
-				case _ext_jad:
+				case FileExtensions.Jad:
 					return Jad;
 
-				case _ext_wml:
+				case FileExtensions.Wml:
 					return Wml;
 
-				case _ext_wmls:
+				case FileExtensions.Wmls:
 					return Wmls;
 
-				case _ext_s:
-				case _ext_asm:
+				case FileExtensions.S:
+				case FileExtensions.Asm:
 					return S;
 
-				case _ext_c:
-				case _ext_cc:
-				case _ext_cxx:
-				case _ext_cpp:
-				case _ext_h:
-				case _ext_hh:
-				case _ext_dic:
+				case FileExtensions.C:
+				case FileExtensions.Cc:
+				case FileExtensions.Cxx:
+				case FileExtensions.Cpp:
+				case FileExtensions.H:
+				case FileExtensions.Hh:
+				case FileExtensions.Dic:
 					return C;
 
-				case _ext_f:
-				case _ext_for:
-				case _ext_f77:
-				case _ext_f90:
+				case FileExtensions.F:
+				case FileExtensions.For:
+				case FileExtensions.F77:
+				case FileExtensions.F90:
 					return F;
 
-				case _ext_java:
+				case FileExtensions.Java:
 					return Java;
 
-				case _ext_nfo:
+				case FileExtensions.Nfo:
 					return Nfo;
 
-				case _ext_opml:
+				case FileExtensions.Opml:
 					return Opml;
 
-				case _ext_p:
-				case _ext_pas:
+				case FileExtensions.P:
+				case FileExtensions.Pas:
 					return P;
 
-				case _ext_etx:
+				case FileExtensions.Etx:
 					return Etx;
 
-				case _ext_sfv:
+				case FileExtensions.Sfv:
 					return Sfv;
 
-				case _ext_uu:
+				case FileExtensions.Uu:
 					return Uu;
 
-				case _ext_vcs:
+				case FileExtensions.Vcs:
 					return Vcs;
 
-				case _ext_vcf:
+				case FileExtensions.Vcf:
 					return Vcf;
 
-				case _ext_3gp:
-				case _ext_3gpp:
+				case FileExtensions._3gp:
+				case FileExtensions._3gpp:
 					return _3gp;
 
-				case _ext_3g2:
+				case FileExtensions._3g2:
 					return _3g2;
 
-				case _ext_h261:
+				case FileExtensions.H261:
 					return H261;
 
-				case _ext_h263:
+				case FileExtensions.H263:
 					return H263;
 
-				case _ext_h264:
+				case FileExtensions.H264:
 					return H264;
 
-				case _ext_jpgv:
+				case FileExtensions.Jpgv:
 					return Jpgv;
 
-				case _ext_jpm:
-				case _ext_jpgm:
+				case FileExtensions.Jpm:
+				case FileExtensions.Jpgm:
 					return Jpm;
 
-				case _ext_mj2:
-				case _ext_mjp2:
+				case FileExtensions.Mj2:
+				case FileExtensions.Mjp2:
 					return Mj2;
 
-				case _ext_mp4:
-				case _ext_mp4v:
-				case _ext_mpg4:
-				case _ext_f4p:
+				case FileExtensions.Mp4:
+				case FileExtensions.Mp4v:
+				case FileExtensions.Mpg4:
+				case FileExtensions.F4p:
 					return Mp4;
 
-				case _ext_mpeg:
-				case _ext_mpg:
-				case _ext_mpe:
-				case _ext_m1v:
-				case _ext_m2v:
+				case FileExtensions.Mpeg:
+				case FileExtensions.Mpg:
+				case FileExtensions.Mpe:
+				case FileExtensions.M1v:
+				case FileExtensions.M2v:
 					return Mpeg;
 
-				case _ext_ogv:
+				case FileExtensions.Ogv:
 					return Ogv;
 
-				case _ext_qt:
-				case _ext_mov:
+				case FileExtensions.Qt:
+				case FileExtensions.Mov:
 					return Qt;
 
-				case _ext_uvh:
-				case _ext_uvvh:
+				case FileExtensions.Uvh:
+				case FileExtensions.Uvvh:
 					return Uvh;
 
-				case _ext_uvm:
-				case _ext_uvvm:
+				case FileExtensions.Uvm:
+				case FileExtensions.Uvvm:
 					return Uvm;
 
-				case _ext_uvp:
-				case _ext_uvvp:
+				case FileExtensions.Uvp:
+				case FileExtensions.Uvvp:
 					return Uvp;
 
-				case _ext_uvs:
-				case _ext_uvvs:
+				case FileExtensions.Uvs:
+				case FileExtensions.Uvvs:
 					return Uvs;
 
-				case _ext_uvv:
-				case _ext_uvvv:
+				case FileExtensions.Uvv:
+				case FileExtensions.Uvvv:
 					return Uvv;
 
-				case _ext_dvb:
+				case FileExtensions.Dvb:
 					return Dvb;
 
-				case _ext_fvt:
+				case FileExtensions.Fvt:
 					return Fvt;
 
-				case _ext_mxu:
-				case _ext_m4u:
+				case FileExtensions.Mxu:
+				case FileExtensions.M4u:
 					return Mxu;
 
-				case _ext_pyv:
+				case FileExtensions.Pyv:
 					return Pyv;
 
-				case _ext_uvu:
-				case _ext_uvvu:
+				case FileExtensions.Uvu:
+				case FileExtensions.Uvvu:
 					return Uvu;
 
-				case _ext_viv:
+				case FileExtensions.Viv:
 					return Viv;
 
-				case _ext_webm:
+				case FileExtensions.Webm:
 					return Webm;
 
-				case _ext_f4v:
+				case FileExtensions.F4v:
 					return F4v;
 
-				case _ext_fli:
+				case FileExtensions.Fli:
 					return Fli;
 
-				case _ext_flv:
+				case FileExtensions.Flv:
 					return Flv;
 
-				case _ext_m4v:
+				case FileExtensions.M4v:
 					return M4v;
 
-				case _ext_mkv:
-				case _ext_mk3d:
-				case _ext_mks:
+				case FileExtensions.Mkv:
+				case FileExtensions.Mk3d:
+				case FileExtensions.Mks:
 					return Mkv;
 
-				case _ext_mng:
+				case FileExtensions.Mng:
 					return Mng;
 
-				case _ext_asf:
-				case _ext_asx:
+				case FileExtensions.Asf:
+				case FileExtensions.Asx:
 					return Asf;
 
-				case _ext_vob:
+				case FileExtensions.Vob:
 					return Vob;
 
-				case _ext_wm:
+				case FileExtensions.Wm:
 					return Wm;
 
-				case _ext_wmv:
+				case FileExtensions.Wmv:
 					return Wmv;
 
-				case _ext_wmx:
+				case FileExtensions.Wmx:
 					return Wmx;
 
-				case _ext_wvx:
+				case FileExtensions.Wvx:
 					return Wvx;
 
-				case _ext_avi:
+				case FileExtensions.Avi:
 					return Avi;
 
-				case _ext_movie:
+				case FileExtensions.Movie:
 					return Movie;
 
-				case _ext_smv:
+				case FileExtensions.Smv:
 					return Smv;
 
-				case _ext_ice:
+				case FileExtensions.Ice:
 					return Ice;
 
-				case _ext_jsonld:
+				case FileExtensions.Jsonld:
 					return Jsonld;
 
-				case _ext_geojson:
+				case FileExtensions.Geojson:
 					return Geojson;
 
-				case _ext_mjs:
+				case FileExtensions.Mjs:
 					return Mjs;
 
-				case _ext_wasm:
+				case FileExtensions.Wasm:
 					return Wasm;
 
-				case _ext_webmanifest:
+				case FileExtensions.Webmanifest:
 					return Webmanifest;
 
-				case _ext_webapp:
+				case FileExtensions.Webapp:
 					return Webapp;
 
-				case _ext_jxr:
-				case _ext_hdp:
-					return Jxr;
-
-				case _ext_jng:
-					return Jng;
-
-				case _ext_bbaw:
-					return Bbaw;
-
-				case _ext_crx:
-					return Crx;
-
-				case _ext_cco:
-					return Cco;
-
-				case _ext_jardiff:
-					return Jardiff;
-
-				case _ext_run:
-					return Run;
-
-				case _ext_oex:
-					return Oex;
-
-				case _ext_pl:
-				case _ext_pm:
-					return Pl;
-
-				case _ext_rpm:
-					return Rpm;
-
-				case _ext_sea:
-					return Sea;
-
-				case _ext_md:
-				case _ext_markdown:
-					return Md;
-
-				case _ext_mml:
-					return Mml;
-
-				case _ext_xloc:
-					return Xloc;
-
-				case _ext_vtt:
-					return Vtt;
-
-				case _ext_htc:
-					return Htc;
-
-				case _ext_bdoc:
-					return Bdoc;
-
-				case _ext_mpd:
-					return Mpd;
-
-				case _ext_gz:
-					return Gz;
-
-				case _ext_hjson:
-					return Hjson;
-
-				case _ext_json5:
-					return Json5;
-
-				case _ext_nq:
-					return Nq;
-
-				case _ext_nt:
-					return Nt;
-
-				case _ext_raml:
-					return Raml;
-
-				case _ext_siv:
-				case _ext_sieve:
-					return Siv;
-
-				case _ext_toml:
-					return Toml;
-
-				case _ext_pkpass:
-					return Pkpass;
-
-				case _ext_csl:
-					return Csl;
-
-				case _ext_gdoc:
-					return Gdoc;
-
-				case _ext_gslides:
-					return Gslides;
-
-				case _ext_gsheet:
-					return Gsheet;
-
-				case _ext_msg:
-					return Msg;
-
-				case _ext_wadl:
-					return Wadl;
-
-				case _ext_arj:
-					return Arj;
-
-				case _ext_php:
-					return Php;
-
-				case _ext_kdbx:
-					return Kdbx;
-
-				case _ext_luac:
-					return Luac;
-
-				case _ext_pac:
-					return Pac;
-
-				case _ext_hdd:
-					return Hdd;
-
-				case _ext_ova:
-					return Ova;
-
-				case _ext_ovf:
-					return Ovf;
-
-				case _ext_vbox:
-					return Vbox;
-
-				case _ext_vbox_extpack:
-					return Vboxextpack;
-
-				case _ext_vdi:
-					return Vdi;
-
-				case _ext_vhd:
-					return Vhd;
-
-				case _ext_vmdk:
-					return Vmdk;
-
-				case _ext_mxmf:
-					return Mxmf;
-
-				case _ext_apng:
+				case FileExtensions.Apng:
 					return Apng;
 
-				case _ext_heic:
+				case FileExtensions.Avif:
+					return Avif;
+
+				case FileExtensions.Avifs:
+					return Avifs;
+
+				case FileExtensions.Jxr:
+				case FileExtensions.Hdp:
+					return Jxr;
+
+				case FileExtensions.Jng:
+					return Jng;
+
+				case FileExtensions.Bbaw:
+					return Bbaw;
+
+				case FileExtensions.Crx:
+					return Crx;
+
+				case FileExtensions.Cco:
+					return Cco;
+
+				case FileExtensions.Jardiff:
+					return Jardiff;
+
+				case FileExtensions.Run:
+					return Run;
+
+				case FileExtensions.Oex:
+					return Oex;
+
+				case FileExtensions.Pl:
+				case FileExtensions.Pm:
+					return Pl;
+
+				case FileExtensions.Rpm:
+					return Rpm;
+
+				case FileExtensions.Sea:
+					return Sea;
+
+				case FileExtensions.Md:
+				case FileExtensions.Markdown:
+					return Md;
+
+				case FileExtensions.Mml:
+					return Mml;
+
+				case FileExtensions.Xloc:
+					return Xloc;
+
+				case FileExtensions.Vtt:
+					return Vtt;
+
+				case FileExtensions.Htc:
+					return Htc;
+
+				case FileExtensions.Bdoc:
+					return Bdoc;
+
+				case FileExtensions.Hjson:
+					return Hjson;
+
+				case FileExtensions.Json5:
+					return Json5;
+
+				case FileExtensions.Cjs:
+					return Cjs;
+
+				case FileExtensions.Raml:
+					return Raml;
+
+				case FileExtensions.Siv:
+				case FileExtensions.Sieve:
+					return Siv;
+
+				case FileExtensions.Toml:
+					return Toml;
+
+				case FileExtensions.Ubj:
+					return Ubj;
+
+				case FileExtensions.Pkpass:
+					return Pkpass;
+
+				case FileExtensions.Gdoc:
+					return Gdoc;
+
+				case FileExtensions.Gslides:
+					return Gslides;
+
+				case FileExtensions.Gsheet:
+					return Gsheet;
+
+				case FileExtensions.Msg:
+					return Msg;
+
+				case FileExtensions.Arj:
+					return Arj;
+
+				case FileExtensions.Php:
+					return Php;
+
+				case FileExtensions.Kdbx:
+					return Kdbx;
+
+				case FileExtensions.Luac:
+					return Luac;
+
+				case FileExtensions.Pac:
+					return Pac;
+
+				case FileExtensions.Hdd:
+					return Hdd;
+
+				case FileExtensions.Ova:
+					return Ova;
+
+				case FileExtensions.Ovf:
+					return Ovf;
+
+				case FileExtensions.Vbox:
+					return Vbox;
+
+				case FileExtensions.Vbox_extpack:
+					return Vboxextpack;
+
+				case FileExtensions.Vdi:
+					return Vdi;
+
+				case FileExtensions.Vhd:
+					return Vhd;
+
+				case FileExtensions.Vmdk:
+					return Vmdk;
+
+				case FileExtensions.Heic:
 					return Heic;
 
-				case _ext_heics:
+				case FileExtensions.Heics:
 					return Heics;
 
-				case _ext_heif:
+				case FileExtensions.Heif:
 					return Heif;
 
-				case _ext_heifs:
+				case FileExtensions.Heifs:
 					return Heifs;
 
-				case _ext_jp2:
-				case _ext_jpg2:
+				case FileExtensions.Jp2:
+				case FileExtensions.Jpg2:
 					return Jp2;
 
-				case _ext_jpx:
-				case _ext_jpf:
+				case FileExtensions.Jpx:
+				case FileExtensions.Jpf:
 					return Jpx;
 
-				case _ext_dds:
+				case FileExtensions.Dds:
 					return Dds;
 
-				case _ext_coffee:
-				case _ext_litcoffee:
+				case FileExtensions.Coffee:
+				case FileExtensions.Litcoffee:
 					return Coffee;
 
-				case _ext_jade:
+				case FileExtensions.Jade:
 					return Jade;
 
-				case _ext_jsx:
+				case FileExtensions.Jsx:
 					return Jsx;
 
-				case _ext_less:
+				case FileExtensions.Less:
 					return Less;
 
-				case _ext_mdx:
+				case FileExtensions.Mdx:
 					return Mdx;
 
-				case _ext_shex:
+				case FileExtensions.Shex:
 					return Shex;
 
-				case _ext_slim:
-				case _ext_slm:
+				case FileExtensions.Slim:
+				case FileExtensions.Slm:
 					return Slim;
 
-				case _ext_stylus:
-				case _ext_styl:
+				case FileExtensions.Stylus:
+				case FileExtensions.Styl:
 					return Stylus;
 
-				case _ext_hbs:
+				case FileExtensions.Hbs:
 					return Hbs;
 
-				case _ext_lua:
+				case FileExtensions.Lua:
 					return Lua;
 
-				case _ext_mkd:
+				case FileExtensions.Mkd:
 					return Mkd;
 
-				case _ext_pde:
+				case FileExtensions.Pde:
 					return Pde;
 
-				case _ext_sass:
+				case FileExtensions.Sass:
 					return Sass;
 
-				case _ext_scss:
+				case FileExtensions.Scss:
 					return Scss;
 
-				case _ext_ymp:
+				case FileExtensions.Ymp:
 					return Ymp;
 
-				case _ext_yaml:
-				case _ext_yml:
+				case FileExtensions.Yaml:
+				case FileExtensions.Yml:
 					return Yaml;
 
 				default: 
 					return null;
             }
         }
+
+        // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
+        internal static string[] LookupMimeType(string mimeType)
+        {
+            switch (mimeType)
+            {
+				case Ez:
+					return new[] {FileExtensions.Ez};
+				case Aw:
+					return new[] {FileExtensions.Aw};
+				case Atom:
+					return new[] {FileExtensions.Atom};
+				case Atomcat:
+					return new[] {FileExtensions.Atomcat};
+				case Atomsvc:
+					return new[] {FileExtensions.Atomsvc};
+				case Ccxml:
+					return new[] {FileExtensions.Ccxml};
+				case Cdmia:
+					return new[] {FileExtensions.Cdmia};
+				case Cdmic:
+					return new[] {FileExtensions.Cdmic};
+				case Cdmid:
+					return new[] {FileExtensions.Cdmid};
+				case Cdmio:
+					return new[] {FileExtensions.Cdmio};
+				case Cdmiq:
+					return new[] {FileExtensions.Cdmiq};
+				case Cu:
+					return new[] {FileExtensions.Cu};
+				case Davmount:
+					return new[] {FileExtensions.Davmount};
+				case Dbk:
+					return new[] {FileExtensions.Dbk};
+				case Dssc:
+					return new[] {FileExtensions.Dssc};
+				case Xdssc:
+					return new[] {FileExtensions.Xdssc};
+				case Ecma:
+				//case Es:
+					return new[] {FileExtensions.Ecma, FileExtensions.Es};
+				case Emma:
+					return new[] {FileExtensions.Emma};
+				case Epub:
+					return new[] {FileExtensions.Epub};
+				case Exi:
+					return new[] {FileExtensions.Exi};
+				case Pfr:
+					return new[] {FileExtensions.Pfr};
+				case Gml:
+					return new[] {FileExtensions.Gml};
+				case Gpx:
+					return new[] {FileExtensions.Gpx};
+				case Gxf:
+					return new[] {FileExtensions.Gxf};
+				case Stk:
+					return new[] {FileExtensions.Stk};
+				case Ink:
+				//case Inkml:
+					return new[] {FileExtensions.Ink, FileExtensions.Inkml};
+				case Ipfix:
+					return new[] {FileExtensions.Ipfix};
+				case Jar:
+				//case Ear:
+				//case War:
+					return new[] {FileExtensions.Jar, FileExtensions.Ear, FileExtensions.War};
+				case Ser:
+					return new[] {FileExtensions.Ser};
+				case Class:
+					return new[] {FileExtensions.Class};
+				case Js:
+					return new[] {FileExtensions.Js};
+				case Json:
+				//case Map:
+				//case Topojson:
+					return new[] {FileExtensions.Json, FileExtensions.Map, FileExtensions.Topojson};
+				case Jsonml:
+					return new[] {FileExtensions.Jsonml};
+				case Lostxml:
+					return new[] {FileExtensions.Lostxml};
+				case Hqx:
+					return new[] {FileExtensions.Hqx};
+				case Cpt:
+					return new[] {FileExtensions.Cpt};
+				case Mads:
+					return new[] {FileExtensions.Mads};
+				case Mrc:
+					return new[] {FileExtensions.Mrc};
+				case Mrcx:
+					return new[] {FileExtensions.Mrcx};
+				case Ma:
+				//case Nb:
+				//case Mb:
+					return new[] {FileExtensions.Ma, FileExtensions.Nb, FileExtensions.Mb};
+				case Mathml:
+					return new[] {FileExtensions.Mathml};
+				case Mbox:
+					return new[] {FileExtensions.Mbox};
+				case Mscml:
+					return new[] {FileExtensions.Mscml};
+				case Metalink:
+					return new[] {FileExtensions.Metalink};
+				case Meta4:
+					return new[] {FileExtensions.Meta4};
+				case Mets:
+					return new[] {FileExtensions.Mets};
+				case Mods:
+					return new[] {FileExtensions.Mods};
+				case M21:
+				//case Mp21:
+					return new[] {FileExtensions.M21, FileExtensions.Mp21};
+				case Mp4s:
+				//case M4p:
+					return new[] {FileExtensions.Mp4s, FileExtensions.M4p};
+				case Doc:
+				//case Dot:
+					return new[] {FileExtensions.Doc, FileExtensions.Dot};
+				case Mxf:
+					return new[] {FileExtensions.Mxf};
+				case Bin:
+				//case Dms:
+				//case Lrf:
+				//case Mar:
+				//case So:
+				//case Dist:
+				//case Distz:
+				//case Pkg:
+				//case Bpk:
+				//case Dump:
+				//case Elc:
+				//case Deploy:
+				//case Img:
+				//case Msm:
+				//case Msp:
+				//case Safariextz:
+				//case Buffer:
+					return new[] {FileExtensions.Bin, FileExtensions.Dms, FileExtensions.Lrf, FileExtensions.Mar, FileExtensions.So, FileExtensions.Dist, FileExtensions.Distz, FileExtensions.Pkg, FileExtensions.Bpk, FileExtensions.Dump, FileExtensions.Elc, FileExtensions.Deploy, FileExtensions.Img, FileExtensions.Msm, FileExtensions.Msp, FileExtensions.Safariextz, FileExtensions.Buffer};
+				case Oda:
+					return new[] {FileExtensions.Oda};
+				case Opf:
+					return new[] {FileExtensions.Opf};
+				case Ogx:
+					return new[] {FileExtensions.Ogx};
+				case Omdoc:
+					return new[] {FileExtensions.Omdoc};
+				case Onetoc:
+				//case Onetoc2:
+				//case Onetmp:
+				//case Onepkg:
+					return new[] {FileExtensions.Onetoc, FileExtensions.Onetoc2, FileExtensions.Onetmp, FileExtensions.Onepkg};
+				case Oxps:
+					return new[] {FileExtensions.Oxps};
+				case Xer:
+					return new[] {FileExtensions.Xer};
+				case Pdf:
+					return new[] {FileExtensions.Pdf};
+				case Pgp:
+					return new[] {FileExtensions.Pgp};
+				case Asc:
+				//case Sig:
+					return new[] {FileExtensions.Asc, FileExtensions.Sig};
+				case Prf:
+					return new[] {FileExtensions.Prf};
+				case P10:
+					return new[] {FileExtensions.P10};
+				case P7m:
+				//case P7c:
+					return new[] {FileExtensions.P7m, FileExtensions.P7c};
+				case P7s:
+					return new[] {FileExtensions.P7s};
+				case P8:
+					return new[] {FileExtensions.P8};
+				case Ac:
+					return new[] {FileExtensions.Ac};
+				case Cer:
+					return new[] {FileExtensions.Cer};
+				case Crl:
+					return new[] {FileExtensions.Crl};
+				case Pkipath:
+					return new[] {FileExtensions.Pkipath};
+				case Pki:
+					return new[] {FileExtensions.Pki};
+				case Pls:
+					return new[] {FileExtensions.Pls};
+				case Ai:
+				//case Eps:
+				//case Ps:
+					return new[] {FileExtensions.Ai, FileExtensions.Eps, FileExtensions.Ps};
+				case Cww:
+					return new[] {FileExtensions.Cww};
+				case Pskcxml:
+					return new[] {FileExtensions.Pskcxml};
+				case Rdf:
+				//case Owl:
+					return new[] {FileExtensions.Rdf, FileExtensions.Owl};
+				case Rif:
+					return new[] {FileExtensions.Rif};
+				case Rnc:
+					return new[] {FileExtensions.Rnc};
+				case Rl:
+					return new[] {FileExtensions.Rl};
+				case Rld:
+					return new[] {FileExtensions.Rld};
+				case Rs:
+					return new[] {FileExtensions.Rs};
+				case Gbr:
+					return new[] {FileExtensions.Gbr};
+				case Mft:
+					return new[] {FileExtensions.Mft};
+				case Roa:
+					return new[] {FileExtensions.Roa};
+				case Rsd:
+					return new[] {FileExtensions.Rsd};
+				case Rss:
+					return new[] {FileExtensions.Rss};
+				case Rtf:
+					return new[] {FileExtensions.Rtf};
+				case Sbml:
+					return new[] {FileExtensions.Sbml};
+				case Scq:
+					return new[] {FileExtensions.Scq};
+				case Scs:
+					return new[] {FileExtensions.Scs};
+				case Spq:
+					return new[] {FileExtensions.Spq};
+				case Spp:
+					return new[] {FileExtensions.Spp};
+				case Sdp:
+					return new[] {FileExtensions.Sdp};
+				case Setpay:
+					return new[] {FileExtensions.Setpay};
+				case Setreg:
+					return new[] {FileExtensions.Setreg};
+				case Shf:
+					return new[] {FileExtensions.Shf};
+				case Smi:
+				//case Smil:
+					return new[] {FileExtensions.Smi, FileExtensions.Smil};
+				case Rq:
+					return new[] {FileExtensions.Rq};
+				case Srx:
+					return new[] {FileExtensions.Srx};
+				case Gram:
+					return new[] {FileExtensions.Gram};
+				case Grxml:
+					return new[] {FileExtensions.Grxml};
+				case Sru:
+					return new[] {FileExtensions.Sru};
+				case Ssdl:
+					return new[] {FileExtensions.Ssdl};
+				case Ssml:
+					return new[] {FileExtensions.Ssml};
+				case Tei:
+				//case Teicorpus:
+					return new[] {FileExtensions.Tei, FileExtensions.Teicorpus};
+				case Tfi:
+					return new[] {FileExtensions.Tfi};
+				case Tsd:
+					return new[] {FileExtensions.Tsd};
+				case Plb:
+					return new[] {FileExtensions.Plb};
+				case Psb:
+					return new[] {FileExtensions.Psb};
+				case Pvb:
+					return new[] {FileExtensions.Pvb};
+				case Tcap:
+					return new[] {FileExtensions.Tcap};
+				case Pwn:
+					return new[] {FileExtensions.Pwn};
+				case Aso:
+					return new[] {FileExtensions.Aso};
+				case Imp:
+					return new[] {FileExtensions.Imp};
+				case Acu:
+					return new[] {FileExtensions.Acu};
+				case Atc:
+				//case Acutc:
+					return new[] {FileExtensions.Atc, FileExtensions.Acutc};
+				case Air:
+					return new[] {FileExtensions.Air};
+				case Fcdt:
+					return new[] {FileExtensions.Fcdt};
+				case Fxp:
+				//case Fxpl:
+					return new[] {FileExtensions.Fxp, FileExtensions.Fxpl};
+				case Xdp:
+					return new[] {FileExtensions.Xdp};
+				case Xfdf:
+					return new[] {FileExtensions.Xfdf};
+				case Ahead:
+					return new[] {FileExtensions.Ahead};
+				case Azf:
+					return new[] {FileExtensions.Azf};
+				case Azs:
+					return new[] {FileExtensions.Azs};
+				case Azw:
+					return new[] {FileExtensions.Azw};
+				case Acc:
+					return new[] {FileExtensions.Acc};
+				case Ami:
+					return new[] {FileExtensions.Ami};
+				case Apk:
+					return new[] {FileExtensions.Apk};
+				case Cii:
+					return new[] {FileExtensions.Cii};
+				case Fti:
+					return new[] {FileExtensions.Fti};
+				case Atx:
+					return new[] {FileExtensions.Atx};
+				case Mpkg:
+					return new[] {FileExtensions.Mpkg};
+				case M3u8:
+					return new[] {FileExtensions.M3u8};
+				case Swi:
+					return new[] {FileExtensions.Swi};
+				case Iota:
+					return new[] {FileExtensions.Iota};
+				case Aep:
+					return new[] {FileExtensions.Aep};
+				case Mpm:
+					return new[] {FileExtensions.Mpm};
+				case Bmi:
+					return new[] {FileExtensions.Bmi};
+				case Rep:
+					return new[] {FileExtensions.Rep};
+				case Cdxml:
+					return new[] {FileExtensions.Cdxml};
+				case Mmd:
+					return new[] {FileExtensions.Mmd};
+				case Cdy:
+					return new[] {FileExtensions.Cdy};
+				case Cla:
+					return new[] {FileExtensions.Cla};
+				case Rp9:
+					return new[] {FileExtensions.Rp9};
+				case C4g:
+				//case C4d:
+				//case C4f:
+				//case C4p:
+				//case C4u:
+					return new[] {FileExtensions.C4g, FileExtensions.C4d, FileExtensions.C4f, FileExtensions.C4p, FileExtensions.C4u};
+				case C11amc:
+					return new[] {FileExtensions.C11amc};
+				case C11amz:
+					return new[] {FileExtensions.C11amz};
+				case Csp:
+					return new[] {FileExtensions.Csp};
+				case Cdbcmsg:
+					return new[] {FileExtensions.Cdbcmsg};
+				case Cmc:
+					return new[] {FileExtensions.Cmc};
+				case Clkx:
+					return new[] {FileExtensions.Clkx};
+				case Clkk:
+					return new[] {FileExtensions.Clkk};
+				case Clkp:
+					return new[] {FileExtensions.Clkp};
+				case Clkt:
+					return new[] {FileExtensions.Clkt};
+				case Clkw:
+					return new[] {FileExtensions.Clkw};
+				case Wbs:
+					return new[] {FileExtensions.Wbs};
+				case Pml:
+					return new[] {FileExtensions.Pml};
+				case Ppd:
+					return new[] {FileExtensions.Ppd};
+				case Car:
+					return new[] {FileExtensions.Car};
+				case Pcurl:
+					return new[] {FileExtensions.Pcurl};
+				case Dart:
+					return new[] {FileExtensions.Dart};
+				case Rdz:
+					return new[] {FileExtensions.Rdz};
+				case Uvf:
+				//case Uvvf:
+				//case Uvd:
+				//case Uvvd:
+					return new[] {FileExtensions.Uvf, FileExtensions.Uvvf, FileExtensions.Uvd, FileExtensions.Uvvd};
+				case Uvt:
+				//case Uvvt:
+					return new[] {FileExtensions.Uvt, FileExtensions.Uvvt};
+				case Uvx:
+				//case Uvvx:
+					return new[] {FileExtensions.Uvx, FileExtensions.Uvvx};
+				case Uvz:
+				//case Uvvz:
+					return new[] {FileExtensions.Uvz, FileExtensions.Uvvz};
+				case Felaunch:
+					return new[] {FileExtensions.Fe_launch};
+				case Dna:
+					return new[] {FileExtensions.Dna};
+				case Mlp:
+					return new[] {FileExtensions.Mlp};
+				case Dpg:
+					return new[] {FileExtensions.Dpg};
+				case Dfac:
+					return new[] {FileExtensions.Dfac};
+				case Kpxx:
+					return new[] {FileExtensions.Kpxx};
+				case Ait:
+					return new[] {FileExtensions.Ait};
+				case Svc:
+					return new[] {FileExtensions.Svc};
+				case Geo:
+					return new[] {FileExtensions.Geo};
+				case Mag:
+					return new[] {FileExtensions.Mag};
+				case Nml:
+					return new[] {FileExtensions.Nml};
+				case Esf:
+					return new[] {FileExtensions.Esf};
+				case Msf:
+					return new[] {FileExtensions.Msf};
+				case Qam:
+					return new[] {FileExtensions.Qam};
+				case Slt:
+					return new[] {FileExtensions.Slt};
+				case Ssf:
+					return new[] {FileExtensions.Ssf};
+				case Es3:
+				//case Et3:
+					return new[] {FileExtensions.Es3, FileExtensions.Et3};
+				case Ez2:
+					return new[] {FileExtensions.Ez2};
+				case Ez3:
+					return new[] {FileExtensions.Ez3};
+				case Fdf:
+					return new[] {FileExtensions.Fdf};
+				case Mseed:
+					return new[] {FileExtensions.Mseed};
+				case Seed:
+				//case Dataless:
+					return new[] {FileExtensions.Seed, FileExtensions.Dataless};
+				case Gph:
+					return new[] {FileExtensions.Gph};
+				case Ftc:
+					return new[] {FileExtensions.Ftc};
+				case Fm:
+				//case Frame:
+				//case Maker:
+				//case Book:
+					return new[] {FileExtensions.Fm, FileExtensions.Frame, FileExtensions.Maker, FileExtensions.Book};
+				case Fnc:
+					return new[] {FileExtensions.Fnc};
+				case Ltf:
+					return new[] {FileExtensions.Ltf};
+				case Fsc:
+					return new[] {FileExtensions.Fsc};
+				case Oas:
+					return new[] {FileExtensions.Oas};
+				case Oa2:
+					return new[] {FileExtensions.Oa2};
+				case Oa3:
+					return new[] {FileExtensions.Oa3};
+				case Fg5:
+					return new[] {FileExtensions.Fg5};
+				case Bh2:
+					return new[] {FileExtensions.Bh2};
+				case Ddd:
+					return new[] {FileExtensions.Ddd};
+				case Xdw:
+					return new[] {FileExtensions.Xdw};
+				case Xbd:
+					return new[] {FileExtensions.Xbd};
+				case Fzs:
+					return new[] {FileExtensions.Fzs};
+				case Txd:
+					return new[] {FileExtensions.Txd};
+				case Ggb:
+					return new[] {FileExtensions.Ggb};
+				case Ggt:
+					return new[] {FileExtensions.Ggt};
+				case Gex:
+				//case Gre:
+					return new[] {FileExtensions.Gex, FileExtensions.Gre};
+				case Gxt:
+					return new[] {FileExtensions.Gxt};
+				case G2w:
+					return new[] {FileExtensions.G2w};
+				case G3w:
+					return new[] {FileExtensions.G3w};
+				case Gmx:
+					return new[] {FileExtensions.Gmx};
+				case Kml:
+					return new[] {FileExtensions.Kml};
+				case Kmz:
+					return new[] {FileExtensions.Kmz};
+				case Gqf:
+				//case Gqs:
+					return new[] {FileExtensions.Gqf, FileExtensions.Gqs};
+				case Gac:
+					return new[] {FileExtensions.Gac};
+				case Ghf:
+					return new[] {FileExtensions.Ghf};
+				case Gim:
+					return new[] {FileExtensions.Gim};
+				case Grv:
+					return new[] {FileExtensions.Grv};
+				case Gtm:
+					return new[] {FileExtensions.Gtm};
+				case Tpl:
+					return new[] {FileExtensions.Tpl};
+				case Vcg:
+					return new[] {FileExtensions.Vcg};
+				case Hal:
+					return new[] {FileExtensions.Hal};
+				case Zmm:
+					return new[] {FileExtensions.Zmm};
+				case Hbci:
+					return new[] {FileExtensions.Hbci};
+				case Les:
+					return new[] {FileExtensions.Les};
+				case Hpgl:
+					return new[] {FileExtensions.Hpgl};
+				case Hpid:
+					return new[] {FileExtensions.Hpid};
+				case Hps:
+					return new[] {FileExtensions.Hps};
+				case Jlt:
+					return new[] {FileExtensions.Jlt};
+				case Pcl:
+					return new[] {FileExtensions.Pcl};
+				case Pclxl:
+					return new[] {FileExtensions.Pclxl};
+				case Sfdhdstx:
+					return new[] {FileExtensions.Sfd_hdstx};
+				case Mpy:
+					return new[] {FileExtensions.Mpy};
+				case Afp:
+				//case Listafp:
+				//case List3820:
+					return new[] {FileExtensions.Afp, FileExtensions.Listafp, FileExtensions.List3820};
+				case Irm:
+					return new[] {FileExtensions.Irm};
+				case Sc:
+					return new[] {FileExtensions.Sc};
+				case Icc:
+				//case Icm:
+					return new[] {FileExtensions.Icc, FileExtensions.Icm};
+				case Igl:
+					return new[] {FileExtensions.Igl};
+				case Ivp:
+					return new[] {FileExtensions.Ivp};
+				case Ivu:
+					return new[] {FileExtensions.Ivu};
+				case Igm:
+					return new[] {FileExtensions.Igm};
+				case Xpw:
+				//case Xpx:
+					return new[] {FileExtensions.Xpw, FileExtensions.Xpx};
+				case I2g:
+					return new[] {FileExtensions.I2g};
+				case Qbo:
+					return new[] {FileExtensions.Qbo};
+				case Qfx:
+					return new[] {FileExtensions.Qfx};
+				case Rcprofile:
+					return new[] {FileExtensions.Rcprofile};
+				case Irp:
+					return new[] {FileExtensions.Irp};
+				case Xpr:
+					return new[] {FileExtensions.Xpr};
+				case Fcs:
+					return new[] {FileExtensions.Fcs};
+				case Jam:
+					return new[] {FileExtensions.Jam};
+				case Rms:
+					return new[] {FileExtensions.Rms};
+				case Jisp:
+					return new[] {FileExtensions.Jisp};
+				case Joda:
+					return new[] {FileExtensions.Joda};
+				case Ktz:
+				//case Ktr:
+					return new[] {FileExtensions.Ktz, FileExtensions.Ktr};
+				case Karbon:
+					return new[] {FileExtensions.Karbon};
+				case Chrt:
+					return new[] {FileExtensions.Chrt};
+				case Kfo:
+					return new[] {FileExtensions.Kfo};
+				case Flw:
+					return new[] {FileExtensions.Flw};
+				case Kon:
+					return new[] {FileExtensions.Kon};
+				case Kpr:
+				//case Kpt:
+					return new[] {FileExtensions.Kpr, FileExtensions.Kpt};
+				case Ksp:
+					return new[] {FileExtensions.Ksp};
+				case Kwd:
+				//case Kwt:
+					return new[] {FileExtensions.Kwd, FileExtensions.Kwt};
+				case Htke:
+					return new[] {FileExtensions.Htke};
+				case Kia:
+					return new[] {FileExtensions.Kia};
+				case Kne:
+				//case Knp:
+					return new[] {FileExtensions.Kne, FileExtensions.Knp};
+				case Skp:
+				//case Skd:
+				//case Skt:
+				//case Skm:
+					return new[] {FileExtensions.Skp, FileExtensions.Skd, FileExtensions.Skt, FileExtensions.Skm};
+				case Sse:
+					return new[] {FileExtensions.Sse};
+				case Lasxml:
+					return new[] {FileExtensions.Lasxml};
+				case Lbd:
+					return new[] {FileExtensions.Lbd};
+				case Lbe:
+					return new[] {FileExtensions.Lbe};
+				case _123:
+					return new[] {FileExtensions._123};
+				case Apr:
+					return new[] {FileExtensions.Apr};
+				case Pre:
+					return new[] {FileExtensions.Pre};
+				case Nsf:
+					return new[] {FileExtensions.Nsf};
+				case Org:
+					return new[] {FileExtensions.Org};
+				case Scm:
+					return new[] {FileExtensions.Scm};
+				case Lwp:
+					return new[] {FileExtensions.Lwp};
+				case Portpkg:
+					return new[] {FileExtensions.Portpkg};
+				case Mcd:
+					return new[] {FileExtensions.Mcd};
+				case Mc1:
+					return new[] {FileExtensions.Mc1};
+				case Cdkey:
+					return new[] {FileExtensions.Cdkey};
+				case Mwf:
+					return new[] {FileExtensions.Mwf};
+				case Mfm:
+					return new[] {FileExtensions.Mfm};
+				case Flo:
+					return new[] {FileExtensions.Flo};
+				case Igx:
+					return new[] {FileExtensions.Igx};
+				case Mif:
+					return new[] {FileExtensions.Mif};
+				case Daf:
+					return new[] {FileExtensions.Daf};
+				case Dis:
+					return new[] {FileExtensions.Dis};
+				case Mbk:
+					return new[] {FileExtensions.Mbk};
+				case Mqy:
+					return new[] {FileExtensions.Mqy};
+				case Msl:
+					return new[] {FileExtensions.Msl};
+				case Plc:
+					return new[] {FileExtensions.Plc};
+				case Txf:
+					return new[] {FileExtensions.Txf};
+				case Mpn:
+					return new[] {FileExtensions.Mpn};
+				case Mpc:
+					return new[] {FileExtensions.Mpc};
+				case Xul:
+					return new[] {FileExtensions.Xul};
+				case Cil:
+					return new[] {FileExtensions.Cil};
+				case Cab:
+					return new[] {FileExtensions.Cab};
+				case Xls:
+				//case Xlm:
+				//case Xla:
+				//case Xlc:
+				//case Xlt:
+				//case Xlw:
+					return new[] {FileExtensions.Xls, FileExtensions.Xlm, FileExtensions.Xla, FileExtensions.Xlc, FileExtensions.Xlt, FileExtensions.Xlw};
+				case Xlam:
+					return new[] {FileExtensions.Xlam};
+				case Xlsb:
+					return new[] {FileExtensions.Xlsb};
+				case Xlsm:
+					return new[] {FileExtensions.Xlsm};
+				case Xltm:
+					return new[] {FileExtensions.Xltm};
+				case Eot:
+					return new[] {FileExtensions.Eot};
+				case Chm:
+					return new[] {FileExtensions.Chm};
+				case Ims:
+					return new[] {FileExtensions.Ims};
+				case Lrm:
+					return new[] {FileExtensions.Lrm};
+				case Thmx:
+					return new[] {FileExtensions.Thmx};
+				case Cat:
+					return new[] {FileExtensions.Cat};
+				case Stl:
+					return new[] {FileExtensions.Stl};
+				case Ppt:
+				//case Pps:
+				//case Pot:
+					return new[] {FileExtensions.Ppt, FileExtensions.Pps, FileExtensions.Pot};
+				case Ppam:
+					return new[] {FileExtensions.Ppam};
+				case Pptm:
+					return new[] {FileExtensions.Pptm};
+				case Sldm:
+					return new[] {FileExtensions.Sldm};
+				case Ppsm:
+					return new[] {FileExtensions.Ppsm};
+				case Potm:
+					return new[] {FileExtensions.Potm};
+				case Mpp:
+				//case Mpt:
+					return new[] {FileExtensions.Mpp, FileExtensions.Mpt};
+				case Docm:
+					return new[] {FileExtensions.Docm};
+				case Dotm:
+					return new[] {FileExtensions.Dotm};
+				case Wps:
+				//case Wks:
+				//case Wcm:
+				//case Wdb:
+					return new[] {FileExtensions.Wps, FileExtensions.Wks, FileExtensions.Wcm, FileExtensions.Wdb};
+				case Wpl:
+					return new[] {FileExtensions.Wpl};
+				case Xps:
+					return new[] {FileExtensions.Xps};
+				case Mseq:
+					return new[] {FileExtensions.Mseq};
+				case Mus:
+					return new[] {FileExtensions.Mus};
+				case Msty:
+					return new[] {FileExtensions.Msty};
+				case Taglet:
+					return new[] {FileExtensions.Taglet};
+				case Nlu:
+					return new[] {FileExtensions.Nlu};
+				case Ntf:
+				//case Nitf:
+					return new[] {FileExtensions.Ntf, FileExtensions.Nitf};
+				case Nnd:
+					return new[] {FileExtensions.Nnd};
+				case Nns:
+					return new[] {FileExtensions.Nns};
+				case Nnw:
+					return new[] {FileExtensions.Nnw};
+				case Ngdat:
+					return new[] {FileExtensions.Ngdat};
+				case Ngage:
+					return new[] {FileExtensions.N_gage};
+				case Rpst:
+					return new[] {FileExtensions.Rpst};
+				case Rpss:
+					return new[] {FileExtensions.Rpss};
+				case Edm:
+					return new[] {FileExtensions.Edm};
+				case Edx:
+					return new[] {FileExtensions.Edx};
+				case Ext:
+					return new[] {FileExtensions.Ext};
+				case Odc:
+					return new[] {FileExtensions.Odc};
+				case Otc:
+					return new[] {FileExtensions.Otc};
+				case Odb:
+					return new[] {FileExtensions.Odb};
+				case Odf:
+					return new[] {FileExtensions.Odf};
+				case Odft:
+					return new[] {FileExtensions.Odft};
+				case Odg:
+					return new[] {FileExtensions.Odg};
+				case Otg:
+					return new[] {FileExtensions.Otg};
+				case Odi:
+					return new[] {FileExtensions.Odi};
+				case Oti:
+					return new[] {FileExtensions.Oti};
+				case Odp:
+					return new[] {FileExtensions.Odp};
+				case Otp:
+					return new[] {FileExtensions.Otp};
+				case Ods:
+					return new[] {FileExtensions.Ods};
+				case Ots:
+					return new[] {FileExtensions.Ots};
+				case Odt:
+					return new[] {FileExtensions.Odt};
+				case Odm:
+					return new[] {FileExtensions.Odm};
+				case Ott:
+					return new[] {FileExtensions.Ott};
+				case Oth:
+					return new[] {FileExtensions.Oth};
+				case Xo:
+					return new[] {FileExtensions.Xo};
+				case Dd2:
+					return new[] {FileExtensions.Dd2};
+				case Oxt:
+					return new[] {FileExtensions.Oxt};
+				case Pptx:
+					return new[] {FileExtensions.Pptx};
+				case Sldx:
+					return new[] {FileExtensions.Sldx};
+				case Ppsx:
+					return new[] {FileExtensions.Ppsx};
+				case Potx:
+					return new[] {FileExtensions.Potx};
+				case Xlsx:
+					return new[] {FileExtensions.Xlsx};
+				case Xltx:
+					return new[] {FileExtensions.Xltx};
+				case Docx:
+					return new[] {FileExtensions.Docx};
+				case Dotx:
+					return new[] {FileExtensions.Dotx};
+				case Mgp:
+					return new[] {FileExtensions.Mgp};
+				case Dp:
+					return new[] {FileExtensions.Dp};
+				case Esa:
+					return new[] {FileExtensions.Esa};
+				case Pdb:
+				//case Pqa:
+				//case Oprc:
+					return new[] {FileExtensions.Pdb, FileExtensions.Pqa, FileExtensions.Oprc};
+				case Paw:
+					return new[] {FileExtensions.Paw};
+				case Str:
+					return new[] {FileExtensions.Str};
+				case Ei6:
+					return new[] {FileExtensions.Ei6};
+				case Efif:
+					return new[] {FileExtensions.Efif};
+				case Wg:
+					return new[] {FileExtensions.Wg};
+				case Plf:
+					return new[] {FileExtensions.Plf};
+				case Pbd:
+					return new[] {FileExtensions.Pbd};
+				case Box:
+					return new[] {FileExtensions.Box};
+				case Mgz:
+					return new[] {FileExtensions.Mgz};
+				case Qps:
+					return new[] {FileExtensions.Qps};
+				case Ptid:
+					return new[] {FileExtensions.Ptid};
+				case Qxd:
+				//case Qxt:
+				//case Qwd:
+				//case Qwt:
+				//case Qxl:
+				//case Qxb:
+					return new[] {FileExtensions.Qxd, FileExtensions.Qxt, FileExtensions.Qwd, FileExtensions.Qwt, FileExtensions.Qxl, FileExtensions.Qxb};
+				case Bed:
+					return new[] {FileExtensions.Bed};
+				case Mxl:
+					return new[] {FileExtensions.Mxl};
+				case Musicxml:
+					return new[] {FileExtensions.Musicxml};
+				case Cryptonote:
+					return new[] {FileExtensions.Cryptonote};
+				case Cod:
+					return new[] {FileExtensions.Cod};
+				case Rm:
+					return new[] {FileExtensions.Rm};
+				case Rmvb:
+					return new[] {FileExtensions.Rmvb};
+				case Link66:
+					return new[] {FileExtensions.Link66};
+				case St:
+					return new[] {FileExtensions.St};
+				case See:
+					return new[] {FileExtensions.See};
+				case Sema:
+					return new[] {FileExtensions.Sema};
+				case Semd:
+					return new[] {FileExtensions.Semd};
+				case Semf:
+					return new[] {FileExtensions.Semf};
+				case Ifm:
+					return new[] {FileExtensions.Ifm};
+				case Itp:
+					return new[] {FileExtensions.Itp};
+				case Iif:
+					return new[] {FileExtensions.Iif};
+				case Ipk:
+					return new[] {FileExtensions.Ipk};
+				case Twd:
+				//case Twds:
+					return new[] {FileExtensions.Twd, FileExtensions.Twds};
+				case Mmf:
+					return new[] {FileExtensions.Mmf};
+				case Teacher:
+					return new[] {FileExtensions.Teacher};
+				case Sdkm:
+				//case Sdkd:
+					return new[] {FileExtensions.Sdkm, FileExtensions.Sdkd};
+				case Dxp:
+					return new[] {FileExtensions.Dxp};
+				case Sfs:
+					return new[] {FileExtensions.Sfs};
+				case Sdc:
+					return new[] {FileExtensions.Sdc};
+				case Sda:
+					return new[] {FileExtensions.Sda};
+				case Sdd:
+					return new[] {FileExtensions.Sdd};
+				case Smf:
+					return new[] {FileExtensions.Smf};
+				case Sdw:
+				//case Vor:
+					return new[] {FileExtensions.Sdw, FileExtensions.Vor};
+				case Sgl:
+					return new[] {FileExtensions.Sgl};
+				case Smzip:
+					return new[] {FileExtensions.Smzip};
+				case Sm:
+					return new[] {FileExtensions.Sm};
+				case Sxc:
+					return new[] {FileExtensions.Sxc};
+				case Stc:
+					return new[] {FileExtensions.Stc};
+				case Sxd:
+					return new[] {FileExtensions.Sxd};
+				case Std:
+					return new[] {FileExtensions.Std};
+				case Sxi:
+					return new[] {FileExtensions.Sxi};
+				case Sti:
+					return new[] {FileExtensions.Sti};
+				case Sxm:
+					return new[] {FileExtensions.Sxm};
+				case Sxw:
+					return new[] {FileExtensions.Sxw};
+				case Sxg:
+					return new[] {FileExtensions.Sxg};
+				case Stw:
+					return new[] {FileExtensions.Stw};
+				case Sus:
+				//case Susp:
+					return new[] {FileExtensions.Sus, FileExtensions.Susp};
+				case Svd:
+					return new[] {FileExtensions.Svd};
+				case Sis:
+				//case Sisx:
+					return new[] {FileExtensions.Sis, FileExtensions.Sisx};
+				case Xsm:
+					return new[] {FileExtensions.Xsm};
+				case Bdm:
+					return new[] {FileExtensions.Bdm};
+				case Xdm:
+					return new[] {FileExtensions.Xdm};
+				case Tao:
+					return new[] {FileExtensions.Tao};
+				case Pcap:
+				//case Cap:
+				//case Dmp:
+					return new[] {FileExtensions.Pcap, FileExtensions.Cap, FileExtensions.Dmp};
+				case Tmo:
+					return new[] {FileExtensions.Tmo};
+				case Tpt:
+					return new[] {FileExtensions.Tpt};
+				case Mxs:
+					return new[] {FileExtensions.Mxs};
+				case Tra:
+					return new[] {FileExtensions.Tra};
+				case Ufd:
+				//case Ufdl:
+					return new[] {FileExtensions.Ufd, FileExtensions.Ufdl};
+				case Utz:
+					return new[] {FileExtensions.Utz};
+				case Umj:
+					return new[] {FileExtensions.Umj};
+				case Unityweb:
+					return new[] {FileExtensions.Unityweb};
+				case Uoml:
+					return new[] {FileExtensions.Uoml};
+				case Vcx:
+					return new[] {FileExtensions.Vcx};
+				case Vsd:
+				//case Vst:
+				//case Vss:
+				//case Vsw:
+					return new[] {FileExtensions.Vsd, FileExtensions.Vst, FileExtensions.Vss, FileExtensions.Vsw};
+				case Vis:
+					return new[] {FileExtensions.Vis};
+				case Vsf:
+					return new[] {FileExtensions.Vsf};
+				case Wbxml:
+					return new[] {FileExtensions.Wbxml};
+				case Wmlc:
+					return new[] {FileExtensions.Wmlc};
+				case Wmlsc:
+					return new[] {FileExtensions.Wmlsc};
+				case Wtb:
+					return new[] {FileExtensions.Wtb};
+				case Nbp:
+					return new[] {FileExtensions.Nbp};
+				case Wpd:
+					return new[] {FileExtensions.Wpd};
+				case Wqd:
+					return new[] {FileExtensions.Wqd};
+				case Stf:
+					return new[] {FileExtensions.Stf};
+				case Xar:
+					return new[] {FileExtensions.Xar};
+				case Xfdl:
+					return new[] {FileExtensions.Xfdl};
+				case Hvd:
+					return new[] {FileExtensions.Hvd};
+				case Hvs:
+					return new[] {FileExtensions.Hvs};
+				case Hvp:
+					return new[] {FileExtensions.Hvp};
+				case Osf:
+					return new[] {FileExtensions.Osf};
+				case Osfpvg:
+					return new[] {FileExtensions.Osfpvg};
+				case Saf:
+					return new[] {FileExtensions.Saf};
+				case Spf:
+					return new[] {FileExtensions.Spf};
+				case Cmp:
+					return new[] {FileExtensions.Cmp};
+				case Zir:
+				//case Zirz:
+					return new[] {FileExtensions.Zir, FileExtensions.Zirz};
+				case Zaz:
+					return new[] {FileExtensions.Zaz};
+				case Vxml:
+					return new[] {FileExtensions.Vxml};
+				case Wgt:
+					return new[] {FileExtensions.Wgt};
+				case Hlp:
+					return new[] {FileExtensions.Hlp};
+				case Wsdl:
+					return new[] {FileExtensions.Wsdl};
+				case Wspolicy:
+					return new[] {FileExtensions.Wspolicy};
+				case _7z:
+					return new[] {FileExtensions._7z};
+				case Abw:
+					return new[] {FileExtensions.Abw};
+				case Ace:
+					return new[] {FileExtensions.Ace};
+				case Dmg:
+					return new[] {FileExtensions.Dmg};
+				case Aab:
+				//case X32:
+				//case U32:
+				//case Vox:
+					return new[] {FileExtensions.Aab, FileExtensions.X32, FileExtensions.U32, FileExtensions.Vox};
+				case Aam:
+					return new[] {FileExtensions.Aam};
+				case Aas:
+					return new[] {FileExtensions.Aas};
+				case Bcpio:
+					return new[] {FileExtensions.Bcpio};
+				case Torrent:
+					return new[] {FileExtensions.Torrent};
+				case Blb:
+				//case Blorb:
+					return new[] {FileExtensions.Blb, FileExtensions.Blorb};
+				case Bz:
+					return new[] {FileExtensions.Bz};
+				case Bz2:
+				//case Boz:
+					return new[] {FileExtensions.Bz2, FileExtensions.Boz};
+				case Cbr:
+				//case Cba:
+				//case Cbt:
+				//case Cbz:
+				//case Cb7:
+					return new[] {FileExtensions.Cbr, FileExtensions.Cba, FileExtensions.Cbt, FileExtensions.Cbz, FileExtensions.Cb7};
+				case Vcd:
+					return new[] {FileExtensions.Vcd};
+				case Cfs:
+					return new[] {FileExtensions.Cfs};
+				case Chat:
+					return new[] {FileExtensions.Chat};
+				case Pgn:
+					return new[] {FileExtensions.Pgn};
+				case Nsc:
+					return new[] {FileExtensions.Nsc};
+				case Cpio:
+					return new[] {FileExtensions.Cpio};
+				case Csh:
+					return new[] {FileExtensions.Csh};
+				case Deb:
+				//case Udeb:
+					return new[] {FileExtensions.Deb, FileExtensions.Udeb};
+				case Dgc:
+					return new[] {FileExtensions.Dgc};
+				case Dir:
+				//case Dcr:
+				//case Dxr:
+				//case Cst:
+				//case Cct:
+				//case Cxt:
+				//case W3d:
+				//case Fgd:
+				//case Swa:
+					return new[] {FileExtensions.Dir, FileExtensions.Dcr, FileExtensions.Dxr, FileExtensions.Cst, FileExtensions.Cct, FileExtensions.Cxt, FileExtensions.W3d, FileExtensions.Fgd, FileExtensions.Swa};
+				case Wad:
+					return new[] {FileExtensions.Wad};
+				case Ncx:
+					return new[] {FileExtensions.Ncx};
+				case Dtb:
+					return new[] {FileExtensions.Dtb};
+				case Res:
+					return new[] {FileExtensions.Res};
+				case Dvi:
+					return new[] {FileExtensions.Dvi};
+				case Evy:
+					return new[] {FileExtensions.Evy};
+				case Eva:
+					return new[] {FileExtensions.Eva};
+				case Bdf:
+					return new[] {FileExtensions.Bdf};
+				case Gsf:
+					return new[] {FileExtensions.Gsf};
+				case Psf:
+					return new[] {FileExtensions.Psf};
+				case Pcf:
+					return new[] {FileExtensions.Pcf};
+				case Snf:
+					return new[] {FileExtensions.Snf};
+				case Pfa:
+				//case Pfb:
+				//case Pfm:
+				//case Afm:
+					return new[] {FileExtensions.Pfa, FileExtensions.Pfb, FileExtensions.Pfm, FileExtensions.Afm};
+				case Arc:
+					return new[] {FileExtensions.Arc};
+				case Spl:
+					return new[] {FileExtensions.Spl};
+				case Gca:
+					return new[] {FileExtensions.Gca};
+				case Ulx:
+					return new[] {FileExtensions.Ulx};
+				case Gnumeric:
+					return new[] {FileExtensions.Gnumeric};
+				case Gramps:
+					return new[] {FileExtensions.Gramps};
+				case Gtar:
+					return new[] {FileExtensions.Gtar};
+				case Hdf:
+					return new[] {FileExtensions.Hdf};
+				case Install:
+					return new[] {FileExtensions.Install};
+				case Iso:
+					return new[] {FileExtensions.Iso};
+				case Jnlp:
+					return new[] {FileExtensions.Jnlp};
+				case Latex:
+					return new[] {FileExtensions.Latex};
+				case Lzh:
+				//case Lha:
+					return new[] {FileExtensions.Lzh, FileExtensions.Lha};
+				case Mie:
+					return new[] {FileExtensions.Mie};
+				case Prc:
+				//case Mobi:
+					return new[] {FileExtensions.Prc, FileExtensions.Mobi};
+				case Application:
+					return new[] {FileExtensions.Application};
+				case Lnk:
+					return new[] {FileExtensions.Lnk};
+				case Wmd:
+					return new[] {FileExtensions.Wmd};
+				case Wmz:
+					return new[] {FileExtensions.Wmz};
+				case Xbap:
+					return new[] {FileExtensions.Xbap};
+				case Mdb:
+					return new[] {FileExtensions.Mdb};
+				case Obd:
+					return new[] {FileExtensions.Obd};
+				case Crd:
+					return new[] {FileExtensions.Crd};
+				case Clp:
+					return new[] {FileExtensions.Clp};
+				case Exe:
+				//case Dll:
+				//case Com:
+				//case Bat:
+				//case Msi:
+					return new[] {FileExtensions.Exe, FileExtensions.Dll, FileExtensions.Com, FileExtensions.Bat, FileExtensions.Msi};
+				case Mvb:
+				//case M13:
+				//case M14:
+					return new[] {FileExtensions.Mvb, FileExtensions.M13, FileExtensions.M14};
+				case Wmf:
+				//case Emf:
+				//case Emz:
+					return new[] {FileExtensions.Wmf, FileExtensions.Emf, FileExtensions.Emz};
+				case Mny:
+					return new[] {FileExtensions.Mny};
+				case Pub:
+					return new[] {FileExtensions.Pub};
+				case Scd:
+					return new[] {FileExtensions.Scd};
+				case Trm:
+					return new[] {FileExtensions.Trm};
+				case Wri:
+					return new[] {FileExtensions.Wri};
+				case Nc:
+				//case Cdf:
+					return new[] {FileExtensions.Nc, FileExtensions.Cdf};
+				case Nzb:
+					return new[] {FileExtensions.Nzb};
+				case P12:
+				//case Pfx:
+					return new[] {FileExtensions.P12, FileExtensions.Pfx};
+				case P7b:
+				//case Spc:
+					return new[] {FileExtensions.P7b, FileExtensions.Spc};
+				case P7r:
+					return new[] {FileExtensions.P7r};
+				case Rar:
+					return new[] {FileExtensions.Rar};
+				case Ris:
+					return new[] {FileExtensions.Ris};
+				case Sh:
+					return new[] {FileExtensions.Sh};
+				case Shar:
+					return new[] {FileExtensions.Shar};
+				case Swf:
+					return new[] {FileExtensions.Swf};
+				case Xap:
+					return new[] {FileExtensions.Xap};
+				case Sql:
+					return new[] {FileExtensions.Sql};
+				case Sit:
+					return new[] {FileExtensions.Sit};
+				case Sitx:
+					return new[] {FileExtensions.Sitx};
+				case Srt:
+					return new[] {FileExtensions.Srt};
+				case Sv4cpio:
+					return new[] {FileExtensions.Sv4cpio};
+				case Sv4crc:
+					return new[] {FileExtensions.Sv4crc};
+				case T3:
+					return new[] {FileExtensions.T3};
+				case Gam:
+					return new[] {FileExtensions.Gam};
+				case Tar:
+					return new[] {FileExtensions.Tar};
+				case Tcl:
+				//case Tk:
+					return new[] {FileExtensions.Tcl, FileExtensions.Tk};
+				case Tex:
+					return new[] {FileExtensions.Tex};
+				case Tfm:
+					return new[] {FileExtensions.Tfm};
+				case Texinfo:
+				//case Texi:
+					return new[] {FileExtensions.Texinfo, FileExtensions.Texi};
+				case Obj:
+					return new[] {FileExtensions.Obj};
+				case Ustar:
+					return new[] {FileExtensions.Ustar};
+				case Src:
+					return new[] {FileExtensions.Src};
+				case Der:
+				//case Crt:
+				//case Pem:
+					return new[] {FileExtensions.Der, FileExtensions.Crt, FileExtensions.Pem};
+				case Fig:
+					return new[] {FileExtensions.Fig};
+				case Xlf:
+					return new[] {FileExtensions.Xlf};
+				case Xpi:
+					return new[] {FileExtensions.Xpi};
+				case Xz:
+					return new[] {FileExtensions.Xz};
+				case Z1:
+				//case Z2:
+				//case Z3:
+				//case Z4:
+				//case Z5:
+				//case Z6:
+				//case Z7:
+				//case Z8:
+					return new[] {FileExtensions.Z1, FileExtensions.Z2, FileExtensions.Z3, FileExtensions.Z4, FileExtensions.Z5, FileExtensions.Z6, FileExtensions.Z7, FileExtensions.Z8};
+				case Xaml:
+					return new[] {FileExtensions.Xaml};
+				case Xdf:
+					return new[] {FileExtensions.Xdf};
+				case Xenc:
+					return new[] {FileExtensions.Xenc};
+				case Xhtml:
+				//case Xht:
+					return new[] {FileExtensions.Xhtml, FileExtensions.Xht};
+				case Xml:
+				//case Xsl:
+				//case Xsd:
+				//case Rng:
+					return new[] {FileExtensions.Xml, FileExtensions.Xsl, FileExtensions.Xsd, FileExtensions.Rng};
+				case Dtd:
+					return new[] {FileExtensions.Dtd};
+				case Xop:
+					return new[] {FileExtensions.Xop};
+				case Xpl:
+					return new[] {FileExtensions.Xpl};
+				case Xslt:
+					return new[] {FileExtensions.Xslt};
+				case Xspf:
+					return new[] {FileExtensions.Xspf};
+				case Mxml:
+				//case Xhvml:
+				//case Xvml:
+				//case Xvm:
+					return new[] {FileExtensions.Mxml, FileExtensions.Xhvml, FileExtensions.Xvml, FileExtensions.Xvm};
+				case Yang:
+					return new[] {FileExtensions.Yang};
+				case Yin:
+					return new[] {FileExtensions.Yin};
+				case Zip:
+					return new[] {FileExtensions.Zip};
+				case Adp:
+					return new[] {FileExtensions.Adp};
+				case Au:
+				//case Snd:
+					return new[] {FileExtensions.Au, FileExtensions.Snd};
+				case Mid:
+				//case Midi:
+				//case Kar:
+				//case Rmi:
+					return new[] {FileExtensions.Mid, FileExtensions.Midi, FileExtensions.Kar, FileExtensions.Rmi};
+				case M4a:
+				//case Mp4a:
+				//case F4a:
+				//case F4b:
+					return new[] {FileExtensions.M4a, FileExtensions.Mp4a, FileExtensions.F4a, FileExtensions.F4b};
+				case Mpga:
+				//case Mp2:
+				//case Mp2a:
+				//case Mp3:
+				//case M2a:
+				//case M3a:
+					return new[] {FileExtensions.Mpga, FileExtensions.Mp2, FileExtensions.Mp2a, FileExtensions.Mp3, FileExtensions.M2a, FileExtensions.M3a};
+				case Oga:
+				//case Ogg:
+				//case Spx:
+				//case Opus:
+					return new[] {FileExtensions.Oga, FileExtensions.Ogg, FileExtensions.Spx, FileExtensions.Opus};
+				case S3m:
+					return new[] {FileExtensions.S3m};
+				case Sil:
+					return new[] {FileExtensions.Sil};
+				case Uva:
+				//case Uvva:
+					return new[] {FileExtensions.Uva, FileExtensions.Uvva};
+				case Eol:
+					return new[] {FileExtensions.Eol};
+				case Dra:
+					return new[] {FileExtensions.Dra};
+				case Dts:
+					return new[] {FileExtensions.Dts};
+				case Dtshd:
+					return new[] {FileExtensions.Dtshd};
+				case Lvp:
+					return new[] {FileExtensions.Lvp};
+				case Pya:
+					return new[] {FileExtensions.Pya};
+				case Ecelp4800:
+					return new[] {FileExtensions.Ecelp4800};
+				case Ecelp7470:
+					return new[] {FileExtensions.Ecelp7470};
+				case Ecelp9600:
+					return new[] {FileExtensions.Ecelp9600};
+				case Rip:
+					return new[] {FileExtensions.Rip};
+				case Weba:
+					return new[] {FileExtensions.Weba};
+				case Aac:
+					return new[] {FileExtensions.Aac};
+				case Aif:
+				//case Aiff:
+				//case Aifc:
+					return new[] {FileExtensions.Aif, FileExtensions.Aiff, FileExtensions.Aifc};
+				case Caf:
+					return new[] {FileExtensions.Caf};
+				case Flac:
+					return new[] {FileExtensions.Flac};
+				case Mka:
+					return new[] {FileExtensions.Mka};
+				case M3u:
+					return new[] {FileExtensions.M3u};
+				case Wax:
+					return new[] {FileExtensions.Wax};
+				case Wma:
+					return new[] {FileExtensions.Wma};
+				case Ram:
+				//case Ra:
+					return new[] {FileExtensions.Ram, FileExtensions.Ra};
+				case Rmp:
+					return new[] {FileExtensions.Rmp};
+				case Wav:
+					return new[] {FileExtensions.Wav};
+				case Xm:
+					return new[] {FileExtensions.Xm};
+				case Cdx:
+					return new[] {FileExtensions.Cdx};
+				case Cif:
+					return new[] {FileExtensions.Cif};
+				case Cmdf:
+					return new[] {FileExtensions.Cmdf};
+				case Cml:
+					return new[] {FileExtensions.Cml};
+				case Csml:
+					return new[] {FileExtensions.Csml};
+				case Xyz:
+					return new[] {FileExtensions.Xyz};
+				case Ttc:
+					return new[] {FileExtensions.Ttc};
+				case Otf:
+					return new[] {FileExtensions.Otf};
+				case Ttf:
+					return new[] {FileExtensions.Ttf};
+				case Woff:
+					return new[] {FileExtensions.Woff};
+				case Woff2:
+					return new[] {FileExtensions.Woff2};
+				case Bmp:
+					return new[] {FileExtensions.Bmp};
+				case Cgm:
+					return new[] {FileExtensions.Cgm};
+				case G3:
+					return new[] {FileExtensions.G3};
+				case Gif:
+					return new[] {FileExtensions.Gif};
+				case Ief:
+					return new[] {FileExtensions.Ief};
+				case Jpeg:
+				//case Jpg:
+				//case Jpe:
+					return new[] {FileExtensions.Jpeg, FileExtensions.Jpg, FileExtensions.Jpe};
+				case Ktx:
+					return new[] {FileExtensions.Ktx};
+				case Png:
+					return new[] {FileExtensions.Png};
+				case Btif:
+					return new[] {FileExtensions.Btif};
+				case Sgi:
+					return new[] {FileExtensions.Sgi};
+				case Svg:
+				//case Svgz:
+					return new[] {FileExtensions.Svg, FileExtensions.Svgz};
+				case Tiff:
+				//case Tif:
+					return new[] {FileExtensions.Tiff, FileExtensions.Tif};
+				case Psd:
+					return new[] {FileExtensions.Psd};
+				case Uvi:
+				//case Uvvi:
+				//case Uvg:
+				//case Uvvg:
+					return new[] {FileExtensions.Uvi, FileExtensions.Uvvi, FileExtensions.Uvg, FileExtensions.Uvvg};
+				case Djvu:
+				//case Djv:
+					return new[] {FileExtensions.Djvu, FileExtensions.Djv};
+				case Sub:
+					return new[] {FileExtensions.Sub};
+				case Dwg:
+					return new[] {FileExtensions.Dwg};
+				case Dxf:
+					return new[] {FileExtensions.Dxf};
+				case Fbs:
+					return new[] {FileExtensions.Fbs};
+				case Fpx:
+					return new[] {FileExtensions.Fpx};
+				case Fst:
+					return new[] {FileExtensions.Fst};
+				case Mmr:
+					return new[] {FileExtensions.Mmr};
+				case Rlc:
+					return new[] {FileExtensions.Rlc};
+				case Mdi:
+					return new[] {FileExtensions.Mdi};
+				case Wdp:
+					return new[] {FileExtensions.Wdp};
+				case Npx:
+					return new[] {FileExtensions.Npx};
+				case Wbmp:
+					return new[] {FileExtensions.Wbmp};
+				case Xif:
+					return new[] {FileExtensions.Xif};
+				case Webp:
+					return new[] {FileExtensions.Webp};
+				case _3ds:
+					return new[] {FileExtensions._3ds};
+				case Ras:
+					return new[] {FileExtensions.Ras};
+				case Cmx:
+					return new[] {FileExtensions.Cmx};
+				case Fh:
+				//case Fhc:
+				//case Fh4:
+				//case Fh5:
+				//case Fh7:
+					return new[] {FileExtensions.Fh, FileExtensions.Fhc, FileExtensions.Fh4, FileExtensions.Fh5, FileExtensions.Fh7};
+				case Ico:
+				//case Cur:
+					return new[] {FileExtensions.Ico, FileExtensions.Cur};
+				case Sid:
+					return new[] {FileExtensions.Sid};
+				case Pcx:
+					return new[] {FileExtensions.Pcx};
+				case Pic:
+				//case Pct:
+					return new[] {FileExtensions.Pic, FileExtensions.Pct};
+				case Pnm:
+					return new[] {FileExtensions.Pnm};
+				case Pbm:
+					return new[] {FileExtensions.Pbm};
+				case Pgm:
+					return new[] {FileExtensions.Pgm};
+				case Ppm:
+					return new[] {FileExtensions.Ppm};
+				case Rgb:
+					return new[] {FileExtensions.Rgb};
+				case Tga:
+					return new[] {FileExtensions.Tga};
+				case Xbm:
+					return new[] {FileExtensions.Xbm};
+				case Xpm:
+					return new[] {FileExtensions.Xpm};
+				case Xwd:
+					return new[] {FileExtensions.Xwd};
+				case Eml:
+				//case Mime:
+					return new[] {FileExtensions.Eml, FileExtensions.Mime};
+				case Igs:
+				//case Iges:
+					return new[] {FileExtensions.Igs, FileExtensions.Iges};
+				case Msh:
+				//case Mesh:
+				//case Silo:
+					return new[] {FileExtensions.Msh, FileExtensions.Mesh, FileExtensions.Silo};
+				case Dae:
+					return new[] {FileExtensions.Dae};
+				case Dwf:
+					return new[] {FileExtensions.Dwf};
+				case Gdl:
+					return new[] {FileExtensions.Gdl};
+				case Gtw:
+					return new[] {FileExtensions.Gtw};
+				case Mts:
+					return new[] {FileExtensions.Mts};
+				case Vtu:
+					return new[] {FileExtensions.Vtu};
+				case Wrl:
+				//case Vrml:
+					return new[] {FileExtensions.Wrl, FileExtensions.Vrml};
+				case X3db:
+				//case X3dbz:
+					return new[] {FileExtensions.X3db, FileExtensions.X3dbz};
+				case X3dv:
+				//case X3dvz:
+					return new[] {FileExtensions.X3dv, FileExtensions.X3dvz};
+				case X3d:
+				//case X3dz:
+					return new[] {FileExtensions.X3d, FileExtensions.X3dz};
+				case Appcache:
+				//case Manifest:
+					return new[] {FileExtensions.Appcache, FileExtensions.Manifest};
+				case Ics:
+				//case Ifb:
+					return new[] {FileExtensions.Ics, FileExtensions.Ifb};
+				case Css:
+					return new[] {FileExtensions.Css};
+				case Csv:
+					return new[] {FileExtensions.Csv};
+				case Html:
+				//case Htm:
+				//case Shtml:
+					return new[] {FileExtensions.Html, FileExtensions.Htm, FileExtensions.Shtml};
+				case N3:
+					return new[] {FileExtensions.N3};
+				case Txt:
+				//case Text:
+				//case Conf:
+				//case Def:
+				//case List:
+				//case Log:
+				//case In:
+				//case Ini:
+					return new[] {FileExtensions.Txt, FileExtensions.Text, FileExtensions.Conf, FileExtensions.Def, FileExtensions.List, FileExtensions.Log, FileExtensions.In, FileExtensions.Ini};
+				case Dsc:
+					return new[] {FileExtensions.Dsc};
+				case Rtx:
+					return new[] {FileExtensions.Rtx};
+				case Sgml:
+				//case Sgm:
+					return new[] {FileExtensions.Sgml, FileExtensions.Sgm};
+				case Tsv:
+					return new[] {FileExtensions.Tsv};
+				case T:
+				//case Tr:
+				//case Roff:
+				//case Man:
+				//case Me:
+				//case Ms:
+					return new[] {FileExtensions.T, FileExtensions.Tr, FileExtensions.Roff, FileExtensions.Man, FileExtensions.Me, FileExtensions.Ms};
+				case Ttl:
+					return new[] {FileExtensions.Ttl};
+				case Uri:
+				//case Uris:
+				//case Urls:
+					return new[] {FileExtensions.Uri, FileExtensions.Uris, FileExtensions.Urls};
+				case Vcard:
+					return new[] {FileExtensions.Vcard};
+				case Curl:
+					return new[] {FileExtensions.Curl};
+				case Dcurl:
+					return new[] {FileExtensions.Dcurl};
+				case Mcurl:
+					return new[] {FileExtensions.Mcurl};
+				case Scurl:
+					return new[] {FileExtensions.Scurl};
+				case Fly:
+					return new[] {FileExtensions.Fly};
+				case Flx:
+					return new[] {FileExtensions.Flx};
+				case Gv:
+					return new[] {FileExtensions.Gv};
+				case _3dml:
+					return new[] {FileExtensions._3dml};
+				case Spot:
+					return new[] {FileExtensions.Spot};
+				case Jad:
+					return new[] {FileExtensions.Jad};
+				case Wml:
+					return new[] {FileExtensions.Wml};
+				case Wmls:
+					return new[] {FileExtensions.Wmls};
+				case S:
+				//case Asm:
+					return new[] {FileExtensions.S, FileExtensions.Asm};
+				case C:
+				//case Cc:
+				//case Cxx:
+				//case Cpp:
+				//case H:
+				//case Hh:
+				//case Dic:
+					return new[] {FileExtensions.C, FileExtensions.Cc, FileExtensions.Cxx, FileExtensions.Cpp, FileExtensions.H, FileExtensions.Hh, FileExtensions.Dic};
+				case F:
+				//case For:
+				//case F77:
+				//case F90:
+					return new[] {FileExtensions.F, FileExtensions.For, FileExtensions.F77, FileExtensions.F90};
+				case Java:
+					return new[] {FileExtensions.Java};
+				case Nfo:
+					return new[] {FileExtensions.Nfo};
+				case Opml:
+					return new[] {FileExtensions.Opml};
+				case P:
+				//case Pas:
+					return new[] {FileExtensions.P, FileExtensions.Pas};
+				case Etx:
+					return new[] {FileExtensions.Etx};
+				case Sfv:
+					return new[] {FileExtensions.Sfv};
+				case Uu:
+					return new[] {FileExtensions.Uu};
+				case Vcs:
+					return new[] {FileExtensions.Vcs};
+				case Vcf:
+					return new[] {FileExtensions.Vcf};
+				case _3gp:
+				//case _3gpp:
+					return new[] {FileExtensions._3gp, FileExtensions._3gpp};
+				case _3g2:
+					return new[] {FileExtensions._3g2};
+				case H261:
+					return new[] {FileExtensions.H261};
+				case H263:
+					return new[] {FileExtensions.H263};
+				case H264:
+					return new[] {FileExtensions.H264};
+				case Jpgv:
+					return new[] {FileExtensions.Jpgv};
+				case Jpm:
+				//case Jpgm:
+					return new[] {FileExtensions.Jpm, FileExtensions.Jpgm};
+				case Mj2:
+				//case Mjp2:
+					return new[] {FileExtensions.Mj2, FileExtensions.Mjp2};
+				case Mp4:
+				//case Mp4v:
+				//case Mpg4:
+				//case F4p:
+					return new[] {FileExtensions.Mp4, FileExtensions.Mp4v, FileExtensions.Mpg4, FileExtensions.F4p};
+				case Mpeg:
+				//case Mpg:
+				//case Mpe:
+				//case M1v:
+				//case M2v:
+					return new[] {FileExtensions.Mpeg, FileExtensions.Mpg, FileExtensions.Mpe, FileExtensions.M1v, FileExtensions.M2v};
+				case Ogv:
+					return new[] {FileExtensions.Ogv};
+				case Qt:
+				//case Mov:
+					return new[] {FileExtensions.Qt, FileExtensions.Mov};
+				case Uvh:
+				//case Uvvh:
+					return new[] {FileExtensions.Uvh, FileExtensions.Uvvh};
+				case Uvm:
+				//case Uvvm:
+					return new[] {FileExtensions.Uvm, FileExtensions.Uvvm};
+				case Uvp:
+				//case Uvvp:
+					return new[] {FileExtensions.Uvp, FileExtensions.Uvvp};
+				case Uvs:
+				//case Uvvs:
+					return new[] {FileExtensions.Uvs, FileExtensions.Uvvs};
+				case Uvv:
+				//case Uvvv:
+					return new[] {FileExtensions.Uvv, FileExtensions.Uvvv};
+				case Dvb:
+					return new[] {FileExtensions.Dvb};
+				case Fvt:
+					return new[] {FileExtensions.Fvt};
+				case Mxu:
+				//case M4u:
+					return new[] {FileExtensions.Mxu, FileExtensions.M4u};
+				case Pyv:
+					return new[] {FileExtensions.Pyv};
+				case Uvu:
+				//case Uvvu:
+					return new[] {FileExtensions.Uvu, FileExtensions.Uvvu};
+				case Viv:
+					return new[] {FileExtensions.Viv};
+				case Webm:
+					return new[] {FileExtensions.Webm};
+				case F4v:
+					return new[] {FileExtensions.F4v};
+				case Fli:
+					return new[] {FileExtensions.Fli};
+				case Flv:
+					return new[] {FileExtensions.Flv};
+				case M4v:
+					return new[] {FileExtensions.M4v};
+				case Mkv:
+				//case Mk3d:
+				//case Mks:
+					return new[] {FileExtensions.Mkv, FileExtensions.Mk3d, FileExtensions.Mks};
+				case Mng:
+					return new[] {FileExtensions.Mng};
+				case Asf:
+				//case Asx:
+					return new[] {FileExtensions.Asf, FileExtensions.Asx};
+				case Vob:
+					return new[] {FileExtensions.Vob};
+				case Wm:
+					return new[] {FileExtensions.Wm};
+				case Wmv:
+					return new[] {FileExtensions.Wmv};
+				case Wmx:
+					return new[] {FileExtensions.Wmx};
+				case Wvx:
+					return new[] {FileExtensions.Wvx};
+				case Avi:
+					return new[] {FileExtensions.Avi};
+				case Movie:
+					return new[] {FileExtensions.Movie};
+				case Smv:
+					return new[] {FileExtensions.Smv};
+				case Ice:
+					return new[] {FileExtensions.Ice};
+				case Jsonld:
+					return new[] {FileExtensions.Jsonld};
+				case Geojson:
+					return new[] {FileExtensions.Geojson};
+				case Mjs:
+					return new[] {FileExtensions.Mjs};
+				case Wasm:
+					return new[] {FileExtensions.Wasm};
+				case Webmanifest:
+					return new[] {FileExtensions.Webmanifest};
+				case Webapp:
+					return new[] {FileExtensions.Webapp};
+				case Apng:
+					return new[] {FileExtensions.Apng};
+				case Avif:
+					return new[] {FileExtensions.Avif};
+				case Avifs:
+					return new[] {FileExtensions.Avifs};
+				case Jxr:
+				//case Hdp:
+					return new[] {FileExtensions.Jxr, FileExtensions.Hdp};
+				case Jng:
+					return new[] {FileExtensions.Jng};
+				case Bbaw:
+					return new[] {FileExtensions.Bbaw};
+				case Crx:
+					return new[] {FileExtensions.Crx};
+				case Cco:
+					return new[] {FileExtensions.Cco};
+				case Jardiff:
+					return new[] {FileExtensions.Jardiff};
+				case Run:
+					return new[] {FileExtensions.Run};
+				case Oex:
+					return new[] {FileExtensions.Oex};
+				case Pl:
+				//case Pm:
+					return new[] {FileExtensions.Pl, FileExtensions.Pm};
+				case Rpm:
+					return new[] {FileExtensions.Rpm};
+				case Sea:
+					return new[] {FileExtensions.Sea};
+				case Md:
+				//case Markdown:
+					return new[] {FileExtensions.Md, FileExtensions.Markdown};
+				case Mml:
+					return new[] {FileExtensions.Mml};
+				case Xloc:
+					return new[] {FileExtensions.Xloc};
+				case Vtt:
+					return new[] {FileExtensions.Vtt};
+				case Htc:
+					return new[] {FileExtensions.Htc};
+				case Bdoc:
+					return new[] {FileExtensions.Bdoc};
+				case Hjson:
+					return new[] {FileExtensions.Hjson};
+				case Json5:
+					return new[] {FileExtensions.Json5};
+				case Cjs:
+					return new[] {FileExtensions.Cjs};
+				case Raml:
+					return new[] {FileExtensions.Raml};
+				case Siv:
+				//case Sieve:
+					return new[] {FileExtensions.Siv, FileExtensions.Sieve};
+				case Toml:
+					return new[] {FileExtensions.Toml};
+				case Ubj:
+					return new[] {FileExtensions.Ubj};
+				case Pkpass:
+					return new[] {FileExtensions.Pkpass};
+				case Gdoc:
+					return new[] {FileExtensions.Gdoc};
+				case Gslides:
+					return new[] {FileExtensions.Gslides};
+				case Gsheet:
+					return new[] {FileExtensions.Gsheet};
+				case Msg:
+					return new[] {FileExtensions.Msg};
+				case Arj:
+					return new[] {FileExtensions.Arj};
+				case Php:
+					return new[] {FileExtensions.Php};
+				case Kdbx:
+					return new[] {FileExtensions.Kdbx};
+				case Luac:
+					return new[] {FileExtensions.Luac};
+				case Pac:
+					return new[] {FileExtensions.Pac};
+				case Hdd:
+					return new[] {FileExtensions.Hdd};
+				case Ova:
+					return new[] {FileExtensions.Ova};
+				case Ovf:
+					return new[] {FileExtensions.Ovf};
+				case Vbox:
+					return new[] {FileExtensions.Vbox};
+				case Vboxextpack:
+					return new[] {FileExtensions.Vbox_extpack};
+				case Vdi:
+					return new[] {FileExtensions.Vdi};
+				case Vhd:
+					return new[] {FileExtensions.Vhd};
+				case Vmdk:
+					return new[] {FileExtensions.Vmdk};
+				case Heic:
+					return new[] {FileExtensions.Heic};
+				case Heics:
+					return new[] {FileExtensions.Heics};
+				case Heif:
+					return new[] {FileExtensions.Heif};
+				case Heifs:
+					return new[] {FileExtensions.Heifs};
+				case Jp2:
+				//case Jpg2:
+					return new[] {FileExtensions.Jp2, FileExtensions.Jpg2};
+				case Jpx:
+				//case Jpf:
+					return new[] {FileExtensions.Jpx, FileExtensions.Jpf};
+				case Dds:
+					return new[] {FileExtensions.Dds};
+				case Coffee:
+				//case Litcoffee:
+					return new[] {FileExtensions.Coffee, FileExtensions.Litcoffee};
+				case Jade:
+					return new[] {FileExtensions.Jade};
+				case Jsx:
+					return new[] {FileExtensions.Jsx};
+				case Less:
+					return new[] {FileExtensions.Less};
+				case Mdx:
+					return new[] {FileExtensions.Mdx};
+				case Shex:
+					return new[] {FileExtensions.Shex};
+				case Slim:
+				//case Slm:
+					return new[] {FileExtensions.Slim, FileExtensions.Slm};
+				case Stylus:
+				//case Styl:
+					return new[] {FileExtensions.Stylus, FileExtensions.Styl};
+				case Hbs:
+					return new[] {FileExtensions.Hbs};
+				case Lua:
+					return new[] {FileExtensions.Lua};
+				case Mkd:
+					return new[] {FileExtensions.Mkd};
+				case Pde:
+					return new[] {FileExtensions.Pde};
+				case Sass:
+					return new[] {FileExtensions.Sass};
+				case Scss:
+					return new[] {FileExtensions.Scss};
+				case Ymp:
+					return new[] {FileExtensions.Ymp};
+				case Yaml:
+				//case Yml:
+					return new[] {FileExtensions.Yaml, FileExtensions.Yml};
+				default: 
+					return null;
+            }
+		}
     }
 }
