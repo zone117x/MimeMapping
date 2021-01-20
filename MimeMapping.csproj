@@ -18,6 +18,8 @@ https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v
     <Authors>Matthew Little</Authors>
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MimeMapping.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
