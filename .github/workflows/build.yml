@@ -2,6 +2,8 @@ name: build
 
 on:
   push:
+    branches:
+      - "**"
 
 env:
   DOTNET_NOLOGO: true
