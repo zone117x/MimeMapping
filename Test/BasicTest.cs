@@ -16,7 +16,7 @@ namespace Test
             {"png", "image/png"},
             {"JPG", "image/jpeg"},
             {"mp4", "video/mp4"},
-            {"exe", "application/x-msdownload"},
+            {"exe", "application/octet-stream"},
             {"zip", "application/zip"},
             {"torrent", "application/x-bittorrent"},
             {"json", "application/json"},
