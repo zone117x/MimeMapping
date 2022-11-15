@@ -16,34 +16,34 @@ using System;
 namespace MimeMapping
 {
 <#
-	const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/v1.52.0/db.json";
+    const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/v1.52.0/db.json";
 #>
-	///<summary>
-	/// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
-	/// Generated from the <a href="<#= MIMEDB_URL #>">mime-db</a> source
-	///</summary>
+    ///<summary>
+    /// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
+    /// Generated from the <a href="<#= MIMEDB_URL #>">mime-db</a> source
+    ///</summary>
     public static class KnownMimeTypes
     {
 
 <#
-		Regex rgx = new Regex("[^a-zA-Z0-9]");
+        Regex rgx = new Regex("[^a-zA-Z0-9]");
 
-		string GetMimeFieldName(string mimeKey)
-		{
-			var result = rgx.Replace(mimeKey[0].ToString().ToUpperInvariant() + mimeKey.Substring(1), "");
-			return char.IsDigit(result[0]) ? ("_" + result) : result;
-		}
+        string GetMimeFieldName(string mimeKey)
+        {
+            var result = rgx.Replace(mimeKey[0].ToString().ToUpperInvariant() + mimeKey.Substring(1), "");
+            return char.IsDigit(result[0]) ? ("_" + result) : result;
+        }
 
-		string GetPageContent(string url)
-		{
-			using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
-			using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
-			{
-				return streamReader.ReadToEnd();				
-			}
-		}
+        string GetPageContent(string url)
+        {
+            using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
+            using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
+            {
+                return streamReader.ReadToEnd();				
+            }
+        }
 
-		IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
         {
             var content = GetPageContent(url);
             if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
@@ -53,94 +53,94 @@ namespace MimeMapping
 
         var entries = new List<string[]>();
 
-		entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
-			return from mimeTypes in resource.Children() 
-			let mimeType = ((JProperty) mimeTypes).Name 
-			from mimeTypeProperties in mimeTypes.Children() 
-			from mimeTypeProperty in mimeTypeProperties.Children() 
-			from mimeTypeValue in mimeTypeProperty.Values()
-			where (mimeTypeProperty as JProperty)?.Name == "extensions"
-			select new[]
-			{
-				mimeType,
-				mimeTypeValue.Value<string>()
-			};
-		}));
+        entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
+            return from mimeTypes in resource.Children() 
+            let mimeType = ((JProperty) mimeTypes).Name 
+            from mimeTypeProperties in mimeTypes.Children() 
+            from mimeTypeProperty in mimeTypeProperties.Children() 
+            from mimeTypeValue in mimeTypeProperty.Values()
+            where (mimeTypeProperty as JProperty)?.Name == "extensions"
+            select new[]
+            {
+                mimeType,
+                mimeTypeValue.Value<string>()
+            };
+        }));
 
-		// build dictionary from entries, outputing found duplicates
-		var _dict = new Dictionary<string, string>();
-		var _reverseDict = new Dictionary<string, List<string>>();
+        // build dictionary from entries, outputing found duplicates
+        var _dict = new Dictionary<string, string>();
+        var _reverseDict = new Dictionary<string, List<string>>();
 
-		foreach (var parts in entries)
-		{
-			for (var i = 1; i < parts.Length; i++)
-			{
-				string existing;
-				if (_dict.TryGetValue(parts[i], out existing))
-				{
-					if (existing != parts[0])
-					{
+        foreach (var parts in entries)
+        {
+            for (var i = 1; i < parts.Length; i++)
+            {
+                string existing;
+                if (_dict.TryGetValue(parts[i], out existing))
+                {
+                    if (existing != parts[0])
+                    {
 #>
         // Dupe for <#= parts[i] #>: using <#= existing #> vs <#= parts[0] #> 
 <#
-					}
-				}
-				else
-				{
-					_dict[parts[i]] = parts[0];
+                    }
+                }
+                else
+                {
+                    _dict[parts[i]] = parts[0];
 
-					if (!_reverseDict.TryGetValue(parts[0], out var keyList))
-					{
-						keyList = new List<string>();
-						_reverseDict.Add(parts[0], keyList);
-					}
+                    if (!_reverseDict.TryGetValue(parts[0], out var keyList))
+                    {
+                        keyList = new List<string>();
+                        _reverseDict.Add(parts[0], keyList);
+                    }
 
-					keyList.Add(parts[i]);
-				}
-			}
-		}
+                    keyList.Add(parts[i]);
+                }
+            }
+        }
 #>
 
-		// Generated <#= _reverseDict.Count  #> unique mime type values
+        // Generated <#= _reverseDict.Count  #> unique mime type values
         // Generated <#= _dict.Count  #> type key pairs
 
 <#
-		// Output constants for each type
+        // Output constants for each type
         foreach(var kp in _dict)
         {
 #>
-		///<summary><#= kp.Key #></summary>
+        ///<summary><#= kp.Key #></summary>
         public const string <#= GetMimeFieldName(kp.Key) #> = "<#= kp.Value #>";
 <#
-		}
+        }
 #>
 
-		///<summary>File extensions</summary>
-		public static class FileExtensions
-		{
+        ///<summary>File extensions</summary>
+        public static class FileExtensions
+        {
 <#	
-		// List constant field names
+        // List constant field names
         foreach (var kp in _dict)
         {
 #>
-			///<summary><#= kp.Key #></summary>
-			public const string <#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #> = "<#= kp.Key #>";
+            ///<summary><#= kp.Key #></summary>
+            public const string <#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #> = "<#= kp.Key #>";
 <#
-		}
+        }
 
 #>
-		}
+        }
 
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
 <#
-		// List constant field names
+        // List constant field names
         foreach (var kp in _dict)
         {
 #>
             FileExtensions.<#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #>,
 <#		
-		}
+        }
 #>
         });
 
@@ -154,20 +154,20 @@ namespace MimeMapping
                 // Output the actual literal C# dictionary
                 foreach (var kp in _reverseDict)
                 {
-					foreach (var mimeKey in kp.Value)
-					{					
+                    foreach (var mimeKey in kp.Value)
+                    {					
 #>
-				case FileExtensions.<#= !Char.IsLetter(mimeKey[0]) ? "_" : string.Empty #><#= char.ToUpper(mimeKey[0]) + mimeKey.Substring(1).Replace('-', '_') #>:
+                case FileExtensions.<#= !Char.IsLetter(mimeKey[0]) ? "_" : string.Empty #><#= char.ToUpper(mimeKey[0]) + mimeKey.Substring(1).Replace('-', '_') #>:
 <#
-					}
+                    }
 #>
-					return <#= GetMimeFieldName(kp.Value[0]) #>;
+                    return <#= GetMimeFieldName(kp.Value[0]) #>;
 
 <#
                 }
 #>
-				default: 
-					return null;
+                default: 
+                    return null;
             }
         }
 
@@ -180,21 +180,21 @@ namespace MimeMapping
                 // Output the actual literal C# dictionary
                 foreach (var kp in _reverseDict)
                 {
-					var first = true;
-					foreach (var mimeKey in kp.Value)
-					{
+                    var first = true;
+                    foreach (var mimeKey in kp.Value)
+                    {
 #>
-				<#= first ? "" : "//" #>case <#= GetMimeFieldName(mimeKey) #>:
+                <#= first ? "" : "//" #>case <#= GetMimeFieldName(mimeKey) #>:
 <#
-						first = false;
-					}
+                        first = false;
+                    }
 #>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
 <#
-				}
+                }
 #>
-				default: 
-					return null;
+                default: 
+                    return null;
             }
-		}
+        }
     }
 }
