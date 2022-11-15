@@ -8,7 +8,6 @@
         <PackageLicenseUrl />
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <Product>VisualOn MimeMapping</Product>
-        <Description>Updated version of original MimeMapping</Description>
         <Authors>$(Authors); VisualOn</Authors>
         <Company>VisualOn GmbH</Company>
         <PackageId>VisualOn.MimeMapping</PackageId>
