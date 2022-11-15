@@ -92,7 +92,7 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeLookupToGetExtensions()
         {
-            var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map, KnownMimeTypes.FileExtensions.Topojson };
+            var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map };
             var actual = MimeUtility.GetExtensions(KnownMimeTypes.Json);
             Assert.IsTrue(actual.All(x => expected.Contains(x)));
 
