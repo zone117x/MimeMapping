@@ -51,6 +51,7 @@ jobs:
     timeout-minutes: 15
     permissions:
       packages: write
+      contents: write
 
     env:
       VO: true
@@ -96,4 +97,4 @@ jobs:
         if: ${{ github.ref_type == 'tag' }}
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
