@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
+using System.Net.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 
@@ -66,11 +64,8 @@ namespace Test
 
         private static string GetPageContent(string url)
         {
-            using (var responseStream = WebRequest.CreateHttp(url).GetResponse().GetResponseStream())
-            using (var streamReader = new StreamReader(responseStream, Encoding.UTF8))
-            {
-                return streamReader.ReadToEnd();
-            }
+            using (var client = new HttpClient())
+                return client.GetStringAsync(url).GetAwaiter().GetResult();
         }
 
         private static IEnumerable<string[]> GetMimeTypesFromText(string url, Func<string, string[]> processLine)
