@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net472</TargetFrameworks>
     <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name. Contains just over 1000 mime types.
 
 Generated from the Apache server mime.types file and the H5PB nginx mime.types file. Works similar to .NET's System.Web.MimeMapping.GetMimeMapping.
@@ -23,7 +23,7 @@ https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.1\MimeMapping.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\MimeMapping.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
