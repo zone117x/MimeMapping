@@ -2,6 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["visualon/renovate-config"],
   "includeForks": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "prCreation": "immediate",
   "packageRules": [
     {
       "description": "Don't automerge until we've good tests",
@@ -17,6 +20,7 @@
         "https://github.com/DotNetAnalyzers/StyleCopAnalyzers",
         "https://github.com/fluffynuts/NExpect",
         "https://github.com/microsoft/vstest",
+        "https://togithub.com/microsoft/testfx",
         "https://github.com/Microsoft/MSBuildSdks",
         "https://github.com/theramis/Snapper",
         "https://nsubstitute.github.io/",
