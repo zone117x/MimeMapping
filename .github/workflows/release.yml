@@ -1,0 +1,73 @@
+name: release
+
+on:
+  push:
+    tags:
+      - v*
+
+env:
+  DOTNET_NOLOGO: true
+  ProjectLoadStyle: All
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    permissions:
+      packages: write
+      contents: write
+
+    env:
+      CONFIGURATION: Release
+
+    steps:
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+
+      - uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3.0.11
+        with:
+          path: ~/.nuget/packages
+          # Look to see if there is a cache hit for the corresponding requirements file
+          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
+          # restore-keys: |
+          #   ${{ runner.os }}-nuget
+
+      - name: restore
+        run: dotnet restore
+
+      - name: build
+        run: dotnet build --no-restore
+
+      - name: pack
+        run: dotnet pack -o bin
+
+      - uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb # v3.1.1
+        with:
+          name: packages
+          path: bin/*.nupkg
+
+      - name: deploy github.com
+        if: ${{ github.ref_type == 'tag' }}
+        run: find bin -name '*.nupkg' -exec dotnet nuget push {} -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output \;
+        shell: bash
+        env:
+          NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+          NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: deploy nuget.org
+        if: ${{ github.ref_type == 'tag' }}
+        run: find bin -name '*.nupkg' -exec dotnet nuget push {} -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output \;
+        shell: bash
+        env:
+          NUGET_SOURCE: https://api.nuget.org/v3/index.json
+          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+
+      - uses: marvinpinto/action-automatic-releases@919008cf3f741b179569b7a6fb4d8860689ab7f0 # v1.2.1
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: ${{ contains(github.ref_name, '-') }}
