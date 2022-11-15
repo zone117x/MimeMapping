@@ -2,17 +2,24 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net472</TargetFrameworks>
-    <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name. Contains just over 1000 mime types.
+    <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name.
+Contains just over 1000 mime types.
 
-Generated from the Apache server mime.types file and the H5PB nginx mime.types file. Works similar to .NET's System.Web.MimeMapping.GetMimeMapping.
+The Dictionary is generated from the jshttp/mime-db db.json file.
+Works similar to .NET's System.Web.MimeMapping.GetMimeMapping.
+
+It aggregates data from the following sources:
+https://www.iana.org/assignments/media-types/media-types.xhtml
+https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+https://hg.nginx.org/nginx/raw-file/default/conf/mime.types
 
 See:
-http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-https://github.com/h5bp/server-configs-nginx/blob/master/mime.types
-https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v=vs.110).aspx
+https://github.com/jshttp/mime-db#mime-db
+https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     </Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/zone117x/MimeMapping</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/zone117x/MimeMapping/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>mimetype contenttype mime type mimemapping GetMimeMapping media-types rfc 4288</PackageTags>
     <Version>1.0.2</Version>
     <Authors>Matthew Little</Authors>
@@ -36,12 +43,12 @@ https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping(v
     <None Remove=".editorconfig" />
     <None Remove=".gitignore" />
     <None Remove="LICENSE.md" />
-    <None Remove="MimeMapping.nuspec" />
-    <None Remove="README.md" />
+    <None Remove="**/TestResults/**" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

@@ -16,7 +16,7 @@ namespace Test
             {"png", "image/png"},
             {"JPG", "image/jpeg"},
             {"mp4", "video/mp4"},
-            {"exe", "application/x-msdownload"},
+            {"exe", "application/octet-stream"},
             {"zip", "application/zip"},
             {"torrent", "application/x-bittorrent"},
             {"json", "application/json"},
@@ -92,7 +92,7 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeLookupToGetExtensions()
         {
-            var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map, KnownMimeTypes.FileExtensions.Topojson };
+            var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map };
             var actual = MimeUtility.GetExtensions(KnownMimeTypes.Json);
             Assert.IsTrue(actual.All(x => expected.Contains(x)));
 
