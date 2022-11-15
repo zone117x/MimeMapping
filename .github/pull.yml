@@ -1,0 +1,9 @@
+version: "1"
+# https://github.com/wei/pull#advanced-usage
+rules:
+  - base: main
+    upstream: MimeMapping:master
+    mergeMethod: merge
+    mergeUnstable: false
+    assignees:
+      - viceice
