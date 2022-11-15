@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["visualon/renovate-config"],
+  "includeForks": true,
+  "packageRules": [
+    {
+      "description": "Don't automerge until we've good tests",
+      "matchPackagePatterns": ["*"],
+      "automerge": false
+    },
+    {
+      "description": "Automerge test deps",
+      "matchSourceUrls": [
+        "https://github.com/adamralph/minver",
+        "https://github.com/dotnet/sourcelink",
+        "https://github.com/dotnet/roslyn-analyzers",
+        "https://github.com/DotNetAnalyzers/StyleCopAnalyzers",
+        "https://github.com/fluffynuts/NExpect",
+        "https://github.com/microsoft/vstest",
+        "https://github.com/Microsoft/MSBuildSdks",
+        "https://github.com/theramis/Snapper",
+        "https://nsubstitute.github.io/",
+        "https://togithub.com/fluffynuts/NExpect"
+      ],
+      "automerge": "true"
+    },
+    {
+      "description": "Automerge test deps",
+      "matchSourceUrlPrefixes": [
+        "https://github.com/nsubstitute/",
+        "https://github.com/nunit/"
+      ],
+      "automerge": "true"
+    }
+  ]
+}
