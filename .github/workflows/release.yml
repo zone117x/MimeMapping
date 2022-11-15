@@ -7,7 +7,9 @@ on:
 
 env:
   DOTNET_NOLOGO: true
-  ProjectLoadStyle: All
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
