@@ -93,7 +93,7 @@ jobs:
           NUGET_SOURCE: https://api.nuget.org/v3/index.json
           NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 
-      - uses: marvinpinto/action-automatic-releases@v1.2.1
+      - uses: marvinpinto/action-automatic-releases@919008cf3f741b179569b7a6fb4d8860689ab7f0 # v1.2.1
         if: ${{ github.ref_type == 'tag' }}
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
