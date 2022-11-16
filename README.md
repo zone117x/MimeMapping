@@ -2,16 +2,23 @@
 
 [![Nuget](https://img.shields.io/nuget/v/MimeMapping)](https://www.nuget.org/packages/MimeMapping/) [![Nuget](https://img.shields.io/nuget/dt/MimeMapping)](https://www.nuget.org/packages/MimeMapping/)
 
-Dictionary generated from the [Apache Server mime.types file](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) and 
-the [H5BP nginx mime.types file](https://github.com/h5bp/server-configs-nginx/blob/master/mime.types).
+Constants for (almost) all MIME types and method to determine MIME type from a file name.
+Contains just over 1000 mime types.
 
-The Apache entries are used over others when collisions are found since they are from the official [IANA registery](http://www.iana.org/assignments/media-types). The others tend to use what works best for browsers or de facto standards (maybe we should use those ones instead, idk).
+The Dictionary is generated from the [`jshttp/mime-db`](https://github.com/jshttp/mime-db#mime-db) `db.json`.
+Works similar to .NET's [System.Web.MimeMapping.GetMimeMapping](https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping).
 
-The lib is just a literal C# Dictionary<string, string> with over 1000 entries, and a helper method that can be passed a file path. 
+It aggregates data from the following sources:
 
+- https://www.iana.org/assignments/media-types/media-types.xhtml
+- https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+- https://hg.nginx.org/nginx/raw-file/default/conf/mime.types
 
-# Example Usage
-``` C#
+The library is just a literal C# `Dictionary<string, string>` with over 1000 entries, and a helper method that can be passed a file path.
+
+## Example Usage
+
+```C#
 string myFile = "myimage.jpg";
 string mimeType = MimeMapping.MimeUtility.GetMimeMapping(myFile);
 Console.WriteLine(mimeType); // output: image/jpeg
