@@ -28,9 +28,9 @@ jobs:
       CONFIGURATION: Release
 
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      - uses: actions/checkout@v3.1.0
 
-      - uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3.0.11
+      - uses: actions/cache@v3.0.11
         with:
           path: ~/.nuget/packages
           # Look to see if there is a cache hit for the corresponding requirements file
@@ -48,7 +48,7 @@ jobs:
       - name: pack
         run: dotnet pack -o bin
 
-      - uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb # v3.1.1
+      - uses: actions/upload-artifact@v3.1.1
         with:
           name: packages
           path: bin/*.nupkg
@@ -69,7 +69,7 @@ jobs:
       #     NUGET_SOURCE: https://api.nuget.org/v3/index.json
       #     NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 
-      - uses: marvinpinto/action-automatic-releases@919008cf3f741b179569b7a6fb4d8860689ab7f0 # v1.2.1
+      - uses: marvinpinto/action-automatic-releases@v1.2.1
         if: ${{ github.ref_type == 'tag' }}
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
