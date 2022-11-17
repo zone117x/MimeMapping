@@ -2,6 +2,8 @@ name: build
 
 on:
   push:
+    branches:
+      - '**'
   pull_request:
 
 env:
@@ -72,7 +74,7 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
           # restore-keys: |
           #   ${{ runner.os }}-nuget
-          
+
       - name: restore
         run: dotnet restore
 

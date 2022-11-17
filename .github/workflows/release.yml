@@ -61,13 +61,13 @@ jobs:
       #     NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
       #     NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: deploy nuget.org
-      #   if: ${{ github.ref_type == 'tag' }}
-      #   run: find bin -name '*.nupkg' -exec dotnet nuget push {} -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output \;
-      #   shell: bash
-      #   env:
-      #     NUGET_SOURCE: https://api.nuget.org/v3/index.json
-      #     NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+      - name: deploy nuget.org
+        if: ${{ github.ref_type == 'tag' }}
+        run: find bin -name '*.nupkg' -exec dotnet nuget push {} -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output \;
+        shell: bash
+        env:
+          NUGET_SOURCE: https://api.nuget.org/v3/index.json
+          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 
       - uses: marvinpinto/action-automatic-releases@v1.2.1
         if: ${{ github.ref_type == 'tag' }}
