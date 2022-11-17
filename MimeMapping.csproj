@@ -27,6 +27,9 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MimeMapping.snk</AssemblyOriginatorKeyFile>
 
+    <!-- https://github.com/dotnet/sourcelink -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
     <!-- required as we don't have a valid semver tag yet -->
     <MinVerMinimumMajorMinor>1.1</MinVerMinimumMajorMinor>
     <MinVerTagPrefix>v</MinVerTagPrefix>    
