@@ -25,7 +25,7 @@ namespace MimeMapping
     {
 
 <#
-		    Regex rgx = new Regex("[^a-zA-Z0-9]");
+        Regex rgx = new Regex("[^a-zA-Z0-9]");
 
         string GetMimeFieldName(string mimeKey)
         {
