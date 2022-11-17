@@ -5,18 +5,15 @@
         <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
         <MinVerTagPrefix>v</MinVerTagPrefix>
         <PackageProjectUrl>https://github.com/visualon/MimeMapping</PackageProjectUrl>
-        <PackageLicenseUrl />
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <Product>VisualOn MimeMapping</Product>
         <Authors>$(Authors); VisualOn</Authors>
         <Company>VisualOn GmbH</Company>
         <PackageId>VisualOn.MimeMapping</PackageId>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
     </ItemGroup>
 
