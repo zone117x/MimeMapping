@@ -21,12 +21,18 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <PackageProjectUrl>https://github.com/zone117x/MimeMapping</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>mimetype contenttype mime type mimemapping GetMimeMapping media-types rfc 4288</PackageTags>
-    <Version>1.0.2</Version>
     <Authors>Matthew Little</Authors>
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>MimeMapping.snk</AssemblyOriginatorKeyFile>
+
+    <!-- https://github.com/dotnet/sourcelink -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+    <!-- required as we don't have a valid semver tag yet -->
+    <MinVerMinimumMajorMinor>1.1</MinVerMinimumMajorMinor>
+    <MinVerTagPrefix>v</MinVerTagPrefix>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -49,6 +55,7 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

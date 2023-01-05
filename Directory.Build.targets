@@ -3,18 +3,11 @@
 
     <PropertyGroup>
         <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
-        <MinVerTagPrefix>v</MinVerTagPrefix>
         <PackageProjectUrl>https://github.com/visualon/MimeMapping</PackageProjectUrl>
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <Product>VisualOn MimeMapping</Product>
         <Authors>$(Authors); VisualOn</Authors>
         <Company>VisualOn GmbH</Company>
         <PackageId>VisualOn.MimeMapping</PackageId>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="MinVer" Version="4.2.0" PrivateAssets="All" />
-    </ItemGroup>
-
 </Project>
