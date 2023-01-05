@@ -3,6 +3,7 @@
 [![Nuget](https://img.shields.io/nuget/v/MimeMapping)](https://www.nuget.org/packages/MimeMapping/)
 [![Nuget](https://img.shields.io/nuget/dt/MimeMapping)](https://www.nuget.org/packages/MimeMapping/)
 [![build](https://github.com/zone117x/MimeMapping/actions/workflows/build.yml/badge.svg)](https://github.com/zone117x/MimeMapping/actions/workflows/build.yml)
+[![codecov](https://codecov.io/github/zone117x/MimeMapping/branch/master/graph/badge.svg)](https://codecov.io/github/zone117x/MimeMapping)
 
 Constants for (almost) all MIME types and method to determine MIME type from a file name.
 Contains just over 1000 mime types.
