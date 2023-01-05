@@ -1,6 +1,9 @@
-# MimeMapping
+[![build](https://github.com/visualon/MimeMapping/actions/workflows/build.yml/badge.svg)](https://github.com/visualon/MimeMapping/actions/workflows/build.yml)
+[![Nuget](https://img.shields.io/nuget/v/VisualOn.MimeMapping)](https://www.nuget.org/packages/VisualOn.MimeMapping/)
+[![codecov](https://codecov.io/gh/visualon/cssparser/branch/main/graph/badge.svg?token=EEGfq3zpqS)](https://codecov.io/gh/visualon/cssparser)
+![LICENSE](https://img.shields.io/github/license/visualon/MimeMapping)
 
-[![Nuget](https://img.shields.io/nuget/v/VisualOn.MimeMapping)](https://www.nuget.org/packages/VisualOn.MimeMapping/) [![Nuget](https://img.shields.io/nuget/dt/VisualOn.MimeMapping)](https://www.nuget.org/packages/VisualOn.MimeMapping/)
+# MimeMapping
 
 Constants for (almost) all MIME types and method to determine MIME type from a file name.
 Contains just over 1000 mime types.
