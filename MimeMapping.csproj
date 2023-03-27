@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <!-- https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting -->
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name.
 Contains just over 1000 mime types.
 
@@ -31,12 +32,12 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
     <!-- required as we don't have a valid semver tag yet -->
-    <MinVerMinimumMajorMinor>1.1</MinVerMinimumMajorMinor>
+    <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
     <MinVerTagPrefix>v</MinVerTagPrefix>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.1\MimeMapping.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\MimeMapping.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
