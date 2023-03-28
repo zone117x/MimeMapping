@@ -13,9 +13,9 @@ Works similar to .NET's [System.Web.MimeMapping.GetMimeMapping](https://learn.mi
 
 It aggregates data from the following sources:
 
-- https://www.iana.org/assignments/media-types/media-types.xhtml
-- https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-- https://hg.nginx.org/nginx/raw-file/default/conf/mime.types
+- <https://www.iana.org/assignments/media-types/media-types.xhtml>
+- <https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types>
+- <https://hg.nginx.org/nginx/raw-file/default/conf/mime.types>
 
 The library is just a literal C# `Dictionary<string, string>` with over 1000 entries, and a helper method that can be passed a file path.
 
@@ -38,6 +38,6 @@ Console.WriteLine(mimeType); // output: application/json
 // List all types..
 foreach(var kp in MimeMapping.MimeTypes.TypeMap)
 {
-	Console.WriteLine($"File extension: {kp.Key}, mime string: {kp.Value}");
+  Console.WriteLine($"File extension: {kp.Key}, mime string: {kp.Value}");
 }
 ```

@@ -2,7 +2,7 @@ using System;
 namespace MimeMapping
 {
     ///<summary>
-    /// MIME type constants. Last updated on 2022-11-15T12:34:20Z. 
+    /// MIME type constants. Last updated on 2023-03-28T04:30:24Z. 
     /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.52.0/db.json">mime-db</a> source
     ///</summary>
     public static class KnownMimeTypes
