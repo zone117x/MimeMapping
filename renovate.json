@@ -1,7 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "assignees": [ "zone117x", "viceice" ]
+  "extends": ["config:base"],
+  "assignees": ["zone117x", "viceice"],
+  "regexManagers": [
+    {
+      "description": "Update mime-db",
+      "fileMatch": ["^KnownMimeTypes\\.tt$"],
+      "matchStrings": [
+        "https://raw\\.githubusercontent\\.com/jshttp/mime-db/(?<currentValue>.+?)/db.json"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "mime-db",
+      "packageNameTemplate": "jshttp/mime-db"
+    }
+  ]
 }
