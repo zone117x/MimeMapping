@@ -4,6 +4,7 @@
     <PropertyGroup>
         <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
         <PackageProjectUrl>https://github.com/visualon/MimeMapping</PackageProjectUrl>
+        <PackageIconUrl>https://visualon.github.io/img/nuget.png</PackageIconUrl>
         <Product>VisualOn MimeMapping</Product>
         <Authors>$(Authors); VisualOn</Authors>
         <Company>VisualOn GmbH</Company>
