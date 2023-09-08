@@ -30,7 +30,7 @@ jobs:
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
 
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v3.3.2
         with:
           path: ~/.nuget/packages
           # Look to see if there is a cache hit for the corresponding requirements file
