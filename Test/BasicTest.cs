@@ -100,5 +100,28 @@ namespace Test
             Assert.IsNull(@null);
         }
 
+        [TestMethod]
+        public void TestMimeTypeToExtenstionsLookup()
+        {
+            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Doc, out var extensions));
+            if (extensions != null)
+            {
+                Assert.IsTrue(extensions.Length >= 2, $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot).");
+            }
+
+            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Jpeg, out extensions));
+            if (extensions != null)
+            {
+                Assert.IsTrue(extensions.Length >= 3, $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3.");
+            }
+
+            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.Count > 900, $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong");
+
+            foreach (var kv in MimeUtility.TypeToExtensionsMap)
+            {
+                Assert.IsTrue(kv.Value.Length > 0, $"{kv.Key} cannot have zero extensions.");
+            }
+        }
+
     }
 }
