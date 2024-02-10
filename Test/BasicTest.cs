@@ -99,5 +99,6 @@ namespace Test
             var @null = MimeUtility.GetExtensions("invalid");
             Assert.IsNull(@null);
         }
+
     }
 }
