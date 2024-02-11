@@ -110,6 +110,19 @@ namespace MimeMapping
 <#
         }
 #>
+        // List of all available mimetypes, used to build the dictionary
+        internal static readonly Lazy<string[]> ALL_MIMETYPES = new Lazy<string[]>(() => new [] {
+<#
+        // List constant field names
+        foreach (var kp in _dict)
+        {
+#>
+            <#= GetMimeFieldName(kp.Key) #>,
+<#		
+        }
+#>
+        });
+
 
         ///<summary>File extensions</summary>
         public static class FileExtensions
