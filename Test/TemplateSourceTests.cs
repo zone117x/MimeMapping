@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
 
 namespace Test
 {
@@ -46,17 +46,18 @@ namespace Test
         {
             var keyPairs = GetMimeTypesFromJson(MIMEDB_URL, resource =>
             {
-                return from mimeTypes in resource.Children()
-                       let mimeType = ((JProperty) mimeTypes).Name
-                       from mimeTypeProperties in mimeTypes.Children()
-                       from mimeTypeProperty in mimeTypeProperties.Children()
-                       from mimeTypeValue in mimeTypeProperty.Values()
-                       where mimeTypeProperty is JProperty { Name: "extensions" }
-                       select new[]
-                       {
-                           mimeType,
-                           mimeTypeValue.Value<string>()
-                       };
+                var result = new List<string[]>();
+                foreach (var mimeType in resource.RootElement.EnumerateObject())
+                {
+                    if (mimeType.Value.TryGetProperty("extensions", out var extensions))
+                    {
+                        foreach (var extension in extensions.EnumerateArray())
+                        {
+                            result.Add([mimeType.Name, extension.GetString()]);
+                        }
+                    }
+                }
+                return result;
             });
 
             Assert.IsTrue(keyPairs.Any());
@@ -76,11 +77,11 @@ namespace Test
             return lines.Select(processLine).Where(newKeyPairs => newKeyPairs != null).ToList();
         }
 
-        private static IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        private static IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JsonDocument, IEnumerable<string[]>> processObject)
         {
             var content = GetPageContent(url);
             if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
-            var resource = JObject.Parse(content);
+            var resource = JsonDocument.Parse(content);
             return processObject(resource);
         }
     }
