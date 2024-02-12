@@ -51,7 +51,7 @@ namespace Test
                        from mimeTypeProperties in mimeTypes.Children()
                        from mimeTypeProperty in mimeTypeProperties.Children()
                        from mimeTypeValue in mimeTypeProperty.Values()
-                       where (mimeTypeProperty as JProperty)?.Name == "extensions"
+                       where mimeTypeProperty is JProperty { Name: "extensions" }
                        select new[]
                        {
                            mimeType,
