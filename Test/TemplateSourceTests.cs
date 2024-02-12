@@ -11,7 +11,7 @@ namespace Test
     [TestClass]
     public class TemplateSourceTests
     {
-        private const string APACHE_URL = "http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
+        private const string APACHE_URL = "https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types";
         private const string NGINX_URL = "https://raw.githubusercontent.com/h5bp/server-configs-nginx/master/mime.types";
         private const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/master/src/custom-types.json";
 
@@ -56,7 +56,7 @@ namespace Test
             Assert.IsTrue(keyPairs.Any());
         }
 
-        private static async ValueTask<string> GetPageContentAsync (string url)
+        private static async ValueTask<string> GetPageContentAsync(string url)
         {
             using var client = new HttpClient();
             return await client.GetStringAsync(url);
