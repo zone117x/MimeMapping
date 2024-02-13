@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json.Linq;
 
 namespace Test
 {
@@ -47,16 +47,23 @@ namespace Test
         {
             var keyPairs = await GetMimeTypesFromJsonAsync(MIMEDB_URL, resource =>
             {
-                return resource.RootElement.EnumerateObject()
-                    .Where(mimeType => mimeType.Value.TryGetProperty("extensions", out var extensions))
-                    .SelectMany(mimeType => mimeType.Value.GetProperty("extensions").EnumerateArray(),
-                                (mimeType, extension) => new[] { mimeType.Name, extension.GetString() });
+                return from mimeTypes in resource.Children()
+                       let mimeType = ((JProperty)mimeTypes).Name
+                       from mimeTypeProperties in mimeTypes.Children()
+                       from mimeTypeProperty in mimeTypeProperties.Children()
+                       from mimeTypeValue in mimeTypeProperty.Values()
+                       where (mimeTypeProperty as JProperty)?.Name == "extensions"
+                       select new[]
+                       {
+                           mimeType,
+                           mimeTypeValue.Value<string>()
+                       };
             });
 
             Assert.IsTrue(keyPairs.Any());
         }
 
-        private static async ValueTask<string> GetPageContentAsync(string url)
+        private static async Task<string> GetPageContentAsync(string url)
         {
             using var client = new HttpClient();
             return await client.GetStringAsync(url);
@@ -70,11 +77,11 @@ namespace Test
             return lines.Select(processLine).Where(newKeyPairs => newKeyPairs != null).ToList();
         }
 
-        private static async Task<IEnumerable<string[]>> GetMimeTypesFromJsonAsync(string url, Func<JsonDocument, IEnumerable<string[]>> processObject)
+        private static async Task<IEnumerable<string[]>> GetMimeTypesFromJsonAsync(string url, Func<JObject, IEnumerable<string[]>> processObject)
         {
             var content = await GetPageContentAsync(url);
             if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
-            var resource = JsonDocument.Parse(content);
+            var resource = JObject.Parse(content);
             return processObject(resource);
         }
     }
