@@ -13,6 +13,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -26,15 +29,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 2
+          filter: blob:none # We don't need all blobs
 
       - uses: actions/cache@v4.0.0
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
-          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-nuget
 
       - name: restore
         run: dotnet restore
@@ -54,9 +54,6 @@ jobs:
     needs: [test]
     runs-on: windows-latest
     timeout-minutes: 15
-    permissions:
-      packages: write
-      contents: write
 
     env:
       CONFIGURATION: Release
@@ -65,15 +62,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
+          filter: blob:none # We don't need all blobs
 
       - uses: actions/cache@v4.0.0
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
-          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-nuget
 
       - name: restore
         run: dotnet restore
