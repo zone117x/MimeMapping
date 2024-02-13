@@ -16,11 +16,11 @@ namespace MimeMapping
         /// </summary>
         public const string UnknownMimeType = "application/octet-stream";
 
-        static Lazy<ReadOnlyDictionary<string, string>> _lazyDictExtensions = new Lazy<ReadOnlyDictionary<string, string>>(
+        private static readonly Lazy<ReadOnlyDictionary<string, string>> _lazyDictExtensions = new Lazy<ReadOnlyDictionary<string, string>>(
             () => new ReadOnlyDictionary<string, string>(KnownMimeTypes.ALL_EXTS.Value.ToDictionary(e => e, e => KnownMimeTypes.LookupType(e)))
         );
 
-        static Lazy<ReadOnlyDictionary<string, string[]>> _lazyDictMimeTypes = new Lazy<ReadOnlyDictionary<string, string[]>>(
+        private static readonly Lazy<ReadOnlyDictionary<string, string[]>> _lazyDictMimeTypes = new Lazy<ReadOnlyDictionary<string, string[]>>(
             () => new ReadOnlyDictionary<string, string[]>(KnownMimeTypes.ALL_MIMETYPES.Value.Distinct().ToDictionary(e => e, e => KnownMimeTypes.LookupMimeType(e)))
         );
 
