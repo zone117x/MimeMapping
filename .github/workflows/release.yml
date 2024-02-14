@@ -12,15 +12,15 @@ env:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
-  release:
+  nuget-release:
     runs-on: windows-latest
     timeout-minutes: 15
-    permissions:
-      packages: write
-      contents: write
 
     env:
       CONFIGURATION: Release
@@ -29,15 +29,14 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
+          filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4.0.0
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
-          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-nuget
+          restore-keys: |
+            ${{ runner.os }}-nuget
           
       - name: restore
         run: dotnet restore
@@ -48,19 +47,10 @@ jobs:
       - name: pack
         run: dotnet pack -o bin
 
-      - uses: actions/upload-artifact@v4.3.1
+      - uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
         with:
           name: packages
           path: bin/*.nupkg
-
-      # - name: deploy github.com
-      #   run: |
-      #     dotnet nuget add source --username $NUGET_USR --password $NUGET_PSW --store-password-in-clear-text --name github $NUGET_SOURCE
-      #     find bin -name '*.nupkg' | xargs dotnet nuget push -s github --skip-duplicate --force-english-output
-      #   shell: bash
-      #   env:
-      #     NUGET_SOURCE: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
-      #     NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
 
       - name: deploy nuget.org
         run: find bin -name '*.nupkg' | xargs dotnet nuget push -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output
@@ -69,7 +59,31 @@ jobs:
           NUGET_SOURCE: https://api.nuget.org/v3/index.json
           NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 
-      - uses: marvinpinto/action-automatic-releases@v1.2.1
+          
+  gh-release:
+    needs:
+      - nuget-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
+          filter: blob:none # We don't need all blobs
+
+      - name: prepare version
+        run: echo VERSION=${GITHUB_REF_NAME#v} >> $GITHUB_ENV
+
+      - name: Generate changelog with git-cliff
+        uses: tj-actions/git-cliff@b8b856ab6829a813d4ed58476b6faaec9c2b24ef # v1.4.2
+        with:
+          args: --latest --strip all
+          output: 'CHANGELOG.md'
+      
+      - uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5 # v1.14.0
+        with:
+          bodyFile: 'CHANGELOG.md'
+          name: ${{ env.VERSION }}
           prerelease: ${{ contains(github.ref_name, '-') }}
