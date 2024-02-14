@@ -49,6 +49,7 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           files: '**/TestResults/*/*.cobertura.xml'
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     needs: [test]
