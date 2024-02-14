@@ -13,6 +13,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -26,15 +29,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 2
+          filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4.0.0
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
-          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-nuget
 
       - name: restore
         run: dotnet restore
@@ -46,17 +46,15 @@ jobs:
         run: dotnet test --no-build ./MimeMapping.sln
 
       - name: Codecov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@e0b68c6749509c5f83f984dd99a76a1c1a231044 # v4.0.1
         with:
           files: '**/TestResults/*/*.cobertura.xml'
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     needs: [test]
     runs-on: windows-latest
     timeout-minutes: 15
-    permissions:
-      packages: write
-      contents: write
 
     env:
       CONFIGURATION: Release
@@ -65,15 +63,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
+          filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2 # v4.0.0
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
-          # key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
-          # restore-keys: |
-          #   ${{ runner.os }}-nuget
 
       - name: restore
         run: dotnet restore
@@ -84,7 +79,7 @@ jobs:
       - name: pack
         run: dotnet pack -o bin
 
-      - uses: actions/upload-artifact@v4.3.1
+      - uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
         with:
           name: packages
           path: bin/*.nupkg
