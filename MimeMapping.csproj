@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <!-- https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting -->
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name.
 Contains just over 1000 mime types.
 
