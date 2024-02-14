@@ -10,7 +10,7 @@ namespace Test
     [TestClass]
     public class BasicTest
     {
-        private readonly Dictionary<string, string> _expectedTypes = new Dictionary<string, string>
+        private readonly Dictionary<string, string> _expectedTypes = new()
         {
             {"PNG", "image/png"},
             {"png", "image/png"},
@@ -94,7 +94,7 @@ namespace Test
         {
             var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map };
             var actual = MimeUtility.GetExtensions(KnownMimeTypes.Json);
-            Assert.IsTrue(actual.All(x => expected.Contains(x)));
+            Assert.IsTrue(Array.TrueForAll(actual, x => expected.Contains(x)));
 
             var @null = MimeUtility.GetExtensions("invalid");
             Assert.IsNull(@null);
@@ -122,6 +122,5 @@ namespace Test
                 Assert.IsTrue(kv.Value.Length > 0, $"{kv.Key} cannot have zero extensions.");
             }
         }
-
     }
 }
