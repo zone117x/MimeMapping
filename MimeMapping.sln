@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{063EE5BF-8922-4280-8DFC-1226E9298F35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MimeMapping", "MimeMapping.csproj", "{42893F4D-DE5F-4132-A408-E90BFF840342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MimeMapping", "src\MimeMapping\MimeMapping.csproj", "{42893F4D-DE5F-4132-A408-E90BFF840342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
