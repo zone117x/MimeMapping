@@ -46,7 +46,7 @@ jobs:
         run: dotnet test --no-build ./MimeMapping.sln
 
       - name: Codecov
-        uses: codecov/codecov-action@0cfda1dd0a4ad9efc75517f399d859cd1ea4ced1 # v4.0.2
+        uses: codecov/codecov-action@54bcd8715eee62d40e33596ef5e8f0f48dbbccab # v4.1.0
         with:
           files: '**/TestResults/*/*.cobertura.xml'
           token: ${{ secrets.CODECOV_TOKEN }}
