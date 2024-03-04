@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net8.0;net6.0;net48</TargetFrameworks>
      <TargetFrameworks Condition="$([MSBuild]::IsOSUnixLike())">net8.0;net6.0</TargetFrameworks>
-    <RunSettingsFilePath>$(MSBuildThisFileDirectory)/test.runsettings</RunSettingsFilePath>
+    <RunSettingsFilePath>$(MSBuildThisFileDirectory)..\test.runsettings</RunSettingsFilePath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   
@@ -15,6 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MimeMapping.csproj" />
+    <ProjectReference Include="..\..\src\MimeMapping\MimeMapping.csproj" />
   </ItemGroup>
 </Project>
