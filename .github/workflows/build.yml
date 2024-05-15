@@ -81,10 +81,10 @@ jobs:
         run: dotnet restore
 
       - name: build
-        run: dotnet build --no-restore
+        run: dotnet build -c release --no-restore
 
       - name: pack
-        run: dotnet pack -o bin
+        run: dotnet pack -o bin --no-build
 
       - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:

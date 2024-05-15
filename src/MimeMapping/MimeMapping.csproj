@@ -25,8 +25,6 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <Authors>Matthew Little</Authors>
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>MimeMapping.snk</AssemblyOriginatorKeyFile>
 
     <!-- https://github.com/dotnet/sourcelink -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -41,17 +39,7 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Test\**" />
-    <EmbeddedResource Remove="Test\**" />
-    <None Remove="Test\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove=".editorconfig" />
-    <None Remove=".gitignore" />
-    <None Remove="LICENSE.md" />
-    <None Remove="**/TestResults/**" />
-    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Assembly Signing">
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)MimeMapping.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+</Project>
