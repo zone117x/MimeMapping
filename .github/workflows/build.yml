@@ -81,7 +81,7 @@ jobs:
         run: dotnet restore
 
       - name: build
-        run: dotnet build --no-restore
+        run: dotnet build -c release --no-restore
 
       - name: pack
         run: dotnet pack -o bin
