@@ -7149,7 +7149,7 @@ namespace MimeMapping
 
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        internal static string LookupType(string type)
+        internal static string? LookupType(string type)
         {
             switch (type)
             {
@@ -10213,7 +10213,7 @@ namespace MimeMapping
         }
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
-        internal static string[] LookupMimeType(string mimeType)
+        internal static string[]? LookupMimeType(string mimeType)
         {
             switch (mimeType)
             {

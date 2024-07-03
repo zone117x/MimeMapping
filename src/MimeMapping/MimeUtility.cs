@@ -16,23 +16,23 @@ namespace MimeMapping
         /// </summary>
         public const string UnknownMimeType = "application/octet-stream";
 
-        private static readonly Lazy<ReadOnlyDictionary<string, string>> _lazyDictExtensions = new Lazy<ReadOnlyDictionary<string, string>>(
-            () => new ReadOnlyDictionary<string, string>(KnownMimeTypes.ALL_EXTS.Value.ToDictionary(e => e, e => KnownMimeTypes.LookupType(e)))
+        private static readonly Lazy<ReadOnlyDictionary<string, string?>> _lazyDictExtensions = new Lazy<ReadOnlyDictionary<string, string?>>(
+            () => new ReadOnlyDictionary<string, string?>(KnownMimeTypes.ALL_EXTS.Value.ToDictionary(e => e, e => KnownMimeTypes.LookupType(e)))
         );
 
-        private static readonly Lazy<ReadOnlyDictionary<string, string[]>> _lazyDictMimeTypes = new Lazy<ReadOnlyDictionary<string, string[]>>(
-            () => new ReadOnlyDictionary<string, string[]>(KnownMimeTypes.ALL_MIMETYPES.Value.Distinct().ToDictionary(e => e, e => KnownMimeTypes.LookupMimeType(e)))
+        private static readonly Lazy<ReadOnlyDictionary<string, string[]?>> _lazyDictMimeTypes = new Lazy<ReadOnlyDictionary<string, string[]?>>(
+            () => new ReadOnlyDictionary<string, string[]?>(KnownMimeTypes.ALL_MIMETYPES.Value.Distinct().ToDictionary(e => e, e => KnownMimeTypes.LookupMimeType(e)))
         );
 
         /// <summary>
         /// Dictionary of all available types by extension (lazy loaded on first call)
         /// </summary>
-        public static ReadOnlyDictionary<string, string> TypeMap => _lazyDictExtensions.Value;
+        public static ReadOnlyDictionary<string, string?> TypeMap => _lazyDictExtensions.Value;
         
         /// <summary>
         /// Dictionary of all available types by mimetype (lazy loaded on first call)
         /// </summary>
-        public static ReadOnlyDictionary<string, string[]> TypeToExtensionsMap => _lazyDictMimeTypes.Value;
+        public static ReadOnlyDictionary<string, string[]?> TypeToExtensionsMap => _lazyDictMimeTypes.Value;
 
         /// <param name="file">The file extensions (ex: "zip"), the file name, or file path</param>
         /// <returns>The mime type string, returns "application/octet-stream" if no known type was found</returns>
@@ -53,7 +53,7 @@ namespace MimeMapping
 
         /// <param name="mimeType">The mime type string, e.g. "application/json"</param>
         /// <returns>One or more extensions matching the mime type or null if no match</returns>
-        public static string[] GetExtensions(string mimeType)
+        public static string[]? GetExtensions(string mimeType)
         {
             if (string.IsNullOrEmpty(mimeType)) throw new ArgumentNullException(mimeType);
 
