@@ -40,4 +40,7 @@ foreach(var kp in MimeMapping.MimeTypes.TypeMap)
 {
   Console.WriteLine($"File extension: {kp.Key}, mime string: {kp.Value}");
 }
+
+//Just use a constant if you already know the file type (performance)
+const string mimeType = MimeMapping.KnownMimeTypes.Xlsx
 ```
