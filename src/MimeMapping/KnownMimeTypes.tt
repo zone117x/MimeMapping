@@ -15,7 +15,7 @@ using System;
 namespace MimeMapping
 {
 <#
-    const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/v1.52.0/db.json";
+    const string MIMEDB_URL = "https://raw.githubusercontent.com/jshttp/mime-db/v1.53.0/db.json";
 #>
     ///<summary>
     /// MIME type constants. Last updated on <#= DateTime.UtcNow.ToString("s") + "Z" #>. 
