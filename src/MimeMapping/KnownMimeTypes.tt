@@ -66,6 +66,7 @@ namespace MimeMapping
         // build dictionary from entries, outputing found duplicates
         var _dict = new Dictionary<string, string>();
         var _reverseDict = new Dictionary<string, List<string>>();
+        var _badMimeTypes = new HashSet<string>() {"application/mp4"};
 
         foreach (var parts in entries)
         {
@@ -83,6 +84,11 @@ namespace MimeMapping
                 }
                 else
                 {
+                     if(_badMimeTypes.Contains(parts[0]))
+                     {
+                        continue;
+                     }
+
                     _dict[parts[i]] = parts[0];
 
                     if (!_reverseDict.TryGetValue(parts[0], out var keyList))

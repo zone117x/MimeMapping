@@ -3,13 +3,14 @@ using System;
 namespace MimeMapping
 {
     ///<summary>
-    /// MIME type constants. Last updated on 2024-12-09T08:23:13Z. 
+    /// MIME type constants. Last updated on 2025-01-16T13:06:36Z. 
     /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.53.0/db.json">mime-db</a> source
     ///</summary>
     public static class KnownMimeTypes
     {
 
         // Dupe for asc: using application/pgp-keys vs application/pgp-signature 
+        // Dupe for fdf: using application/fdf vs application/vnd.fdf 
         // Dupe for mpp: using application/dash-patch+xml vs application/vnd.ms-project 
         // Dupe for ac: using application/pkix-attr-cert vs application/vnd.nokia.n-gage.ac+xml 
         // Dupe for dmg: using application/octet-stream vs application/x-apple-diskimage 
@@ -56,11 +57,9 @@ namespace MimeMapping
         // Dupe for jpm: using image/jpm vs video/jpm 
         // Dupe for jpgm: using image/jpm vs video/jpm 
         // Dupe for mts: using model/vnd.mts vs video/mp2t 
-        // Dupe for mp4: using application/mp4 vs video/mp4 
-        // Dupe for mpg4: using application/mp4 vs video/mp4 
 
-        // Generated 959 unique mime type values
-        // Generated 1208 type key pairs
+        // Generated 958 unique mime type values
+        // Generated 1206 type key pairs
 
         ///<summary>ez</summary>
         public const string Ez = "application/andrew-inset";
@@ -234,14 +233,6 @@ namespace MimeMapping
         public const string M21 = "application/mp21";
         ///<summary>mp21</summary>
         public const string Mp21 = "application/mp21";
-        ///<summary>mp4</summary>
-        public const string Mp4 = "application/mp4";
-        ///<summary>mpg4</summary>
-        public const string Mpg4 = "application/mp4";
-        ///<summary>mp4s</summary>
-        public const string Mp4s = "application/mp4";
-        ///<summary>m4p</summary>
-        public const string M4p = "application/mp4";
         ///<summary>msix</summary>
         public const string Msix = "application/msix";
         ///<summary>msixbundle</summary>
@@ -2384,8 +2375,12 @@ namespace MimeMapping
         public const string M2t = "video/mp2t";
         ///<summary>m2ts</summary>
         public const string M2ts = "video/mp2t";
+        ///<summary>mp4</summary>
+        public const string Mp4 = "video/mp4";
         ///<summary>mp4v</summary>
         public const string Mp4v = "video/mp4";
+        ///<summary>mpg4</summary>
+        public const string Mpg4 = "video/mp4";
         ///<summary>mpeg</summary>
         public const string Mpeg = "video/mpeg";
         ///<summary>mpg</summary>
@@ -2479,7 +2474,7 @@ namespace MimeMapping
         ///<summary>ice</summary>
         public const string Ice = "x-conference/x-cooltalk";
         // List of all available mimetypes, used to build the dictionary
-        internal static readonly Lazy<string[]> ALL_MIMETYPES = new Lazy<string[]>(() => new[] {
+        internal static readonly Lazy<string[]> ALL_MIMETYPES = new Lazy<string[]>(() => new [] {
             Ez,
             Appinstaller,
             Aw,
@@ -2566,10 +2561,6 @@ namespace MimeMapping
             Mods,
             M21,
             Mp21,
-            Mp4,
-            Mpg4,
-            Mp4s,
-            M4p,
             Msix,
             Msixbundle,
             Doc,
@@ -3641,7 +3632,9 @@ namespace MimeMapping
             Ts,
             M2t,
             M2ts,
+            Mp4,
             Mp4v,
+            Mpg4,
             Mpeg,
             Mpg,
             Mpe,
@@ -3689,6 +3682,7 @@ namespace MimeMapping
             Smv,
             Ice,
         });
+
 
         ///<summary>File extensions</summary>
         public static class FileExtensions
@@ -3865,14 +3859,6 @@ namespace MimeMapping
             public const string M21 = "m21";
             ///<summary>mp21</summary>
             public const string Mp21 = "mp21";
-            ///<summary>mp4</summary>
-            public const string Mp4 = "mp4";
-            ///<summary>mpg4</summary>
-            public const string Mpg4 = "mpg4";
-            ///<summary>mp4s</summary>
-            public const string Mp4s = "mp4s";
-            ///<summary>m4p</summary>
-            public const string M4p = "m4p";
             ///<summary>msix</summary>
             public const string Msix = "msix";
             ///<summary>msixbundle</summary>
@@ -6015,8 +6001,12 @@ namespace MimeMapping
             public const string M2t = "m2t";
             ///<summary>m2ts</summary>
             public const string M2ts = "m2ts";
+            ///<summary>mp4</summary>
+            public const string Mp4 = "mp4";
             ///<summary>mp4v</summary>
             public const string Mp4v = "mp4v";
+            ///<summary>mpg4</summary>
+            public const string Mpg4 = "mpg4";
             ///<summary>mpeg</summary>
             public const string Mpeg = "mpeg";
             ///<summary>mpg</summary>
@@ -6110,8 +6100,9 @@ namespace MimeMapping
             ///<summary>ice</summary>
             public const string Ice = "ice";
         }
+
         // List of all available extensions, used to build the dictionary
-        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new[] {
+        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
             FileExtensions.Ez,
             FileExtensions.Appinstaller,
             FileExtensions.Aw,
@@ -6198,10 +6189,6 @@ namespace MimeMapping
             FileExtensions.Mods,
             FileExtensions.M21,
             FileExtensions.Mp21,
-            FileExtensions.Mp4,
-            FileExtensions.Mpg4,
-            FileExtensions.Mp4s,
-            FileExtensions.M4p,
             FileExtensions.Msix,
             FileExtensions.Msixbundle,
             FileExtensions.Doc,
@@ -7273,7 +7260,9 @@ namespace MimeMapping
             FileExtensions.Ts,
             FileExtensions.M2t,
             FileExtensions.M2ts,
+            FileExtensions.Mp4,
             FileExtensions.Mp4v,
+            FileExtensions.Mpg4,
             FileExtensions.Mpeg,
             FileExtensions.Mpg,
             FileExtensions.Mpe,
@@ -7321,6 +7310,7 @@ namespace MimeMapping
             FileExtensions.Smv,
             FileExtensions.Ice,
         });
+
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string? LookupType(string type)
@@ -7570,12 +7560,6 @@ namespace MimeMapping
                 case FileExtensions.M21:
                 case FileExtensions.Mp21:
                     return M21;
-
-                case FileExtensions.Mp4:
-                case FileExtensions.Mpg4:
-                case FileExtensions.Mp4s:
-                case FileExtensions.M4p:
-                    return Mp4;
 
                 case FileExtensions.Msix:
                     return Msix;
@@ -10342,8 +10326,10 @@ namespace MimeMapping
                 case FileExtensions.M2ts:
                     return Ts;
 
+                case FileExtensions.Mp4:
                 case FileExtensions.Mp4v:
-                    return Mp4v;
+                case FileExtensions.Mpg4:
+                    return Mp4;
 
                 case FileExtensions.Mpeg:
                 case FileExtensions.Mpg:
@@ -10457,196 +10443,192 @@ namespace MimeMapping
                     return null;
             }
         }
+
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string[]? LookupMimeType(string mimeType)
         {
             switch (mimeType)
             {
                 case Ez:
-                    return new[] {FileExtensions.Ez};
+					return new[] {FileExtensions.Ez};
                 case Appinstaller:
-                    return new[] {FileExtensions.Appinstaller};
+					return new[] {FileExtensions.Appinstaller};
                 case Aw:
-                    return new[] {FileExtensions.Aw};
+					return new[] {FileExtensions.Aw};
                 case Appx:
-                    return new[] {FileExtensions.Appx};
+					return new[] {FileExtensions.Appx};
                 case Appxbundle:
-                    return new[] {FileExtensions.Appxbundle};
+					return new[] {FileExtensions.Appxbundle};
                 case Atom:
-                    return new[] {FileExtensions.Atom};
+					return new[] {FileExtensions.Atom};
                 case Atomcat:
-                    return new[] {FileExtensions.Atomcat};
+					return new[] {FileExtensions.Atomcat};
                 case Atomdeleted:
-                    return new[] {FileExtensions.Atomdeleted};
+					return new[] {FileExtensions.Atomdeleted};
                 case Atomsvc:
-                    return new[] {FileExtensions.Atomsvc};
+					return new[] {FileExtensions.Atomsvc};
                 case Dwd:
-                    return new[] {FileExtensions.Dwd};
+					return new[] {FileExtensions.Dwd};
                 case Held:
-                    return new[] {FileExtensions.Held};
+					return new[] {FileExtensions.Held};
                 case Rsat:
-                    return new[] {FileExtensions.Rsat};
+					return new[] {FileExtensions.Rsat};
                 case Aml:
-                    return new[] {FileExtensions.Aml};
+					return new[] {FileExtensions.Aml};
                 case Amlx:
-                    return new[] {FileExtensions.Amlx};
+					return new[] {FileExtensions.Amlx};
                 case Bdoc:
-                    return new[] {FileExtensions.Bdoc};
+					return new[] {FileExtensions.Bdoc};
                 case Xcs:
-                    return new[] {FileExtensions.Xcs};
+					return new[] {FileExtensions.Xcs};
                 case Ccxml:
-                    return new[] {FileExtensions.Ccxml};
+					return new[] {FileExtensions.Ccxml};
                 case Cdfx:
-                    return new[] {FileExtensions.Cdfx};
+					return new[] {FileExtensions.Cdfx};
                 case Cdmia:
-                    return new[] {FileExtensions.Cdmia};
+					return new[] {FileExtensions.Cdmia};
                 case Cdmic:
-                    return new[] {FileExtensions.Cdmic};
+					return new[] {FileExtensions.Cdmic};
                 case Cdmid:
-                    return new[] {FileExtensions.Cdmid};
+					return new[] {FileExtensions.Cdmid};
                 case Cdmio:
-                    return new[] {FileExtensions.Cdmio};
+					return new[] {FileExtensions.Cdmio};
                 case Cdmiq:
-                    return new[] {FileExtensions.Cdmiq};
+					return new[] {FileExtensions.Cdmiq};
                 case Cpl:
-                    return new[] {FileExtensions.Cpl};
+					return new[] {FileExtensions.Cpl};
                 case Cu:
-                    return new[] {FileExtensions.Cu};
+					return new[] {FileExtensions.Cu};
                 case Cwl:
-                    return new[] {FileExtensions.Cwl};
+					return new[] {FileExtensions.Cwl};
                 case Mpd:
-                    return new[] {FileExtensions.Mpd};
+					return new[] {FileExtensions.Mpd};
                 case Mpp:
-                    return new[] {FileExtensions.Mpp};
+					return new[] {FileExtensions.Mpp};
                 case Davmount:
-                    return new[] {FileExtensions.Davmount};
+					return new[] {FileExtensions.Davmount};
                 case Dbk:
-                    return new[] {FileExtensions.Dbk};
+					return new[] {FileExtensions.Dbk};
                 case Dssc:
-                    return new[] {FileExtensions.Dssc};
+					return new[] {FileExtensions.Dssc};
                 case Xdssc:
-                    return new[] {FileExtensions.Xdssc};
+					return new[] {FileExtensions.Xdssc};
                 case Ecma:
-                    return new[] {FileExtensions.Ecma};
+					return new[] {FileExtensions.Ecma};
                 case Emma:
-                    return new[] {FileExtensions.Emma};
+					return new[] {FileExtensions.Emma};
                 case Emotionml:
-                    return new[] {FileExtensions.Emotionml};
+					return new[] {FileExtensions.Emotionml};
                 case Epub:
-                    return new[] {FileExtensions.Epub};
+					return new[] {FileExtensions.Epub};
                 case Exi:
-                    return new[] {FileExtensions.Exi};
+					return new[] {FileExtensions.Exi};
                 case Exp:
-                    return new[] {FileExtensions.Exp};
+					return new[] {FileExtensions.Exp};
                 case Fdf:
-                    return new[] {FileExtensions.Fdf};
+					return new[] {FileExtensions.Fdf};
                 case Fdt:
-                    return new[] {FileExtensions.Fdt};
+					return new[] {FileExtensions.Fdt};
                 case Pfr:
-                    return new[] {FileExtensions.Pfr};
+					return new[] {FileExtensions.Pfr};
                 case Geojson:
-                    return new[] {FileExtensions.Geojson};
+					return new[] {FileExtensions.Geojson};
                 case Gml:
-                    return new[] {FileExtensions.Gml};
+					return new[] {FileExtensions.Gml};
                 case Gpx:
-                    return new[] {FileExtensions.Gpx};
+					return new[] {FileExtensions.Gpx};
                 case Gxf:
-                    return new[] {FileExtensions.Gxf};
+					return new[] {FileExtensions.Gxf};
                 case Gz:
-                    return new[] {FileExtensions.Gz};
+					return new[] {FileExtensions.Gz};
                 case Hjson:
-                    return new[] {FileExtensions.Hjson};
+					return new[] {FileExtensions.Hjson};
                 case Stk:
-                    return new[] {FileExtensions.Stk};
+					return new[] {FileExtensions.Stk};
                 case Ink:
                 //case Inkml:
-                    return new[] {FileExtensions.Ink, FileExtensions.Inkml};
+					return new[] {FileExtensions.Ink, FileExtensions.Inkml};
                 case Ipfix:
-                    return new[] {FileExtensions.Ipfix};
+					return new[] {FileExtensions.Ipfix};
                 case Its:
-                    return new[] {FileExtensions.Its};
+					return new[] {FileExtensions.Its};
                 case Jar:
                 //case War:
                 //case Ear:
-                    return new[] {FileExtensions.Jar, FileExtensions.War, FileExtensions.Ear};
+					return new[] {FileExtensions.Jar, FileExtensions.War, FileExtensions.Ear};
                 case Ser:
-                    return new[] {FileExtensions.Ser};
+					return new[] {FileExtensions.Ser};
                 case Class:
-                    return new[] {FileExtensions.Class};
+					return new[] {FileExtensions.Class};
                 case Js:
-                    return new[] {FileExtensions.Js};
+					return new[] {FileExtensions.Js};
                 case Json:
                 //case Map:
-                    return new[] {FileExtensions.Json, FileExtensions.Map};
+					return new[] {FileExtensions.Json, FileExtensions.Map};
                 case Json5:
-                    return new[] {FileExtensions.Json5};
+					return new[] {FileExtensions.Json5};
                 case Jsonml:
-                    return new[] {FileExtensions.Jsonml};
+					return new[] {FileExtensions.Jsonml};
                 case Jsonld:
-                    return new[] {FileExtensions.Jsonld};
+					return new[] {FileExtensions.Jsonld};
                 case Lgr:
-                    return new[] {FileExtensions.Lgr};
+					return new[] {FileExtensions.Lgr};
                 case Lostxml:
-                    return new[] {FileExtensions.Lostxml};
+					return new[] {FileExtensions.Lostxml};
                 case Hqx:
-                    return new[] {FileExtensions.Hqx};
+					return new[] {FileExtensions.Hqx};
                 case Cpt:
-                    return new[] {FileExtensions.Cpt};
+					return new[] {FileExtensions.Cpt};
                 case Mads:
-                    return new[] {FileExtensions.Mads};
+					return new[] {FileExtensions.Mads};
                 case Webmanifest:
-                    return new[] {FileExtensions.Webmanifest};
+					return new[] {FileExtensions.Webmanifest};
                 case Mrc:
-                    return new[] {FileExtensions.Mrc};
+					return new[] {FileExtensions.Mrc};
                 case Mrcx:
-                    return new[] {FileExtensions.Mrcx};
+					return new[] {FileExtensions.Mrcx};
                 case Ma:
                 //case Nb:
                 //case Mb:
-                    return new[] {FileExtensions.Ma, FileExtensions.Nb, FileExtensions.Mb};
+					return new[] {FileExtensions.Ma, FileExtensions.Nb, FileExtensions.Mb};
                 case Mathml:
-                    return new[] {FileExtensions.Mathml};
+					return new[] {FileExtensions.Mathml};
                 case Mbox:
-                    return new[] {FileExtensions.Mbox};
+					return new[] {FileExtensions.Mbox};
                 case Mpf:
-                    return new[] {FileExtensions.Mpf};
+					return new[] {FileExtensions.Mpf};
                 case Mscml:
-                    return new[] {FileExtensions.Mscml};
+					return new[] {FileExtensions.Mscml};
                 case Metalink:
-                    return new[] {FileExtensions.Metalink};
+					return new[] {FileExtensions.Metalink};
                 case Meta4:
-                    return new[] {FileExtensions.Meta4};
+					return new[] {FileExtensions.Meta4};
                 case Mets:
-                    return new[] {FileExtensions.Mets};
+					return new[] {FileExtensions.Mets};
                 case Maei:
-                    return new[] {FileExtensions.Maei};
+					return new[] {FileExtensions.Maei};
                 case Musd:
-                    return new[] {FileExtensions.Musd};
+					return new[] {FileExtensions.Musd};
                 case Mods:
-                    return new[] {FileExtensions.Mods};
+					return new[] {FileExtensions.Mods};
                 case M21:
                 //case Mp21:
-                    return new[] {FileExtensions.M21, FileExtensions.Mp21};
-                case Mp4:
-                    //case Mpg4:
-                    //case Mp4s:
-                //case M4p:
-                    return new[] {FileExtensions.Mp4, FileExtensions.Mpg4, FileExtensions.Mp4s, FileExtensions.M4p};
+					return new[] {FileExtensions.M21, FileExtensions.Mp21};
                 case Msix:
-                    return new[] {FileExtensions.Msix};
+					return new[] {FileExtensions.Msix};
                 case Msixbundle:
-                    return new[] {FileExtensions.Msixbundle};
+					return new[] {FileExtensions.Msixbundle};
                 case Doc:
                 //case Dot:
-                    return new[] {FileExtensions.Doc, FileExtensions.Dot};
+					return new[] {FileExtensions.Doc, FileExtensions.Dot};
                 case Mxf:
-                    return new[] {FileExtensions.Mxf};
+					return new[] {FileExtensions.Mxf};
                 case Nq:
-                    return new[] {FileExtensions.Nq};
+					return new[] {FileExtensions.Nq};
                 case Nt:
-                    return new[] {FileExtensions.Nt};
+					return new[] {FileExtensions.Nt};
                 case Cjs:
-                    return new[] {FileExtensions.Cjs};
+					return new[] {FileExtensions.Cjs};
                 case Bin:
                 //case Dms:
                 //case Lrf:
@@ -10669,1059 +10651,1059 @@ namespace MimeMapping
                 //case Msp:
                 //case Msm:
                 //case Buffer:
-                    return new[] {FileExtensions.Bin, FileExtensions.Dms, FileExtensions.Lrf, FileExtensions.Mar, FileExtensions.So, FileExtensions.Dist, FileExtensions.Distz, FileExtensions.Pkg, FileExtensions.Bpk, FileExtensions.Dump, FileExtensions.Elc, FileExtensions.Deploy, FileExtensions.Exe, FileExtensions.Dll, FileExtensions.Deb, FileExtensions.Dmg, FileExtensions.Iso, FileExtensions.Img, FileExtensions.Msi, FileExtensions.Msp, FileExtensions.Msm, FileExtensions.Buffer};
+					return new[] {FileExtensions.Bin, FileExtensions.Dms, FileExtensions.Lrf, FileExtensions.Mar, FileExtensions.So, FileExtensions.Dist, FileExtensions.Distz, FileExtensions.Pkg, FileExtensions.Bpk, FileExtensions.Dump, FileExtensions.Elc, FileExtensions.Deploy, FileExtensions.Exe, FileExtensions.Dll, FileExtensions.Deb, FileExtensions.Dmg, FileExtensions.Iso, FileExtensions.Img, FileExtensions.Msi, FileExtensions.Msp, FileExtensions.Msm, FileExtensions.Buffer};
                 case Oda:
-                    return new[] {FileExtensions.Oda};
+					return new[] {FileExtensions.Oda};
                 case Opf:
-                    return new[] {FileExtensions.Opf};
+					return new[] {FileExtensions.Opf};
                 case Ogx:
-                    return new[] {FileExtensions.Ogx};
+					return new[] {FileExtensions.Ogx};
                 case Omdoc:
-                    return new[] {FileExtensions.Omdoc};
+					return new[] {FileExtensions.Omdoc};
                 case Onetoc:
                 //case Onetoc2:
                 //case Onetmp:
                 //case Onepkg:
-                    return new[] {FileExtensions.Onetoc, FileExtensions.Onetoc2, FileExtensions.Onetmp, FileExtensions.Onepkg};
+					return new[] {FileExtensions.Onetoc, FileExtensions.Onetoc2, FileExtensions.Onetmp, FileExtensions.Onepkg};
                 case Oxps:
-                    return new[] {FileExtensions.Oxps};
+					return new[] {FileExtensions.Oxps};
                 case Relo:
-                    return new[] {FileExtensions.Relo};
+					return new[] {FileExtensions.Relo};
                 case Xer:
-                    return new[] {FileExtensions.Xer};
+					return new[] {FileExtensions.Xer};
                 case Pdf:
-                    return new[] {FileExtensions.Pdf};
+					return new[] {FileExtensions.Pdf};
                 case Pgp:
-                    return new[] {FileExtensions.Pgp};
+					return new[] {FileExtensions.Pgp};
                 case Asc:
-                    return new[] {FileExtensions.Asc};
+					return new[] {FileExtensions.Asc};
                 case Sig:
-                    return new[] {FileExtensions.Sig};
+					return new[] {FileExtensions.Sig};
                 case Prf:
-                    return new[] {FileExtensions.Prf};
+					return new[] {FileExtensions.Prf};
                 case P10:
-                    return new[] {FileExtensions.P10};
+					return new[] {FileExtensions.P10};
                 case P7m:
                 //case P7c:
-                    return new[] {FileExtensions.P7m, FileExtensions.P7c};
+					return new[] {FileExtensions.P7m, FileExtensions.P7c};
                 case P7s:
-                    return new[] {FileExtensions.P7s};
+					return new[] {FileExtensions.P7s};
                 case P8:
-                    return new[] {FileExtensions.P8};
+					return new[] {FileExtensions.P8};
                 case Ac:
-                    return new[] {FileExtensions.Ac};
+					return new[] {FileExtensions.Ac};
                 case Cer:
-                    return new[] {FileExtensions.Cer};
+					return new[] {FileExtensions.Cer};
                 case Crl:
-                    return new[] {FileExtensions.Crl};
+					return new[] {FileExtensions.Crl};
                 case Pkipath:
-                    return new[] {FileExtensions.Pkipath};
+					return new[] {FileExtensions.Pkipath};
                 case Pki:
-                    return new[] {FileExtensions.Pki};
+					return new[] {FileExtensions.Pki};
                 case Pls:
-                    return new[] {FileExtensions.Pls};
+					return new[] {FileExtensions.Pls};
                 case Ai:
                 //case Eps:
                 //case Ps:
-                    return new[] {FileExtensions.Ai, FileExtensions.Eps, FileExtensions.Ps};
+					return new[] {FileExtensions.Ai, FileExtensions.Eps, FileExtensions.Ps};
                 case Provx:
-                    return new[] {FileExtensions.Provx};
+					return new[] {FileExtensions.Provx};
                 case Cww:
-                    return new[] {FileExtensions.Cww};
+					return new[] {FileExtensions.Cww};
                 case Xsf:
-                    return new[] {FileExtensions.Xsf};
+					return new[] {FileExtensions.Xsf};
                 case Pskcxml:
-                    return new[] {FileExtensions.Pskcxml};
+					return new[] {FileExtensions.Pskcxml};
                 case Raml:
-                    return new[] {FileExtensions.Raml};
+					return new[] {FileExtensions.Raml};
                 case Rdf:
                 //case Owl:
-                    return new[] {FileExtensions.Rdf, FileExtensions.Owl};
+					return new[] {FileExtensions.Rdf, FileExtensions.Owl};
                 case Rif:
-                    return new[] {FileExtensions.Rif};
+					return new[] {FileExtensions.Rif};
                 case Rnc:
-                    return new[] {FileExtensions.Rnc};
+					return new[] {FileExtensions.Rnc};
                 case Rl:
-                    return new[] {FileExtensions.Rl};
+					return new[] {FileExtensions.Rl};
                 case Rld:
-                    return new[] {FileExtensions.Rld};
+					return new[] {FileExtensions.Rld};
                 case Rs:
-                    return new[] {FileExtensions.Rs};
+					return new[] {FileExtensions.Rs};
                 case Rapd:
-                    return new[] {FileExtensions.Rapd};
+					return new[] {FileExtensions.Rapd};
                 case Sls:
-                    return new[] {FileExtensions.Sls};
+					return new[] {FileExtensions.Sls};
                 case Rusd:
-                    return new[] {FileExtensions.Rusd};
+					return new[] {FileExtensions.Rusd};
                 case Gbr:
-                    return new[] {FileExtensions.Gbr};
+					return new[] {FileExtensions.Gbr};
                 case Mft:
-                    return new[] {FileExtensions.Mft};
+					return new[] {FileExtensions.Mft};
                 case Roa:
-                    return new[] {FileExtensions.Roa};
+					return new[] {FileExtensions.Roa};
                 case Rsd:
-                    return new[] {FileExtensions.Rsd};
+					return new[] {FileExtensions.Rsd};
                 case Rss:
-                    return new[] {FileExtensions.Rss};
+					return new[] {FileExtensions.Rss};
                 case Rtf:
-                    return new[] {FileExtensions.Rtf};
+					return new[] {FileExtensions.Rtf};
                 case Sbml:
-                    return new[] {FileExtensions.Sbml};
+					return new[] {FileExtensions.Sbml};
                 case Scq:
-                    return new[] {FileExtensions.Scq};
+					return new[] {FileExtensions.Scq};
                 case Scs:
-                    return new[] {FileExtensions.Scs};
+					return new[] {FileExtensions.Scs};
                 case Spq:
-                    return new[] {FileExtensions.Spq};
+					return new[] {FileExtensions.Spq};
                 case Spp:
-                    return new[] {FileExtensions.Spp};
+					return new[] {FileExtensions.Spp};
                 case Sdp:
-                    return new[] {FileExtensions.Sdp};
+					return new[] {FileExtensions.Sdp};
                 case Senmlx:
-                    return new[] {FileExtensions.Senmlx};
+					return new[] {FileExtensions.Senmlx};
                 case Sensmlx:
-                    return new[] {FileExtensions.Sensmlx};
+					return new[] {FileExtensions.Sensmlx};
                 case Setpay:
-                    return new[] {FileExtensions.Setpay};
+					return new[] {FileExtensions.Setpay};
                 case Setreg:
-                    return new[] {FileExtensions.Setreg};
+					return new[] {FileExtensions.Setreg};
                 case Shf:
-                    return new[] {FileExtensions.Shf};
+					return new[] {FileExtensions.Shf};
                 case Siv:
                 //case Sieve:
-                    return new[] {FileExtensions.Siv, FileExtensions.Sieve};
+					return new[] {FileExtensions.Siv, FileExtensions.Sieve};
                 case Smi:
                 //case Smil:
-                    return new[] {FileExtensions.Smi, FileExtensions.Smil};
+					return new[] {FileExtensions.Smi, FileExtensions.Smil};
                 case Rq:
-                    return new[] {FileExtensions.Rq};
+					return new[] {FileExtensions.Rq};
                 case Srx:
-                    return new[] {FileExtensions.Srx};
+					return new[] {FileExtensions.Srx};
                 case Sql:
-                    return new[] {FileExtensions.Sql};
+					return new[] {FileExtensions.Sql};
                 case Gram:
-                    return new[] {FileExtensions.Gram};
+					return new[] {FileExtensions.Gram};
                 case Grxml:
-                    return new[] {FileExtensions.Grxml};
+					return new[] {FileExtensions.Grxml};
                 case Sru:
-                    return new[] {FileExtensions.Sru};
+					return new[] {FileExtensions.Sru};
                 case Ssdl:
-                    return new[] {FileExtensions.Ssdl};
+					return new[] {FileExtensions.Ssdl};
                 case Ssml:
-                    return new[] {FileExtensions.Ssml};
+					return new[] {FileExtensions.Ssml};
                 case Swidtag:
-                    return new[] {FileExtensions.Swidtag};
+					return new[] {FileExtensions.Swidtag};
                 case Tei:
                 //case Teicorpus:
-                    return new[] {FileExtensions.Tei, FileExtensions.Teicorpus};
+					return new[] {FileExtensions.Tei, FileExtensions.Teicorpus};
                 case Tfi:
-                    return new[] {FileExtensions.Tfi};
+					return new[] {FileExtensions.Tfi};
                 case Tsd:
-                    return new[] {FileExtensions.Tsd};
+					return new[] {FileExtensions.Tsd};
                 case Toml:
-                    return new[] {FileExtensions.Toml};
+					return new[] {FileExtensions.Toml};
                 case Trig:
-                    return new[] {FileExtensions.Trig};
+					return new[] {FileExtensions.Trig};
                 case Ttml:
-                    return new[] {FileExtensions.Ttml};
+					return new[] {FileExtensions.Ttml};
                 case Ubj:
-                    return new[] {FileExtensions.Ubj};
+					return new[] {FileExtensions.Ubj};
                 case Rsheet:
-                    return new[] {FileExtensions.Rsheet};
+					return new[] {FileExtensions.Rsheet};
                 case Td:
-                    return new[] {FileExtensions.Td};
+					return new[] {FileExtensions.Td};
                 case _1km:
-                    return new[] {FileExtensions._1km};
+					return new[] {FileExtensions._1km};
                 case Plb:
-                    return new[] {FileExtensions.Plb};
+					return new[] {FileExtensions.Plb};
                 case Psb:
-                    return new[] {FileExtensions.Psb};
+					return new[] {FileExtensions.Psb};
                 case Pvb:
-                    return new[] {FileExtensions.Pvb};
+					return new[] {FileExtensions.Pvb};
                 case Tcap:
-                    return new[] {FileExtensions.Tcap};
+					return new[] {FileExtensions.Tcap};
                 case Pwn:
-                    return new[] {FileExtensions.Pwn};
+					return new[] {FileExtensions.Pwn};
                 case Aso:
-                    return new[] {FileExtensions.Aso};
+					return new[] {FileExtensions.Aso};
                 case Imp:
-                    return new[] {FileExtensions.Imp};
+					return new[] {FileExtensions.Imp};
                 case Acu:
-                    return new[] {FileExtensions.Acu};
+					return new[] {FileExtensions.Acu};
                 case Atc:
                 //case Acutc:
-                    return new[] {FileExtensions.Atc, FileExtensions.Acutc};
+					return new[] {FileExtensions.Atc, FileExtensions.Acutc};
                 case Air:
-                    return new[] {FileExtensions.Air};
+					return new[] {FileExtensions.Air};
                 case Fcdt:
-                    return new[] {FileExtensions.Fcdt};
+					return new[] {FileExtensions.Fcdt};
                 case Fxp:
                 //case Fxpl:
-                    return new[] {FileExtensions.Fxp, FileExtensions.Fxpl};
+					return new[] {FileExtensions.Fxp, FileExtensions.Fxpl};
                 case Xdp:
-                    return new[] {FileExtensions.Xdp};
+					return new[] {FileExtensions.Xdp};
                 case Xfdf:
-                    return new[] {FileExtensions.Xfdf};
+					return new[] {FileExtensions.Xfdf};
                 case Age:
-                    return new[] {FileExtensions.Age};
+					return new[] {FileExtensions.Age};
                 case Ahead:
-                    return new[] {FileExtensions.Ahead};
+					return new[] {FileExtensions.Ahead};
                 case Azf:
-                    return new[] {FileExtensions.Azf};
+					return new[] {FileExtensions.Azf};
                 case Azs:
-                    return new[] {FileExtensions.Azs};
+					return new[] {FileExtensions.Azs};
                 case Azw:
-                    return new[] {FileExtensions.Azw};
+					return new[] {FileExtensions.Azw};
                 case Acc:
-                    return new[] {FileExtensions.Acc};
+					return new[] {FileExtensions.Acc};
                 case Ami:
-                    return new[] {FileExtensions.Ami};
+					return new[] {FileExtensions.Ami};
                 case Apk:
-                    return new[] {FileExtensions.Apk};
+					return new[] {FileExtensions.Apk};
                 case Cii:
-                    return new[] {FileExtensions.Cii};
+					return new[] {FileExtensions.Cii};
                 case Fti:
-                    return new[] {FileExtensions.Fti};
+					return new[] {FileExtensions.Fti};
                 case Atx:
-                    return new[] {FileExtensions.Atx};
+					return new[] {FileExtensions.Atx};
                 case Mpkg:
-                    return new[] {FileExtensions.Mpkg};
+					return new[] {FileExtensions.Mpkg};
                 case Key:
-                    return new[] {FileExtensions.Key};
+					return new[] {FileExtensions.Key};
                 case M3u8:
-                    return new[] {FileExtensions.M3u8};
+					return new[] {FileExtensions.M3u8};
                 case Numbers:
-                    return new[] {FileExtensions.Numbers};
+					return new[] {FileExtensions.Numbers};
                 case Pages:
-                    return new[] {FileExtensions.Pages};
+					return new[] {FileExtensions.Pages};
                 case Pkpass:
-                    return new[] {FileExtensions.Pkpass};
+					return new[] {FileExtensions.Pkpass};
                 case Swi:
-                    return new[] {FileExtensions.Swi};
+					return new[] {FileExtensions.Swi};
                 case Iota:
-                    return new[] {FileExtensions.Iota};
+					return new[] {FileExtensions.Iota};
                 case Aep:
-                    return new[] {FileExtensions.Aep};
+					return new[] {FileExtensions.Aep};
                 case Bmml:
-                    return new[] {FileExtensions.Bmml};
+					return new[] {FileExtensions.Bmml};
                 case Mpm:
-                    return new[] {FileExtensions.Mpm};
+					return new[] {FileExtensions.Mpm};
                 case Bmi:
-                    return new[] {FileExtensions.Bmi};
+					return new[] {FileExtensions.Bmi};
                 case Rep:
-                    return new[] {FileExtensions.Rep};
+					return new[] {FileExtensions.Rep};
                 case Cdxml:
-                    return new[] {FileExtensions.Cdxml};
+					return new[] {FileExtensions.Cdxml};
                 case Mmd:
-                    return new[] {FileExtensions.Mmd};
+					return new[] {FileExtensions.Mmd};
                 case Cdy:
-                    return new[] {FileExtensions.Cdy};
+					return new[] {FileExtensions.Cdy};
                 case Csl:
-                    return new[] {FileExtensions.Csl};
+					return new[] {FileExtensions.Csl};
                 case Cla:
-                    return new[] {FileExtensions.Cla};
+					return new[] {FileExtensions.Cla};
                 case Rp9:
-                    return new[] {FileExtensions.Rp9};
+					return new[] {FileExtensions.Rp9};
                 case C4g:
                 //case C4d:
                 //case C4f:
                 //case C4p:
                 //case C4u:
-                    return new[] {FileExtensions.C4g, FileExtensions.C4d, FileExtensions.C4f, FileExtensions.C4p, FileExtensions.C4u};
+					return new[] {FileExtensions.C4g, FileExtensions.C4d, FileExtensions.C4f, FileExtensions.C4p, FileExtensions.C4u};
                 case C11amc:
-                    return new[] {FileExtensions.C11amc};
+					return new[] {FileExtensions.C11amc};
                 case C11amz:
-                    return new[] {FileExtensions.C11amz};
+					return new[] {FileExtensions.C11amz};
                 case Csp:
-                    return new[] {FileExtensions.Csp};
+					return new[] {FileExtensions.Csp};
                 case Cdbcmsg:
-                    return new[] {FileExtensions.Cdbcmsg};
+					return new[] {FileExtensions.Cdbcmsg};
                 case Cmc:
-                    return new[] {FileExtensions.Cmc};
+					return new[] {FileExtensions.Cmc};
                 case Clkx:
-                    return new[] {FileExtensions.Clkx};
+					return new[] {FileExtensions.Clkx};
                 case Clkk:
-                    return new[] {FileExtensions.Clkk};
+					return new[] {FileExtensions.Clkk};
                 case Clkp:
-                    return new[] {FileExtensions.Clkp};
+					return new[] {FileExtensions.Clkp};
                 case Clkt:
-                    return new[] {FileExtensions.Clkt};
+					return new[] {FileExtensions.Clkt};
                 case Clkw:
-                    return new[] {FileExtensions.Clkw};
+					return new[] {FileExtensions.Clkw};
                 case Wbs:
-                    return new[] {FileExtensions.Wbs};
+					return new[] {FileExtensions.Wbs};
                 case Pml:
-                    return new[] {FileExtensions.Pml};
+					return new[] {FileExtensions.Pml};
                 case Ppd:
-                    return new[] {FileExtensions.Ppd};
+					return new[] {FileExtensions.Ppd};
                 case Car:
-                    return new[] {FileExtensions.Car};
+					return new[] {FileExtensions.Car};
                 case Pcurl:
-                    return new[] {FileExtensions.Pcurl};
+					return new[] {FileExtensions.Pcurl};
                 case Dart:
-                    return new[] {FileExtensions.Dart};
+					return new[] {FileExtensions.Dart};
                 case Rdz:
-                    return new[] {FileExtensions.Rdz};
+					return new[] {FileExtensions.Rdz};
                 case Dbf:
-                    return new[] {FileExtensions.Dbf};
+					return new[] {FileExtensions.Dbf};
                 case Uvf:
                 //case Uvvf:
                 //case Uvd:
                 //case Uvvd:
-                    return new[] {FileExtensions.Uvf, FileExtensions.Uvvf, FileExtensions.Uvd, FileExtensions.Uvvd};
+					return new[] {FileExtensions.Uvf, FileExtensions.Uvvf, FileExtensions.Uvd, FileExtensions.Uvvd};
                 case Uvt:
                 //case Uvvt:
-                    return new[] {FileExtensions.Uvt, FileExtensions.Uvvt};
+					return new[] {FileExtensions.Uvt, FileExtensions.Uvvt};
                 case Uvx:
                 //case Uvvx:
-                    return new[] {FileExtensions.Uvx, FileExtensions.Uvvx};
+					return new[] {FileExtensions.Uvx, FileExtensions.Uvvx};
                 case Uvz:
                 //case Uvvz:
-                    return new[] {FileExtensions.Uvz, FileExtensions.Uvvz};
+					return new[] {FileExtensions.Uvz, FileExtensions.Uvvz};
                 case Felaunch:
-                    return new[] {FileExtensions.Fe_launch};
+					return new[] {FileExtensions.Fe_launch};
                 case Dna:
-                    return new[] {FileExtensions.Dna};
+					return new[] {FileExtensions.Dna};
                 case Mlp:
-                    return new[] {FileExtensions.Mlp};
+					return new[] {FileExtensions.Mlp};
                 case Dpg:
-                    return new[] {FileExtensions.Dpg};
+					return new[] {FileExtensions.Dpg};
                 case Dfac:
-                    return new[] {FileExtensions.Dfac};
+					return new[] {FileExtensions.Dfac};
                 case Kpxx:
-                    return new[] {FileExtensions.Kpxx};
+					return new[] {FileExtensions.Kpxx};
                 case Ait:
-                    return new[] {FileExtensions.Ait};
+					return new[] {FileExtensions.Ait};
                 case Svc:
-                    return new[] {FileExtensions.Svc};
+					return new[] {FileExtensions.Svc};
                 case Geo:
-                    return new[] {FileExtensions.Geo};
+					return new[] {FileExtensions.Geo};
                 case Mag:
-                    return new[] {FileExtensions.Mag};
+					return new[] {FileExtensions.Mag};
                 case Nml:
-                    return new[] {FileExtensions.Nml};
+					return new[] {FileExtensions.Nml};
                 case Esf:
-                    return new[] {FileExtensions.Esf};
+					return new[] {FileExtensions.Esf};
                 case Msf:
-                    return new[] {FileExtensions.Msf};
+					return new[] {FileExtensions.Msf};
                 case Qam:
-                    return new[] {FileExtensions.Qam};
+					return new[] {FileExtensions.Qam};
                 case Slt:
-                    return new[] {FileExtensions.Slt};
+					return new[] {FileExtensions.Slt};
                 case Ssf:
-                    return new[] {FileExtensions.Ssf};
+					return new[] {FileExtensions.Ssf};
                 case Es3:
                 //case Et3:
-                    return new[] {FileExtensions.Es3, FileExtensions.Et3};
+					return new[] {FileExtensions.Es3, FileExtensions.Et3};
                 case Ez2:
-                    return new[] {FileExtensions.Ez2};
+					return new[] {FileExtensions.Ez2};
                 case Ez3:
-                    return new[] {FileExtensions.Ez3};
+					return new[] {FileExtensions.Ez3};
                 case Mseed:
-                    return new[] {FileExtensions.Mseed};
+					return new[] {FileExtensions.Mseed};
                 case Seed:
                 //case Dataless:
-                    return new[] {FileExtensions.Seed, FileExtensions.Dataless};
+					return new[] {FileExtensions.Seed, FileExtensions.Dataless};
                 case Gph:
-                    return new[] {FileExtensions.Gph};
+					return new[] {FileExtensions.Gph};
                 case Ftc:
-                    return new[] {FileExtensions.Ftc};
+					return new[] {FileExtensions.Ftc};
                 case Fm:
                 //case Frame:
                 //case Maker:
                 //case Book:
-                    return new[] {FileExtensions.Fm, FileExtensions.Frame, FileExtensions.Maker, FileExtensions.Book};
+					return new[] {FileExtensions.Fm, FileExtensions.Frame, FileExtensions.Maker, FileExtensions.Book};
                 case Fnc:
-                    return new[] {FileExtensions.Fnc};
+					return new[] {FileExtensions.Fnc};
                 case Ltf:
-                    return new[] {FileExtensions.Ltf};
+					return new[] {FileExtensions.Ltf};
                 case Fsc:
-                    return new[] {FileExtensions.Fsc};
+					return new[] {FileExtensions.Fsc};
                 case Oas:
-                    return new[] {FileExtensions.Oas};
+					return new[] {FileExtensions.Oas};
                 case Oa2:
-                    return new[] {FileExtensions.Oa2};
+					return new[] {FileExtensions.Oa2};
                 case Oa3:
-                    return new[] {FileExtensions.Oa3};
+					return new[] {FileExtensions.Oa3};
                 case Fg5:
-                    return new[] {FileExtensions.Fg5};
+					return new[] {FileExtensions.Fg5};
                 case Bh2:
-                    return new[] {FileExtensions.Bh2};
+					return new[] {FileExtensions.Bh2};
                 case Ddd:
-                    return new[] {FileExtensions.Ddd};
+					return new[] {FileExtensions.Ddd};
                 case Xdw:
-                    return new[] {FileExtensions.Xdw};
+					return new[] {FileExtensions.Xdw};
                 case Xbd:
-                    return new[] {FileExtensions.Xbd};
+					return new[] {FileExtensions.Xbd};
                 case Fzs:
-                    return new[] {FileExtensions.Fzs};
+					return new[] {FileExtensions.Fzs};
                 case Txd:
-                    return new[] {FileExtensions.Txd};
+					return new[] {FileExtensions.Txd};
                 case Ggb:
-                    return new[] {FileExtensions.Ggb};
+					return new[] {FileExtensions.Ggb};
                 case Ggs:
-                    return new[] {FileExtensions.Ggs};
+					return new[] {FileExtensions.Ggs};
                 case Ggt:
-                    return new[] {FileExtensions.Ggt};
+					return new[] {FileExtensions.Ggt};
                 case Gex:
                 //case Gre:
-                    return new[] {FileExtensions.Gex, FileExtensions.Gre};
+					return new[] {FileExtensions.Gex, FileExtensions.Gre};
                 case Gxt:
-                    return new[] {FileExtensions.Gxt};
+					return new[] {FileExtensions.Gxt};
                 case G2w:
-                    return new[] {FileExtensions.G2w};
+					return new[] {FileExtensions.G2w};
                 case G3w:
-                    return new[] {FileExtensions.G3w};
+					return new[] {FileExtensions.G3w};
                 case Gmx:
-                    return new[] {FileExtensions.Gmx};
+					return new[] {FileExtensions.Gmx};
                 case Gdoc:
-                    return new[] {FileExtensions.Gdoc};
+					return new[] {FileExtensions.Gdoc};
                 case Gslides:
-                    return new[] {FileExtensions.Gslides};
+					return new[] {FileExtensions.Gslides};
                 case Gsheet:
-                    return new[] {FileExtensions.Gsheet};
+					return new[] {FileExtensions.Gsheet};
                 case Kml:
-                    return new[] {FileExtensions.Kml};
+					return new[] {FileExtensions.Kml};
                 case Kmz:
-                    return new[] {FileExtensions.Kmz};
+					return new[] {FileExtensions.Kmz};
                 case Xdcf:
-                    return new[] {FileExtensions.Xdcf};
+					return new[] {FileExtensions.Xdcf};
                 case Gqf:
                 //case Gqs:
-                    return new[] {FileExtensions.Gqf, FileExtensions.Gqs};
+					return new[] {FileExtensions.Gqf, FileExtensions.Gqs};
                 case Gac:
-                    return new[] {FileExtensions.Gac};
+					return new[] {FileExtensions.Gac};
                 case Ghf:
-                    return new[] {FileExtensions.Ghf};
+					return new[] {FileExtensions.Ghf};
                 case Gim:
-                    return new[] {FileExtensions.Gim};
+					return new[] {FileExtensions.Gim};
                 case Grv:
-                    return new[] {FileExtensions.Grv};
+					return new[] {FileExtensions.Grv};
                 case Gtm:
-                    return new[] {FileExtensions.Gtm};
+					return new[] {FileExtensions.Gtm};
                 case Tpl:
-                    return new[] {FileExtensions.Tpl};
+					return new[] {FileExtensions.Tpl};
                 case Vcg:
-                    return new[] {FileExtensions.Vcg};
+					return new[] {FileExtensions.Vcg};
                 case Hal:
-                    return new[] {FileExtensions.Hal};
+					return new[] {FileExtensions.Hal};
                 case Zmm:
-                    return new[] {FileExtensions.Zmm};
+					return new[] {FileExtensions.Zmm};
                 case Hbci:
-                    return new[] {FileExtensions.Hbci};
+					return new[] {FileExtensions.Hbci};
                 case Les:
-                    return new[] {FileExtensions.Les};
+					return new[] {FileExtensions.Les};
                 case Hpgl:
-                    return new[] {FileExtensions.Hpgl};
+					return new[] {FileExtensions.Hpgl};
                 case Hpid:
-                    return new[] {FileExtensions.Hpid};
+					return new[] {FileExtensions.Hpid};
                 case Hps:
-                    return new[] {FileExtensions.Hps};
+					return new[] {FileExtensions.Hps};
                 case Jlt:
-                    return new[] {FileExtensions.Jlt};
+					return new[] {FileExtensions.Jlt};
                 case Pcl:
-                    return new[] {FileExtensions.Pcl};
+					return new[] {FileExtensions.Pcl};
                 case Pclxl:
-                    return new[] {FileExtensions.Pclxl};
+					return new[] {FileExtensions.Pclxl};
                 case Sfdhdstx:
-                    return new[] {FileExtensions.Sfd_hdstx};
+					return new[] {FileExtensions.Sfd_hdstx};
                 case Mpy:
-                    return new[] {FileExtensions.Mpy};
+					return new[] {FileExtensions.Mpy};
                 case Afp:
                 //case Listafp:
                 //case List3820:
-                    return new[] {FileExtensions.Afp, FileExtensions.Listafp, FileExtensions.List3820};
+					return new[] {FileExtensions.Afp, FileExtensions.Listafp, FileExtensions.List3820};
                 case Irm:
-                    return new[] {FileExtensions.Irm};
+					return new[] {FileExtensions.Irm};
                 case Sc:
-                    return new[] {FileExtensions.Sc};
+					return new[] {FileExtensions.Sc};
                 case Icc:
                 //case Icm:
-                    return new[] {FileExtensions.Icc, FileExtensions.Icm};
+					return new[] {FileExtensions.Icc, FileExtensions.Icm};
                 case Igl:
-                    return new[] {FileExtensions.Igl};
+					return new[] {FileExtensions.Igl};
                 case Ivp:
-                    return new[] {FileExtensions.Ivp};
+					return new[] {FileExtensions.Ivp};
                 case Ivu:
-                    return new[] {FileExtensions.Ivu};
+					return new[] {FileExtensions.Ivu};
                 case Igm:
-                    return new[] {FileExtensions.Igm};
+					return new[] {FileExtensions.Igm};
                 case Xpw:
                 //case Xpx:
-                    return new[] {FileExtensions.Xpw, FileExtensions.Xpx};
+					return new[] {FileExtensions.Xpw, FileExtensions.Xpx};
                 case I2g:
-                    return new[] {FileExtensions.I2g};
+					return new[] {FileExtensions.I2g};
                 case Qbo:
-                    return new[] {FileExtensions.Qbo};
+					return new[] {FileExtensions.Qbo};
                 case Qfx:
-                    return new[] {FileExtensions.Qfx};
+					return new[] {FileExtensions.Qfx};
                 case Rcprofile:
-                    return new[] {FileExtensions.Rcprofile};
+					return new[] {FileExtensions.Rcprofile};
                 case Irp:
-                    return new[] {FileExtensions.Irp};
+					return new[] {FileExtensions.Irp};
                 case Xpr:
-                    return new[] {FileExtensions.Xpr};
+					return new[] {FileExtensions.Xpr};
                 case Fcs:
-                    return new[] {FileExtensions.Fcs};
+					return new[] {FileExtensions.Fcs};
                 case Jam:
-                    return new[] {FileExtensions.Jam};
+					return new[] {FileExtensions.Jam};
                 case Rms:
-                    return new[] {FileExtensions.Rms};
+					return new[] {FileExtensions.Rms};
                 case Jisp:
-                    return new[] {FileExtensions.Jisp};
+					return new[] {FileExtensions.Jisp};
                 case Joda:
-                    return new[] {FileExtensions.Joda};
+					return new[] {FileExtensions.Joda};
                 case Ktz:
                 //case Ktr:
-                    return new[] {FileExtensions.Ktz, FileExtensions.Ktr};
+					return new[] {FileExtensions.Ktz, FileExtensions.Ktr};
                 case Karbon:
-                    return new[] {FileExtensions.Karbon};
+					return new[] {FileExtensions.Karbon};
                 case Chrt:
-                    return new[] {FileExtensions.Chrt};
+					return new[] {FileExtensions.Chrt};
                 case Kfo:
-                    return new[] {FileExtensions.Kfo};
+					return new[] {FileExtensions.Kfo};
                 case Flw:
-                    return new[] {FileExtensions.Flw};
+					return new[] {FileExtensions.Flw};
                 case Kon:
-                    return new[] {FileExtensions.Kon};
+					return new[] {FileExtensions.Kon};
                 case Kpr:
                 //case Kpt:
-                    return new[] {FileExtensions.Kpr, FileExtensions.Kpt};
+					return new[] {FileExtensions.Kpr, FileExtensions.Kpt};
                 case Ksp:
-                    return new[] {FileExtensions.Ksp};
+					return new[] {FileExtensions.Ksp};
                 case Kwd:
                 //case Kwt:
-                    return new[] {FileExtensions.Kwd, FileExtensions.Kwt};
+					return new[] {FileExtensions.Kwd, FileExtensions.Kwt};
                 case Htke:
-                    return new[] {FileExtensions.Htke};
+					return new[] {FileExtensions.Htke};
                 case Kia:
-                    return new[] {FileExtensions.Kia};
+					return new[] {FileExtensions.Kia};
                 case Kne:
                 //case Knp:
-                    return new[] {FileExtensions.Kne, FileExtensions.Knp};
+					return new[] {FileExtensions.Kne, FileExtensions.Knp};
                 case Skp:
                 //case Skd:
                 //case Skt:
                 //case Skm:
-                    return new[] {FileExtensions.Skp, FileExtensions.Skd, FileExtensions.Skt, FileExtensions.Skm};
+					return new[] {FileExtensions.Skp, FileExtensions.Skd, FileExtensions.Skt, FileExtensions.Skm};
                 case Sse:
-                    return new[] {FileExtensions.Sse};
+					return new[] {FileExtensions.Sse};
                 case Lasxml:
-                    return new[] {FileExtensions.Lasxml};
+					return new[] {FileExtensions.Lasxml};
                 case Lbd:
-                    return new[] {FileExtensions.Lbd};
+					return new[] {FileExtensions.Lbd};
                 case Lbe:
-                    return new[] {FileExtensions.Lbe};
+					return new[] {FileExtensions.Lbe};
                 case _123:
-                    return new[] {FileExtensions._123};
+					return new[] {FileExtensions._123};
                 case Apr:
-                    return new[] {FileExtensions.Apr};
+					return new[] {FileExtensions.Apr};
                 case Pre:
-                    return new[] {FileExtensions.Pre};
+					return new[] {FileExtensions.Pre};
                 case Nsf:
-                    return new[] {FileExtensions.Nsf};
+					return new[] {FileExtensions.Nsf};
                 case Org:
-                    return new[] {FileExtensions.Org};
+					return new[] {FileExtensions.Org};
                 case Scm:
-                    return new[] {FileExtensions.Scm};
+					return new[] {FileExtensions.Scm};
                 case Lwp:
-                    return new[] {FileExtensions.Lwp};
+					return new[] {FileExtensions.Lwp};
                 case Portpkg:
-                    return new[] {FileExtensions.Portpkg};
+					return new[] {FileExtensions.Portpkg};
                 case Mvt:
-                    return new[] {FileExtensions.Mvt};
+					return new[] {FileExtensions.Mvt};
                 case Mcd:
-                    return new[] {FileExtensions.Mcd};
+					return new[] {FileExtensions.Mcd};
                 case Mc1:
-                    return new[] {FileExtensions.Mc1};
+					return new[] {FileExtensions.Mc1};
                 case Cdkey:
-                    return new[] {FileExtensions.Cdkey};
+					return new[] {FileExtensions.Cdkey};
                 case Mwf:
-                    return new[] {FileExtensions.Mwf};
+					return new[] {FileExtensions.Mwf};
                 case Mfm:
-                    return new[] {FileExtensions.Mfm};
+					return new[] {FileExtensions.Mfm};
                 case Flo:
-                    return new[] {FileExtensions.Flo};
+					return new[] {FileExtensions.Flo};
                 case Igx:
-                    return new[] {FileExtensions.Igx};
+					return new[] {FileExtensions.Igx};
                 case Mif:
-                    return new[] {FileExtensions.Mif};
+					return new[] {FileExtensions.Mif};
                 case Daf:
-                    return new[] {FileExtensions.Daf};
+					return new[] {FileExtensions.Daf};
                 case Dis:
-                    return new[] {FileExtensions.Dis};
+					return new[] {FileExtensions.Dis};
                 case Mbk:
-                    return new[] {FileExtensions.Mbk};
+					return new[] {FileExtensions.Mbk};
                 case Mqy:
-                    return new[] {FileExtensions.Mqy};
+					return new[] {FileExtensions.Mqy};
                 case Msl:
-                    return new[] {FileExtensions.Msl};
+					return new[] {FileExtensions.Msl};
                 case Plc:
-                    return new[] {FileExtensions.Plc};
+					return new[] {FileExtensions.Plc};
                 case Txf:
-                    return new[] {FileExtensions.Txf};
+					return new[] {FileExtensions.Txf};
                 case Mpn:
-                    return new[] {FileExtensions.Mpn};
+					return new[] {FileExtensions.Mpn};
                 case Mpc:
-                    return new[] {FileExtensions.Mpc};
+					return new[] {FileExtensions.Mpc};
                 case Xul:
-                    return new[] {FileExtensions.Xul};
+					return new[] {FileExtensions.Xul};
                 case Cil:
-                    return new[] {FileExtensions.Cil};
+					return new[] {FileExtensions.Cil};
                 case Cab:
-                    return new[] {FileExtensions.Cab};
+					return new[] {FileExtensions.Cab};
                 case Xls:
                 //case Xlm:
                 //case Xla:
                 //case Xlc:
                 //case Xlt:
                 //case Xlw:
-                    return new[] {FileExtensions.Xls, FileExtensions.Xlm, FileExtensions.Xla, FileExtensions.Xlc, FileExtensions.Xlt, FileExtensions.Xlw};
+					return new[] {FileExtensions.Xls, FileExtensions.Xlm, FileExtensions.Xla, FileExtensions.Xlc, FileExtensions.Xlt, FileExtensions.Xlw};
                 case Xlam:
-                    return new[] {FileExtensions.Xlam};
+					return new[] {FileExtensions.Xlam};
                 case Xlsb:
-                    return new[] {FileExtensions.Xlsb};
+					return new[] {FileExtensions.Xlsb};
                 case Xlsm:
-                    return new[] {FileExtensions.Xlsm};
+					return new[] {FileExtensions.Xlsm};
                 case Xltm:
-                    return new[] {FileExtensions.Xltm};
+					return new[] {FileExtensions.Xltm};
                 case Eot:
-                    return new[] {FileExtensions.Eot};
+					return new[] {FileExtensions.Eot};
                 case Chm:
-                    return new[] {FileExtensions.Chm};
+					return new[] {FileExtensions.Chm};
                 case Ims:
-                    return new[] {FileExtensions.Ims};
+					return new[] {FileExtensions.Ims};
                 case Lrm:
-                    return new[] {FileExtensions.Lrm};
+					return new[] {FileExtensions.Lrm};
                 case Thmx:
-                    return new[] {FileExtensions.Thmx};
+					return new[] {FileExtensions.Thmx};
                 case Msg:
-                    return new[] {FileExtensions.Msg};
+					return new[] {FileExtensions.Msg};
                 case Cat:
-                    return new[] {FileExtensions.Cat};
+					return new[] {FileExtensions.Cat};
                 case Stl:
-                    return new[] {FileExtensions.Stl};
+					return new[] {FileExtensions.Stl};
                 case Ppt:
                 //case Pps:
                 //case Pot:
-                    return new[] {FileExtensions.Ppt, FileExtensions.Pps, FileExtensions.Pot};
+					return new[] {FileExtensions.Ppt, FileExtensions.Pps, FileExtensions.Pot};
                 case Ppam:
-                    return new[] {FileExtensions.Ppam};
+					return new[] {FileExtensions.Ppam};
                 case Pptm:
-                    return new[] {FileExtensions.Pptm};
+					return new[] {FileExtensions.Pptm};
                 case Sldm:
-                    return new[] {FileExtensions.Sldm};
+					return new[] {FileExtensions.Sldm};
                 case Ppsm:
-                    return new[] {FileExtensions.Ppsm};
+					return new[] {FileExtensions.Ppsm};
                 case Potm:
-                    return new[] {FileExtensions.Potm};
+					return new[] {FileExtensions.Potm};
                 case Mpt:
-                    return new[] {FileExtensions.Mpt};
+					return new[] {FileExtensions.Mpt};
                 case Docm:
-                    return new[] {FileExtensions.Docm};
+					return new[] {FileExtensions.Docm};
                 case Dotm:
-                    return new[] {FileExtensions.Dotm};
+					return new[] {FileExtensions.Dotm};
                 case Wps:
                 //case Wks:
                 //case Wcm:
                 //case Wdb:
-                    return new[] {FileExtensions.Wps, FileExtensions.Wks, FileExtensions.Wcm, FileExtensions.Wdb};
+					return new[] {FileExtensions.Wps, FileExtensions.Wks, FileExtensions.Wcm, FileExtensions.Wdb};
                 case Wpl:
-                    return new[] {FileExtensions.Wpl};
+					return new[] {FileExtensions.Wpl};
                 case Xps:
-                    return new[] {FileExtensions.Xps};
+					return new[] {FileExtensions.Xps};
                 case Mseq:
-                    return new[] {FileExtensions.Mseq};
+					return new[] {FileExtensions.Mseq};
                 case Mus:
-                    return new[] {FileExtensions.Mus};
+					return new[] {FileExtensions.Mus};
                 case Msty:
-                    return new[] {FileExtensions.Msty};
+					return new[] {FileExtensions.Msty};
                 case Taglet:
-                    return new[] {FileExtensions.Taglet};
+					return new[] {FileExtensions.Taglet};
                 case Bdo:
-                    return new[] {FileExtensions.Bdo};
+					return new[] {FileExtensions.Bdo};
                 case Nlu:
-                    return new[] {FileExtensions.Nlu};
+					return new[] {FileExtensions.Nlu};
                 case Ntf:
                 //case Nitf:
-                    return new[] {FileExtensions.Ntf, FileExtensions.Nitf};
+					return new[] {FileExtensions.Ntf, FileExtensions.Nitf};
                 case Nnd:
-                    return new[] {FileExtensions.Nnd};
+					return new[] {FileExtensions.Nnd};
                 case Nns:
-                    return new[] {FileExtensions.Nns};
+					return new[] {FileExtensions.Nns};
                 case Nnw:
-                    return new[] {FileExtensions.Nnw};
+					return new[] {FileExtensions.Nnw};
                 case Ngdat:
-                    return new[] {FileExtensions.Ngdat};
+					return new[] {FileExtensions.Ngdat};
                 case Ngage:
-                    return new[] {FileExtensions.N_gage};
+					return new[] {FileExtensions.N_gage};
                 case Rpst:
-                    return new[] {FileExtensions.Rpst};
+					return new[] {FileExtensions.Rpst};
                 case Rpss:
-                    return new[] {FileExtensions.Rpss};
+					return new[] {FileExtensions.Rpss};
                 case Edm:
-                    return new[] {FileExtensions.Edm};
+					return new[] {FileExtensions.Edm};
                 case Edx:
-                    return new[] {FileExtensions.Edx};
+					return new[] {FileExtensions.Edx};
                 case Ext:
-                    return new[] {FileExtensions.Ext};
+					return new[] {FileExtensions.Ext};
                 case Odc:
-                    return new[] {FileExtensions.Odc};
+					return new[] {FileExtensions.Odc};
                 case Otc:
-                    return new[] {FileExtensions.Otc};
+					return new[] {FileExtensions.Otc};
                 case Odb:
-                    return new[] {FileExtensions.Odb};
+					return new[] {FileExtensions.Odb};
                 case Odf:
-                    return new[] {FileExtensions.Odf};
+					return new[] {FileExtensions.Odf};
                 case Odft:
-                    return new[] {FileExtensions.Odft};
+					return new[] {FileExtensions.Odft};
                 case Odg:
-                    return new[] {FileExtensions.Odg};
+					return new[] {FileExtensions.Odg};
                 case Otg:
-                    return new[] {FileExtensions.Otg};
+					return new[] {FileExtensions.Otg};
                 case Odi:
-                    return new[] {FileExtensions.Odi};
+					return new[] {FileExtensions.Odi};
                 case Oti:
-                    return new[] {FileExtensions.Oti};
+					return new[] {FileExtensions.Oti};
                 case Odp:
-                    return new[] {FileExtensions.Odp};
+					return new[] {FileExtensions.Odp};
                 case Otp:
-                    return new[] {FileExtensions.Otp};
+					return new[] {FileExtensions.Otp};
                 case Ods:
-                    return new[] {FileExtensions.Ods};
+					return new[] {FileExtensions.Ods};
                 case Ots:
-                    return new[] {FileExtensions.Ots};
+					return new[] {FileExtensions.Ots};
                 case Odt:
-                    return new[] {FileExtensions.Odt};
+					return new[] {FileExtensions.Odt};
                 case Odm:
-                    return new[] {FileExtensions.Odm};
+					return new[] {FileExtensions.Odm};
                 case Ott:
-                    return new[] {FileExtensions.Ott};
+					return new[] {FileExtensions.Ott};
                 case Oth:
-                    return new[] {FileExtensions.Oth};
+					return new[] {FileExtensions.Oth};
                 case Xo:
-                    return new[] {FileExtensions.Xo};
+					return new[] {FileExtensions.Xo};
                 case Dd2:
-                    return new[] {FileExtensions.Dd2};
+					return new[] {FileExtensions.Dd2};
                 case Obgx:
-                    return new[] {FileExtensions.Obgx};
+					return new[] {FileExtensions.Obgx};
                 case Oxt:
-                    return new[] {FileExtensions.Oxt};
+					return new[] {FileExtensions.Oxt};
                 case Osm:
-                    return new[] {FileExtensions.Osm};
+					return new[] {FileExtensions.Osm};
                 case Pptx:
-                    return new[] {FileExtensions.Pptx};
+					return new[] {FileExtensions.Pptx};
                 case Sldx:
-                    return new[] {FileExtensions.Sldx};
+					return new[] {FileExtensions.Sldx};
                 case Ppsx:
-                    return new[] {FileExtensions.Ppsx};
+					return new[] {FileExtensions.Ppsx};
                 case Potx:
-                    return new[] {FileExtensions.Potx};
+					return new[] {FileExtensions.Potx};
                 case Xlsx:
-                    return new[] {FileExtensions.Xlsx};
+					return new[] {FileExtensions.Xlsx};
                 case Xltx:
-                    return new[] {FileExtensions.Xltx};
+					return new[] {FileExtensions.Xltx};
                 case Docx:
-                    return new[] {FileExtensions.Docx};
+					return new[] {FileExtensions.Docx};
                 case Dotx:
-                    return new[] {FileExtensions.Dotx};
+					return new[] {FileExtensions.Dotx};
                 case Mgp:
-                    return new[] {FileExtensions.Mgp};
+					return new[] {FileExtensions.Mgp};
                 case Dp:
-                    return new[] {FileExtensions.Dp};
+					return new[] {FileExtensions.Dp};
                 case Esa:
-                    return new[] {FileExtensions.Esa};
+					return new[] {FileExtensions.Esa};
                 case Pdb:
                 //case Pqa:
                 //case Oprc:
-                    return new[] {FileExtensions.Pdb, FileExtensions.Pqa, FileExtensions.Oprc};
+					return new[] {FileExtensions.Pdb, FileExtensions.Pqa, FileExtensions.Oprc};
                 case Paw:
-                    return new[] {FileExtensions.Paw};
+					return new[] {FileExtensions.Paw};
                 case Str:
-                    return new[] {FileExtensions.Str};
+					return new[] {FileExtensions.Str};
                 case Ei6:
-                    return new[] {FileExtensions.Ei6};
+					return new[] {FileExtensions.Ei6};
                 case Efif:
-                    return new[] {FileExtensions.Efif};
+					return new[] {FileExtensions.Efif};
                 case Wg:
-                    return new[] {FileExtensions.Wg};
+					return new[] {FileExtensions.Wg};
                 case Plf:
-                    return new[] {FileExtensions.Plf};
+					return new[] {FileExtensions.Plf};
                 case Pbd:
-                    return new[] {FileExtensions.Pbd};
+					return new[] {FileExtensions.Pbd};
                 case Box:
-                    return new[] {FileExtensions.Box};
+					return new[] {FileExtensions.Box};
                 case Mgz:
-                    return new[] {FileExtensions.Mgz};
+					return new[] {FileExtensions.Mgz};
                 case Qps:
-                    return new[] {FileExtensions.Qps};
+					return new[] {FileExtensions.Qps};
                 case Ptid:
-                    return new[] {FileExtensions.Ptid};
+					return new[] {FileExtensions.Ptid};
                 case Xhtm:
-                    return new[] {FileExtensions.Xhtm};
+					return new[] {FileExtensions.Xhtm};
                 case Qxd:
                 //case Qxt:
                 //case Qwd:
                 //case Qwt:
                 //case Qxl:
                 //case Qxb:
-                    return new[] {FileExtensions.Qxd, FileExtensions.Qxt, FileExtensions.Qwd, FileExtensions.Qwt, FileExtensions.Qxl, FileExtensions.Qxb};
+					return new[] {FileExtensions.Qxd, FileExtensions.Qxt, FileExtensions.Qwd, FileExtensions.Qwt, FileExtensions.Qxl, FileExtensions.Qxb};
                 case Rar:
-                    return new[] {FileExtensions.Rar};
+					return new[] {FileExtensions.Rar};
                 case Bed:
-                    return new[] {FileExtensions.Bed};
+					return new[] {FileExtensions.Bed};
                 case Mxl:
-                    return new[] {FileExtensions.Mxl};
+					return new[] {FileExtensions.Mxl};
                 case Musicxml:
-                    return new[] {FileExtensions.Musicxml};
+					return new[] {FileExtensions.Musicxml};
                 case Cryptonote:
-                    return new[] {FileExtensions.Cryptonote};
+					return new[] {FileExtensions.Cryptonote};
                 case Cod:
-                    return new[] {FileExtensions.Cod};
+					return new[] {FileExtensions.Cod};
                 case Rm:
-                    return new[] {FileExtensions.Rm};
+					return new[] {FileExtensions.Rm};
                 case Rmvb:
-                    return new[] {FileExtensions.Rmvb};
+					return new[] {FileExtensions.Rmvb};
                 case Link66:
-                    return new[] {FileExtensions.Link66};
+					return new[] {FileExtensions.Link66};
                 case St:
-                    return new[] {FileExtensions.St};
+					return new[] {FileExtensions.St};
                 case See:
-                    return new[] {FileExtensions.See};
+					return new[] {FileExtensions.See};
                 case Sema:
-                    return new[] {FileExtensions.Sema};
+					return new[] {FileExtensions.Sema};
                 case Semd:
-                    return new[] {FileExtensions.Semd};
+					return new[] {FileExtensions.Semd};
                 case Semf:
-                    return new[] {FileExtensions.Semf};
+					return new[] {FileExtensions.Semf};
                 case Ifm:
-                    return new[] {FileExtensions.Ifm};
+					return new[] {FileExtensions.Ifm};
                 case Itp:
-                    return new[] {FileExtensions.Itp};
+					return new[] {FileExtensions.Itp};
                 case Iif:
-                    return new[] {FileExtensions.Iif};
+					return new[] {FileExtensions.Iif};
                 case Ipk:
-                    return new[] {FileExtensions.Ipk};
+					return new[] {FileExtensions.Ipk};
                 case Twd:
                 //case Twds:
-                    return new[] {FileExtensions.Twd, FileExtensions.Twds};
+					return new[] {FileExtensions.Twd, FileExtensions.Twds};
                 case Mmf:
-                    return new[] {FileExtensions.Mmf};
+					return new[] {FileExtensions.Mmf};
                 case Teacher:
-                    return new[] {FileExtensions.Teacher};
+					return new[] {FileExtensions.Teacher};
                 case Fo:
-                    return new[] {FileExtensions.Fo};
+					return new[] {FileExtensions.Fo};
                 case Sdkm:
                 //case Sdkd:
-                    return new[] {FileExtensions.Sdkm, FileExtensions.Sdkd};
+					return new[] {FileExtensions.Sdkm, FileExtensions.Sdkd};
                 case Dxp:
-                    return new[] {FileExtensions.Dxp};
+					return new[] {FileExtensions.Dxp};
                 case Sfs:
-                    return new[] {FileExtensions.Sfs};
+					return new[] {FileExtensions.Sfs};
                 case Sdc:
-                    return new[] {FileExtensions.Sdc};
+					return new[] {FileExtensions.Sdc};
                 case Sda:
-                    return new[] {FileExtensions.Sda};
+					return new[] {FileExtensions.Sda};
                 case Sdd:
-                    return new[] {FileExtensions.Sdd};
+					return new[] {FileExtensions.Sdd};
                 case Smf:
-                    return new[] {FileExtensions.Smf};
+					return new[] {FileExtensions.Smf};
                 case Sdw:
                 //case Vor:
-                    return new[] {FileExtensions.Sdw, FileExtensions.Vor};
+					return new[] {FileExtensions.Sdw, FileExtensions.Vor};
                 case Sgl:
-                    return new[] {FileExtensions.Sgl};
+					return new[] {FileExtensions.Sgl};
                 case Smzip:
-                    return new[] {FileExtensions.Smzip};
+					return new[] {FileExtensions.Smzip};
                 case Sm:
-                    return new[] {FileExtensions.Sm};
+					return new[] {FileExtensions.Sm};
                 case Wadl:
-                    return new[] {FileExtensions.Wadl};
+					return new[] {FileExtensions.Wadl};
                 case Sxc:
-                    return new[] {FileExtensions.Sxc};
+					return new[] {FileExtensions.Sxc};
                 case Stc:
-                    return new[] {FileExtensions.Stc};
+					return new[] {FileExtensions.Stc};
                 case Sxd:
-                    return new[] {FileExtensions.Sxd};
+					return new[] {FileExtensions.Sxd};
                 case Std:
-                    return new[] {FileExtensions.Std};
+					return new[] {FileExtensions.Std};
                 case Sxi:
-                    return new[] {FileExtensions.Sxi};
+					return new[] {FileExtensions.Sxi};
                 case Sti:
-                    return new[] {FileExtensions.Sti};
+					return new[] {FileExtensions.Sti};
                 case Sxm:
-                    return new[] {FileExtensions.Sxm};
+					return new[] {FileExtensions.Sxm};
                 case Sxw:
-                    return new[] {FileExtensions.Sxw};
+					return new[] {FileExtensions.Sxw};
                 case Sxg:
-                    return new[] {FileExtensions.Sxg};
+					return new[] {FileExtensions.Sxg};
                 case Stw:
-                    return new[] {FileExtensions.Stw};
+					return new[] {FileExtensions.Stw};
                 case Sus:
                 //case Susp:
-                    return new[] {FileExtensions.Sus, FileExtensions.Susp};
+					return new[] {FileExtensions.Sus, FileExtensions.Susp};
                 case Svd:
-                    return new[] {FileExtensions.Svd};
+					return new[] {FileExtensions.Svd};
                 case Sis:
                 //case Sisx:
-                    return new[] {FileExtensions.Sis, FileExtensions.Sisx};
+					return new[] {FileExtensions.Sis, FileExtensions.Sisx};
                 case Xsm:
-                    return new[] {FileExtensions.Xsm};
+					return new[] {FileExtensions.Xsm};
                 case Bdm:
-                    return new[] {FileExtensions.Bdm};
+					return new[] {FileExtensions.Bdm};
                 case Xdm:
-                    return new[] {FileExtensions.Xdm};
+					return new[] {FileExtensions.Xdm};
                 case Ddf:
-                    return new[] {FileExtensions.Ddf};
+					return new[] {FileExtensions.Ddf};
                 case Tao:
-                    return new[] {FileExtensions.Tao};
+					return new[] {FileExtensions.Tao};
                 case Pcap:
                 //case Cap:
                 //case Dmp:
-                    return new[] {FileExtensions.Pcap, FileExtensions.Cap, FileExtensions.Dmp};
+					return new[] {FileExtensions.Pcap, FileExtensions.Cap, FileExtensions.Dmp};
                 case Tmo:
-                    return new[] {FileExtensions.Tmo};
+					return new[] {FileExtensions.Tmo};
                 case Tpt:
-                    return new[] {FileExtensions.Tpt};
+					return new[] {FileExtensions.Tpt};
                 case Mxs:
-                    return new[] {FileExtensions.Mxs};
+					return new[] {FileExtensions.Mxs};
                 case Tra:
-                    return new[] {FileExtensions.Tra};
+					return new[] {FileExtensions.Tra};
                 case Ufd:
                 //case Ufdl:
-                    return new[] {FileExtensions.Ufd, FileExtensions.Ufdl};
+					return new[] {FileExtensions.Ufd, FileExtensions.Ufdl};
                 case Utz:
-                    return new[] {FileExtensions.Utz};
+					return new[] {FileExtensions.Utz};
                 case Umj:
-                    return new[] {FileExtensions.Umj};
+					return new[] {FileExtensions.Umj};
                 case Unityweb:
-                    return new[] {FileExtensions.Unityweb};
+					return new[] {FileExtensions.Unityweb};
                 case Uoml:
-                    //case Uo:
-                    return new[] {FileExtensions.Uoml, FileExtensions.Uo};
+                //case Uo:
+					return new[] {FileExtensions.Uoml, FileExtensions.Uo};
                 case Vcx:
-                    return new[] {FileExtensions.Vcx};
+					return new[] {FileExtensions.Vcx};
                 case Vsd:
                 //case Vst:
                 //case Vss:
                 //case Vsw:
-                    return new[] {FileExtensions.Vsd, FileExtensions.Vst, FileExtensions.Vss, FileExtensions.Vsw};
+					return new[] {FileExtensions.Vsd, FileExtensions.Vst, FileExtensions.Vss, FileExtensions.Vsw};
                 case Vis:
-                    return new[] {FileExtensions.Vis};
+					return new[] {FileExtensions.Vis};
                 case Vsf:
-                    return new[] {FileExtensions.Vsf};
+					return new[] {FileExtensions.Vsf};
                 case Wbxml:
-                    return new[] {FileExtensions.Wbxml};
+					return new[] {FileExtensions.Wbxml};
                 case Wmlc:
-                    return new[] {FileExtensions.Wmlc};
+					return new[] {FileExtensions.Wmlc};
                 case Wmlsc:
-                    return new[] {FileExtensions.Wmlsc};
+					return new[] {FileExtensions.Wmlsc};
                 case Wtb:
-                    return new[] {FileExtensions.Wtb};
+					return new[] {FileExtensions.Wtb};
                 case Nbp:
-                    return new[] {FileExtensions.Nbp};
+					return new[] {FileExtensions.Nbp};
                 case Wpd:
-                    return new[] {FileExtensions.Wpd};
+					return new[] {FileExtensions.Wpd};
                 case Wqd:
-                    return new[] {FileExtensions.Wqd};
+					return new[] {FileExtensions.Wqd};
                 case Stf:
-                    return new[] {FileExtensions.Stf};
+					return new[] {FileExtensions.Stf};
                 case Xar:
-                    return new[] {FileExtensions.Xar};
+					return new[] {FileExtensions.Xar};
                 case Xfdl:
-                    return new[] {FileExtensions.Xfdl};
+					return new[] {FileExtensions.Xfdl};
                 case Hvd:
-                    return new[] {FileExtensions.Hvd};
+					return new[] {FileExtensions.Hvd};
                 case Hvs:
-                    return new[] {FileExtensions.Hvs};
+					return new[] {FileExtensions.Hvs};
                 case Hvp:
-                    return new[] {FileExtensions.Hvp};
+					return new[] {FileExtensions.Hvp};
                 case Osf:
-                    return new[] {FileExtensions.Osf};
+					return new[] {FileExtensions.Osf};
                 case Osfpvg:
-                    return new[] {FileExtensions.Osfpvg};
+					return new[] {FileExtensions.Osfpvg};
                 case Saf:
-                    return new[] {FileExtensions.Saf};
+					return new[] {FileExtensions.Saf};
                 case Spf:
-                    return new[] {FileExtensions.Spf};
+					return new[] {FileExtensions.Spf};
                 case Cmp:
-                    return new[] {FileExtensions.Cmp};
+					return new[] {FileExtensions.Cmp};
                 case Zir:
                 //case Zirz:
-                    return new[] {FileExtensions.Zir, FileExtensions.Zirz};
+					return new[] {FileExtensions.Zir, FileExtensions.Zirz};
                 case Zaz:
-                    return new[] {FileExtensions.Zaz};
+					return new[] {FileExtensions.Zaz};
                 case Vxml:
-                    return new[] {FileExtensions.Vxml};
+					return new[] {FileExtensions.Vxml};
                 case Wasm:
-                    return new[] {FileExtensions.Wasm};
+					return new[] {FileExtensions.Wasm};
                 case Wif:
-                    return new[] {FileExtensions.Wif};
+					return new[] {FileExtensions.Wif};
                 case Wgt:
-                    return new[] {FileExtensions.Wgt};
+					return new[] {FileExtensions.Wgt};
                 case Hlp:
-                    return new[] {FileExtensions.Hlp};
+					return new[] {FileExtensions.Hlp};
                 case Wsdl:
-                    return new[] {FileExtensions.Wsdl};
+					return new[] {FileExtensions.Wsdl};
                 case Wspolicy:
-                    return new[] {FileExtensions.Wspolicy};
+					return new[] {FileExtensions.Wspolicy};
                 case _7z:
-                    return new[] {FileExtensions._7z};
+					return new[] {FileExtensions._7z};
                 case Abw:
-                    return new[] {FileExtensions.Abw};
+					return new[] {FileExtensions.Abw};
                 case Ace:
-                    return new[] {FileExtensions.Ace};
+					return new[] {FileExtensions.Ace};
                 case Arj:
-                    return new[] {FileExtensions.Arj};
+					return new[] {FileExtensions.Arj};
                 case Aab:
                 //case X32:
                 //case U32:
                 //case Vox:
-                    return new[] {FileExtensions.Aab, FileExtensions.X32, FileExtensions.U32, FileExtensions.Vox};
+					return new[] {FileExtensions.Aab, FileExtensions.X32, FileExtensions.U32, FileExtensions.Vox};
                 case Aam:
-                    return new[] {FileExtensions.Aam};
+					return new[] {FileExtensions.Aam};
                 case Aas:
-                    return new[] {FileExtensions.Aas};
+					return new[] {FileExtensions.Aas};
                 case Bcpio:
-                    return new[] {FileExtensions.Bcpio};
+					return new[] {FileExtensions.Bcpio};
                 case Torrent:
-                    return new[] {FileExtensions.Torrent};
+					return new[] {FileExtensions.Torrent};
                 case Blb:
                 //case Blorb:
-                    return new[] {FileExtensions.Blb, FileExtensions.Blorb};
+					return new[] {FileExtensions.Blb, FileExtensions.Blorb};
                 case Bz:
-                    return new[] {FileExtensions.Bz};
+					return new[] {FileExtensions.Bz};
                 case Bz2:
                 //case Boz:
-                    return new[] {FileExtensions.Bz2, FileExtensions.Boz};
+					return new[] {FileExtensions.Bz2, FileExtensions.Boz};
                 case Cbr:
                 //case Cba:
                 //case Cbt:
                 //case Cbz:
                 //case Cb7:
-                    return new[] {FileExtensions.Cbr, FileExtensions.Cba, FileExtensions.Cbt, FileExtensions.Cbz, FileExtensions.Cb7};
+					return new[] {FileExtensions.Cbr, FileExtensions.Cba, FileExtensions.Cbt, FileExtensions.Cbz, FileExtensions.Cb7};
                 case Vcd:
-                    return new[] {FileExtensions.Vcd};
+					return new[] {FileExtensions.Vcd};
                 case Cfs:
-                    return new[] {FileExtensions.Cfs};
+					return new[] {FileExtensions.Cfs};
                 case Chat:
-                    return new[] {FileExtensions.Chat};
+					return new[] {FileExtensions.Chat};
                 case Pgn:
-                    return new[] {FileExtensions.Pgn};
+					return new[] {FileExtensions.Pgn};
                 case Crx:
-                    return new[] {FileExtensions.Crx};
+					return new[] {FileExtensions.Crx};
                 case Cco:
-                    return new[] {FileExtensions.Cco};
+					return new[] {FileExtensions.Cco};
                 case Nsc:
-                    return new[] {FileExtensions.Nsc};
+					return new[] {FileExtensions.Nsc};
                 case Cpio:
-                    return new[] {FileExtensions.Cpio};
+					return new[] {FileExtensions.Cpio};
                 case Csh:
-                    return new[] {FileExtensions.Csh};
+					return new[] {FileExtensions.Csh};
                 case Udeb:
-                    return new[] {FileExtensions.Udeb};
+					return new[] {FileExtensions.Udeb};
                 case Dgc:
-                    return new[] {FileExtensions.Dgc};
+					return new[] {FileExtensions.Dgc};
                 case Dir:
                 //case Dcr:
                 //case Dxr:
@@ -11731,209 +11713,209 @@ namespace MimeMapping
                 //case W3d:
                 //case Fgd:
                 //case Swa:
-                    return new[] {FileExtensions.Dir, FileExtensions.Dcr, FileExtensions.Dxr, FileExtensions.Cst, FileExtensions.Cct, FileExtensions.Cxt, FileExtensions.W3d, FileExtensions.Fgd, FileExtensions.Swa};
+					return new[] {FileExtensions.Dir, FileExtensions.Dcr, FileExtensions.Dxr, FileExtensions.Cst, FileExtensions.Cct, FileExtensions.Cxt, FileExtensions.W3d, FileExtensions.Fgd, FileExtensions.Swa};
                 case Wad:
-                    return new[] {FileExtensions.Wad};
+					return new[] {FileExtensions.Wad};
                 case Ncx:
-                    return new[] {FileExtensions.Ncx};
+					return new[] {FileExtensions.Ncx};
                 case Dtb:
-                    return new[] {FileExtensions.Dtb};
+					return new[] {FileExtensions.Dtb};
                 case Res:
-                    return new[] {FileExtensions.Res};
+					return new[] {FileExtensions.Res};
                 case Dvi:
-                    return new[] {FileExtensions.Dvi};
+					return new[] {FileExtensions.Dvi};
                 case Evy:
-                    return new[] {FileExtensions.Evy};
+					return new[] {FileExtensions.Evy};
                 case Eva:
-                    return new[] {FileExtensions.Eva};
+					return new[] {FileExtensions.Eva};
                 case Bdf:
-                    return new[] {FileExtensions.Bdf};
+					return new[] {FileExtensions.Bdf};
                 case Gsf:
-                    return new[] {FileExtensions.Gsf};
+					return new[] {FileExtensions.Gsf};
                 case Psf:
-                    return new[] {FileExtensions.Psf};
+					return new[] {FileExtensions.Psf};
                 case Pcf:
-                    return new[] {FileExtensions.Pcf};
+					return new[] {FileExtensions.Pcf};
                 case Snf:
-                    return new[] {FileExtensions.Snf};
+					return new[] {FileExtensions.Snf};
                 case Pfa:
                 //case Pfb:
                 //case Pfm:
                 //case Afm:
-                    return new[] {FileExtensions.Pfa, FileExtensions.Pfb, FileExtensions.Pfm, FileExtensions.Afm};
+					return new[] {FileExtensions.Pfa, FileExtensions.Pfb, FileExtensions.Pfm, FileExtensions.Afm};
                 case Arc:
-                    return new[] {FileExtensions.Arc};
+					return new[] {FileExtensions.Arc};
                 case Spl:
-                    return new[] {FileExtensions.Spl};
+					return new[] {FileExtensions.Spl};
                 case Gca:
-                    return new[] {FileExtensions.Gca};
+					return new[] {FileExtensions.Gca};
                 case Ulx:
-                    return new[] {FileExtensions.Ulx};
+					return new[] {FileExtensions.Ulx};
                 case Gnumeric:
-                    return new[] {FileExtensions.Gnumeric};
+					return new[] {FileExtensions.Gnumeric};
                 case Gramps:
-                    return new[] {FileExtensions.Gramps};
+					return new[] {FileExtensions.Gramps};
                 case Gtar:
-                    return new[] {FileExtensions.Gtar};
+					return new[] {FileExtensions.Gtar};
                 case Hdf:
-                    return new[] {FileExtensions.Hdf};
+					return new[] {FileExtensions.Hdf};
                 case Php:
-                    return new[] {FileExtensions.Php};
+					return new[] {FileExtensions.Php};
                 case Install:
-                    return new[] {FileExtensions.Install};
+					return new[] {FileExtensions.Install};
                 case Jardiff:
-                    return new[] {FileExtensions.Jardiff};
+					return new[] {FileExtensions.Jardiff};
                 case Jnlp:
-                    return new[] {FileExtensions.Jnlp};
+					return new[] {FileExtensions.Jnlp};
                 case Kdbx:
-                    return new[] {FileExtensions.Kdbx};
+					return new[] {FileExtensions.Kdbx};
                 case Latex:
-                    return new[] {FileExtensions.Latex};
+					return new[] {FileExtensions.Latex};
                 case Luac:
-                    return new[] {FileExtensions.Luac};
+					return new[] {FileExtensions.Luac};
                 case Lzh:
                 //case Lha:
-                    return new[] {FileExtensions.Lzh, FileExtensions.Lha};
+					return new[] {FileExtensions.Lzh, FileExtensions.Lha};
                 case Run:
-                    return new[] {FileExtensions.Run};
+					return new[] {FileExtensions.Run};
                 case Mie:
-                    return new[] {FileExtensions.Mie};
+					return new[] {FileExtensions.Mie};
                 case Prc:
                 //case Mobi:
-                    return new[] {FileExtensions.Prc, FileExtensions.Mobi};
+					return new[] {FileExtensions.Prc, FileExtensions.Mobi};
                 case Application:
-                    return new[] {FileExtensions.Application};
+					return new[] {FileExtensions.Application};
                 case Lnk:
-                    return new[] {FileExtensions.Lnk};
+					return new[] {FileExtensions.Lnk};
                 case Wmd:
-                    return new[] {FileExtensions.Wmd};
+					return new[] {FileExtensions.Wmd};
                 case Wmz:
-                    return new[] {FileExtensions.Wmz};
+					return new[] {FileExtensions.Wmz};
                 case Xbap:
-                    return new[] {FileExtensions.Xbap};
+					return new[] {FileExtensions.Xbap};
                 case Mdb:
-                    return new[] {FileExtensions.Mdb};
+					return new[] {FileExtensions.Mdb};
                 case Obd:
-                    return new[] {FileExtensions.Obd};
+					return new[] {FileExtensions.Obd};
                 case Crd:
-                    return new[] {FileExtensions.Crd};
+					return new[] {FileExtensions.Crd};
                 case Clp:
-                    return new[] {FileExtensions.Clp};
+					return new[] {FileExtensions.Clp};
                 case Com:
                 //case Bat:
-                    return new[] {FileExtensions.Com, FileExtensions.Bat};
+					return new[] {FileExtensions.Com, FileExtensions.Bat};
                 case Mvb:
                 //case M13:
                 //case M14:
-                    return new[] {FileExtensions.Mvb, FileExtensions.M13, FileExtensions.M14};
+					return new[] {FileExtensions.Mvb, FileExtensions.M13, FileExtensions.M14};
                 case Wmf:
                 //case Emf:
                 //case Emz:
-                    return new[] {FileExtensions.Wmf, FileExtensions.Emf, FileExtensions.Emz};
+					return new[] {FileExtensions.Wmf, FileExtensions.Emf, FileExtensions.Emz};
                 case Mny:
-                    return new[] {FileExtensions.Mny};
+					return new[] {FileExtensions.Mny};
                 case Pub:
-                    return new[] {FileExtensions.Pub};
+					return new[] {FileExtensions.Pub};
                 case Scd:
-                    return new[] {FileExtensions.Scd};
+					return new[] {FileExtensions.Scd};
                 case Trm:
-                    return new[] {FileExtensions.Trm};
+					return new[] {FileExtensions.Trm};
                 case Wri:
-                    return new[] {FileExtensions.Wri};
+					return new[] {FileExtensions.Wri};
                 case Nc:
                 //case Cdf:
-                    return new[] {FileExtensions.Nc, FileExtensions.Cdf};
+					return new[] {FileExtensions.Nc, FileExtensions.Cdf};
                 case Pac:
-                    return new[] {FileExtensions.Pac};
+					return new[] {FileExtensions.Pac};
                 case Nzb:
-                    return new[] {FileExtensions.Nzb};
+					return new[] {FileExtensions.Nzb};
                 case Pl:
                 //case Pm:
-                    return new[] {FileExtensions.Pl, FileExtensions.Pm};
+					return new[] {FileExtensions.Pl, FileExtensions.Pm};
                 case P12:
                 //case Pfx:
-                    return new[] {FileExtensions.P12, FileExtensions.Pfx};
+					return new[] {FileExtensions.P12, FileExtensions.Pfx};
                 case P7b:
                 //case Spc:
-                    return new[] {FileExtensions.P7b, FileExtensions.Spc};
+					return new[] {FileExtensions.P7b, FileExtensions.Spc};
                 case P7r:
-                    return new[] {FileExtensions.P7r};
+					return new[] {FileExtensions.P7r};
                 case Rpm:
-                    return new[] {FileExtensions.Rpm};
+					return new[] {FileExtensions.Rpm};
                 case Ris:
-                    return new[] {FileExtensions.Ris};
+					return new[] {FileExtensions.Ris};
                 case Sea:
-                    return new[] {FileExtensions.Sea};
+					return new[] {FileExtensions.Sea};
                 case Sh:
-                    return new[] {FileExtensions.Sh};
+					return new[] {FileExtensions.Sh};
                 case Shar:
-                    return new[] {FileExtensions.Shar};
+					return new[] {FileExtensions.Shar};
                 case Swf:
-                    return new[] {FileExtensions.Swf};
+					return new[] {FileExtensions.Swf};
                 case Xap:
-                    return new[] {FileExtensions.Xap};
+					return new[] {FileExtensions.Xap};
                 case Sit:
-                    return new[] {FileExtensions.Sit};
+					return new[] {FileExtensions.Sit};
                 case Sitx:
-                    return new[] {FileExtensions.Sitx};
+					return new[] {FileExtensions.Sitx};
                 case Srt:
-                    return new[] {FileExtensions.Srt};
+					return new[] {FileExtensions.Srt};
                 case Sv4cpio:
-                    return new[] {FileExtensions.Sv4cpio};
+					return new[] {FileExtensions.Sv4cpio};
                 case Sv4crc:
-                    return new[] {FileExtensions.Sv4crc};
+					return new[] {FileExtensions.Sv4crc};
                 case T3:
-                    return new[] {FileExtensions.T3};
+					return new[] {FileExtensions.T3};
                 case Gam:
-                    return new[] {FileExtensions.Gam};
+					return new[] {FileExtensions.Gam};
                 case Tar:
-                    return new[] {FileExtensions.Tar};
+					return new[] {FileExtensions.Tar};
                 case Tcl:
                 //case Tk:
-                    return new[] {FileExtensions.Tcl, FileExtensions.Tk};
+					return new[] {FileExtensions.Tcl, FileExtensions.Tk};
                 case Tex:
-                    return new[] {FileExtensions.Tex};
+					return new[] {FileExtensions.Tex};
                 case Tfm:
-                    return new[] {FileExtensions.Tfm};
+					return new[] {FileExtensions.Tfm};
                 case Texinfo:
                 //case Texi:
-                    return new[] {FileExtensions.Texinfo, FileExtensions.Texi};
+					return new[] {FileExtensions.Texinfo, FileExtensions.Texi};
                 case Obj:
-                    return new[] {FileExtensions.Obj};
+					return new[] {FileExtensions.Obj};
                 case Ustar:
-                    return new[] {FileExtensions.Ustar};
+					return new[] {FileExtensions.Ustar};
                 case Hdd:
-                    return new[] {FileExtensions.Hdd};
+					return new[] {FileExtensions.Hdd};
                 case Ova:
-                    return new[] {FileExtensions.Ova};
+					return new[] {FileExtensions.Ova};
                 case Ovf:
-                    return new[] {FileExtensions.Ovf};
+					return new[] {FileExtensions.Ovf};
                 case Vbox:
-                    return new[] {FileExtensions.Vbox};
+					return new[] {FileExtensions.Vbox};
                 case Vboxextpack:
-                    return new[] {FileExtensions.Vbox_extpack};
+					return new[] {FileExtensions.Vbox_extpack};
                 case Vdi:
-                    return new[] {FileExtensions.Vdi};
+					return new[] {FileExtensions.Vdi};
                 case Vhd:
-                    return new[] {FileExtensions.Vhd};
+					return new[] {FileExtensions.Vhd};
                 case Vmdk:
-                    return new[] {FileExtensions.Vmdk};
+					return new[] {FileExtensions.Vmdk};
                 case Src:
-                    return new[] {FileExtensions.Src};
+					return new[] {FileExtensions.Src};
                 case Webapp:
-                    return new[] {FileExtensions.Webapp};
+					return new[] {FileExtensions.Webapp};
                 case Der:
                 //case Crt:
                 //case Pem:
-                    return new[] {FileExtensions.Der, FileExtensions.Crt, FileExtensions.Pem};
+					return new[] {FileExtensions.Der, FileExtensions.Crt, FileExtensions.Pem};
                 case Fig:
-                    return new[] {FileExtensions.Fig};
+					return new[] {FileExtensions.Fig};
                 case Xlf:
-                    return new[] {FileExtensions.Xlf};
+					return new[] {FileExtensions.Xlf};
                 case Xpi:
-                    return new[] {FileExtensions.Xpi};
+					return new[] {FileExtensions.Xpi};
                 case Xz:
-                    return new[] {FileExtensions.Xz};
+					return new[] {FileExtensions.Xz};
                 case Z1:
                 //case Z2:
                 //case Z3:
@@ -11942,466 +11924,466 @@ namespace MimeMapping
                 //case Z6:
                 //case Z7:
                 //case Z8:
-                    return new[] {FileExtensions.Z1, FileExtensions.Z2, FileExtensions.Z3, FileExtensions.Z4, FileExtensions.Z5, FileExtensions.Z6, FileExtensions.Z7, FileExtensions.Z8};
+					return new[] {FileExtensions.Z1, FileExtensions.Z2, FileExtensions.Z3, FileExtensions.Z4, FileExtensions.Z5, FileExtensions.Z6, FileExtensions.Z7, FileExtensions.Z8};
                 case Xaml:
-                    return new[] {FileExtensions.Xaml};
+					return new[] {FileExtensions.Xaml};
                 case Xav:
-                    return new[] {FileExtensions.Xav};
+					return new[] {FileExtensions.Xav};
                 case Xca:
-                    return new[] {FileExtensions.Xca};
+					return new[] {FileExtensions.Xca};
                 case Xdf:
-                    return new[] {FileExtensions.Xdf};
+					return new[] {FileExtensions.Xdf};
                 case Xel:
-                    return new[] {FileExtensions.Xel};
+					return new[] {FileExtensions.Xel};
                 case Xns:
-                    return new[] {FileExtensions.Xns};
+					return new[] {FileExtensions.Xns};
                 case Xenc:
-                    return new[] {FileExtensions.Xenc};
+					return new[] {FileExtensions.Xenc};
                 case Xhtml:
                 //case Xht:
-                    return new[] {FileExtensions.Xhtml, FileExtensions.Xht};
+					return new[] {FileExtensions.Xhtml, FileExtensions.Xht};
                 case Xml:
                 //case Xsl:
                 //case Xsd:
                 //case Rng:
-                    return new[] {FileExtensions.Xml, FileExtensions.Xsl, FileExtensions.Xsd, FileExtensions.Rng};
+					return new[] {FileExtensions.Xml, FileExtensions.Xsl, FileExtensions.Xsd, FileExtensions.Rng};
                 case Dtd:
-                    return new[] {FileExtensions.Dtd};
+					return new[] {FileExtensions.Dtd};
                 case Xop:
-                    return new[] {FileExtensions.Xop};
+					return new[] {FileExtensions.Xop};
                 case Xpl:
-                    return new[] {FileExtensions.Xpl};
+					return new[] {FileExtensions.Xpl};
                 case Xslt:
-                    return new[] {FileExtensions.Xslt};
+					return new[] {FileExtensions.Xslt};
                 case Xspf:
-                    return new[] {FileExtensions.Xspf};
+					return new[] {FileExtensions.Xspf};
                 case Mxml:
                 //case Xhvml:
                 //case Xvml:
                 //case Xvm:
-                    return new[] {FileExtensions.Mxml, FileExtensions.Xhvml, FileExtensions.Xvml, FileExtensions.Xvm};
+					return new[] {FileExtensions.Mxml, FileExtensions.Xhvml, FileExtensions.Xvml, FileExtensions.Xvm};
                 case Yang:
-                    return new[] {FileExtensions.Yang};
+					return new[] {FileExtensions.Yang};
                 case Yin:
-                    return new[] {FileExtensions.Yin};
+					return new[] {FileExtensions.Yin};
                 case Zip:
-                    return new[] {FileExtensions.Zip};
+					return new[] {FileExtensions.Zip};
                 case _3gpp:
-                    return new[] {FileExtensions._3gpp};
+					return new[] {FileExtensions._3gpp};
                 case Adts:
-                    //case Aac:
-                    return new[] {FileExtensions.Adts, FileExtensions.Aac};
+                //case Aac:
+					return new[] {FileExtensions.Adts, FileExtensions.Aac};
                 case Adp:
-                    return new[] {FileExtensions.Adp};
+					return new[] {FileExtensions.Adp};
                 case Amr:
-                    return new[] {FileExtensions.Amr};
+					return new[] {FileExtensions.Amr};
                 case Au:
                 //case Snd:
-                    return new[] {FileExtensions.Au, FileExtensions.Snd};
+					return new[] {FileExtensions.Au, FileExtensions.Snd};
                 case Mid:
                 //case Midi:
                 //case Kar:
                 //case Rmi:
-                    return new[] {FileExtensions.Mid, FileExtensions.Midi, FileExtensions.Kar, FileExtensions.Rmi};
+					return new[] {FileExtensions.Mid, FileExtensions.Midi, FileExtensions.Kar, FileExtensions.Rmi};
                 case Mxmf:
-                    return new[] {FileExtensions.Mxmf};
+					return new[] {FileExtensions.Mxmf};
                 case Mp3:
-                    return new[] {FileExtensions.Mp3};
+					return new[] {FileExtensions.Mp3};
                 case M4a:
                 //case Mp4a:
-                    return new[] {FileExtensions.M4a, FileExtensions.Mp4a};
+					return new[] {FileExtensions.M4a, FileExtensions.Mp4a};
                 case Mpga:
                 //case Mp2:
                 //case Mp2a:
                 //case M2a:
                 //case M3a:
-                    return new[] {FileExtensions.Mpga, FileExtensions.Mp2, FileExtensions.Mp2a, FileExtensions.M2a, FileExtensions.M3a};
+					return new[] {FileExtensions.Mpga, FileExtensions.Mp2, FileExtensions.Mp2a, FileExtensions.M2a, FileExtensions.M3a};
                 case Oga:
                 //case Ogg:
                 //case Spx:
                 //case Opus:
-                    return new[] {FileExtensions.Oga, FileExtensions.Ogg, FileExtensions.Spx, FileExtensions.Opus};
+					return new[] {FileExtensions.Oga, FileExtensions.Ogg, FileExtensions.Spx, FileExtensions.Opus};
                 case S3m:
-                    return new[] {FileExtensions.S3m};
+					return new[] {FileExtensions.S3m};
                 case Sil:
-                    return new[] {FileExtensions.Sil};
+					return new[] {FileExtensions.Sil};
                 case Uva:
                 //case Uvva:
-                    return new[] {FileExtensions.Uva, FileExtensions.Uvva};
+					return new[] {FileExtensions.Uva, FileExtensions.Uvva};
                 case Eol:
-                    return new[] {FileExtensions.Eol};
+					return new[] {FileExtensions.Eol};
                 case Dra:
-                    return new[] {FileExtensions.Dra};
+					return new[] {FileExtensions.Dra};
                 case Dts:
-                    return new[] {FileExtensions.Dts};
+					return new[] {FileExtensions.Dts};
                 case Dtshd:
-                    return new[] {FileExtensions.Dtshd};
+					return new[] {FileExtensions.Dtshd};
                 case Lvp:
-                    return new[] {FileExtensions.Lvp};
+					return new[] {FileExtensions.Lvp};
                 case Pya:
-                    return new[] {FileExtensions.Pya};
+					return new[] {FileExtensions.Pya};
                 case Ecelp4800:
-                    return new[] {FileExtensions.Ecelp4800};
+					return new[] {FileExtensions.Ecelp4800};
                 case Ecelp7470:
-                    return new[] {FileExtensions.Ecelp7470};
+					return new[] {FileExtensions.Ecelp7470};
                 case Ecelp9600:
-                    return new[] {FileExtensions.Ecelp9600};
+					return new[] {FileExtensions.Ecelp9600};
                 case Rip:
-                    return new[] {FileExtensions.Rip};
+					return new[] {FileExtensions.Rip};
                 case Wav:
-                    return new[] {FileExtensions.Wav};
+					return new[] {FileExtensions.Wav};
                 case Weba:
-                    return new[] {FileExtensions.Weba};
+					return new[] {FileExtensions.Weba};
                 case Aif:
                 //case Aiff:
                 //case Aifc:
-                    return new[] {FileExtensions.Aif, FileExtensions.Aiff, FileExtensions.Aifc};
+					return new[] {FileExtensions.Aif, FileExtensions.Aiff, FileExtensions.Aifc};
                 case Caf:
-                    return new[] {FileExtensions.Caf};
+					return new[] {FileExtensions.Caf};
                 case Flac:
-                    return new[] {FileExtensions.Flac};
+					return new[] {FileExtensions.Flac};
                 case Mka:
-                    return new[] {FileExtensions.Mka};
+					return new[] {FileExtensions.Mka};
                 case M3u:
-                    return new[] {FileExtensions.M3u};
+					return new[] {FileExtensions.M3u};
                 case Wax:
-                    return new[] {FileExtensions.Wax};
+					return new[] {FileExtensions.Wax};
                 case Wma:
-                    return new[] {FileExtensions.Wma};
+					return new[] {FileExtensions.Wma};
                 case Ram:
                 //case Ra:
-                    return new[] {FileExtensions.Ram, FileExtensions.Ra};
+					return new[] {FileExtensions.Ram, FileExtensions.Ra};
                 case Rmp:
-                    return new[] {FileExtensions.Rmp};
+					return new[] {FileExtensions.Rmp};
                 case Xm:
-                    return new[] {FileExtensions.Xm};
+					return new[] {FileExtensions.Xm};
                 case Cdx:
-                    return new[] {FileExtensions.Cdx};
+					return new[] {FileExtensions.Cdx};
                 case Cif:
-                    return new[] {FileExtensions.Cif};
+					return new[] {FileExtensions.Cif};
                 case Cmdf:
-                    return new[] {FileExtensions.Cmdf};
+					return new[] {FileExtensions.Cmdf};
                 case Cml:
-                    return new[] {FileExtensions.Cml};
+					return new[] {FileExtensions.Cml};
                 case Csml:
-                    return new[] {FileExtensions.Csml};
+					return new[] {FileExtensions.Csml};
                 case Xyz:
-                    return new[] {FileExtensions.Xyz};
+					return new[] {FileExtensions.Xyz};
                 case Ttc:
-                    return new[] {FileExtensions.Ttc};
+					return new[] {FileExtensions.Ttc};
                 case Otf:
-                    return new[] {FileExtensions.Otf};
+					return new[] {FileExtensions.Otf};
                 case Ttf:
-                    return new[] {FileExtensions.Ttf};
+					return new[] {FileExtensions.Ttf};
                 case Woff:
-                    return new[] {FileExtensions.Woff};
+					return new[] {FileExtensions.Woff};
                 case Woff2:
-                    return new[] {FileExtensions.Woff2};
+					return new[] {FileExtensions.Woff2};
                 case Exr:
-                    return new[] {FileExtensions.Exr};
+					return new[] {FileExtensions.Exr};
                 case Apng:
-                    return new[] {FileExtensions.Apng};
+					return new[] {FileExtensions.Apng};
                 case Avci:
-                    return new[] {FileExtensions.Avci};
+					return new[] {FileExtensions.Avci};
                 case Avcs:
-                    return new[] {FileExtensions.Avcs};
+					return new[] {FileExtensions.Avcs};
                 case Avif:
-                    return new[] {FileExtensions.Avif};
+					return new[] {FileExtensions.Avif};
                 case Bmp:
-                    //case Dib:
-                    return new[] {FileExtensions.Bmp, FileExtensions.Dib};
+                //case Dib:
+					return new[] {FileExtensions.Bmp, FileExtensions.Dib};
                 case Cgm:
-                    return new[] {FileExtensions.Cgm};
+					return new[] {FileExtensions.Cgm};
                 case Drle:
-                    return new[] {FileExtensions.Drle};
+					return new[] {FileExtensions.Drle};
                 case Dpx:
-                    return new[] {FileExtensions.Dpx};
+					return new[] {FileExtensions.Dpx};
                 case Fits:
-                    return new[] {FileExtensions.Fits};
+					return new[] {FileExtensions.Fits};
                 case G3:
-                    return new[] {FileExtensions.G3};
+					return new[] {FileExtensions.G3};
                 case Gif:
-                    return new[] {FileExtensions.Gif};
+					return new[] {FileExtensions.Gif};
                 case Heic:
-                    return new[] {FileExtensions.Heic};
+					return new[] {FileExtensions.Heic};
                 case Heics:
-                    return new[] {FileExtensions.Heics};
+					return new[] {FileExtensions.Heics};
                 case Heif:
-                    return new[] {FileExtensions.Heif};
+					return new[] {FileExtensions.Heif};
                 case Heifs:
-                    return new[] {FileExtensions.Heifs};
+					return new[] {FileExtensions.Heifs};
                 case Hej2:
-                    return new[] {FileExtensions.Hej2};
+					return new[] {FileExtensions.Hej2};
                 case Hsj2:
-                    return new[] {FileExtensions.Hsj2};
+					return new[] {FileExtensions.Hsj2};
                 case Ief:
-                    return new[] {FileExtensions.Ief};
+					return new[] {FileExtensions.Ief};
                 case Jls:
-                    return new[] {FileExtensions.Jls};
+					return new[] {FileExtensions.Jls};
                 case Jp2:
                 //case Jpg2:
-                    return new[] {FileExtensions.Jp2, FileExtensions.Jpg2};
+					return new[] {FileExtensions.Jp2, FileExtensions.Jpg2};
                 case Jpeg:
                 //case Jpg:
                 //case Jpe:
-                    return new[] {FileExtensions.Jpeg, FileExtensions.Jpg, FileExtensions.Jpe};
+					return new[] {FileExtensions.Jpeg, FileExtensions.Jpg, FileExtensions.Jpe};
                 case Jph:
-                    return new[] {FileExtensions.Jph};
+					return new[] {FileExtensions.Jph};
                 case Jhc:
-                    return new[] {FileExtensions.Jhc};
+					return new[] {FileExtensions.Jhc};
                 case Jpm:
-                    //case Jpgm:
-                    return new[] {FileExtensions.Jpm, FileExtensions.Jpgm};
+                //case Jpgm:
+					return new[] {FileExtensions.Jpm, FileExtensions.Jpgm};
                 case Jpx:
                 //case Jpf:
-                    return new[] {FileExtensions.Jpx, FileExtensions.Jpf};
+					return new[] {FileExtensions.Jpx, FileExtensions.Jpf};
                 case Jxl:
-                    return new[] {FileExtensions.Jxl};
+					return new[] {FileExtensions.Jxl};
                 case Jxr:
-                    return new[] {FileExtensions.Jxr};
+					return new[] {FileExtensions.Jxr};
                 case Jxra:
-                    return new[] {FileExtensions.Jxra};
+					return new[] {FileExtensions.Jxra};
                 case Jxrs:
-                    return new[] {FileExtensions.Jxrs};
+					return new[] {FileExtensions.Jxrs};
                 case Jxs:
-                    return new[] {FileExtensions.Jxs};
+					return new[] {FileExtensions.Jxs};
                 case Jxsc:
-                    return new[] {FileExtensions.Jxsc};
+					return new[] {FileExtensions.Jxsc};
                 case Jxsi:
-                    return new[] {FileExtensions.Jxsi};
+					return new[] {FileExtensions.Jxsi};
                 case Jxss:
-                    return new[] {FileExtensions.Jxss};
+					return new[] {FileExtensions.Jxss};
                 case Ktx:
-                    return new[] {FileExtensions.Ktx};
+					return new[] {FileExtensions.Ktx};
                 case Ktx2:
-                    return new[] {FileExtensions.Ktx2};
+					return new[] {FileExtensions.Ktx2};
                 case Png:
-                    return new[] {FileExtensions.Png};
+					return new[] {FileExtensions.Png};
                 case Btif:
-                    //case Btf:
-                    return new[] {FileExtensions.Btif, FileExtensions.Btf};
+                //case Btf:
+					return new[] {FileExtensions.Btif, FileExtensions.Btf};
                 case Pti:
-                    return new[] {FileExtensions.Pti};
+					return new[] {FileExtensions.Pti};
                 case Sgi:
-                    return new[] {FileExtensions.Sgi};
+					return new[] {FileExtensions.Sgi};
                 case Svg:
                 //case Svgz:
-                    return new[] {FileExtensions.Svg, FileExtensions.Svgz};
+					return new[] {FileExtensions.Svg, FileExtensions.Svgz};
                 case T38:
-                    return new[] {FileExtensions.T38};
+					return new[] {FileExtensions.T38};
                 case Tif:
                 //case Tiff:
-                    return new[] {FileExtensions.Tif, FileExtensions.Tiff};
+					return new[] {FileExtensions.Tif, FileExtensions.Tiff};
                 case Tfx:
-                    return new[] {FileExtensions.Tfx};
+					return new[] {FileExtensions.Tfx};
                 case Psd:
-                    return new[] {FileExtensions.Psd};
+					return new[] {FileExtensions.Psd};
                 case Azv:
-                    return new[] {FileExtensions.Azv};
+					return new[] {FileExtensions.Azv};
                 case Uvi:
                 //case Uvvi:
                 //case Uvg:
                 //case Uvvg:
-                    return new[] {FileExtensions.Uvi, FileExtensions.Uvvi, FileExtensions.Uvg, FileExtensions.Uvvg};
+					return new[] {FileExtensions.Uvi, FileExtensions.Uvvi, FileExtensions.Uvg, FileExtensions.Uvvg};
                 case Djvu:
                 //case Djv:
-                    return new[] {FileExtensions.Djvu, FileExtensions.Djv};
+					return new[] {FileExtensions.Djvu, FileExtensions.Djv};
                 case Sub:
-                    return new[] {FileExtensions.Sub};
+					return new[] {FileExtensions.Sub};
                 case Dwg:
-                    return new[] {FileExtensions.Dwg};
+					return new[] {FileExtensions.Dwg};
                 case Dxf:
-                    return new[] {FileExtensions.Dxf};
+					return new[] {FileExtensions.Dxf};
                 case Fbs:
-                    return new[] {FileExtensions.Fbs};
+					return new[] {FileExtensions.Fbs};
                 case Fpx:
-                    return new[] {FileExtensions.Fpx};
+					return new[] {FileExtensions.Fpx};
                 case Fst:
-                    return new[] {FileExtensions.Fst};
+					return new[] {FileExtensions.Fst};
                 case Mmr:
-                    return new[] {FileExtensions.Mmr};
+					return new[] {FileExtensions.Mmr};
                 case Rlc:
-                    return new[] {FileExtensions.Rlc};
+					return new[] {FileExtensions.Rlc};
                 case Ico:
-                    return new[] {FileExtensions.Ico};
+					return new[] {FileExtensions.Ico};
                 case Dds:
-                    return new[] {FileExtensions.Dds};
+					return new[] {FileExtensions.Dds};
                 case Mdi:
-                    return new[] {FileExtensions.Mdi};
+					return new[] {FileExtensions.Mdi};
                 case Wdp:
-                    return new[] {FileExtensions.Wdp};
+					return new[] {FileExtensions.Wdp};
                 case Npx:
-                    return new[] {FileExtensions.Npx};
+					return new[] {FileExtensions.Npx};
                 case B16:
-                    return new[] {FileExtensions.B16};
+					return new[] {FileExtensions.B16};
                 case Tap:
-                    return new[] {FileExtensions.Tap};
+					return new[] {FileExtensions.Tap};
                 case Vtf:
-                    return new[] {FileExtensions.Vtf};
+					return new[] {FileExtensions.Vtf};
                 case Wbmp:
-                    return new[] {FileExtensions.Wbmp};
+					return new[] {FileExtensions.Wbmp};
                 case Xif:
-                    return new[] {FileExtensions.Xif};
+					return new[] {FileExtensions.Xif};
                 case Pcx:
-                    return new[] {FileExtensions.Pcx};
+					return new[] {FileExtensions.Pcx};
                 case Webp:
-                    return new[] {FileExtensions.Webp};
+					return new[] {FileExtensions.Webp};
                 case _3ds:
-                    return new[] {FileExtensions._3ds};
+					return new[] {FileExtensions._3ds};
                 case Ras:
-                    return new[] {FileExtensions.Ras};
+					return new[] {FileExtensions.Ras};
                 case Cmx:
-                    return new[] {FileExtensions.Cmx};
+					return new[] {FileExtensions.Cmx};
                 case Fh:
                 //case Fhc:
                 //case Fh4:
                 //case Fh5:
                 //case Fh7:
-                    return new[] {FileExtensions.Fh, FileExtensions.Fhc, FileExtensions.Fh4, FileExtensions.Fh5, FileExtensions.Fh7};
+					return new[] {FileExtensions.Fh, FileExtensions.Fhc, FileExtensions.Fh4, FileExtensions.Fh5, FileExtensions.Fh7};
                 case Jng:
-                    return new[] {FileExtensions.Jng};
+					return new[] {FileExtensions.Jng};
                 case Sid:
-                    return new[] {FileExtensions.Sid};
+					return new[] {FileExtensions.Sid};
                 case Pic:
                 //case Pct:
-                    return new[] {FileExtensions.Pic, FileExtensions.Pct};
+					return new[] {FileExtensions.Pic, FileExtensions.Pct};
                 case Pnm:
-                    return new[] {FileExtensions.Pnm};
+					return new[] {FileExtensions.Pnm};
                 case Pbm:
-                    return new[] {FileExtensions.Pbm};
+					return new[] {FileExtensions.Pbm};
                 case Pgm:
-                    return new[] {FileExtensions.Pgm};
+					return new[] {FileExtensions.Pgm};
                 case Ppm:
-                    return new[] {FileExtensions.Ppm};
+					return new[] {FileExtensions.Ppm};
                 case Rgb:
-                    return new[] {FileExtensions.Rgb};
+					return new[] {FileExtensions.Rgb};
                 case Tga:
-                    return new[] {FileExtensions.Tga};
+					return new[] {FileExtensions.Tga};
                 case Xbm:
-                    return new[] {FileExtensions.Xbm};
+					return new[] {FileExtensions.Xbm};
                 case Xpm:
-                    return new[] {FileExtensions.Xpm};
+					return new[] {FileExtensions.Xpm};
                 case Xwd:
-                    return new[] {FileExtensions.Xwd};
+					return new[] {FileExtensions.Xwd};
                 case Dispositionnotification:
-                    return new[] {FileExtensions.Disposition_notification};
+					return new[] {FileExtensions.Disposition_notification};
                 case U8msg:
-                    return new[] {FileExtensions.U8msg};
+					return new[] {FileExtensions.U8msg};
                 case U8dsn:
-                    return new[] {FileExtensions.U8dsn};
+					return new[] {FileExtensions.U8dsn};
                 case U8mdn:
-                    return new[] {FileExtensions.U8mdn};
+					return new[] {FileExtensions.U8mdn};
                 case U8hdr:
-                    return new[] {FileExtensions.U8hdr};
+					return new[] {FileExtensions.U8hdr};
                 case Eml:
                 //case Mime:
-                    return new[] {FileExtensions.Eml, FileExtensions.Mime};
+					return new[] {FileExtensions.Eml, FileExtensions.Mime};
                 case Wsc:
-                    return new[] {FileExtensions.Wsc};
+					return new[] {FileExtensions.Wsc};
                 case _3mf:
-                    return new[] {FileExtensions._3mf};
+					return new[] {FileExtensions._3mf};
                 case Gltf:
-                    return new[] {FileExtensions.Gltf};
+					return new[] {FileExtensions.Gltf};
                 case Glb:
-                    return new[] {FileExtensions.Glb};
+					return new[] {FileExtensions.Glb};
                 case Igs:
                 //case Iges:
-                    return new[] {FileExtensions.Igs, FileExtensions.Iges};
+					return new[] {FileExtensions.Igs, FileExtensions.Iges};
                 case Jt:
-                    return new[] {FileExtensions.Jt};
+					return new[] {FileExtensions.Jt};
                 case Msh:
                 //case Mesh:
                 //case Silo:
-                    return new[] {FileExtensions.Msh, FileExtensions.Mesh, FileExtensions.Silo};
+					return new[] {FileExtensions.Msh, FileExtensions.Mesh, FileExtensions.Silo};
                 case Mtl:
-                    return new[] {FileExtensions.Mtl};
+					return new[] {FileExtensions.Mtl};
                 case Stpx:
-                    return new[] {FileExtensions.Stpx};
+					return new[] {FileExtensions.Stpx};
                 case Stpz:
-                    return new[] {FileExtensions.Stpz};
+					return new[] {FileExtensions.Stpz};
                 case Stpxz:
-                    return new[] {FileExtensions.Stpxz};
+					return new[] {FileExtensions.Stpxz};
                 case U3d:
-                    return new[] {FileExtensions.U3d};
+					return new[] {FileExtensions.U3d};
                 case Bary:
-                    return new[] {FileExtensions.Bary};
+					return new[] {FileExtensions.Bary};
                 case Cld:
-                    return new[] {FileExtensions.Cld};
+					return new[] {FileExtensions.Cld};
                 case Dae:
-                    return new[] {FileExtensions.Dae};
+					return new[] {FileExtensions.Dae};
                 case Dwf:
-                    return new[] {FileExtensions.Dwf};
+					return new[] {FileExtensions.Dwf};
                 case Gdl:
-                    return new[] {FileExtensions.Gdl};
+					return new[] {FileExtensions.Gdl};
                 case Gtw:
-                    return new[] {FileExtensions.Gtw};
+					return new[] {FileExtensions.Gtw};
                 case Mts:
-                    return new[] {FileExtensions.Mts};
+					return new[] {FileExtensions.Mts};
                 case Ogex:
-                    return new[] {FileExtensions.Ogex};
+					return new[] {FileExtensions.Ogex};
                 case Xb:
-                    return new[] {FileExtensions.X_b};
+					return new[] {FileExtensions.X_b};
                 case Xt:
-                    return new[] {FileExtensions.X_t};
+					return new[] {FileExtensions.X_t};
                 case Pyo:
-                    //case Pyox:
-                    return new[] {FileExtensions.Pyo, FileExtensions.Pyox};
+                //case Pyox:
+					return new[] {FileExtensions.Pyo, FileExtensions.Pyox};
                 case Vds:
-                    return new[] {FileExtensions.Vds};
+					return new[] {FileExtensions.Vds};
                 case Usda:
-                    return new[] {FileExtensions.Usda};
+					return new[] {FileExtensions.Usda};
                 case Usdz:
-                    return new[] {FileExtensions.Usdz};
+					return new[] {FileExtensions.Usdz};
                 case Bsp:
-                    return new[] {FileExtensions.Bsp};
+					return new[] {FileExtensions.Bsp};
                 case Vtu:
-                    return new[] {FileExtensions.Vtu};
+					return new[] {FileExtensions.Vtu};
                 case Wrl:
                 //case Vrml:
-                    return new[] {FileExtensions.Wrl, FileExtensions.Vrml};
+					return new[] {FileExtensions.Wrl, FileExtensions.Vrml};
                 case X3db:
                 //case X3dbz:
-                    return new[] {FileExtensions.X3db, FileExtensions.X3dbz};
+					return new[] {FileExtensions.X3db, FileExtensions.X3dbz};
                 case X3dv:
                 //case X3dvz:
-                    return new[] {FileExtensions.X3dv, FileExtensions.X3dvz};
+					return new[] {FileExtensions.X3dv, FileExtensions.X3dvz};
                 case X3d:
                 //case X3dz:
-                    return new[] {FileExtensions.X3d, FileExtensions.X3dz};
+					return new[] {FileExtensions.X3d, FileExtensions.X3dz};
                 case Appcache:
                 //case Manifest:
-                    return new[] {FileExtensions.Appcache, FileExtensions.Manifest};
+					return new[] {FileExtensions.Appcache, FileExtensions.Manifest};
                 case Ics:
                 //case Ifb:
-                    return new[] {FileExtensions.Ics, FileExtensions.Ifb};
+					return new[] {FileExtensions.Ics, FileExtensions.Ifb};
                 case Coffee:
                 //case Litcoffee:
-                    return new[] {FileExtensions.Coffee, FileExtensions.Litcoffee};
+					return new[] {FileExtensions.Coffee, FileExtensions.Litcoffee};
                 case Css:
-                    return new[] {FileExtensions.Css};
+					return new[] {FileExtensions.Css};
                 case Csv:
-                    return new[] {FileExtensions.Csv};
+					return new[] {FileExtensions.Csv};
                 case Html:
                 //case Htm:
                 //case Shtml:
-                    return new[] {FileExtensions.Html, FileExtensions.Htm, FileExtensions.Shtml};
+					return new[] {FileExtensions.Html, FileExtensions.Htm, FileExtensions.Shtml};
                 case Jade:
-                    return new[] {FileExtensions.Jade};
+					return new[] {FileExtensions.Jade};
                 case Mjs:
-                    return new[] {FileExtensions.Mjs};
+					return new[] {FileExtensions.Mjs};
                 case Jsx:
-                    return new[] {FileExtensions.Jsx};
+					return new[] {FileExtensions.Jsx};
                 case Less:
-                    return new[] {FileExtensions.Less};
+					return new[] {FileExtensions.Less};
                 case Md:
-                    //case Markdown:
-                    return new[] {FileExtensions.Md, FileExtensions.Markdown};
+                //case Markdown:
+					return new[] {FileExtensions.Md, FileExtensions.Markdown};
                 case Mml:
-                    return new[] {FileExtensions.Mml};
+					return new[] {FileExtensions.Mml};
                 case Mdx:
-                    return new[] {FileExtensions.Mdx};
+					return new[] {FileExtensions.Mdx};
                 case N3:
-                    return new[] {FileExtensions.N3};
+					return new[] {FileExtensions.N3};
                 case Txt:
                 //case Text:
                 //case Conf:
@@ -12410,74 +12392,74 @@ namespace MimeMapping
                 //case Log:
                 //case In:
                 //case Ini:
-                    return new[] {FileExtensions.Txt, FileExtensions.Text, FileExtensions.Conf, FileExtensions.Def, FileExtensions.List, FileExtensions.Log, FileExtensions.In, FileExtensions.Ini};
+					return new[] {FileExtensions.Txt, FileExtensions.Text, FileExtensions.Conf, FileExtensions.Def, FileExtensions.List, FileExtensions.Log, FileExtensions.In, FileExtensions.Ini};
                 case Dsc:
-                    return new[] {FileExtensions.Dsc};
+					return new[] {FileExtensions.Dsc};
                 case Rtx:
-                    return new[] {FileExtensions.Rtx};
+					return new[] {FileExtensions.Rtx};
                 case Sgml:
                 //case Sgm:
-                    return new[] {FileExtensions.Sgml, FileExtensions.Sgm};
+					return new[] {FileExtensions.Sgml, FileExtensions.Sgm};
                 case Shex:
-                    return new[] {FileExtensions.Shex};
+					return new[] {FileExtensions.Shex};
                 case Slim:
                 //case Slm:
-                    return new[] {FileExtensions.Slim, FileExtensions.Slm};
+					return new[] {FileExtensions.Slim, FileExtensions.Slm};
                 case Spdx:
-                    return new[] {FileExtensions.Spdx};
+					return new[] {FileExtensions.Spdx};
                 case Stylus:
                 //case Styl:
-                    return new[] {FileExtensions.Stylus, FileExtensions.Styl};
+					return new[] {FileExtensions.Stylus, FileExtensions.Styl};
                 case Tsv:
-                    return new[] {FileExtensions.Tsv};
+					return new[] {FileExtensions.Tsv};
                 case T:
                 //case Tr:
                 //case Roff:
                 //case Man:
                 //case Me:
                 //case Ms:
-                    return new[] {FileExtensions.T, FileExtensions.Tr, FileExtensions.Roff, FileExtensions.Man, FileExtensions.Me, FileExtensions.Ms};
+					return new[] {FileExtensions.T, FileExtensions.Tr, FileExtensions.Roff, FileExtensions.Man, FileExtensions.Me, FileExtensions.Ms};
                 case Ttl:
-                    return new[] {FileExtensions.Ttl};
+					return new[] {FileExtensions.Ttl};
                 case Uri:
                 //case Uris:
                 //case Urls:
-                    return new[] {FileExtensions.Uri, FileExtensions.Uris, FileExtensions.Urls};
+					return new[] {FileExtensions.Uri, FileExtensions.Uris, FileExtensions.Urls};
                 case Vcard:
-                    return new[] {FileExtensions.Vcard};
+					return new[] {FileExtensions.Vcard};
                 case Curl:
-                    return new[] {FileExtensions.Curl};
+					return new[] {FileExtensions.Curl};
                 case Dcurl:
-                    return new[] {FileExtensions.Dcurl};
+					return new[] {FileExtensions.Dcurl};
                 case Mcurl:
-                    return new[] {FileExtensions.Mcurl};
+					return new[] {FileExtensions.Mcurl};
                 case Scurl:
-                    return new[] {FileExtensions.Scurl};
+					return new[] {FileExtensions.Scurl};
                 case Ged:
-                    return new[] {FileExtensions.Ged};
+					return new[] {FileExtensions.Ged};
                 case Fly:
-                    return new[] {FileExtensions.Fly};
+					return new[] {FileExtensions.Fly};
                 case Flx:
-                    return new[] {FileExtensions.Flx};
+					return new[] {FileExtensions.Flx};
                 case Gv:
-                    return new[] {FileExtensions.Gv};
+					return new[] {FileExtensions.Gv};
                 case _3dml:
-                    return new[] {FileExtensions._3dml};
+					return new[] {FileExtensions._3dml};
                 case Spot:
-                    return new[] {FileExtensions.Spot};
+					return new[] {FileExtensions.Spot};
                 case Jad:
-                    return new[] {FileExtensions.Jad};
+					return new[] {FileExtensions.Jad};
                 case Wml:
-                    return new[] {FileExtensions.Wml};
+					return new[] {FileExtensions.Wml};
                 case Wmls:
-                    return new[] {FileExtensions.Wmls};
+					return new[] {FileExtensions.Wmls};
                 case Vtt:
-                    return new[] {FileExtensions.Vtt};
+					return new[] {FileExtensions.Vtt};
                 case Wgsl:
-                    return new[] {FileExtensions.Wgsl};
+					return new[] {FileExtensions.Wgsl};
                 case S:
                 //case Asm:
-                    return new[] {FileExtensions.S, FileExtensions.Asm};
+					return new[] {FileExtensions.S, FileExtensions.Asm};
                 case C:
                 //case Cc:
                 //case Cxx:
@@ -12485,150 +12467,152 @@ namespace MimeMapping
                 //case H:
                 //case Hh:
                 //case Dic:
-                    return new[] {FileExtensions.C, FileExtensions.Cc, FileExtensions.Cxx, FileExtensions.Cpp, FileExtensions.H, FileExtensions.Hh, FileExtensions.Dic};
+					return new[] {FileExtensions.C, FileExtensions.Cc, FileExtensions.Cxx, FileExtensions.Cpp, FileExtensions.H, FileExtensions.Hh, FileExtensions.Dic};
                 case Htc:
-                    return new[] {FileExtensions.Htc};
+					return new[] {FileExtensions.Htc};
                 case F:
                 //case For:
                 //case F77:
                 //case F90:
-                    return new[] {FileExtensions.F, FileExtensions.For, FileExtensions.F77, FileExtensions.F90};
+					return new[] {FileExtensions.F, FileExtensions.For, FileExtensions.F77, FileExtensions.F90};
                 case Hbs:
-                    return new[] {FileExtensions.Hbs};
+					return new[] {FileExtensions.Hbs};
                 case Java:
-                    return new[] {FileExtensions.Java};
+					return new[] {FileExtensions.Java};
                 case Lua:
-                    return new[] {FileExtensions.Lua};
+					return new[] {FileExtensions.Lua};
                 case Mkd:
-                    return new[] {FileExtensions.Mkd};
+					return new[] {FileExtensions.Mkd};
                 case Nfo:
-                    return new[] {FileExtensions.Nfo};
+					return new[] {FileExtensions.Nfo};
                 case Opml:
-                    return new[] {FileExtensions.Opml};
+					return new[] {FileExtensions.Opml};
                 case P:
                 //case Pas:
-                    return new[] {FileExtensions.P, FileExtensions.Pas};
+					return new[] {FileExtensions.P, FileExtensions.Pas};
                 case Pde:
-                    return new[] {FileExtensions.Pde};
+					return new[] {FileExtensions.Pde};
                 case Sass:
-                    return new[] {FileExtensions.Sass};
+					return new[] {FileExtensions.Sass};
                 case Scss:
-                    return new[] {FileExtensions.Scss};
+					return new[] {FileExtensions.Scss};
                 case Etx:
-                    return new[] {FileExtensions.Etx};
+					return new[] {FileExtensions.Etx};
                 case Sfv:
-                    return new[] {FileExtensions.Sfv};
+					return new[] {FileExtensions.Sfv};
                 case Ymp:
-                    return new[] {FileExtensions.Ymp};
+					return new[] {FileExtensions.Ymp};
                 case Uu:
-                    return new[] {FileExtensions.Uu};
+					return new[] {FileExtensions.Uu};
                 case Vcs:
-                    return new[] {FileExtensions.Vcs};
+					return new[] {FileExtensions.Vcs};
                 case Vcf:
-                    return new[] {FileExtensions.Vcf};
+					return new[] {FileExtensions.Vcf};
                 case Yaml:
                 //case Yml:
-                    return new[] {FileExtensions.Yaml, FileExtensions.Yml};
+					return new[] {FileExtensions.Yaml, FileExtensions.Yml};
                 case _3gp:
-                    return new[] {FileExtensions._3gp};
+					return new[] {FileExtensions._3gp};
                 case _3g2:
-                    return new[] {FileExtensions._3g2};
+					return new[] {FileExtensions._3g2};
                 case H261:
-                    return new[] {FileExtensions.H261};
+					return new[] {FileExtensions.H261};
                 case H263:
-                    return new[] {FileExtensions.H263};
+					return new[] {FileExtensions.H263};
                 case H264:
-                    return new[] {FileExtensions.H264};
+					return new[] {FileExtensions.H264};
                 case M4s:
-                    return new[] {FileExtensions.M4s};
+					return new[] {FileExtensions.M4s};
                 case Jpgv:
-                    return new[] {FileExtensions.Jpgv};
+					return new[] {FileExtensions.Jpgv};
                 case Mj2:
                 //case Mjp2:
-                    return new[] {FileExtensions.Mj2, FileExtensions.Mjp2};
+					return new[] {FileExtensions.Mj2, FileExtensions.Mjp2};
                 case Ts:
-                    //case M2t:
-                    //case M2ts:
-                    return new[] {FileExtensions.Ts, FileExtensions.M2t, FileExtensions.M2ts};
-                case Mp4v:
-                    return new[] {FileExtensions.Mp4v};
+                //case M2t:
+                //case M2ts:
+					return new[] {FileExtensions.Ts, FileExtensions.M2t, FileExtensions.M2ts};
+                case Mp4:
+                //case Mp4v:
+                //case Mpg4:
+					return new[] {FileExtensions.Mp4, FileExtensions.Mp4v, FileExtensions.Mpg4};
                 case Mpeg:
                 //case Mpg:
                 //case Mpe:
                 //case M1v:
                 //case M2v:
-                    return new[] {FileExtensions.Mpeg, FileExtensions.Mpg, FileExtensions.Mpe, FileExtensions.M1v, FileExtensions.M2v};
+					return new[] {FileExtensions.Mpeg, FileExtensions.Mpg, FileExtensions.Mpe, FileExtensions.M1v, FileExtensions.M2v};
                 case Ogv:
-                    return new[] {FileExtensions.Ogv};
+					return new[] {FileExtensions.Ogv};
                 case Qt:
                 //case Mov:
-                    return new[] {FileExtensions.Qt, FileExtensions.Mov};
+					return new[] {FileExtensions.Qt, FileExtensions.Mov};
                 case Uvh:
                 //case Uvvh:
-                    return new[] {FileExtensions.Uvh, FileExtensions.Uvvh};
+					return new[] {FileExtensions.Uvh, FileExtensions.Uvvh};
                 case Uvm:
                 //case Uvvm:
-                    return new[] {FileExtensions.Uvm, FileExtensions.Uvvm};
+					return new[] {FileExtensions.Uvm, FileExtensions.Uvvm};
                 case Uvp:
                 //case Uvvp:
-                    return new[] {FileExtensions.Uvp, FileExtensions.Uvvp};
+					return new[] {FileExtensions.Uvp, FileExtensions.Uvvp};
                 case Uvs:
                 //case Uvvs:
-                    return new[] {FileExtensions.Uvs, FileExtensions.Uvvs};
+					return new[] {FileExtensions.Uvs, FileExtensions.Uvvs};
                 case Uvv:
                 //case Uvvv:
-                    return new[] {FileExtensions.Uvv, FileExtensions.Uvvv};
+					return new[] {FileExtensions.Uvv, FileExtensions.Uvvv};
                 case Dvb:
-                    return new[] {FileExtensions.Dvb};
+					return new[] {FileExtensions.Dvb};
                 case Fvt:
-                    return new[] {FileExtensions.Fvt};
+					return new[] {FileExtensions.Fvt};
                 case Mxu:
                 //case M4u:
-                    return new[] {FileExtensions.Mxu, FileExtensions.M4u};
+					return new[] {FileExtensions.Mxu, FileExtensions.M4u};
                 case Pyv:
-                    return new[] {FileExtensions.Pyv};
+					return new[] {FileExtensions.Pyv};
                 case Uvu:
                 //case Uvvu:
-                    return new[] {FileExtensions.Uvu, FileExtensions.Uvvu};
+					return new[] {FileExtensions.Uvu, FileExtensions.Uvvu};
                 case Viv:
-                    return new[] {FileExtensions.Viv};
+					return new[] {FileExtensions.Viv};
                 case Webm:
-                    return new[] {FileExtensions.Webm};
+					return new[] {FileExtensions.Webm};
                 case F4v:
-                    return new[] {FileExtensions.F4v};
+					return new[] {FileExtensions.F4v};
                 case Fli:
-                    return new[] {FileExtensions.Fli};
+					return new[] {FileExtensions.Fli};
                 case Flv:
-                    return new[] {FileExtensions.Flv};
+					return new[] {FileExtensions.Flv};
                 case M4v:
-                    return new[] {FileExtensions.M4v};
+					return new[] {FileExtensions.M4v};
                 case Mkv:
                 //case Mk3d:
                 //case Mks:
-                    return new[] {FileExtensions.Mkv, FileExtensions.Mk3d, FileExtensions.Mks};
+					return new[] {FileExtensions.Mkv, FileExtensions.Mk3d, FileExtensions.Mks};
                 case Mng:
-                    return new[] {FileExtensions.Mng};
+					return new[] {FileExtensions.Mng};
                 case Asf:
                 //case Asx:
-                    return new[] {FileExtensions.Asf, FileExtensions.Asx};
+					return new[] {FileExtensions.Asf, FileExtensions.Asx};
                 case Vob:
-                    return new[] {FileExtensions.Vob};
+					return new[] {FileExtensions.Vob};
                 case Wm:
-                    return new[] {FileExtensions.Wm};
+					return new[] {FileExtensions.Wm};
                 case Wmv:
-                    return new[] {FileExtensions.Wmv};
+					return new[] {FileExtensions.Wmv};
                 case Wmx:
-                    return new[] {FileExtensions.Wmx};
+					return new[] {FileExtensions.Wmx};
                 case Wvx:
-                    return new[] {FileExtensions.Wvx};
+					return new[] {FileExtensions.Wvx};
                 case Avi:
-                    return new[] {FileExtensions.Avi};
+					return new[] {FileExtensions.Avi};
                 case Movie:
-                    return new[] {FileExtensions.Movie};
+					return new[] {FileExtensions.Movie};
                 case Smv:
-                    return new[] {FileExtensions.Smv};
+					return new[] {FileExtensions.Smv};
                 case Ice:
-                    return new[] {FileExtensions.Ice};
+					return new[] {FileExtensions.Ice};
                 default: 
                     return null;
             }
