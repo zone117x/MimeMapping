@@ -3,7 +3,7 @@ using System;
 namespace MimeMapping
 {
     ///<summary>
-    /// MIME type constants. Last updated on 2025-01-16T13:06:36Z. 
+    /// MIME type constants. Last updated on 2025-01-17T14:21:23Z. 
     /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.53.0/db.json">mime-db</a> source
     ///</summary>
     public static class KnownMimeTypes
