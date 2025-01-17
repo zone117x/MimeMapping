@@ -203,7 +203,7 @@ namespace MimeMapping
 <#
                         first = false;
                     }
-#>                   return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
+#>                  return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
 <#
                 }
 #>
