@@ -124,7 +124,7 @@ namespace MimeMapping
         {
 #>
             <#= GetMimeFieldName(kp.Key) #>,
-<#
+<#		
         }
 #>
         });
@@ -133,7 +133,7 @@ namespace MimeMapping
         ///<summary>File extensions</summary>
         public static class FileExtensions
         {
-<#
+<#	
         // List constant field names
         foreach (var kp in _dict)
         {
@@ -154,7 +154,7 @@ namespace MimeMapping
         {
 #>
             FileExtensions.<#= !Char.IsLetter(kp.Key[0]) ? "_" : string.Empty #><#= char.ToUpper(kp.Key[0]) + kp.Key.Substring(1).Replace('-', '_') #>,
-<#
+<#		
         }
 #>
         });
@@ -170,7 +170,7 @@ namespace MimeMapping
                 foreach (var kp in _reverseDict)
                 {
                     foreach (var mimeKey in kp.Value)
-                    {
+                    {					
 #>
                 case FileExtensions.<#= !Char.IsLetter(mimeKey[0]) ? "_" : string.Empty #><#= char.ToUpper(mimeKey[0]) + mimeKey.Substring(1).Replace('-', '_') #>:
 <#
@@ -203,7 +203,7 @@ namespace MimeMapping
 <#
                         first = false;
                     }
-#>                  return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
+#>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
 <#
                 }
 #>
