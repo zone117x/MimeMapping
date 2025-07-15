@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
           filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
+      - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
@@ -47,7 +47,7 @@ jobs:
       - name: pack
         run: dotnet pack -o bin
 
-      - uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: packages
           path: bin/*.nupkg
@@ -82,7 +82,7 @@ jobs:
           args: --latest --strip all
           output: 'CHANGELOG.md'
       
-      - uses: ncipollo/release-action@440c8c1cb0ed28b9f43e4d1d670870f059653174 # v1.16.0
+      - uses: ncipollo/release-action@9128f238eeeeed39b82af6636303729079d51730 # v1.17.0
         with:
           bodyFile: 'CHANGELOG.md'
           name: ${{ env.VERSION }}
