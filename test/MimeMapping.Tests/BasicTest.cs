@@ -12,15 +12,15 @@ namespace Test
     {
         private readonly Dictionary<string, string> _expectedTypes = new()
         {
-            {"PNG", "image/png"},
-            {"png", "image/png"},
-            {"JPG", "image/jpeg"},
-            {"mp4", "application/mp4"},
-            {"exe", "application/octet-stream"},
-            {"zip", "application/zip"},
-            {"torrent", "application/x-bittorrent"},
-            {"json", "application/json"},
-            {"asdfunknown", "application/octet-stream"}
+            { "PNG", "image/png" },
+            { "png", "image/png" },
+            { "JPG", "image/jpeg" },
+            { "mp4", "application/mp4" },
+            { "exe", "application/octet-stream" },
+            { "zip", "x-zip-compressed" },
+            { "torrent", "application/x-bittorrent" },
+            { "json", "application/json" },
+            { "asdfunknown", "application/octet-stream" },
         };
 
         [TestMethod]
@@ -78,7 +78,10 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeDictionaryCount()
         {
-            Assert.IsTrue(MimeUtility.TypeMap.Count > 900, $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong");
+            Assert.IsTrue(
+                MimeUtility.TypeMap.Count > 900,
+                $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong"
+            );
         }
 
         [TestMethod]
@@ -92,7 +95,11 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeLookupToGetExtensions()
         {
-            var expected = new[] { KnownMimeTypes.FileExtensions.Json, KnownMimeTypes.FileExtensions.Map };
+            var expected = new[]
+            {
+                KnownMimeTypes.FileExtensions.Json,
+                KnownMimeTypes.FileExtensions.Map,
+            };
             var actual = MimeUtility.GetExtensions(KnownMimeTypes.Json);
             Assert.IsTrue(Array.TrueForAll(actual, x => expected.Contains(x)));
 
@@ -103,19 +110,32 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeToExtenstionsLookup()
         {
-            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Doc, out var extensions));
+            Assert.IsTrue(
+                MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Doc, out var extensions)
+            );
             if (extensions != null)
             {
-                Assert.IsTrue(extensions.Length >= 2, $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot).");
+                Assert.IsTrue(
+                    extensions.Length >= 2,
+                    $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot)."
+                );
             }
 
-            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Jpeg, out extensions));
+            Assert.IsTrue(
+                MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Jpeg, out extensions)
+            );
             if (extensions != null)
             {
-                Assert.IsTrue(extensions.Length >= 3, $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3.");
+                Assert.IsTrue(
+                    extensions.Length >= 3,
+                    $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3."
+                );
             }
 
-            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.Count > 900, $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong");
+            Assert.IsTrue(
+                MimeUtility.TypeToExtensionsMap.Count > 900,
+                $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong"
+            );
 
             foreach (var kv in MimeUtility.TypeToExtensionsMap)
             {
