@@ -1,19 +1,20 @@
 using System;
-
 namespace MimeMapping
 {
     ///<summary>
-    /// MIME type constants. Last updated on 2024-12-09T08:23:13Z. 
-    /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.53.0/db.json">mime-db</a> source
+    /// MIME type constants. Last updated on 2025-11-06T09:17:51Z. 
+    /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.54.0/db.json">mime-db</a> source
     ///</summary>
     public static class KnownMimeTypes
     {
 
         // Dupe for asc: using application/pgp-keys vs application/pgp-signature 
+        // Dupe for fdf: using application/fdf vs application/vnd.fdf 
         // Dupe for mpp: using application/dash-patch+xml vs application/vnd.ms-project 
         // Dupe for ac: using application/pkix-attr-cert vs application/vnd.nokia.n-gage.ac+xml 
         // Dupe for dmg: using application/octet-stream vs application/x-apple-diskimage 
-        // Dupe for bdoc: using application/bdoc vs application/x-bdoc 
+        // Dupe for bdoc: using application/bdoc vs application/x-bdoc
+        // Dupe for rar: using application/vnd.rar vs application/x-compressed 
         // Dupe for deb: using application/octet-stream vs application/x-debian-package 
         // Dupe for iso: using application/octet-stream vs application/x-iso9660-image 
         // Dupe for key: using application/vnd.apple.keynote vs application/x-iwork-keynote-sffkey 
@@ -31,6 +32,7 @@ namespace MimeMapping
         // Dupe for xfdf: using application/vnd.adobe.xfdf vs application/xfdf 
         // Dupe for xlf: using application/x-xliff+xml vs application/xliff+xml 
         // Dupe for xsl: using application/xml vs application/xslt+xml 
+        // Dupe for zip: using application/x-zip-compressed vs application/zip 
         // Dupe for mp3: using audio/mp3 vs audio/mpeg 
         // Dupe for wav: using audio/wav vs audio/wave 
         // Dupe for aac: using audio/aac vs audio/x-aac 
@@ -57,10 +59,10 @@ namespace MimeMapping
         // Dupe for jpgm: using image/jpm vs video/jpm 
         // Dupe for mts: using model/vnd.mts vs video/mp2t 
         // Dupe for mp4: using application/mp4 vs video/mp4 
-        // Dupe for mpg4: using application/mp4 vs video/mp4 
+        // Dupe for mpg4: using application/mp4 vs video/mp4
 
-        // Generated 959 unique mime type values
-        // Generated 1208 type key pairs
+        // Generated 979 unique mime type values
+        // Generated 1239 type key pairs
 
         ///<summary>ez</summary>
         public const string Ez = "application/andrew-inset";
@@ -120,6 +122,8 @@ namespace MimeMapping
         public const string Mpp = "application/dash-patch+xml";
         ///<summary>davmount</summary>
         public const string Davmount = "application/davmount+xml";
+        ///<summary>dcm</summary>
+        public const string Dcm = "application/dicom";
         ///<summary>dbk</summary>
         public const string Dbk = "application/docbook+xml";
         ///<summary>dssc</summary>
@@ -318,6 +322,10 @@ namespace MimeMapping
         public const string Onetmp = "application/onenote";
         ///<summary>onepkg</summary>
         public const string Onepkg = "application/onenote";
+        ///<summary>one</summary>
+        public const string One = "application/onenote";
+        ///<summary>onea</summary>
+        public const string Onea = "application/onenote";
         ///<summary>oxps</summary>
         public const string Oxps = "application/oxps";
         ///<summary>relo</summary>
@@ -546,6 +554,8 @@ namespace MimeMapping
         public const string Iota = "application/vnd.astraea-software.iota";
         ///<summary>aep</summary>
         public const string Aep = "application/vnd.audiograph";
+        ///<summary>fbx</summary>
+        public const string Fbx = "application/vnd.autodesk.fbx";
         ///<summary>bmml</summary>
         public const string Bmml = "application/vnd.balsamiq.bmml+xml";
         ///<summary>mpm</summary>
@@ -612,6 +622,8 @@ namespace MimeMapping
         public const string Rdz = "application/vnd.data-vision.rdz";
         ///<summary>dbf</summary>
         public const string Dbf = "application/vnd.dbf";
+        ///<summary>dcmp</summary>
+        public const string Dcmp = "application/vnd.dcmp+xml";
         ///<summary>uvf</summary>
         public const string Uvf = "application/vnd.dece.data";
         ///<summary>uvvf</summary>
@@ -736,8 +748,20 @@ namespace MimeMapping
         public const string Gmx = "application/vnd.gmx";
         ///<summary>gdoc</summary>
         public const string Gdoc = "application/vnd.google-apps.document";
+        ///<summary>gdraw</summary>
+        public const string Gdraw = "application/vnd.google-apps.drawing";
+        ///<summary>gform</summary>
+        public const string Gform = "application/vnd.google-apps.form";
+        ///<summary>gjam</summary>
+        public const string Gjam = "application/vnd.google-apps.jam";
+        ///<summary>gmap</summary>
+        public const string Gmap = "application/vnd.google-apps.map";
         ///<summary>gslides</summary>
         public const string Gslides = "application/vnd.google-apps.presentation";
+        ///<summary>gscript</summary>
+        public const string Gscript = "application/vnd.google-apps.script";
+        ///<summary>gsite</summary>
+        public const string Gsite = "application/vnd.google-apps.site";
         ///<summary>gsheet</summary>
         public const string Gsheet = "application/vnd.google-apps.spreadsheet";
         ///<summary>kml</summary>
@@ -996,6 +1020,8 @@ namespace MimeMapping
         public const string Potm = "application/vnd.ms-powerpoint.template.macroenabled.12";
         ///<summary>mpt</summary>
         public const string Mpt = "application/vnd.ms-project";
+        ///<summary>vdx</summary>
+        public const string Vdx = "application/vnd.ms-visio.viewer";
         ///<summary>docm</summary>
         public const string Docm = "application/vnd.ms-word.document.macroenabled.12";
         ///<summary>dotm</summary>
@@ -1136,6 +1162,12 @@ namespace MimeMapping
         public const string Pbd = "application/vnd.powerbuilder6";
         ///<summary>box</summary>
         public const string Box = "application/vnd.previewsystems.box";
+        ///<summary>brushset</summary>
+        public const string Brushset = "application/vnd.procrate.brushset";
+        ///<summary>brush</summary>
+        public const string Brush = "application/vnd.procreate.brush";
+        ///<summary>drm</summary>
+        public const string Drm = "application/vnd.procreate.dream";
         ///<summary>mgz</summary>
         public const string Mgz = "application/vnd.proteus.magazine";
         ///<summary>qps</summary>
@@ -1308,6 +1340,10 @@ namespace MimeMapping
         public const string Vss = "application/vnd.visio";
         ///<summary>vsw</summary>
         public const string Vsw = "application/vnd.visio";
+        ///<summary>vsdx</summary>
+        public const string Vsdx = "application/vnd.visio";
+        ///<summary>vtx</summary>
+        public const string Vtx = "application/vnd.visio";
         ///<summary>vis</summary>
         public const string Vis = "application/vnd.visionary";
         ///<summary>vsf</summary>
@@ -1392,6 +1428,8 @@ namespace MimeMapping
         public const string Bcpio = "application/x-bcpio";
         ///<summary>torrent</summary>
         public const string Torrent = "application/x-bittorrent";
+        ///<summary>blend</summary>
+        public const string Blend = "application/x-blender";
         ///<summary>blb</summary>
         public const string Blb = "application/x-blorb";
         ///<summary>blorb</summary>
@@ -1504,6 +1542,8 @@ namespace MimeMapping
         public const string Php = "application/x-httpd-php";
         ///<summary>install</summary>
         public const string Install = "application/x-install-instructions";
+        ///<summary>ipynb</summary>
+        public const string Ipynb = "application/x-ipynb+json";
         ///<summary>jardiff</summary>
         public const string Jardiff = "application/x-java-archive-diff";
         ///<summary>jnlp</summary>
@@ -1672,6 +1712,8 @@ namespace MimeMapping
         public const string Xpi = "application/x-xpinstall";
         ///<summary>xz</summary>
         public const string Xz = "application/x-xz";
+        ///<summary>zip</summary>
+        public const string Zip = "application/x-zip-compressed";
         ///<summary>z1</summary>
         public const string Z1 = "application/x-zmachine";
         ///<summary>z2</summary>
@@ -1736,8 +1778,8 @@ namespace MimeMapping
         public const string Yang = "application/yang";
         ///<summary>yin</summary>
         public const string Yin = "application/yin+xml";
-        ///<summary>zip</summary>
-        public const string Zip = "application/zip";
+        ///<summary>lottie</summary>
+        public const string Lottie = "application/zip+dotlottie";
         ///<summary>3gpp</summary>
         public const string _3gpp = "audio/3gpp";
         ///<summary>adts</summary>
@@ -1768,6 +1810,8 @@ namespace MimeMapping
         public const string M4a = "audio/mp4";
         ///<summary>mp4a</summary>
         public const string Mp4a = "audio/mp4";
+        ///<summary>m4b</summary>
+        public const string M4b = "audio/mp4";
         ///<summary>mpga</summary>
         public const string Mpga = "audio/mpeg";
         ///<summary>mp2</summary>
@@ -1902,20 +1946,22 @@ namespace MimeMapping
         public const string Heifs = "image/heif-sequence";
         ///<summary>hej2</summary>
         public const string Hej2 = "image/hej2k";
-        ///<summary>hsj2</summary>
-        public const string Hsj2 = "image/hsj2";
         ///<summary>ief</summary>
         public const string Ief = "image/ief";
+        ///<summary>jaii</summary>
+        public const string Jaii = "image/jaii";
+        ///<summary>jais</summary>
+        public const string Jais = "image/jais";
         ///<summary>jls</summary>
         public const string Jls = "image/jls";
         ///<summary>jp2</summary>
         public const string Jp2 = "image/jp2";
         ///<summary>jpg2</summary>
         public const string Jpg2 = "image/jp2";
-        ///<summary>jpeg</summary>
-        public const string Jpeg = "image/jpeg";
         ///<summary>jpg</summary>
         public const string Jpg = "image/jpeg";
+        ///<summary>jpeg</summary>
+        public const string Jpeg = "image/jpeg";
         ///<summary>jpe</summary>
         public const string Jpe = "image/jpeg";
         ///<summary>jph</summary>
@@ -1950,6 +1996,8 @@ namespace MimeMapping
         public const string Ktx = "image/ktx";
         ///<summary>ktx2</summary>
         public const string Ktx2 = "image/ktx2";
+        ///<summary>jfif</summary>
+        public const string Jfif = "image/pjpeg";
         ///<summary>png</summary>
         public const string Png = "image/png";
         ///<summary>btif</summary>
@@ -2030,6 +2078,8 @@ namespace MimeMapping
         public const string Webp = "image/webp";
         ///<summary>3ds</summary>
         public const string _3ds = "image/x-3ds";
+        ///<summary>dng</summary>
+        public const string Dng = "image/x-adobe-dng";
         ///<summary>ras</summary>
         public const string Ras = "image/x-cmu-raster";
         ///<summary>cmx</summary>
@@ -2084,6 +2134,10 @@ namespace MimeMapping
         public const string Eml = "message/rfc822";
         ///<summary>mime</summary>
         public const string Mime = "message/rfc822";
+        ///<summary>mht</summary>
+        public const string Mht = "message/rfc822";
+        ///<summary>mhtml</summary>
+        public const string Mhtml = "message/rfc822";
         ///<summary>wsc</summary>
         public const string Wsc = "message/vnd.wfa.wsc";
         ///<summary>3mf</summary>
@@ -2106,6 +2160,16 @@ namespace MimeMapping
         public const string Silo = "model/mesh";
         ///<summary>mtl</summary>
         public const string Mtl = "model/mtl";
+        ///<summary>step</summary>
+        public const string Step = "model/step";
+        ///<summary>stp</summary>
+        public const string Stp = "model/step";
+        ///<summary>stpnc</summary>
+        public const string Stpnc = "model/step";
+        ///<summary>p21</summary>
+        public const string P21 = "model/step";
+        ///<summary>210</summary>
+        public const string _210 = "model/step";
         ///<summary>stpx</summary>
         public const string Stpx = "model/step+xml";
         ///<summary>stpz</summary>
@@ -2479,7 +2543,7 @@ namespace MimeMapping
         ///<summary>ice</summary>
         public const string Ice = "x-conference/x-cooltalk";
         // List of all available mimetypes, used to build the dictionary
-        internal static readonly Lazy<string[]> ALL_MIMETYPES = new Lazy<string[]>(() => new[] {
+        internal static readonly Lazy<string[]> ALL_MIMETYPES = new Lazy<string[]>(() => new [] {
             Ez,
             Appinstaller,
             Aw,
@@ -2509,6 +2573,7 @@ namespace MimeMapping
             Mpd,
             Mpp,
             Davmount,
+            Dcm,
             Dbk,
             Dssc,
             Xdssc,
@@ -2608,6 +2673,8 @@ namespace MimeMapping
             Onetoc2,
             Onetmp,
             Onepkg,
+            One,
+            Onea,
             Oxps,
             Relo,
             Xer,
@@ -2722,6 +2789,7 @@ namespace MimeMapping
             Swi,
             Iota,
             Aep,
+            Fbx,
             Bmml,
             Mpm,
             Bmi,
@@ -2755,6 +2823,7 @@ namespace MimeMapping
             Dart,
             Rdz,
             Dbf,
+            Dcmp,
             Uvf,
             Uvvf,
             Uvd,
@@ -2817,7 +2886,13 @@ namespace MimeMapping
             G3w,
             Gmx,
             Gdoc,
+            Gdraw,
+            Gform,
+            Gjam,
+            Gmap,
             Gslides,
+            Gscript,
+            Gsite,
             Gsheet,
             Kml,
             Kmz,
@@ -2947,6 +3022,7 @@ namespace MimeMapping
             Ppsm,
             Potm,
             Mpt,
+            Vdx,
             Docm,
             Dotm,
             Wps,
@@ -3017,6 +3093,9 @@ namespace MimeMapping
             Plf,
             Pbd,
             Box,
+            Brushset,
+            Brush,
+            Drm,
             Mgz,
             Qps,
             Ptid,
@@ -3103,6 +3182,8 @@ namespace MimeMapping
             Vst,
             Vss,
             Vsw,
+            Vsdx,
+            Vtx,
             Vis,
             Vsf,
             Wbxml,
@@ -3145,6 +3226,7 @@ namespace MimeMapping
             Aas,
             Bcpio,
             Torrent,
+            Blend,
             Blb,
             Blorb,
             Bz,
@@ -3201,6 +3283,7 @@ namespace MimeMapping
             Hdf,
             Php,
             Install,
+            Ipynb,
             Jardiff,
             Jnlp,
             Kdbx,
@@ -3285,6 +3368,7 @@ namespace MimeMapping
             Xlf,
             Xpi,
             Xz,
+            Zip,
             Z1,
             Z2,
             Z3,
@@ -3317,7 +3401,7 @@ namespace MimeMapping
             Xvm,
             Yang,
             Yin,
-            Zip,
+            Lottie,
             _3gpp,
             Adts,
             Aac,
@@ -3333,6 +3417,7 @@ namespace MimeMapping
             Mp3,
             M4a,
             Mp4a,
+            M4b,
             Mpga,
             Mp2,
             Mp2a,
@@ -3400,13 +3485,14 @@ namespace MimeMapping
             Heif,
             Heifs,
             Hej2,
-            Hsj2,
             Ief,
+            Jaii,
+            Jais,
             Jls,
             Jp2,
             Jpg2,
-            Jpeg,
             Jpg,
+            Jpeg,
             Jpe,
             Jph,
             Jhc,
@@ -3424,6 +3510,7 @@ namespace MimeMapping
             Jxss,
             Ktx,
             Ktx2,
+            Jfif,
             Png,
             Btif,
             Btf,
@@ -3464,6 +3551,7 @@ namespace MimeMapping
             Pcx,
             Webp,
             _3ds,
+            Dng,
             Ras,
             Cmx,
             Fh,
@@ -3491,6 +3579,8 @@ namespace MimeMapping
             U8hdr,
             Eml,
             Mime,
+            Mht,
+            Mhtml,
             Wsc,
             _3mf,
             Gltf,
@@ -3502,6 +3592,11 @@ namespace MimeMapping
             Mesh,
             Silo,
             Mtl,
+            Step,
+            Stp,
+            Stpnc,
+            P21,
+            _210,
             Stpx,
             Stpz,
             Stpxz,
@@ -3751,6 +3846,8 @@ namespace MimeMapping
             public const string Mpp = "mpp";
             ///<summary>davmount</summary>
             public const string Davmount = "davmount";
+            ///<summary>dcm</summary>
+            public const string Dcm = "dcm";
             ///<summary>dbk</summary>
             public const string Dbk = "dbk";
             ///<summary>dssc</summary>
@@ -3949,6 +4046,10 @@ namespace MimeMapping
             public const string Onetmp = "onetmp";
             ///<summary>onepkg</summary>
             public const string Onepkg = "onepkg";
+            ///<summary>one</summary>
+            public const string One = "one";
+            ///<summary>onea</summary>
+            public const string Onea = "onea";
             ///<summary>oxps</summary>
             public const string Oxps = "oxps";
             ///<summary>relo</summary>
@@ -4177,6 +4278,8 @@ namespace MimeMapping
             public const string Iota = "iota";
             ///<summary>aep</summary>
             public const string Aep = "aep";
+            ///<summary>fbx</summary>
+            public const string Fbx = "fbx";
             ///<summary>bmml</summary>
             public const string Bmml = "bmml";
             ///<summary>mpm</summary>
@@ -4243,6 +4346,8 @@ namespace MimeMapping
             public const string Rdz = "rdz";
             ///<summary>dbf</summary>
             public const string Dbf = "dbf";
+            ///<summary>dcmp</summary>
+            public const string Dcmp = "dcmp";
             ///<summary>uvf</summary>
             public const string Uvf = "uvf";
             ///<summary>uvvf</summary>
@@ -4367,8 +4472,20 @@ namespace MimeMapping
             public const string Gmx = "gmx";
             ///<summary>gdoc</summary>
             public const string Gdoc = "gdoc";
+            ///<summary>gdraw</summary>
+            public const string Gdraw = "gdraw";
+            ///<summary>gform</summary>
+            public const string Gform = "gform";
+            ///<summary>gjam</summary>
+            public const string Gjam = "gjam";
+            ///<summary>gmap</summary>
+            public const string Gmap = "gmap";
             ///<summary>gslides</summary>
             public const string Gslides = "gslides";
+            ///<summary>gscript</summary>
+            public const string Gscript = "gscript";
+            ///<summary>gsite</summary>
+            public const string Gsite = "gsite";
             ///<summary>gsheet</summary>
             public const string Gsheet = "gsheet";
             ///<summary>kml</summary>
@@ -4627,6 +4744,8 @@ namespace MimeMapping
             public const string Potm = "potm";
             ///<summary>mpt</summary>
             public const string Mpt = "mpt";
+            ///<summary>vdx</summary>
+            public const string Vdx = "vdx";
             ///<summary>docm</summary>
             public const string Docm = "docm";
             ///<summary>dotm</summary>
@@ -4767,6 +4886,12 @@ namespace MimeMapping
             public const string Pbd = "pbd";
             ///<summary>box</summary>
             public const string Box = "box";
+            ///<summary>brushset</summary>
+            public const string Brushset = "brushset";
+            ///<summary>brush</summary>
+            public const string Brush = "brush";
+            ///<summary>drm</summary>
+            public const string Drm = "drm";
             ///<summary>mgz</summary>
             public const string Mgz = "mgz";
             ///<summary>qps</summary>
@@ -4939,6 +5064,10 @@ namespace MimeMapping
             public const string Vss = "vss";
             ///<summary>vsw</summary>
             public const string Vsw = "vsw";
+            ///<summary>vsdx</summary>
+            public const string Vsdx = "vsdx";
+            ///<summary>vtx</summary>
+            public const string Vtx = "vtx";
             ///<summary>vis</summary>
             public const string Vis = "vis";
             ///<summary>vsf</summary>
@@ -5023,6 +5152,8 @@ namespace MimeMapping
             public const string Bcpio = "bcpio";
             ///<summary>torrent</summary>
             public const string Torrent = "torrent";
+            ///<summary>blend</summary>
+            public const string Blend = "blend";
             ///<summary>blb</summary>
             public const string Blb = "blb";
             ///<summary>blorb</summary>
@@ -5135,6 +5266,8 @@ namespace MimeMapping
             public const string Php = "php";
             ///<summary>install</summary>
             public const string Install = "install";
+            ///<summary>ipynb</summary>
+            public const string Ipynb = "ipynb";
             ///<summary>jardiff</summary>
             public const string Jardiff = "jardiff";
             ///<summary>jnlp</summary>
@@ -5303,6 +5436,8 @@ namespace MimeMapping
             public const string Xpi = "xpi";
             ///<summary>xz</summary>
             public const string Xz = "xz";
+            ///<summary>zip</summary>
+            public const string Zip = "zip";
             ///<summary>z1</summary>
             public const string Z1 = "z1";
             ///<summary>z2</summary>
@@ -5367,8 +5502,8 @@ namespace MimeMapping
             public const string Yang = "yang";
             ///<summary>yin</summary>
             public const string Yin = "yin";
-            ///<summary>zip</summary>
-            public const string Zip = "zip";
+            ///<summary>lottie</summary>
+            public const string Lottie = "lottie";
             ///<summary>3gpp</summary>
             public const string _3gpp = "3gpp";
             ///<summary>adts</summary>
@@ -5399,6 +5534,8 @@ namespace MimeMapping
             public const string M4a = "m4a";
             ///<summary>mp4a</summary>
             public const string Mp4a = "mp4a";
+            ///<summary>m4b</summary>
+            public const string M4b = "m4b";
             ///<summary>mpga</summary>
             public const string Mpga = "mpga";
             ///<summary>mp2</summary>
@@ -5533,20 +5670,22 @@ namespace MimeMapping
             public const string Heifs = "heifs";
             ///<summary>hej2</summary>
             public const string Hej2 = "hej2";
-            ///<summary>hsj2</summary>
-            public const string Hsj2 = "hsj2";
             ///<summary>ief</summary>
             public const string Ief = "ief";
+            ///<summary>jaii</summary>
+            public const string Jaii = "jaii";
+            ///<summary>jais</summary>
+            public const string Jais = "jais";
             ///<summary>jls</summary>
             public const string Jls = "jls";
             ///<summary>jp2</summary>
             public const string Jp2 = "jp2";
             ///<summary>jpg2</summary>
             public const string Jpg2 = "jpg2";
-            ///<summary>jpeg</summary>
-            public const string Jpeg = "jpeg";
             ///<summary>jpg</summary>
             public const string Jpg = "jpg";
+            ///<summary>jpeg</summary>
+            public const string Jpeg = "jpeg";
             ///<summary>jpe</summary>
             public const string Jpe = "jpe";
             ///<summary>jph</summary>
@@ -5581,6 +5720,8 @@ namespace MimeMapping
             public const string Ktx = "ktx";
             ///<summary>ktx2</summary>
             public const string Ktx2 = "ktx2";
+            ///<summary>jfif</summary>
+            public const string Jfif = "jfif";
             ///<summary>png</summary>
             public const string Png = "png";
             ///<summary>btif</summary>
@@ -5661,6 +5802,8 @@ namespace MimeMapping
             public const string Webp = "webp";
             ///<summary>3ds</summary>
             public const string _3ds = "3ds";
+            ///<summary>dng</summary>
+            public const string Dng = "dng";
             ///<summary>ras</summary>
             public const string Ras = "ras";
             ///<summary>cmx</summary>
@@ -5715,6 +5858,10 @@ namespace MimeMapping
             public const string Eml = "eml";
             ///<summary>mime</summary>
             public const string Mime = "mime";
+            ///<summary>mht</summary>
+            public const string Mht = "mht";
+            ///<summary>mhtml</summary>
+            public const string Mhtml = "mhtml";
             ///<summary>wsc</summary>
             public const string Wsc = "wsc";
             ///<summary>3mf</summary>
@@ -5737,6 +5884,16 @@ namespace MimeMapping
             public const string Silo = "silo";
             ///<summary>mtl</summary>
             public const string Mtl = "mtl";
+            ///<summary>step</summary>
+            public const string Step = "step";
+            ///<summary>stp</summary>
+            public const string Stp = "stp";
+            ///<summary>stpnc</summary>
+            public const string Stpnc = "stpnc";
+            ///<summary>p21</summary>
+            public const string P21 = "p21";
+            ///<summary>210</summary>
+            public const string _210 = "210";
             ///<summary>stpx</summary>
             public const string Stpx = "stpx";
             ///<summary>stpz</summary>
@@ -6111,7 +6268,7 @@ namespace MimeMapping
             public const string Ice = "ice";
         }
         // List of all available extensions, used to build the dictionary
-        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new[] {
+        internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
             FileExtensions.Ez,
             FileExtensions.Appinstaller,
             FileExtensions.Aw,
@@ -6141,6 +6298,7 @@ namespace MimeMapping
             FileExtensions.Mpd,
             FileExtensions.Mpp,
             FileExtensions.Davmount,
+            FileExtensions.Dcm,
             FileExtensions.Dbk,
             FileExtensions.Dssc,
             FileExtensions.Xdssc,
@@ -6240,6 +6398,8 @@ namespace MimeMapping
             FileExtensions.Onetoc2,
             FileExtensions.Onetmp,
             FileExtensions.Onepkg,
+            FileExtensions.One,
+            FileExtensions.Onea,
             FileExtensions.Oxps,
             FileExtensions.Relo,
             FileExtensions.Xer,
@@ -6354,6 +6514,7 @@ namespace MimeMapping
             FileExtensions.Swi,
             FileExtensions.Iota,
             FileExtensions.Aep,
+            FileExtensions.Fbx,
             FileExtensions.Bmml,
             FileExtensions.Mpm,
             FileExtensions.Bmi,
@@ -6387,6 +6548,7 @@ namespace MimeMapping
             FileExtensions.Dart,
             FileExtensions.Rdz,
             FileExtensions.Dbf,
+            FileExtensions.Dcmp,
             FileExtensions.Uvf,
             FileExtensions.Uvvf,
             FileExtensions.Uvd,
@@ -6449,7 +6611,13 @@ namespace MimeMapping
             FileExtensions.G3w,
             FileExtensions.Gmx,
             FileExtensions.Gdoc,
+            FileExtensions.Gdraw,
+            FileExtensions.Gform,
+            FileExtensions.Gjam,
+            FileExtensions.Gmap,
             FileExtensions.Gslides,
+            FileExtensions.Gscript,
+            FileExtensions.Gsite,
             FileExtensions.Gsheet,
             FileExtensions.Kml,
             FileExtensions.Kmz,
@@ -6579,6 +6747,7 @@ namespace MimeMapping
             FileExtensions.Ppsm,
             FileExtensions.Potm,
             FileExtensions.Mpt,
+            FileExtensions.Vdx,
             FileExtensions.Docm,
             FileExtensions.Dotm,
             FileExtensions.Wps,
@@ -6649,6 +6818,9 @@ namespace MimeMapping
             FileExtensions.Plf,
             FileExtensions.Pbd,
             FileExtensions.Box,
+            FileExtensions.Brushset,
+            FileExtensions.Brush,
+            FileExtensions.Drm,
             FileExtensions.Mgz,
             FileExtensions.Qps,
             FileExtensions.Ptid,
@@ -6735,6 +6907,8 @@ namespace MimeMapping
             FileExtensions.Vst,
             FileExtensions.Vss,
             FileExtensions.Vsw,
+            FileExtensions.Vsdx,
+            FileExtensions.Vtx,
             FileExtensions.Vis,
             FileExtensions.Vsf,
             FileExtensions.Wbxml,
@@ -6777,6 +6951,7 @@ namespace MimeMapping
             FileExtensions.Aas,
             FileExtensions.Bcpio,
             FileExtensions.Torrent,
+            FileExtensions.Blend,
             FileExtensions.Blb,
             FileExtensions.Blorb,
             FileExtensions.Bz,
@@ -6833,6 +7008,7 @@ namespace MimeMapping
             FileExtensions.Hdf,
             FileExtensions.Php,
             FileExtensions.Install,
+            FileExtensions.Ipynb,
             FileExtensions.Jardiff,
             FileExtensions.Jnlp,
             FileExtensions.Kdbx,
@@ -6917,6 +7093,7 @@ namespace MimeMapping
             FileExtensions.Xlf,
             FileExtensions.Xpi,
             FileExtensions.Xz,
+            FileExtensions.Zip,
             FileExtensions.Z1,
             FileExtensions.Z2,
             FileExtensions.Z3,
@@ -6949,7 +7126,7 @@ namespace MimeMapping
             FileExtensions.Xvm,
             FileExtensions.Yang,
             FileExtensions.Yin,
-            FileExtensions.Zip,
+            FileExtensions.Lottie,
             FileExtensions._3gpp,
             FileExtensions.Adts,
             FileExtensions.Aac,
@@ -6965,6 +7142,7 @@ namespace MimeMapping
             FileExtensions.Mp3,
             FileExtensions.M4a,
             FileExtensions.Mp4a,
+            FileExtensions.M4b,
             FileExtensions.Mpga,
             FileExtensions.Mp2,
             FileExtensions.Mp2a,
@@ -7032,13 +7210,14 @@ namespace MimeMapping
             FileExtensions.Heif,
             FileExtensions.Heifs,
             FileExtensions.Hej2,
-            FileExtensions.Hsj2,
             FileExtensions.Ief,
+            FileExtensions.Jaii,
+            FileExtensions.Jais,
             FileExtensions.Jls,
             FileExtensions.Jp2,
             FileExtensions.Jpg2,
-            FileExtensions.Jpeg,
             FileExtensions.Jpg,
+            FileExtensions.Jpeg,
             FileExtensions.Jpe,
             FileExtensions.Jph,
             FileExtensions.Jhc,
@@ -7056,6 +7235,7 @@ namespace MimeMapping
             FileExtensions.Jxss,
             FileExtensions.Ktx,
             FileExtensions.Ktx2,
+            FileExtensions.Jfif,
             FileExtensions.Png,
             FileExtensions.Btif,
             FileExtensions.Btf,
@@ -7096,6 +7276,7 @@ namespace MimeMapping
             FileExtensions.Pcx,
             FileExtensions.Webp,
             FileExtensions._3ds,
+            FileExtensions.Dng,
             FileExtensions.Ras,
             FileExtensions.Cmx,
             FileExtensions.Fh,
@@ -7123,6 +7304,8 @@ namespace MimeMapping
             FileExtensions.U8hdr,
             FileExtensions.Eml,
             FileExtensions.Mime,
+            FileExtensions.Mht,
+            FileExtensions.Mhtml,
             FileExtensions.Wsc,
             FileExtensions._3mf,
             FileExtensions.Gltf,
@@ -7134,6 +7317,11 @@ namespace MimeMapping
             FileExtensions.Mesh,
             FileExtensions.Silo,
             FileExtensions.Mtl,
+            FileExtensions.Step,
+            FileExtensions.Stp,
+            FileExtensions.Stpnc,
+            FileExtensions.P21,
+            FileExtensions._210,
             FileExtensions.Stpx,
             FileExtensions.Stpz,
             FileExtensions.Stpxz,
@@ -7414,6 +7602,9 @@ namespace MimeMapping
                 case FileExtensions.Davmount:
                     return Davmount;
 
+                case FileExtensions.Dcm:
+                    return Dcm;
+
                 case FileExtensions.Dbk:
                     return Dbk;
 
@@ -7639,6 +7830,8 @@ namespace MimeMapping
                 case FileExtensions.Onetoc2:
                 case FileExtensions.Onetmp:
                 case FileExtensions.Onepkg:
+                case FileExtensions.One:
+                case FileExtensions.Onea:
                     return Onetoc;
 
                 case FileExtensions.Oxps:
@@ -7965,6 +8158,9 @@ namespace MimeMapping
                 case FileExtensions.Aep:
                     return Aep;
 
+                case FileExtensions.Fbx:
+                    return Fbx;
+
                 case FileExtensions.Bmml:
                     return Bmml;
 
@@ -8055,6 +8251,9 @@ namespace MimeMapping
 
                 case FileExtensions.Dbf:
                     return Dbf;
+
+                case FileExtensions.Dcmp:
+                    return Dcmp;
 
                 case FileExtensions.Uvf:
                 case FileExtensions.Uvvf:
@@ -8218,8 +8417,26 @@ namespace MimeMapping
                 case FileExtensions.Gdoc:
                     return Gdoc;
 
+                case FileExtensions.Gdraw:
+                    return Gdraw;
+
+                case FileExtensions.Gform:
+                    return Gform;
+
+                case FileExtensions.Gjam:
+                    return Gjam;
+
+                case FileExtensions.Gmap:
+                    return Gmap;
+
                 case FileExtensions.Gslides:
                     return Gslides;
+
+                case FileExtensions.Gscript:
+                    return Gscript;
+
+                case FileExtensions.Gsite:
+                    return Gsite;
 
                 case FileExtensions.Gsheet:
                     return Gsheet;
@@ -8570,6 +8787,9 @@ namespace MimeMapping
                 case FileExtensions.Mpt:
                     return Mpt;
 
+                case FileExtensions.Vdx:
+                    return Vdx;
+
                 case FileExtensions.Docm:
                     return Docm;
 
@@ -8767,6 +8987,15 @@ namespace MimeMapping
 
                 case FileExtensions.Box:
                     return Box;
+
+                case FileExtensions.Brushset:
+                    return Brushset;
+
+                case FileExtensions.Brush:
+                    return Brush;
+
+                case FileExtensions.Drm:
+                    return Drm;
 
                 case FileExtensions.Mgz:
                     return Mgz;
@@ -8990,6 +9219,8 @@ namespace MimeMapping
                 case FileExtensions.Vst:
                 case FileExtensions.Vss:
                 case FileExtensions.Vsw:
+                case FileExtensions.Vsdx:
+                case FileExtensions.Vtx:
                     return Vsd;
 
                 case FileExtensions.Vis:
@@ -9109,6 +9340,9 @@ namespace MimeMapping
 
                 case FileExtensions.Torrent:
                     return Torrent;
+
+                case FileExtensions.Blend:
+                    return Blend;
 
                 case FileExtensions.Blb:
                 case FileExtensions.Blorb:
@@ -9243,6 +9477,9 @@ namespace MimeMapping
 
                 case FileExtensions.Install:
                     return Install;
+
+                case FileExtensions.Ipynb:
+                    return Ipynb;
 
                 case FileExtensions.Jardiff:
                     return Jardiff;
@@ -9466,6 +9703,9 @@ namespace MimeMapping
                 case FileExtensions.Xz:
                     return Xz;
 
+                case FileExtensions.Zip:
+                    return Zip;
+
                 case FileExtensions.Z1:
                 case FileExtensions.Z2:
                 case FileExtensions.Z3:
@@ -9534,8 +9774,8 @@ namespace MimeMapping
                 case FileExtensions.Yin:
                     return Yin;
 
-                case FileExtensions.Zip:
-                    return Zip;
+                case FileExtensions.Lottie:
+                    return Lottie;
 
                 case FileExtensions._3gpp:
                     return _3gpp;
@@ -9568,6 +9808,7 @@ namespace MimeMapping
 
                 case FileExtensions.M4a:
                 case FileExtensions.Mp4a:
+                case FileExtensions.M4b:
                     return M4a;
 
                 case FileExtensions.Mpga:
@@ -9747,11 +9988,14 @@ namespace MimeMapping
                 case FileExtensions.Hej2:
                     return Hej2;
 
-                case FileExtensions.Hsj2:
-                    return Hsj2;
-
                 case FileExtensions.Ief:
                     return Ief;
+
+                case FileExtensions.Jaii:
+                    return Jaii;
+
+                case FileExtensions.Jais:
+                    return Jais;
 
                 case FileExtensions.Jls:
                     return Jls;
@@ -9760,10 +10004,10 @@ namespace MimeMapping
                 case FileExtensions.Jpg2:
                     return Jp2;
 
-                case FileExtensions.Jpeg:
                 case FileExtensions.Jpg:
+                case FileExtensions.Jpeg:
                 case FileExtensions.Jpe:
-                    return Jpeg;
+                    return Jpg;
 
                 case FileExtensions.Jph:
                     return Jph;
@@ -9808,6 +10052,9 @@ namespace MimeMapping
 
                 case FileExtensions.Ktx2:
                     return Ktx2;
+
+                case FileExtensions.Jfif:
+                    return Jfif;
 
                 case FileExtensions.Png:
                     return Png;
@@ -9915,6 +10162,9 @@ namespace MimeMapping
                 case FileExtensions._3ds:
                     return _3ds;
 
+                case FileExtensions.Dng:
+                    return Dng;
+
                 case FileExtensions.Ras:
                     return Ras;
 
@@ -9982,6 +10232,8 @@ namespace MimeMapping
 
                 case FileExtensions.Eml:
                 case FileExtensions.Mime:
+                case FileExtensions.Mht:
+                case FileExtensions.Mhtml:
                     return Eml;
 
                 case FileExtensions.Wsc:
@@ -10010,6 +10262,13 @@ namespace MimeMapping
 
                 case FileExtensions.Mtl:
                     return Mtl;
+
+                case FileExtensions.Step:
+                case FileExtensions.Stp:
+                case FileExtensions.Stpnc:
+                case FileExtensions.P21:
+                case FileExtensions._210:
+                    return Step;
 
                 case FileExtensions.Stpx:
                     return Stpx;
@@ -10520,6 +10779,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Mpp};
                 case Davmount:
                     return new[] {FileExtensions.Davmount};
+                case Dcm:
+                    return new[] {FileExtensions.Dcm};
                 case Dbk:
                     return new[] {FileExtensions.Dbk};
                 case Dssc:
@@ -10628,8 +10889,8 @@ namespace MimeMapping
                 //case Mp21:
                     return new[] {FileExtensions.M21, FileExtensions.Mp21};
                 case Mp4:
-                    //case Mpg4:
-                    //case Mp4s:
+                //case Mpg4:
+                //case Mp4s:
                 //case M4p:
                     return new[] {FileExtensions.Mp4, FileExtensions.Mpg4, FileExtensions.Mp4s, FileExtensions.M4p};
                 case Msix:
@@ -10682,7 +10943,9 @@ namespace MimeMapping
                 //case Onetoc2:
                 //case Onetmp:
                 //case Onepkg:
-                    return new[] {FileExtensions.Onetoc, FileExtensions.Onetoc2, FileExtensions.Onetmp, FileExtensions.Onepkg};
+                //case One:
+                //case Onea:
+                    return new[] {FileExtensions.Onetoc, FileExtensions.Onetoc2, FileExtensions.Onetmp, FileExtensions.Onepkg, FileExtensions.One, FileExtensions.Onea};
                 case Oxps:
                     return new[] {FileExtensions.Oxps};
                 case Relo:
@@ -10902,6 +11165,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Iota};
                 case Aep:
                     return new[] {FileExtensions.Aep};
+                case Fbx:
+                    return new[] {FileExtensions.Fbx};
                 case Bmml:
                     return new[] {FileExtensions.Bmml};
                 case Mpm:
@@ -10964,6 +11229,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Rdz};
                 case Dbf:
                     return new[] {FileExtensions.Dbf};
+                case Dcmp:
+                    return new[] {FileExtensions.Dcmp};
                 case Uvf:
                 //case Uvvf:
                 //case Uvd:
@@ -11076,8 +11343,20 @@ namespace MimeMapping
                     return new[] {FileExtensions.Gmx};
                 case Gdoc:
                     return new[] {FileExtensions.Gdoc};
+                case Gdraw:
+                    return new[] {FileExtensions.Gdraw};
+                case Gform:
+                    return new[] {FileExtensions.Gform};
+                case Gjam:
+                    return new[] {FileExtensions.Gjam};
+                case Gmap:
+                    return new[] {FileExtensions.Gmap};
                 case Gslides:
                     return new[] {FileExtensions.Gslides};
+                case Gscript:
+                    return new[] {FileExtensions.Gscript};
+                case Gsite:
+                    return new[] {FileExtensions.Gsite};
                 case Gsheet:
                     return new[] {FileExtensions.Gsheet};
                 case Kml:
@@ -11317,6 +11596,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Potm};
                 case Mpt:
                     return new[] {FileExtensions.Mpt};
+                case Vdx:
+                    return new[] {FileExtensions.Vdx};
                 case Docm:
                     return new[] {FileExtensions.Docm};
                 case Dotm:
@@ -11451,6 +11732,12 @@ namespace MimeMapping
                     return new[] {FileExtensions.Pbd};
                 case Box:
                     return new[] {FileExtensions.Box};
+                case Brushset:
+                    return new[] {FileExtensions.Brushset};
+                case Brush:
+                    return new[] {FileExtensions.Brush};
+                case Drm:
+                    return new[] {FileExtensions.Drm};
                 case Mgz:
                     return new[] {FileExtensions.Mgz};
                 case Qps:
@@ -11597,7 +11884,7 @@ namespace MimeMapping
                 case Unityweb:
                     return new[] {FileExtensions.Unityweb};
                 case Uoml:
-                    //case Uo:
+                //case Uo:
                     return new[] {FileExtensions.Uoml, FileExtensions.Uo};
                 case Vcx:
                     return new[] {FileExtensions.Vcx};
@@ -11605,7 +11892,9 @@ namespace MimeMapping
                 //case Vst:
                 //case Vss:
                 //case Vsw:
-                    return new[] {FileExtensions.Vsd, FileExtensions.Vst, FileExtensions.Vss, FileExtensions.Vsw};
+                //case Vsdx:
+                //case Vtx:
+                    return new[] {FileExtensions.Vsd, FileExtensions.Vst, FileExtensions.Vss, FileExtensions.Vsw, FileExtensions.Vsdx, FileExtensions.Vtx};
                 case Vis:
                     return new[] {FileExtensions.Vis};
                 case Vsf:
@@ -11686,6 +11975,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Bcpio};
                 case Torrent:
                     return new[] {FileExtensions.Torrent};
+                case Blend:
+                    return new[] {FileExtensions.Blend};
                 case Blb:
                 //case Blorb:
                     return new[] {FileExtensions.Blb, FileExtensions.Blorb};
@@ -11781,6 +12072,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Php};
                 case Install:
                     return new[] {FileExtensions.Install};
+                case Ipynb:
+                    return new[] {FileExtensions.Ipynb};
                 case Jardiff:
                     return new[] {FileExtensions.Jardiff};
                 case Jnlp:
@@ -11934,6 +12227,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Xpi};
                 case Xz:
                     return new[] {FileExtensions.Xz};
+                case Zip:
+                    return new[] {FileExtensions.Zip};
                 case Z1:
                 //case Z2:
                 //case Z3:
@@ -11984,12 +12279,12 @@ namespace MimeMapping
                     return new[] {FileExtensions.Yang};
                 case Yin:
                     return new[] {FileExtensions.Yin};
-                case Zip:
-                    return new[] {FileExtensions.Zip};
+                case Lottie:
+                    return new[] {FileExtensions.Lottie};
                 case _3gpp:
                     return new[] {FileExtensions._3gpp};
                 case Adts:
-                    //case Aac:
+                //case Aac:
                     return new[] {FileExtensions.Adts, FileExtensions.Aac};
                 case Adp:
                     return new[] {FileExtensions.Adp};
@@ -12009,7 +12304,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Mp3};
                 case M4a:
                 //case Mp4a:
-                    return new[] {FileExtensions.M4a, FileExtensions.Mp4a};
+                //case M4b:
+                    return new[] {FileExtensions.M4a, FileExtensions.Mp4a, FileExtensions.M4b};
                 case Mpga:
                 //case Mp2:
                 //case Mp2a:
@@ -12108,7 +12404,7 @@ namespace MimeMapping
                 case Avif:
                     return new[] {FileExtensions.Avif};
                 case Bmp:
-                    //case Dib:
+                //case Dib:
                     return new[] {FileExtensions.Bmp, FileExtensions.Dib};
                 case Cgm:
                     return new[] {FileExtensions.Cgm};
@@ -12132,25 +12428,27 @@ namespace MimeMapping
                     return new[] {FileExtensions.Heifs};
                 case Hej2:
                     return new[] {FileExtensions.Hej2};
-                case Hsj2:
-                    return new[] {FileExtensions.Hsj2};
                 case Ief:
                     return new[] {FileExtensions.Ief};
+                case Jaii:
+                    return new[] {FileExtensions.Jaii};
+                case Jais:
+                    return new[] {FileExtensions.Jais};
                 case Jls:
                     return new[] {FileExtensions.Jls};
                 case Jp2:
                 //case Jpg2:
                     return new[] {FileExtensions.Jp2, FileExtensions.Jpg2};
-                case Jpeg:
-                //case Jpg:
+                case Jpg:
+                //case Jpeg:
                 //case Jpe:
-                    return new[] {FileExtensions.Jpeg, FileExtensions.Jpg, FileExtensions.Jpe};
+                    return new[] {FileExtensions.Jpg, FileExtensions.Jpeg, FileExtensions.Jpe};
                 case Jph:
                     return new[] {FileExtensions.Jph};
                 case Jhc:
                     return new[] {FileExtensions.Jhc};
                 case Jpm:
-                    //case Jpgm:
+                //case Jpgm:
                     return new[] {FileExtensions.Jpm, FileExtensions.Jpgm};
                 case Jpx:
                 //case Jpf:
@@ -12175,10 +12473,12 @@ namespace MimeMapping
                     return new[] {FileExtensions.Ktx};
                 case Ktx2:
                     return new[] {FileExtensions.Ktx2};
+                case Jfif:
+                    return new[] {FileExtensions.Jfif};
                 case Png:
                     return new[] {FileExtensions.Png};
                 case Btif:
-                    //case Btf:
+                //case Btf:
                     return new[] {FileExtensions.Btif, FileExtensions.Btf};
                 case Pti:
                     return new[] {FileExtensions.Pti};
@@ -12248,6 +12548,8 @@ namespace MimeMapping
                     return new[] {FileExtensions.Webp};
                 case _3ds:
                     return new[] {FileExtensions._3ds};
+                case Dng:
+                    return new[] {FileExtensions.Dng};
                 case Ras:
                     return new[] {FileExtensions.Ras};
                 case Cmx:
@@ -12295,7 +12597,9 @@ namespace MimeMapping
                     return new[] {FileExtensions.U8hdr};
                 case Eml:
                 //case Mime:
-                    return new[] {FileExtensions.Eml, FileExtensions.Mime};
+                //case Mht:
+                //case Mhtml:
+                    return new[] {FileExtensions.Eml, FileExtensions.Mime, FileExtensions.Mht, FileExtensions.Mhtml};
                 case Wsc:
                     return new[] {FileExtensions.Wsc};
                 case _3mf:
@@ -12315,6 +12619,12 @@ namespace MimeMapping
                     return new[] {FileExtensions.Msh, FileExtensions.Mesh, FileExtensions.Silo};
                 case Mtl:
                     return new[] {FileExtensions.Mtl};
+                case Step:
+                //case Stp:
+                //case Stpnc:
+                //case P21:
+                //case _210:
+                    return new[] {FileExtensions.Step, FileExtensions.Stp, FileExtensions.Stpnc, FileExtensions.P21, FileExtensions._210};
                 case Stpx:
                     return new[] {FileExtensions.Stpx};
                 case Stpz:
@@ -12344,7 +12654,7 @@ namespace MimeMapping
                 case Xt:
                     return new[] {FileExtensions.X_t};
                 case Pyo:
-                    //case Pyox:
+                //case Pyox:
                     return new[] {FileExtensions.Pyo, FileExtensions.Pyox};
                 case Vds:
                     return new[] {FileExtensions.Vds};
@@ -12394,7 +12704,7 @@ namespace MimeMapping
                 case Less:
                     return new[] {FileExtensions.Less};
                 case Md:
-                    //case Markdown:
+                //case Markdown:
                     return new[] {FileExtensions.Md, FileExtensions.Markdown};
                 case Mml:
                     return new[] {FileExtensions.Mml};
@@ -12547,8 +12857,8 @@ namespace MimeMapping
                 //case Mjp2:
                     return new[] {FileExtensions.Mj2, FileExtensions.Mjp2};
                 case Ts:
-                    //case M2t:
-                    //case M2ts:
+                //case M2t:
+                //case M2ts:
                     return new[] {FileExtensions.Ts, FileExtensions.M2t, FileExtensions.M2ts};
                 case Mp4v:
                     return new[] {FileExtensions.Mp4v};
