@@ -17,7 +17,7 @@ namespace Test
             { "JPG", "image/jpeg" },
             { "mp4", "application/mp4" },
             { "exe", "application/octet-stream" },
-            { "zip", "x-zip-compressed" },
+            { "zip", "application/x-zip-compressed" },
             { "torrent", "application/x-bittorrent" },
             { "json", "application/json" },
             { "asdfunknown", "application/octet-stream" },
