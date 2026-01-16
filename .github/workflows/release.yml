@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
           filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+      - uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
