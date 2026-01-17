@@ -21,6 +21,8 @@ jobs:
   nuget-release:
     runs-on: windows-latest
     timeout-minutes: 15
+    permissions:
+      id-token: write  # Required for NuGet Trusted Publishing OIDC
 
     env:
       CONFIGURATION: Release
@@ -52,12 +54,18 @@ jobs:
           name: packages
           path: bin/*.nupkg
 
+      - name: NuGet login (OIDC → temp API key)
+        uses: nuget/login@v1
+        id: nuget-login
+        with:
+          user: ${{ vars.NUGET_USER }}
+
       - name: deploy nuget.org
         run: find bin -name '*.nupkg' | xargs dotnet nuget push -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output
         shell: bash
         env:
           NUGET_SOURCE: https://api.nuget.org/v3/index.json
-          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUGET_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
 
           
   gh-release:
