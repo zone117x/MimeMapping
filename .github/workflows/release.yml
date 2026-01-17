@@ -21,17 +21,19 @@ jobs:
   nuget-release:
     runs-on: windows-latest
     timeout-minutes: 15
+    permissions:
+      id-token: write  # Required for NuGet Trusted Publishing OIDC
 
     env:
       CONFIGURATION: Release
 
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
           filter: blob:none # We don't need all blobs
 
-      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      - uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets') }}
@@ -47,17 +49,23 @@ jobs:
       - name: pack
         run: dotnet pack -o bin
 
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: packages
           path: bin/*.nupkg
+
+      - name: NuGet login (OIDC → temp API key)
+        uses: nuget/login@v1
+        id: nuget-login
+        with:
+          user: ${{ vars.NUGET_USER }}
 
       - name: deploy nuget.org
         run: find bin -name '*.nupkg' | xargs dotnet nuget push -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output
         shell: bash
         env:
           NUGET_SOURCE: https://api.nuget.org/v3/index.json
-          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUGET_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
 
           
   gh-release:
@@ -68,7 +76,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           fetch-depth: 0 # needed so minver finds git tags https://github.com/actions/checkout/issues/172
           filter: blob:none # We don't need all blobs
