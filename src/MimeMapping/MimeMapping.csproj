@@ -68,4 +68,10 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
+  <!-- T4 Template Transformation on Build -->
+  <Target Name="TransformT4Templates" BeforeTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true'">
+    <Exec Command="dotnet tool restore" WorkingDirectory="$(MSBuildProjectDirectory)/../.." StandardOutputImportance="Low" />
+    <Exec Command="dotnet t4 -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
 </Project>
