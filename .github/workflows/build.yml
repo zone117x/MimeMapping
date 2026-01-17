@@ -45,6 +45,9 @@ jobs:
       - name: restore
         run: dotnet restore
 
+      - name: restore dotnet tools
+        run: dotnet tool restore
+
       - name: build
         run: dotnet build --no-restore ./MimeMapping.sln
 
@@ -78,6 +81,9 @@ jobs:
 
       - name: restore
         run: dotnet restore
+
+      - name: restore dotnet tools
+        run: dotnet tool restore
 
       - name: build
         run: dotnet build -c release --no-restore

@@ -69,8 +69,9 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
   </ItemGroup>
 
   <!-- T4 Template Transformation on Build -->
-  <Target Name="TransformT4Templates" BeforeTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true'">
-    <Exec Command="dotnet tool restore" WorkingDirectory="$(MSBuildProjectDirectory)/../.." StandardOutputImportance="Low" />
+  <!-- Only run for first target framework to avoid parallel execution issues -->
+  <Target Name="TransformT4Templates" BeforeTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND '$(TargetFramework)' == 'netstandard2.0'">
+    <Exec Command="dotnet tool restore" WorkingDirectory="$(MSBuildProjectDirectory)/../.." StandardOutputImportance="Low" IgnoreExitCode="true" />
     <Exec Command="dotnet t4 -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 
