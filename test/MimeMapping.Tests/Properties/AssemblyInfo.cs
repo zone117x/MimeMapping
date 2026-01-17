@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -7,3 +8,6 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("063ee5bf-8922-4280-8dfc-1226e9298f35")]
+
+// Enable test parallelization
+[assembly: Parallelize(Workers = 0, Scope = ExecutionScope.MethodLevel)]

@@ -1,14 +1,12 @@
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="System.Net.Http" #>
-<#@ assembly name="Newtonsoft.Json" #>
+<#@ assembly name="System.Text.Json" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Net.Http" #>
 <#@ import namespace="System.Linq" #>
-<#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
-<#@ import namespace="Newtonsoft.Json" #>
-<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#@ import namespace="System.Text.Json" #>
 <#@ output extension="cs" #>
 using System;
 
@@ -39,29 +37,31 @@ namespace MimeMapping
             return client.GetStringAsync(url).GetAwaiter().GetResult();
         }
 
-        IEnumerable<string[]> GetMimeTypesFromJson(string url, Func<JObject, IEnumerable<string[]>> processObject)
+        IEnumerable<string[]> GetMimeTypesFromJson(string url)
         {
             var content = GetPageContent(url);
             if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
-            var resource = JObject.Parse(content);
-            return processObject(resource);
+
+            using var doc = JsonDocument.Parse(content);
+            var results = new List<string[]>();
+
+            foreach (var mimeTypeEntry in doc.RootElement.EnumerateObject())
+            {
+                var mimeType = mimeTypeEntry.Name;
+                if (mimeTypeEntry.Value.TryGetProperty("extensions", out var extensions))
+                {
+                    foreach (var ext in extensions.EnumerateArray())
+                    {
+                        results.Add(new[] { mimeType, ext.GetString() });
+                    }
+                }
+            }
+
+            return results;
         }
 
         var entries = new List<string[]>();
-
-        entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL, (resource) => {
-            return from mimeTypes in resource.Children() 
-            let mimeType = ((JProperty) mimeTypes).Name 
-            from mimeTypeProperties in mimeTypes.Children() 
-            from mimeTypeProperty in mimeTypeProperties.Children() 
-            from mimeTypeValue in mimeTypeProperty.Values()
-            where (mimeTypeProperty as JProperty)?.Name == "extensions"
-            select new[]
-            {
-                mimeType,
-                mimeTypeValue.Value<string>()
-            };
-        }));
+        entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL));
 
         // build dictionary from entries, outputing found duplicates
         var _dict = new Dictionary<string, string>();
@@ -197,7 +197,7 @@ namespace MimeMapping
 <#
                         first = false;
                     }
-#>					return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
+#>                    return new[] {<#= string.Join(", ", kp.Value.Select(x => $"FileExtensions.{(!Char.IsLetter(x[0]) ? "_" : string.Empty)}{Char.ToUpper(x[0])}{x.Substring(1).Replace('-', '_')}")) #>};
 <#
                 }
 #>

@@ -65,23 +65,14 @@ namespace Test
         [TestMethod]
         public void TestNullFileArgumentThrowsException()
         {
-            try
-            {
-                MimeUtility.GetMimeMapping(null);
-            }
-            catch (Exception ex)
-            {
-                Assert.IsInstanceOfType(ex, typeof(ArgumentNullException));
-            }
+            Assert.ThrowsExactly<ArgumentNullException>(() => MimeUtility.GetMimeMapping(null!));
         }
 
         [TestMethod]
         public void TestMimeTypeDictionaryCount()
         {
-            Assert.IsTrue(
-                MimeUtility.TypeMap.Count > 900,
-                $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong"
-            );
+            Assert.IsGreaterThan(900, MimeUtility.TypeMap.Count,
+                $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong");
         }
 
         [TestMethod]
@@ -110,36 +101,22 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeToExtenstionsLookup()
         {
-            Assert.IsTrue(
-                MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Doc, out var extensions)
-            );
-            if (extensions != null)
-            {
-                Assert.IsTrue(
-                    extensions.Length >= 2,
-                    $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot)."
-                );
-            }
+            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Doc, out var extensions));
+            Assert.IsNotNull(extensions);
+            Assert.IsGreaterThanOrEqualTo(2, extensions.Length,
+                $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot).");
 
-            Assert.IsTrue(
-                MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Jpeg, out extensions)
-            );
-            if (extensions != null)
-            {
-                Assert.IsTrue(
-                    extensions.Length >= 3,
-                    $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3."
-                );
-            }
+            Assert.IsTrue(MimeUtility.TypeToExtensionsMap.TryGetValue(KnownMimeTypes.Jpeg, out extensions));
+            Assert.IsNotNull(extensions);
+            Assert.IsGreaterThanOrEqualTo(3, extensions.Length,
+                $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3.");
 
-            Assert.IsTrue(
-                MimeUtility.TypeToExtensionsMap.Count > 900,
-                $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong"
-            );
+            Assert.IsGreaterThan(900, MimeUtility.TypeToExtensionsMap.Count,
+                $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong");
 
             foreach (var kv in MimeUtility.TypeToExtensionsMap)
             {
-                Assert.IsTrue(kv.Value.Length > 0, $"{kv.Key} cannot have zero extensions.");
+                Assert.IsNotEmpty(kv.Value, $"{kv.Key} cannot have zero extensions.");
             }
         }
     }

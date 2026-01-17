@@ -1,8 +1,9 @@
 using System;
+
 namespace MimeMapping
 {
     ///<summary>
-    /// MIME type constants. Last updated on 2025-11-06T09:17:51Z. 
+    /// MIME type constants. Last updated on 2026-01-17T18:29:24Z. 
     /// Generated from the <a href="https://raw.githubusercontent.com/jshttp/mime-db/v1.54.0/db.json">mime-db</a> source
     ///</summary>
     public static class KnownMimeTypes
@@ -13,7 +14,7 @@ namespace MimeMapping
         // Dupe for mpp: using application/dash-patch+xml vs application/vnd.ms-project 
         // Dupe for ac: using application/pkix-attr-cert vs application/vnd.nokia.n-gage.ac+xml 
         // Dupe for dmg: using application/octet-stream vs application/x-apple-diskimage 
-        // Dupe for bdoc: using application/bdoc vs application/x-bdoc
+        // Dupe for bdoc: using application/bdoc vs application/x-bdoc 
         // Dupe for rar: using application/vnd.rar vs application/x-compressed 
         // Dupe for deb: using application/octet-stream vs application/x-debian-package 
         // Dupe for iso: using application/octet-stream vs application/x-iso9660-image 
@@ -59,7 +60,7 @@ namespace MimeMapping
         // Dupe for jpgm: using image/jpm vs video/jpm 
         // Dupe for mts: using model/vnd.mts vs video/mp2t 
         // Dupe for mp4: using application/mp4 vs video/mp4 
-        // Dupe for mpg4: using application/mp4 vs video/mp4
+        // Dupe for mpg4: using application/mp4 vs video/mp4 
 
         // Generated 979 unique mime type values
         // Generated 1239 type key pairs
@@ -3785,6 +3786,7 @@ namespace MimeMapping
             Ice,
         });
 
+
         ///<summary>File extensions</summary>
         public static class FileExtensions
         {
@@ -6267,6 +6269,7 @@ namespace MimeMapping
             ///<summary>ice</summary>
             public const string Ice = "ice";
         }
+
         // List of all available extensions, used to build the dictionary
         internal static readonly Lazy<string[]> ALL_EXTS = new Lazy<string[]>(() => new [] {
             FileExtensions.Ez,
@@ -7509,6 +7512,7 @@ namespace MimeMapping
             FileExtensions.Smv,
             FileExtensions.Ice,
         });
+
 
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string? LookupType(string type)
@@ -10716,6 +10720,7 @@ namespace MimeMapping
                     return null;
             }
         }
+
         // Switch-case instead of dictionary since it does the hashing at compile time rather than run time
         internal static string[]? LookupMimeType(string mimeType)
         {
