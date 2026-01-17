@@ -5,6 +5,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeMapping;
 
+[assembly: Parallelize(Scope = ExecutionScope.MethodLevel)]
+
 namespace Test
 {
     [TestClass]
@@ -78,8 +80,9 @@ namespace Test
         [TestMethod]
         public void TestMimeTypeDictionaryCount()
         {
-            Assert.IsTrue(
-                MimeUtility.TypeMap.Count > 900,
+            Assert.IsGreaterThan(
+                MimeUtility.TypeMap.Count,
+                900,
                 $"Type map only has {MimeUtility.TypeMap.Count} entries, something wrong"
             );
         }
@@ -115,8 +118,9 @@ namespace Test
             );
             if (extensions != null)
             {
-                Assert.IsTrue(
-                    extensions.Length >= 2,
+                Assert.IsGreaterThanOrEqualTo(
+                    extensions.Length,
+                    2,
                     $"The {KnownMimeTypes.Doc} has only {extensions.Length} extensions. It should be 2 (doc, dot)."
                 );
             }
@@ -126,20 +130,22 @@ namespace Test
             );
             if (extensions != null)
             {
-                Assert.IsTrue(
-                    extensions.Length >= 3,
+                Assert.IsGreaterThanOrEqualTo(
+                    extensions.Length,
+                    3,
                     $"The {KnownMimeTypes.Jpeg} has only {extensions.Length} extensions. It should be 3."
                 );
             }
 
-            Assert.IsTrue(
-                MimeUtility.TypeToExtensionsMap.Count > 900,
+            Assert.IsGreaterThan(
+                MimeUtility.TypeToExtensionsMap.Count,
+                900,
                 $"TypeToExtensions map only has {MimeUtility.TypeToExtensionsMap.Count} entries, something wrong"
             );
 
             foreach (var kv in MimeUtility.TypeToExtensionsMap)
             {
-                Assert.IsTrue(kv.Value.Length > 0, $"{kv.Key} cannot have zero extensions.");
+                Assert.IsNotEmpty(kv.Value, $"{kv.Key} cannot have zero extensions.");
             }
         }
     }
