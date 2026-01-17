@@ -55,7 +55,7 @@ jobs:
           path: bin/*.nupkg
 
       - name: NuGet login (OIDC → temp API key)
-        uses: nuget/login@v1
+        uses: nuget/login@d22cc5f58ff5b88bf9bd452535b4335137e24544 # v1
         id: nuget-login
         with:
           user: ${{ vars.NUGET_USER }}
