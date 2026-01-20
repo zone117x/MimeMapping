@@ -6,14 +6,8 @@
     {
       "customType": "regex",
       "description": "Update mime-db",
-      "managerFilePatterns": [
-        "/(^|/)KnownMimeTypes\\.tt$/",
-        "/(^|/)TemplateSourceTests\\.cs$/",
-        "/(^|/)MimeDbTestHelper\\.cs$/"
-      ],
-      "matchStrings": [
-        "https://raw\\.githubusercontent\\.com/jshttp/mime-db/(?<currentValue>.+?)/db.json"
-      ],
+      "managerFilePatterns": ["/(^|/)MimeMapping\\.csproj$/"],
+      "matchStrings": ["<MimeDbVersion>(?<currentValue>.+?)</MimeDbVersion>"],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "mime-db",
       "packageNameTemplate": "jshttp/mime-db"
