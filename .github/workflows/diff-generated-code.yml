@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Checkout PR branch
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr-branch
 
       - name: Checkout target branch
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: base-branch
