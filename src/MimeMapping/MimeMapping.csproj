@@ -69,10 +69,17 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
   </ItemGroup>
 
   <!-- T4 Template Transformation on Build -->
-  <!-- Only run for first target framework to avoid parallel execution issues -->
-  <Target Name="TransformT4Templates" BeforeTargets="BeforeBuild" Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND '$(TargetFramework)' == 'netstandard2.0'">
-    <Exec Command="dotnet tool restore" WorkingDirectory="$(MSBuildProjectDirectory)/../.." StandardOutputImportance="Low" IgnoreExitCode="true" />
-    <Exec Command="dotnet t4 -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  <!-- Run during outer build (when TargetFramework is empty) to avoid race conditions with parallel multi-targeting -->
+  <Target Name="TransformT4Templates"
+          BeforeTargets="DispatchToInnerBuilds;CoreCompile"
+          Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND ('$(TargetFramework)' == '' Or '$(TargetFrameworks)' == '')"
+          Inputs="$(MSBuildProjectDirectory)/KnownMimeTypes.tt"
+          Outputs="$(MSBuildProjectDirectory)/KnownMimeTypes.cs">
+    <Exec Command="dotnet tool exec dotnet-t4 -- -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+  <Target Name="CleanT4GeneratedFiles" AfterTargets="Clean" Condition="'$(TargetFramework)' == ''">
+    <Delete Files="$(MSBuildProjectDirectory)/KnownMimeTypes.cs" />
   </Target>
 
 </Project>
