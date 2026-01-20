@@ -15,12 +15,23 @@ namespace Test
             { "PNG", "image/png" },
             { "png", "image/png" },
             { "JPG", "image/jpeg" },
-            { "mp4", "application/mp4" },
+            { "mp4", "video/mp4" },
             { "exe", "application/octet-stream" },
-            { "zip", "application/x-zip-compressed" },
+            { "zip", "application/zip" },
             { "torrent", "application/x-bittorrent" },
             { "json", "application/json" },
             { "asdfunknown", "application/octet-stream" },
+            // Conflict resolution tests - ensure priority-based resolution is working
+            { "js", "text/javascript" },       // iana > apache, text/* > application/*
+            { "xml", "text/xml" },             // same source, text/* > application/*
+            { "mp3", "audio/mpeg" },           // iana > unknown
+            { "rtf", "text/rtf" },             // iana, text/* > application/*
+            { "stl", "model/stl" },            // iana, model/* > application/*
+            { "emf", "image/emf" },            // iana, image/* > application/*
+            { "wmf", "image/wmf" },            // iana, image/* > application/*
+            { "obj", "model/obj" },            // iana, model/* > application/*
+            { "mts", "video/mp2t" },           // iana, video/* > model/*
+            { "wav", "audio/x-wav" },          // apache > unknown (mime-db data quality issue)
         };
 
         [TestMethod]
