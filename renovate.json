@@ -8,7 +8,8 @@
       "description": "Update mime-db",
       "managerFilePatterns": [
         "/(^|/)KnownMimeTypes\\.tt$/",
-        "/(^|/)TemplateSourceTests\\.cs$/"
+        "/(^|/)TemplateSourceTests\\.cs$/",
+        "/(^|/)MimeDbTestHelper\\.cs$/"
       ],
       "matchStrings": [
         "https://raw\\.githubusercontent\\.com/jshttp/mime-db/(?<currentValue>.+?)/db.json"

@@ -68,4 +68,18 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
+  <!-- T4 Template Transformation on Build -->
+  <!-- Run during outer build (when TargetFramework is empty) to avoid race conditions with parallel multi-targeting -->
+  <Target Name="TransformT4Templates"
+          BeforeTargets="DispatchToInnerBuilds;CoreCompile"
+          Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND ('$(TargetFramework)' == '' Or '$(TargetFrameworks)' == '')"
+          Inputs="$(MSBuildProjectDirectory)/KnownMimeTypes.tt"
+          Outputs="$(MSBuildProjectDirectory)/KnownMimeTypes.cs">
+    <Exec Command="dotnet tool exec dotnet-t4 --yes -- -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+  <Target Name="CleanT4GeneratedFiles" AfterTargets="Clean" Condition="'$(TargetFramework)' == ''">
+    <Delete Files="$(MSBuildProjectDirectory)/KnownMimeTypes.cs" />
+  </Target>
+
 </Project>
