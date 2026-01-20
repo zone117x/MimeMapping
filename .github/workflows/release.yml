@@ -58,7 +58,7 @@ jobs:
         uses: nuget/login@d22cc5f58ff5b88bf9bd452535b4335137e24544 # v1
         id: nuget-login
         with:
-          user: ${{ vars.NUGET_USER }}
+          user: ${{ secrets.NUGET_USER }}
 
       - name: deploy nuget.org
         run: find bin -name '*.nupkg' | xargs dotnet nuget push -s $NUGET_SOURCE -k $NUGET_KEY --skip-duplicate --force-english-output
