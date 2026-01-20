@@ -80,7 +80,20 @@ namespace Test
             Assert.AreEqual("text/css", type.GetField(nameof(KnownMimeTypes.Css))!.GetValue(null));
             Assert.AreEqual("application/pdf", type.GetField(nameof(KnownMimeTypes.Pdf))!.GetValue(null));
             Assert.AreEqual("application/json", type.GetField(nameof(KnownMimeTypes.Json))!.GetValue(null));
-            Assert.AreEqual("application/xml", type.GetField(nameof(KnownMimeTypes.Xml))!.GetValue(null));
+            Assert.AreEqual("text/xml", type.GetField(nameof(KnownMimeTypes.Xml))!.GetValue(null));
+
+            // Conflict resolution tests - ensure priority-based resolution is working
+            Assert.AreEqual("text/javascript", type.GetField(nameof(KnownMimeTypes.Js))!.GetValue(null));   // iana > apache, text/* > application/*
+            Assert.AreEqual("video/mp4", type.GetField(nameof(KnownMimeTypes.Mp4))!.GetValue(null));        // iana, video/* > application/*
+            Assert.AreEqual("application/zip", type.GetField(nameof(KnownMimeTypes.Zip))!.GetValue(null));  // iana > unknown
+            Assert.AreEqual("audio/mpeg", type.GetField(nameof(KnownMimeTypes.Mp3))!.GetValue(null));       // iana > unknown
+            Assert.AreEqual("text/rtf", type.GetField(nameof(KnownMimeTypes.Rtf))!.GetValue(null));         // iana, text/* > application/*
+            Assert.AreEqual("model/stl", type.GetField(nameof(KnownMimeTypes.Stl))!.GetValue(null));        // iana, model/* > application/*
+            Assert.AreEqual("image/emf", type.GetField(nameof(KnownMimeTypes.Emf))!.GetValue(null));        // iana, image/* > application/*
+            Assert.AreEqual("image/wmf", type.GetField(nameof(KnownMimeTypes.Wmf))!.GetValue(null));        // iana, image/* > application/*
+            Assert.AreEqual("model/obj", type.GetField(nameof(KnownMimeTypes.Obj))!.GetValue(null));        // iana, model/* > application/*
+            Assert.AreEqual("video/mp2t", type.GetField(nameof(KnownMimeTypes.Mts))!.GetValue(null));       // iana, video/* > model/*
+            Assert.AreEqual("audio/x-wav", type.GetField(nameof(KnownMimeTypes.Wav))!.GetValue(null));      // apache > unknown (mime-db data quality issue)
         }
 
         [TestMethod]
@@ -137,21 +150,8 @@ namespace Test
         [TestMethod]
         public async Task GeneratedCode_MatchesSourceData()
         {
-            // Fetch the source data and verify the generated code matches
-            var sourceData = await MimeDbTestHelper.FetchMimeTypesAsync();
-
-            // Build a dictionary of extension -> mime type from source
-            var sourceDict = new Dictionary<string, string>();
-            foreach (var entry in sourceData)
-            {
-                var ext = entry[1];
-                var mimeType = entry[0];
-                // Only add first occurrence (same logic as generator)
-                if (!sourceDict.ContainsKey(ext))
-                {
-                    sourceDict[ext] = mimeType;
-                }
-            }
+            // Fetch the source data with conflict resolution matching the generator
+            var sourceDict = await MimeDbTestHelper.FetchMimeTypesWithResolutionAsync();
 
             // Verify TypeMap matches source data
             Assert.HasCount(sourceDict.Count, MimeUtility.TypeMap,

@@ -37,62 +37,131 @@ namespace MimeMapping
             return client.GetStringAsync(url).GetAwaiter().GetResult();
         }
 
-        IEnumerable<string[]> GetMimeTypesFromJson(string url)
+        // Get priority for source (higher is better)
+        // iana=3, apache=2, nginx=1, other=0
+        Func<string, int> GetSourcePriority = (source) =>
+        {
+            if (source == "iana") return 3;
+            if (source == "apache") return 2;
+            if (source == "nginx") return 1;
+            return 0;
+        };
+
+        // Get priority for mime type category (higher is better)
+        // Prefer specific types (video/*, audio/*, image/*, text/*) over application/*
+        Func<string, int> GetTypePriority = (mimeType) =>
+        {
+            if (mimeType.StartsWith("video/")) return 4;
+            if (mimeType.StartsWith("audio/")) return 4;
+            if (mimeType.StartsWith("image/")) return 4;
+            if (mimeType.StartsWith("text/")) return 3;
+            if (mimeType.StartsWith("font/")) return 3;
+            if (mimeType.StartsWith("model/")) return 2;
+            if (mimeType.StartsWith("application/")) return 1;
+            return 0;
+        };
+
+        // Returns list of (mimeType, extension, source)
+        Func<string, List<Tuple<string, string, string>>> GetMimeTypesFromJson = (url) =>
         {
             var content = GetPageContent(url);
-            if (string.IsNullOrEmpty(content)) return Enumerable.Empty<string[]>();
+            if (string.IsNullOrEmpty(content)) return new List<Tuple<string, string, string>>();
 
             using var doc = JsonDocument.Parse(content);
-            var results = new List<string[]>();
+            var results = new List<Tuple<string, string, string>>();
 
             foreach (var mimeTypeEntry in doc.RootElement.EnumerateObject())
             {
                 var mimeType = mimeTypeEntry.Name;
+                var source = mimeTypeEntry.Value.TryGetProperty("source", out var sourceEl)
+                    ? sourceEl.GetString()
+                    : null;
+
                 if (mimeTypeEntry.Value.TryGetProperty("extensions", out var extensions))
                 {
                     foreach (var ext in extensions.EnumerateArray())
                     {
-                        results.Add(new[] { mimeType, ext.GetString() });
+                        results.Add(Tuple.Create(mimeType, ext.GetString(), source));
                     }
                 }
             }
 
             return results;
-        }
+        };
 
-        var entries = new List<string[]>();
-        entries.AddRange(GetMimeTypesFromJson(MIMEDB_URL));
+        var entries = GetMimeTypesFromJson(MIMEDB_URL);
 
-        // build dictionary from entries, outputing found duplicates
+        // build dictionary from entries with conflict resolution
+        // _entryDict stores (mimeType, source) for each extension
         var _dict = new Dictionary<string, string>();
+        var _entryDict = new Dictionary<string, Tuple<string, string>>();
         var _reverseDict = new Dictionary<string, List<string>>();
 
-        foreach (var parts in entries)
+        foreach (var entry in entries)
         {
-            for (var i = 1; i < parts.Length; i++)
+            var mimeType = entry.Item1;
+            var ext = entry.Item2;
+            var source = entry.Item3;
+
+            if (_entryDict.TryGetValue(ext, out var existing))
             {
-                string existing;
-                if (_dict.TryGetValue(parts[i], out existing))
+                if (existing.Item1 != mimeType)
                 {
-                    if (existing != parts[0])
+                    // Compare priorities to decide which one wins
+                    var existingSourcePri = GetSourcePriority(existing.Item2);
+                    var newSourcePri = GetSourcePriority(source);
+                    var existingTypePri = GetTypePriority(existing.Item1);
+                    var newTypePri = GetTypePriority(mimeType);
+
+                    var shouldReplace = newSourcePri > existingSourcePri ||
+                        (newSourcePri == existingSourcePri && newTypePri > existingTypePri);
+
+                    if (shouldReplace)
+                    {
+                        // Remove from old reverse dict entry
+                        if (_reverseDict.TryGetValue(existing.Item1, out var oldList))
+                        {
+                            oldList.Remove(ext);
+                            if (oldList.Count == 0)
+                            {
+                                _reverseDict.Remove(existing.Item1);
+                            }
+                        }
+
+                        // Update to new value
+                        _dict[ext] = mimeType;
+                        _entryDict[ext] = Tuple.Create(mimeType, source);
+
+                        if (!_reverseDict.TryGetValue(mimeType, out var keyList))
+                        {
+                            keyList = new List<string>();
+                            _reverseDict.Add(mimeType, keyList);
+                        }
+                        keyList.Add(ext);
+#>
+        // Dupe for <#= ext #>: using <#= mimeType #> (<#= source ?? "unknown" #>/type:<#= newTypePri #>) over <#= existing.Item1 #> (<#= existing.Item2 ?? "unknown" #>/type:<#= existingTypePri #>)
+<#
+                    }
+                    else
                     {
 #>
-        // Dupe for <#= parts[i] #>: using <#= existing #> vs <#= parts[0] #> 
+        // Dupe for <#= ext #>: keeping <#= existing.Item1 #> (<#= existing.Item2 ?? "unknown" #>/type:<#= existingTypePri #>) over <#= mimeType #> (<#= source ?? "unknown" #>/type:<#= newTypePri #>)
 <#
                     }
                 }
-                else
+            }
+            else
+            {
+                _dict[ext] = mimeType;
+                _entryDict[ext] = Tuple.Create(mimeType, source);
+
+                if (!_reverseDict.TryGetValue(mimeType, out var keyList))
                 {
-                    _dict[parts[i]] = parts[0];
-
-                    if (!_reverseDict.TryGetValue(parts[0], out var keyList))
-                    {
-                        keyList = new List<string>();
-                        _reverseDict.Add(parts[0], keyList);
-                    }
-
-                    keyList.Add(parts[i]);
+                    keyList = new List<string>();
+                    _reverseDict.Add(mimeType, keyList);
                 }
+
+                keyList.Add(ext);
             }
         }
 #>
