@@ -1,0 +1,142 @@
+name: Diff Generated Code
+
+on:
+  pull_request:
+
+jobs:
+  diff-generated:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr-branch
+
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base-branch
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build base branch to generate KnownMimeTypes.cs
+        working-directory: base-branch
+        run: dotnet build src/MimeMapping/MimeMapping.csproj
+
+      - name: Build PR branch to generate KnownMimeTypes.cs
+        working-directory: pr-branch
+        run: dotnet build src/MimeMapping/MimeMapping.csproj
+
+      - name: Generate diff
+        id: diff
+        run: |
+          # Extract only the public const string lines and diff them
+          grep 'public const string .* = "' base-branch/src/MimeMapping/KnownMimeTypes.cs | sort > base-consts.txt
+          grep 'public const string .* = "' pr-branch/src/MimeMapping/KnownMimeTypes.cs | sort > pr-consts.txt
+
+          diff -u base-consts.txt pr-consts.txt > diff.txt || true
+
+          if [ -s diff.txt ]; then
+            echo "has_diff=true" >> $GITHUB_OUTPUT
+            # Truncate if too large for GitHub comment (max ~65k chars)
+            if [ $(wc -c < diff.txt) -gt 60000 ]; then
+              head -c 60000 diff.txt > diff_truncated.txt
+              echo -e "\n\n... (diff truncated, too large to display)" >> diff_truncated.txt
+              mv diff_truncated.txt diff.txt
+            fi
+          else
+            echo "has_diff=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post diff as PR comment
+        if: steps.diff.outputs.has_diff == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const diff = fs.readFileSync('diff.txt', 'utf8');
+
+            const body = `## Generated Code Diff
+
+            This PR changes the generated \`KnownMimeTypes.cs\` file:
+
+            <details>
+            <summary>Click to expand diff</summary>
+
+            \`\`\`diff
+            ${diff}
+            \`\`\`
+
+            </details>`;
+
+            // Find existing comment to update
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(c =>
+              c.user.type === 'Bot' &&
+              c.body.includes('## Generated Code Diff')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body,
+              });
+            }
+
+      - name: Post no-diff comment
+        if: steps.diff.outputs.has_diff == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `## Generated Code Diff
+
+            No changes to generated \`KnownMimeTypes.cs\` file.`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(c =>
+              c.user.type === 'Bot' &&
+              c.body.includes('## Generated Code Diff')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body,
+              });
+            }
