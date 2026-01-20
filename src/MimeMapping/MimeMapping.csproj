@@ -75,7 +75,7 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
           Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND ('$(TargetFramework)' == '' Or '$(TargetFrameworks)' == '')"
           Inputs="$(MSBuildProjectDirectory)/KnownMimeTypes.tt"
           Outputs="$(MSBuildProjectDirectory)/KnownMimeTypes.cs">
-    <Exec Command="dotnet tool exec dotnet-t4 -- -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+    <Exec Command="dotnet tool exec dotnet-t4 --yes -- -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 
   <Target Name="CleanT4GeneratedFiles" AfterTargets="Clean" Condition="'$(TargetFramework)' == ''">
