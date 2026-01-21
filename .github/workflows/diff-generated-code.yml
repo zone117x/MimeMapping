@@ -25,7 +25,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@baa11fbfe1d6520db94683bd5c7a3818018e4309 # v5
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Build base branch to generate KnownMimeTypes.cs
         working-directory: base-branch
@@ -38,9 +38,42 @@ jobs:
       - name: Generate diff
         id: diff
         run: |
+          echo "=== DEBUG: Searching for generated files ==="
+          echo "Base branch files:"
+          find base-branch -name "KnownMimeTypes.cs" -o -name "KnownMimeTypes.g.cs" 2>/dev/null || echo "No files found"
+          echo ""
+          echo "PR branch files:"
+          find pr-branch -name "KnownMimeTypes.cs" -o -name "KnownMimeTypes.g.cs" 2>/dev/null || echo "No files found"
+          echo ""
+
+          # Find the generated file (supports both old T4 and new source generator locations)
+          BASE_FILE=$(find base-branch -name "KnownMimeTypes.cs" -o -name "KnownMimeTypes.g.cs" 2>/dev/null | head -1)
+          PR_FILE=$(find pr-branch -name "KnownMimeTypes.cs" -o -name "KnownMimeTypes.g.cs" 2>/dev/null | head -1)
+
+          echo "=== DEBUG: Selected files ==="
+          echo "BASE_FILE: $BASE_FILE"
+          echo "PR_FILE: $PR_FILE"
+          echo ""
+
+          if [ -z "$BASE_FILE" ] || [ -z "$PR_FILE" ]; then
+            echo "ERROR: Could not find generated files!"
+            echo "Listing all .cs files in obj directories:"
+            find base-branch -path "*/obj/*" -name "*.cs" 2>/dev/null | head -20
+            find pr-branch -path "*/obj/*" -name "*.cs" 2>/dev/null | head -20
+            exit 1
+          fi
+
+          echo "=== DEBUG: File sizes ==="
+          wc -l "$BASE_FILE" "$PR_FILE"
+          echo ""
+
           # Extract only the public const string lines and diff them
-          grep 'public const string .* = "' base-branch/src/MimeMapping/KnownMimeTypes.cs | sort > base-consts.txt
-          grep 'public const string .* = "' pr-branch/src/MimeMapping/KnownMimeTypes.cs | sort > pr-consts.txt
+          grep 'public const string .* = "' "$BASE_FILE" | sort > base-consts.txt
+          grep 'public const string .* = "' "$PR_FILE" | sort > pr-consts.txt
+
+          echo "=== DEBUG: Extracted constants count ==="
+          wc -l base-consts.txt pr-consts.txt
+          echo ""
 
           diff -u base-consts.txt pr-consts.txt > diff.txt || true
 

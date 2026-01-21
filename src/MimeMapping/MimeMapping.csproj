@@ -5,6 +5,8 @@
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <!-- Write source generator output to disk for inspection -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <Description>Constants for (almost) all MIME types and method to determine MIME type from a file name.
 Contains just over 1000 mime types.
 
@@ -33,7 +35,7 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
 
     <!-- required as we don't have a valid semver tag yet -->
     <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
-    <MinVerTagPrefix>v</MinVerTagPrefix>    
+    <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -44,42 +46,64 @@ https://learn.microsoft.com/dotnet/api/system.web.mimemapping.getmimemapping
     <None Include="../../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <!-- Exclude KnownMimeTypes.cs from compilation (it exists for IDE support, source generator produces the actual code) -->
+  <ItemGroup>
+    <Compile Remove="KnownMimeTypes.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
     <PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="KnownMimeTypes.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KnownMimeTypes.cs</LastGenOutput>
-    </None>
+    <InternalsVisibleTo Include="MimeMapping.Tests" PublicKey="0024000004800000940000000602000000240000525341310004000001000100ddaa9bbc9edfe64cce7240c1fda8924d2ec30990903df29b9e56ffb4adb13138ac16d090305caaa67c439dd50c7750035951cc679a41ea93a73c66f19ce38cff885f4dd66c6c80903a9ba166d4547e6ac598b8757deb658c29d5040b743af7c8b0a81d25f64c72f4096b27351ec4bc309b1d5c4420d21660b0de8ef8bf1a89ce" />
   </ItemGroup>
 
+  <!-- Source Generator Configuration -->
+  <PropertyGroup>
+    <MimeDbVersion>1.54.0</MimeDbVersion>
+    <MimeDbUrl>https://raw.githubusercontent.com/jshttp/mime-db/v$(MimeDbVersion)/db.json</MimeDbUrl>
+    <MimeDbCachePath>$(MSBuildProjectDirectory)/../mime-db.json</MimeDbCachePath>
+  </PropertyGroup>
+
+  <!-- Reference the source generator project -->
   <ItemGroup>
-    <Compile Update="KnownMimeTypes.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>KnownMimeTypes.tt</DependentUpon>
-    </Compile>
+    <ProjectReference Include="..\MimeMapping.SourceGenerator\MimeMapping.SourceGenerator.csproj"
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-  <!-- T4 Template Transformation on Build -->
-  <!-- Run during outer build (when TargetFramework is empty) to avoid race conditions with parallel multi-targeting -->
-  <Target Name="TransformT4Templates"
-          BeforeTargets="DispatchToInnerBuilds;CoreCompile"
-          Condition="'$(DesignTimeBuild)' != 'true' AND '$(BuildingForLiveUnitTesting)' != 'true' AND ('$(TargetFramework)' == '' Or '$(TargetFrameworks)' == '')"
-          Inputs="$(MSBuildProjectDirectory)/KnownMimeTypes.tt"
-          Outputs="$(MSBuildProjectDirectory)/KnownMimeTypes.cs">
-    <Exec Command="dotnet tool exec dotnet-t4 --yes -- -o KnownMimeTypes.cs KnownMimeTypes.tt" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  <!-- Download mime-db.json once before multi-targeting inner builds start -->
+  <Target Name="DownloadMimeDb"
+          BeforeTargets="DispatchToInnerBuilds;BeforeCompile;CoreCompile"
+          Condition="!Exists('$(MimeDbCachePath)')">
+    <DownloadFile
+      SourceUrl="$(MimeDbUrl)"
+      DestinationFolder="$(MSBuildProjectDirectory)/.."
+      DestinationFileName="mime-db.json"
+      SkipUnchangedFiles="true" />
   </Target>
 
-  <Target Name="CleanT4GeneratedFiles" AfterTargets="Clean" Condition="'$(TargetFramework)' == ''">
-    <Delete Files="$(MSBuildProjectDirectory)/KnownMimeTypes.cs" />
+  <!-- Pass the downloaded file to the source generator -->
+  <ItemGroup>
+    <AdditionalFiles Include="$(MimeDbCachePath)" />
+    <CompilerVisibleProperty Include="MimeDbUrl" />
+  </ItemGroup>
+
+  <!-- Copy generated KnownMimeTypes.cs to source directory for IDE support -->
+  <Target Name="CopyGeneratedKnownMimeTypes" AfterTargets="Build" Condition="'$(TargetFramework)' == ''">
+    <PropertyGroup>
+      <GeneratedKnownMimeTypesPath>$([System.IO.Directory]::GetFiles('$(BaseIntermediateOutputPath)', 'KnownMimeTypes.g.cs', SearchOption.AllDirectories)[0])</GeneratedKnownMimeTypesPath>
+    </PropertyGroup>
+    <Copy SourceFiles="$(GeneratedKnownMimeTypesPath)"
+          DestinationFiles="$(MSBuildProjectDirectory)/KnownMimeTypes.cs"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+  <!-- Clean up downloaded mime-db.json when running dotnet clean -->
+  <Target Name="CleanMimeDb" AfterTargets="Clean">
+    <Delete Files="$(MimeDbCachePath)" Condition="Exists('$(MimeDbCachePath)')" />
   </Target>
 
 </Project>

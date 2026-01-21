@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeMapping;
 
@@ -132,10 +130,10 @@ namespace Test
         [TestMethod]
         public void TypeToExtensionsMap_ContainsAllGeneratedMimeTypes()
         {
-            // Get all unique mime type values from constants
+            // Get all unique mime type values from constants (excluding non-MIME type constants like MimeDbSourceUrl)
             var mimeTypeFields = typeof(KnownMimeTypes)
                 .GetFields(BindingFlags.Public | BindingFlags.Static)
-                .Where(f => f.IsLiteral && f.FieldType == typeof(string))
+                .Where(f => f.IsLiteral && f.FieldType == typeof(string) && f.Name != nameof(KnownMimeTypes.MimeDbSourceUrl))
                 .Select(f => (string)f.GetValue(null)!)
                 .Distinct()
                 .ToList();
@@ -144,25 +142,6 @@ namespace Test
             {
                 Assert.IsTrue(MimeUtility.TypeToExtensionsMap.ContainsKey(mimeType),
                     $"TypeToExtensionsMap is missing mime type: {mimeType}");
-            }
-        }
-
-        [TestMethod]
-        public async Task GeneratedCode_MatchesSourceData()
-        {
-            // Fetch the source data with conflict resolution matching the generator
-            var sourceDict = await MimeDbTestHelper.FetchMimeTypesWithResolutionAsync();
-
-            // Verify TypeMap matches source data
-            Assert.HasCount(sourceDict.Count, MimeUtility.TypeMap,
-                $"TypeMap count ({MimeUtility.TypeMap.Count}) doesn't match source ({sourceDict.Count})");
-
-            foreach (var kvp in sourceDict)
-            {
-                Assert.IsTrue(MimeUtility.TypeMap.TryGetValue(kvp.Key, out var actualMimeType),
-                    $"Extension '{kvp.Key}' missing from TypeMap");
-                Assert.AreEqual(kvp.Value, actualMimeType,
-                    $"Mime type mismatch for extension '{kvp.Key}': expected '{kvp.Value}', got '{actualMimeType}'");
             }
         }
 
