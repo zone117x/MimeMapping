@@ -2,6 +2,19 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
   "assignees": ["zone117x", "viceice"],
+  "packageRules": [
+    {
+      "description": "set fix scope for mimedb",
+      "matchDepNames": ["mime-db"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "set feat scope for mimedb for minor and major updates",
+      "matchDepNames": ["mime-db"],
+      "matchUpdateTypes": ["minor", "major"],
+      "semanticCommitType": "feat"
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
