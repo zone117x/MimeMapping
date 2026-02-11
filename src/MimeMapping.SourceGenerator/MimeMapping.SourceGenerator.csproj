@@ -17,7 +17,7 @@
 
   <!-- System.Text.Json for JSON parsing in netstandard2.0 -->
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="10.0.2" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="System.Text.Json" Version="10.0.3" PrivateAssets="all" GeneratePathProperty="true" />
   </ItemGroup>
 
 
