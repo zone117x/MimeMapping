@@ -13,6 +13,29 @@
       "matchDepNames": ["mime-db"],
       "matchUpdateTypes": ["minor", "major"],
       "semanticCommitType": "feat"
+    },
+    {
+      "description": "Pin actions to full semver",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "rangeStrategy": "pin",
+      "pinDigests": true
+    },
+    {
+      "description": "weekly digest updates non full semver actions",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "matchUpdateTypes": ["digest"],
+      "matchCurrentValue": "!/^v?\\d+\\.\\d+\\.\\d+$/",
+      "extends": ["schedule:weekly"]
+    },
+    {
+      "description": "No digest updates for full semver actions",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "matchUpdateTypes": ["digest"],
+      "matchCurrentValue": "/^v?\\d+\\.\\d+\\.\\d+$/",
+      "enabled": false
     }
   ],
   "customManagers": [
